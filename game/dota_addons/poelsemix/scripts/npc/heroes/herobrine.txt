@@ -4,17 +4,26 @@
 	"DisableWearables" "1"
 	"ModelScale" "1.5"
 	"MovementSpeed"	"0"
-	
-	
+	"AttributeBaseAgility"		"0"
+	"AttributeAgilityGain"		"0"
+	"AttributeIntelligenceGain"	"3"
 	"Model" "models/items/wards/knightstatue_ward/knightstatue_ward.vmdl"
 	
 
 	
 	"Ability1" "herobrine_creepypasta"
 	"Ability2" "hb_elder"
-	"Ability3" "dropout_datadriven"
+	"Ability3" "hb_grief"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "hb_diamonds"
-
+	
+	"Ability10"		"special_bonus_mp_200"
+	"Ability11"		"special_bonus_mp_regen_10"
+	"Ability12"		"special_bonus_spell_amplify_15"
+	"Ability13"		"special_bonus_cooldown_reduction_10"
+	"Ability14"		"special_bonus_strength_20"
+	"Ability15"		"special_bonus_evasion_20"
+	"Ability16"		"special_bonus_spell_amplify_25"
+	"Ability17"		"special_bonus_cooldown_reduction_20"
 }
