@@ -1,0 +1,32 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/overthrow_team_icon.css" />
+	</styles>
+	<script>
+		var teamId = $.GetContextPanel().GetAttributeInt( "team_id", -1 );
+		if ( GameUI.CustomUIConfig().team_colors )
+		{
+			var teamColor = GameUI.CustomUIConfig().team_colors[ teamId ];
+			if ( teamColor )
+			{
+				
+			}
+		}
+		if ( GameUI.CustomUIConfig().team_icons )
+		{
+			var teamIcon = GameUI.CustomUIConfig().team_icons[ teamId ];
+			if ( teamIcon )
+			{
+				$("#TeamIcon").SetImage( teamIcon );
+			}
+		}
+
+	</script>
+	<Panel class="TeamIconLarge">
+		<Image id="IconShadow" src="" />
+		<Image id="ShieldBorder" src="" />
+		<Image id="ShieldColor" src="" />
+		<Image id="TeamIcon" style="" src="" />
+	</Panel>
+</root>

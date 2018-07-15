@@ -1,0 +1,242 @@
+"DOTAHeroes"
+{
+	
+		// HERO: Brewmaster
+		"brian"
+		{
+			"override_hero"				"npc_dota_hero_brewmaster"			// Hero to override
+			"Ability1" "red_cecil"				
+			"Ability2" "mokai"
+			"Ability3" "hurtigbrille"
+			"Ability6" "brian_dak"
+			"AttributeBaseStrength"		"25"
+			
+			"Ability10"		"special_bonus_cooldown_reduction_15"
+			"Ability11"		"special_bonus_movement_speed_40"
+			
+			"Ability12"		"special_bonus_attack_damage_50"
+			"Ability13"		"special_bonus_hp_500"
+			
+			"Ability14"		"special_bonus_strength_25"
+			"Ability15"		"special_bonus_evasion_20"
+			
+			"Ability16"		"special_bonus_armor_20"
+			"Ability17"		"special_bonus_magic_resistance_20"
+	                  
+			"MovementSpeed"               "280"
+			"StatusHealth"                "750"								
+	
+		}
+	"Caroline_Wozniacki"
+		{
+			"override_hero"				"npc_dota_hero_windrunner"			// Hero to override
+			"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+	
+			"AttributeBaseIntelligence"	"21"
+			"AttributeIntelligenceGain"	"2"
+	
+			"AttributeBaseAgility"		"25"
+			"AttributeAgilityGain"		"3.4"
+			"Ability1" "caro_side_swap"				
+			"Ability2" "caro_smash"
+			"Ability3" "caro_crossfit"
+			"Ability6" "caro_matchpoint"
+			"ProjectileModel" "particles/econ/items/crystal_maiden/ti7_immortal_shoulder/cm_ti7_immortal_base_attack.vpcf"
+			
+			"Ability10"		"special_bonus_mp_400"
+			"Ability11"		"special_bonus_hp_500"
+			
+			"Ability12"		"special_bonus_movement_speed_50"
+			"Ability13"		"special_bonus_agility_20"
+			
+			"Ability14"		"special_bonus_agility_20"
+			"Ability15"		"special_bonus_cooldown_reduction_20"
+			
+			"Ability16"		"special_bonus_attack_speed_90"
+			"Ability17"		"special_bonus_spell_amplify_25"
+	                  
+			"MovementSpeed"               "310"
+										
+	
+		}
+	"Herobrine"
+	{
+		"override_hero" "npc_dota_hero_dark_seer"
+		"DisableWearables" "1"
+		"ModelScale" "1.5"
+		"MovementSpeed"	"0"
+		
+		
+		"Model" "models/items/wards/knightstatue_ward/knightstatue_ward.vmdl"
+		
+	
+		
+		"Ability1" "herobrine_creepypasta"
+		"Ability2" "hb_elder"
+		"Ability3" "dropout_datadriven"
+		"Ability4" "generic_hidden"
+		"Ability5" "generic_hidden"
+		"Ability6" "hb_diamonds"
+	
+	}
+	
+		"kim_larsen"
+		{
+			"override_hero"				"npc_dota_hero_night_stalker"			// Hero to override
+			"Ability1" "kim_banana"				
+			"Ability2" "kim_paperclip"
+			"Ability3" "kim_gasolin"
+			"Ability6" "kim_nat"
+			
+			
+			"Ability10"		"special_bonus_attack_damage_50"
+			"Ability11"		"special_bonus_strength_20"
+			
+			"Ability12"		"special_bonus_hp_400"
+			"Ability13"		"special_bonus_agility_20"
+			
+			"Ability14"		"special_bonus_evasion_20"
+			"Ability15"		"special_bonus_attack_speed_100"
+			
+			"Ability16"		"special_bonus_truestrike"
+			"Ability17"		"special_bonus_lifesteal_30"
+	                  
+			"MovementSpeed"               "275"
+										
+	
+		}
+	"npc_dota_hero_baseboys_datadriven"
+	{
+		"override_hero" "npc_dota_hero_meepo"
+		
+		"AbilityLayout" "4"
+		
+		"Ability1" "gunpowder_datadriven"
+		"Ability2" "plant_bomb_datadriven"
+		"Ability3" "choke_datadriven"
+		"Ability4" "generic_hidden"
+		"Ability5" "generic_hidden"
+		"Ability6" "naga_siren_mirror_image"
+		"Ability7" "plant_bomb_explosion_datadriven"
+		
+		"AbilityDraftIgnoreCount" "7"
+	}
+	
+	
+	
+	"npc_dota_hero_gametecher_datadriven"
+	{
+		"override_hero" "npc_dota_hero_pugna"
+		"DisableWearables" "1"
+		"ModelScale" "1.5"
+		"MovementSpeed"	"225"
+		"ProjectileModel" "particles/units/heroes/hero_lina/lina_base_attack.vpcf"
+		
+		"Model" "models/courier/imp/imp.vmdl"
+		
+		"AbilityLayout" "5"
+		
+		"Ability1" "lion_finger_of_death"
+		"Ability2" "matematik_A_datadriven"
+		"Ability3" "dropout_datadriven"
+		"Ability4" "bloodseeker_thirst"
+		"Ability5" "generic_hidden"
+		"Ability6" "anime_power_datadriven"
+	
+	}
+	"npc_dota_hero_kaj"
+	{
+		"override_hero" "npc_dota_hero_rubick"
+	    "DisableWearables"				"1"
+		"Model"				"models/courier/frog/frog.vmdl"
+		"Ability1" "KajPopcorn"
+		"Ability2" "KajRap"
+		"Ability3" "KajSucc"
+		"Ability4" "generic_hidden"
+		"Ability5" "generic_hidden"
+		"Ability6" "KajAndrea"
+	}
+	"npc_dota_hero_lars"
+	{
+		"override_hero" "npc_dota_hero_lycan"
+		"Ability1" "LarsFadbamse"
+		"Ability2" "LarsTaunt"
+		"Ability3" "LarsTeam"
+		"Ability4" "generic_hidden"
+		"Ability5" "generic_hidden"
+		"Ability6" "LarsTauntTarget"
+	}
+	"npc_dota_hero_marvelous_mosell_datadriven"
+	  {
+	    "AbilityLayout"     "4"
+	    "override_hero"     "npc_dota_hero_faceless_void"
+	    "Ability1"        "jeg_var_syg_datadriven" 
+	    "Ability2"        "antikommerciel_masseappel_datadriven" 
+	    "Ability3"        "faceless_void_backtrack" 
+	    "Ability4"        "generic_hidden"
+	    "Ability5"        "generic_hidden"
+	    "Ability6"        "koldblodet_reptil_datadriven"
+	   
+		"Ability7"        ""
+	    "Ability8"        ""
+	    "Ability9"        ""
+	    "Ability10"       ""
+	    "Ability11"       ""
+	    "Ability12"       ""
+	    "Ability13"       ""
+	    "Ability14"       ""
+	    "Ability15"       ""
+	    "Ability16"       ""
+	
+	  }
+	"npc_dota_hero_S�ren_Ryge_datadriven"
+	{
+		"override_hero" "npc_dota_hero_lone_druid"
+	
+		"Ability1" "Skovtur"
+		"Ability2" "SorenPassiv"
+		"Ability3" "kolonihave"
+		"Ability6" "Skyd_en_due_datadriven"
+	}
+	
+		"PR0PH3CY"
+		{
+			"override_hero"				"npc_dota_hero_bounty_hunter"			// Hero to override
+		    "DisableWearables"				"1"
+			"Model"				"models/items/courier/bookwyrm/bookwyrm.vmdl"
+			"ModelScale"		"1.5"
+			"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
+			"AttributeBaseIntelligence"	"30"
+			"AttributeIntelligenceGain"	"3.6"
+			"AttributeBaseAgility"		"19"
+			"AttributeAgilityGain"		"2.2"
+			
+			"Ability1" "pr0_hack"				
+			"Ability2" "firestakit_datadriven"
+			"Ability3" "pr0_blockchain"
+			"Ability4" "pr0_incognito"
+			"Ability6" "deity_datadriven"
+	
+			"Ability10"		"special_bonus_mp_200"
+			"Ability11"		"special_bonus_mp_regen_6"
+			"Ability12"		"special_bonus_spell_amplify_10"
+			"Ability13"		"special_bonus_cooldown_reduction_8"
+			"Ability14"		"special_bonus_mp_400"
+			"Ability15"		"special_bonus_mp_regen_8"
+			"Ability16"		"special_bonus_spell_amplify_25"
+			"Ability17"		"special_bonus_cooldown_reduction_15"
+			"MovementSpeed"               "285"
+	                  								
+	
+		}
+	//HERO: Kunkka
+	"yahya_hassan"
+	{
+	  "AbilityLayout"       "4"
+	  "override_hero"       "npc_dota_hero_kunkka"
+	  "Ability1"            "yahya_fodskud" 
+	  "Ability2"            "digtoplaesning" 
+	  "Ability3"            "koekkenkniv"
+	  "Ability6"            "den_er_flot"
+	}
+}

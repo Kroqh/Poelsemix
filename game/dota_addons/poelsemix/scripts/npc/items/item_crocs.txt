@@ -1,0 +1,54 @@
+"item_crocs"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"item_crocs"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"4450"
+  	"ID"						"2015"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"crocs"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"stat_gain" "25"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"movement_speed" "75"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"as" "50"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_crocs_stats"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes"        "MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%movement_speed"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%stat_gain"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%stat_gain"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%stat_gain"
+			}
+		}
+	}
+}

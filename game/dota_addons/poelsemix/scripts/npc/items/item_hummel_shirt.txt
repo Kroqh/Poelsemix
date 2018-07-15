@@ -1,0 +1,152 @@
+"item_hummel_shirt"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"hummel_shirt"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+  	"ItemCost"					"7450"
+  	"ID"						"2019"
+  	"AbilityCooldown"			"20.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"armor;health_pool;damage;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"hummel;shirt;hummel shirt"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"armor" "16"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"intellect" "10"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "22"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "5.0"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"as" "35"
+		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"armor_loss_aura" "-12"
+		}
+		"07"
+		{
+			"var_type" "FIELD_INTEGER"
+			"armor_gain_aura" "10"
+		}
+		"08"
+		{
+			"var_type" "FIELD_INTEGER"
+			"as_aura" "50" 
+		}
+		"09"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "950"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_item_blade_mail_reflect"
+			"Target" 		"CASTER"
+			"Duration" "%duration"			
+		}
+
+		"FireSound"
+		{
+			"EffectName" 	"DOTA_Item.BladeMail.Activate"
+			"Target"		"CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_hummel_shirt"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%damage"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%intellect"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"				
+			}
+		}
+
+		"modifier_cuirass_aura_buff"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsBuff"			"1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_gain_aura"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as_aura"
+			}
+		}
+
+		"modifier_cuirass_aura_debuff"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+		
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_loss_aura"
+			}
+		}
+
+		//aura
+		"modifier_cuirass_aura_ally"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+		
+			"Aura"          	"modifier_cuirass_aura_buff"
+			"Aura_Radius"   	"%radius"
+			"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+			"Aura_Types"    	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_NONE"
+			"Aura_ApplyToCaster" "1"
+		}
+
+		"modifier_cuirass_aura_enemy"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+		
+			"Aura"          	"modifier_cuirass_aura_debuff"
+			"Aura_Radius"   	"%radius"
+			"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types"    	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_NONE"
+			"Aura_ApplyToCaster" "0"
+		}
+	}
+}

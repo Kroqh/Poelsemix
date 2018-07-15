@@ -1,0 +1,14 @@
+"item_recipe_fake_butterfly"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_fake_butterfly"
+		"ItemRequirements"
+		{
+			"01" "item_yasha;item_helm_of_the_dominator"
+		}
+  	}

@@ -1,0 +1,14 @@
+"item_recipe_double_butterfly"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_double_butterfly"
+		"ItemRequirements"
+		{
+			"01" "item_butterfly;item_butterfly"
+		}
+  	}

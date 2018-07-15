@@ -1,0 +1,100 @@
+"Skovtur"
+{
+	"BaseClass"                 "ability_datadriven"
+	"AbilityTextureName"        "Soren1"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityCooldown"           "20 18 16 14"
+	"AbilityManaCost"           "100"
+	"AbilityCastRange"			"700"
+	"AbilityCastAnimation" "ACT_DOTA_ATTACK"
+
+	"AbilitySpecial"
+	{
+	    "01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "hp"             "10 11 12 13"
+	    }
+	    "02"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "res"             "-25 -50 -75 -100"
+	    }
+	    "03"
+	    {
+	        "var_type"          "FIELD_FLOAT"
+	        "duration"          "3 4 5 6"
+	    }
+	}
+
+"precache"
+{
+	"model" "models/props_tree/tree_oak_00.vmdl"
+	"model" "maps/journey_assets/props/foliage/bush_journey_01.vmdl"
+	"particle" "particles/econ/items/enchantress/enchantress_lodestar/ench_death_lodestar_flower.vpcf"
+
+}
+
+	"OnSpellStart"
+	{
+	    "ApplyModifier"
+	    {
+	        "ModifierName"  "modifier_skovtur"
+	        "Target"        "TARGET"
+	        "Duration"      "%duration"
+	    }
+		"FireSound"
+		{
+			"EffectName" "Hero_Winter_Wyvern.ColdEmbrace.Cast"
+			"Target" 	 "CASTER"
+		}
+						"FireSound"
+			{
+				"Target"				"TARGET"
+				"EffectName"			"SorenSkov"
+			}
+	}
+	"Modifiers"
+	{
+	    "modifier_skovtur"
+	    {
+	        "Passive"           "0"
+	        "IsHidden"          "1"
+	        "Isbuff"          "0"
+			"ModelName" "models/props_tree/tree_oak_00.vmdl"
+			
+			"OnCreated"
+			{
+				"MODIFIER_PROPERTY_MODEL_CHANGE" "models/props_tree/tree_oak_00.vmdl"
+
+			}
+			"OnDestroy"
+			{
+
+					"RunScript"
+				{
+					"ScriptFile"	"heroes/Hero_Ryge/TreeSwap.lua"
+					"Function"		"animReset"
+					
+				}
+				"OverrideAnimation" "ACT_DOTA_IDLE"
+			}
+	
+	        "Properties"
+	        {
+	            "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" "%hp" 
+	            "MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"	"%res"
+	        }
+			"States"
+	        {
+	            "MODIFIER_STATE_FROZEN"   "MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_STUNNED"   "MODIFIER_STATE_VALUE_ENABLED"
+	        }
+
+	    }
+	}
+
+}

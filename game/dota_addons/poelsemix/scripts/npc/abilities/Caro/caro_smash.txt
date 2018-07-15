@@ -1,0 +1,127 @@
+"caro_smash"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"caro_smash"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"650"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"0.0 0.0 0.0 0.0"
+	"AbilityDuration"				"0.1"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"0 0 0 0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"40 40 40 40"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+
+		"01"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"frost_arrows_creep_duration"	"0.02"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"dmg"	"25 50 75 100"
+		}
+	}
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"				"particles/econ/items/enchantress/enchantress_virgas/ench_impetus_virgas.vpcf"
+		"particle"				"particles/generic_gameplay/generic_purge.vpcf"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_frost_arrows_caster_datadriven"
+		{
+			"Passive"               		"1"
+			"IsHidden"						"1"
+			"IsPurgable"					"0"
+			
+			"Orb"
+			{
+				"Priority"					"DOTA_ORB_PRIORITY_ABILITY"
+				"ProjectileName"			"particles/econ/items/enchantress/enchantress_virgas/ench_impetus_virgas.vpcf"
+				"CastAttack"				"1"
+			}
+
+			"OnOrbFire"
+			{
+				"SpendMana"
+				{
+					"Mana"					"%AbilityManaCost"
+				}
+				"FireSound"
+				{
+					"EffectName"			"carohit"
+					"Target"				"CASTER"
+				}
+			}
+
+			"OnOrbImpact"
+			{
+				"ApplyModifier"
+				{
+					"Target"
+					{
+						"Center"			"TARGET"
+						"Type"				"DOTA_UNIT_TARGET_BASIC"
+					}
+					"ModifierName"			"modifier_frost_arrows_slow_datadriven"
+					"Duration"				"%frost_arrows_creep_duration"
+				}
+				
+				"ApplyModifier"
+				{
+					"Target"
+					{
+						"Center"			"TARGET"
+						"Type"				"DOTA_UNIT_TARGET_HERO"
+					}
+					"ModifierName"			"modifier_frost_arrows_slow_datadriven"
+					"Duration"				"%frost_arrows_creep_duration"
+				}
+				"Damage"
+				{
+				    "Target"    "TARGET"
+				    "Type"      "DAMAGE_TYPE_MAGICAL"
+				    "Damage"    "%dmg"
+				}
+			}
+		}
+		
+		"modifier_frost_arrows_slow_datadriven"
+		{
+			"IsHidden"						"1"
+		
+			"EffectName"					"particles/generic_gameplay/generic_purge.vpcf"
+		
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

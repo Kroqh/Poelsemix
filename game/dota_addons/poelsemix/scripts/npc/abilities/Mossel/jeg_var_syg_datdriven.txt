@@ -1,0 +1,136 @@
+"jeg_var_syg_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityTextureName" "syg"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22 21 20 19"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 120 140 160"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_FLOAT"
+				"dot_duration" "2.0"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"damage" "20 60 120 180"
+			}
+			"03"
+			{
+				"var_type" "FIELD_FLOAT"
+				"duration" "8"
+			}
+			"04"
+			{
+				"var_type" "FIELD_FLOAT"
+				"speed_loss" "-20 -25 -30 -40"
+			}
+			"05"
+			{
+				"var_type" "FIELD_FLOAT"
+				"as_loss" "-10 -20 -30 -40"
+			}
+			"06"
+			{
+				"var_type" "FIELD_INTEGER"
+				"radius" "400"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName" "modifier_orb"
+				"Target" "CASTER"
+				
+			}
+			
+			"FireSound"
+			{
+				"EffectName" "syg"
+				"Target" "CASTER"
+			}
+		}
+		
+		
+		"Modifiers"
+		{
+			"modifier_orb"
+			{
+				"Duration" "%duration"
+				
+				"IsBuff" "1"
+				
+				"EffectName"	"particles/units/heroes/hero_viper/viper_poison_debuff.vpcf"
+				"EffectAttachType"	"follow_origin"
+				
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName" "modifier_dot"
+						"Target" "TARGET"
+					}
+				}
+				
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_riki/riki_smokebomb.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"			"CASTER"
+				
+						"ControlPoints"
+						{
+							"00" "0 0 0"
+							"01" "%radius %radius %radius"
+						}
+					}
+				}
+			}
+			
+			"modifier_dot"
+			{
+				"IsDebuff" "1"
+				"Duration" "%dot_duration"
+				
+				"EffectName"	"particles/units/heroes/hero_viper/viper_poison_debuff.vpcf"
+				"EffectAttachType"	"follow_origin"
+				
+				"ThinkInterval" "0.9"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target" "TARGET"
+						"Type" "DAMAGE_TYPE_MAGICAL"
+						"Damage" "%damage"
+					}
+				}
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%as_loss"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%speed_loss"
+				}
+			}
+		}
+	}

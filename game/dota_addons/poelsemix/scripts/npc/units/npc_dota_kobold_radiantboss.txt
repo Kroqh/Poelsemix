@@ -1,0 +1,13 @@
+"npc_dota_kobold_radiantboss"
+{
+	"BaseClass"					"npc_dota_creature"
+	"Model"						"models/props_structures/midas_throne/kobold_radiantboss.vmdl"
+	"Ability1"					"dota_ability_throw_coin"
+	"Ability2"					"dota_ability_throw_coin_long"
+	"Ability3"					"dota_ability_celebrate"
+	"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	"BountyXP"					"0"
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"
+	"StatusHealth"				"5000"
+	"TeamName"					"DOTA_TEAM_NEUTRALS"
+}

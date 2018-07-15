@@ -1,0 +1,89 @@
+"kim_gasolin"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"gasolin"
+	"MaxLevel"              "6"
+"RequiredLevel"        "1"
+"LevelsBetweenUpgrades" "4"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_night_stalker/nightstalker_night_buff.vpcf"
+		"particle"			"particles/units/heroes/hero_night_stalker/nightstalker_change.vpcf"
+	}
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"statboost"			"30 60 90 120 150 180"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_hunter_in_the_night_datadriven"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"AllowIllusionDuplicate"	"1"
+
+			"ThinkInterval"	"0.1"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"scripts/vscripts/heroes/kim/gasolin.lua"
+					"Function"		"HunterInTheNight"
+					"modifier"		"modifier_hunter_in_the_night_buff_datadriven"
+				}
+			}
+		}
+
+		"modifier_hunter_in_the_night_buff_datadriven"
+		{
+			
+
+			"AllowIllusionDuplicate"	"1"
+
+			"EffectName"	"particles/units/heroes/hero_night_stalker/nightstalker_night_buff.vpcf"
+			"EffectAttachType"	"follow_origin"
+
+			"OnCreated"
+			{
+				"FireEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_night_stalker/nightstalker_change.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"Target"		"CASTER"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"FireEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_night_stalker/nightstalker_change.vpcf"
+					"EffectAttachType"	"follow_origin"
+					"Target"		"CASTER"
+				}
+			}
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%statboost"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%statboost"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%statboost"
+			}
+		}
+	}
+}

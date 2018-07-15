@@ -1,0 +1,24 @@
+"dota_ability_vision_revealer"
+{
+	"BaseClass"          			    "ability_datadriven"
+	"AbilityName"           			"dota_ability_vision_revealer"
+	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"Modifiers"
+	{
+		"modifier_dota_ability_vision_revealer"
+		{
+			"IsHidden"				"1"
+			"Passive"				"1"
+			
+			"States"
+			{
+				"MODIFIER_STATE_PROVIDES_VISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_UNSELECTABLE"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_INVULNERABLE"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_OUT_OF_GAME"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

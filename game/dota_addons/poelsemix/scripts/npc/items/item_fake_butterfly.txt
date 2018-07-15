@@ -1,0 +1,64 @@
+"item_fake_butterfly"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "fake_butterfly"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"3950"
+  	"ID"						"2004"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"agi;regen_health;attack_speed;move_speed"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"kartofler"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"agility"					"40"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"as" "60"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"speed" "12"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"regen_health" "15"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_fake_butterfly"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%agility"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE"	"%speed"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%regen_health"
+			}
+		}
+	}
+}

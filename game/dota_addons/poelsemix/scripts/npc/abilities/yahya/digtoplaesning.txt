@@ -1,0 +1,158 @@
+"digtoplaesning"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "ability_datadriven"
+  "AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
+  "AbilityTextureName"      "digtoplaesning"
+
+  // Casting
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.8"
+  "AbilityCastRange"        "500 500 500 500"
+
+  // Time   
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCooldown"       "35 30 25 20"
+
+  // Cost
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityManaCost"       "100 110 120 130"
+  
+  // Special
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "radius"          "200"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "duration"          "5.0"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "animation_rate"        "0.55"
+    }
+    // Extra variables
+    "04"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "linger_duration"     "0.5"
+    }
+    "05"
+    {
+      "var_type" "FIELD_INTEGER"
+      "ability_damage" "5 7 10 13"
+    }
+    "06"
+    {
+      "var_type" "FIELD_INTEGER"
+      "damage_tooltip" "100 140 200 260"
+    }
+  }
+
+  // Data driven
+  //-------------------------------------------------------------------------------------------------------------
+  "precache"
+  {
+    "soundfile"         "soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts"
+    "particle"          "particles/units/heroes/hero_siren/naga_siren_siren_song_cast.vpcf"
+    "particle"          "particles/units/heroes/hero_siren/naga_siren_siren_song_end.vpcf"
+    "particle"          "particles/units/heroes/hero_siren/naga_siren_song_aura.vpcf"
+    "particle"          "particles/units/heroes/hero_siren/naga_siren_song_debuff.vpcf"
+  }
+
+  "OnSpellStart"
+  {
+    "FireSound"
+    {
+      "EffectName"  "digt"
+      "Target"     "CASTER"
+    }
+
+    "AttachEffect"
+    {
+      "EffectName"      "particles/units/heroes/hero_siren/naga_siren_siren_song_cast.vpcf"
+      "EffectAttachType"    "follow_origin"
+      "Target"        "CASTER"
+    }
+
+    "ApplyModifier"
+    {
+      "Target"        "CASTER"
+      "ModifierName"      "modifier_song_of_the_siren_caster_datadriven"
+    }
+
+    "ApplyModifier"
+    {
+      "Target"        "CASTER"
+      "ModifierName"      "modifier_song_of_the_siren_aura_datadriven"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_song_of_the_siren_caster_datadriven"
+    {
+      "IsBuff"    "1"
+
+      "Duration"    "%duration"
+
+      "EffectName"      "particles/units/heroes/hero_siren/naga_siren_song_aura.vpcf"
+      "EffectAttachType"    "attach_mouth"
+    //  "EffectAttachType"    "follow_overhead" // If the caster has no attach_mouth bone.
+      "EffectRadius"      "%radius"
+    }
+
+    "modifier_song_of_the_siren_aura_datadriven"
+    {
+      "IsHidden"    "1"
+
+      "Duration"    "%duration"
+
+      "Aura"      "modifier_song_of_the_siren_datadriven"
+      "Aura_Radius" "%radius"
+      "Aura_Teams"  "DOTA_UNIT_TARGET_TEAM_ENEMY"
+      "Aura_Types"  "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+    }
+
+    "modifier_song_of_the_siren_datadriven"
+    {
+      "Attributes"  "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+      "IsDebuff"    "1"
+      "Duration"    "%duration"
+      "ThinkInterval"  "0.25"
+      "OnIntervalThink"
+      {
+        "Damage"
+        {
+          "Target"    "TARGET"
+          "Type"      "DAMAGE_TYPE_MAGICAL"
+          "Damage"    "%ability_damage"
+        }
+      }
+
+      "States"
+      {
+        "MODIFIER_STATE_STUNNED"    "MODIFIER_STATE_VALUE_ENABLED"
+      }
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_OVERRIDE_ANIMATION_RATE"   "%animation_rate"
+      }
+
+      "OverrideAnimation"   "ACT_DOTA_DISABLED"
+
+      "EffectName"      "particles/units/heroes/hero_siren/naga_siren_song_debuff.vpcf"
+      "EffectAttachType"    "follow_origin"
+    }
+  }
+}

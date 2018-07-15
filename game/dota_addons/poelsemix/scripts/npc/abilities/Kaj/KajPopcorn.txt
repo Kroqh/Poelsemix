@@ -1,0 +1,114 @@
+"KajPopcorn"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "KajPop"
+        "MaxLevel"                  "4"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "25"
+        "AbilityManaCost"           "50 75 100 100"
+		"AbilityCastRange" "750"
+
+
+        "AbilitySpecial"
+        {
+          "01"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "duration"          "5 7 10 15"
+          }
+		  "02"
+		  {
+			"var_type"          "FIELD_FLOAT"
+            "popDmg"          "50 75 100 150"
+		  }
+        }
+
+			"precache"
+	{
+		"particle"			"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_explosion_white_d_arcana1.vpcf"
+		"particle"			"particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf"
+
+	}
+
+        "OnSpellStart"
+        {
+                     "FireSound"
+			        {
+			           	"EffectName"		"KajPop2"
+			           	"Target"			"CASTER"
+		    	    }
+            "TrackingProjectile"
+            {
+                "Target"            "TARGET"
+                "EffectName"        "particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf"
+                "Dodgeable"         "1"
+                "ProvidesVision"    "1"
+                "VisionRadius"      "150"
+                "MoveSpeed"         "900"
+                "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+            }
+        }
+        "OnProjectileHitUnit"
+        {
+            "DeleteOnHit"    "1"
+            "ApplyModifier"
+            {
+                "ModifierName"  "modifier_popcorn"
+                "Target"        "TARGET"
+                "Duration"      "%duration"
+            }
+        }
+        "Modifiers"
+        {
+            "modifier_popcorn"
+            {
+                "Passive"           "0"
+                "IsHidden"          "0"
+                "IsDebuff"          "1"
+        
+                "ThinkInterval"  "1.0"
+                "OnIntervalThink"
+                {
+                    "FireSound"
+			        {
+			           	"EffectName"		"KajPop1"
+			           	"Target"			"TARGET"
+		    	    }
+                    "Damage"
+                    {
+                        "Target"    "TARGET"
+                        "Type"      "DAMAGE_TYPE_MAGICAL"
+                        "Damage"    "%popDmg"
+                    }
+						"Knockback"
+		            {
+		                "Center"            "CASTER"
+						"Target"            "TARGET"
+		                "Duration"          "0.1"
+		                "Height"            "50"
+		                "IsFixedDistance"   "1"
+		                "Distance"			"10"
+		                "ShouldStun"        "1"    
+		            }
+						"FireEffect"
+					{
+					"EffectName" 	"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_explosion_white_d_arcana1.vpcf"
+					"EffectAttachType" "follow_origin"
+					"Target"	"TARGET"
+
+					}
+
+                }
+            }
+		}
+	}
+
+
+
+
+
+
+

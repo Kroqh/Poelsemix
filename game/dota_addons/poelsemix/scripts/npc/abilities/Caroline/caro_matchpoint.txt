@@ -1,0 +1,200 @@
+"caro_matchpoint"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+	"FightRecapLevel"				"1"
+	"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
+	"AbilityTextureName"			"caro_matchpoint"
+"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"2600"
+	"AbilityCastPoint"				"0.0"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0 20.0 20.0"
+	"AbilityChannelTime"			"1.0 1.0 1.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"600 1200 1800"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"90 100 110"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_reduction"		"0.1 0.1 0.1"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"speed_reduction"		"0.0 0.0 0.0"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"arrow_width"			"125 125 125"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"arrow_range"			"2600"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"arrow_speed"			"3000.0 3000.0 3000.0"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"tree_width"			"75 75 75"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"vision_radius"			"400 400 400"
+		}
+		"08"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"vision_duration"		"3.34 3.34 3.34"
+		}
+		// Extra variable
+		"09"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"charge_interval"		"0.01"
+		}
+		"10"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_per_interval"	"0.01"
+		}
+		"11"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"charge_time"			"1.0"
+		}
+		"12"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun"			"0.5 1.0 1.5"
+		}
+	}
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+
+		"particle"					"particles/units/heroes/hero_windrunner/windrunner_spell_powershot.vpcf"
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"Target"				"CASTER"
+			"EffectName"			"carogrunt"
+		}
+
+		// Reset speed and damage variables and set timer for channel
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/heroes/hero_caro/smash.lua"
+			"Function"				"powershot_initialize"
+			"Target"				"POINT"
+		}
+		
+		"ApplyModifier"
+		{
+			"Target"				"CASTER"
+			"ModifierName"			"modifier_powershot_charge_datadriven"
+		}		
+	}
+	
+	"OnChannelFinish"
+	{
+		"RemoveModifier"
+		{
+			"Target"				"CASTER"
+			"ModifierName"			"modifier_powershot_charge_datadriven"
+		}
+		
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/heroes/hero_caro/smash.lua"
+			"Function"				"powershot_start_traverse"
+		}
+	}
+	
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit"				"false"
+	
+		"RunScript"
+		{
+			"ScriptFile"			"scripts/vscripts/heroes/hero_caro/smash.lua"
+			"Function"				"powershot_register_unit"
+		}
+		"ApplyModifier"
+		{
+		    	"ModifierName"  "smash"
+		       "Target"        "TARGET"
+		}
+	
+	}
+
+	
+	"Modifiers"
+	{
+		"modifier_powershot_charge_datadriven"
+		{
+			"Duration"				"%charge_time"
+		
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"scripts/vscripts/heroes/hero_caro/smash.lua"
+					"Function"		"powershot_charge"
+				}
+			}
+		
+			"ThinkInterval"			"%charge_interval"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"scripts/vscripts/heroes/hero_caro/smash.lua"
+					"Function"		"powershot_charge"
+				}
+			}
+		}
+		"smash"
+		{
+			"IsDebuff" "1"
+			"Duration" "%stun"
+			"States"
+			{
+			"MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

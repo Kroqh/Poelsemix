@@ -1,0 +1,310 @@
+// Rewrite of Gyrocopter Rocket Barrage
+// Author: YOLOSPAGHETTI
+// Date: March 28, 2016
+// Version: 6.86
+// Type: Datadriven
+"KajAndrea"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"KajAndrea"
+	
+	"precache"
+	{
+		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_rocket_barrage.vpcf"
+		"particle"		"particles/units/heroes/hero_treant/treant_leechseed_soil_a_dirta.vpcf"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/rocket_barrage_active.vsnd"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/rocket_barrage_fire.vsnd"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/rocket_barrage_target01.vsnd"
+		"model" "models/courier/skippy_parrot/skippy_parrot_flying.vmdl"
+
+		//Bomb
+		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_calldown_marker.vpcf"
+		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_call_down_explosion_impact_b.vpcf"
+		"particle"		"particles/units/heroes/hero_gyrocopter/gyro_calldown_explosion_flash_c.vpcf"
+		"particle"		"particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_first.vpcf"
+		"particle"		"particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_second.vpcf"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/call_down_cast.vsnd"
+		"soundfile"		"sounds/weapons/hero/gyrocopter/call_down_impact.vsnd"
+
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"80 70 60"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"11 17 23"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"90 90 90 90"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"400"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"duration"					"10"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"rockets_per_second"		"10"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"interval"					"0.1"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bombDmg"		"300 600 900"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"missile_delay"				"0"
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"slow_duration_first"		"2"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+				"FireSound"
+			{
+		    	"EffectName"		"KajAndrea1"
+		    	"Target"			"CASTER"
+	    	}
+
+		"DelayedAction"
+		{
+			"Delay"     "3"
+			"Action"    
+			{
+				"CreateThinker"
+				{
+				"ModifierName"	"modifier_call_down_marker_first"
+				"Target"		"CASTER"	
+				}
+			}
+		}
+
+		"DelayedAction"
+		{
+			"Delay"     "6"
+			"Action"    
+			{
+				"CreateThinker"
+				{
+				"ModifierName"	"modifier_call_down_marker_first"
+				"Target"		"CASTER"	
+				}
+			}
+		}
+		"DelayedAction"
+		{
+			"Delay"     "9"
+			"Action"    
+			{
+				"CreateThinker"
+				{
+				"ModifierName"	"modifier_call_down_marker_first"
+				"Target"		"CASTER"	
+				}
+			}
+		}
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_rocket_barrage_datadriven"
+			"Target"	"CASTER"
+		}
+		
+		"FireSound"
+		{
+			"EffectName"	"Hero_Gyrocopter.Rocket_Barrage"
+			"Target"		"CASTER"
+		}
+	}
+
+		
+	"Modifiers"
+	{
+		"modifier_rocket_barrage_datadriven"
+		{
+			"Duration"		"%duration"
+			
+			"ThinkInterval"		"%interval"
+			
+			"ModelName" "models/courier/skippy_parrot/skippy_parrot_flying.vmdl"
+
+
+			"OnCreated"
+			{
+				"MODIFIER_PROPERTY_MODEL_CHANGE" "models/courier/skippy_parrot/skippy_parrot_flying.vmdl"
+				
+			}
+			"States"
+			{
+				"MODIFIER_STATE_FLYING" "MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_SILENCED" "MODIFIER_STATE_VALUE_ENABLED"
+			}
+			"Properties"
+	        {
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "300"
+	        }
+
+			"OnIntervalThink"
+			{
+
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center"  				"CASTER"
+						"Radius" 				"%radius"
+						"Teams" 				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" 				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+						"MaxTargets" 			"1"
+						"Random" 				"1"
+					}
+
+					"Action"
+					{	
+
+						
+						"TrackingProjectile"
+						{
+							"Target"           	"TARGET"
+							"EffectName"       	"particles/units/heroes/hero_gyrocopter/gyro_rocket_barrage.vpcf"
+							"Dodgeable"        	"0"
+							"ProvidesVision"   	"0"
+							"MoveSpeed"        	"1000"
+							"SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+							"TargetTypes"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+						}
+						
+						"Damage"
+						{
+							"Target"  "TARGET"
+							"Type"    "DAMAGE_TYPE_MAGICAL"
+							"Damage"  "%AbilityDamage"
+						}
+						"FireSound"
+						{
+						"EffectName"	"KajAndrea3"
+						"Target"		"CASTER"
+						}
+					}
+				}
+			}	
+		}
+		
+		"modifier_call_down_marker_first"
+		{
+			"Duration"	"%missile_delay"
+		
+			"OnCreated"
+			{
+				"FireSound"
+				{
+		  		  	"EffectName"		"KajAndrea2"
+		 		   	"Target"			"CASTER"
+	    		}
+				
+				"TrackingProjectile"
+				{
+					"Target"           	"TARGET"
+					"EffectName"       	"particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_first.vpcf"
+					"Dodgeable"        	"1"
+					"ProvidesVision"   	"0"
+					"MoveSpeed"        	"100"
+					"SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+					"TargetTypes"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+				}
+						
+				"TrackingProjectile"
+				{
+					"Target"           	"TARGET"
+					"EffectName"       	"particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_second.vpcf"
+					"Dodgeable"        	"1"
+					"ProvidesVision"   	"0"
+					"MoveSpeed"        	"100"
+					"SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+					"TargetTypes"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+				}
+			}
+			
+			"OnDestroy"
+			{
+				"FireSound"
+				{
+					"EffectName"	"Hero_Gyrocopter.CallDown.Damage"
+					"Target"		"TARGET"
+				}
+			
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center"  				"TARGET"
+						"Radius" 				"%radius"
+						"Teams" 				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" 				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					}
+	
+					"Action"
+					{					
+						"Damage"
+						{
+							"Target"  "TARGET"
+							"Type"    "DAMAGE_TYPE_MAGICAL"
+							"Damage"  "%bombDmg"
+						}
+						
+						"ApplyModifier"
+						{
+							"ModifierName"		"modifier_missile_slow_first"
+							"Target"			"TARGET"
+						}
+					}
+				}
+				
+			}
+		}
+			"modifier_missile_slow_first"
+		{
+			"Duration"	"%slow_duration_first"
+			"IsDebuff" "1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%slow_first"
+			}
+		}
+	}	
+}

@@ -1,0 +1,94 @@
+"item_ninja_tabi"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"ninja_tabi"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+  	"ItemCost"					"1400"
+  	"ID"						"2017"
+  	"AbilityCooldown"				"35.0"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"move_speed;armor"
+	"ItemQuality"					"common"
+	"ItemAliases"					"tabi;ninja tabi"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"armor" "6"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"move_speed" "65"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"regen_health" "4"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "6.0"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_armor" "5"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_ninja_tabi_armor"
+			"Target" 		"CASTER"			
+		}
+
+		"FireSound"
+		{
+			"EffectName" "DOTA_Item.MedallionOfCourage.Activate"
+			"Target" 		"CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_ninja_tabi"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes"        "MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%move_speed"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%regen_health"
+			}
+		}
+
+		"modifier_ninja_tabi_armor"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsBuff"			"1"
+			"Duration"			"%duration"
+		
+			"EffectName"			"particles/items2_fx/medallion_of_courage_friend_shield.vpcf"
+			"EffectAttachType"		"follow_overhead"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+"item_recipe_htx"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_htx"
+		"ItemRequirements"
+		{
+			"01" "item_octarine_core;item_kaya"
+		}
+  	}

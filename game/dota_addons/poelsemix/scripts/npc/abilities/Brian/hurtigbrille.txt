@@ -1,0 +1,70 @@
+	"hurtigbrille"
+{
+	"BaseClass"                 "ability_datadriven"
+	"AbilityTextureName"        "hurtigbrille"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AOERadius"					"600"
+	"AbilityCooldown"               "15"
+	"AbilityManaCost"               "100"
+	
+
+		"precache"
+        {
+        "particle" "particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_ambient_esl_fire.vpcf"
+        }
+	
+	"OnSpellStart"
+	{
+	    "ApplyModifier"
+	    {
+	        "ModifierName"  "modifier_speed_self"
+	        "Duration"      "5"
+	        "Target"
+	        {
+	            "Center"    "CASTER"
+	            "Radius"    "600"
+	            "Teams"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	            "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	        }
+	    }
+        "FireSound"
+            {
+                "EffectName"    "woosh_brian"
+                "Target"        "CASTER"
+            }
+	   }
+	"Modifiers"
+	{
+
+	    "modifier_speed_self"
+	    {
+	        "Passive"           "0"
+	        "IsHidden"          "0"
+			"Duration"      "5"	
+			
+			"EffectName"		"particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_ambient_esl_fire.vpcf"
+			"EffectAttachType"	"follow_origin"
+
+	        "Properties"
+	        {
+	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%move_up_self" 
+			"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%aspeed"
+	        }
+	    }
+	}
+	"AbilitySpecial"
+	{
+	    "01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "move_up_self"      "20 30 40 50"	
+	    }
+		"01'2"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "aspeed"      "15 25 35 45"
+	    }
+
+	}
+}

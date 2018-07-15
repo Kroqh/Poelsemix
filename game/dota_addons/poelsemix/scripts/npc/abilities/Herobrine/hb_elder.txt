@@ -1,0 +1,51 @@
+"hb_elder"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityTextureName"			"EnderDragon"
+		"AbilityCooldown"				"20 15 10 5"
+		"AbilityManaCost"				"50"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastRange" 				"700"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+
+			"01"
+			{
+				"var_type" "FIELD_FLOAT"
+				"duration" "15 20 25 30"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+		
+
+			
+
+					
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_elderdrake"
+				"Target" 		"POINT"
+				"Duration"		"%duration"
+				"UnitCount"		"1"
+				"UnitLimit"		"99"
+				"GrantsGold"	"50"
+				"GrantsXP"		"50"
+				"SpawnRadius"	"1"
+
+			}
+			
+}
+}

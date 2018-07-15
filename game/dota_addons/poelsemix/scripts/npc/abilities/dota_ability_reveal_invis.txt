@@ -1,0 +1,42 @@
+"dota_ability_reveal_invis"
+    {
+           "BaseClass"							"ability_datadriven"
+           "AbilityName"						"dota_ability_reveal_invis"
+           "AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+           "Modifiers"
+           {
+                "modifier_dota_ability_reveal_invis"
+                {
+                     "IsHidden"					"1"
+                     "Passive"					"1"
+                     
+                     "Aura"						"modifier_invis_revealed"
+                     "Aura_Radius"				"350"
+                     "Aura_Teams"				"DOTA_UNIT_TARGET_TEAM_BOTH"
+                     "Aura_Types"				"DOTA_UNIT_TARGET_ALL"
+                     "Aura_Flags"				"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+                     "States"
+                     {
+                           "MODIFIER_STATE_UNSELECTABLE"		"MODIFIER_STATE_VALUE_ENABLED"
+                           "MODIFIER_STATE_NO_HEALTH_BAR"		"MODIFIER_STATE_VALUE_ENABLED"
+                           "MODIFIER_STATE_INVULNERABLE"		"MODIFIER_STATE_VALUE_ENABLED"
+                           "MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+                     }
+                }
+
+                "modifier_invis_revealed"
+                {
+                     "Passive"					"1"
+                     "TextureName"				"item_gem"
+                     "Priority"					"MODIFIER_PRIORITY_HIGH"
+                     "States"
+                     {
+                           "MODIFIER_STATE_INVISIBLE"			"MODIFIER_STATE_VALUE_DISABLED"
+                     }
+                }
+           }
+    }
+
+//=================================================================================================================

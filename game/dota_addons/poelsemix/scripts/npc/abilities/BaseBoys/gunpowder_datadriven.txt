@@ -1,0 +1,142 @@
+"gunpowder_datadriven"
+{
+	//General
+	//--------------------------
+	"BaseClass" "ability_datadriven"
+	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "gunpowder"
+	
+	//Precache
+	//--------------------------
+	"precache"
+	{
+		"soundfile" "soundevents/baseboys_sounds.vsndevts"
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"particle"	"particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+		"particle"	"particles/status_fx/status_effect_gods_strength.vpcf"
+	}
+	
+	//Casting
+	//--------------------------
+	"AbilityCastPoint" "0.0"
+	
+	//Time
+	//--------------------------
+	"AbilityCooldown" "50 45 40 40"
+
+	//Cost
+	//--------------------------
+	"AbilityManaCost" "200"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"model_scale" "1.5"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "10.0"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_agility" "50 75 100 250" 
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_speed" "900"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName" "modifier_gunpowder"
+			"Target" "CASTER"
+			"Duration"  "%duration"
+		}
+		"ApplyModifier"
+		{
+			"ModifierName" "modifier_scale"
+			"Target" "CASTER"
+		}
+		
+		"FireSound"
+		{
+			"EffectName" "gratisgunpowder"
+			"Target" "CASTER"
+		}
+		
+		"FireSound"
+		{
+			"EffectName" "Hero_Sven.GodsStrength"
+			"Target" "CASTER"
+		}
+		
+		"FireEffect"
+		{
+			"EffectName" "particles/units/heroes/hero_sven/sven_spell_gods_strength.vpcf"
+			"EffectAttachType" "follow_origin"
+			"Target" "CASTER"
+		}
+	}
+	
+	//Modifiers
+	"Modifiers"
+	{
+		"modifier_scale"
+		{
+			"IsBuff" "1"
+			"IsPurgeable" "0"
+			"IsHidden" "1"
+			"Duration" "%duration"
+			
+			"AllowIllusionDuplicate"	"1"
+			
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile" "heroes/scale_model.lua"
+					"Function" "ChangeModel"
+				}
+			}
+			
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile" "heroes/scale_model.lua"
+					"Function" "RevertModel"
+				}
+			}
+		}
+		
+		"modifier_gunpowder"
+		{
+			"IsBuff" "1"
+			"IsHidden" "0"
+			"IsPurgeable" "0"
+			"Duration" "%duration"
+			
+			"AllowIllusionDuplicate"	"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agility"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%bonus_speed"
+			}
+			
+			"StatusEffectName"	"particles/status_fx/status_effect_gods_strength.vpcf"
+			"StatusEffectPriority"	"10"
+		}
+	}
+}
+
+

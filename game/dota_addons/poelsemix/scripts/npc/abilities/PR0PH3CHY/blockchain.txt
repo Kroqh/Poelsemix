@@ -1,0 +1,101 @@
+"pr0_blockchain"
+{
+"precache"
+{
+	"particle" "particles/treasure_courier_death_coins.vpcf"
+	"soundfile" "soundevents/pr0_soundevent.vsndevts"	
+	"particle" "particles/units/heroes/hero_dark_willow/dark_willow_bramble_precast.vpcf"
+	"particle" "particles/units/heroes/hero_dark_willow/dark_willow_wisp_spell_type.vpcf"
+}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityTextureName" "blockchain"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime" "4"
+        
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"85 90 95 100"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+		"AbilitySpecial"
+       		 {
+            	            "12"
+	            {
+	                "var_type" "FIELD_INTEGER"
+	                "chance" "50 65 80 95"
+	            }
+
+
+       		 }
+ "OnSpellStart"
+ {
+     "FireSound"
+     {
+        "EffectName" "pr0_hackerjob"
+        "Target" "CASTER"
+   }
+		                "AttachEffect"
+                {
+                "EffectName" "particles/units/heroes/hero_dark_willow/dark_willow_bramble_precast.vpcf"
+                "EffectAttachType" "follow_origin"
+                "Target" "CASTER"            
+					}
+}
+	"OnChannelSucceeded"
+     {
+	   
+
+	"Random"
+		    {
+		        "Chance"            "%chance"
+		        "OnSuccess"
+		        {
+		            
+		                
+		                
+		              	  
+		             "FireSound"
+     					{
+        					"EffectName" "pr0_ching"
+     					   "Target" "CASTER"
+ 						  }
+  					 	"GrantXPGold"
+							{
+							"Target"  "CASTER"
+							"GoldAmount" "583"
+							}
+					                "AttachEffect"
+                {
+                "EffectName" "particles/treasure_courier_death_coins.vpcf"
+                "EffectAttachType" "follow_origin"
+                "Target" "CASTER"
+                }
+		        }
+		                "OnFailure"
+		                {
+		                    "FireSound"
+     					{
+        					"EffectName" "pr0_nej"
+     					   "Target" "CASTER"
+ 						  }
+						   "AttachEffect"
+              		  {
+               			 "EffectName" "particles/units/heroes/hero_dark_willow/dark_willow_wisp_spell_type.vpcf"
+               			 "EffectAttachType" "follow_origin"
+               				 "Target" "CASTER"            
+					}
+		                }
+		            }
+		        }
+
+
+ }
+

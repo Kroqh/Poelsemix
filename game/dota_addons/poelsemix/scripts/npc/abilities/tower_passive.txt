@@ -1,0 +1,25 @@
+"tower_passive"
+{
+	"BaseClass"                 "ability_datadriven"
+	"AbilityTextureName"        "soren3"
+	"MaxLevel"                  "1"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+	"Modifiers"
+	{
+	    "modifier_without_collision"
+	    {
+	        "Passive"           "1"
+	        "IsHidden"          "1"
+
+	        "States"
+	        {
+	            "MODIFIER_STATE_NO_UNIT_COLLISION"   "MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+	        }
+	    }
+	}
+
+}

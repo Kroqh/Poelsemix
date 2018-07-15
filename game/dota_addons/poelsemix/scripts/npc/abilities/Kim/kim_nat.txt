@@ -1,0 +1,126 @@
+"kim_nat"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName"			"midtnat"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3"
+	"AbilityCooldown"				"60"
+	"AbilityManaCost"				"0"
+	"MaxLevel" "1"
+"RequiredLevel"        "6"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_night_stalker/nightstalker_ulti.vpcf"
+
+			"soundfile" "soundevents/kim_soundevent.vsndevts"
+
+	}
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"20.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blind_percentage"				"-35"
+		}
+		// Using a value now, need to change it to GLOBAL once its fixed
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"radius"				"12000"
+		}
+		"04"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "self_speed"      "300"	
+	    }
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"kim_nat_lyd"
+			"Target"		"CASTER"
+		}
+
+		"FireEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_night_stalker/nightstalker_ulti.vpcf"
+			"EffectAttachType"	"follow_origin"
+			"Target"		"CASTER"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_darkness_aura_datadriven"
+			"Target"		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"scripts/vscripts/heroes/kim/darkness.lua"
+			"Function"		"Darkness"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_darkness_aura_datadriven"
+		{
+			"Duration"	"%duration"
+
+			"Attributes" "MODIFIER_ATTRIBUTE_PERMANENT"
+
+			"Aura" 			"modifier_darkness_datadriven"
+			"Aura_Radius" 	"%radius"
+			"Aura_Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types" 	"DOTA_UNIT_TARGET_ALL"
+"Properties"
+ 		{
+	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%self_speed" 
+
+		}
+		}
+
+		"modifier_darkness_datadriven"
+		{
+			"IsDebuff"	"1"
+			 
+	       
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"scripts/vscripts/heroes/kim/darkness.lua"
+					"Function"		"ReduceVision"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"scripts/vscripts/heroes/kim/darkness.lua"
+					"Function"		"RevertVision"
+				}
+			}
+		}
+	}
+}

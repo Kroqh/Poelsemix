@@ -1,0 +1,138 @@
+"red_cecil"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"				   
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	   
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"red_cecil"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		
+		"particle"		"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+	}
+
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"250"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"10.0 12.0 14.0 16.0"
+	
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"250 350 450 550"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 100 100 100"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"start_size"			"150 150 150 150"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"end_size"			"250 250 250 250"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"					"175 200 225 250"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"pspeed"					"1050"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"dmg_reduction_pct"		"-20 -30 -40 -50"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"debuff_duration"	"5.0"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"slow"	"-20 -30 -40 -50"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"LinearProjectile"
+		{
+			"Target" "POINT"
+			"EffectName" "particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+			"MoveSpeed" "%pspeed"
+			"StartRadius" "%start_size"
+			"StartPosition" "attach_origin"
+			"EndRadius" "%end_size"
+			"FixedDistance" "%range"
+			"TargetTeams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"TargetTypes" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO | DOTA_UNITY_TARGET_MECHANICAL"
+			"TargetFlags" "DOTA_UNIT_TARGET_FLAG_NONE"
+			"HasFrontalCone" "1"
+			"ProvidesVision" "0"
+		}
+		"FireSound"
+		{
+			"EffectName" "cough_brian"
+			"Target" "CASTER"
+		}
+	}
+	
+	"OnProjectileHitUnit"
+	{
+		"DeleteOnHit" "0"
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"smokerlungs"
+			"Target" 		"TARGET"
+			"Duration"		"%reduction_duration"
+		}
+
+		"Damage"
+		{
+			"Target" "TARGET"
+			"Type" "DAMAGE_TYPE_MAGICAL"
+			"Damage" "%AbilityDamage"
+		}
+	}
+
+	"Modifiers"
+	{
+		"smokerlungs"
+		{
+			"IsDebuff"	"1"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"	"%dmg_reduction_pct"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" 		"%slow"
+			}
+		}
+	}
+}

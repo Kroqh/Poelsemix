@@ -1,0 +1,125 @@
+"matematik_A_datadriven"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "matematikA"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"45 40 35 30"
+	"AbilityChannelTime"			"1"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 120 140 160"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_int" "20 35 60 80"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"speed_loss" "-90"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_range" "200 300 500 750"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_as" "50 100 150 200"
+		}
+		"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"bonus_duration" "9"
+		}
+		"06"
+		{
+			"var_type" "FIELD_FLOAT"
+			"loss_duration" "9"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName" "matematikA"
+			"Target" "CASTER"
+		}
+	}
+	
+	"OnChannelSucceeded"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName" "modifier_matematik_A"
+			"Target" "CASTER"
+			"Duration" "%bonus_duration"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_matematik_A"
+		{
+			"IsHidden" "1"
+			
+			"OnCreated"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName" "modifier_intellect_boost"
+					"Target" "CASTER"
+				}
+			}
+			
+			"OnDestroy"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName" "modifier_lose_speed"
+					"Target" "CASTER"
+				}
+			}
+		}
+		
+		"modifier_intellect_boost"
+		{
+			"IsBuff" "1"
+			"Duration" "%bonus_duration"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS" "%bonus_range"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_as"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_int"
+			}
+		}
+		
+		"modifier_lose_speed"
+		{
+			"IsDebuff" "1"
+			"Duration" "%loss_duration"
+			
+			"Properties"
+	        {
+	            "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%speed_loss" 
+	        }
+		}
+	}
+}

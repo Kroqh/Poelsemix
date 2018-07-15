@@ -1,0 +1,31 @@
+"kolonihave"
+{
+	"BaseClass"                 "ability_datadriven"
+	"AbilityTextureName"        "Soren3"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityCooldown"               "30 25 20 15"
+	"AbilityManaCost"               "100"
+	"AbilityCastRange"				"875"
+
+	
+	"OnSpellStart"
+	{
+	        "SpawnUnit"
+	   		{
+			    "UnitName"      "npc_kolonihave"
+   			    "Target"        "POINT"
+   			    "Duration"      "15"
+	   		    "UnitCount"     "1"
+	   		    "UnitLimit"     "0"
+			    "GrantsGold"    "1"
+   			    "GrantsXP"      "1"
+   			    "SpawnRadius"   "10"
+   			}
+			"FireSound"
+			{
+				"Target"				"CASTER"
+				"EffectName"			"SorenHave"
+			}
+	}
+}

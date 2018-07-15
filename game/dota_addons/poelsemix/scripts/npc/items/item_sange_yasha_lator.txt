@@ -1,0 +1,166 @@
+"item_sange_yasha_lator"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"sange_yasha_lator"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"1"
+  	"ID"						"2014"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"				"damage;unique"
+		"ItemQuality"				"artifact"
+		"ItemAliases" 				"sange;yasha;deso;sange- and yashalator"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "80"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"corruption_armor" "-15"
+		}
+		"03"
+		{
+			"var_type" "FIELD_FLOAT"
+			"corruption_duration" "15.0"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"str" "20"
+		}
+		"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"agi" "20"
+		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"as" "20"
+		}
+		"07"
+		{
+			"var_type" "FIELD_INTEGER"
+			"move_speed" "16"
+		}
+		"08"
+		{
+			"var_type" "FIELD_INTEGER"
+			"maim_chance" "45"
+		}
+		"09"
+		{
+			"var_type" "FIELD_INTEGER"
+			"maim_slow_movement" "-30"
+		}
+		"10"
+		{
+			"var_type" "FIELD_INTEGER"
+			"maim_slow_attack" "-40"
+		}
+		"11"
+		{
+			"var_type" "FIELD_FLOAT"
+			"maim_duration" "5"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_sange_yasha_lator"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%str"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%agi"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%damage"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT_SECONDARY" "%as"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUIE" "%move_speed"
+			}
+
+			"Orb"
+			{
+				"Priority"			"DOTA_ORB_PRIORITY_ITEM"
+				"ProjectileName"    "particles/items_fx/desolator_projectile.vpcf"
+				"CastAttack"		"0"
+			}
+			
+			"OnOrbFire"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_sange_yasha_lator_corruption"
+					"Target" 		"TARGET"
+				}
+				
+				"FireSound"
+				{
+					"EffectName"	"Item_Desolator.Target"
+					"Target" 		"TARGET"
+				}
+			}
+
+			"OnAttackLanded"
+			{
+				"Random"
+				{
+					"Chance"			"%maim_chance"
+					"OnSuccess"
+					{
+						"RunScript"
+						{
+							"ScriptFile"	"items/item_sange_yasha.lua"
+							"Function"		"modifier_item_sange_and_yasha_datadriven_on_attack_landed_random_on_success"
+						}
+					}
+				}
+			}
+		}
+		"modifier_sange_yasha_lator_corruption"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+			"Duration" "%maim_duration"
+		
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%corruption_armor"
+			}
+		}
+
+		"modifier_item_sange_and_yasha_datadriven_greater_maim"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+			"IsPurgeable" "1"
+			"Duration" "%maim_duration"
+		
+			"EffectName"		"particles/items2_fx/sange_maim.vpcf"
+			"EffectAttachType"	"PATTACH_ABSORIGIN"
+		
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%maim_slow_attack"
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%maim_slow_movement" 
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+"npc_dota_venom_trap_ward"
+{
+	// General
+	//
+	"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+	"Model"						"models/props/traps/hooded_fang/hooded_fang.vmdl"// Model.
+	"Level"						"1"
+	"VisbibleInPortraitOnly"	"1"
+	
+	// Abilities
+	//----------------------------------------------------------------
+	
+	"Ability1"					"breathe_poison"			// Ability 1.
+	"Ability2"					"trap_unselectable"			// Ability 2.
+	"Ability3"					""			// Ability 3.
+	"Ability4"					""			// Ability 4.
+	"Ability5"					""			// Ability 5.
+	"Ability6"					""			// Ability 6 - Extra.
+	"Ability7"					""			// Ability 7 - Extra.
+	"Ability8"					""			// Ability 8 - Extra.
+
+	// Attack
+	//----------------------------------------------------------------
+	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+
+	// Movement
+	//----------------------------------------------------------------
+	"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_NONE"			// Type of locomotion - ground, air
+	"MovementSpeed"				"0"			// Speed
+	"MovementTurnRate"			"0.25"			// Turning rate.
+
+	// Team
+	//----------------------------------------------------------------
+	"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+}	

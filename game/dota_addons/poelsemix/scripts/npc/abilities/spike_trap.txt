@@ -1,0 +1,56 @@
+"spike_trap"
+{
+	"BaseClass"           			"ability_lua"
+	"ScriptFile"					"spike_trap"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"				   
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"600"
+	"AbilityCastPoint"				"0.45"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"2"
+	
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"150"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"light_strike_array_aoe"	"192"
+		}
+		
+		"02"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"light_strike_array_delay_time"	"0.65"
+		}
+					
+		"03"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"light_strike_array_stun_duration"	"1.6"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"cast_animation"			"12"
+		}
+		"05"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"light_strike_array_damage"			"600"
+		}
+	}
+}

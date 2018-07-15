@@ -1,0 +1,185 @@
+//=================================================================================================================
+// Abaddon: its a gay
+//=================================================================================================================
+
+"Skyd_en_due_datadriven"
+{
+// General
+//-------------------------------------------------------------------------------------------------------------
+"BaseClass"				"ability_datadriven"
+"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+"FightRecapLevel"				"1"
+"AbilityTextureName"			"Soren4"
+
+// Casting
+//-------------------------------------------------------------------------------------------------------------
+"AbilityCastRange"				"1000"
+"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+// Time		
+//-------------------------------------------------------------------------------------------------------------
+"AbilityChannelTime"			"5 5 5 5"
+"AbilityCooldown"				"16.0 16.0 16.0 16.0"
+
+// Damage.
+//-------------------------------------------------------------------------------------------------------------
+"AbilityDamage"					"1000 2000 4000"
+
+// Cost
+//-------------------------------------------------------------------------------------------------------------
+"AbilityManaCost"				"140 150 160 170"
+
+// Special
+//-------------------------------------------------------------------------------------------------------------
+"AbilitySpecial"
+{
+	"01"
+	{
+		"var_type"			"FIELD_FLOAT"
+		"tick_interval"		"0.1 0.1 0.1 0.1"
+	}
+	"02"
+	{
+		"var_type"			"FIELD_FLOAT"
+		"channel_time"		"5"
+	}
+	"03"
+	{
+		"var_type"			"FIELD_FLOAT"
+		"total_damage"		"0"
+	}
+	// Extra, calculated as total_damage / channel_time * tick_interval
+	"04"
+	{
+		"var_type"			"FIELD_FLOAT"
+		"damage_per_tick"	"0"
+	}
+	"05"
+	{
+		"var_type"					"FIELD_INTEGER"
+		"projectile_speed"			"5000 5000 5000"
+	}
+	"06"
+	{
+		"var_type"					"FIELD_INTEGER"
+		"tooltip_range"				"2500 2500 2500"
+	}
+	// Extra variables
+	"07"
+	{
+		"var_type"					"FIELD_FLOAT"
+		"charge_time"				"0"
+	}
+	"08"
+	{
+		"var_type"					"FIELD_FLOAT"
+		"debuff_duration"			"4.0"
+	}
+}
+
+"precache"
+{
+	"particle"  "particles/status_fx/status_effect_shaman_shackle.vpcf" 	
+	"particle"	"particles/units/heroes/hero_shadowshaman/shadowshaman_shackle.vpcf"
+	"soundfile" "soundevents/Soren_sounds.vsndevts"
+
+}
+
+"OnSpellStart"
+{
+
+	"ApplyModifier"
+	{
+		"ModifierName"	"modifier_shackles"
+		"Target" 		"TARGET"
+		"Duration"		"%channel_time"
+	}
+			"FireSound"
+	{
+		"Target"				"TARGET"
+		"EffectName"			"SorenUltStart"
+	}
+}
+
+"OnChannelFinish"
+{
+	"RemoveModifier"
+	{
+		"ModifierName"	"modifier_shackles"
+		"Target" 		"TARGET"
+	}
+
+	"RunScript"
+	{
+		"ScriptFile"	"heroes/hero_shadow_shaman/shackles.lua"
+		"Function"		"StopSound"
+	}
+}
+
+"OnChannelSucceeded"
+{
+	"ApplyModifier"
+	{
+		"Target"				"TARGET"
+		"ModifierName"			"modifier_assassinate_target_datadriven"
+	}
+
+	"RunScript"
+	{
+		"ScriptFile"			"heroes/hero_sniper/assassinate.lua"
+		"Function"				"assassinate_register_target"
+	}
+	
+	"TrackingProjectile"
+	{
+		"Target"				"TARGET"
+		"EffectName"			"particles/units/heroes/hero_sniper/sniper_assassinate.vpcf"
+		"Dodgeable"				"1"
+		"ProvidesVision"		"0"
+		"MoveSpeed"				"%projectile_speed"
+		"SourceAttachment"		"DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+	}
+}
+
+"OnProjectileHitUnit"
+{
+	"FireSound"
+	{
+		"Target"				"TARGET"
+		"EffectName"			"SorenUltHit"
+	}
+
+	"Damage"
+	{
+		"Target"				"TARGET"
+		"Damage"				"%AbilityDamage"
+		"Type"					"DAMAGE_TYPE_MAGICAL"
+	}
+	
+	"RemoveModifier"
+	{
+		"Target"				"TARGET"
+		"ModifierName"			"modifier_assassinate_target_datadriven"
+	}
+}
+
+"Modifiers"
+{
+
+	"modifier_shackles"
+	{
+		"IsDebuff"			"1"
+
+		"States"
+		{
+			"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
+		}
+
+	}
+}
+}

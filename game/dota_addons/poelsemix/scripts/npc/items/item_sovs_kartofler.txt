@@ -1,0 +1,53 @@
+"item_sovs_kartofler"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "brun_sovs_kartofler"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"1100"
+  	"ID"						"2011"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"str;regen_health;health_pool"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"sok;brun sovs og kartofler"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"armor"					"11"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"magic_resist" "25"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_sovs_kartofler"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%armor"
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_ITEM_UNIQUE"		"%magic_resist"
+			}
+		}
+	}
+}

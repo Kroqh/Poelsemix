@@ -1,0 +1,96 @@
+"item_sandals"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"sandals"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+  	"ItemCost"					"4450"
+  	"ID"						"2016"
+	"Effect"					"particles/generic_gameplay/dropped_item.vpcf"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;move_speed;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"h2o;sandals"
+
+	//Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"6.0"
+	"AbilitySharedCooldown" 		"phase"
+
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "70"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"move_speed" "60"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"phase_ms" "35"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"phase_duration" "3.0"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"items/item_boots.lua"
+			"Function"		"HasteBoots"
+
+			"modifier_ms" 	"modifier_phase"
+			"sound_haste"	"DOTA_Item.PhaseBoots.Activate"
+			"particle_haste" "particles/econ/events/ti7/phase_boots_ti7.vpcf"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_sandals"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_PERMANENT"
+ 
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%damage"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE" "%move_speed"
+			}
+
+			
+		}
+		"modifier_phase"
+		{
+			"IsHidden"			"0"
+			"IsBuff"			"1"
+			"IsPurgeable"		"0"
+
+			"Duration" 			"%phase_duration"
+		
+			"Properties"
+			{
+			    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%phase_ms" 
+			}
+
+			"States"
+			{
+				"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+}

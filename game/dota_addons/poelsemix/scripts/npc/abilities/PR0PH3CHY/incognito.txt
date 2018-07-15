@@ -1,0 +1,134 @@
+"pr0_incognito"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"AbilityTextureName"				"incognito"
+	"MaxLevel"						"1"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	 {
+	  "particle"	"particles/generic_hero_status/status_invisibility_start.vpcf"
+	"particle" 	"particles/units/heroes/hero_winter_wyvern/wyvern_winters_curse_ring_fast.vpcf"
+	 
+	 }
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"fade_time"					"5"
+		}
+
+	}
+
+	"Modifiers"
+	{
+			
+		"modifier_invisibility_fade_datadriven"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+			
+			"Duration"	"%fade_time"
+			"EffectName"	"particles/generic_hero_status/status_invisibility_start.vpcf"
+			"EffectAttachType"	"follow_origin"
+			
+			"OnDestroy"
+			{
+				"ApplyModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_permanent_invisibility_datadriven"
+				}
+				"ApplyModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisible"
+				}
+			}  
+		}
+		"modifier_proxy_datadriven"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+
+			"OnAttackLanded"
+			{
+				                "AttachEffect"
+               							  {
+              							"EffectName"  "particles/units/heroes/hero_winter_wyvern/wyvern_winters_curse_ring_fast.vpcf"
+              							  "EffectAttachType" "follow_origin"
+               							  "Target" "TARGET"
+            					  		  }
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_permanent_invisibility_datadriven"
+				}
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisible"
+				}
+				"ApplyModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisibility_fade_datadriven"
+				}
+			}
+			
+
+				"OnDealDamage"
+			{
+
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_permanent_invisibility_datadriven"
+				}
+				"RemoveModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisible"
+				}
+				"ApplyModifier"
+				{
+					"Target"	"CASTER"
+					"ModifierName"	"modifier_invisibility_fade_datadriven"
+				}
+			}
+
+
+		}
+
+		"modifier_permanent_invisibility_datadriven"	
+		{	
+			"IsHidden"	"1"
+			"IsBuff" 	"1"
+			
+			"States"
+			{
+				"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_ENABLED" 
+			}
+
+			"OnDestroy"
+			{
+				"RemoveModifier"
+				{
+					"Target"
+					{
+						"Center"	"CASTER"
+						"Flags"	"DOTA_UNIT_TARGET_FLAG_DEAD"
+					}
+					"ModifierName"	"modifier_invisible"
+				}
+			}
+		}
+	}
+}

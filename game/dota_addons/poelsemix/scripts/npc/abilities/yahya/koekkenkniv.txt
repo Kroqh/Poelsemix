@@ -1,0 +1,78 @@
+//E
+"koekkenkniv"
+{
+  "BaseClass"                 "ability_datadriven"
+  "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_TOGGLE"
+  "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+  "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO"
+  "AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
+  "AbilityTextureName"         "koekkenkniv"
+  
+
+  "AbilityCooldown"       "0.0 0.0 0.0 0.0"
+  "AbilityManaCost"       "20 15 10 5"
+  "AbilityDamage"         "50 75 100 150"
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"      "FIELD_INTEGER"
+      "manacost"      "20 15 10 5"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_nyslebet_kniv"
+    {
+      
+      "IsPurgable"    "0"
+      "IsHidden"      "0"
+      "IsBuff"        "1"
+      "IsDebuff"      "0"
+      "IsStunDebuff"  "0"
+      //Purge(bool RemovePositiveBuffs, bool RemoveDebuffs, bool BuffsCreatedThisFrameOnly, bool RemoveStuns, bool RemoveExceptions)"
+      "TextureName"   "koekkenkniv"
+    
+      "OnAttack"
+      {
+        "SpendMana"
+        {
+          "Mana"    "%AbilityManaCost"
+        }
+
+        "FireSound"
+        {
+          "EffectName"  "koekkenkniv"
+          "Target"     "CASTER"
+        }
+      }
+
+
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%AbilityDamage"
+      }   
+    }
+  }
+
+  "OnToggleOn"
+  {
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_nyslebet_kniv"
+      "Target"     "CASTER"
+    }
+  }
+
+  "OnToggleOff"
+  {
+    "RemoveModifier"
+    {
+      "ModifierName"  "modifier_nyslebet_kniv"
+      "Target"     "CASTER"
+    }
+  }
+}

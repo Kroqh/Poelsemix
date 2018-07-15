@@ -1,0 +1,85 @@
+"LarsTeam"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "LarsAlly"
+        "MaxLevel"                  "4"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+        "AbilityCooldown"           "50 45 40 35"
+        "AbilityManaCost"           "75 100 125 150"
+		"AbilityCastRange"			"750"
+
+
+        "AbilitySpecial"
+        {
+          "01"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "duration"          "5 7 10 15"
+          }
+        }
+
+			"precache"
+	{
+		"particle"			"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_explosion_white_d_arcana1.vpcf"
+		"particle"			"particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf"
+
+	}
+
+        "OnSpellStart"
+        {
+
+					"ApplyModifier"
+				{
+					"ModifierName"	"modifier_teamSwap"
+					"Target" 		"TARGET"
+					"Duration"		"%duration"
+				}
+		"FireSound"
+  		{
+	    	"EffectName"		"LarsAlly"
+	    	"Target"			"TARGET"
+	  	}
+
+		}
+	"Modifiers"
+	{
+		
+			"modifier_teamSwap"
+		{
+			"IsBuff"		"1"
+			"IsPurgable"	"0"
+			"IsHidden"		"0"
+			
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/Hero_Lars/TeamSwap.lua"
+					"Function"		"SwapTeam"
+					
+				}
+			}
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/Hero_Lars/TeamSwap.lua"
+					"Function"		"SwapBack"
+					
+				}
+			}
+
+		}
+	}
+
+    
+}
+
+
+
+
+
+
+

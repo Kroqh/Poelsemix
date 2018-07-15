@@ -1,0 +1,138 @@
+"LarsFadbamse"
+    {
+        "BaseClass"                 "ability_datadriven"
+        "AbilityTextureName"        "LarsFadbamse"
+        "MaxLevel"                  "4"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+        "AbilityCooldown"           "15 13 11 9"
+        "AbilityManaCost"           "30 50 70 90"
+		"AbilityCastRange"			"750"
+		"AbilityChannelTime" "1"
+
+
+
+        "AbilitySpecial"
+        {
+          "01"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "duration"          "5 6 7 8"
+          }
+		"02"
+		  {
+			"var_type"          "FIELD_FLOAT"
+            "bonus_dmg"          "30 50 70 90"
+		  }
+		"03"
+		  {
+			"var_type"          "FIELD_FLOAT"
+            "bonus_armor"          "20 30 40 50"
+		  }
+		"04"
+		  {
+			"var_type"          "FIELD_FLOAT"
+            "bonus_speed"          "150 200 250 300"
+		  }
+        }
+
+			"precache"
+	{
+		"particle"			"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_explosion_white_d_arcana1.vpcf"
+		"particle"			"particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf"
+		"particle"			"particles/units/heroes/hero_brewmaster/brewmaster_drunken_haze_bubbles.vpcf"
+
+	}
+	"OnSpellStart"
+	{
+			"FireSound"
+   		{
+	    	"EffectName"		"LarsBeer1"
+	    	"Target"			"CASTER"
+	   	}
+
+	}
+
+        "OnChannelSucceeded"
+        {
+			"ApplyModifier"
+		{
+			"ModifierName"	"modifier_drunk_target"
+			"Target" 		"TARGET"
+			"duration" "%duration"
+		}
+			"ApplyModifier"
+		{
+			"ModifierName"	"modifier_drunk_buff"
+			"Target" 		"CASTER"
+			"duration" "%duration"
+		}
+			"FireSound"
+   		{
+	    	"EffectName"		"LarsBeer2"
+	    	"Target"			"CASTER"
+	   	}
+
+	}
+	"Modifiers"
+	{
+
+		"modifier_drunk_target"
+		{
+			"IsPurgable"		"0"
+			"IsDebuff"			"1"
+
+			"StatusEffectName" 		"particles/status_fx/status_effect_beserkers_call.vpcf" 	   
+			"StatusEffectPriority"  "10"
+
+			"ThinkInterval"  "0.1"
+			"OnIntervalThink"
+			{
+            		"RunScript"
+				{
+					"ScriptFile"	"heroes/Hero_Lars/LarsDrunk.lua"
+					"Function"		"LarsDrunkStart"
+
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/Hero_Lars/LarsDrunk.lua"
+					"Function"		"LarsDrunkEnd"
+				}
+			}
+
+		}
+		"modifier_drunk_buff"
+		{
+
+			"ThinkInterval"  "0.2"
+			"OnIntervalThink"
+			{
+		   "FireEffect"
+		   {
+			"EffectName" "particles/units/heroes/hero_brewmaster/brewmaster_drunken_haze_bubbles.vpcf"
+			"EffectAttachType" "follow_origin"
+			"TARGET" "CASTER"
+		   }
+			}	
+			"Properties"
+	            {
+	            "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_dmg"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_speed"
+	            }
+		}
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+"deity_datadriven"
+	    {
+	        // General
+	        //-------------------------------------------------------------------------------------------------------------
+	       
+	        "BaseClass"                     "ability_datadriven"
+	        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	        "AbilityTextureName"            "d31ty"
+	       
+	        "AbilityCooldown"               "120 110 100"
+	       
+	        "AbilityManaCost"               "100 120 140"
+	       
+	        "AbilityCastPoint"              "0.5"
+	       
+	        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+	       
+	        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+	       
+	        "precache"
+	        {
+	           "particle"			"particles/units/heroes/hero_phantom_lancer/status_effect_phantom_illstrong.vpcf"
+		   "particle"			"particles/units/heroes/hero_dark_willow/dark_willow_leyconduit_push_model_over.vpcf"
+	        }
+	       
+	        // Special
+	        //-------------------------------------------------------------------------------------------------------------
+	        "AbilitySpecial"
+	        {
+	            "01"
+	            {
+	                "var_type" "FIELD_INTEGER"
+	                "stat_loss" "-30 -60 -90"
+	            }
+	            "02"
+	            {
+	                "var_type" "FIELD_INTEGER"
+	                "radius" "99999"
+	            }
+	            "03"
+	            {
+	                "var_type" "FIELD_FLOAT"
+	                "duration" "6"
+	            }
+	            "04"
+	            {
+	                "var_type" "FIELD_INTEGER"
+	                "stat_gain" "60 120 180"
+	            }
+	        }
+	       
+	        "OnSpellStart"
+	        {
+				              
+
+
+	            "ApplyModifier"
+	            {
+	                "ModifierName" "modifier_deity_boost"
+	                "Target" "CASTER"
+	                "Duration" "%duration"
+	            }
+	           
+	            "ActOnTargets"
+	            {
+	                "Target"
+	                {  
+	                    "Center" "CASTER"
+	                    "Radius" "%radius"
+	                    "Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	                    "Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	                }
+	               
+	                "Action"
+	                {
+	                    "ApplyModifier"
+	                    {
+	                        "ModifierName" "modifier_deity"
+	                        "Target" "TARGET"
+	                        "Duration" "%duration"
+	                    }
+	                   
+
+	                }
+	            }
+			                    "FireSound"
+	                    {
+	                        "EffectName" "pr0_d31ty"
+	                        "Target" "CASTER"
+	                    }
+				    "FireSound"
+	                    {
+	                        "EffectName" "pr0_ult"
+	                        "Target" "TARGET"
+	                    }
+					                    "FireSound"
+	                    {
+	                        "EffectName" "pr0_d31ty"
+	                        "Target" "TARGET"
+	                    }
+				    "FireSound"
+	                    {
+	                        "EffectName" "pr0_ult"
+	                        "Target" "CASTER"
+	                    }
+	        }
+	       
+	        "Modifiers"
+	        {
+	            "modifier_deity"
+	            {
+			
+	                "IsDebuff" "1"
+	                "IsPurgeable" "0"
+	               	"StatusEffectName"     "particles/units/heroes/hero_phantom_lancer/status_effect_phantom_illstrong.vpcf"
+			"StatusEffectPriority" "15"
+	
+
+	               
+	                "Properties"
+	                {
+	                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%stat_loss"
+	                    "MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%stat_loss"
+	                    "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%stat_loss"
+	                }
+	            }
+	           
+	            "modifier_deity_boost"
+	            {
+	                "IsBuff" "1"
+	                "IsPurgeable" "0"
+	               
+	                "Properties"
+	                {
+	                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%stat_gain"
+	                }
+	            }
+	        }
+	    }

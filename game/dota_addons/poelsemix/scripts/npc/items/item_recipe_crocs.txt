@@ -1,0 +1,14 @@
+"item_recipe_crocs"
+{
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "recipe"
+  	"Model"						"models/props_gameplay/recipe.mdl"
+  	"ItemCost"					"0"
+	"ItemShopTags"				""
+	"ItemRecipe"				"1"
+	"ItemResult"				"item_crocs"
+	"ItemRequirements"
+	{
+		"01" "item_power_treads;item_ogre_axe;item_staff_of_wizardry;item_blade_of_alacrity;"
+	}
+}

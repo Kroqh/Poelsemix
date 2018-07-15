@@ -1,0 +1,60 @@
+"SorenPassiv"
+{
+	"BaseClass"                 "ability_datadriven"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"        "Soren2"
+	"MaxLevel"                  "4"
+
+"AbilitySpecial"
+	{
+	    "01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "heal_amount"             "50 75 150 250"
+	    }
+		"02"
+		{
+			"var_type"          "FIELD_INTEGER"
+	        "chance"             "25 30 35 40"
+		}
+
+}
+
+"Modifiers"
+{
+	"modifier_spis_kage"
+	{
+		"IsHidden" "1"
+		"Passive" "1"
+		"OnAttack"
+		{
+
+			"Random"
+			{
+				"Chance" "%chance"
+				"PseudoRandom" "DOTA_PSEUDO_RANDOM_SLARDAR_BASH"
+				
+				"OnSuccess"
+				{
+				"Heal"
+					{
+					"Target"
+					{
+						"Center"	"CASTER"
+						"Teams"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+					}
+						"HealAmount"	"%heal_amount"
+					}
+				"FireSound"
+				{
+						"Target"				"TARGET"
+						"EffectName"			"SorenPassiveTrigger"
+				}
+				}
+			}
+		}
+	}
+
+}
+
+}

@@ -1,0 +1,14 @@
+"item_recipe_sandals"
+{
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "recipe"
+  	"Model"						"models/props_gameplay/recipe.mdl"
+  	"ItemCost"					"0"
+	"ItemShopTags"				""
+	"ItemRecipe"				"1"
+	"ItemResult"				"item_sandals"
+	"ItemRequirements"
+	{
+		"01" "item_broadsword;item_phase_boots;item_claymore"
+	}
+}

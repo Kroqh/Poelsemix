@@ -1,0 +1,14 @@
+"item_recipe_sovs_kartofler"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_sovs_kartofler"
+		"ItemRequirements"
+		{
+			"01" "item_kartofler;item_brun_sovs"
+		}
+  	}

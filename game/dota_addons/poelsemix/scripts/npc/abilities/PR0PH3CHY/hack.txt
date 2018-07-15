@@ -1,0 +1,95 @@
+	"pr0_hack"
+	{
+		"BaseClass"                 "ability_datadriven"
+		"AbilityTextureName"        "hacked"
+		"MaxLevel"                  "4"
+		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+		"AbilityCooldown"               "8"
+		"AbilityManaCost"               "30 40 50 60"
+		"AbilityCastRange" "700"
+
+	    "precache"
+        {
+            "particle"          "particles/units/heroes/hero_phantom_lancer/phantomlancer_spiritlance_projectile.vpcf"
+	    "particle"			"particles/status_fx/status_effect_electrical.vpcf"
+        }
+		
+		"OnSpellStart"
+		{
+		"FireSound"
+     {
+        "EffectName" "pr0_hack"
+        "Target" "CASTER"
+   }
+
+						
+				"TrackingProjectile"
+			{
+			    "Target"            "TARGET"
+			    "EffectName"        "particles/units/heroes/hero_phantom_lancer/phantomlancer_spiritlance_projectile.vpcf"
+			    "Dodgeable"         "1"
+			    "ProvidesVision"    "1"
+			    "MoveSpeed"         "1000"
+			    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+			}
+		}
+		"OnProjectileHitUnit"
+		{
+
+				"DeleteOnHit"				"1"
+		"ApplyModifier"
+			{
+				"Target"	"TARGET"
+				"ModifierName"	"pr0hacked"
+				
+			}			
+		}
+		"Modifiers"
+		{
+		    "pr0hacked"
+		    {	
+
+			"Duration" "%hacktimer"
+		        "Passive"           "0"
+		        "IsHidden"          "0"
+		        "IsDebuff"          "1"
+			"StatusEffectName"     "particles/status_fx/status_effect_electrical.vpcf"
+			"StatusEffectPriority" "10"
+		        "States"
+		        {
+		            "MODIFIER_STATE_DISARMED"   "MODIFIER_STATE_VALUE_ENABLED"
+		        }
+				 "ThinkInterval"  "1.0"
+                "OnIntervalThink"
+                {
+
+            	 "Damage"
+            
+			   		 {
+                        "Target"    "TARGET"
+                        "Type"      "DAMAGE_TYPE_MAGICAL"
+                        "Damage"    "%dmg_tick"
+					}
+                }
+			}
+			
+		}
+		"AbilitySpecial"
+		{
+  			"01"
+		    {
+		        "var_type"          "FIELD_FLOAT"
+		        "hacktimer"             "2.0 3.0 4.0 5.0"
+		    }
+		    "02"
+		    {
+		        "var_type"          "FIELD_INTEGER"
+		        "dmg_tick"             "120 150 180 210"	
+		    }
+		  
+
+		}																					
+	}	

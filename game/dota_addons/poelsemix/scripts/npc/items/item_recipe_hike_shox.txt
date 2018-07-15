@@ -1,0 +1,14 @@
+"item_recipe_hike_shox"
+{
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "recipe"
+  	"Model"						"models/props_gameplay/recipe.mdl"
+  	"ItemCost"					"0"
+	"ItemShopTags"				""
+	"ItemRecipe"				"1"
+	"ItemResult"				"item_hike_shox"
+	"ItemRequirements"
+	{
+		"01" "item_vitality_booster;item_ninja_tabi;item_platemail;"
+	}
+}

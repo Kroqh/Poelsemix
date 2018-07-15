@@ -1,0 +1,75 @@
+"item_hjemmevaernet"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"hjemmevaernet"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"4400"
+  	"ID"						"2007"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"hjem;hjemmevaernet"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"as" "140"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"chance" "50"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "250"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_hjemmevaernet"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"States"
+			{
+				"MODIFIER_STATE_CANNOT_MISS"		"MODIFIER_STATE_VALUE_ENABLED"
+			}
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
+			}
+
+			"OnAttack"
+			{
+				"Random"
+				{
+					"Chance"			"%chance"
+					"OnSuccess"
+					{						
+						"Damage"
+						{
+							"Target"		"TARGET"
+							"Type"			"DAMAGE_TYPE_MAGICAL"
+							"Damage"		"%damage"
+						}						
+					}
+				}
+			}
+		}
+	}
+}

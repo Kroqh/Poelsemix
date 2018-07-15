@@ -1,0 +1,14 @@
+"item_recipe_mensa_iq"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_mensa_iq"
+		"ItemRequirements"
+		{
+			"01" "item_staff_of_wizardry;item_staff_of_wizardry;item_energy_booster;item_void_stone"
+		}
+  	}

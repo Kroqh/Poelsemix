@@ -1,0 +1,116 @@
+"antikommerciel_masseappel_datadriven"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"			"masseappel"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"	"soundevents/marvelous_soundevent.vsndevts"
+		
+		"particle"	"particles/units/heroes/hero_viper/viper_poison_debuff.vpcf"
+		
+		"soundfile"	"sounds/weapons/hero/riki/riki_smokescreen.vsnd"
+		"particle"  "particles/units/heroes/hero_riki/riki_smokebomb.vpcf"
+		"particle"  "particles/units/heroes/hero_riki/riki_smokebomb_b.vpcf"
+
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"28 27 26 25"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75 100 125 150"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"			"FIELD_FLOAT"
+			"duration"		"7.0"		
+		}
+		"02"
+		{
+			"var_type"			"FIELD_INTEGER"
+			"attack_speed"		"60 120 180 240"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "650"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "50 75 100 150"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"ActOnTargets"
+		{
+			"Target"
+			{
+				"Center"  	"CASTER"
+				"Radius" 	"%radius"
+				"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+		
+			"Action"    
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_antikommerciel_masseappel"
+					"Target" 		"TARGET"
+					"Duration"		"%duration"
+				}
+				
+			}
+		}
+		
+		"FireSound"
+		{
+			"EffectName" "masseappel"
+			"Target" "CASTER"
+		}
+		
+		"FireSound"
+		{
+			"EffectName" "Hero_Riki.Smoke_Screen"
+			"Target" "CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_antikommerciel_masseappel"
+		{
+			"IsBuff"			"1"
+			"IsPurgable"		"0"
+	
+			"EffectName"		"particles/units/heroes/hero_troll_warlord/troll_warlord_battletrance_buff.vpcf"
+			"EffectAttachType"	"follow_origin"
+	
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%damage"
+			}
+		}
+	}
+}

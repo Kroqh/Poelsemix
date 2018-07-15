@@ -1,0 +1,626 @@
+"anime_power_datadriven"
+{
+	//General
+	//--------------------------
+	"BaseClass" "ability_datadriven"
+	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName" "anime_power"
+	
+	//Precache
+	//--------------------------
+	"precache"
+	{
+		//gametecher
+		"soundfile" "soundevents/gametecher_soundevent.vsndevts"
+		
+		//faceless
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+		"particle"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+	
+		//qop
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
+		"particle"	"particles/units/heroes/hero_queenofpain/queen_scream_of_pain.vpcf"
+		"particle"	"particles/units/heroes/hero_queenofpain/queen_scream_of_pain_owner.vpcf"
+	
+		//leshrac
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_leshrac.vsndevts"
+		"particle"	"particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
+		
+		//OD
+		"particle" "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_sanity_eclipse_area.vpcf"
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts"	
+		
+		//warlock for later
+		"model" "models/items/warlock/golem/hellsworn_golem/hellsworn_golem.vmdl"
+	}
+	
+	//Casting
+	//--------------------------
+	"AbilityCastPoint" "0.0"
+	
+	//Time
+	//--------------------------
+	"AbilityCooldown" "100 80 60"
+
+	//Cost
+	//--------------------------
+	"AbilityManaCost" "200"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "25 50 100"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"knockback_height" "500"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"ignore_void" "0" 
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "1000"
+		}
+		"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"aura_interval" "0.01"
+		}
+		"06"
+		{ 
+			"var_type" "FIELD_FLOAT"
+			"duration" "18.5"
+		}
+		"07"
+		{
+			"var_type" "FIELD_FLOAT"
+			"flying_duration" "20.9"
+		}
+		"08"
+		{
+			"var_type" "FIELD_FLOAT"
+			"projectile_speed" "900"
+		}
+		"09"
+		{
+			"var_type" "FIELD_INTEGER"
+			"split_earth_damage" "10 40 70"
+		}
+	}
+	
+	"OnSpellStart"
+	{	
+		"DelayedAction"
+		{
+			"Delay" "2.75"
+			"Action"
+			{
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center" "CASTER"
+						"Radius" "%radius"
+						"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					}
+					
+					"Action"
+					{
+						"FireSound"
+						{
+							"EffectName" "nani"
+							"Target" "TARGET"
+						}
+					}
+				}
+			}
+		}
+		
+		"DelayedAction"
+		{
+			"Delay" "2.4"
+			
+			"Action"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"scripts/vscripts/heroes/hero_gametecher/chronosphere.lua"
+					"Function"			"Chronosphere"
+					"Target"			"CASTER"
+					"dummy_aura"		"modifier_chronosphere_aura_datadriven"
+				}
+				"FireSound"
+				{
+					"EffectName" "Hero_FacelessVoid.Chronosphere"
+					"Target" "CASTER"
+				}
+			}
+		}
+		
+		"DelayedAction"
+		{
+			"Delay" "3.25"
+			
+			"Action"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName" "modifier_ScreamOfPain"
+					"Target" "CASTER"
+					"Duration" "1"
+				}
+			}
+		}
+		
+		"DelayedAction"
+		{
+			"Delay" "4.25"
+			
+			"Action"
+			{
+				"AttachEffect"
+				{
+					"EffectName" "particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
+					"EffectAttachType" "attach_origin"
+					"Target" "CASTER"
+				
+					"ControlPoints"
+					{
+						"01" "%radius %radius %radius"
+					}
+				}
+			
+				"FireSound"
+				{
+					"EffectName" "Hero_Leshrac.Split_Earth"
+					"Target" "CASTER"
+				}
+			
+				"DestroyTrees"
+				{
+					"Target" "CASTER"
+					"Radius" "%radius"
+				}
+			
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center" "CASTER"
+						"Radius" "%radius"
+						"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					}
+				
+					"Action"
+					{
+						"Damage"
+						{
+							"Target" "TARGET"
+							"Type" "DAMAGE_TYPE_MAGICAL"
+							"Damage" "%split_earth_damage"
+						}
+					}
+				}
+			}				
+		}
+		
+		"ApplyModifier"
+		{
+			"ModifierName" "modifier_flying"
+			"Target" "CASTER"
+			"Duration" "%flying_duration"
+		}
+		
+		"FireSound"
+		{
+			"EffectName" "omae_wa_mou"
+			"Target" "CASTER"
+		}
+		
+		"DelayedAction"
+		{
+			"Delay" "5.5"
+			"Action"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName" "modifier_eclipse"
+					"Target" "CASTER"
+					"Duration" "1"
+				}
+						
+			}
+		}
+		
+		"DelayedAction"
+		{
+			"Delay" "6.5"
+			"Action"
+			{
+				"FireSound"
+				{
+					"EffectName" "further_beyond"
+					"Target" "CASTER"
+				}
+			}
+		}
+		
+		"DelayedAction"
+		{
+			"Delay" "12.5"
+			"Action"
+			{				
+				"ApplyModifier"
+				{
+					"ModifierName" "modifier_anime_power_part_2"
+					"Target" "CASTER"
+					"Duration" "6"
+				}
+			}
+		}
+	}
+	
+	"OnProjectileHitUnit"
+	{
+		"Damage"
+		{
+			"Target" "TARGET"
+			"Type" "DAMAGE_TYPE_MAGICAL"
+			"Damage" "%damage"
+		}
+	}
+	
+	//Modifiers
+	"Modifiers"
+	{
+		"modifier_eclipse"
+		{
+			"ThinkInterval" "0.25"
+			"OnIntervalThink"
+			{
+				"AttachEffect"
+				{ 
+					"EffectName"	"particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_sanity_eclipse_area.vpcf"
+					"EffectAttachType"	"attach_origin"
+					"Target"	"CASTER"
+		
+					"ControlPoints"
+					{
+						"00" "CASTER"
+						"01" "%radius %radius %radius"
+						"02" "%radius 0 0"
+						"03" "%radius 0 0"				
+					}
+				}
+				"FireSound"
+				{
+					"EffectName" "Hero_ObsidianDestroyer.SanityEclipse"
+					"Target" "CASTER"
+				}
+				
+
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center" "CASTER"
+						"Radius" "%radius"
+						"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					}
+				
+					"Action"
+					{
+						"Damage"
+						{
+							"Target" "TARGET"
+							"Type" "DAMAGE_TYPE_MAGICAL"
+							"Damage" "%split_earth_damage"
+						}
+					}
+				}
+			}
+		}
+		
+		"modifier_ScreamOfPain"
+		{
+			"IsHidden" "1"
+			
+			"ThinkInterval" "0.1"
+			"OnIntervalThink"
+			{
+				
+				"FireSound"
+				{
+					"EffectName" "Hero_QueenOfPain.ScreamOfPain"
+					"Target" "CASTER"
+				}
+				
+				"AttachEffect"
+				{
+					"EffectName" "particles/units/heroes/hero_queenofpain/queen_scream_of_pain_owner.vpcf"
+					"EffectAttachType" "attach_origin"
+					"Target" "CASTER"
+				}
+			
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center" "CASTER"
+						"Radius" "%radius"
+						"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+					}
+				
+					"Action"
+				
+					{
+						"TrackingProjectile"
+						{					
+							"Target" "TARGET"
+							"EffectName" "particles/units/heroes/hero_queenofpain/queen_scream_of_pain.vpcf"
+							"Dodgeable" "0"
+							"ProvidesVision" "0"
+							"MoveSpeed" "%projectile_speed"
+							"SourceAttachment" "DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+						}
+					}
+
+					
+				}
+				
+			}
+		}
+		
+		"modifier_anime_power_part_2"
+		{
+			"IsHidden" "1"
+			
+			"ThinkInterval" "0.25"
+			"OnIntervalThink"
+			{
+				//qop part
+				"FireSound"
+				{
+					"EffectName" "Hero_QueenOfPain.ScreamOfPain"
+					"Target" "CASTER"
+				}
+				
+				"AttachEffect"
+				{
+					"EffectName" "particles/units/heroes/hero_queenofpain/queen_scream_of_pain_owner.vpcf"
+					"EffectAttachType" "attach_origin"
+					"Target" "CASTER"
+				}
+			
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center" "CASTER"
+						"Radius" "%radius"
+						"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+					}
+				
+					"Action"
+				
+					{
+						"TrackingProjectile"
+						{					
+							"Target" "TARGET"
+							"EffectName" "particles/units/heroes/hero_queenofpain/queen_scream_of_pain.vpcf"
+							"Dodgeable" "0"
+							"ProvidesVision" "0"
+							"MoveSpeed" "%projectile_speed"
+							"SourceAttachment" "DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
+						}
+					}				
+				}
+				
+				//od part
+				"AttachEffect"
+				{ 
+					"EffectName"	"particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_sanity_eclipse_area.vpcf"
+					"EffectAttachType"	"attach_origin"
+					"Target"	"CASTER"
+		
+					"ControlPoints"
+					{
+						"00" "CASTER"
+						"01" "%radius %radius %radius"
+						"02" "%radius 0 0"
+						"03" "%radius 0 0"				
+					}
+				}
+				"FireSound"
+				{
+					"EffectName" "Hero_ObsidianDestroyer.SanityEclipse"
+					"Target" "CASTER"
+				}
+				
+				
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center" "CASTER"
+						"Radius" "%radius"
+						"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					}
+				
+					"Action"
+					{
+						"Damage"
+						{
+							"Target" "TARGET"
+							"Type" "DAMAGE_TYPE_MAGICAL"
+							"Damage" "%split_earth_damage"
+						}
+					}
+				}
+				
+				//leshrac part
+				"AttachEffect"
+				{
+					"EffectName" "particles/units/heroes/hero_leshrac/leshrac_split_earth.vpcf"
+					"EffectAttachType" "attach_origin"
+					"Target" "CASTER"
+				
+					"ControlPoints"
+					{
+						"01" "%radius %radius %radius"
+					}
+				}
+			
+				"FireSound"
+				{
+					"EffectName" "Hero_Leshrac.Split_Earth"
+					"Target" "CASTER"
+				}
+			
+				"DestroyTrees"
+				{
+					"Target" "CASTER"
+					"Radius" "%radius"
+				}
+			
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center" "CASTER"
+						"Radius" "%radius"
+						"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+					}
+				
+					"Action"
+					{
+						"Damage"
+						{
+							"Target" "TARGET"
+							"Type" "DAMAGE_TYPE_MAGICAL"
+							"Damage" "%split_earth_damage"
+						}
+					}
+				}				
+			}
+		}
+		
+		"modifier_flying"
+		{
+			"States"
+			{
+				"MODIFIER_STATE_FLYING"			"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_FROZEN"			"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+		
+		"modifier_chronosphere_aura_datadriven"
+		{
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"	"particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+					"EffectAttachType"	"attach_origin"
+					"Target"		"CASTER"
+
+					"ControlPoints"
+					{
+						"01"	"%radius %radius 0"
+					}
+				}
+			}
+			
+			"ThinkInterval"		"%aura_interval"
+
+			"OnIntervalThink"
+			{
+				"ActOnTargets"
+				{
+					"Target"
+					{
+						"Center"	"TARGET"
+						"Types"		"DOTA_UNIT_TARGET_ALL"
+						"Teams"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY | DOTA_UNIT_TARGET_TEAM_ENEMY"
+						"Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+						"Radius"	"%radius"
+					}
+
+					"Action"
+					{
+						"RunScript"
+						{
+							"ScriptFile"		"scripts/vscripts/heroes/hero_gametecher/chronosphere.lua"
+							"Function"			"ChronosphereAura"
+							"Target"			"TARGET"
+							"aura_modifier"		"modifier_chronosphere_datadriven"
+						}
+					}
+				}
+			}
+
+			"States"
+			{
+				"MODIFIER_STATE_INVULNERABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR" 	"MODIFIER_STATE_VALUE_ENABLED"				
+				"MODIFIER_STATE_NOT_ON_MINIMAP" "MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_UNSELECTABLE" 	"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+
+		"modifier_chronosphere_datadriven"
+		{
+			"IsHidden"	"1"
+
+			"OnCreated"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_chronosphere_tooltip_datadriven"
+					"Target"		"TARGET"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RemoveModifier"
+				{
+					"ModifierName"	"modifier_chronosphere_tooltip_datadriven"
+					"Target"		"TARGET"
+				}
+			}
+
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_FROZEN"			"MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+		
+		// Cosmetic
+		"modifier_chronosphere_tooltip_datadriven"
+		{
+			"IsDebuff"		"1"
+			"IsPurgable"	"0"
+		}
+	}
+}
+
+
+

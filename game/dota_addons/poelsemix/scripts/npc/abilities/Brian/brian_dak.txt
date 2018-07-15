@@ -1,0 +1,99 @@
+	"brian_dak"
+	{
+		"BaseClass"                 "ability_datadriven"
+		"AbilityTextureName" "brian_dak"
+		"MaxLevel"                  "3"
+		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"     "DAMAGE_TYPE_PURE"
+		"AOERadius"					"1000"
+		"AbilityCooldown"           "120"
+		"AbilityManaCost"           "200"
+		"AbilityDamage"             "25 50 75"
+"precache"
+{
+	"soundfile" "soundevents/brian_soundevent.vsndevts"
+}
+		"OnSpellStart"
+		{
+		    "ApplyModifier"
+		    {
+		        "ModifierName"  "modifier_face4"
+		        "Target"        "CASTER"
+		        "Duration"		"12"
+		    }
+			"FireSound"
+			{
+				"EffectName"		"max_sprit"
+				"Target"			"CASTER"
+			}
+		}
+		"Modifiers"
+		{
+		    "modifier_face4"
+		    {
+		        "Passive"           "0"
+		        "IsHidden"          "0"
+		        "IsDebuff"          "0"
+		
+		        "ThinkInterval"  "0.25"
+		        "OnIntervalThink"
+		        {
+		            "Damage"
+		            {
+		                "Target"
+		                {
+		                    "Center"    "CASTER"
+		                    "Radius"    "1000"
+		                    "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		                    "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		                }
+		                "Type"      "DAMAGE_TYPE_PURE"
+		                "Damage"    "%AbilityDamage"
+		            }
+					"AttachEffect"
+					{
+						"Target"			"CASTER"
+						"EffectName"		"particles/units/heroes/hero_sandking/sandking_epicenter.vpcf"
+						"EffectAttachType"	"start_at_customorigin"
+						"ControlPoints"
+						{
+							"01"			"1400 1400 1400"
+						}
+					}
+		            "Knockback"
+		            {
+		                "Target"
+		                {
+		                    "Center"    "CASTER"
+		                    "Radius"    "1400"
+		                    "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		                    "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		                }
+		                "Center"            "TARGET"
+		                "Duration"          "0.1"
+		                "Height"            "50"
+		                "IsFixedDistance"   "1"
+		                "Distance"			"0"
+		                "ShouldStun"        "1"    
+		            }
+		        }
+		    }
+		}
+		"AbilitySpecial"
+		{
+
+			"01"
+		    {
+		        "var_type"          "FIELD_FLOAT"
+		        "radius"          "1000"
+		    }
+			"02"
+		    {
+		        "var_type"          "FIELD_FLOAT"
+		        "duration"          "12"
+		    }
+		}
+	}	

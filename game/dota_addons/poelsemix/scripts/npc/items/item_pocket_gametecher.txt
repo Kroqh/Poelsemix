@@ -1,0 +1,69 @@
+"item_pocket_gametecher"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"pocket_gametecher"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"11600"
+  	"ID"						"2013"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"				"damage"
+		"ItemQuality"				"magicks"
+		"ItemAliases" 				"game;pocket gametecher"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"int" "80"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"mana" "1000"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"mana_regen" "6"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"dmg" "40"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"cdr" "35"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_mensa_iq"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MANA_BONUS" "%mana"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%int"
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_regen"
+
+				"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%dmg"
+				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%cdr"
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+"npc_dota_hero_marvelous_mosell_datadriven"
+  {
+    "AbilityLayout"     "4"
+    "override_hero"     "npc_dota_hero_faceless_void"
+    "Ability1"        "jeg_var_syg_datadriven" 
+    "Ability2"        "antikommerciel_masseappel_datadriven" 
+    "Ability3"        "faceless_void_backtrack" 
+    "Ability4"        "generic_hidden"
+    "Ability5"        "generic_hidden"
+    "Ability6"        "koldblodet_reptil_datadriven"
+   
+	"Ability7"        ""
+    "Ability8"        ""
+    "Ability9"        ""
+    "Ability10"       ""
+    "Ability11"       ""
+    "Ability12"       ""
+    "Ability13"       ""
+    "Ability14"       ""
+    "Ability15"       ""
+    "Ability16"       ""
+
+  }

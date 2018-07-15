@@ -1,0 +1,113 @@
+"item_double_butterfly"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "double_butterfly"
+  	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityCooldown"			"20"
+  	"ItemCost"					"11050"
+  	"ID"						"2003"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"agi;damage;evasion;attack_speed"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"dfly;double butterfly"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"agility"					"80"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"as" "80"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "65"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"evasion" "40"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"speed" "200"
+		}
+		"06"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "4"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile" "items/item_double_butterfly.lua"
+			"Function" "item_double_butterfly_on_spell_start"
+		}
+		
+	}
+	
+	"Modifiers"
+	{
+		"modifier_double_butterfly"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%agility"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+				"MODIFIER_PROPERTY_EVASION_CONSTANT" "%evasion"
+			}
+		}
+		
+		"modifier_double_butterfly_speed"
+		{
+			"IsBuff" "1"
+			"IsPurgeable" "1"
+			"Passive" "0"
+			"Duration" "%duration"
+			
+			"AttachEffect"
+			{
+				"EffectName"        "particles/items2_fx/butterfly_active_glow.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "CASTER"
+			}
+
+			"AttachEffect"
+			{
+				"EffectName"        "particles/items2_fx/butterfly_active.vpcf"
+				"EffectAttachType"  "follow_origin"
+				"Target"            "CASTER"
+			}
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%speed"
+			}
+		}
+	}
+}

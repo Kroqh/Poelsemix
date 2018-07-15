@@ -1,0 +1,177 @@
+"mokai"
+{
+"precache"
+{
+	"particle"		"particles/units/heroes/hero_medusa/medusa_mana_shield_spiral03.vpcf"
+	"particle"		"particles/units/heroes/hero_brewmaster/brewmaster_drunken_haze_debuff_bubbles.vpcf"
+	"particle"		"particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
+	"particle"		"particles/status_fx/status_effect_beserkers_call.vpcf"
+}
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass" "ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityTextureName" "MOKAI"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime" "2.5"
+        
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 19.0 18.0 17.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+		"AbilitySpecial"
+        {
+            
+            "01"
+            {
+                "var_type" "FIELD_INTEGER"
+                "duration" "4 6 8 10"
+            }
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_armor" "40"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"miss_chance" "10"
+			}
+			"04"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_strength" "20 40 60 90"
+			}
+			"05"
+			{
+				"var_type" "FIELD_INTEGER"
+				"radius" "700"
+			}
+        }
+    "OnSpellStart"
+    {
+        "FireSound"
+        {
+            "EffectName" "mokaidrink"
+            "Target" "CASTER"
+        }
+    }
+	"OnChannelSucceeded"
+     {
+		"ApplyModifier"
+        {
+			"ModifierName" "mokai"
+			"Target" "CASTER"
+		}
+		
+		"ActOnTargets"
+		{
+			"Target" 
+			{
+				"Center" "CASTER"
+				"Radius" "%radius"
+				"Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Flags" "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+			}
+			"Action"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName" "modifier_beserkers_call_enemy_datadriven"
+					"Target" "TARGET"
+					"Duration" "%duration"
+				}
+			}
+		}
+
+	 }
+
+ "Modifiers"
+    {
+        "modifier_beserkers_call_enemy_datadriven"
+		{
+			"IsPurgeable" "0"
+			"IsDebuff" "1"
+			
+			"StatusEffectName" 		"particles/status_fx/status_effect_beserkers_call.vpcf" 	   
+			"StatusEffectPriority"  "10"
+			
+			"ThinkInterval"  "0.1"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_brian/berserkers_call.lua"
+					"Function"		"BerserkersCall"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_brian/berserkers_call.lua"
+					"Function"		"BerserkersCallEnd"
+				}
+			}
+		}
+		
+		"Mokai"
+        {
+            "IsBuff" "1"
+            "duration" "%duration"
+
+            "OnCreated"
+            {
+                "AttachEffect"
+                {
+                "EffectName" "particles/units/heroes/hero_medusa/medusa_mana_shield_spiral03.vpcf"
+                "EffectAttachType" "follow_origin"
+                "Target" "TARGET"
+                }
+
+                "AttachEffect"
+                {
+                    "EffectName" "particles/units/heroes/hero_brewmaster/brewmaster_drunken_haze_debuff_bubbles.vpcf"
+                "EffectAttachType" "follow_origin"
+                "Target" "TARGET"
+                }
+				"AttachEffect"
+				{
+					"EffectName" "particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
+					"EffectAttachType" "follow_origin"
+					"Target" "CASTER"
+					
+					"ControlPointEntities"
+					{
+						"CASTER"	"follow_origin"
+						"CASTER"	"follow_origin"
+						"CASTER"	"follow_origin"
+					}
+				}
+            }
+                
+            
+               
+	            "Properties"
+	            {
+	            "MODIFIER_PROPERTY_MISS_PERCENTAGE" "%miss_chance"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_strength"
+	            }
+                "States"
+                {
+                "MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED"
+                }  
+
+        }
+    }
+	"AbilityCastAnimation" "ACT_DOTA_SPAWN"
+}

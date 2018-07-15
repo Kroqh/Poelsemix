@@ -1,0 +1,64 @@
+"item_vaernepligt"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "vaernepligt"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"2200"
+  	"ID"						"2012"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage"
+	"ItemQuality"					"component"
+	"ItemAliases"					"pligt;vaernepligt"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"chance" "35"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "150"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_vaernepligt"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"OnAttack"
+			{
+				"Random"
+				{
+					"Chance"			"%chance"
+					"OnSuccess"
+					{
+						"Damage"
+						{
+							"Target"		"TARGET"
+							"Type"			"DAMAGE_TYPE_MAGICAL"
+							"Damage"		"%damage"
+						}
+					}					
+				}
+
+			}
+		}
+	}
+}

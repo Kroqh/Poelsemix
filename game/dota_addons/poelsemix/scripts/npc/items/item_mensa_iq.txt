@@ -1,0 +1,63 @@
+"item_mensa_iq"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"mensa_iq"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"3750"
+  	"ID"						"2010"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"				"damage"
+		"ItemQuality"				"magicks"
+		"ItemAliases" 				"iq;mensa iq"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"int" "25"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"mana" "300"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"mana_regen" "3"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"dmg" "15"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_mensa_iq"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MANA_BONUS" "%mana"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%int"
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_regen"
+
+				"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%dmg"
+			}
+		}
+	}
+}

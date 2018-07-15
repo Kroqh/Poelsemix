@@ -1,0 +1,170 @@
+"koldblodet_reptil_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityTextureName"			"koldblodet"
+		"AbilityCooldown"				"120 110 100"
+		"AbilityManaCost"				"100 120 140 160"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastRange" 				"700"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		
+		"precache"
+		{
+			"soundfile"   "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+			"particle" "particles/units/heroes/hero_leshrac/leshrac_disco_tnt.vpcf"
+		}
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"reptil_1" "1 0 0"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"reptil_2" "0 1 0"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"reptil_3" "0 0 3"
+			}
+			"04"
+			{
+				"var_type" "FIELD_FLOAT"
+				"duration" "50"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+		
+			"FireSound"
+			{
+				"EffectName"	"Hero_Zuus.GodsWrath"
+				"Target"		"CASTER"
+			}
+			
+			"FireSound"
+			{
+				"EffectName" "koldblodet"
+				"Target" "CASTER"
+			}
+					
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_koldblodet_reptil_1"
+				"Target" 		"POINT"
+				"Duration"		"%duration"
+				"UnitCount"		"%reptil_1"
+				"UnitLimit"		"99"
+				"GrantsGold"	"60"
+				"GrantsXP"		"40"
+				"SpawnRadius"	"1"
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName" "modifier_phased"
+						"Target" "TARGET"
+						"Duration" "0.03"
+					}
+				}
+			}
+			
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_koldblodet_reptil_2"
+				"Target" 		"POINT"
+				"Duration"		"%duration"
+				"UnitCount"		"%reptil_2"
+				"UnitLimit"		"99"
+				"GrantsGold"	"60"
+				"GrantsXP"		"40"
+				"SpawnRadius"	"1"
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName" "modifier_phased"
+						"Target" "TARGET"
+						"Duration" "0.03"
+					}
+				}
+			}
+			
+			"SpawnUnit"
+			{
+				"UnitName"		"npc_koldblodet_reptil_3"
+				"Target" 		"POINT"
+				"Duration"		"%duration"
+				"UnitCount"		"%reptil_3"
+				"UnitLimit"		"99"
+				"GrantsGold"	"60"
+				"GrantsXP"		"40"
+				"SpawnRadius"	"1"
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName" "modifier_phased"
+						"Target" "TARGET"
+						"Duration" "0.03"
+					}
+				}
+			}
+			
+			"ApplyModifier"
+			{
+				"ModifierName" "modifier_disco"
+				"Target" "CASTER"
+				"Duration" "%duration"
+			}
+			
+			"AttachEffect"
+			{
+				"EffectName" "particles/units/heroes/hero_leshrac/leshrac_disco_tnt.vpcf"
+				"EffectAttachType" "follow_origin"
+				"Target" "CASTER"
+			
+				"ControlPoints"
+				{
+					"00" "0 0 200"
+				}
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_disco"
+			{
+				"IsHidden" "1"
+				"IsPurgeable" "0"
+				
+				"ThinkInterval" "6.0"
+				"OnIntervalThink"
+				{
+					"AttachEffect"
+					{
+						"EffectName" "particles/units/heroes/hero_leshrac/leshrac_disco_tnt.vpcf"
+						"EffectAttachType" "follow_origin"
+						"Target" "CASTER"
+					
+						"ControlPoints"
+						{
+							"00" "0 0 200"
+						}
+					}
+				}
+			}
+		}
+	}

@@ -1,0 +1,92 @@
+"dropout_datadriven"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"              "ability_datadriven"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityTextureName"     "dropout"
+	
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+	
+	//precache
+	"precache"
+    {
+        "soundfile" ""  
+		
+		//techies
+		"particle" "particles/econ/items/techies/techies_arcana/techies_suicide_dud_arcana.vpcf"
+		"particle" "particles/econ/items/techies/techies_arcana/techies_suicide_arcana.vpcf"
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"		
+    }
+	
+    // Stats    
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"         "50"
+    "AbilityChannelTime"	"1.25"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"                    "FIELD_INTEGER"
+            "bonus_intellect"             "20 25 35 45"
+        }
+    }
+	
+	"OnChannelSucceeded"
+	{
+		//effects
+		"FireEffect"
+		{
+			"EffectName" "particles/econ/items/techies/techies_arcana/techies_suicide_dud_arcana.vpcf"
+			"EffectAttachType" "follow_overhead"
+			"Target" "CASTER"	
+		}	
+		"FireEffect"
+		{
+			"EffectName" "particles/econ/items/techies/techies_arcana/techies_suicide_arcana.vpcf"
+			"EffectAttachType" "attach_origin"
+			"Target" "CASTER"
+		}
+		"FireSound"
+		{
+			"EffectName"	"Hero_Techies.Suicide"
+			"Target" 		"CASTER"
+		}
+		"FireSound"
+		{
+			"EffectName" "dropout"
+			"Target" "CASTER"
+		}
+		//actual ability
+		"RunScript"
+		{
+			"ScriptFile" "heroes/hero_gametecher/gametecher_int.lua"
+			"Function" "AddIntellect"
+		}
+		"Damage"
+		{
+			"Target" "CASTER"
+			"Type" "DAMAGE_TYPE_PURE"
+			"Damage" "99999"
+		}
+	}
+
+    "Modifiers"
+    {
+        "modifier_stat_boost"
+		{			
+			"Passive" "1"
+			"IsBuff" "1"
+			
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile" "heroes/hero_gametecher/gametecher_int.lua"
+					"Function" "stacksSpawn"
+				}
+			}
+		}
+    }
+}

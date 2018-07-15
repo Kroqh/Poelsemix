@@ -1,0 +1,14 @@
+"item_recipe_ninja_tabi"
+{
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "recipe"
+  	"Model"						"models/props_gameplay/recipe.mdl"
+  	"ItemCost"					"0"
+	"ItemShopTags"				""
+	"ItemRecipe"				"1"
+	"ItemResult"				"item_ninja_tabi"
+	"ItemRequirements"
+	{
+		"01" "item_boots;item_helm_of_iron_will"
+	}
+}

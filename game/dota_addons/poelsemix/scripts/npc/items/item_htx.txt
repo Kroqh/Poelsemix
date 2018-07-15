@@ -1,0 +1,69 @@
+"item_htx"
+{
+	"BaseClass"             		"item_datadriven"
+	"AbilityTextureName"			"htx"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"7850"
+  	"ID"						"2008"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"				"damage"
+		"ItemQuality"				"magicks"
+		"ItemAliases" 				"oct;double octarine"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"health" "575"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"mana" "575"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"int" "45"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"cdr" "35"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"dmg" "15"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_htx"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS" "%health"
+				"MODIFIER_PROPERTY_MANA_BONUS" "%mana"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%int"
+				
+				"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%dmg"
+		        "MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%cdr"		        
+			}
+		}
+	}
+}

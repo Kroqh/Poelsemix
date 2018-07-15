@@ -1,0 +1,46 @@
+"item_kartofler"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "kartofler"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"1050"
+  	"ID"						"2009"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"str;regen_health;health_pool"
+	"ItemQuality"					"component"
+	"ItemAliases"					"kartofler"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"magic_resist"					"20"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_kartofler"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_ITEM_UNIQUE"		"%magic_resist"
+			}
+		}
+	}
+}

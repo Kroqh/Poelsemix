@@ -1,0 +1,76 @@
+//Q
+"yahya_fodskud"
+{
+  //General
+  "ID"                "6541"
+  "BaseClass"         "ability_datadriven"
+  "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+  "AbilityCooldown"        "8.0 5.0 3.5 2.0"
+  "AbilityManaCost"        "100 90 70 50"
+  "AbilityTextureName"    "pistol"
+
+  "AbilityCastRange"        "100"
+  "AbilityCastPoint"        "0.3"
+  "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_1"
+
+  "precache"
+  {
+    "soundfile" "soundevents/yahya_soundevent.vsndevts"
+  }
+
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"      "FIELD_FLOAT"
+      "duration"      "3.0"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "bonus_movespeed"   "-30 -50 -70 -90" 
+    }
+    "03"
+    {
+      "var_type"  "FIELD_INTEGER"
+      "damage" "100 175 250 325"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_armor_break"
+    {
+      "IsDebuff"      "1"
+      "Duration"      "%duration"
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movespeed" 
+      }
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "Damage"
+    {
+      "Target"    "TARGET"
+      "Type"      "DAMAGE_TYPE_PHYSICAL"
+      "Damage"    "%damage"
+    }
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_armor_break"
+      "Target"     "TARGET" 
+      "Duration"    "%duration"
+    }
+    "FireSound"
+    {
+      "EffectName"  "pistol_skud"
+      "Target"     "CASTER"
+    }
+  }
+}

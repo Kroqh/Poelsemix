@@ -1,0 +1,178 @@
+"den_er_flot"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"       "ability_datadriven"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "AbilityType"         "DOTA_ABILITY_TYPE_ULTIMATE"
+  "FightRecapLevel"       "2"
+  "AbilityTextureName"      "den_er_flot"
+
+  // Casting
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.35"
+
+  // Time   
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCooldown"       "45.0"
+
+  // Cost
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityManaCost"       "50 100 150"
+
+  // Special  
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "duration"        "25.0"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "transformation_time" "0.35"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "base_attack_time"    "1.2 0.8 0.4"
+    }
+    "04"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_health"      "0"
+    }
+    "05"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_health_regen"  "50 75 100"
+    }
+    "06"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "bonus_mana_regen"    "3.0 7.5 12.0"
+    }
+    "07"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_movespeed"   "30 40 60"
+    }
+    "08"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "model_scale"     "1.50"
+    }
+  }
+
+  "precache"
+  {
+    "soundfile" "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+    "particle"  "particles/status_fx/status_effect_chemical_rage.vpcf"
+    "particle"  "particles/units/heroes/hero_alchemist/alchemist_chemical_rage.vpcf"
+  }
+
+  "OnSpellStart"
+  {
+    "FireSound"
+    {
+      "EffectName"  "Hero_Alchemist.ChemicalRage.Cast"
+      "Target"    "CASTER"
+    }
+    "FireSound"
+    {
+      "EffectName"  "min_er_flot"
+      "Target"     "CASTER"
+    }
+
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_chemical_rage_transform"
+      "Target"    "CASTER"
+    }
+    "ApplyModifier"
+    {
+      "ModifierName"  "modifier_scale"
+      "Target"    "CASTER"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_scale"
+    {
+      "IsBuff" "1"
+      "IsPurgeable" "0"
+      "IsHidden" "1"
+      "Duration" "%duration"
+      
+      "AllowIllusionDuplicate"  "1"
+      
+      "OnCreated"
+      {
+        "RunScript"
+        {
+          "ScriptFile" "heroes/scale_model.lua"
+          "Function" "ChangeModel"
+        }
+      }
+      
+      "OnDestroy"
+      {
+        "RunScript"
+        {
+          "ScriptFile" "heroes/scale_model.lua"
+          "Function" "RevertModel"
+        }
+      }
+    }
+
+    "modifier_chemical_rage_transform"
+    {
+      "IsBuff"  "1"
+      "IsHidden"  "1"
+      "Duration"  "%transformation_time"
+
+      "OnCreated"
+      {
+        "ApplyModifier"
+        {
+          "ModifierName"  "modifier_invulnerable"
+          "Target"    "CASTER"
+          "Duration"    "0.03"
+        }
+      }
+      
+      "OnDestroy"
+      {
+        "ApplyModifier"
+        {
+          "ModifierName"  "modifier_chemical_rage"
+          "Target"    "CASTER"
+        }
+      }
+    }
+
+    "modifier_chemical_rage"
+    {
+      "IsBuff"  "1"
+      "Duration"  "%duration"
+
+      "EffectName"    "particles/units/heroes/hero_alchemist/alchemist_chemical_rage.vpcf"
+      "EffectAttachType"  "follow_origin"
+
+      "StatusEffectName"  "particles/status_fx/status_effect_chemical_rage.vpcf"
+      "StatusEffectPriority"  "5"
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT" "%base_attack_time"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"   "%bonus_health_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"     "%bonus_mana_regen"
+        "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"  "%bonus_movespeed"
+      }
+    }
+  }
+}
+

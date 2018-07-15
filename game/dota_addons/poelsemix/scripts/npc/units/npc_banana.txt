@@ -1,0 +1,71 @@
+"npc_kolonihave"
+{
+        // General
+        //----------------------------------------------------------------
+        "BaseClass"             "npc_dota_creature"
+        "Model"                 "models/props_gameplay/banana_prop_open.vmdl"
+        "ModelScale"            "1"
+        "Level"                 "1"
+        "HealthBarOffset"       "0"
+        "HasInventory"          "0"            
+	
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"         "0"
+        "MagicalResistance"     "0"
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
+        "AttackDamageType"      "DAMAGE_TYPE_ArmorPhysical"
+        "AttackDamageMin"       "0"
+        "AttackDamageMax"       "0"
+        "AttackRate"            "10.0"
+        "AttackAnimationPoint"  "0.0"
+        "AttackAcquisitionRange" "0"
+        "AttackRange"           "0"
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyGoldMin"         "0"
+        "BountyGoldMax"         "0"
+       	"BountyXP"              "0"
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"        "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"            "40"
+       
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"         "0"
+        "MovementTurnRate"      "10.0"
+       
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"          "100"
+        "StatusHealthRegen"     "0"
+        "StatusMana"            "0"
+        "StatusManaRegen"       "0"
+       
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"    "1000"
+        "VisionNighttimeRange"  "1000"
+       
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"              "DOTA_TEAM_NEUTRALS"
+        "CombatClassAttack"     "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"     "DOTA_COMBAT_CLASS_DEFEND_HERO"
+        "UnitRelationShipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+        "AutoAttacksByDefault"  "0"
+        "IsSummoned"            "1"
+        "CanBeDominated"        "0"
+        "ConsideredHero"        "0"
+        "SelectOnSpawn"         "0"
+        // Creature Data
+        //----------------------------------------------------------------
+        "Creature"
+        {
+        	"DisableClumpingBehavior"       "1"
+        }
+    }

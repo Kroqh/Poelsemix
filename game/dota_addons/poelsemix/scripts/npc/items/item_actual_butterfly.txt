@@ -1,0 +1,110 @@
+"item_actual_butterfly"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "item_actual_butterfly"
+  	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityCooldown"			"15"
+  	"ItemCost"					"15000"
+  	"ID"						"2001"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"agi;regen_health;attack_speed;move_speed;evasion;damage"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"ab;actual butterfly"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"agility"					"140"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"as" "160"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "100"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"evasion" "50"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"movement_speed" "200"
+		}
+		"06"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration_lol" "4"
+		}
+		"07"
+		{
+			"var_type" "FIELD_FLOAT"
+			"speed_percentage" "15"
+		}
+		"08"
+		{
+			"var_type" "FIELD_INTEGER"
+			"regen_health" "16"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile" "items/item_double_butterfly.lua"
+			"Function" "item_actual_butterfly_on_spell_start"
+		}
+		
+	}
+	
+	"Modifiers"
+	{
+		"modifier_actual_butterfly"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%agility"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+				"MODIFIER_PROPERTY_EVASION_CONSTANT" "%evasion"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE"	"%speed_percentage"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%regen_health"
+			}
+		}
+		
+		"modifier_actual_butterfly_speed"
+		{
+			"IsBuff" "1"
+			"IsPurgeable" "1"
+			"Passive" "0"
+			"Duration" "%duration_lol"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT" "%movement_speed"
+			}
+		}
+	}
+}
