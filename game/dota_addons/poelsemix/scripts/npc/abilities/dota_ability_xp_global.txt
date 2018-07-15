@@ -45,6 +45,11 @@
 						"ReliableGold"	"0"
 						"PlayAlert"		"0"
 					}
+					"RunScript"
+					{
+						"ScriptFile"	"global_gold.lua"
+						"Function"		"GiveGoldBig"
+					}
 				}
 			}
 

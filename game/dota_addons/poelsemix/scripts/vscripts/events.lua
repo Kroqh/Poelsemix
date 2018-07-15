@@ -234,18 +234,21 @@ function COverthrowGameMode:OnNpcGoalReached( event )
 end
 
 --------------------------------------------------------------------------------
--- Event: If gametecher is in game
+-- Event: On NPC Spawn
 --------------------------------------------------------------------------------
 function COverthrowGameMode:OnNPCSpawned( event )
 	
 	local hero = EntIndexToHScript( event.entindex )
 	
+	if hero:IsRealHero() and hero.FirstSpawn == nil then
+		hero.FirstSpawn = true
+		hero:AddItemByName("item_courier")	
+	end
+	
 	if hero:GetUnitName() == "npc_dota_hero_pugna" then
 		local ability = hero:FindAbilityByName("bloodseeker_thirst")
 		ability:SetLevel(1)
-	
 	end
 end
-	
-	
+
 

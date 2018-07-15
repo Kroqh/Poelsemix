@@ -44,6 +44,11 @@
 					"GoldAmount"	"0"
 					"ReliableGold"	"0"
 				}
+				"RunScript"
+				{
+					"ScriptFile"	"global_gold.lua"
+					"Function"		"GiveGoldSmall"
+				}
 			}
 		}
 
