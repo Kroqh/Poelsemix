@@ -50,7 +50,7 @@
 	"KillMessageText"								"HAS KILLED THE LEADER"
 	"KillMessageBounty"								"FOR 500 BONUS GOLD!"
 	
-	"addonname"										"Overthrow"
+	"addonname"										"Pølsemix"
 	"overthrow_game_info_header_objective"			"Objective:"
 	"overthrow_brief_description"					"Slay your enemies! First team to hit the kill limit wins!"
 	"overthrow_game_info_header_how_to_play"		"How To Play:"
@@ -70,5 +70,6 @@
 	"npc_dota_hero_bounty_hunter_notification"		"Bounty Hunter"
 	"npc_dota_hero_broodmother_notification"		"Broodmother"
 	"npc_dota_hero_pudge_notification"				"Pudge"
+	
 }
 

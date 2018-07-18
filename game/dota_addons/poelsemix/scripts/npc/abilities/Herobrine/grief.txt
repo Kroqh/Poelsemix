@@ -59,7 +59,7 @@
 		"01"
 		{
 			"var_type"  "FIELD_FLOAT"
-			"bonus_damage"  "225 350 475 600"
+			"bonus_damage"  "200 420 640 860"
 		}	
 				"01"
 		{

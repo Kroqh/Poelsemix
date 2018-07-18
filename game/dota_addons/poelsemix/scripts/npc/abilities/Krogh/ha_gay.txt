@@ -1,0 +1,88 @@
+	"ha_gay"
+	{
+		"BaseClass"                 "ability_datadriven"
+		"AbilityTextureName"        "hagay"
+		"MaxLevel"                  "4"
+		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+		"AbilityCooldown"               "20"
+		"AbilityManaCost"               "100 110 120 130"
+		"AbilityCastRange" "800"
+		"AbilityCastPoint"				"0.6"
+	    "precache"
+        {
+            
+        }
+		"OnAbilityPhaseStart"
+		{
+		"FireSound"
+			{
+		"EffectName" "hagay"
+        "Target" "CASTER"
+			}
+		}
+		"OnSpellStart"
+		{
+		
+
+						
+				
+			
+		 "ApplyModifier"
+		{
+		"Target"	"TARGET"
+				"ModifierName"	"gayfag"
+				
+				
+		}			
+		}
+			
+		
+		
+		
+		"Modifiers"
+		{
+		     "gayfag"
+		{	
+		"Duration" "%timer"
+			"IsPurgeable" "0"
+			"IsDebuff" "1"
+			
+			"StatusEffectName" 		"particles/status_fx/status_effect_beserkers_call.vpcf" 	   
+			"StatusEffectPriority"  "10"
+			
+			"ThinkInterval"  "0.1"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_brian/berserkers_call.lua"
+					"Function"		"BerserkersCall"
+				}
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_brian/berserkers_call.lua"
+					"Function"		"BerserkersCallEnd"
+				}
+			}
+		}
+			
+			
+		}
+		"AbilitySpecial"
+		{
+  			"01"
+		    {
+		        "var_type"          "FIELD_FLOAT"
+		        "timer"             "4.0 5.0 6.0 7.0"
+		    }
+
+		  
+
+		}																					
+}	

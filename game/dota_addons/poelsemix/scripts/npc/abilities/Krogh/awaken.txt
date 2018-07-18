@@ -25,7 +25,7 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"agility"			"80"
+			"agility"			"75"
 		}
 	"02"
 		{
@@ -35,7 +35,7 @@
 		"03"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"basicrate"			"1.2"
+			"basicrate"			"1.4"
 		}
 		"04"
 		{
@@ -58,7 +58,7 @@
 		"awaken_mod"
 		{
 					"StatusEffectName"		"particles/status_fx/status_effect_doom.vpcf"
-			"StatusEffectPriority"	"50"
+			"StatusEffectPriority"	"1"
 			"Passive"	"1"
 			"OnCreated"
 			{	
@@ -71,13 +71,10 @@
 						"FireSound"
 						{
 					"EffectName" "awaken"
-					"Target"
-					{
-				"Center"    "TARGET"
-				"Radius"    "9000"
-				"Teams"     "DOTA_UNIT_TARGET_TEAM_BOTH"
-				"Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-			}
+					"Target" "CASTER"
+					
+
+			
 						}
 			}
 			"IsHidden"	"1"

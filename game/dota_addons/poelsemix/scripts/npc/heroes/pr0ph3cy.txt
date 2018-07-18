@@ -26,6 +26,7 @@
 		"Ability16"		"special_bonus_spell_amplify_25"
 		"Ability17"		"special_bonus_cooldown_reduction_15"
 		"MovementSpeed"               "285"
+	
                   								
 
 	}

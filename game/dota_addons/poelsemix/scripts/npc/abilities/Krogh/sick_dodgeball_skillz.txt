@@ -1,0 +1,72 @@
+	"sick_dodge"
+{
+	"BaseClass"                 "ability_datadriven"
+	"AbilityTextureName"        "dodgeball"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AOERadius"					"600"
+	"AbilityCooldown"               "13 11 9 7"
+	"AbilityManaCost"               "69"
+	
+
+		"precache"
+        {
+        "particle" "particles/units/heroes/hero_brewmaster/brewmaster_windwalk_swoop.vpcf"
+        }
+	
+	"OnSpellStart"
+	{
+	    "ApplyModifier"
+	    {
+	        "ModifierName"  "modifier_dodgeball"
+	        "Duration"      "%duration"
+	        "Target" "CASTER"
+	        
+	            
+	        
+	    }
+        "FireSound"
+            {
+                "EffectName"    "woosh_krogh"
+                "Target"        "CASTER"
+            }
+	   }
+	"Modifiers"
+	{
+
+	    "modifier_dodgeball"
+	    {
+	        "Passive"           "0"
+	        "IsHidden"          "0"
+			
+			
+			"EffectName"		"particles/units/heroes/hero_brewmaster/brewmaster_windwalk_swoop.vpcf"
+			"EffectAttachType"	"follow_origin"
+
+	        "Properties"
+	        {
+	            
+				"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL"					"1"
+				"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL" 					"1"
+				 "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE" 						"1"
+				 
+			
+	        }
+			    "States"
+    {
+        "MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED"
+    } 
+	    }
+	}
+	"AbilitySpecial"
+	{
+
+		"01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "duration"      "1"
+	    }
+
+
+	}
+}

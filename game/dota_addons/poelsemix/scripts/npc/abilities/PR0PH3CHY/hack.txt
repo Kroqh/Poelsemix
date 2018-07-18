@@ -87,7 +87,7 @@
 		    "02"
 		    {
 		        "var_type"          "FIELD_INTEGER"
-		        "dmg_tick"             "120 150 180 210"	
+		        "dmg_tick"             "100 130 160 190"	
 		    }
 		  
 
