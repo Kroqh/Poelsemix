@@ -84,7 +84,57 @@ end
 ---------------------------------------------------------------------------
 function COverthrowGameMode:InitGameMode()
 	print( "Overthrow is loaded." )
-	
+	-	--thanks birzha memov
+	XP_LEVEL_TABLE = {
+		0, -- 1
+      200, -- 2
+      600, -- 3
+      1080, -- 4
+     1680, -- 5
+     2300, -- 6	 
+     3940, -- 7	 
+     4600, -- 8
+     5280, -- 9
+     6080, -- 10
+	 
+	 
+	 
+	 
+	 
+	6900,  --- 11
+	7740,  --- 12
+	8640,  --- 13
+	9865,  --- 14
+	11115, --- 15
+	12390, --- 16
+	13690, --- 17
+	15015, --- 18
+
+	16415, --- 19
+	17905, --- 20
+	19405, --- 21
+	21155, --- 22
+	23155, --- 23
+	25405, --- 24
+	27905, --- 25
+
+	30655, --- 26
+	33655, --- 27
+	36905, --- 28
+	40405, --- 29
+	44405, --- 30
+
+	48655, --- 31
+	52155, --- 32
+	56905, --- 33
+	58905, --- 34
+	62905, --- 35
+	}
+
+	GameRules:GetGameModeEntity():SetUseCustomHeroLevels(true)
+	GameRules:GetGameModeEntity():SetCustomHeroMaxLevel(35)
+	GameRules:GetGameModeEntity():SetCustomXPRequiredToReachNextLevel(XP_LEVEL_TABLE)
+
 --	CustomNetTables:SetTableValue( "test", "value 1", {} );
 --	CustomNetTables:SetTableValue( "test", "value 2", { a = 1, b = 2 } );
 
