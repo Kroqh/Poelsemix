@@ -84,7 +84,7 @@ end
 ---------------------------------------------------------------------------
 function COverthrowGameMode:InitGameMode()
 	print( "Overthrow is loaded." )
-	-	--thanks birzha memov
+	--thanks birzha memov
 	XP_LEVEL_TABLE = {
 		0, -- 1
       200, -- 2
