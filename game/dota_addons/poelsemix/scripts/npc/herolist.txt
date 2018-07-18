@@ -72,7 +72,7 @@
 	"npc_dota_hero_omniknight"			"0"
 	"npc_dota_hero_oracle"				"0"
 	"npc_dota_hero_obsidian_destroyer"	"0"
-	"npc_dota_hero_phantom_assassin"	"0"
+	"npc_dota_hero_phantom_assassin"	"1"
 	"npc_dota_hero_phantom_lancer"		"0"
 	"npc_dota_hero_pangolier"			"0"
 	"npc_dota_hero_phoenix"				"0"
