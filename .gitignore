@@ -56,3 +56,5 @@ content/dota_addons/overthrow/
 
 game/dota_addons/poelsemix/scripts/npc/npc_abilities_custom.txt
 game/dota_addons/poelsemix/scripts/npc/npc_heroes_custom.txt
+
+game/dota_addons/poelsemix/tools_asset_info.bin
