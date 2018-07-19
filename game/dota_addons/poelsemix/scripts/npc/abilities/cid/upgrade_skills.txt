@@ -1,0 +1,31 @@
+"upgrade_skills"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_cid/hero_cid"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName" "upgrade_skills"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"90 80 70 60"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50 55 60 65"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"duration"	"20 30 40"
+		}
+	}
+}

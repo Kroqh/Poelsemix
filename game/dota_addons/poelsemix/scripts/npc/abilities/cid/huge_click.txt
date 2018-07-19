@@ -1,0 +1,39 @@
+"huge_click"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_cid/hero_cid"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "huge_click_icon"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"chance" "20 25 30 35"
+		}
+		"02"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"damage_modifier"	"175 200 225 250"
+		}
+		"03"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"damage_modifier_upgraded" "300 350 400 450"
+		}
+	}
+}

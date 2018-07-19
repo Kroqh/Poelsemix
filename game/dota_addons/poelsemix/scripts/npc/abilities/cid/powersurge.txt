@@ -1,0 +1,51 @@
+"powersurge"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_cid/hero_cid"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "powersurge_icon"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"26 24 22 20"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"110 110 110 110"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage_modifier_tooltip" "100 100 100 100"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage_modifier_upgraded_tooltip" "200 200 200 200"
+		}
+		"03"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"duration"	"10"
+		}
+		"04"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"damage_multiplier" "1 1 1 1"
+		}
+		"05"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"damage_multiplier_upgraded" "2 2 2 2"
+		}
+	}
+}
