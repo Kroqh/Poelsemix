@@ -127,7 +127,7 @@
 				"RemoveModifier"
 				{
 					"Target"	"CASTER"
-					"ModifierName"	"modifier_permanent_invisibility_datadriven"
+					"ModifierName"	"modifier_invisibility_datadriven"
 				}
 				"RemoveModifier"
 				{

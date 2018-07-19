@@ -7,7 +7,7 @@
 	"AbilityTextureName"			"awaken"
 	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	"MaxLevel"						"1"
-	"RequiredLevel"       				        "15"
+	"RequiredLevel"       				        "16"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 
@@ -25,12 +25,12 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"agility"			"75"
+			"agility"			"40"
 		}
 	"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"strength"			"150"
+			"strength"			"80"
 		}
 		"03"
 		{
@@ -40,7 +40,7 @@
 		"04"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"hp"			"400"
+			"hp"			"100"
 		}
 				"05"
 		{
