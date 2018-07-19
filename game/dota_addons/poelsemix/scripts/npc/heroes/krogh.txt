@@ -18,10 +18,10 @@
 		"Ability13"		"special_bonus_hp_300"
 		
 		"Ability14"		"special_bonus_all_stats_20"
-		"Ability15"		"special_bonus_lifesteal_15"
+		"Ability15"		"special_bonus_evasion_15"
 		
 		"Ability16"		"special_bonus_30_crit_2"
-		"Ability17"		"special_bonus_20_bash_2"
+		"Ability17"		"special_bonus_lifesteal_20"
                   
 		"MovementSpeed"               "300"
 		"StatusHealth"                "500"								
