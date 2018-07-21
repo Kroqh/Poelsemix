@@ -10,6 +10,10 @@
 	"Ability6" "upgrade_skills"
 	"Ability7" "click"
 
+	"Ability15"	"special_bonus_agility_15"
+	"Ability16" "special_bonus_evasion_25"
+	"Ability17" "special_bonus_all_stats_20"
+
 	"AttributeBaseStrength"			"22"									// Base strength
 	"AttributeStrengthGain"			"3"									// Strength bonus per level.
 	"AttributeBaseIntelligence"		"20"									// Base intelligence
