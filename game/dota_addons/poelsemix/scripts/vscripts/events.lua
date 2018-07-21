@@ -253,6 +253,11 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("pr0_incognito")
 		ability:SetLevel(1)
 	end
+
+	if hero:GetUnitName() == "npc_dota_hero_phantom_assassin" then
+		local ability = hero:FindAbilityByName("click")
+		ability:SetLevel(1)
+	end
 end
 
 

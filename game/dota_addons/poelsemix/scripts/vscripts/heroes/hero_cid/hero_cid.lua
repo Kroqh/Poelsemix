@@ -19,6 +19,7 @@ function big_clicks:OnSpellStart()
 		local stacks = self:GetSpecialValueFor("stacks")
 		local upgraded_stacks = self:GetSpecialValueFor("upgraded_stacks") 
 
+		caster:EmitSound("Hero_StormSpirit.ElectricVortexCast")
 		caster:AddNewModifier(caster, self, "modifier_big_clicks", {duration = duration})
 
 		if caster:HasModifier("modifier_upgrade_skills") then
@@ -50,7 +51,13 @@ function modifier_big_clicks:GetModifierBaseDamageOutgoing_Percentage()
 end
 
 function modifier_big_clicks:OnCreated()
+	self.particle_abyssal = "particles/items_fx/abyssal_blade.vpcf"
+	local particle = "particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
 	local caster = self:GetCaster()
+
+	self.particle_fx = ParticleManager:CreateParticle(particle, PATTACH_CUSTOMORIGIN, caster)
+	ParticleManager:SetParticleControlEnt(self.particle_fx, 0, caster, PATTACH_POINT_FOLLOW, "attach_attack1", caster:GetAbsOrigin(), true)
+	
 
 	if caster:HasModifier("modifier_upgrade_skills") then
 		self.damage = self:GetAbility():GetSpecialValueFor("upgraded_damage")
@@ -61,6 +68,19 @@ end
 
 function modifier_big_clicks:OnAttackLanded()
 	if IsServer() then
+		local caster = self:GetCaster() 
+		local target = caster:GetAttackTarget()
+		local particle_abyssal_fx = ParticleManager:CreateParticle(self.particle_abyssal, PATTACH_ABSORIGIN_FOLLOW, target)
+		ParticleManager:SetParticleControl(particle_abyssal_fx, 0, target:GetAbsOrigin())
+		ParticleManager:ReleaseParticleIndex(particle_abyssal_fx)
+		
+		--ty dota imba
+		local coup = ParticleManager:CreateParticle("particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf", PATTACH_CUSTOMORIGIN, caster)
+		ParticleManager:SetParticleControlEnt(coup, 0, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target:GetAbsOrigin(), true)
+		ParticleManager:SetParticleControlEnt(coup, 1, target, PATTACH_ABSORIGIN_FOLLOW, "attach_origin", target:GetAbsOrigin(), true)
+		ParticleManager:ReleaseParticleIndex(coup)
+		
+		self:GetAbility():EmitSound("big_clicks")
 		local stacks = self:GetStackCount()
 
 		if stacks > 1 then
@@ -72,7 +92,13 @@ function modifier_big_clicks:OnAttackLanded()
 end
 
 function modifier_big_clicks:OnRefresh()
+	self:OnDestroy()
 	self:OnCreated()
+end
+
+function modifier_big_clicks:OnDestroy()
+	ParticleManager:DestroyParticle(self.particle_fx, false)
+	ParticleManager:ReleaseParticleIndex(self.particle_fx)
 end
 
 --multiclick
@@ -113,6 +139,7 @@ function multiclick:OnSpellStart()
 
 		caster:AddNewModifier(caster, self, "modifier_multiclick", {duration = duration})
 		caster:FindModifierByName("modifier_multiclick"):SetStackCount(stacks)
+		caster:EmitSound("Hero_StormSpirit.ElectricVortexCast")
 	end
 end
 
@@ -147,6 +174,12 @@ end
 
 function modifier_multiclick:OnCreated()
 	self.attackTime = self:GetAbility():GetSpecialValueFor("bat")
+	
+	local caster = self:GetCaster()
+
+	self.pfx = "particles/econ/items/wisp/wisp_guardian_ti7.vpcf"
+	self.wisp_fx = ParticleManager:CreateParticle(self.pfx, PATTACH_ABSORIGIN_FOLLOW, caster) 
+	ParticleManager:SetParticleControlEnt(self.wisp_fx, 0, caster, PATTACH_OVERHEAD_FOLLOW, "attach_origin", caster:GetAbsOrigin(), true)
 end
 
 function modifier_multiclick:OnAttackLanded()
@@ -161,6 +194,12 @@ function modifier_multiclick:OnAttackLanded()
 		end
 	end
 end
+
+function modifier_multiclick:OnDestroy()
+	ParticleManager:DestroyParticle(self.wisp_fx, false)
+	ParticleManager:ReleaseParticleIndex(self.wisp_fx)
+end
+
 --multiclick passive modifier
 modifier_multiclick_passive = class({})
 
@@ -178,7 +217,6 @@ function modifier_multiclick_passive:DeclareFunctions()
 	local decFuncs = {MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT}
 	return decFuncs
 end
-
 
 function modifier_multiclick_passive:GetModifierBaseAttackTimeConstant()
 	return self.upgraded_bat
@@ -251,19 +289,29 @@ function modifier_huge_click_attack:OnCreated()
 		self.damage_modifier = self:GetAbility():GetSpecialValueFor("damage_modifier")
 		self.damage_modifier_upgraded = self:GetAbility():GetSpecialValueFor("damage_modifier_upgraded") 
 		self.chance = self:GetAbility():GetSpecialValueFor("chance")
+		self.particle_abyssal = "particles/items_fx/abyssal_blade.vpcf"
 end
 
 function modifier_huge_click_attack:GetModifierPreAttack_CriticalStrike()
 	if IsServer() then
 		local caster = self:GetCaster() 
 		local rand = RandomInt(1, 100)
+		local target = caster:GetAttackTarget()
+		
+		
 		if rand <= self.chance then
 			if caster:HasModifier("modifier_upgrade_skills") then
 				damage = self.damage_modifier_upgraded
+
 			else
 				damage = self.damage_modifier
+				
 			end
+			local particle_abyssal_fx = ParticleManager:CreateParticle(self.particle_abyssal, PATTACH_ABSORIGIN_FOLLOW, target)
+			ParticleManager:SetParticleControl(particle_abyssal_fx, 0, target:GetAbsOrigin())
+			ParticleManager:ReleaseParticleIndex(particle_abyssal_fx) 
 
+			self:GetAbility():EmitSound("huge_click")
 			return damage
 		end
 
@@ -307,11 +355,12 @@ function modifier_powersurge:GetModifierBaseAttack_BonusDamage()
 end
 
 function modifier_powersurge:OnCreated()
-	if IsServer then
+	if IsServer() then
 		local caster = self:GetCaster()
 		local baseDamageAverage = (caster:GetBaseDamageMax() + caster:GetBaseDamageMin()) / 2
 		local damage_multiplier = self:GetAbility():GetSpecialValueFor("damage_multiplier") 
 		local damage_multiplier_upgraded = self:GetAbility():GetSpecialValueFor("damage_multiplier_upgraded")
+		EmitSoundOn("Hero_Clinkz.Strafe", caster)
 		
 		if caster:HasModifier("modifier_upgrade_skills") then
 			self.baseDamage = baseDamageAverage * damage_multiplier_upgraded
@@ -319,6 +368,14 @@ function modifier_powersurge:OnCreated()
 			self.baseDamage = baseDamageAverage * damage_multiplier
 		end
 	end
+end
+
+function modifier_powersurge:GetEffectName()
+	return "particles/units/heroes/hero_clinkz/clinkz_strafe_fire.vpcf"
+end
+
+function modifier_powersurge:GetEffectAttachType()
+	return PATTACH_ABSORIGIN_FOLLOW
 end
 
 function modifier_powersurge:OnRefresh()
@@ -335,8 +392,6 @@ function upgrade_skills:GetAbilityTextureName()
 	return "upgrade_skills"
 end
 
-modifier_upgrade_skills = class({})
-
 function upgrade_skills:OnSpellStart() 
 	if IsServer() then
 		local caster = self:GetCaster()
@@ -344,5 +399,103 @@ function upgrade_skills:OnSpellStart()
 
 		caster:AddNewModifier(caster, self, "modifier_upgrade_skills", {duration = duration})
 		caster:RemoveModifierByName("modifier_multiclick")
+		self:EmitSound("ch2_conquer")
+		local particle = "particles/units/heroes/hero_phoenix/phoenix_supernova_reborn.vpcf"
+		local reborn = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN_FOLLOW, caster)
+
+		--ty dota imba
+		ParticleManager:SetParticleControl( reborn, 0, caster:GetAbsOrigin() )
+		ParticleManager:SetParticleControl( reborn, 1, Vector(1.5,1.5,1.5) )
+		ParticleManager:SetParticleControl( reborn, 3, caster:GetAbsOrigin() )
+		ParticleManager:ReleaseParticleIndex(reborn)
+		StartSoundEvent( "Hero_Phoenix.SuperNova.Explode", caster)
+		caster:SetModelScale(2)
+	end
+end
+
+modifier_upgrade_skills = class({})
+
+function modifier_upgrade_skills:IsPurgeable() return false end
+
+function modifier_upgrade_skills:OnCreated()
+	if IsServer() then
+		self.particle_fx = "particles/heroes/cid/cid_tornado.vpcf"
+		self.particle_circle = "particles/heroes/cid/cid_tornado_circle.vpcf"
+		self.pfx = ParticleManager:CreateParticle(self.particle_fx, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster()) 
+		self.pfx_circle = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster()) 
+
+		ParticleManager:SetParticleControlEnt(self.pfx_circle, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+		ParticleManager:SetParticleControlEnt(self.pfx, 3, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+		
+	end
+end
+
+function modifier_upgrade_skills:OnRefresh()
+	if IsServer() then
+		local caster = self:GetCaster()
+
+		caster:RemoveModifierByName("modifier_upgrade_skills") 
+		self:GetAbility():OnSpellStart()
+	end
+end
+
+function modifier_upgrade_skills:DeclareFunctions()
+	local decFuncs = 
+		{MODIFIER_PROPERTY_MODEL_CHANGE,
+		MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT}
+	return decFuncs
+end
+
+function modifier_upgrade_skills:GetModifierMoveSpeedBonus_Constant()
+	return self:GetAbility():GetSpecialValueFor("ms")
+end
+
+function modifier_upgrade_skills:OnDestroy()
+	if IsServer() then
+		local caster = self:GetCaster()
+		caster:SetModelScale(1)
+		ParticleManager:DestroyParticle(self.pfx, false)
+		ParticleManager:ReleaseParticleIndex(self.pfx)
+
+		ParticleManager:DestroyParticle(self.pfx_circle, false)
+		ParticleManager:ReleaseParticleIndex(self.pfx_circle)
+		self:GetAbility():StopSound("ch2_conquer")
+	end
+end
+
+function modifier_upgrade_skills:GetModifierModelChange()
+	return "models/creeps/neutral_creeps/n_creep_dragonspawn_a/n_creep_dragonspawn_a.vmdl"
+end
+
+function modifier_upgrade_skills:GetStatusEffectName()
+	return "particles/econ/items/juggernaut/jugg_arcana/status_effect_jugg_arcana_omni.vpcf"
+end
+
+function modifier_upgrade_skills:StatusEffectPriority()
+	return 10
+end
+
+--right click sound
+LinkLuaModifier("modifier_click", "heroes/hero_cid/hero_cid", LUA_MODIFIER_MOTION_NONE)
+click = class({})
+
+function click:GetIntrinsicModifierName() 
+	return "modifier_click"
+end
+
+modifier_click = class({})
+
+function modifier_click:DeclareFunctions()
+	local decFuncs = {MODIFIER_EVENT_ON_ATTACK}
+	return decFuncs
+end
+
+function modifier_click:IsHidden() return true end
+function modifier_click:IsPurgeable() return false end
+function modifier_click:IsDebuff() return false end
+
+function modifier_click:OnAttack()
+	if IsServer() then
+		self:GetAbility():EmitSound("click")
 	end
 end

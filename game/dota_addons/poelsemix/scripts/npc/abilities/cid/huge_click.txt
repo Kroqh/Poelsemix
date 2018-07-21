@@ -12,11 +12,39 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastPoint"				"0.0"
 
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
+	// Precache
+	//--------------------------------------
+	"precache"
+	{
+		//Abyssal
+		"particle"  "particles/items_fx/abyssal_blade.vpcf"
+		"soundfile"	"soundevents/cid_soundevent.vsndevts"
+
+		//Phoenix
+		"particle" "particles/units/heroes/hero_phoenix/phoenix_supernova_reborn.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
+
+		//Clinkz
+		"particle" "particles/units/heroes/hero_clinkz/clinkz_strafe_fire.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+
+		//Storm
+		"particle"	"particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
+
+		//Dragon
+		"model"	"models/creeps/neutral_creeps/n_creep_dragonspawn_a/n_creep_dragonspawn_a.vmdl"
+
+		//Tornado
+		"particle"	"particles/heroes/cid/cid_tornado.vpcf"
+		"particle"	"particles/heroes/cid/cid_tornado_circle.vpcf"
+
+		//status_effect
+		"particle"	"particles/econ/items/juggernaut/jugg_arcana/status_effect_jugg_arcana_omni.vpcf"
+
+		//wisp particle
+		"particle"  "particles/econ/items/wisp/wisp_guardian_ti7.vpcf"
+	}
 	
 	"AbilitySpecial"
 	{

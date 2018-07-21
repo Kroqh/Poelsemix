@@ -1,0 +1,12 @@
+"click"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_cid/hero_cid"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"bomb_explode"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"MaxLevel"	"1"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+}
