@@ -1,7 +1,7 @@
 "AddonInfo"
 {
 	"HeroGuidesSupported"		"1"
-	"PenaltiesEnabled"		"1"
+	"PenaltiesEnabled"		"0"
 	"mines_trio"
 	{
 		"MaxPlayers"		"9"
