@@ -2209,6 +2209,224 @@
 			}
 		}
 	}
+	"big_clicks"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_cid/hero_cid"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityTextureName" "big_clicks_icon"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14 13 12 11"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 125 140 155"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"damage" "40 50 60 70"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"duration"	"6"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"stacks"	"6"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"upgraded_damage" "100 120 140 160"
+			}
+			"05"
+			{
+				"var_type" "FIELD_INTEGER"
+				"upgraded_stacks" "12"
+			}
+		}
+	}
+	"huge_click"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_cid/hero_cid"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityTextureName" "huge_click_icon"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"chance" "20 25 30 35"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage_modifier"	"175 200 225 250"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage_modifier_upgraded" "300 350 400 450"
+			}
+		}
+	}
+	"multiclick"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_cid/hero_cid"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityTextureName" "multiclick_icon"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18 17 16 15"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 110 120 130"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_FLOAT"
+				"bat" "1.2 1.15 1.10 1.05"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"duration"	"10"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"stacks"	"5"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bat_upgraded" "1.10 1.00 0.9 0.8"
+			}
+		}
+	}
+	"powersurge"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_cid/hero_cid"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityTextureName" "powersurge_icon"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"26 24 22 20"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 110 110 110"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"damage_modifier_tooltip" "100 100 100 100"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"damage_modifier_upgraded_tooltip" "200 200 200 200"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"duration"	"10"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage_multiplier" "1 1 1 1"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage_multiplier_upgraded" "2 2 2 2"
+			}
+		}
+	}
+	"upgrade_skills"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_cid/hero_cid"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityTextureName" "upgrade_skills"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"90 80 70 60"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 55 60 65"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"duration"	"20 30 40"
+			}
+		}
+	}
 	"anime_power_datadriven"
 	{
 		//General
@@ -3201,7 +3419,7 @@
 	
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"2.0 1.5 1.0 0.5"
+		"AbilityCooldown"				"2.5 2.0 1.5 1.0"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -3321,7 +3539,7 @@
 			"01"
 			{
 				"var_type"  "FIELD_FLOAT"
-				"bonus_damage"  "200 420 640 860"
+				"bonus_damage"  "200 350 500 650"
 			}	
 					"01"
 			{
@@ -3405,7 +3623,7 @@
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_physical_damage"		"200"
+				"bonus_physical_damage"		"400"
 			}
 			// Extra
 			"08"
@@ -4924,7 +5142,7 @@
 		"AbilityTextureName"			"awaken"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"						"1"
-		"RequiredLevel"       				        "15"
+		"RequiredLevel"       				        "16"
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
 	
@@ -4942,12 +5160,12 @@
 			"01"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"agility"			"75"
+				"agility"			"40"
 			}
 		"02"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"strength"			"150"
+				"strength"			"80"
 			}
 			"03"
 			{
@@ -4957,7 +5175,7 @@
 			"04"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"hp"			"400"
+				"hp"			"100"
 			}
 					"05"
 			{
@@ -5298,7 +5516,7 @@
 					"RemoveModifier"
 					{
 						"Target"	"CASTER"
-						"ModifierName"	"modifier_permanent_invisibility_datadriven"
+						"ModifierName"	"modifier_invisibility_datadriven"
 					}
 					"RemoveModifier"
 					{

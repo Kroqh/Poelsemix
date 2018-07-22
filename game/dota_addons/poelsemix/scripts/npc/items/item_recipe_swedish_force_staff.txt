@@ -1,0 +1,15 @@
+"item_recipe_swedish_force_staff"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "old_recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"500"
+  		"ID"						"3023"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_swedish_force_staff"
+		"ItemRequirements"
+		{
+			"01" "item_oblivion_staff;item_force_staff"
+		}
+  	}

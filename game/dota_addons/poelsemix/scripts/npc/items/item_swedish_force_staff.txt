@@ -1,0 +1,158 @@
+"item_swedish_force_staff"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "sve_staff"
+	"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH | DOTA_UNIT_TARGET_TEAM_CUSTOM"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CUSTOM"
+	
+
+	"AbilityCastRange"        "800"
+	"AbilityCastPoint"        "0.0"
+	"AbilityCooldown"       "20.0"
+  	
+
+  	"ItemCost"					"3900"
+  	"ID"						"3022"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"          "int;damage;attack_speed;hard_to_tag"
+	"ItemQuality"         "rare"
+	"ItemAliases"         "fs;force staff;swedish force staff"
+	"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_intellect" "20"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_health_regen" "6"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"push_length" "1200"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"push_speed" "3000"
+		}
+		"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"push_duration" "0.4"
+		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"tree_radius" "100"
+		}
+		"07"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_attack_speed" "10"
+		}
+		"08"
+		{
+			"var_type" "FIELD_FLOAT"
+			"bonus_mana_regen" "1.5"
+		}
+		"09"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_damage" "10"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile" "items/item_force_staff.lua"
+			"Function" "ForceStaffB"
+			"Target" "TARGET"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_item_force_staff_effect"
+			"Target" 		"TARGET"
+		}
+		"ApplyMotionController"
+		// For this: gfycat.com/BraveHideousGiantschnauzer -> check: bit.ly/1KWulqA
+		{
+		    "Target" 		"TARGET"
+		    "ScriptFile"    "items/item_force_staff.lua"
+		    "HorizontalControlFunction" "ForceHorizontal"   
+		}
+		
+		"FireSound"
+		{
+			"EffectName"	"DOTA_Item.ForceStaff.Activate"
+			"Target" 		"TARGET"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_danish_force_staff_passive"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_health_regen"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+			}
+		}
+		
+			"modifier_item_force_staff_effect"
+			{ 
+
+				"Duration"  "%push_duration"
+
+				"OverrideAnimation" "ACT_DOTA_FLAIL"
+
+				"StatusEffectName"     "particles/status_fx/status_effect_forcestaff.vpcf"
+				"StatusEffectPriority"  "10"
+				
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"  "particles/items_fx/force_staff.vpcf"
+						"EffectAttachType" "follow_origin"
+						"Target"  "TARGET"
+					}
+				}
+
+				"ThinkInterval"  "0.03"
+				"OnIntervalThink"
+				{
+					"DestroyTrees"
+					{
+						"Target"  "TARGET"
+						"Radius"  "%tree_radius"
+					}
+
+				}
+
+			}
+	}
+}

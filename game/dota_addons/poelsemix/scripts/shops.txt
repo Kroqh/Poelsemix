@@ -20,6 +20,8 @@
 		"item"		"item_actual_butterfly"
 		"item"		"item_crocs"
 		"item"		"item_danish_force_staff"
+		"item"		"item_swedish_force_staff"
+		"item"		"item_kalmar_force_staff"
 		"item"		"item_flaeskesteg_sovs_kartofler"
 		"item"		"item_hike_shox"
 		"item"		"item_hjemmevaernet"
