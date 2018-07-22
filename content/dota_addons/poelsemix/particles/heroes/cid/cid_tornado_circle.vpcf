@@ -54,6 +54,7 @@
 			m_RateMin = [ -64.0, -64.0, -64.0 ]
 			m_RateMax = [ 64.0, 64.0, 64.0 ]
 			m_FrequencyMin = [ 0.2, 0.2, 0.2 ]
+			m_flOscAdd = 0.0
 		},
 		{
 			_class = "C_OP_RampScalarLinearSimple"

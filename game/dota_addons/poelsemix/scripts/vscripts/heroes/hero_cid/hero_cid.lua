@@ -423,10 +423,49 @@ function modifier_upgrade_skills:OnCreated()
 		self.particle_circle = "particles/heroes/cid/cid_tornado_circle.vpcf"
 		self.pfx = ParticleManager:CreateParticle(self.particle_fx, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster()) 
 		self.pfx_circle = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster()) 
+		
 
 		ParticleManager:SetParticleControlEnt(self.pfx_circle, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
 		ParticleManager:SetParticleControlEnt(self.pfx, 3, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
-		
+		-- 10 second delayed, run once using gametime (respect pauses)
+ 		Timers:CreateTimer({
+  		 	endTime = 0.20,
+   			callback = function()
+    			self.pfx_circle2 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle2, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+ 		    end
+ 			})
+ 		Timers:CreateTimer({
+  		 	endTime = 0.4,
+   			callback = function()
+    			self.pfx_circle3 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle3, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+ 		    end
+ 			})
+
+ 		Timers:CreateTimer({
+  		 	endTime = 0.6,
+   			callback = function()
+    			self.pfx_circle4 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle4, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+ 		    end
+ 			})
+
+ 		Timers:CreateTimer({
+  		 	endTime = 0.8,
+   			callback = function()
+    			self.pfx_circle5 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle5, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+ 		    end
+ 			})
+
+ 		 	Timers:CreateTimer({
+  		 	endTime = 1,
+   			callback = function()
+    			self.pfx_circle6 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle6, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+ 		    end
+ 			})
 	end
 end
 
@@ -459,6 +498,22 @@ function modifier_upgrade_skills:OnDestroy()
 
 		ParticleManager:DestroyParticle(self.pfx_circle, false)
 		ParticleManager:ReleaseParticleIndex(self.pfx_circle)
+
+		ParticleManager:DestroyParticle(self.pfx_circle2, false)
+		ParticleManager:ReleaseParticleIndex(self.pfx_circle2)
+
+		ParticleManager:DestroyParticle(self.pfx_circle3, false)
+		ParticleManager:ReleaseParticleIndex(self.pfx_circle3)	
+
+		ParticleManager:DestroyParticle(self.pfx_circle4, false)
+		ParticleManager:ReleaseParticleIndex(self.pfx_circle4)
+
+		ParticleManager:DestroyParticle(self.pfx_circle5, false)
+		ParticleManager:ReleaseParticleIndex(self.pfx_circle5)
+
+		ParticleManager:DestroyParticle(self.pfx_circle6, false)
+		ParticleManager:ReleaseParticleIndex(self.pfx_circle6)
+
 		self:GetAbility():StopSound("ch2_conquer")
 	end
 end
