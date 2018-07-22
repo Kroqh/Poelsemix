@@ -6,4 +6,15 @@
 	"Ability2" "SorenPassiv"
 	"Ability3" "kolonihave"
 	"Ability6" "Skyd_en_due_datadriven"
+	
+	//hp, attack range
+
+	"Ability12" "special_bonus_attack_damage_35"
+	"Ability13" "special_bonus_all_stats_20"
+	
+	"Ability14" "special_bonus_hp_regen_25"
+	"Ability15" "special_bonus_evasion_25"
+	
+	"Ability16" "special_bonus_lifesteal_25"
+	"Ability17" "special_bonus_attack_speed_200"
 }

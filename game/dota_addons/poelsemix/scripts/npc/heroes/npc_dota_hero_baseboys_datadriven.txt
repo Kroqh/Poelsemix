@@ -11,6 +11,10 @@
 	"Ability5" "generic_hidden"
 	"Ability6" "naga_siren_mirror_image"
 	"Ability7" "plant_bomb_explosion_datadriven"
+
+	"Ability13"	"special_bonus_hp_500"
+	"Ability14" "special_bonus_all_stats_12"
+	"Ability17" "special_bonus_unique_naga_siren"
 	
 	"AbilityDraftIgnoreCount" "7"
 }
