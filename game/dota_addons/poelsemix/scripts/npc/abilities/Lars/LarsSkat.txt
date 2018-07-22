@@ -83,6 +83,8 @@
 				"Target" 		"CASTER"
 			}
 		}
+		
+
 
 	"Modifiers"
 	{
@@ -90,6 +92,7 @@
 		{
 				"Passive"           "0"
 		        "IsHidden"          "0"
+				"RemoveOnDeath"		"1"
 
 		        "Aura"              "modifier_skat_debuff"
 		        "Aura_Radius"       "500"
@@ -123,6 +126,23 @@
 
 
 			}
+			"OnDeath"
+            { 
+			   	    "RemoveModifier"
+			   	    {
+			   	        "ModifierName"  "modifier_skat"
+			   	        "Target"        "CASTER"
+			   	    }
+            }
+
+			"OnOrder"
+	            { 
+				   	"RemoveModifier"
+				   	{
+				   	    "ModifierName"  "modifier_skat"
+				   	    "Target"        "CASTER"
+				   	}
+	            }
 		}
 		"modifier_skat_debuff"
 		{
