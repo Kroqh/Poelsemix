@@ -1,29 +1,27 @@
-
+"Krogh"
+{
 	// HERO: Sven
-	"Krogh"
-	{
-		"override_hero"				"npc_dota_hero_sven"			// Hero to override
-		"Ability1" "ha_gay"				
-		"Ability2" "social_presence"
-		"Ability3" "sick_dodge"
-		"Ability6" "awaken"
-		"AttributeBaseStrength"		"20"
-		"AttributeBaseIntelligence"	"40"
-		"AttributeIntelligenceGain"	"0.6"
-		"ModelScale"		"0.7"
-		"Ability10"		"special_bonus_gold_income_20"
-		"Ability11"		"special_bonus_exp_boost_25"
-		
-		"Ability12"		"special_bonus_attack_damage_40"
-		"Ability13"		"special_bonus_hp_300"
-		
-		"Ability14"		"special_bonus_all_stats_20"
-		"Ability15"		"special_bonus_evasion_15"
-		
-		"Ability16"		"special_bonus_30_crit_2"
-		"Ability17"		"special_bonus_lifesteal_20"
-                  
-		"MovementSpeed"               "300"
-		"StatusHealth"                "500"								
-
-	}
+	"override_hero"	"npc_dota_hero_sven"			// Hero to override
+	"Ability1" "ha_gay"				
+	"Ability2" "social_presence"
+	"Ability3" "sick_dodge"
+	"Ability6" "awaken"
+	"AttributeBaseStrength"		"20"
+	"AttributeBaseIntelligence"	"40"
+	"AttributeIntelligenceGain"	"0.6"
+	"ModelScale"		"0.7"
+	"Ability10"		"special_bonus_gold_income_20"
+	"Ability11"		"special_bonus_exp_boost_25"
+	
+	"Ability12"		"special_bonus_attack_damage_40"
+	"Ability13"		"special_bonus_hp_300"
+	
+	"Ability14"		"special_bonus_all_stats_20"
+	"Ability15"		"special_bonus_evasion_15"
+	
+	"Ability16"		"special_bonus_30_crit_2"
+	"Ability17"		"special_bonus_lifesteal_20"
+                 
+	"MovementSpeed"               "300"
+	"StatusHealth"                "500"
+}

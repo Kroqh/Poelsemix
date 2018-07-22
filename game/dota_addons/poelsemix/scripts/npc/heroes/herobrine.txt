@@ -9,8 +9,6 @@
 	"AttributeIntelligenceGain"	"3"
 	"Model" "models/items/wards/knightstatue_ward/knightstatue_ward.vmdl"
 	
-
-	
 	"Ability1" "herobrine_creepypasta"
 	"Ability2" "hb_elder"
 	"Ability3" "hb_grief"

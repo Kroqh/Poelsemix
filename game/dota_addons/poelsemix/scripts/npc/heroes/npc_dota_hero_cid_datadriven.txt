@@ -2,6 +2,7 @@
 {
 	"override_hero" "npc_dota_hero_phantom_assassin"
 	"model"	"models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl"
+	"DisableWearables"	"1"
 	
 	"Ability1" "big_clicks"
 	"Ability2" "multiclick"
@@ -21,6 +22,3 @@
 
 	"AbilityDraftIgnoreCount" "7"
 }
-
-
-

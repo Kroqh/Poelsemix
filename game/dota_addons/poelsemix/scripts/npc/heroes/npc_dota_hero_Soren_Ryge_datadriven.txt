@@ -1,4 +1,4 @@
-"npc_dota_hero_Søren_Ryge_datadriven"
+"npc_dota_hero_Soren_Ryge_datadriven"
 {
 	"override_hero" "npc_dota_hero_lone_druid"
 

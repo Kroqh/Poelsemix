@@ -16,5 +16,4 @@
 	"Ability4" "bloodseeker_thirst"
 	"Ability5" "generic_hidden"
 	"Ability6" "anime_power_datadriven"
-
 }
