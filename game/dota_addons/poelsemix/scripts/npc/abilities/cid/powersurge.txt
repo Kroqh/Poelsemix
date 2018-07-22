@@ -25,12 +25,12 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage_modifier_tooltip" "100 100 100 100"
+			"damage_modifier_tooltip" "2 2 2 2"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage_modifier_upgraded_tooltip" "200 200 200 200"
+			"damage_modifier_upgraded_tooltip" "3 3 3 3"
 		}
 		"03"
 		{

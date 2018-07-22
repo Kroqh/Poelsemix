@@ -39,7 +39,7 @@
 		{
 			"var_type" "FIELD_FLOAT"
 			
-			"silence_duration" "4.5"
+			"silence_duration" "2.5"
 		}
 		"04"
 		{
