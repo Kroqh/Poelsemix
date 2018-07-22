@@ -485,8 +485,14 @@ end
 
 modifier_click = class({})
 
+function modifier_click:OnCreated()
+	if IsServer() then
+		self.parent = self:GetParent()
+	end
+end
+
 function modifier_click:DeclareFunctions()
-	local decFuncs = {MODIFIER_EVENT_ON_ATTACK}
+	local decFuncs = {MODIFIER_EVENT_ON_ATTACK_LANDED}
 	return decFuncs
 end
 
@@ -494,8 +500,21 @@ function modifier_click:IsHidden() return true end
 function modifier_click:IsPurgeable() return false end
 function modifier_click:IsDebuff() return false end
 
-function modifier_click:OnAttack()
+function modifier_click:OnAttackLanded(keys)
 	if IsServer() then
-		self:GetAbility():EmitSound("click")
+		local attacker = keys.attacker
+
+		--print("Caster is", self.parent:GetUnitName() )
+		--print("Attacker is", attacker:GetUnitName() )
+
+		if self.parent == attacker then
+			self:GetAbility():EmitSound("click")
+		end
+	end
+end
+
+function modifier_click:OnRefresh()
+	if IsServer() then
+		self:OnCreated()
 	end
 end
