@@ -1,0 +1,61 @@
+"item_kms_gun"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3024"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"                     "item_datadriven"
+		// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"          "deny;suicide;consumable"
+	"ItemAliases"         "suicide gun;kms;gun"
+	"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+			
+			
+
+		// Stats	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"200.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"300"
+		"ItemQuality"					"consumable"
+		"ItemPurchasable"				"1"
+		"ItemStackable"					"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemStockMax"					"1"
+		"ItemStockTime"					"240"
+		"ItemInitialCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		"IsTempestDoubleClonable"		"0"
+		"AbilityTextureName"        "kms_gun"
+		"FightRecapLevel"				"2"
+		
+		
+		"precache"
+		{
+	"soundfile" "soundevents/items_soundevent.vsndevts"
+		}
+		"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName" "kms_gun"
+			"Target" 		"CASTER"
+		}
+		"RunScript"
+		{
+			"ScriptFile"					"items/item_kms_gun.lua"
+			"Function"						"kms"
+		}
+
+
+		"SpendCharge"
+		{}
+
+	}
+
+	}
