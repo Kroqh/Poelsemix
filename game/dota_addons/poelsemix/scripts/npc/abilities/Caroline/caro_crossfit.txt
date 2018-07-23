@@ -20,12 +20,12 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"agility"			"25 50 75 100"
+			"agility"			"5 10 15 20"
 		}
 	"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"strength"			"15 30 45 60"
+			"strength"			"3 6 9 12"
 		}
 	}
 
