@@ -58,14 +58,14 @@
         {
 			"ApplyModifier"
 		{
-			"ModifierName"	"modifier_drunk_target"
-			"Target" 		"TARGET"
+			"ModifierName"	"modifier_drunk_buff"
+			"Target" 		"CASTER"
 			"duration" "%duration"
 		}
 			"ApplyModifier"
 		{
-			"ModifierName"	"modifier_drunk_buff"
-			"Target" 		"CASTER"
+			"ModifierName"	"modifier_drunk_target"
+			"Target" 		"TARGET"
 			"duration" "%duration"
 		}
 			"FireSound"
