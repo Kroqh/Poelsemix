@@ -17,7 +17,7 @@
 	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
 	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
 	"AbilityTextureName"		"LarsSkat"
-	"AOERadius"					"500"
+	"AOERadius"					"%radiusAOE"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
@@ -95,7 +95,7 @@
 				"RemoveOnDeath"		"1"
 
 		        "Aura"              "modifier_skat_debuff"
-		        "Aura_Radius"       "500"
+		        "Aura_Radius"       "%radiusAOE"
 		        "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_ENEMY"
 		        "Aura_Types"        "DOTA_UNIT_TARGET_HERO"
 		        "Aura_Flags"        "DOTA_UNIT_TARGET_FLAG_NONE"
@@ -155,9 +155,11 @@
 		        "Target"
 		        {
 		            "Center"    "CASTER"
-		            "Radius"    "500"
+		            "Radius"    "%radiusAOE"
 		            "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 		            "Types"     "DOTA_UNIT_TARGET_HERO"
+					"Flags" "DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS | DOTA_UNIT_TARGET_FLAG_NOT_SUMMONED"
+				
 		        }
 		    
 		        "Action"    
