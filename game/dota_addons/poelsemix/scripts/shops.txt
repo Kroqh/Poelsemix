@@ -13,8 +13,6 @@
 		//"item"		"item_red_mist"
 		//"item"		"item_bounty_pact"
 		"item"		"item_dust"
-		"item"		"item_courier"
-		"item"		"item_flying_courier"
 		"item"		"item_ward_observer"
 		"item"		"item_ward_sentry"
 		"item"		"item_bottle"
@@ -85,12 +83,14 @@
 		"item"		"item_gloves"
 		"item"		"item_cloak"
 		"item"		"item_gem"
+		"Item"		"item_laser_surgery"
 		"item"		"item_lifesteal"
 		"item"		"item_ghost"
 		"item"		"item_blink"		
 		"item"		"item_shadow_amulet"	
 		"item"		"item_ring_of_health"
-		"item"		"item_void_stone"			
+		"item"		"item_void_stone"
+			
 	}	
 	
 	// Level 1 - Green Recipes

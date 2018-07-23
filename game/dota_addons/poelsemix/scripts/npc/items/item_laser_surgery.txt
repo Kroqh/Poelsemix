@@ -1,0 +1,73 @@
+"item_laser_surgery"
+	{
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"			"eye_laser"
+		"ItemShopTags"					"sight;gem;eye"
+		"ItemQuality"					"uncommon"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemStackable"					"0"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemCost"						"5000"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"800"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_shard_of_true_sight"
+				"Target" 		"CASTER"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"items/gem.lua"
+				"Function"		"SpendChargeRight"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_shard_of_true_sight"
+			{
+				"IsPurgable"		"0"
+				"IsBuff"			"1"
+				"AllowIllusionDuplicate"	"0"
+				
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/gem.lua"
+						"Function"		"IllusionModifierCleaner"
+						"modifier"		"modifier_shard_of_true_sight"
+					}
+				}
+
+				"Aura"          	"modifier_truesight_reveal"
+				"Aura_Radius"   	"%radius"
+				"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"    	"DOTA_UNIT_TARGET_ALL"
+				"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+			}
+
+			"modifier_truesight_reveal"
+			{
+				"IsHidden"			"1"
+				"Duration"			"0.5"
+				"Priority"			"MODIFIER_PRIORITY_HIGH"
+				"States"
+				{
+					"MODIFIER_STATE_INVISIBLE"		"MODIFIER_STATE_VALUE_DISABLED"
+				}
+			}
+		}
+	}
