@@ -15,7 +15,6 @@
 		"item"		"item_dust"
 		"item"		"item_ward_observer"
 		"item"		"item_ward_sentry"
-		"item"		"item_bottle"
 		"item"		"item_actual_butterfly"
 		"item"		"item_crocs"
 		"item"		"item_danish_force_staff"
@@ -23,7 +22,7 @@
 		"item"		"item_kalmar_force_staff"
 		"item"		"item_flaeskesteg_sovs_kartofler"
 		"item"		"item_hike_shox"
-		"item"		"item_hjemmevaernet"
+
 
 
 	}
@@ -68,7 +67,8 @@
 		"item"		"item_mithril_hammer"
 
 		"item"		"item_mensa_iq"
-		"item"		"item_hummel_shirt"	
+		"item"		"item_hummel_shirt"
+		"item"		"item_hjemmevaernet"	
 	}
 			
 	"misc"
@@ -90,6 +90,7 @@
 		"item"		"item_shadow_amulet"	
 		"item"		"item_ring_of_health"
 		"item"		"item_void_stone"
+		"item"		"item_golden_horns"
 			
 	}	
 	
