@@ -585,10 +585,3 @@ function COverthrowGameMode:OnHeroInGame(hero)
 
 	end
 end
-function COverthrowGameMode:OnNPCSpawned(keys)
-	local npc = EntIndexToHScript(keys.entindex)
-	if npc:IsRealHero() and npc.bFirstSpawned == nil then
-		npc.bFirstSpawned = true
-	 COverthrowGameMode:OnHeroInGame(npc)
-	end
-end
