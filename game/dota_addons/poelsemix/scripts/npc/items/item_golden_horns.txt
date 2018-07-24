@@ -29,7 +29,10 @@
 	"ItemQuality"					"epic"
 	"ItemAliases"					"drum;horns;golden;guld hornene;pipe"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-	
+			"precache"
+	{
+		"soundfile" "soundevents/items_soundevent.vsndevts"
+	}		
 	"AbilitySpecial"
 	{
 		
