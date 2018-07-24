@@ -11,7 +11,7 @@
 	"FightRecapLevel"				"2"
 	"AbilityTextureName"			"caro_sides"
 	"CastFilterRejectCaster" 		"1"
-"AbilityChannelTime" "1.25"
+"AbilityChannelTime" "0.5"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------

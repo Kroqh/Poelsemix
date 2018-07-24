@@ -35,12 +35,12 @@
 		"01"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"frost_arrows_creep_duration"	"0.02"
+			"smash_stun_du"	"0.15"
 		}
 		"02"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"dmg"	"100 150 200 250"
+			"dmg"	"50 80 110 140"
 		}
 	}
 	
@@ -82,17 +82,12 @@
 
 			"OnOrbImpact"
 			{
-				"ApplyModifier"
-				{
-					"Target"
-					{
-						"Center"			"TARGET"
-						"Type"				"DOTA_UNIT_TARGET_BASIC"
-					}
-					"ModifierName"			"modifier_frost_arrows_slow_datadriven"
-					"Duration"				"%frost_arrows_creep_duration"
-				}
 				
+				"Random"
+		    {
+		        "Chance"            "20"
+		        "OnSuccess"
+				{
 				"ApplyModifier"
 				{
 					"Target"
@@ -101,8 +96,10 @@
 						"Type"				"DOTA_UNIT_TARGET_HERO"
 					}
 					"ModifierName"			"modifier_frost_arrows_slow_datadriven"
-					"Duration"				"%frost_arrows_creep_duration"
+					"Duration"				"%smash_stun_du"
 				}
+				}
+			}
 				"Damage"
 				{
 				    "Target"    "TARGET"
