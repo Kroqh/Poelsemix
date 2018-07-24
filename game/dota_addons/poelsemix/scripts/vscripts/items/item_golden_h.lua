@@ -1,7 +1,7 @@
 function use(keys)	
 	
 
-		keys.caster:EmitSound("DOTA_Item.DoE.Activate")
+		keys.caster:EmitSound("goldenhorns")
 
 		local nearby_allied_units = FindUnitsInRadius(keys.caster:GetTeam(), keys.caster:GetAbsOrigin(), nil, keys.EnduranceRadius,
 			DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_INVULNERABLE, FIND_ANY_ORDER, false)
