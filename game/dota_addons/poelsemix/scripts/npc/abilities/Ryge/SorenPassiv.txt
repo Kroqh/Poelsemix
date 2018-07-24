@@ -45,6 +45,11 @@
 					}
 						"HealAmount"	"%heal_amount"
 					}
+					"RunScript"
+		{
+			"ScriptFile"	"scripts/vscripts/heroes/hero_ryge/ryge_agi_.lua"
+			"Function"		"AddIntellect"
+		}		
 				"FireSound"
 				{
 						"Target"				"TARGET"
