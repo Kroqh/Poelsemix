@@ -29,8 +29,8 @@
 		},
 		{
 			_class = "C_OP_FadeIn"
-			m_flFadeInTimeMax = 0.5
-			m_flFadeInTimeMin = 0.5
+			m_flFadeInTimeMax = 1.0
+			m_flFadeInTimeMin = 1.0
 		},
 		{
 			_class = "C_OP_InterpolateRadius"

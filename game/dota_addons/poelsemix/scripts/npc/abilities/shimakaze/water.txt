@@ -14,5 +14,7 @@
 	"Precache"
 	{
 		"particle"  "particles/heroes/shimakaze/shimakaze_run_water.vpcf"
+		"particle"	"particles/heroes/shimakaze/shimakaze_run_water_ground.vpcf"
+		"particle" 	"particles/heroes/shimakaze/shimakaze_run_water_splash.vpcf"
 	}
 }

@@ -78,8 +78,8 @@
 		{
 			_class = "C_INIT_PositionOffset"
 			m_bLocalCoords = true
-			m_OffsetMax = [ 0.0, 35.0, 0.0 ]
-			m_OffsetMin = [ 0.0, 35.0, 0.0 ]
+			m_OffsetMax = [ 0.0, -20.0, 90.0 ]
+			m_OffsetMin = [ 0.0, -20.0, 90.0 ]
 			m_nControlPointNumber = 2
 		},
 		{
@@ -97,6 +97,7 @@
 		{
 			_class = "C_OP_ContinuousEmitter"
 			m_flEmitRate = 30.0
+			m_flEmissionDuration = 3.0
 		},
 	]
 	m_controlPointConfigurations = 
@@ -116,4 +117,10 @@
 		},
 	]
 	m_ConstantColor = [ 191, 254, 255, 255 ]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/heroes/shimakaze/shimakaze_run_water_ground_temp.vpcf"
+		},
+	]
 }

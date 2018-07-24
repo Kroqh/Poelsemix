@@ -1,0 +1,46 @@
+"dangerous_sea"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"bomb_explode"
+	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+
+	"AbilitySpecial"
+	{
+	    "01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "damage"             "120 200 280 360"
+	    }
+	    "02"
+	    {
+	        "var_type"          "FIELD_FLOAT"
+	        "duration"             "5 5 5 5"
+	    }
+	    "03"
+	    {
+	    	"var_type"	"FIELD_FLOAT"
+	    	"tick_interval"	"0.5 0.4 0.3 0.2"
+	    }
+	    "04"
+	    {
+	    	"var_type"	"FIELD_INTEGER"
+	    	"radius"	"400"
+	    }
+	    "05"
+	    {
+	    	"var_type"	"FIELD_INTEGER"
+	    	"move_slow" "-50 -60 -70 -80"
+	    }
+	    "06"
+	    {
+	    	"var_type"	"FIELD_FLOAT"
+	    	"duration_slow" "0.7 0.7 0.7 0.7"
+	    }
+	}
+}
