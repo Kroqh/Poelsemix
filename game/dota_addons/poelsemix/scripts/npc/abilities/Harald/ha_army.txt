@@ -1,0 +1,98 @@
+"ha_army"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityTextureName"			"ha_army"
+		"AbilityCooldown"				"105 90 75"
+		"AbilityManaCost"				"100"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastRange" 				"600"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		
+
+		"precache"
+	{
+		"soundfile" "soundevents/harald_soundevent.vsndevts"
+	}		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+
+			"01"
+			{
+				"var_type" "FIELD_FLOAT"
+				"duration" "18"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"ha_amount" "3 6 9"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"ha_amount2" "3 6 9"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+					"FireSound"
+		{
+			"EffectName"	"ha_army"
+			"Target"		"CASTER"
+		}
+
+			
+
+					
+			"SpawnUnit"
+			{
+				"UnitName"		"viking_norm"
+				"Target" 		"POINT"
+				"Duration"		"%duration"
+				"UnitCount"		"%ha_amount"
+				"UnitLimit"		"99"
+				"GrantsGold"	"20"
+				"GrantsXP"		"20"
+				"SpawnRadius"	"200"
+				
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+				}
+			}
+						"SpawnUnit"
+			{
+				"UnitName"		"viking_ranged"
+				"Target" 		"POINT"
+				"Duration"		"%duration"
+				"UnitCount"		"%ha_amount"
+				"UnitLimit"		"99"
+				"GrantsGold"	"20"
+				"GrantsXP"		"20"
+				"SpawnRadius"	"200"
+				
+				"OnSpawn"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_phased"
+						"Target"		"TARGET"
+						"Duration"		"0.03"
+					}
+				}
+			}
+
+			
+}
+}

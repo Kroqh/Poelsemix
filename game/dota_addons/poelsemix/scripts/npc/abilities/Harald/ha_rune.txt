@@ -1,0 +1,27 @@
+"ha_rune"
+{
+	"BaseClass"                 "ability_datadriven"
+	"AbilityTextureName"        "ha_rune"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityCooldown"               "12 9 6 3"
+	"AbilityManaCost"               "70 60 50 40"
+	"AbilityCastRange"				"875"
+
+	
+	"OnSpellStart"
+	{
+	        "SpawnUnit"
+	   		{
+			    "UnitName"      "npc_rune"
+   			    "Target"        "POINT"
+   			    "Duration"      "15"
+	   		    "UnitCount"     "1"
+	   		    "UnitLimit"     "0"
+			    "GrantsGold"    "1"
+   			    "GrantsXP"      "1"
+   			    "SpawnRadius"   "10"
+   			}
+
+	}
+}

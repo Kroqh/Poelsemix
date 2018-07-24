@@ -1,0 +1,96 @@
+"ha_convert"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"FightRecapLevel"				"2"
+	"AbilityTextureName"			"ha_convert"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"30 28 26 24"
+	"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 100 100 100"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"5.0 6.0 7.0 8.0"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration_scepter"			"7.0 8.0 9.0 10.0"
+		}
+	}
+
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_omniknight/omniknight_guardian_angel_halo_buff.vpcf"
+		"particle"  "particles/status_fx/status_effect_guardian_angel.vpcf"
+		"particle"  "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_ally.vpcf"
+	}
+
+	"OnSpellStart"
+	{
+
+		"FireSound"
+		{
+			"EffectName"	"ha_fader"
+			"Target"		"CASTER"
+		}
+
+		"ApplyModifier"
+		{
+					"Target" 		"CASTER"
+					"ModifierName"	"modifier_guardian_angel"
+		}
+			
+		
+	}
+	
+
+	"Modifiers"
+	{
+		"modifier_guardian_angel"
+		{
+			"IsBuff"			"1"
+			"IsPurgable"		"1"
+			"Duration"			"%duration"
+			"StatusEffectName"     "particles/status_fx/status_effect_guardian_angel.vpcf"
+			"StatusEffectPriority" "10"
+
+			"OnCreated"
+			{
+				"AttachEffect"
+				{
+					"EffectName"		"particles/units/heroes/hero_omniknight/omniknight_guardian_angel_halo_buff.vpcf"
+					"EffectAttachType"	"follow_overhead"
+					"Target"			"CASTER"
+				}
+
+			 	"AttachEffect"
+				{
+					"Target" "CASTER"
+					"EffectName"				"particles/units/heroes/hero_omniknight/omniknight_guardian_angel_ally.vpcf"
+					"EffectAttachType"			"follow_origin"
+					
+				}
+			}
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"	"1"
+			}
+		}
+	}
+	}
