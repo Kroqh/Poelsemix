@@ -6,9 +6,9 @@
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"1"
 		"ModelScale"				"1"
-		"IsSummoned"				"0"
+		"IsSummoned"				"1"
 		"IsAncient"					"1"
-		"ConsideredHero"			"1"
+		"ConsideredHero"			"0"
 		"IgnoreAddSummonedToSelection" "0"
 
 		// Abilities
