@@ -59,7 +59,7 @@
 				"UnitLimit"		"99"
 				"GrantsGold"	"20"
 				"GrantsXP"		"20"
-				"SpawnRadius"	"200"
+				"SpawnRadius"	"80"
 				
 				"OnSpawn"
 				{
@@ -80,7 +80,7 @@
 				"UnitLimit"		"99"
 				"GrantsGold"	"20"
 				"GrantsXP"		"20"
-				"SpawnRadius"	"200"
+				"SpawnRadius"	"80"
 				
 				"OnSpawn"
 				{
