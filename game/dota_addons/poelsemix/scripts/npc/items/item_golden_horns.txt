@@ -54,7 +54,6 @@
 			"var_type"								"FIELD_INTEGER"
 			"aura_bonus_movement_speed"			"20"
 		}
-		//notineffectyet
 		"05"
 		{
 			"var_type"								"FIELD_INTEGER"

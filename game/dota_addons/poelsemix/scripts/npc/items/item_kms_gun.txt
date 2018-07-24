@@ -35,10 +35,7 @@
 		"FightRecapLevel"				"2"
 		
 		
-		"precache"
-		{
-	"soundfile" "soundevents/items_soundevent.vsndevts"
-		}
+
 		"OnSpellStart"
 	{
 		"FireSound"
