@@ -1,0 +1,14 @@
+"item_recipe_greenlandish_guard"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_greenlandish_guard"
+		"ItemRequirements"
+		{
+			"01" "item_rod_of_atos;item_shivas_guard;item_rod_of_atos"
+		}
+  	}

@@ -1,0 +1,208 @@
+"item_greenlandish_guard"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"item_datadriven"
+	"ID"							"1119"  //Valve's version of this item uses the ID "119".
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+	"Model"							"models/props_gameplay/red_box.vmdl" 
+	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+	"AbilityTextureName"			"item_greenlands_guard"
+	"FightRecapLevel"				"1"
+
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"30"
+	"AbilityManaCost"				"100"
+	"AbilityCastPoint"				"0.0"
+
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10610"
+	"ItemShopTags"					"int;armor;hard_to_tag"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"shiva's guard;guard;greenland;atos"
+	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"bonus_intellect"				"75"
+		}
+		"02"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"bonus_agi"					"15"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"bonus_str"					"30"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"bonus_armor"				"18"
+		}
+		"05"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"blast_final_radius"			"900"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"blast_speed_per_second"		"350"
+		}
+		"07"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"blast_damage"					"30"
+		}
+		"08"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"aura_ms"						"-20"
+		}
+		"09"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"blast_debuff_duration"			"0.2"
+		}
+		"10"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"blast_vision_radius"			"800"
+		}
+		"11"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"blast_vision_duration"			"2"
+		}
+				"12"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"aura_radius"					"900"
+		}
+				"13"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"aura_attack_speed"				"-40"
+		}
+	}
+	
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"					"items/item_greenland.lua"
+			"Function"						"item_shivas_guard_datadriven_on_spell_start"
+			"BlastFinalRadius"				"%blast_final_radius"
+			"BlastSpeedPerSecond"			"%blast_speed_per_second"
+			"BlastDamage"					"%blast_damage"
+			"BlastVisionRadius"				"%blast_vision_radius"
+			"BlastVisionDuration"			"%blast_vision_duration"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_shivas_guard_datadriven"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intellect"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_str"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_agi"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+			}
+		}
+		"modifier_item_shivas_guard_datadriven_enemy_aura_emitter"
+		{
+			"Passive"				"1"
+			"IsHidden"				"1"
+			
+			"Aura" 					"modifier_item_shivas_guard_datadriven_enemy_aura"
+			"Aura_Radius" 			"%aura_radius"
+			"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+			"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+			"Aura_ApplyToCaster" 	"0"
+		}
+		"modifier_item_shivas_guard_datadriven_enemy_aura"
+		{
+			"Passive"			"0"
+			"IsHidden"			"1"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"			"%aura_ms"
+			}
+			
+			"OnCreated"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"items/item_greenland.lua"
+					"Function"			"modifier_item_shivas_guard_datadriven_enemy_aura_on_interval_think"
+				}
+			}
+			
+			"ThinkInterval"			".03"
+			//This debuff aura is invisible to enemies unless its emitting unit is visible to them,
+			//so regularly check to see if the modifier should be visible.
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"items/item_greenland.lua"
+					"Function"			"modifier_item_shivas_guard_datadriven_enemy_aura_on_interval_think"
+				}
+			}
+			
+			"OnDestroy"  //Remove the visible modifier, if it is currently on the unit.
+			{
+				"RunScript"
+				{
+					"ScriptFile"		"items/item_greenland.lua"
+					"Function"			"modifier_item_shivas_guard_datadriven_enemy_aura_on_destroy"
+				}
+			}
+		}
+		//A visible modifier that should appear to enemies only if they are affected by the debuff aura and its emitter
+		//is visible to their team.
+		"modifier_item_shivas_guard_datadriven_enemy_aura_visible"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsBuff"			"0"
+			"IsDebuff"			"1"
+			"IsPurgable"		"0"
+		}
+		"modifier_item_shivas_guard_datadriven_blast_debuff"
+		{
+			"Duration"			"%blast_debuff_duration"
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsBuff"			"0"
+			"IsDebuff"			"1"
+			"IsPurgable"		"1"
+			
+			"StatusEffectName"     "particles/status_fx/status_effect_frost.vpcf"
+			"StatusEffectPriority" "10"
+			
+			"States"
+    {
+        "MODIFIER_STATE_ROOTED" "MODIFIER_STATE_VALUE_ENABLED"
+    }         
+		}
+	}
+}
