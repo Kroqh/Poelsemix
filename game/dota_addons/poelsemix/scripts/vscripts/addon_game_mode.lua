@@ -226,7 +226,7 @@ function COverthrowGameMode:InitGameMode()
 	-- Show the ending scoreboard immediately
 	GameRules:SetCustomGameEndDelay( 0 )
 	GameRules:SetCustomVictoryMessageDuration( 10 )
-	GameRules:SetPreGameTime( 10 )
+	GameRules:SetPreGameTime( 0 )
 	GameRules:SetStrategyTime( 0.0 )
 	GameRules:SetShowcaseTime( 0.0 )
 	--GameRules:SetHideKillMessageHeaders( true )
@@ -546,7 +546,7 @@ function COverthrowGameMode:ExecuteOrderFilter( filterTable )
 		if pickedItem:GetAbilityName() == "item_treasure_chest" then
 			local player = PlayerResource:GetPlayer(filterTable["issuer_player_id_const"])
 			local hero = player:GetAssignedHero()
-			if hero:GetNumItemsInInventory() < 6 then
+			if hero:GetNumItemsInInventory() < 9 then
 				--print("inventory has space")
 				return true
 			else
