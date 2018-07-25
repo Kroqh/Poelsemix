@@ -26,3 +26,4 @@ function stacksSpawn(keys)
 	
 	caster:SetModifierStackCount("modifier_rygeagi", ability, ability.currentStacks)
 end
+--lol

@@ -17,6 +17,11 @@
 			"var_type"          "FIELD_INTEGER"
 	        "chance"             "25 30 35 40"
 		}
+		"03"
+		{
+			"var_type"          "FIELD_INTEGER"
+	        "bonus_agi"             "1"
+		}
 
 }
 
@@ -26,7 +31,16 @@
 	{
 		"IsHidden" "1"
 		"Passive" "1"
-		"OnAttack"
+		"OnCreated"
+		{
+		"RunScript"
+		{
+			"ScriptFile"	"scripts/vscripts/heroes/Hero_Ryge/ryge_agi.lua"
+			"Function"		"stacksSpawn"
+		}
+		}
+		
+		"OnAttacked"
 		{
 
 			"Random"
@@ -46,10 +60,10 @@
 						"HealAmount"	"%heal_amount"
 					}
 					"RunScript"
-		{
-			"ScriptFile"	"scripts/vscripts/heroes/hero_ryge/ryge_agi_.lua"
+					{
+			"ScriptFile"	"scripts/vscripts/heroes/Hero_Ryge/ryge_agi.lua"
 			"Function"		"AddIntellect"
-		}		
+					}		
 				"FireSound"
 				{
 						"Target"				"TARGET"
@@ -59,7 +73,18 @@
 			}
 		}
 	}
+	"modifier_rygeagi"
+	{
+	"IsHidden" "0"
+	"Passive" "0"
+				"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
+
+			}
+	}
+
+
 
 }
-
 }
