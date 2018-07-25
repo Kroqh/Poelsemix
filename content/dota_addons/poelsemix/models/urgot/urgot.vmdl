@@ -544,6 +544,19 @@
 							},
 						]
 					},
+					{
+						m_name = "attach_qhand"
+						m_influences = 
+						[
+							{
+								m_influenceName = "R_hand"
+								m_vTranslationOffset = [ 0.0, 0.0, 0.0 ]
+								m_vRotationOffset = [ 0.0, 0.0, 0.0 ]
+								m_flWeight = 1.0
+								m_bRoot = false
+							},
+						]
+					},
 				]
 			}
 		},
