@@ -1,0 +1,93 @@
+"item_tordenskjold"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3027"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"BaseClass"                     "item_datadriven"
+		// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"          "ignite;consumable"
+	"ItemAliases"         "ignite;match;torden"
+	"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+	"AbilityCastRange"        "650"
+	"AbilityCastPoint"        "0.1"	
+			
+
+		// Stats	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"150"
+		"ItemQuality"					"consumable"
+		"ItemPurchasable"				"1"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"60"
+		"ItemInitialCharges"			"1"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		"IsTempestDoubleClonable"		"0"
+		"AbilityTextureName"        "tskjold"
+		"FightRecapLevel"				"2"
+		
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_jakiro/jakiro_macropyre_firehit.vpcf"
+
+	}	
+
+		"OnSpellStart"
+	{
+		"ApplyModifier"
+            {
+                "ModifierName"  "modifier_tsignite"
+                "Target"        "TARGET"
+                "Duration"      "5"
+            }
+			"FireSound"
+		{
+			"EffectName" "tskjold"
+			"Target" 		"CASTER"
+		}
+		"SpendCharge"
+		{}
+	
+	}
+	"Modifiers"
+	{
+	"modifier_tsignite"
+            {
+                "Passive"           "0"
+                "IsHidden"          "0"
+                "IsDebuff"          "1"
+        
+                "ThinkInterval"  "1"
+                "OnIntervalThink"
+                {			
+		    	    
+                    "Damage"
+                    {
+                        "Target"    "TARGET"
+                        "Type"      "DAMAGE_TYPE_PURE"
+                        "Damage"    "100"
+                    }
+				
+						"FireEffect"
+					{
+					"EffectName" 	"particles/units/heroes/hero_jakiro/jakiro_macropyre_firehit.vpcf"
+					"EffectAttachType" "follow_origin"
+					"Target"	"TARGET"
+
+					}
+
+              }
+	}
+	}
+	}
+	
