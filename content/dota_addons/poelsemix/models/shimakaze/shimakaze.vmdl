@@ -1038,6 +1038,52 @@
 					m_folderName = ""
 					m_MotionFramesRootBone = ""
 				},
+				{
+					m_Animationname = "shimakaze_spell1"
+					m_Filepath = "models/shimakaze/shimakaze_animation.fbx"
+					m_nStartframe = 260
+					m_nEndframe = 291
+					m_flFps = 30.0
+					m_Loop = 
+					{
+						m_bLoop = true
+						m_bSmoothLoop = true
+						m_nSmoothLoopStart = 260
+						m_nSmoothLoopEnd = 291
+						m_StartLoop = 
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities = 
+					[
+						{
+							m_Name = "ACT_DOTA_CAST_ABILITY_1"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents = [  ]
+					m_MotionFrames = [  ]
+					m_pIkRules = [  ]
+					m_pAlignAnimation = null
+					m_adjustAnimation = 
+					{
+						m_translation = [ 0.0, 0.0, 0.0 ]
+						m_rotation = [ 0.0, 0.0, 0.0 ]
+					}
+					m_Keywords = [  ]
+					m_sequenceParams = 
+					{
+						m_flFadeInTime = 0.2
+						m_flFadeOutTime = 0.2
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
 			]
 			m_sScripts = [  ]
 			m_folderNames = [  ]

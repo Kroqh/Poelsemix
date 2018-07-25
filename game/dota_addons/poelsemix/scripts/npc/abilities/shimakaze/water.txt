@@ -4,8 +4,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"bomb_explode"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"MaxLevel"	"1"
@@ -16,5 +15,6 @@
 		"particle"  "particles/heroes/shimakaze/shimakaze_run_water.vpcf"
 		"particle"	"particles/heroes/shimakaze/shimakaze_run_water_ground.vpcf"
 		"particle" 	"particles/heroes/shimakaze/shimakaze_run_water_splash.vpcf"
+		"model"		"models/items/gyrocopter/skyhigh_bomb_missle/skyhigh_bomb.vmdl"
 	}
 }

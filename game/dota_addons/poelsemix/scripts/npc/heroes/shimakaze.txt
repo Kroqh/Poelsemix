@@ -4,8 +4,10 @@
 	"DisableWearables" "1"
 	"model" "models/shimakaze/shimakaze.vmdl"
 	"ModelScale" "2"
-	"Ability1" "water"				
-	"Ability2" "dangerous_sea"
+	"Ability1" "wave"				
+	"Ability2" "destroyer_speed"
 	"Ability3" "hurtigbrille"
-	"Ability6" "brian_dak"
+	"Ability4" "dangerous_sea"
+	"Ability6" "torpedo"
+	"Ability7" "water"
 }
