@@ -585,4 +585,15 @@ function COverthrowGameMode:OnHeroInGame(hero)
 		DkSword:FollowEntity(hero, true)
 
 	end
+	if npcName == "npc_dota_hero_omniknight" then
+		local OkheadLol = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/omniknight/head.vmdl"})
+		OkheadLol:FollowEntity(hero, true)
+		
+		local Okhat = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/omniknight/helmet_winged.vmdl"})
+		Okhat:FollowEntity(hero, true)
+		
+		local Okcape = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/omniknight/cape_hierophant.vmdl"})
+		Okcape:FollowEntity(hero, true)
+		hero:SetModelScale(0.6)
+	end
 end
