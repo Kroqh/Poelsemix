@@ -5,25 +5,41 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	"AbilityTextureName"			"bomb_explode"
-	
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityCooldown"				"1"
-	"AbilityManaCost"				"100"
-	"AbilityCastRange"				"0"
+	"AbilityTextureName"			"shimakaze_torpedo"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+	"AbilityCooldown"				"110 100 90"
+	"AbilityManaCost"				"250 275 300"
 	"AbilityCastPoint"				"0.6"
 
 	"AbilitySpecial"
 	{
 	    "01"
 		{
-			"var_type" "FIELD_INTEGER"
-			"velocity" "1000 1000 1000 1000"
+			"var_type" "FIELD_FLOAT"
+			"velocity" "250 250 250"
 		}
 		"02"
 		{
 			"var_type" "FIELD_FLOAT"
-			"range"	"675 725 775 825"
+			"stun_duration"	"1.5 2.0 2.5"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "650 800 950"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "400 400 400"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"search_radius" "100 100 100"
 		}
 	}
 }

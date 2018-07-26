@@ -5,11 +5,11 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	"AbilityTextureName"			"bomb_explode"
+	"AbilityTextureName"			"shimakaze_speed"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
 	
 	"AbilityCooldown"				"1"
-	"AbilityManaCost"				"100"
+	"AbilityManaCost"				"0"
 
 	//"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 

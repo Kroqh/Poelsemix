@@ -2,16 +2,17 @@
 	{										
 		// General
 		//----------------------------------------------------------------
-		"Model"						"models/heroes/beastmaster/beastmaster.vmdl"	// Model.
+		//"Model"						"models/items/gyrocopter/skyhigh_bomb_missle_alt/skyhigh_bomb_alt.vmdl"	// Model.
+		"Model"	"models/development/invisiblebox.vmdl"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"1"
-		"IsSummoned"				"1"
+		"IsSummoned"				"0"
 		"IsAncient"					"0"
-		"ModelScale" 				"0.6"
+		"ModelScale" 				"1.5"
 
 		// Abilities
 		//----------------------------------------------------------------
-		"Ability1"					""
+		"Ability1"					"torpedo_passive"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -26,7 +27,7 @@
 		"AttackRate"				"0.8"		// Speed of attack.
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackRange"				"10"		// Range within a target can be attacked.
 		
 
 		// Bounds
@@ -43,8 +44,8 @@
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"400"		// Speed.
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"0"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
@@ -55,36 +56,16 @@
 
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"5000"		// Range of vision during day light.
-		"VisionNighttimeRange"		"5000"		// Range of vision at night time.
-		"RingRadius"            "15"
+		"VisionDaytimeRange"		"500"		// Range of vision during day light.
+		"VisionNighttimeRange"		"500"		// Range of vision at night time.
+		"RingRadius"            "500"
 		// Team
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_GOODGUYS"							// Team name.
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 		
-		"Creature"
-		{
-			"CanRespawn"				"0"
-		
-			//Basic AI State
-			//-----------------------------------------------------------------
-			"DefaultState"				"Invade"
-		
-			"States"
-			{
-				"Invade"
-				{
-					"Name"				"Invade"
-					"Aggression"		"20.0"
-					"Avoidance"			"0.0"
-					"Support"			"0.0"
-				}
-			}
-		
-		}
 		
 	}	
 	

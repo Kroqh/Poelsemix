@@ -1,10 +1,15 @@
 LinkLuaModifier("modifier_wave_cast", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
 wave = class({})
 --thanks dota imba for the tutorial luv u mwah hehe xd
+function wave:GetAbilityTextureName()
+	return "shimakaze_wave"
+end
+
 function wave:OnSpellStart()
 	local caster = self:GetCaster()
 
 	caster:AddNewModifier(caster, self, "modifier_wave_cast", {})
+	self:EmitSound("shimakaze_wave")
 end
 
 function wave:OnAbilityPhaseStart() 
@@ -89,6 +94,10 @@ LinkLuaModifier("modifier_destroyer_speed_passive", "heroes/hero_shimakaze/hero_
 LinkLuaModifier("modifier_destroyer_speed_active", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
 destroyer_speed = class({})
 
+function destroyer_speed:GetAbilityTextureName()
+	return "shimakaze_speed"
+end
+
 function destroyer_speed:GetIntrinsicModifierName() 
 	return "modifier_destroyer_speed_passive"
 end
@@ -100,7 +109,8 @@ function destroyer_speed:OnSpellStart()
 		local duration = self:GetSpecialValueFor("duration")
 
 		caster:FindModifierByName("modifier_destroyer_speed_passive"):SetStackCount(0)
-		caster:AddNewModifier(caster, self, "modifier_destroyer_speed_active", {duration = duration}) 
+		caster:AddNewModifier(caster, self, "modifier_destroyer_speed_active", {duration = duration})
+		self:EmitSound("shimakaze_ossoi")
 	end
 end
 
@@ -160,7 +170,7 @@ function modifier_destroyer_speed_passive:OnIntervalThink()
 		if caster_pos ~= self.startPos and stacks < self.max_stacks then
 			local distance = FindDistance(caster_pos, self.startPos)
 			local stacks_to_add = math.floor(distance/10)
-			print(stacks_to_add)
+			--print(stacks_to_add)
 
 			if self:GetStackCount() + stacks_to_add > self.max_stacks then
 				self:SetStackCount(self.max_stacks)
@@ -173,55 +183,203 @@ function modifier_destroyer_speed_passive:OnIntervalThink()
 	end
 end
 
+LinkLuaModifier("modifier_ap_shell", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
+ap_shell = class({})
+
+function ap_shell:GetAbilityTextureName()
+	return "ap_shell"
+end
+
+function ap_shell:OnSpellStart()
+	if IsServer() then
+		local caster = self:GetCaster()
+		local target = self:GetCursorTarget()
+		local particle = "particles/units/heroes/hero_sniper/sniper_assassinate.vpcf"
+		local speed = self:GetSpecialValueFor("speed")
+
+		local shell = 
+			{
+				Target = target,
+				Source = caster,
+				Ability = self,
+				EffectName = particle,
+				iMoveSpeed = speed,
+				bDodgeable = true,
+				bVisibleToEnemies = true,
+				bReplaceExisting = false,
+				bProvidesVision = false,
+				ExtraData = {}
+			}
+		ProjectileManager:CreateTrackingProjectile(shell)
+		self:EmitSound("shimakaze_ap_shell")
+		self:EmitSound("Ability.Assassinate")
+	end
+end
+
+function ap_shell:OnProjectileHit(target)
+	if not target then
+		return nil
+	end
+
+	local duration = self:GetSpecialValueFor("duration") 
+
+	target:AddNewModifier(self:GetCaster(), self, "modifier_ap_shell", {duration = duration}) 
+end
+
+modifier_ap_shell = class({})
+
+function modifier_ap_shell:OnCreated()
+	local ability = self:GetAbility()
+
+	self.magic_resist = ability:GetSpecialValueFor("magic_resist")
+end
+
+function modifier_ap_shell:DeclareFunctions()
+	local decFuncs = {MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS}
+	return decFuncs
+end
+
+function modifier_ap_shell:GetModifierMagicalResistanceBonus()
+	return self.magic_resist
+end
+
+function modifier_ap_shell:GetStatusEffectName()
+	return "particles/status_fx/status_effect_gods_strength.vpcf"
+end
+
+function modifier_ap_shell:StatusEffectPriority()
+	return 10
+end
+
+LinkLuaModifier("modifier_torpedo_taunt", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_torpedo_stun", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
 torpedo = class({})
+
+function torpedo:GetAbilityTextureName()
+	return "shimakaze_torpedo"
+end
 
 function torpedo:OnSpellStart() 
 	if IsServer() then
 		local caster = self:GetCaster()
 		local caster_pos = caster:GetAbsOrigin()
 		local radius = FIND_UNITS_EVERYWHERE
-		local speed = 500
-		local damage = 0
-		local vision_radius = 500
-		local vision_duration = 5
+		AddFOWViewer(caster:GetTeamNumber(), Vector(0,0,0), 9999, 1, false)
+		self.heroes = FindUnitsInRadius(caster:GetTeamNumber(), caster_pos, nil, radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
 
-		local heroes = FindUnitsInRadius(caster:GetTeamNumber(), Vector(0,0,0), nil, radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NO_INVIS + DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE, FIND_ANY_ORDER, false)
-
-		if #heroes == 0 then
+		if #self.heroes == 0 then
 			return nil
 		end
 
-		for _, target in pairs(heroes) do
+		for _, target in pairs(self.heroes) do
+			AddFOWViewer(target:GetTeamNumber(), caster_pos, 450, 2, false)
+			local enemy_target = target:entindex()
 			local unit = CreateUnitByName("npc_torpedo", caster_pos, true, caster, caster, caster:GetTeamNumber()) 
-			unit:SetForceAttackTarget(target)
-			print(unit:GetForceAttackTarget())
+			unit:AddNewModifier(caster, self, "modifier_torpedo_taunt", {enemy_to_attack = enemy_target}) 
+			unit:SetOwner(caster)
 		end
 
-		--[[ shit
-		for _, enemy in pairs(heroes) do
-			local torpedo = 
-			{
-				Target = enemy,
-				Source = caster,
-				Ability = self,
-				EffectName = "particles/units/heroes/hero_tinker/tinker_missile.vpcf",
-				bProvidesVision = true,
-				iMoveSpeed = speed,
-				iUnitTargetTeam = DOTA_UNIT_TARGET_TEAM_ENEMY,
-				iUnitTargetType = DOTA_UNIT_TARGET_HERO,
-				bDeleteOnHit = true,
-				fStartRadius = 200,
-				fEndRadius = 200,
-
-				ExtraData = {damage = damage, vision_radius = vision_radius, vision_duration = vision_duration, 
-				speed = speed, 
-				cast_origin_x = caster_pos.x, 
-				cast_origin_y = caster_pos.y}
-			}
-			ProjectileManager:CreateTrackingProjectile(torpedo)
-		end
-		--]]
+		self:EmitSound("shimakaze_shelling")
 	end
+end
+
+modifier_torpedo_taunt = modifier_torpedo_taunt or class({})
+
+function modifier_torpedo_taunt:IsHidden() return true end
+
+function modifier_torpedo_taunt:CheckState()
+	local state = {[MODIFIER_STATE_COMMAND_RESTRICTED] = true}
+	return state
+end
+
+function modifier_torpedo_taunt:OnCreated(keys)
+	if IsServer() then
+		self.target = EntIndexToHScript(keys.enemy_to_attack)
+		self.damage = self:GetAbility():GetSpecialValueFor("damage")
+		self.explosion_particle = "particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_call_down_explosion_impact_a.vpcf"
+
+		local particle = "particles/heroes/shimakaze/shimakaze_torpedo.vpcf"
+		self.pfx = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN_FOLLOW, self:GetParent())
+		ParticleManager:SetParticleControlEnt(self.pfx, 3, self:GetParent(), PATTACH_POINT_FOLLOW, "attach_origin", self:GetParent():GetAbsOrigin(), true)
+
+		self.time_passed = 0
+		self:StartIntervalThink(0.02)
+	end
+end
+
+function modifier_torpedo_taunt:OnIntervalThink()
+	if IsServer() then
+		local caster = self:GetCaster()
+		local unit = self:GetParent()
+		local unit_pos = unit:GetAbsOrigin()
+		local target = self.target
+		local target_pos = target:GetAbsOrigin()
+		local ability = self:GetAbility()
+		local interval = 0.02
+		local has_damaged = false
+
+		-- if target is dead, destroy dummy
+		if not target:IsAlive() then
+			self:StartIntervalThink(-1)
+			ability:EmitSound("torpedo_hit")
+			unit:AddNoDraw()
+			unit:ForceKill(false)
+		end
+
+		--Special values
+		local velocity = ability:GetSpecialValueFor("velocity")*interval
+		local radius = ability:GetSpecialValueFor("search_radius")
+		local explosion_radius = ability:GetSpecialValueFor("radius")
+		local stun_duration = ability:GetSpecialValueFor("stun_duration")
+
+		local enemies = FindUnitsInRadius(unit:GetTeamNumber(), unit_pos, nil, radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+
+		if #enemies == 0 then
+			enemies = nil
+		end
+
+		--Check if there were any enemies in table enemies and torpedo hasn't damaged
+		if enemies ~= nil and has_damaged == false then
+			self:StartIntervalThink(-1)
+			has_damaged = true
+			local explosion = FindUnitsInRadius(unit:GetTeamNumber(), unit_pos, nil, explosion_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+			local explosion_pfx = ParticleManager:CreateParticle(self.explosion_particle, PATTACH_WORLDORIGIN, unit)
+			ParticleManager:SetParticleControl(explosion_pfx, 3, unit_pos)
+			ability:EmitSound("torpedo_hit")
+			for _, enemy in pairs(explosion) do
+				ApplyDamage({victim = enemy, attacker = caster, damage_type = DAMAGE_TYPE_PURE, damage = self.damage, ability = ability})
+				enemy:AddNewModifier(caster, ability, "modifier_torpedo_stun", {duration = stun_duration})
+			end
+			unit:AddNoDraw()
+			unit:ForceKill(false)
+		else
+			local direction = (target_pos - unit_pos):Normalized()
+			self.time_passed = self.time_passed + interval
+
+			velocity = velocity * (self.time_passed/10)
+
+			unit:SetForwardVector(direction)
+			unit:SetAbsOrigin(unit_pos + direction * velocity)
+		end
+	end
+end
+
+modifier_torpedo_stun = class({})
+
+function modifier_torpedo_stun:IsPurgeable() return false end
+function modifier_torpedo_stun:IsHidden() return true end
+
+function modifier_torpedo_stun:GetEffectName()
+	return "particles/generic_gameplay/generic_stunned.vpcf"
+end
+
+function modifier_torpedo_stun:GetEffectAttachType()
+	return PATTACH_OVERHEAD_FOLLOW
+end
+
+function modifier_torpedo_stun:CheckState()
+	local state = {[MODIFIER_STATE_STUNNED] = true}
+	return state
 end
 
 LinkLuaModifier("modifier_dangerous_sea", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
@@ -231,6 +389,10 @@ LinkLuaModifier("modifier_dangerous_sea_pool_slow", "heroes/hero_shimakaze/hero_
 dangerous_sea = class({})
 function dangerous_sea:GetIntrinsicModifierName()
 	return "modifier_dangerous_sea"
+end
+
+function dangerous_sea:GetAbilityTextureName()
+	return "shimakaze_sea"
 end
 
 modifier_dangerous_sea = class({})
@@ -249,9 +411,10 @@ function modifier_dangerous_sea:OnIntervalThink()
 		local caster = self:GetCaster()
 		local distanceDifference = FindDistance(self.pos, caster:GetAbsOrigin())
 		local duration = self:GetAbility():GetSpecialValueFor("duration")
+		local distance_req = self:GetAbility():GetSpecialValueFor("distance_req")
 		--print("caster has moved", distanceDifference)
 
-		if distanceDifference >= 300 then
+		if distanceDifference >= distance_req then
 			local thinker = CreateModifierThinker(caster, self:GetAbility(), "modifier_dangerous_sea_pool", {duration = duration}, caster:GetAbsOrigin(), caster:GetTeamNumber(), false)
 			self.pos = caster:GetAbsOrigin()
 		end

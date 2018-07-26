@@ -6,7 +6,7 @@
 	"ModelScale" "2"
 	"Ability1" "wave"				
 	"Ability2" "destroyer_speed"
-	"Ability3" "hurtigbrille"
+	"Ability3" "ap_shell"
 	"Ability4" "dangerous_sea"
 	"Ability6" "torpedo"
 	"Ability7" "water"

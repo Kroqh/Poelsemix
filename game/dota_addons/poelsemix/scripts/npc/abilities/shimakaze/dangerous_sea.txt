@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityTextureName"			"bomb_explode"
+	"AbilityTextureName"			"shimakaze_sea"
 	"MaxLevel"	"1"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
@@ -15,7 +15,7 @@
 	    "01"
 	    {
 	        "var_type"          "FIELD_INTEGER"
-	        "damage"             "120 120 120 120"
+	        "damage"             "35 42 49 58"
 	    }
 	    "02"
 	    {
@@ -45,12 +45,17 @@
 	    "07"
 	    {
 	    	"var_type" "FIELD_FLOAT"
-	    	"int_scaling"	"0.4"
+	    	"int_scaling"	"0.6"
 	    }
 	    "08"
 	    {
 	    	"var_type" "FIELD_FLOAT"
-	    	"int_scaling_aghs" "0.6"
+	    	"int_scaling_aghs" "0.8"
+	    }
+	    "09"
+	    {
+	    	"var_type" "FIELD_INTEGER"
+	    	"distance_req" "500"
 	    }
 	}
 }
