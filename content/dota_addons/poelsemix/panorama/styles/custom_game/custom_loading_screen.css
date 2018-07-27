@@ -70,14 +70,14 @@
 .SeqBg
 {
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	background-position: center;
 	background-size: 100% 100%;
 }
 
 #seq
 {
     overflow: clip;
-	pre-transform-scale2d: 1.35, 1.35;
+	pre-transform-scale2d: 1.0, 1.0;
 }
 
 @keyframes 'x' {}
