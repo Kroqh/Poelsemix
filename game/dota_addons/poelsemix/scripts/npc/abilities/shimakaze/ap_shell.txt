@@ -9,10 +9,12 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 
 	"AbilityTextureName"			"ap_shell"
-	"AbilityCooldown"				"19 18 17 16"
+	"AbilityCooldown"				"17 15 13 11"
 	"AbilityManaCost"				"105 115 125 135"
 	"AbilityCastRange"				"750"
 	"AbilityCastPoint"				"0.6"
+
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
 
 	"AbilitySpecial"
 	{

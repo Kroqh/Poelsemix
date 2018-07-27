@@ -41,6 +41,12 @@ function modifier_wave_cast:OnCreated()
 		local ability = self:GetAbility()
 
 		local max_distance = ability:GetSpecialValueFor("range") + GetCastRangeIncrease(caster)
+		if caster:HasTalent("special_bonus_shimakaze_1") then
+			local bonus_range = caster:FindAbilityByName("special_bonus_shimakaze_1"):GetSpecialValueFor("range")
+			max_distance = max_distance + bonus_range
+		end
+		
+		print(max_distance)
 		local distance = (caster:GetAbsOrigin() - caster:GetCursorPosition() ):Length2D()
 		if distance > max_distance then distance = max_distance end
 
@@ -92,6 +98,7 @@ end
 
 LinkLuaModifier("modifier_destroyer_speed_passive", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_destroyer_speed_active", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_destroyer_speed_cap", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
 destroyer_speed = class({})
 
 function destroyer_speed:GetAbilityTextureName()
@@ -110,6 +117,10 @@ function destroyer_speed:OnSpellStart()
 
 		caster:FindModifierByName("modifier_destroyer_speed_passive"):SetStackCount(0)
 		caster:AddNewModifier(caster, self, "modifier_destroyer_speed_active", {duration = duration})
+		if caster:HasTalent("special_bonus_shimakaze_2") then
+			local speed = caster:FindAbilityByName("special_bonus_shimakaze_2"):GetSpecialValueFor("speed")
+			caster:AddNewModifier(caster, self, "modifier_destroyer_speed_cap", {duration = duration, speed = speed})
+		end
 		self:EmitSound("shimakaze_ossoi")
 	end
 end
@@ -181,6 +192,37 @@ function modifier_destroyer_speed_passive:OnIntervalThink()
 
 		self.startPos = caster_pos
 	end
+end
+
+modifier_destroyer_speed_cap = class({})
+
+function modifier_destroyer_speed_cap:IsPurgeable() return false end
+
+function modifier_destroyer_speed_cap:OnCreated(keys)
+	self.speed = keys.speed
+	print(self.speed)
+end
+
+function modifier_destroyer_speed_cap:DeclareFunctions()
+	local funcs = 
+	{
+		MODIFIER_PROPERTY_MOVESPEED_MAX,
+		MODIFIER_PROPERTY_MOVESPEED_LIMIT
+	}
+
+	return funcs
+end
+
+function modifier_destroyer_speed_cap:GetModifierMoveSpeed_Max()
+	return self.speed
+end
+
+function modifier_destroyer_speed_cap:GetModifierMoveSpeed_Limit()
+	return self.speed
+end
+
+function modifier_destroyer_speed_cap:IsHidden()
+	return true
 end
 
 LinkLuaModifier("modifier_ap_shell", "heroes/hero_shimakaze/hero_shimakaze", LUA_MODIFIER_MOTION_NONE)
@@ -277,6 +319,18 @@ function torpedo:OnSpellStart()
 			local unit = CreateUnitByName("npc_torpedo", caster_pos, true, caster, caster, caster:GetTeamNumber()) 
 			unit:AddNewModifier(caster, self, "modifier_torpedo_taunt", {enemy_to_attack = enemy_target}) 
 			unit:SetOwner(caster)
+
+			if caster:HasTalent("special_bonus_shimakaze_3") then
+				--print("double torpedo")
+				Timers:CreateTimer({
+  		 			endTime = 1.5,
+   					callback = function()
+    				local unit2 = CreateUnitByName("npc_torpedo", caster_pos, true, caster, caster, caster:GetTeamNumber()) 
+					unit2:AddNewModifier(caster, self, "modifier_torpedo_taunt", {enemy_to_attack = enemy_target}) 
+					unit2:SetOwner(caster)
+ 		  	 	end
+ 				})
+			end
 		end
 
 		self:EmitSound("shimakaze_shelling")
@@ -318,27 +372,36 @@ function modifier_torpedo_taunt:OnIntervalThink()
 		local interval = 0.02
 		local has_damaged = false
 
-		-- if target is dead, destroy dummy
-		if not target:IsAlive() then
-			self:StartIntervalThink(-1)
-			ability:EmitSound("torpedo_hit")
-			unit:AddNoDraw()
-			unit:ForceKill(false)
-		end
-
 		--Special values
 		local velocity = ability:GetSpecialValueFor("velocity")*interval
 		local radius = ability:GetSpecialValueFor("search_radius")
 		local explosion_radius = ability:GetSpecialValueFor("radius")
 		local stun_duration = ability:GetSpecialValueFor("stun_duration")
 
+		if caster:HasTalent("special_bonus_shimakaze_4") then
+			stun_duration = stun_duration * 2
+			--print(stun_duration)
+		end
+
 		local enemies = FindUnitsInRadius(unit:GetTeamNumber(), unit_pos, nil, radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
 
 		if #enemies == 0 then
 			enemies = nil
 		end
+		
+		-- torpedo kills itself
+		if not target:IsAlive() then
+			self:StartIntervalThink(-1)
+			local explosion = FindUnitsInRadius(unit:GetTeamNumber(), unit_pos, nil, explosion_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+			local explosion_pfx = ParticleManager:CreateParticle(self.explosion_particle, PATTACH_WORLDORIGIN, unit)
+			ParticleManager:SetParticleControl(explosion_pfx, 3, unit_pos)
 
-		--Check if there were any enemies in table enemies and torpedo hasn't damaged
+			ability:EmitSound("torpedo_hit")
+			unit:AddNoDraw()
+			unit:ForceKill(false)
+		end
+
+		--Check if table enemies is not empty and torpedo hasn't damaged
 		if enemies ~= nil and has_damaged == false then
 			self:StartIntervalThink(-1)
 			has_damaged = true

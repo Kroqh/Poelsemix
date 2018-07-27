@@ -6,8 +6,17 @@ function FindDistance(unit1, unit2)
 	return distanceDifference
 end
 
+function CDOTA_BaseNPC:HasTalent(talent)
+    if self:FindAbilityByName(talent):GetLevel() > 0 then
+        return true
+    end
+
+    return false
+end
+
+
 -- Thanks dota imba
--- Returns an unit's existing increased cast range modifiers
+-- Returns a unit's existing increased cast range modifiers
 function GetCastRangeIncrease( unit )
     local cast_range_increase = 0
     -- Only the greatefd st increase counts for items, they do not stack

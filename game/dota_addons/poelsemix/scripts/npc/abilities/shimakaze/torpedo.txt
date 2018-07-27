@@ -11,8 +11,10 @@
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityCooldown"				"110 100 90"
-	"AbilityManaCost"				"250 275 300"
+	"AbilityManaCost"				"600 900 1200"
 	"AbilityCastPoint"				"0.6"
+
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
 
 	"AbilitySpecial"
 	{
@@ -34,7 +36,7 @@
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"radius" "400 400 400"
+			"radius" "250 250 250"
 		}
 		"05"
 		{
