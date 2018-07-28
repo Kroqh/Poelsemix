@@ -31,16 +31,9 @@
 	{
 		"IsHidden" "1"
 		"Passive" "1"
-		"OnCreated"
-		{
-		"RunScript"
-		{
-			"ScriptFile"	"scripts/vscripts/heroes/Hero_Ryge/ryge_agi.lua"
-			"Function"		"stacksSpawn"
-		}
-		}
 		
-		"OnAttacked"
+		
+		"OnAttack"
 		{
 
 			"Random"
@@ -50,9 +43,9 @@
 				
 				"OnSuccess"
 				{
-				"Heal"
+					"Heal"
 					{
-					"Target"
+						"Target"
 					{
 						"Center"	"CASTER"
 						"Teams"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
@@ -61,14 +54,14 @@
 					}
 					"RunScript"
 					{
-			"ScriptFile"	"scripts/vscripts/heroes/Hero_Ryge/ryge_agi.lua"
-			"Function"		"AddIntellect"
+						"ScriptFile"	"heroes/Hero_Ryge/ryge_agi.lua"
+						"Function"		"AddIntellect"
 					}		
-				"FireSound"
-				{
+					"FireSound"
+					{
 						"Target"				"TARGET"
 						"EffectName"			"SorenPassiveTrigger"
-				}
+					}
 				}
 			}
 		}
@@ -76,12 +69,17 @@
 	"modifier_rygeagi"
 	{
 	"IsHidden" "0"
-	"Passive" "0"
-				"Properties"
+	"Passive" "1"
+		
+	"OnCreated"
+		{
+		"RunScript"
 			{
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%bonus_agi"
-
+			"ScriptFile"	"heroes/Hero_Ryge/ryge_agi.lua"
+			"Function"		"stacksSpawn"
 			}
+		}
+		
 	}
 
 
