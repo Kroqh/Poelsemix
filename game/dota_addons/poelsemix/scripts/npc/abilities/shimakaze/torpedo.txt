@@ -10,7 +10,7 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
-	"AbilityCooldown"				"110 100 90"
+	"AbilityCooldown"				"90 80 70"
 	"AbilityManaCost"				"600 900 1200"
 	"AbilityCastPoint"				"0.6"
 

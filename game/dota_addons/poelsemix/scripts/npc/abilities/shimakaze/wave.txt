@@ -8,7 +8,7 @@
 	"AbilityTextureName"			"shimakaze_wave"
 	
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityCooldown"				"14 13 12 11"
+	"AbilityCooldown"				"10 9 8 7"
 	"AbilityManaCost"				"90"
 	"AbilityCastRange"				"0"
 	"AbilityCastPoint"				"0.25"

@@ -15,7 +15,7 @@
 	    "01"
 	    {
 	        "var_type"          "FIELD_INTEGER"
-	        "damage"             "35 42 49 58"
+	        "damage"             "60"
 	    }
 	    "02"
 	    {
@@ -35,7 +35,7 @@
 	    "05"
 	    {
 	    	"var_type"	"FIELD_INTEGER"
-	    	"move_slow" "-60 -60 -60 -60"
+	    	"move_slow" "-65 -65 -65 -65"
 	    }
 	    "06"
 	    {
@@ -45,17 +45,17 @@
 	    "07"
 	    {
 	    	"var_type" "FIELD_FLOAT"
-	    	"int_scaling"	"0.6"
+	    	"int_scaling"	"0.8"
 	    }
 	    "08"
 	    {
 	    	"var_type" "FIELD_FLOAT"
-	    	"int_scaling_aghs" "0.8"
+	    	"int_scaling_aghs" "1.1"
 	    }
 	    "09"
 	    {
 	    	"var_type" "FIELD_INTEGER"
-	    	"distance_req" "500"
+	    	"distance_req" "350"
 	    }
 	}
 }
