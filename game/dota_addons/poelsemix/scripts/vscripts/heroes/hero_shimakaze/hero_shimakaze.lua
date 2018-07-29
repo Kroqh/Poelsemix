@@ -42,7 +42,7 @@ function modifier_wave_cast:OnCreated()
 
 		local max_distance = ability:GetSpecialValueFor("range") + GetCastRangeIncrease(caster)
 		if caster:HasTalent("special_bonus_shimakaze_1") then
-			local bonus_range = caster:FindAbilityByName("special_bonus_shimakaze_1"):GetSpecialValueFor("range")
+			local bonus_range = caster:FindAbilityByName("special_bonus_shimakaze_1"):GetSpecialValueFor("value")
 			max_distance = max_distance + bonus_range
 		end
 		

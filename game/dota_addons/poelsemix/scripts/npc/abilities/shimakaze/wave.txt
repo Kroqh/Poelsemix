@@ -24,6 +24,7 @@
 		{
 			"var_type" "FIELD_FLOAT"
 			"range"	"675 725 775 825"
+			"LinkedSpecialBonus" "special_bonus_shimakaze_1"
 		}
 	}
 }
