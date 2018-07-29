@@ -116,11 +116,14 @@ function destroyer_speed:OnSpellStart()
 		local duration = self:GetSpecialValueFor("duration")
 
 		caster:FindModifierByName("modifier_destroyer_speed_passive"):SetStackCount(0)
-		caster:AddNewModifier(caster, self, "modifier_destroyer_speed_active", {duration = duration})
 		if caster:HasTalent("special_bonus_shimakaze_2") then
 			local speed = caster:FindAbilityByName("special_bonus_shimakaze_2"):GetSpecialValueFor("speed")
-			caster:AddNewModifier(caster, self, "modifier_destroyer_speed_cap", {duration = duration, speed = speed})
+			CustomNetTables:SetTableValue("player_table", "modifier_destroyer_speed_cap", {speed = speed})
+			
+			caster:AddNewModifier(caster, self, "modifier_destroyer_speed_cap", {duration = duration})
 		end
+		caster:AddNewModifier(caster, self, "modifier_destroyer_speed_active", {duration = duration})
+		
 		self:EmitSound("shimakaze_ossoi")
 	end
 end
@@ -199,7 +202,7 @@ modifier_destroyer_speed_cap = class({})
 function modifier_destroyer_speed_cap:IsPurgeable() return false end
 
 function modifier_destroyer_speed_cap:OnCreated(keys)
-	self.speed = keys.speed
+	self.speed = CustomNetTables:GetTableValue("player_table", "modifier_destroyer_speed_cap").speed
 	print(self.speed)
 end
 
