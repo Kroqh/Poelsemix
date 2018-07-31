@@ -5,7 +5,7 @@
 	"AbilityLayout" "4"
 	
 	"Ability1" "gunpowder_datadriven"
-	"Ability2" "plant_bomb_datadriven"
+	"Ability2" "bomb_b"
 	"Ability3" "choke_datadriven"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"

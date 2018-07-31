@@ -1,0 +1,64 @@
+"bomb_b"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile" "heroes/hero_baseboys/hero_baseboys"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "bombe_b"
+	
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
+		"particle"		"particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"30 26 22 18"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"120"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"			
+			"tick_interval" "0.5"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"			
+			"duration" "5"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "60 90 120 150"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"stun_duration" "4"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "300"
+		}
+		"06"
+		{
+			"var_type" "FIELD_FLOAT"
+			"mini_stun_duration" "0.1 0.15 0.2 0.25"
+		}
+	}
+}
