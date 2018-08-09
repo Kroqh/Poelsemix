@@ -259,6 +259,13 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		ability:SetLevel(1)
 	end
 
+	if hero:GetUnitName() == "npc_dota_hero_crystal_maiden" then
+		local ability = hero:FindAbilityByName("water")
+		local ability2 = hero:FindAbilityByName("dangerous_sea")
+		ability:SetLevel(1)
+		ability2:SetLevel(1)
+	end
+
 end
 
 

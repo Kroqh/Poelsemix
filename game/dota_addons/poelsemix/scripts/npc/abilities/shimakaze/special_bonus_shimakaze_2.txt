@@ -1,0 +1,27 @@
+//=================================================================================================================
+// Shimakaze Talent 2 (Level 25): Increase movement speed cap
+//=================================================================================================================
+"special_bonus_shimakaze_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"destroyer_speed"
+	}	
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"speed" "800"
+		}
+	}	
+}

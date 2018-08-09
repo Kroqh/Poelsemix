@@ -1,0 +1,37 @@
+"ap_shell"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+	"AbilityTextureName"			"ap_shell"
+	"AbilityCooldown"				"17 15 13 11"
+	"AbilityManaCost"				"105 115 125 135"
+	"AbilityCastRange"				"750"
+	"AbilityCastPoint"				"0.6"
+
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "7 8 9 10"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"speed" "600 600 600 600"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"magic_resist" "-35 -40 -45 -50"
+		}
+	}
+}

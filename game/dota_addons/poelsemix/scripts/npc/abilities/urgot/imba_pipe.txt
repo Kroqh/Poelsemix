@@ -1,0 +1,50 @@
+	//=================================================================================================================
+	// Ember Spirit: Flame Guard
+	//=================================================================================================================
+	"imba_pipe"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"					"ability_lua"
+		"ScriptFile"				"heroes/hero_urgot/hero_urgot"
+		"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"		"ember_spirit_flame_guard"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"			"0.0"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"			"18.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"			"50"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		//"precache"
+		//{
+		//	"particle"				"particles/units/heroes/hero_ember_spirit/ember_spirit_flameguard.vpcf"
+		//	"soundfile"				"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts"
+		//}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shield_health"					"200 400 600 800"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"5"
+			}
+		}
+	}

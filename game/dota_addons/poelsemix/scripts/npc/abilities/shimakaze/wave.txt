@@ -1,0 +1,30 @@
+"wave"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityTextureName"			"shimakaze_wave"
+	
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityCooldown"				"10 9 8 7"
+	"AbilityManaCost"				"90"
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"0.25"
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"velocity" "1000 1000 1000 1000"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"range"	"675 725 775 825"
+			"LinkedSpecialBonus" "special_bonus_shimakaze_1"
+		}
+	}
+}

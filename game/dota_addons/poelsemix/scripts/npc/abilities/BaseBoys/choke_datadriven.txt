@@ -3,11 +3,11 @@
 	//General
 	//--------------------------
 	"BaseClass" "ability_datadriven"
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_baseboys/hero_baseboys"
 	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "hej_mathilde"
-	
-
 	
 	//Casting
 	//--------------------------
@@ -24,50 +24,7 @@
 		"02"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration" "0.5 0.75 1 2"
-		}
-	}
-	
-	"Modifiers"
-	{
-		"modifier_choke_stun"
-		{
-			"IsDebuff" "1"
-			"Duration" "%duration"
-			
-			"States"
-			{
-				"MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
-		
-		"modifier_choke"
-		{
-			"IsHidden" "1"
-			"Passive" "1"
-			"OnAttacked"
-			{
-				"Random"
-				{
-					"Chance" "%chance"
-					"PseudoRandom" "DOTA_PSEUDO_RANDOM_SLARDAR_BASH"
-					
-					"OnSuccess"
-					{
-						"FireSound"
-						{
-							"EffectName" "hej_mathilde"
-							"Target" "ATTACKER"
-						}
-						
-						"ApplyModifier" 
-						{
-							"ModifierName" "modifier_choke_stun"
-							"Target" "ATTACKER"
-						}
-					}
-				}
-			}
+			"duration" "0.25 0.5 0.75 1"
 		}
 	}
 }

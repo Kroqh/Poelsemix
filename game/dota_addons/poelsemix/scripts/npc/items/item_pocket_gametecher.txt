@@ -45,6 +45,11 @@
 			"var_type" "FIELD_INTEGER"
 			"cdr" "35"
 		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"health" "575"
+		}
 	}
 	
 	"Modifiers"
@@ -63,6 +68,7 @@
 
 				"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%dmg"
 				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%cdr"
+				"MODIFIER_PROPERTY_HEALTH_BONUS" "%health"
 			}
 		}
 	}

@@ -1,0 +1,47 @@
+"torpedo"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"			"shimakaze_torpedo"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+	"AbilityCooldown"				"90 80 70"
+	"AbilityManaCost"				"600 900 1200"
+	"AbilityCastPoint"				"0.6"
+
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"velocity" "250 250 250"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"stun_duration"	"1.5 2.0 2.5"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "650 800 950"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "250 250 250"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"search_radius" "100 100 100"
+		}
+	}
+}

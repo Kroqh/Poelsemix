@@ -6,8 +6,13 @@
 	"ModelScale"	"1.3"
 	"DisableWearables" "1"
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-	"AttackAcquisitionRange"	"600"
-	"AttackRange"				"600"
+	"AttackAcquisitionRange"	"400"
+	"AttackRange"			"400"
+	"ProjectileModel"		"particles/units/heroes/hero_pugna/pugna_base_attack.vpcf"
+
+	//Dota xDDDD
+	"MovementTurnRate"		"100"
+	
 	"DisableWearables"				"1"
 	"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 	"AttributeBaseStrength"		"25"
@@ -18,10 +23,10 @@
 	"AttributeAgilityGain"		"1.900000"	
 
 
-	"Ability1" "ha_gay"				
-	"Ability2" "social_presence"
-	"Ability3" "sick_dodge"
-	"Ability6" "awaken"
+	"Ability1" "imba_mirana_arrow"				
+	"Ability2" "imba_pipe"
+	"Ability3" "imba_phoenix_launch_fire_spirit"
+	"Ability6" "imba_vengefulspirit_nether_swap"
 	"AttributeBaseStrength"		"20"
 	"AttributeBaseIntelligence"	"40"
 	"AttributeIntelligenceGain"	"0.6"

@@ -1,0 +1,97 @@
+	//=================================================================================================================
+	// Phoenix: Fire Spirits
+	//=================================================================================================================
+	"imba_phoenix_launch_fire_spirit"
+	{
+		"BaseClass"					"ability_lua"
+		"ScriptFile"				"heroes/hero_urgot/hero_urgot"
+		"AbilityTextureName"		"phoenix_fire_spirits"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"		"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"			"1"
+		"AbilitySound"				"Hero_Phoenix.FireSpirits.Cast"
+
+		"FightRecapLevel"			"1"
+
+		"AbilityCastRange"			"1400"
+		"AbilityCastPoint"			"0.01"
+		
+		"AbilityCooldown"			"12"
+
+		"AbilityManaCost"			"50"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
+			"particle"					"particles/units/heroes/hero_phoenix/phoenix_fire_spirits.vpcf"
+			"particle"					"particles/hero/phoenix/phoenix_fire_spirit_launch.vpcf"
+			"particle"					"particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf"
+			"particle"					"particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hp_cost_perc"		"20"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"spirit_duration"	"20"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"spirit_speed"		"900 1000 1100 1200"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"175 205 235 265"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"4.0"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"attackspeed_slow"	"0"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_per_second"	"40 60 80 100"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"spirit_count"		"4"
+			}
+			"09"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"tick_interval"		"0.5"
+			}
+			"10"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"cast_range"		"1400"
+			}
+			"11"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"armor_reduction_pct"		"20 40 60 80"
+			}
+
+
+		}
+	}
