@@ -88,11 +88,11 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"channel_time"			"1"
-			}W
+			}
 			"09"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"dmg_reduction"							"-130 -140 -150 -160"
+				"dmg_reduction"							"130 140 150 160"
 			}
 			"10"
 			{
