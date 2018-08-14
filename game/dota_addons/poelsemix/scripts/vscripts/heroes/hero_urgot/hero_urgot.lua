@@ -13,11 +13,19 @@ function imba_mirana_arrow:IsHiddenWhenStolen()
 end
 
 function imba_mirana_arrow:GetCooldown()
-	if self:GetCaster():HasTalent("special_bonus_urgot_q_boost") then
-		return 1
-	else
-		return self:GetSpecialValueFor("cooldown")
+	local caster = self:GetCaster()
+	local qcooldown = self:GetSpecialValueFor("cooldown")
+
+	if caster:HasTalent("special_bonus_urgot_q_boost") then
+		qcooldown = 1
 	end
+	
+	if caster:HasTalent("special_bonus_urgot_q_boost2") then
+		qcooldown = qcooldown/2	
+	end
+
+	return qcooldown
+	
 end
 
 function imba_mirana_arrow:OnSpellStart()

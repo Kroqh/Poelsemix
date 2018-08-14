@@ -40,7 +40,7 @@
 	"Ability15"		"special_bonus_urgot_w_boost"
 	
 	"Ability16"		"special_bonus_urgot_r_boost"
-	"Ability17"		"special_bonus_lifesteal_20"
+	"Ability17"		"special_bonus_urgot_q_boost2"
                  
 	"MovementSpeed"               "300"
 	"StatusHealth"                "500"
