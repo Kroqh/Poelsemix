@@ -28,7 +28,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		//"precache"
 		//{
-		//	"particle"				"particles/units/heroes/hero_ember_spirit/ember_spirit_flameguard.vpcf"
+		//	"particle"				"particles/econ/items/medusa/medusa_daughters/medusa_daughters_mana_shield.vpcf"
 		//	"soundfile"				"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts"
 		//}
 

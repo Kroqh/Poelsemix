@@ -38,7 +38,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-			"soundfile"						"soundevents/game_sounds_heroes/game_sounds_vengefulspirit.vsndevts"
+			"soundfile"						"soundevents/urgot_soundevent.vsndevts"
 			"particle"						"particles/units/heroes/hero_vengeful/vengeful_nether_swap.vpcf"
 			"particle"  					"particles/units/heroes/hero_vengeful/vengeful_nether_swap_target.vpcf"
 			"particle"						"particles/hero/vengefulspirit/rancor_magic_missile.vpcf"

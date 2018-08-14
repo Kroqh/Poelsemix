@@ -23,7 +23,7 @@ function imba_mirana_arrow:OnSpellStart()
 	local spawn_distance = ability:GetSpecialValueFor("spawn_distance")
 
 	-- Play cast sound
-	EmitSoundOn(sound_cast, caster)
+	--EmitSoundOn(sound_cast, caster)
 
 	-- Set direction for main arrow
 	local direction = (target_point - caster:GetAbsOrigin()):Normalized()
@@ -82,6 +82,7 @@ function FireSacredArrow(caster, ability, spawn_point, direction, targethero)
 	end
 	if targethero == nil or targethero:HasModifier("modifier_imba_phoenix_fire_spirits_debuff") == false then
 		print(targethero)
+		EmitSoundOn("urgotQNonTargeted", caster)
 		local arrow_projectile = {  Ability = ability,
 			EffectName = particle_arrow,
 			vSpawnOrigin = spawn_point,
@@ -105,6 +106,7 @@ function FireSacredArrow(caster, ability, spawn_point, direction, targethero)
 		ProjectileManager:CreateLinearProjectile(arrow_projectile)
 	else
 		print(targethero)
+		EmitSoundOn("urgotQTargeted", caster)
 		local arrow_projectile = {  Ability = ability,
 			Target = targethero,
 			EffectName = "particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger.vpcf",
@@ -149,13 +151,13 @@ function imba_mirana_arrow:OnProjectileHit_ExtraData(target, location, extra_dat
 	-- Cast response for creeps
 	if target:IsCreep() then
 		local chosen_response = cast_response_creep[math.random(1, 5)]
-		EmitSoundOn(chosen_response, caster)
+		EmitSoundOn("urgotQHit", caster)
 	end
 
 
 
 	-- Play impact sound
-	EmitSoundOn(sound_impact, target)
+	EmitSoundOn("urgotQHit", target)
 
 	-- Add FOW viewer for the linger duration
 	AddFOWViewer(caster:GetTeamNumber(), location, vision_radius, vision_linger_duration, false)
@@ -198,7 +200,7 @@ function imba_pipe:OnSpellStart()
 	local shield_health = self:GetSpecialValueFor("shield_health")
 	local duration = self:GetSpecialValueFor("duration")
 
-	EmitSoundOn("DOTA_Item.Pipe.Activate", caster)
+	EmitSoundOn("urgotW", caster)
 
 	caster:AddNewModifier(caster, self, "modifier_shield", {duration = 15.0, remaining_health = shield_health})
 end
@@ -212,7 +214,7 @@ function modifier_shield:IsHidden() return false end
 function modifier_shield:IsPurgable() return true end
 
 function modifier_shield:GetEffectName()
-	return "particles/units/heroes/hero_ember_spirit/ember_spirit_flameguard.vpcf"
+	return "particles/econ/items/medusa/medusa_daughters/medusa_daughters_mana_shield.vpcf"
 end
 
 function modifier_shield:GetEffectAttachType()
@@ -292,7 +294,7 @@ function imba_phoenix_launch_fire_spirit:OnSpellStart()
 
 
 	caster:StartGesture(ACT_DOTA_OVERRIDE_ABILITY_2)
-	EmitSoundOn("Hero_Phoenix.FireSpirits.Launch", caster)
+	EmitSoundOn("urgotEshoot", caster)
 
 	-- Projectile
 	local direction = (point - caster:GetAbsOrigin()):Normalized()
@@ -305,7 +307,7 @@ function imba_phoenix_launch_fire_spirit:OnSpellStart()
 			Target = cast_target,
 			Source = caster,
 			Ability = ability,
-			EffectName = "particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf",
+			EffectName = "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf",
 			iMoveSpeed = self:GetSpecialValueFor("spirit_speed"),
 			vSourceLoc = direction,							-- Optional (HOW)
 			bDrawsOnMinimap = false,						-- Optional
@@ -335,12 +337,16 @@ function imba_phoenix_launch_fire_spirit:OnProjectileHit( hTarget, vLocation)
 	-- Particles and sound
 	local DummyUnit = CreateUnitByName("npc_dummy_unit",location,false,caster,caster:GetOwner(),caster:GetTeamNumber())
 	DummyUnit:AddNewModifier(caster, ability, "modifier_kill", {duration = 0.1})
-	local pfx_explosion = ParticleManager:CreateParticle("particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf", PATTACH_WORLDORIGIN, nil)
-	ParticleManager:SetParticleControl(pfx_explosion, 0, location)
-	ParticleManager:ReleaseParticleIndex(pfx_explosion)
+	self.pfx_explosion = ParticleManager:CreateParticle("particles/econ/items/viper/viper_immortal_tail_ti8/viper_immortal_ti8_nethertoxin.vpcf", PATTACH_WORLDORIGIN, nil)
+	ParticleManager:SetParticleControl(self.pfx_explosion, 0, location)
 
-	EmitSoundOn("Hero_Phoenix.ProjectileImpact", DummyUnit)
-	EmitSoundOn("Hero_Phoenix.FireSpirits.Target", DummyUnit)
+	Timers:CreateTimer(1, function()
+		ParticleManager:DestroyParticle(self.pfx_explosion, false)
+		ParticleManager:ReleaseParticleIndex(self.pfx_explosion)
+	end)
+
+
+	EmitSoundOn("urgotEHit", DummyUnit)
 
 	-- Vision
 	AddFOWViewer(caster:GetTeamNumber(), DummyUnit:GetAbsOrigin(), 175, 1, true)
@@ -390,7 +396,7 @@ function modifier_imba_phoenix_fire_spirits_debuff:GetTexture()
 	return "phoenix_fire_spirits"
 end
 
-function modifier_imba_phoenix_fire_spirits_debuff:GetEffectName() return "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn.vpcf" end
+function modifier_imba_phoenix_fire_spirits_debuff:GetEffectName() return "particles/units/heroes/hero_broodmother/broodmother_poison_debuff_c.vpcf" end
 function modifier_imba_phoenix_fire_spirits_debuff:GetEffectAttachType() return PATTACH_ABSORIGIN_FOLLOW end
 function modifier_imba_phoenix_fire_spirits_debuff:GetModifierAttackSpeedBonus_Constant()
 	if self:GetCaster():GetTeamNumber() == self:GetParent():GetTeamNumber() then
@@ -495,7 +501,16 @@ function imba_vengefulspirit_nether_swap:OnSpellStart()
 			DOTA_UNIT_TARGET_FLAG_NONE,
 			FIND_ANY_ORDER,
 			false)
+			
+			for _,unit in pairs(self.allEnemies) do
+				EmitSoundOn("urgotRStart", unit)
+			end
+
 		end
+
+		EmitSoundOn("urgotRStart", caster)
+		EmitSoundOn("urgotRStart", target)
+
 
 		caster:AddNewModifier(caster, self, "modifier_swap_dmg_reduction", {duration = self:GetSpecialValueFor("dmg_red_duration")} )	
 	end
@@ -536,8 +551,8 @@ function imba_vengefulspirit_nether_swap:OnChannelFinish(bInterrupted)
 		end		
 
 		-- Play sounds
-		caster:EmitSound("Hero_VengefulSpirit.NetherSwap")
-		target:EmitSound("Hero_VengefulSpirit.NetherSwap")
+		caster:EmitSound("urgotREnd")
+		target:EmitSound("urgotREnd")
 
 		-- Disjoint projectiles
 		ProjectileManager:ProjectileDodge(caster)
@@ -599,6 +614,7 @@ function imba_vengefulspirit_nether_swap:OnChannelFinish(bInterrupted)
 
 					Timers:CreateTimer(FrameTime(), function()
 						FindClearSpaceForUnit(unit, targetPos, true)
+						EmitSoundOn("urgotREnd", unit)
 					end)
 
 					counter = counter+1

@@ -29,9 +29,12 @@
 		{
 			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
 			"particle"					"particles/units/heroes/hero_phoenix/phoenix_fire_spirits.vpcf"
-			"particle"					"particles/hero/phoenix/phoenix_fire_spirit_launch.vpcf"
-			"particle"					"particles/units/heroes/hero_phoenix/phoenix_fire_spirit_ground.vpcf"
+			"particle"					"particles/econ/items/viper/viper_immortal_tail_ti8/viper_immortal_ti8_nethertoxin.vpcf"
+			"particle"					"particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+			"particle"					"particles/units/heroes/hero_broodmother/broodmother_poison_debuff_c.vpcf"
 			"particle"					"particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn.vpcf"
+
+
 		}
 
 		"AbilitySpecial"
