@@ -394,14 +394,43 @@ function modifier_torpedo_taunt:OnIntervalThink()
 		
 		-- torpedo kills itself
 		if not target:IsAlive() then
-			self:StartIntervalThink(-1)
-			local explosion = FindUnitsInRadius(unit:GetTeamNumber(), unit_pos, nil, explosion_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
-			local explosion_pfx = ParticleManager:CreateParticle(self.explosion_particle, PATTACH_WORLDORIGIN, unit)
-			ParticleManager:SetParticleControl(explosion_pfx, 3, unit_pos)
+			local heroes = FindUnitsInRadius(caster:GetTeamNumber(), unit_pos, nil, FIND_UNITS_EVERYWHERE, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false) 
+			
+			if #heroes == 0 then
+				self:StartIntervalThink(-1)
+				local explosion = FindUnitsInRadius(unit:GetTeamNumber(), unit_pos, nil, explosion_radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+				local explosion_pfx = ParticleManager:CreateParticle(self.explosion_particle, PATTACH_WORLDORIGIN, unit)
+				ParticleManager:SetParticleControl(explosion_pfx, 3, unit_pos)
 
-			ability:EmitSound("torpedo_hit")
-			unit:AddNoDraw()
-			unit:ForceKill(false)
+				ability:EmitSound("torpedo_hit")
+				unit:AddNoDraw()
+				unit:ForceKill(false)
+			end
+			
+			if #heroes > 0 then
+				self:StartIntervalThink(-1)
+				local count = 0
+				for _, enemy in pairs(heroes) do
+					count = count + 1
+				end
+				print("amount of heroes is", count)
+
+				local new_target = math.random(1, count)
+				print("new target id is", new_target)
+
+				local count_lol = 1
+
+				for _, enemy in pairs(heroes) do
+					if new_target == count_lol then
+						print("new target is", new_target, "count_lol is", count_lol)
+						self.target = enemy
+					else
+						count_lol = count_lol + 1
+					end
+				end
+			end
+
+			self:StartIntervalThink(interval)
 		end
 
 		--Check if table enemies is not empty and torpedo hasn't damaged
