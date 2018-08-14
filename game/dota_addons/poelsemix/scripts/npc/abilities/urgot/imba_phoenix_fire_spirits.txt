@@ -16,7 +16,7 @@
 
 		"FightRecapLevel"			"1"
 
-		"AbilityCastRange"			"1400"
+		"AbilityCastRange"			"700 900 1100 1300"
 		"AbilityCastPoint"			"0.01"
 		
 		"AbilityCooldown"			"12 11 10 9"
@@ -62,7 +62,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"4.0"
+				"duration"			"5.0"
 			}
 			"06"
 			{
@@ -87,7 +87,7 @@
 			"10"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"cast_range"		"1400"
+				"cast_range"		"700 900 1100 1300"
 			}
 			"11"
 			{
