@@ -13,7 +13,7 @@
 		"AbilityUnitDamageType"				"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
-		"AbilityTextureName"				"mirana_arrow"
+		"AbilityTextureName"				"urgotQ"
 		"ScriptFile"					"heroes/hero_urgot/hero_urgot"
 
 
@@ -123,6 +123,11 @@
 			{
 				"var_type"							"FIELD_INTEGER"
 				"distance_bonus_cap_tooltip"		"1500"
+			}
+			"17"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"cooldown"		"3"
 			}
 		}
 	}

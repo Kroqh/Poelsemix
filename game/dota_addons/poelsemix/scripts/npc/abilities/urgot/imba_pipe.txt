@@ -9,7 +9,7 @@
 		"ScriptFile"				"heroes/hero_urgot/hero_urgot"
 		"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityTextureName"		"ember_spirit_flame_guard"
+		"AbilityTextureName"		"urgotW"
 
 
 		// Casting

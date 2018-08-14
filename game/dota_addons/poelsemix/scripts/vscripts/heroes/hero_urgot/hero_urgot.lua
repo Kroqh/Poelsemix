@@ -5,11 +5,19 @@
 imba_mirana_arrow = class({})
 
 function imba_mirana_arrow:GetAbilityTextureName()
-	return "mirana_arrow"
+	return "urgotQ"
 end
 
 function imba_mirana_arrow:IsHiddenWhenStolen()
 	return false
+end
+
+function imba_mirana_arrow:GetCooldown()
+	if self:GetCaster():HasTalent("special_bonus_urgot_q_boost") then
+		return 1
+	else
+		return self:GetSpecialValueFor("cooldown")
+	end
 end
 
 function imba_mirana_arrow:OnSpellStart()
@@ -194,11 +202,21 @@ end
 imba_pipe = class({})
 LinkLuaModifier("modifier_shield", "heroes/hero_urgot/hero_urgot", LUA_MODIFIER_MOTION_NONE)
 
+function imba_pipe:GetAbilityTextureName()
+	return "urgotW"
+end
 
 function imba_pipe:OnSpellStart()
 	local caster = self:GetCaster()
-	local shield_health = self:GetSpecialValueFor("shield_health")
 	local duration = self:GetSpecialValueFor("duration")
+	local shield_health = 100
+
+	if caster:HasTalent("special_bonus_urgot_w_boost") then
+		 shield_health = self:GetSpecialValueFor("shield_health")*2
+	else
+		 shield_health = self:GetSpecialValueFor("shield_health")
+	end
+
 
 	EmitSoundOn("urgotW", caster)
 
@@ -279,11 +297,15 @@ function imba_phoenix_launch_fire_spirit:IsHiddenWhenStolen() 		return true end
 function imba_phoenix_launch_fire_spirit:IsRefreshable() 			return true  end
 function imba_phoenix_launch_fire_spirit:IsStealable() 				return false end
 function imba_phoenix_launch_fire_spirit:IsNetherWardStealable() 	return false end
-function imba_phoenix_launch_fire_spirit:GetAbilityTextureName()   return "phoenix_launch_fire_spirit" end
+function imba_phoenix_launch_fire_spirit:GetAbilityTextureName()   return "urgotE" end
 
---function imba_phoenix_launch_fire_spirit:GetAOERadius()  return self:GetSpecialValueFor("radius") end
-
-
+function imba_phoenix_launch_fire_spirit:GetCooldown()
+	if self:GetCaster():HasTalent("special_bonus_urgot_e_reduc") then
+		return self:GetSpecialValueFor("cooldown")/2
+	else
+		return self:GetSpecialValueFor("cooldown")
+	end
+end
 
 function imba_phoenix_launch_fire_spirit:OnSpellStart()
 
@@ -323,6 +345,8 @@ function imba_phoenix_launch_fire_spirit:OnSpellStart()
 	ProjectileManager:CreateTrackingProjectile(info)
 
 end
+
+
 
 function imba_phoenix_launch_fire_spirit:OnProjectileHit( hTarget, vLocation)
 	if not IsServer() then
@@ -393,7 +417,7 @@ function modifier_imba_phoenix_fire_spirits_debuff:DeclareFunctions()
 end
 
 function modifier_imba_phoenix_fire_spirits_debuff:GetTexture()
-	return "phoenix_fire_spirits"
+	return "urgotE"
 end
 
 function modifier_imba_phoenix_fire_spirits_debuff:GetEffectName() return "particles/units/heroes/hero_broodmother/broodmother_poison_debuff_c.vpcf" end
@@ -482,7 +506,7 @@ function imba_vengefulspirit_nether_swap:IsStealable() return true end
 function imba_vengefulspirit_nether_swap:IsNetherWardStealable() return false end
 
 function imba_vengefulspirit_nether_swap:GetAbilityTextureName()
-	return "vengefulspirit_nether_swap"
+	return "urgotR"
 end
 -------------------------------------------
 
@@ -511,8 +535,16 @@ function imba_vengefulspirit_nether_swap:OnSpellStart()
 		EmitSoundOn("urgotRStart", caster)
 		EmitSoundOn("urgotRStart", target)
 
+		--dmg reduction til urgot del
+		local dmgReducDur = 0
 
-		caster:AddNewModifier(caster, self, "modifier_swap_dmg_reduction", {duration = self:GetSpecialValueFor("dmg_red_duration")} )	
+		if self:GetCaster():HasTalent("special_bonus_urgot_r_boost") then
+			dmgReducDur = self:GetSpecialValueFor("dmg_red_duration")*2
+		else
+			dmgReducDur = self:GetSpecialValueFor("dmg_red_duration")
+		end
+
+		caster:AddNewModifier(caster, self, "modifier_swap_dmg_reduction", {duration = dmgReducDur} )	
 	end
 end
 

@@ -16,7 +16,7 @@
 		"AbilityUnitDamageType"					"DAMAGE_TYPE_MAGICAL"
 		"SpellDispellableType"					"SPELL_DISPELLABLE_YES_STRONG"
 		"FightRecapLevel"					"1"
-		"AbilityTextureName"					"vengefulspirit_nether_swap"
+		"AbilityTextureName"					"urgotR"
 		"HasScepterUpgrade"					"1"
 
 		// Casting
@@ -88,11 +88,11 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"channel_time"			"1"
-			}
+			}W
 			"09"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"dmg_reduction"							"70 60 50 40"
+				"dmg_reduction"							"-130 -140 -150 -160"
 			}
 			"10"
 			{

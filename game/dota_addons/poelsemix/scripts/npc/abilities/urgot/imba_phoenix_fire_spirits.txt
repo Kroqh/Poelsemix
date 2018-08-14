@@ -5,7 +5,7 @@
 	{
 		"BaseClass"					"ability_lua"
 		"ScriptFile"				"heroes/hero_urgot/hero_urgot"
-		"AbilityTextureName"		"phoenix_fire_spirits"
+		"AbilityTextureName"		"urgotE"
 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"	
@@ -19,7 +19,7 @@
 		"AbilityCastRange"			"1400"
 		"AbilityCastPoint"			"0.01"
 		
-		"AbilityCooldown"			"12"
+		"AbilityCooldown"			"12 11 10 9"
 
 		"AbilityManaCost"			"50"
 
@@ -93,6 +93,11 @@
 			{
 				"var_type"			"FIELD_FLOAT"
 				"armor_reduction_pct"		"20 40 60 80"
+			}
+			"12"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"cooldown"		"12 11 10 9"
 			}
 
 
