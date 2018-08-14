@@ -480,12 +480,22 @@ function imba_vengefulspirit_nether_swap:GetAbilityTextureName()
 end
 -------------------------------------------
 
-
 function imba_vengefulspirit_nether_swap:OnSpellStart()
 	if IsServer() then
 		local caster = self:GetCaster()
 		local target = self:GetCursorTarget()
-
+		if caster:HasScepter() then
+			
+			self.allEnemies = FindUnitsInRadius(caster:GetTeamNumber(),
+			Vector(0, 0, 0),
+			nil,
+			FIND_UNITS_EVERYWHERE,
+			DOTA_UNIT_TARGET_TEAM_ENEMY,
+			DOTA_UNIT_TARGET_ALL,
+			DOTA_UNIT_TARGET_FLAG_NONE,
+			FIND_ANY_ORDER,
+			false)
+		end
 
 		caster:AddNewModifier(caster, self, "modifier_swap_dmg_reduction", {duration = self:GetSpecialValueFor("dmg_red_duration")} )	
 	end
@@ -495,6 +505,12 @@ function imba_vengefulspirit_nether_swap:OnChannelThink(flInterval)
 	if IsServer() then
 		local caster = self:GetCaster()
 		local target = self:GetCursorTarget()
+		
+		if caster:HasScepter() then
+			for _,unit in pairs(self.allEnemies) do
+				unit:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.2})
+			end
+		end
 
 		target:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.2})
 	end
@@ -508,17 +524,16 @@ function imba_vengefulspirit_nether_swap:OnChannelFinish(bInterrupted)
 		-- Parameters
 		local tree_radius = self:GetSpecialValueFor("tree_radius")
 
-		-- If the target possesses a ready Linken's Sphere, do nothing
-		if target:GetTeam() ~= caster:GetTeam() then
-			if target:TriggerSpellAbsorb(self) then
-				return nil
-			end
-		end
-
 		-- Ministun the target if it's an enemy
 		if target:GetTeamNumber() ~= caster:GetTeamNumber() then
 			target:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.1})
 		end
+
+		if caster:HasScepter() then
+			for _,unit in pairs(self.allEnemies) do
+				unit:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.2})
+			end
+		end		
 
 		-- Play sounds
 		caster:EmitSound("Hero_VengefulSpirit.NetherSwap")
@@ -557,6 +572,39 @@ function imba_vengefulspirit_nether_swap:OnChannelFinish(bInterrupted)
 			-- Destroy trees around start and end areas
 			GridNav:DestroyTreesAroundPoint(caster_loc, tree_radius, false)
 			GridNav:DestroyTreesAroundPoint(target_loc, tree_radius, false)
+
+			if caster:HasScepter() then
+
+				self.allEnemies = FindUnitsInRadius(caster:GetTeamNumber(),
+				Vector(0, 0, 0),
+				nil,
+				FIND_UNITS_EVERYWHERE,
+				DOTA_UNIT_TARGET_TEAM_ENEMY,
+				DOTA_UNIT_TARGET_ALL,
+				DOTA_UNIT_TARGET_FLAG_NONE,
+				FIND_ANY_ORDER,
+				false)
+
+				local allEnemiesPos = {}
+				local shitCounter = 0
+				for _,unit in pairs(self.allEnemies) do
+					allEnemiesPos[shitCounter] = unit:GetOrigin()
+					shitCounter = shitCounter + 1
+				end
+
+				local counter = math.random(0,table.getn(self.allEnemies)-1)
+				for _,unit in pairs(self.allEnemies) do
+					print(counter%table.getn(self.allEnemies))
+					local targetPos = allEnemiesPos[counter%table.getn(self.allEnemies)]
+
+					Timers:CreateTimer(FrameTime(), function()
+						FindClearSpaceForUnit(unit, targetPos, true)
+					end)
+
+					counter = counter+1
+				end
+			end	
+			
 		end
 	end
 end
@@ -572,7 +620,6 @@ function modifier_swap_dmg_reduction:IsStunDebuff() 		return false end
 function modifier_swap_dmg_reduction:RemoveOnDeath() 		return true  end
 
 function modifier_swap_dmg_reduction:OnCreated()
-	print("her")
 	local ability = self:GetAbility()
 	self.dmg_reduction = ability:GetSpecialValueFor("dmg_reduction")
 end
