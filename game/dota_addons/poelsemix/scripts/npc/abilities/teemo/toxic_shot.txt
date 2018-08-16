@@ -1,0 +1,45 @@
+"toxic_shot"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_teemo/hero_teemo"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"toxic_shot"
+	
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "15 25 35 45"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration"	"4"
+		}
+		"03"
+		{
+			"var_type" "FIELD_FLOAT"
+			"tick" "1"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"int_scaling_onhit" "1.35"
+		}
+		"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"int_scaling_prsec" "0.45"
+		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage_onhit" "25 35 45 55"
+		}
+	}
+}

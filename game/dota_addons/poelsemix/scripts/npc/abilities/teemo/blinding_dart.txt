@@ -1,0 +1,47 @@
+"blinding_dart"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_teemo/hero_teemo"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+	"AbilityTextureName"			"blinding_dart"
+	
+	"AbilityCooldown"				"15 14 13 12"
+	"AbilityManaCost"				"105 115 125 135"
+	"AbilityCastRange"				"750"
+	"AbilityCastPoint"				"0.4"
+
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
+	
+	"Precache"
+	{
+		"particle"  "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+		"particle"  "particles/heroes/teemo/noxious_trap_explosion.vpcf"
+
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+	}
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "7 8 9 10"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "100 125 150 175"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"int_scaling" "3.6"
+		}
+	}
+}

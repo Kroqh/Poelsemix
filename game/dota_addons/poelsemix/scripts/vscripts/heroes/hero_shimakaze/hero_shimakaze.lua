@@ -135,7 +135,7 @@ function destroyer_speed:CastFilterResult()
 		local stack_count = self:GetSpecialValueFor("max_stacks")
 	
 		if modifier_stack_count == stack_count then
-			return UF_SUCCES
+			return UF_SUCCESS
 		else
 			return UF_FAIL_CUSTOM
 		end

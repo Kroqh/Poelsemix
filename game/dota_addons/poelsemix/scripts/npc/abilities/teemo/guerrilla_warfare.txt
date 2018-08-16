@@ -1,0 +1,44 @@
+"guerrilla_warfare"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_teemo/hero_teemo"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"guerrilla_warfare"
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"wait" "1.5"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"attackspeed" "60"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"duration" "3"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"attackspeed6" "85"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"attackspeed12" "110"
+		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"attackspeed18" "135"
+		}
+	}
+}
