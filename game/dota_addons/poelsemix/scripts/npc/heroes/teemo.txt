@@ -4,6 +4,8 @@
 	"DisableWearables" "1"
 	"model" "models/teemo/teemo.vmdl"
 	"ModelScale" "2"
+	"ProjectileModel" "particles/units/heroes/hero_mirana/mirana_base_attack.vpcf"
+	
 	"Ability1" "blinding_dart"				
 	"Ability2" "move_quick"
 	"Ability3" "toxic_shot"

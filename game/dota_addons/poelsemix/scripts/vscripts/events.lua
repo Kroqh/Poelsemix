@@ -266,6 +266,11 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		ability2:SetLevel(1)
 	end
 
+	if hero:GetUnitName() == "npc_dota_hero_venomancer" then
+		local ability = hero:FindAbilityByName("guerrilla_warfare")
+		ability:SetLevel(1)
+	end
+
 end
 
 

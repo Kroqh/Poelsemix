@@ -80,6 +80,11 @@ function move_quick:OnSpellStart()
 		local caster = self:GetCaster()
 		local duration = self:GetSpecialValueFor("duration")
 
+		local particle = "particles/econ/events/ti7/phase_boots_ti7.vpcf"
+		local pfx = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN_FOLLOW, caster)
+		ParticleManager:SetParticleControl(pfx, 0, caster:GetAbsOrigin())
+		ParticleManager:ReleaseParticleIndex(pfx)
+
 		caster:AddNewModifier(caster, self, "modifier_move_quick_active", {duration = duration})
 	end
 end
@@ -188,6 +193,8 @@ function toxic_shot:GetIntrinsicModifierName()
 end
 
 modifier_toxic_shot_passive = class({})
+
+function modifier_toxic_shot_passive:IsHidden() return true end
 
 function modifier_toxic_shot_passive:OnCreated()
 	if IsServer() then
@@ -426,7 +433,6 @@ function modifier_noxious_trap_explosion:OnIntervalThink()
 			ParticleManager:SetParticleControl(pfx, 0, unit:GetAbsOrigin())
 			ParticleManager:SetParticleControl(pfx, 1, Vector(0.65,0.65,0.65))
 
-
 			unit:AddNoDraw()
 			unit:ForceKill(false)
 		end
@@ -620,6 +626,10 @@ function modifier_guerrilla_warfare_attackspeed:GetModifierAttackSpeedBonus_Cons
 	return self.attackspeed
 end
 
---TODO
---ADD TEEMO ATTACK1 ATTACHMENT
---ADD INTSCALING ON ALL SPELLS
+--------------- TODO ----------------
+-- ADD TALENTS
+-- ADD SOUNDS
+
+-- ADD CUSTOM SOUNDSET (MAYBE)
+
+-- MAKE A SPECIAL THING =)

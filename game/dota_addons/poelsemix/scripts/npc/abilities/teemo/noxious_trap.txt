@@ -11,7 +11,7 @@
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityCooldown"				"0.25"
-	"AbilityManaCost"				"600 900 1200"
+	"AbilityManaCost"				"75 125 175"
 	"AbilityCastPoint"				"0.2"
 	"AbilityCastRange"				"400 650 900"
 	"AOERadius"						"%radius"
