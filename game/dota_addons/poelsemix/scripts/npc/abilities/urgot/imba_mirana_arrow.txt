@@ -29,7 +29,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"600 800 1000 1200"
 		"AbilityCastPoint"				"0"
 
 		// Time
@@ -47,7 +47,7 @@
 			"01"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"base_damage"						"100 200 300 400"
+				"base_damage"						"150 300 450 600"
 			}
 			"02"
 			{
@@ -112,7 +112,7 @@
 			"14"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"arrow_distance"					"600"
+				"arrow_distance"					"600 800 1000 1200"
 			}
 			"15"
 			{
