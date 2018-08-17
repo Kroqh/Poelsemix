@@ -26,6 +26,7 @@ function blinding_dart:OnSpellStart()
 				ExtraData = {}
 			}
 		ProjectileManager:CreateTrackingProjectile(dart)
+		EmitSoundOn("teemo_blindingdart", caster)
 	end
 end
 
@@ -52,6 +53,12 @@ end
 modifier_blinding_dart_blind = class({})
 
 function modifier_blinding_dart_blind:IsDebuff() return true end
+
+function modifier_blinding_dart_blind:OnCreated()
+	if IsServer() then
+		EmitSoundOn("teemo_blindingdart_oh", self:GetParent())
+	end
+end
 
 function modifier_blinding_dart_blind:DeclareFunctions()
 	local decFuncs = {MODIFIER_PROPERTY_MISS_PERCENTAGE}
@@ -86,6 +93,7 @@ function move_quick:OnSpellStart()
 		ParticleManager:ReleaseParticleIndex(pfx)
 
 		caster:AddNewModifier(caster, self, "modifier_move_quick_active", {duration = duration})
+		EmitSoundOn("teemo_movequick", caster)
 	end
 end
 
@@ -285,7 +293,7 @@ function noxious_trap:OnSpellStart()
 		local unit = CreateUnitByName("npc_shroom", pos, true, caster, caster, caster:GetTeamNumber())
 		unit:AddNewModifier(caster, self, "modifier_noxious_trap_handler", {})
 		unit:AddNewModifier(caster, self, "modifier_noxious_trap_explosion", {})
-
+		EmitSoundOn("teemo_trap_use", caster)
 	end
 end
 
@@ -433,6 +441,7 @@ function modifier_noxious_trap_explosion:OnIntervalThink()
 			ParticleManager:SetParticleControl(pfx, 0, unit:GetAbsOrigin())
 			ParticleManager:SetParticleControl(pfx, 1, Vector(0.65,0.65,0.65))
 
+			EmitSoundOn("teemo_trap_explosion", self:GetParent())
 			unit:AddNoDraw()
 			unit:ForceKill(false)
 		end

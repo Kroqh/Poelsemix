@@ -24,7 +24,7 @@
 		"particle"  "particles/heroes/teemo/noxious_trap_explosion.vpcf"
 		"particle"  "particles/econ/events/ti7/phase_boots_ti7.vpcf"
 
-		"soundfile" "soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+		"soundfile" "soundevents/teemo_soundevent.vsndevts"
 	}
 
 	"AbilitySpecial"
