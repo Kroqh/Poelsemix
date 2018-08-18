@@ -1,4 +1,4 @@
 # Poelsemix
 På grillen igen
 
-dead
+[Thanks to...](credits.md)
