@@ -1,4 +1,4 @@
-THANKS TO
+# THANKS TO
 
 - dota imba
 - birzha memov
@@ -13,5 +13,6 @@ from Sword Art Online
 from Kantai Collection
 
 Urgot model from league of legends
+Teemo model from league of legends
 
 THANKS VALVE
