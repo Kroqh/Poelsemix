@@ -11,6 +11,8 @@ function blinding_dart:OnSpellStart()
 		local target = self:GetCursorTarget()
 		local particle = "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
 		local speed = 1300
+		local int_scaling_talent = caster:FindAbilityByName("special_bonus_teemo_3"):GetSpecialValueFor("value")
+		CustomNetTables:SetTableValue("player_table", "blinding_dart", {int_scaling_talent = int_scaling_talent})
 
 		local dart = 
 			{
@@ -38,6 +40,12 @@ function blinding_dart:OnProjectileHit(target)
 	local caster = self:GetCaster()
 	local intellect = caster:GetIntellect()
 	local int_scaling = self:GetSpecialValueFor("int_scaling")
+	if caster:HasTalent("special_bonus_teemo_3") then
+		local int_talent = CustomNetTables:GetTableValue("player_table", "blinding_dart").int_scaling_talent
+		--print(int_talent)
+		local int_scaling = int_scaling + int_talent
+	end
+
 	local damage = self:GetSpecialValueFor("damage") + intellect*int_scaling
 	local duration = self:GetSpecialValueFor("duration")
 
@@ -206,13 +214,7 @@ function modifier_toxic_shot_passive:IsHidden() return true end
 
 function modifier_toxic_shot_passive:OnCreated()
 	if IsServer() then
-		local ability = self:GetAbility()
-		local caster = self:GetCaster()
-		local intellect = caster:GetIntellect()
-
-		self.duration = ability:GetSpecialValueFor("duration")
-		self.int_scaling = ability:GetSpecialValueFor("int_scaling_onhit")
-		self.damageonhit = ability:GetSpecialValueFor("damage_onhit") + intellect * self.int_scaling
+		
 	end
 end
 
@@ -224,6 +226,21 @@ end
 function modifier_toxic_shot_passive:OnAttackLanded(keys)
 	if IsServer() then
 		if keys.attacker == self:GetParent() then
+			local ability = self:GetAbility()
+			local caster = self:GetCaster()
+			local intellect = caster:GetIntellect()
+
+			self.duration = ability:GetSpecialValueFor("duration")
+			self.int_scaling = ability:GetSpecialValueFor("int_scaling_onhit")
+			self.damageonhit = ability:GetSpecialValueFor("damage_onhit") + intellect * self.int_scaling
+			print(self.damageonhit)
+
+			if caster:HasTalent("special_bonus_teemo_2") then
+				local onhit = caster:FindAbilityByName("special_bonus_teemo_2"):GetSpecialValueFor("value")
+				self.damageonhit = self.damageonhit + onhit
+				print(self.damageonhit)
+			end
+
 			ApplyDamage({victim = keys.target,
 			attacker = self:GetParent(),
 			damage_type = DAMAGE_TYPE_MAGICAL,
@@ -245,8 +262,8 @@ function modifier_toxic_shot_dot:OnCreated()
 
 		self.int_scaling_prsec = ability:GetSpecialValueFor("int_scaling_prsec")
 		self.damage = ability:GetSpecialValueFor("damage") + intellect * self.int_scaling_prsec
-		print(self.damage)
-		print("int is ", intellect)
+		--print(self.damage)
+		--print("int is ", intellect)
 		self.tick = ability:GetSpecialValueFor("tick")
 		self:StartIntervalThink(self.tick-0.1)
 	end
@@ -293,6 +310,28 @@ function noxious_trap:OnSpellStart()
 		local unit = CreateUnitByName("npc_shroom", pos, true, caster, caster, caster:GetTeamNumber())
 		unit:AddNewModifier(caster, self, "modifier_noxious_trap_handler", {})
 		unit:AddNewModifier(caster, self, "modifier_noxious_trap_explosion", {})
+
+		if caster:HasTalent("special_bonus_teemo_4") then
+			--print("caster has talent")
+			local left_angle = QAngle(0, 55, 0)
+			local right_angle = QAngle(0, -55, 0)
+
+			--rotate pos around caster's position
+			local left_spawn = RotatePosition(caster:GetAbsOrigin(), left_angle, pos)
+
+			local right_spawn = RotatePosition(caster:GetAbsOrigin(), right_angle, pos)
+
+			--left unit
+			local unit2 = CreateUnitByName("npc_shroom", left_spawn, true, caster, caster, caster:GetTeamNumber())
+			unit2:AddNewModifier(caster, self, "modifier_noxious_trap_handler", {})
+			unit2:AddNewModifier(caster, self, "modifier_noxious_trap_explosion", {})
+
+			--right unit
+			local unit3 = CreateUnitByName("npc_shroom", right_spawn, true, caster, caster, caster:GetTeamNumber())
+			unit3:AddNewModifier(caster, self, "modifier_noxious_trap_handler", {})
+			unit3:AddNewModifier(caster, self, "modifier_noxious_trap_explosion", {})
+		end
+
 		EmitSoundOn("teemo_trap_use", caster)
 	end
 end
@@ -322,6 +361,8 @@ function modifier_noxious_trap_stack_handler:IsPurgeable() return false end
 function modifier_noxious_trap_stack_handler:OnCreated()
 	if IsServer() then
 		local ability = self:GetAbility()
+		--Give one trap on first level up
+		--so no have to wait 30 secs for first shroom
 		local lol = 0
 
 		if lol == 0 then
@@ -330,18 +371,31 @@ function modifier_noxious_trap_stack_handler:OnCreated()
 			lol = 1
 		end
 
-		self.max_stacks = ability:GetSpecialValueFor("max_stacks")
-		self.charge_time = ability:GetSpecialValueFor("charge_time")
+		self.count = 0
 
-		self:StartIntervalThink(self.charge_time)
+		self:StartIntervalThink(0.1)
 	end
 end
 
 function modifier_noxious_trap_stack_handler:OnIntervalThink()
 	if IsServer() then
-		if self:GetStackCount() < self.max_stacks then
-			self:SetStackCount(self:GetStackCount() + 1)
+		local ability = self:GetAbility()
+
+		self.max_stacks = ability:GetSpecialValueFor("max_stacks")
+		self.charge_time = ability:GetSpecialValueFor("charge_time")
+
+		if self:GetStackCount() == self.max_stacks then
+			self.count = 0
 		end
+
+		if self.count >= self.charge_time then
+			self.count = 0
+			if self:GetStackCount() < self.max_stacks then
+				self:SetStackCount(self:GetStackCount() + 1)
+			end
+		end
+
+		self.count = self.count + 0.1
 	end
 end
 
@@ -516,8 +570,19 @@ function modifier_guerrilla_warfare_passive:OnCreated()
 end
 
 function modifier_guerrilla_warfare_passive:DeclareFunctions()
-	local decFuncs = {MODIFIER_EVENT_ON_ABILITY_EXECUTED}
+	local decFuncs = {MODIFIER_EVENT_ON_ABILITY_EXECUTED, MODIFIER_EVENT_ON_ATTACK_START}
 	return decFuncs
+end
+
+function modifier_guerrilla_warfare_passive:OnAttackStart(keys)
+	if IsServer() then
+		local parent = self:GetParent()
+
+		if keys.attacker == parent then
+			--print("attack")
+			self.count = 0
+		end
+	end
 end
 
 function modifier_guerrilla_warfare_passive:OnAbilityExecuted(keys)
@@ -525,6 +590,7 @@ function modifier_guerrilla_warfare_passive:OnAbilityExecuted(keys)
 		local parent = self:GetParent()
 
 		if keys.unit == parent then
+			--print("spell")
 			self.count = 0
 		end
 	end
@@ -544,6 +610,7 @@ function modifier_guerrilla_warfare_passive:OnIntervalThink()
 		if self.count >= self.wait then
 			local caster = self:GetParent()
 			caster:AddNewModifier(caster, self:GetAbility(), "modifier_guerrilla_warfare_invis", {})
+			self.count = 0
 		end
 
 		self.caster_pos = self:GetParent():GetAbsOrigin()
@@ -623,7 +690,7 @@ function modifier_guerrilla_warfare_attackspeed:OnCreated()
 		self.attackspeed = ability:GetSpecialValueFor("attackspeed18")
 	end
 
-	print("hero level is ", caster:GetLevel(), " so returned attackspeed is ", self.attackspeed)
+	--print("hero level is ", caster:GetLevel(), " so returned attackspeed is ", self.attackspeed)
 end
 
 function modifier_guerrilla_warfare_attackspeed:DeclareFunctions()
@@ -637,8 +704,8 @@ end
 
 --------------- TODO ----------------
 -- ADD TALENTS
--- ADD SOUNDS
+-- ADD SOUNDS (DONE)
 
 -- ADD CUSTOM SOUNDSET (MAYBE)
 
--- MAKE A SPECIAL THING =)
+-- MAKE A SPECIAL THING =) (DONE)

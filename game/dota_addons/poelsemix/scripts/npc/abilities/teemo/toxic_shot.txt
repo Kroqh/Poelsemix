@@ -39,7 +39,8 @@
 		"06"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage_onhit" "25 35 45 55"
+			"damage_onhit" "15 22 29 36"
+			"LinkedSpecialBonus" "special_bonus_teemo_2"
 		}
 	}
 }

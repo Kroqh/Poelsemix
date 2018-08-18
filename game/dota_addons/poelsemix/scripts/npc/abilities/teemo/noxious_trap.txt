@@ -1,6 +1,6 @@
 "noxious_trap"
 {
-	// General
+	// General 
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_teemo/hero_teemo"

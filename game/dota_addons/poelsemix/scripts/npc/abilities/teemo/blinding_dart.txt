@@ -43,6 +43,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"int_scaling" "3.6"
+			"LinkedSpecialBonus" "special_bonus_teemo_3"
 		}
 	}
 }
