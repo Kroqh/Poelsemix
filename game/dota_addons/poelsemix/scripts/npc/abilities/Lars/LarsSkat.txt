@@ -167,7 +167,7 @@
 					"GrantXPGold"
 					{
 						"Target"  "CASTER"
-						"GoldAmount" "20"
+						"GoldAmount" "30"
 					}
 
 					"GrantXPGold"

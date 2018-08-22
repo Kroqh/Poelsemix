@@ -375,6 +375,10 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/D/Program Files/Steam/steamapps/common/dota 2 beta/game/dota_addons/poelsemix/scripts"
+	],
 	"file_history":
 	[
 		"/D/Program Files/Steam/steamapps/common/dota 2 beta/game/dota_addons/poelsemix/scripts/vscripts/addon_game_mode.lua",

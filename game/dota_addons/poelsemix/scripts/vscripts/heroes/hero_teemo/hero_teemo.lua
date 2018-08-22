@@ -703,9 +703,4 @@ function modifier_guerrilla_warfare_attackspeed:GetModifierAttackSpeedBonus_Cons
 end
 
 --------------- TODO ----------------
--- ADD TALENTS (DONE)
--- ADD SOUNDS (DONE)
-
--- ADD CUSTOM SOUNDSET (MAYBE)
-
--- MAKE A SPECIAL THING =) (DONE)
+-- ADD CUSTOM SOUNDSET 

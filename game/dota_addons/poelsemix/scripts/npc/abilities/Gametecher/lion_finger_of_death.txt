@@ -40,13 +40,13 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"150 190 290 450"
+				"damage"					"150 250 350 450"
 				"LinkedSpecialBonus"			"special_bonus_unique_lion_3"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_scepter"			"725 875 1025 1500"
+				"damage_scepter"			"700 775 850 925"
 				"LinkedSpecialBonus"			"special_bonus_unique_lion_3"
 			}
 			"03"
