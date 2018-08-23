@@ -1,0 +1,35 @@
+"teemo"
+{
+	"override_hero"				"npc_dota_hero_ogre_magi"			// Hero to override
+	"DisableWearables" "1"
+	//"model" "models/teemo/teemo.vmdl" indsæt nissan
+	"ModelScale" "1.0"
+	
+	"Ability1" "drift"				
+	"Ability2" "move_quick"
+	"Ability3" "toxic_shot"
+	"Ability4" "guerrilla_warfare"
+	"Ability6" "noxious_trap"
+	
+	"Ability10" "special_bonus_movement_speed_20"
+	"Ability11" "special_bonus_attack_speed_25"
+	"Ability12" "special_bonus_intelligence_20"
+	"Ability13"	"special_bonus_all_stats_12"
+	"Ability14" "special_bonus_teemo_3"
+	"Ability15" "special_bonus_teemo_2"
+	"Ability16" "special_bonus_teemo_4"
+	"Ability17" "special_bonus_attack_speed_200"
+
+	"ArmorPhysical"		"3"
+
+	"AttributeBaseStrength"			"17"									// Base strength
+	"AttributeStrengthGain"			"2.3"									// Strength bonus per level.
+	"AttributeBaseIntelligence"		"20"									// Base intelligence
+	"AttributeIntelligenceGain"		"2.3"									// Intelligence bonus per level.
+	"AttributeBaseAgility"		"20"
+	"AttributeAgilityGain"		"2"
+
+	"StatusHealthRegen"		"2"
+
+	"MovementSpeed"		"295"
+}
