@@ -1,0 +1,547 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	m_meshList = 
+	{
+		m_meshList = 
+		[
+			{
+				m_meshName = "fox"
+				m_meshFile = "models/fox/fox.fbx"
+				m_materialSearchPath = ""
+				m_bSkinParentedObjects = true
+				m_bLegacySkinParentedTransforms = false
+				m_bExpensiveTangents = false
+				m_bHighPrecisionTexCoords = false
+				m_bPerVertexCurvature = false
+				m_bBentNormals = false
+				m_bIgnoreCloth = false
+				m_bGetSkinningFromLod0 = false
+				m_pMorphInfo = null
+			},
+		]
+	}
+	m_clothProxyMeshList = 
+	{
+		_class = "CVClothProxyMeshList"
+		m_flClothEnableThreshold = 0.05
+		m_bCreateStaticBone = false
+		m_nMaxBonesPerVertex = 4
+		m_bRemoveUnusedBonesEnabled = false
+		m_bDriveMeshesWithBacksolvedJointsOnly = true
+		m_flMatchProxiesToMeshes = 1.0
+		m_flFallbackEnvelope = 1.0
+		m_nReservedInt = 0
+		m_bSoftSkinAnimation = false
+		m_bReservedBool2 = false
+		m_bReservedBool3 = false
+		m_bReservedBool4 = false
+		m_clothProxyMeshList = [  ]
+	}
+	m_physicsMeshList = 
+	{
+		m_meshList = [  ]
+	}
+	m_pModelInfo = null
+	m_pBoneFlagList = 
+	{
+		m_pObject = null
+	}
+	m_pHitBoxSetLists = 
+	[
+		{
+			m_pObject = 
+			{
+				m_HitBoxSets = 
+				[
+					{
+						m_name = "default"
+						m_HitBoxes = 
+						[
+							{
+								m_name = "pelvis"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "pelvis"
+								m_vMinBounds = [ -21.314924, -24.187901, -13.42334 ]
+								m_vMaxBounds = [ 18.80076, 7.669285, 9.064217 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "chest"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "chest"
+								m_vMinBounds = [ -32.290764, -26.05834, -33.327324 ]
+								m_vMaxBounds = [ 32.176567, 25.430239, 6.380714 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "left_arm"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "left_arm"
+								m_vMinBounds = [ -3.332424, -7.268988, -5.308395 ]
+								m_vMaxBounds = [ 16.471819, 6.591761, 8.118568 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "right_arm"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "right_arm"
+								m_vMinBounds = [ -16.674046, -7.268982, -5.420319 ]
+								m_vMaxBounds = [ 3.130228, 6.591768, 8.006645 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "right_leg"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "right_leg"
+								m_vMinBounds = [ -11.082636, -12.899666, -16.509422 ]
+								m_vMaxBounds = [ 7.210594, 8.676777, 4.934074 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "left_leg"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "left_leg"
+								m_vMinBounds = [ -9.240772, -13.372112, -18.692093 ]
+								m_vMaxBounds = [ 13.835346, 9.909924, 6.852699 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "neck"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "neck"
+								m_vMinBounds = [ -9.53157, -15.148318, -5.81665 ]
+								m_vMaxBounds = [ 9.417385, 10.709931, -2.602493 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "left_elbow"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "left_elbow"
+								m_vMinBounds = [ -6.676933, -7.194384, -6.985298 ]
+								m_vMaxBounds = [ 16.152077, 6.165416, 5.144806 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "right_elbow"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "right_elbow"
+								m_vMinBounds = [ -18.950665, -8.093229, -7.782646 ]
+								m_vMaxBounds = [ 6.069958, 7.962942, 6.608284 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "right_knee"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "right_knee"
+								m_vMinBounds = [ -10.900543, -11.481951, -17.287592 ]
+								m_vMaxBounds = [ 8.055431, 11.367336, 5.185947 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "left_knee"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "left_knee"
+								m_vMinBounds = [ -8.978869, -11.4715, -17.255419 ]
+								m_vMaxBounds = [ 9.977122, 11.377789, 5.218182 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "head"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "head"
+								m_vMinBounds = [ -22.554384, -38.193882, -19.361053 ]
+								m_vMaxBounds = [ 22.564207, 12.803532, 31.604004 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "left_hand"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "left_hand"
+								m_vMinBounds = [ -8.991142, -13.982202, -7.586067 ]
+								m_vMaxBounds = [ 14.640526, 5.809791, 4.912506 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "right_hand"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "right_hand"
+								m_vMinBounds = [ -36.538536, -20.219196, -8.374123 ]
+								m_vMaxBounds = [ 8.21727, 5.810249, 4.124451 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "right_foot"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "right_foot"
+								m_vMinBounds = [ -8.993034, -25.104351, -27.532934 ]
+								m_vMaxBounds = [ 11.64555, 12.407826, 2.078775 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "left_foot"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "left_foot"
+								m_vMinBounds = [ -10.087358, -25.092119, -27.537968 ]
+								m_vMaxBounds = [ 10.551247, 12.420057, 2.073742 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+							{
+								m_name = "tail"
+								m_sSurfaceProperty = ""
+								m_nGroupId = 0
+								m_sBoneName = "tail"
+								m_vMinBounds = [ -19.548328, -2.24826, -49.000515 ]
+								m_vMaxBounds = [ 17.034168, 67.472717, -3.36306 ]
+								m_bTranslationOnly = false
+								m_cRenderColor = [ 0, 0, 0, 0 ]
+							},
+						]
+					},
+				]
+				m_AutoCreateSetName = ""
+			}
+		},
+	]
+	m_pAttachmentLists = [  ]
+	m_pAnimGroup = 
+	{
+		m_pObject = 
+		{
+			m_Name = ""
+			m_pReferenceSkeleton = 
+			{
+				m_pObject = null
+			}
+			m_pBoneFlagList = 
+			{
+				m_pObject = null
+			}
+			m_pSeqGroup = 
+			{
+				m_pObject = null
+			}
+			m_pAnimGroups = [  ]
+			m_Vanim = 
+			[
+				{
+					m_Animationname = "foxattack1"
+					m_Filepath = "models/fox/foxanim.fbx"
+					m_nStartframe = 375
+					m_nEndframe = 388
+					m_flFps = 30.0
+					m_Loop = 
+					{
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop = 
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities = 
+					[
+						{
+							m_Name = "ACT_DOTA_ATTACK2"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents = [  ]
+					m_MotionFrames = [  ]
+					m_pIkRules = [  ]
+					m_pAlignAnimation = null
+					m_adjustAnimation = 
+					{
+						m_translation = [ 0.0, 0.0, 0.0 ]
+						m_rotation = [ 0.0, 0.0, 0.0 ]
+					}
+					m_Keywords = [  ]
+					m_sequenceParams = 
+					{
+						m_flFadeInTime = 0.2
+						m_flFadeOutTime = 0.2
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					m_Animationname = "foxattack2"
+					m_Filepath = "models/fox/foxanim.fbx"
+					m_nStartframe = 375
+					m_nEndframe = 388
+					m_flFps = 30.0
+					m_Loop = 
+					{
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop = 
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities = 
+					[
+						{
+							m_Name = "ACT_DOTA_ATTACK"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents = [  ]
+					m_MotionFrames = [  ]
+					m_pIkRules = [  ]
+					m_pAlignAnimation = null
+					m_adjustAnimation = 
+					{
+						m_translation = [ 0.0, 0.0, 0.0 ]
+						m_rotation = [ 0.0, 0.0, 0.0 ]
+					}
+					m_Keywords = [  ]
+					m_sequenceParams = 
+					{
+						m_flFadeInTime = 0.2
+						m_flFadeOutTime = 0.2
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					m_Animationname = "foxwalk"
+					m_Filepath = "models/fox/foxanim.fbx"
+					m_nStartframe = 407
+					m_nEndframe = 422
+					m_flFps = 30.0
+					m_Loop = 
+					{
+						m_bLoop = true
+						m_bSmoothLoop = true
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop = 
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities = 
+					[
+						{
+							m_Name = "ACT_DOTA_RUN"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents = [  ]
+					m_MotionFrames = [  ]
+					m_pIkRules = [  ]
+					m_pAlignAnimation = null
+					m_adjustAnimation = 
+					{
+						m_translation = [ 0.0, 0.0, 0.0 ]
+						m_rotation = [ 0.0, 0.0, 0.0 ]
+					}
+					m_Keywords = [  ]
+					m_sequenceParams = 
+					{
+						m_flFadeInTime = 0.2
+						m_flFadeOutTime = 0.2
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					m_Animationname = "foxidle"
+					m_Filepath = "models/fox/foxanim.fbx"
+					m_nStartframe = 438
+					m_nEndframe = 463
+					m_flFps = 30.0
+					m_Loop = 
+					{
+						m_bLoop = true
+						m_bSmoothLoop = true
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop = 
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities = 
+					[
+						{
+							m_Name = "ACT_DOTA_IDLE"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents = [  ]
+					m_MotionFrames = [  ]
+					m_pIkRules = [  ]
+					m_pAlignAnimation = null
+					m_adjustAnimation = 
+					{
+						m_translation = [ 0.0, 0.0, 0.0 ]
+						m_rotation = [ 0.0, 0.0, 0.0 ]
+					}
+					m_Keywords = [  ]
+					m_sequenceParams = 
+					{
+						m_flFadeInTime = 0.2
+						m_flFadeOutTime = 0.2
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+				{
+					m_Animationname = "foxdeath"
+					m_Filepath = "models/fox/foxanim.fbx"
+					m_nStartframe = 280
+					m_nEndframe = 323
+					m_flFps = 30.0
+					m_Loop = 
+					{
+						m_bLoop = false
+						m_bSmoothLoop = false
+						m_nSmoothLoopStart = 0
+						m_nSmoothLoopEnd = 0
+						m_StartLoop = 
+						{
+							_class = "CVAnimCmdStartLoop"
+							m_bEnabled = false
+							m_nLoopRestart = 0
+						}
+					}
+					m_bHidden = false
+					m_bDisable = false
+					m_Activities = 
+					[
+						{
+							m_Name = "ACT_DOTA_IDLE"
+							m_nWeight = 1
+						},
+					]
+					m_AnimationEvents = [  ]
+					m_MotionFrames = [  ]
+					m_pIkRules = [  ]
+					m_pAlignAnimation = null
+					m_adjustAnimation = 
+					{
+						m_translation = [ 0.0, 0.0, 0.0 ]
+						m_rotation = [ 0.0, 0.0, 0.0 ]
+					}
+					m_Keywords = [  ]
+					m_sequenceParams = 
+					{
+						m_flFadeInTime = 0.2
+						m_flFadeOutTime = 0.2
+					}
+					m_folderName = ""
+					m_MotionFramesRootBone = ""
+				},
+			]
+			m_sScripts = [  ]
+			m_folderNames = [  ]
+			m_sCompileScripts = [  ]
+		}
+	}
+	m_pMaterialGroupList = 
+	{
+		m_pObject = null
+	}
+	m_pMeshGroupList = 
+	{
+		m_pObject = null
+	}
+	m_pLodGroupList = 
+	{
+		m_pObject = null
+	}
+	m_pPropBreakableList = 
+	{
+		m_pObject = null
+	}
+	m_pPropDataList = 
+	{
+		m_pObject = null
+	}
+	m_pConstraintLists = [  ]
+	m_collision = ""
+	m_softbody = ""
+	m_sMDLFilename = ""
+	m_sOffsetHitboxSets = [  ]
+	m_vHitboxSetOffset = [ 0.0, 0.0, 0.0 ]
+	m_scriptFiles = [  ]
+	m_pMaterialRemapList = 
+	{
+		m_vMaterialRemapList = 
+		[
+			{
+				m_sSearchMaterial = ".vmat"
+				m_sReplaceMaterial = "materials/fox/foxmat.vmat"
+			},
+		]
+	}
+	m_flFbxScale = 1.0
+	m_flQCScale = 1.0
+	m_vOrigin = [ 0.0, 0.0, 0.0 ]
+	m_pPsfList = null
+	m_keyValueText = ""
+	m_bStaticProp = false
+	m_bEnableClothProcessing = true
+	m_flClothEnableThreshold = 0.05
+	m_nMaxClothVertsPerMesh = 2048
+	m_bBuildClothBoneHierarchy = false
+	m_nNavType = "AUTH_NAV_MESH"
+	m_bMakeUniqueVMeshes = false
+	m_bMakeImplicitBindPoseSequence = false
+	m_bAdjustSkeletonFromBoneFlags = false
+	m_bHiddenAssetFlag = false
+	m_pAnimGroups = [  ]
+}
