@@ -1,0 +1,107 @@
+	//=================================================================================================================
+	// Antimage Spell Shield -- fox shine//=================================================================================================================
+	// Antimage Spell Shield
+	//=================================================================================================================
+	"fox_shine"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"antimage_spell_shield"
+		"ScriptFile"					"heroes/hero_fox/hero_fox"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 16.0 12.0 8.0"
+		"AbilityCastPoint"				"0.0"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/units/heroes/hero_antimage/antimage_blink_end_glow.vpcf"
+			"particle"					"particles/units/heroes/hero_antimage/antimage_spellshield.vpcf"
+			"particle"					"particles/units/heroes/hero_antimage/antimage_spellshield_reflect.vpcf"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_resistance"		"20 35 50 65"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"active_duration"		"5"				
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"internal_cooldown"		"6"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"spellshield_max_distance"	"2500"
+			}
+		}
+	}
+	//=================================================================================================================
+	"imba_antimage_spell_shield"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"antimage_spell_shield"
+		"ScriptFile"					"hero/hero_antimage"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 16.0 12.0 8.0"
+		"AbilityCastPoint"				"0.0"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/units/heroes/hero_antimage/antimage_blink_end_glow.vpcf"
+			"particle"					"particles/units/heroes/hero_antimage/antimage_spellshield.vpcf"
+			"particle"					"particles/units/heroes/hero_antimage/antimage_spellshield_reflect.vpcf"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_resistance"		"20 35 50 65"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"active_duration"		"1.5"				
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"internal_cooldown"		"6"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"spellshield_max_distance"	"2500"
+			}
+		}
+	}
