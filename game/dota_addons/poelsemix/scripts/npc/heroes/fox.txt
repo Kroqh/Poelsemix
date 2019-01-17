@@ -9,7 +9,7 @@
 	"Ability1" "ha_gay"				
 	"Ability2" "fox_shine"
 	"Ability3" "sick_dodge"
-	"Ability6" "awaken"
+	"Ability6" "fox_ult"
 	"AttributeBaseStrength"		"20"
 	"AttributeBaseIntelligence"	"40"
 	"AttributeIntelligenceGain"	"0.6"

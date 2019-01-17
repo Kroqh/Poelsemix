@@ -315,3 +315,166 @@ end
 function modifier_imba_spellshield_scepter_recharge:IsPurgable() return false end
 function modifier_imba_spellshield_scepter_recharge:IsDebuff() return false end
 function modifier_imba_spellshield_scepter_recharge:RemoveOnDeath() return false end
+
+
+
+
+
+--R
+-------------------------------------------
+--      JUGGLE
+-------------------------------------------
+-- Visible Modifiers:
+LinkLuaModifier("modifier_fox_juggle", "heroes/hero_fox/hero_fox", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_foxenemy_juggled", "heroes/hero_fox/hero_fox", LUA_MODIFIER_MOTION_NONE)
+
+
+fox_ult = fox_ult or class({})
+
+function fox_ult:GetAbilityTextureName()
+	return "Soren4"
+end
+
+--function fox_ult:GetBehavior()
+--	return DOTA_ABILITY_BEHAVIOR_IMMEDIATE + DOTA_ABILITY_BEHAVIOR_NO_TARGET
+--end
+
+function fox_ult:OnSpellStart()
+	if IsServer() then
+		local caster = self:GetCaster()
+		local casterloc = caster:GetAbsOrigin()
+		local target = self:GetCursorTarget()
+		local ability = self
+		self.height = ability:GetSpecialValueFor("bounce_height")
+		self.lengthmultiplier = ability:GetSpecialValueFor("bounce_lengthmultiplier")
+
+		-- Calculates the knockback position (for Tsunami)
+		local torrent_border = ( target:GetAbsOrigin() - casterloc ):Normalized() * 100
+		local distance_from_center = ( target:GetAbsOrigin() - casterloc ):Length2D() * self.lengthmultiplier
+
+		-- Some randomness to tsunami-torrent for smoother animation
+		randomness_x = math.random() * math.random(-30,30)
+		randomness_y = math.random() * math.random(-30,30)
+
+		-- Knocks the target up
+		local knockback =
+		{
+			should_stun = 1,
+			knockback_duration = 3,
+			duration = 3,
+			knockback_distance = distance_from_center,
+			knockback_height = self.height,
+			center_x = (casterloc + torrent_border).x + randomness_x,
+			center_y = (casterloc + torrent_border).y + randomness_y,
+			center_z = (casterloc + torrent_border).z
+		}
+
+		-- Apply knockback on enemies hit
+		target:RemoveModifierByName("modifier_knockback")
+		target:AddNewModifier(caster, self, "modifier_knockback", knockback)
+		target:AddNewModifier(caster, self, "modifier_imba_torrent_phase", {duration = 3})
+		caster:AddNewModifier(caster, self, "modifier_fox_juggle", {duration = 4})
+
+		Timers:CreateTimer(1, function()
+
+			target:AddNewModifier(caster, self, "modifier_foxenemy_juggled", {duration = 2})
+
+		end)
+	end
+end
+
+modifier_fox_juggle = modifier_fox_juggle or class({})
+
+function modifier_fox_juggle:IsHidden()
+	return false
+end
+
+function modifier_fox_juggle:IsDebuff()
+	return false
+end
+
+function modifier_fox_juggle:IsPurgable()
+	return false
+end
+
+function modifier_fox_juggle:OnCreated(keys)
+	self:StartIntervalThink(0.1)
+end
+
+function modifier_fox_juggle:OnIntervalThink()
+	if IsServer() then
+
+	local caster = self:GetCaster()
+	local casterloc = caster:GetAbsOrigin()
+	local ability = self:GetAbility()
+	self.height = ability:GetSpecialValueFor("bounce_height")
+	self.lengthmultiplier = ability:GetSpecialValueFor("bounce_lengthmultiplier")
+
+	local enemiestobounce = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, 300, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+
+	print(#enemiestobounce)
+
+	for _,unit in pairs(enemiestobounce) do
+		if unit:HasModifier("modifier_foxenemy_juggled") == true then
+			--DER SMADRES OPPAD IGEN
+
+			-- Calculates the knockback position (for Tsunami)
+			local torrent_border = ( unit:GetAbsOrigin() - casterloc ):Normalized() * 100
+			local distance_from_center = ( unit:GetAbsOrigin() - casterloc ):Length2D() * self.lengthmultiplier
+	
+			-- Some randomness to tsunami-torrent for smoother animation
+			randomness_x = math.random() * math.random(-10,10)
+			randomness_y = math.random() * math.random(-10,10)
+	
+			-- Knocks the target up
+			local knockback =
+			{
+				should_stun = 1,
+				knockback_duration = 3,
+				duration = 3,
+				knockback_distance = distance_from_center,
+				knockback_height = self.height,
+				center_x = (casterloc + torrent_border).x + randomness_x,
+				center_y = (casterloc + torrent_border).y + randomness_y,
+				center_z = (casterloc + torrent_border).z
+			}
+	
+			-- Apply knockback on enemies hit
+			unit:RemoveModifierByName("modifier_knockback")
+			unit:AddNewModifier(caster, self, "modifier_knockback", knockback)
+			unit:AddNewModifier(caster, self, "modifier_imba_torrent_phase", {duration = 3})
+			caster:AddNewModifier(caster, self, "modifier_fox_juggle", {duration = 3})
+	
+			Timers:CreateTimer(1, function()
+
+				unit:AddNewModifier(caster, self, "modifier_foxenemy_juggled", {duration = 2})
+
+			end)
+
+		end
+	end
+end
+end
+
+
+
+
+
+----
+modifier_foxenemy_juggled = modifier_foxenemy_juggled or class({})
+
+function modifier_foxenemy_juggled:IsHidden()
+	return false
+end
+
+function modifier_foxenemy_juggled:IsDebuff()
+	return true
+end
+
+function modifier_foxenemy_juggled:IsPurgable()
+	return false
+end
+
+function modifier_foxenemy_juggled:OnCreated(keys)
+	
+end
