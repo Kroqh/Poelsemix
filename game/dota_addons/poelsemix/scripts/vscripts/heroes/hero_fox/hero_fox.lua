@@ -33,10 +33,7 @@ function fox_shine:OnSpellStart()
 		-- Start skill cooldown.
 		caster:AddNewModifier(caster, ability, active_modifier, {duration = self.duration})
 
-		-- Run visual + sound
-		local shield_pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_antimage/antimage_blink_end_glow.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
-		ParticleManager:ReleaseParticleIndex(shield_pfx)
-		caster:EmitSound("Hero_Antimage.SpellShield.Block")
+	
 	end
 end
 
@@ -315,3 +312,173 @@ end
 function modifier_imba_spellshield_scepter_recharge:IsPurgable() return false end
 function modifier_imba_spellshield_scepter_recharge:IsDebuff() return false end
 function modifier_imba_spellshield_scepter_recharge:RemoveOnDeath() return false end
+
+
+
+
+
+
+
+
+
+--E
+------------------------------------
+-----    ROLLING THUNDER       -----
+------------------------------------
+fox_wavedash = fox_wavedash or class({})
+--LinkLuaModifier("modifier_imba_gyroshell_roll", "hero/hero_pangolier.lua", LUA_MODIFIER_MOTION_NONE) 				------|
+--LinkLuaModifier("modifier_imba_gyroshell_ricochet", "hero/hero_pangolier.lua", LUA_MODIFIER_MOTION_NONE)			------|  IMBA MODIFIERS (not used atm)
+--LinkLuaModifier("modifier_imba_gyroshell_stun", "hero/hero_pangolier.lua", LUA_MODIFIER_MOTION_NONE)				------|
+--LinkLuaModifier("modifier_imba_pangolier_gyroshell_bounce", "hero/hero_pangolier.lua", LUA_MODIFIER_MOTION_NONE)	------|
+LinkLuaModifier("modifier_fox_wavedash", "heroes/hero_fox/hero_fox", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_fox_wavedash_dash", "heroes/hero_fox/hero_fox", LUA_MODIFIER_MOTION_NONE)
+
+function fox_wavedash:GetAbilityTextureName()
+	return "pangolier_gyroshell"
+end
+
+function fox_wavedash:IsHiddenWhenStolen() return false end
+function fox_wavedash:IsStealable() return true end
+function fox_wavedash:IsNetherWardStealable() return false end
+
+function fox_wavedash:GetManaCost(level)
+	local manacost = self.BaseClass.GetManaCost(self, level)
+
+	return manacost
+end
+
+function fox_wavedash:GetCastPoint()
+	local cast_point = self.BaseClass.GetCastPoint(self)
+
+	return cast_point
+end
+
+function fox_wavedash:OnSpellStart()
+	-- Ability properties
+	local caster = self:GetCaster()
+	local ability = self
+	local roll_modifier = "modifier_pangolier_gyroshell" --Vanilla
+	--local roll_modifier = "modifier_imba_gyroshell_roll" --Imba
+
+	-- Ability specials
+	local tick_interval = ability:GetSpecialValueFor("tick_interval")
+	local ability_duration = ability:GetSpecialValueFor("duration") -- Bruges
+
+
+	-- Play animation
+	caster:StartGesture(ACT_DOTA_CAST_ABILITY_4)
+
+
+	--Apply a basic purge
+	caster:Purge(false, true, false, false, false)
+
+	--Starts rolling (Vanilla modifier for now)
+	--caster:AddNewModifier(caster, ability, roll_modifier, {duration = ability_duration})
+
+	--starts checking for hero impacts
+	caster:AddNewModifier(caster, ability, "modifier_fox_wavedash", {duration = ability_duration})
+end
+
+	
+
+
+
+
+
+modifier_fox_wavedash = modifier_fox_wavedash or class({})
+function modifier_fox_wavedash:OnCreated()
+	-- Ability properties
+	self.stun_modifier = "modifier_imba_gyroshell_stun"
+	self.collision_modifier = "modifier_imba_gyroshell_ricochet"
+	self.shield_crash = "modifier_imba_shield_crash_jump"
+	self.end_sound = "Hero_Pangolier.Gyroshell.Stop"
+	-- Ability specials
+	self.tick_interval = self:GetAbility():GetSpecialValueFor("tick_interval")
+	
+	if IsServer() then
+		--play initial roll gesture
+		self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_4)
+	
+
+		--declaring variables
+		self.initial_direction = self:GetCaster():GetForwardVector() --will be needed to stop turning after pangolier turn 180°
+		self.issued_order = false --is pangolier turning?
+		self.boosted_turn = true --is pangolier turning faster? (on start, collision, jump)
+		self.boosted_turn_time = 0 --will count how many ticks have been passed with boosted turn rate
+		--start modifier interval thinking
+		self:StartIntervalThink(self.tick_interval)
+	end
+end
+
+
+function modifier_fox_wavedash:IsHidden() return false end
+function modifier_fox_wavedash:IsPurgable() return false end
+function modifier_fox_wavedash:IsDebuff() return false end
+function modifier_fox_wavedash:IgnoreTenacity() return true end
+function modifier_fox_wavedash:IsMotionController() return true end
+function modifier_fox_wavedash:GetMotionControllerPriority() return DOTA_MOTION_CONTROLLER_PRIORITY_MEDIUM end
+
+function modifier_fox_wavedash:DeclareFunctions()
+	local decFuns =
+		{
+			MODIFIER_EVENT_ON_ATTACK_START,
+		}
+	return decFuns
+end
+
+function modifier_fox_wavedash:OnIntervalThink()
+
+	--Interrupt if Pangolier has been stunned, rooted or taunted
+	if self:GetCaster():IsStunned() or self:GetCaster():IsRooted() or self:GetCaster():GetForceAttackTarget() then
+		 return self:Destroy()
+		
+	end
+
+	--Actual dash
+	self:GetCaster():AddNewModifier(self:GetCaster(), self, "modifier_fox_wavedash_dash", {duration = self.tick_interval-0.5}) 
+	
+	-- Check Motion controllers
+	if not self:CheckMotionControllers() then
+		self:Destroy()
+		return nil
+	end
+
+	--Anim
+	self:GetCaster():StartGesture(ACT_DOTA_OVERRIDE_ABILITY_3)
+
+		-- Disjointing everything
+		ProjectileManager:ProjectileDodge(self:GetCaster())
+end
+
+function modifier_fox_wavedash:OnAttackStart()
+	self:GetCaster():RemoveModifierByName("modifier_fox_wavedash")
+end
+
+
+
+
+
+modifier_fox_wavedash_dash = modifier_fox_wavedash_dash or class({})
+function modifier_fox_wavedash_dash:OnCreated()	
+	self.forced_direction = self:GetCaster():GetForwardVector()
+	self.forced_distance = 50
+	self.forced_speed = 300 * 1/30	-- * 1/30 gives a duration of ~0.4 second push time (which is what the gamepedia-site says it should be)
+	self.forced_traveled = 0
+
+	self:OnIntervalThink()
+	self:StartIntervalThink(0.01)
+end
+
+function modifier_fox_wavedash_dash:OnIntervalThink()
+	local caster = self:GetCaster()
+	print(self.forced_distance)
+	if self.forced_traveled < self.forced_distance then
+		caster:SetAbsOrigin(caster:GetAbsOrigin() + self.forced_direction * self.forced_speed)
+		FindClearSpaceForUnit(caster, caster:GetAbsOrigin() + self.forced_direction * self.forced_speed, true)
+		self.forced_traveled = self.forced_traveled + (self.forced_direction * self.forced_speed):Length2D()
+		
+
+	else
+		caster:InterruptMotionControllers(true)
+	end
+end

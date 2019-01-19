@@ -3,12 +3,12 @@
 	// HERO: Sven
 	"override_hero"	"npc_dota_hero_pangolier"			// Hero to override
 	"model"	"models/fox/fox.vmdl"
-	"ModelScale"	"1.3"
+	"ModelScale"	"1"
 	"DisableWearables" "1"
 	
 	"Ability1" "ha_gay"				
 	"Ability2" "fox_shine"
-	"Ability3" "sick_dodge"
+	"Ability3" "fox_wavedash"
 	"Ability6" "awaken"
 	"AttributeBaseStrength"		"20"
 	"AttributeBaseIntelligence"	"40"
