@@ -215,7 +215,7 @@
 			"02"
 			{
 				"var_type" "FIELD_INTEGER"
-				"movement_speed" "75"
+				"movement_speed" "15"
 			}
 			"03"
 			{
@@ -1302,6 +1302,442 @@
 			}
 		}
 	}
+	// Rewrite of Drum of Endurance
+	// Author: Rook
+	// Date: February 4, 2015
+	
+	
+	//mangler magicblockd
+	"item_golden_horns"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"ID"							"1185"  //Valve's version of this item uses the ID "185".
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_golden_horns"
+		"FightRecapLevel"				"1"
+		
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"45"
+		"AbilityManaCost"				"0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1875"
+		"ItemShopTags"					"str;agi;int;damage;move_speed;attack_speed;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"drum;horns;golden;guld hornene;pipe"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+				"precache"
+		{
+			"soundfile" "soundevents/items_soundevent.vsndevts"
+		}		
+		"AbilitySpecial"
+		{
+			
+			"01"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"bonus_int"							"6"
+			}
+			"02"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"bonus_agi"							"3"
+			}
+			"03"
+			{
+				
+				"var_type"								"FIELD_INTEGER"
+				"bonus_str"							"7"
+			}
+			"04"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"aura_bonus_movement_speed"			"20"
+			}
+			"05"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"absorb_amount"								"500"
+			}
+			"06"
+			{
+				"var_type"								"FIELD_INTEGER"	
+				"endurance_bonus_movement_speed_pct"	"15"
+			}
+			"07"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"endurance_duration"					"10.0"
+			}
+			"08"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"aura_radius"							"900"
+			}
+			"09"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"endurance_radius"						"900"
+			}
+			
+			"10"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"mresistaura"							"10"
+			}
+			"11"
+			{
+				"var_type"								"FIELD_INTEGER"
+				"mresist"								"30"
+			}
+			"12"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"hpregen"								"6.5"
+			}
+			"13"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"hpregenaura"								"2.0"
+			}
+			"14"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"manaregen"								"1.0"
+			}
+			"15"
+			{
+			"var_type"								"FIELD_INTEGER"
+				"aura_bonus_attack_speed"				"40"	
+			}
+	
+			
+			
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"items/item_golden_h.lua"
+				"Function"				"use"
+				"EnduranceRadius"		"%endurance_radius"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_golden_horns"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_int"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"			"%manaregen"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%mresist"
+				}
+			}
+			"modifier_item_golden_horns_aura_emitter"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				
+				"Aura" 					"modifier_item_golden_horns_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%hpregen"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_golden_horns_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"		"%aura_bonus_movement_speed"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"		"%mresistaura"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%hpregenaura"
+				}
+			}
+			"modifier_item_golden_horns_active"
+			{
+				"Duration"			"%endurance_duration"
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsBuff"			"1"
+				"IsDebuff"			"0"
+				"IsPurgable"		"1"
+				
+				"EffectName"			"particles/items_fx/drum_of_endurance_buff.vpcf"
+				"EffectAttachType"		"follow_origin"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%endurance_bonus_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%endurance_bonus_movement_speed_pct"
+					
+				}
+				
+				
+				
+					
+			}
+			"modifier_gh_spellshield"
+			{
+			
+			"Duration"			"%endurance_duration"
+			"OnCreated"
+				{
+				"RunScript"
+					{
+						"ScriptFile"			"items/item_golden_h.lua"
+						"Function"				"flame_guard_init"
+					}
+				}	
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"items/item_golden_h.lua"
+						"Function"				"flame_guard_on_take_damage"
+						"Damage"				"%attack_damage"
+						"modifier"				"modifier_gh_spellshield"
+					}
+				}
+							"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"items/item_golden_h.lua"
+						"Function"				"flame_guard_stop_listening"
+					}
+				}
+			}
+		}
+	}
+	"item_greenlandish_guard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"ID"							"3026"  //Valve's version of this item uses the ID "119".
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"Model"							"models/props_gameplay/red_box.vmdl" 
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_greenlands_guard"
+		"FightRecapLevel"				"1"
+	
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"100"
+		"AbilityCastPoint"				"0.0"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10610"
+		"ItemShopTags"					"int;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"shiva's guard;guard;greenland;atos"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_intellect"				"75"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_agi"					"15"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_str"					"30"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_armor"				"18"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"blast_final_radius"			"900"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"blast_speed_per_second"		"350"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"blast_damage"					"30"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"aura_ms"						"-20"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"blast_debuff_duration"			"0.2"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"blast_vision_radius"			"800"
+			}
+			"11"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"blast_vision_duration"			"2"
+			}
+					"12"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"aura_radius"					"900"
+			}
+					"13"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"aura_attack_speed"				"-40"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"					"items/item_greenland.lua"
+				"Function"						"item_shivas_guard_datadriven_on_spell_start"
+				"BlastFinalRadius"				"%blast_final_radius"
+				"BlastSpeedPerSecond"			"%blast_speed_per_second"
+				"BlastDamage"					"%blast_damage"
+				"BlastVisionRadius"				"%blast_vision_radius"
+				"BlastVisionDuration"			"%blast_vision_duration"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_shivas_guard_datadriven"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_intellect"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_agi"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+				}
+			}
+			"modifier_item_shivas_guard_datadriven_enemy_aura_emitter"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				
+				"Aura" 					"modifier_item_shivas_guard_datadriven_enemy_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"0"
+			}
+			"modifier_item_shivas_guard_datadriven_enemy_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"			"%aura_ms"
+				}
+				
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_greenland.lua"
+						"Function"			"modifier_item_shivas_guard_datadriven_enemy_aura_on_interval_think"
+					}
+				}
+				
+				"ThinkInterval"			".03"
+				//This debuff aura is invisible to enemies unless its emitting unit is visible to them,
+				//so regularly check to see if the modifier should be visible.
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_greenland.lua"
+						"Function"			"modifier_item_shivas_guard_datadriven_enemy_aura_on_interval_think"
+					}
+				}
+				
+				"OnDestroy"  //Remove the visible modifier, if it is currently on the unit.
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_greenland.lua"
+						"Function"			"modifier_item_shivas_guard_datadriven_enemy_aura_on_destroy"
+					}
+				}
+			}
+			//A visible modifier that should appear to enemies only if they are affected by the debuff aura and its emitter
+			//is visible to their team.
+			"modifier_item_shivas_guard_datadriven_enemy_aura_visible"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsBuff"			"0"
+				"IsDebuff"			"1"
+				"IsPurgable"		"0"
+			}
+			"modifier_item_shivas_guard_datadriven_blast_debuff"
+			{
+				"Duration"			"%blast_debuff_duration"
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsBuff"			"0"
+				"IsDebuff"			"1"
+				"IsPurgable"		"1"
+				
+				"StatusEffectName"     "particles/status_fx/status_effect_frost.vpcf"
+				"StatusEffectPriority" "10"
+				
+				"States"
+	    {
+	        "MODIFIER_STATE_ROOTED" "MODIFIER_STATE_VALUE_ENABLED"
+	    }         
+			}
+		}
+	}
 	"item_hike_shox"
 	{
 		"BaseClass"             		"item_datadriven"
@@ -1698,6 +2134,164 @@
 			}
 		}
 	}
+	"item_kalmar_force_staff"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+	  	"BaseClass"                 "item_datadriven"
+	  	"AbilityTextureName"        "kal_staff"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH | DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CUSTOM"
+		
+	
+		"AbilityCastRange"        "800"
+		"AbilityCastPoint"        "0.0"
+		"AbilityCooldown"       "25.0"
+	  	
+	
+	  	"ItemCost"					"8800"
+	  	"ID"						"3021"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"          "int;damage;attack_speed;hard_to_tag"
+		"ItemQuality"         "rare"
+		"ItemAliases"         "fs;force staff;kalmar force staff"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_intellect" "40"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_health_regen" "12"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"push_length" "1800"
+			}
+			"04"
+			{
+				"var_type" "FIELD_INTEGER"
+				"push_speed" "3500"
+			}
+			"05"
+			{
+				"var_type" "FIELD_FLOAT"
+				"push_duration" "0.4"
+			}
+			"06"
+			{
+				"var_type" "FIELD_INTEGER"
+				"tree_radius" "100"
+			}
+			"07"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_attack_speed" "20"
+			}
+			"08"
+			{
+				"var_type" "FIELD_FLOAT"
+				"bonus_mana_regen" "3.0"
+			}
+			"09"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_damage" "20"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile" "items/item_force_staff.lua"
+				"Function" "ForceStaff"
+				"Target" "TARGET"
+			}
+	
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_item_force_staff_effect"
+				"Target" 		"TARGET"
+			}
+			"ApplyMotionController"
+			// For this: gfycat.com/BraveHideousGiantschnauzer -> check: bit.ly/1KWulqA
+			{
+			    "Target" 		"TARGET"
+			    "ScriptFile"    "items/item_force_staff.lua"
+			    "HorizontalControlFunction" "ForceHorizontal"   
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"DOTA_Item.ForceStaff.Activate"
+				"Target" 		"TARGET"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_danish_force_staff_passive"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_health_regen"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+				}
+			}
+			
+				"modifier_item_force_staff_effect"
+				{ 
+	
+					"Duration"  "%push_duration"
+	
+					"OverrideAnimation" "ACT_DOTA_FLAIL"
+	
+					"StatusEffectName"     "particles/status_fx/status_effect_forcestaff.vpcf"
+					"StatusEffectPriority"  "10"
+					
+					"OnCreated"
+					{
+						"AttachEffect"
+						{
+							"EffectName"  "particles/items_fx/force_staff.vpcf"
+							"EffectAttachType" "follow_origin"
+							"Target"  "TARGET"
+						}
+					}
+	
+					"ThinkInterval"  "0.03"
+					"OnIntervalThink"
+					{
+						"DestroyTrees"
+						{
+							"Target"  "TARGET"
+							"Radius"  "%tree_radius"
+						}
+	
+					}
+	
+				}
+		}
+	}
 	"item_kartofler"
 	{
 		// General
@@ -1744,6 +2338,137 @@
 			}
 		}
 	}
+	"item_kms_gun"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"ID"							"3024"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+			"BaseClass"                     "item_datadriven"
+			// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"          "deny;suicide;consumable"
+		"ItemAliases"         "suicide gun;kms;gun"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+				
+				
+	
+			// Stats	
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCooldown"				"200.0"
+			
+			// Item Info
+			//-------------------------------------------------------------------------------------------------------------
+			"ItemCost"						"300"
+			"ItemQuality"					"consumable"
+			"ItemPurchasable"				"1"
+			"ItemStackable"					"0"
+			"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+			"ItemPermanent"					"0"
+			"ItemStockMax"					"1"
+			"ItemStockTime"					"240"
+			"ItemInitialCharges"			"1"
+			"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+			"ItemContributesToNetWorthWhenDropped"	"0"
+			"IsTempestDoubleClonable"		"0"
+			"AbilityTextureName"        "kms_gun"
+			"FightRecapLevel"				"2"
+			
+			
+	
+			"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName" "kms_gun"
+				"Target" 		"CASTER"
+			}
+			"RunScript"
+			{
+				"ScriptFile"					"items/item_kms_gun.lua"
+				"Function"						"kms"
+			}
+	
+	
+			"SpendCharge"
+			{}
+	
+		}
+	
+		}
+	"item_laser_surgery"
+		{
+			"BaseClass"						"item_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+			"AbilityTextureName"			"eye_laser"
+			"ItemShopTags"					"sight;gem;eye"
+			"ItemQuality"					"uncommon"
+			"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+			"ItemStackable"					"0"
+			"ItemPermanent"					"0"
+			"ItemInitialCharges"			"1"
+			"ItemCost"						"5000"
+	
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type"				"FIELD_INTEGER"
+					"radius"				"800"
+				}
+			}
+	
+			"OnSpellStart"
+			{
+				"ApplyModifier"
+				{
+					"ModifierName"	"modifier_shard_of_true_sight"
+					"Target" 		"CASTER"
+				}
+				"RunScript"
+				{
+					"ScriptFile"	"items/gem.lua"
+					"Function"		"SpendChargeRight"
+				}
+			}
+	
+			"Modifiers"
+			{
+				"modifier_shard_of_true_sight"
+				{
+					"IsPurgable"		"0"
+					"IsBuff"			"1"
+					"AllowIllusionDuplicate"	"0"
+					
+					"OnCreated"
+					{
+						"RunScript"
+						{
+							"ScriptFile"	"items/gem.lua"
+							"Function"		"IllusionModifierCleaner"
+							"modifier"		"modifier_shard_of_true_sight"
+						}
+					}
+	
+					"Aura"          	"modifier_truesight_reveal"
+					"Aura_Radius"   	"%radius"
+					"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Aura_Types"    	"DOTA_UNIT_TARGET_ALL"
+					"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				}
+	
+				"modifier_truesight_reveal"
+				{
+					"IsHidden"			"1"
+					"Duration"			"0.5"
+					"Priority"			"MODIFIER_PRIORITY_HIGH"
+					"States"
+					{
+						"MODIFIER_STATE_INVISIBLE"		"MODIFIER_STATE_VALUE_DISABLED"
+					}
+				}
+			}
+		}
 	"item_mensa_iq"
 	{
 		"BaseClass"             		"item_datadriven"
@@ -1948,6 +2673,11 @@
 				"var_type" "FIELD_INTEGER"
 				"cdr" "35"
 			}
+			"06"
+			{
+				"var_type" "FIELD_INTEGER"
+				"health" "575"
+			}
 		}
 		
 		"Modifiers"
@@ -1966,6 +2696,7 @@
 	
 					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%dmg"
 					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%cdr"
+					"MODIFIER_PROPERTY_HEALTH_BONUS" "%health"
 				}
 			}
 		}
@@ -2192,6 +2923,34 @@
 				"01" "item_flaeskesteg;item_sovs_kartofler"
 			}
 	  	}
+	"item_recipe_golden_horns"
+	{
+	  	"BaseClass"                 "item_datadriven"
+	  	"AbilityTextureName"        "recipe"
+	  	"Model"						"models/props_gameplay/recipe.mdl"
+	  	"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_golden_horns"
+		"ItemRequirements"
+		{
+			"01" "item_ancient_janggo;item_pipe;"
+		}
+	}
+	"item_recipe_greenlandish_guard"
+	  	{
+	  		"BaseClass"                 "item_datadriven"
+	  		"AbilityTextureName"        "recipe"
+	  		"Model"						"models/props_gameplay/recipe.mdl"
+	  		"ItemCost"					"0"
+			"ItemShopTags"				""
+			"ItemRecipe"				"1"
+			"ItemResult"				"item_greenlandish_guard"
+			"ItemRequirements"
+			{
+				"01" "item_rod_of_atos;item_shivas_guard;item_rod_of_atos"
+			}
+	  	}
 	"item_recipe_hike_shox"
 	{
 	  	"BaseClass"                 "item_datadriven"
@@ -2248,6 +3007,21 @@
 			"01" "item_assault;item_blade_mail"
 		}
 	}
+	"item_recipe_kalmar_force_staff"
+	  	{
+	  		"BaseClass"                 "item_datadriven"
+	  		"AbilityTextureName"        "old_recipe"
+	  		"Model"						"models/props_gameplay/recipe.mdl"
+	  		"ItemCost"					"0"
+	  		"ID"						"3020"
+			"ItemShopTags"				""
+			"ItemRecipe"				"1"
+			"ItemResult"				"item_kalmar_force_staff"
+			"ItemRequirements"
+			{
+				"01" "item_swedish_force_staff;item_danish_force_staff"
+			}
+	  	}
 	"item_recipe_mensa_iq"
 	  	{
 	  		"BaseClass"                 "item_datadriven"
@@ -2330,6 +3104,21 @@
 			"ItemRequirements"
 			{
 				"01" "item_kartofler;item_brun_sovs"
+			}
+	  	}
+	"item_recipe_swedish_force_staff"
+	  	{
+	  		"BaseClass"                 "item_datadriven"
+	  		"AbilityTextureName"        "old_recipe"
+	  		"Model"						"models/props_gameplay/recipe.mdl"
+	  		"ItemCost"					"500"
+	  		"ID"						"3023"
+			"ItemShopTags"				""
+			"ItemRecipe"				"1"
+			"ItemResult"				"item_swedish_force_staff"
+			"ItemRequirements"
+			{
+				"01" "item_oblivion_staff;item_force_staff"
 			}
 	  	}
 	"item_recipe_vaernepligt"
@@ -2661,6 +3450,257 @@
 			}
 		}
 	}
+	"item_swedish_force_staff"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+	  	"BaseClass"                 "item_datadriven"
+	  	"AbilityTextureName"        "sve_staff"
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH | DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CUSTOM"
+		
+	
+		"AbilityCastRange"        "800"
+		"AbilityCastPoint"        "0.0"
+		"AbilityCooldown"       "20.0"
+	  	
+	
+	  	"ItemCost"					"3900"
+	  	"ID"						"3022"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"          "int;damage;attack_speed;hard_to_tag"
+		"ItemQuality"         "rare"
+		"ItemAliases"         "fs;force staff;swedish force staff"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_intellect" "20"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_health_regen" "6"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"push_length" "1200"
+			}
+			"04"
+			{
+				"var_type" "FIELD_INTEGER"
+				"push_speed" "3000"
+			}
+			"05"
+			{
+				"var_type" "FIELD_FLOAT"
+				"push_duration" "0.4"
+			}
+			"06"
+			{
+				"var_type" "FIELD_INTEGER"
+				"tree_radius" "100"
+			}
+			"07"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_attack_speed" "10"
+			}
+			"08"
+			{
+				"var_type" "FIELD_FLOAT"
+				"bonus_mana_regen" "1.5"
+			}
+			"09"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_damage" "10"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile" "items/item_force_staff.lua"
+				"Function" "ForceStaffB"
+				"Target" "TARGET"
+			}
+	
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_item_force_staff_effect"
+				"Target" 		"TARGET"
+			}
+			"ApplyMotionController"
+			// For this: gfycat.com/BraveHideousGiantschnauzer -> check: bit.ly/1KWulqA
+			{
+			    "Target" 		"TARGET"
+			    "ScriptFile"    "items/item_force_staff.lua"
+			    "HorizontalControlFunction" "ForceHorizontal"   
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"DOTA_Item.ForceStaff.Activate"
+				"Target" 		"TARGET"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_item_danish_force_staff_passive"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%bonus_health_regen"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%bonus_attack_speed"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%bonus_damage"
+				}
+			}
+			
+				"modifier_item_force_staff_effect"
+				{ 
+	
+					"Duration"  "%push_duration"
+	
+					"OverrideAnimation" "ACT_DOTA_FLAIL"
+	
+					"StatusEffectName"     "particles/status_fx/status_effect_forcestaff.vpcf"
+					"StatusEffectPriority"  "10"
+					
+					"OnCreated"
+					{
+						"AttachEffect"
+						{
+							"EffectName"  "particles/items_fx/force_staff.vpcf"
+							"EffectAttachType" "follow_origin"
+							"Target"  "TARGET"
+						}
+					}
+	
+					"ThinkInterval"  "0.03"
+					"OnIntervalThink"
+					{
+						"DestroyTrees"
+						{
+							"Target"  "TARGET"
+							"Radius"  "%tree_radius"
+						}
+	
+					}
+	
+				}
+		}
+	}
+	"item_tordenskjold"
+		{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"ID"							"3027"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+			"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"BaseClass"                     "item_datadriven"
+			// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"          "ignite;consumable"
+		"ItemAliases"         "ignite;match;torden"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+			
+		"AbilityCastRange"        "650"
+		"AbilityCastPoint"        "0.1"	
+				
+	
+			// Stats	
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCooldown"				"10.0"
+			
+			// Item Info
+			//-------------------------------------------------------------------------------------------------------------
+			"ItemCost"						"150"
+			"ItemQuality"					"consumable"
+			"ItemPurchasable"				"1"
+			"ItemStackable"					"1"
+			"ItemPermanent"					"0"
+			"ItemStockMax"					"5"
+			"ItemStockTime"					"60"
+			"ItemInitialCharges"			"1"
+			"ItemContributesToNetWorthWhenDropped"	"0"
+			"IsTempestDoubleClonable"		"0"
+			"AbilityTextureName"        "tskjold"
+			"FightRecapLevel"				"2"
+			
+		"precache"
+		{
+			"particle"			"particles/units/heroes/hero_jakiro/jakiro_macropyre_firehit.vpcf"
+	
+		}	
+	
+			"OnSpellStart"
+		{
+			"ApplyModifier"
+	            {
+	                "ModifierName"  "modifier_tsignite"
+	                "Target"        "TARGET"
+	                "Duration"      "5"
+	            }
+				"FireSound"
+			{
+				"EffectName" "tskjold"
+				"Target" 		"CASTER"
+			}
+			"SpendCharge"
+			{}
+		
+		}
+		"Modifiers"
+		{
+		"modifier_tsignite"
+	            {
+	                "Passive"           "0"
+	                "IsHidden"          "0"
+	                "IsDebuff"          "1"
+	        
+	                "ThinkInterval"  "1"
+	                "OnIntervalThink"
+	                {			
+			    	    
+	                    "Damage"
+	                    {
+	                        "Target"    "TARGET"
+	                        "Type"      "DAMAGE_TYPE_PURE"
+	                        "Damage"    "100"
+	                    }
+					
+							"FireEffect"
+						{
+						"EffectName" 	"particles/units/heroes/hero_jakiro/jakiro_macropyre_firehit.vpcf"
+						"EffectAttachType" "follow_origin"
+						"Target"	"TARGET"
+	
+						}
+	
+	              }
+		}
+		}
+		}
+		
 	//=================================================================================================================
 	// Treasure Chest
 	//=================================================================================================================
