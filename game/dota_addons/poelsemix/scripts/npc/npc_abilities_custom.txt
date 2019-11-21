@@ -5429,7 +5429,7 @@
 	
 			"modifier_stasis_trap_invisibility_datadriven"
 			{
-				"IsHidden"		"1"
+				"IsHidden"		"0"
 				"IsPurgable"	"0"
 	
 				"States"
