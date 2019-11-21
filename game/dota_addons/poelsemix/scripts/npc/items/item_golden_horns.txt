@@ -39,18 +39,18 @@
 		"01"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_int"							"6"
+			"bonus_int"							"8"
 		}
 		"02"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_agi"							"3"
+			"bonus_agi"							"8"
 		}
 		"03"
 		{
 			
 			"var_type"								"FIELD_INTEGER"
-			"bonus_str"							"7"
+			"bonus_str"							"8"
 		}
 		"04"
 		{
@@ -70,7 +70,7 @@
 		"07"
 		{
 			"var_type"								"FIELD_FLOAT"
-			"endurance_duration"					"10.0"
+			"endurance_duration"					"12.0"
 		}
 		"08"
 		{
@@ -96,7 +96,7 @@
 		"12"
 		{
 			"var_type"								"FIELD_FLOAT"
-			"hpregen"								"6.5"
+			"hpregen"								"9.0"
 		}
 		"13"
 		{
@@ -106,7 +106,7 @@
 		"14"
 		{
 			"var_type"								"FIELD_FLOAT"
-			"manaregen"								"1.0"
+			"manaregen"								"2.0"
 		}
 		"15"
 		{
@@ -143,6 +143,7 @@
 				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_int"
 				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"			"%manaregen"
 				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%mresist"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"		"%hpregen" 
 			}
 		}
 		"modifier_item_golden_horns_aura_emitter"
@@ -184,7 +185,7 @@
 			
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%endurance_bonus_attack_speed"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_bonus_attack_speed"
 				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%endurance_bonus_movement_speed_pct"
 				
 			}
