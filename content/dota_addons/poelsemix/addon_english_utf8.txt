@@ -24,7 +24,6 @@
 		
           		
 		"npc_dota_hero_bounty_hunter"		"Bounty Hunter (Modified)"
-		"npc_dota_hero_broodmother"			"Broodmother (Modified)"
 		"npc_dota_hero_necrolyte"			"Necrophos (Modified)"
 		"npc_dota_hero_riki"				"Riki (Modified)"
 		"npc_dota_hero_silencer"			"Silencer (Modified)"
@@ -161,10 +160,169 @@
 
 
 		// ******************** ITEMS ********************
+//=================================================================================================================
+// Teemo
+//=================================================================================================================
+		
+"npc_dota_hero_venomancer"                                                        "Teemo"
+"teemo"                                                                           "Teemo"
 
-	
+		"DOTA_Tooltip_ability_blinding_dart"                                              "Blinding Dart"
+		"DOTA_Tooltip_ability_blinding_dart_Description"                                  "Obscures an enemy's vision with a powerful venom, dealing damage to the target unit and blinding it for the duration.<br></br><br></br>Scales with Teemo's Intelligence.<br></br><br></br>Damage = damage + teemo int * int scaling"
+		"DOTA_Tooltip_ability_blinding_dart_duration"                                     "DURATION:"
+		"DOTA_Tooltip_ability_blinding_dart_damage"                                       "DAMAGE:"
+		"DOTA_Tooltip_ability_blinding_dart_int_scaling"                                  "INT SCALING:"
+		//"DOTA_Tooltip_ability_blinding_dart_LinkedSpecialBonus"                           "LINKEDSPECIALBONUS:"
 
+		"DOTA_Tooltip_ability_guerrilla_warfare"                                          "Guerrilla Warfare"
+		"DOTA_Tooltip_ability_guerrilla_warfare_Description"                              "If Teemo stands still and takes no actions for a %wait% seconds, he becomes Invisible indefinitely. After leaving Invisibility, Teemo gains the Element of Surprise, increasing his Attack Speed for %duration% seconds.<br></br><br></br>The attack speed changes depending on Teemo's level."
+		//"DOTA_Tooltip_ability_guerrilla_warfare_wait"                                     "WAIT:"
+				"DOTA_Tooltip_ability_guerrilla_warfare_duration"                                 "DURATION:"
+		"DOTA_Tooltip_ability_guerrilla_warfare_attackspeed"                              "ATTACK SPEED LEVEL 1:"
 
+		"DOTA_Tooltip_ability_guerrilla_warfare_attackspeed6"                             "ATTACK SPEED LEVEL 6:"
+		"DOTA_Tooltip_ability_guerrilla_warfare_attackspeed12"                            "ATTACK SPEED LEVEL 12:"
+		"DOTA_Tooltip_ability_guerrilla_warfare_attackspeed18"                            "ATTACK SPEED LEVEL 18:"
+
+		"DOTA_Tooltip_ability_move_quick"                                                 "Move Quick"
+		"DOTA_Tooltip_ability_move_quick_Description"                                     "Teemo scampers around, passively increasing his Movement Speed until he is struck by an enemy. Activate to multiply the passive bonus by %multiplier%, and prevent it from being stopped by being struck for a short time."
+		"DOTA_Tooltip_ability_move_quick_movement_speed"                                  "%MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_move_quick_multiplier"                                      "MULTIPLIER:"
+		"DOTA_Tooltip_ability_move_quick_duration"                                        "DURATION:"
+
+		"DOTA_Tooltip_ability_noxious_trap"                                               "Noxious Trap"
+		"DOTA_Tooltip_ability_noxious_trap_Description"                                   "Teemo throws an explosive poisonous trap using one of the mushrooms stored in his pack. If an enemy steps on the trap, it will release a poisonous cloud, slowing enemies and damaging them over %duration% seconds. Shrooms last for %trap_duration% seconds.<br></br><br></br>Scales with Teemo's Intelligence.<br></br><br></br>Damage per sec = damage + teemo int * int scaling"
+		"DOTA_Tooltip_ability_noxious_trap_duration"                                      "DURATION:"
+		//"DOTA_Tooltip_ability_noxious_trap_tick"                                          "TICK:"
+		"DOTA_Tooltip_ability_noxious_trap_damage"                                        "DAMAGE PER SEC:"
+		"DOTA_Tooltip_ability_noxious_trap_max_stacks"                                    "MAX TRAPS:"
+		//"DOTA_Tooltip_ability_noxious_trap_trap_duration"                                 "TRAP DURATION:"
+		//"DOTA_Tooltip_ability_noxious_trap_radius"                                        "RADIUS:"
+		"DOTA_Tooltip_ability_noxious_trap_movement_slow"                                 "%MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_noxious_trap_charge_time"                                   "CHARGE TIME:"
+		"DOTA_Tooltip_ability_noxious_trap_int_scaling"                                   "INT SCALING:"
+
+		"DOTA_Tooltip_ability_special_bonus_teemo_2"                                      "Toxic Shot +60 on-hit damage"
+		//"DOTA_Tooltip_ability_special_bonus_teemo_2_Description"                          ""
+		//"DOTA_Tooltip_ability_special_bonus_teemo_2_value"                                "VALUE:"
+
+		"DOTA_Tooltip_ability_special_bonus_teemo_3"                                      "Blinding Dart +1 to int scaling"
+		//"DOTA_Tooltip_ability_special_bonus_teemo_3_Description"                          ""
+		//"DOTA_Tooltip_ability_special_bonus_teemo_3_value"                                "VALUE:"
+
+		"DOTA_Tooltip_ability_special_bonus_teemo_4"                                      "Throw 2 more shrooms"
+		"DOTA_Tooltip_ability_special_bonus_teemo_4_Description"                          "Shroom spawns are rotated 50 degrees left and right around Teemo's position."
+
+		"DOTA_Tooltip_ability_toxic_shot"                                                 "Toxic Shot"
+		"DOTA_Tooltip_ability_toxic_shot_Description"                                     "Each of Teemo's attacks will poison the target, dealing damage on impact and each second after for %duration% seconds.<br></br><br></br>Scales with Teemo's Intelligence.<br></br><br></br>Damage on hit = damage on hit + teemo int * int scaling on hit.<br></br><br></br>Damage per sec = damage per sec + teemo int * int scaling per sec."
+		"DOTA_Tooltip_ability_toxic_shot_damage"                                          "DAMAGE PER SECOND:"
+		"DOTA_Tooltip_ability_toxic_shot_duration"                                        "DURATION:"
+		//"DOTA_Tooltip_ability_toxic_shot_tick"                                            "TICK:"
+		"DOTA_Tooltip_ability_toxic_shot_int_scaling_onhit"                               "INT SCALING ON HIT:"
+		"DOTA_Tooltip_ability_toxic_shot_int_scaling_prsec"                               "INT SCALING PR SEC:"
+		"DOTA_Tooltip_ability_toxic_shot_damage_onhit"                                    "DAMAGE ON HIT:"
+		//"DOTA_Tooltip_ability_toxic_shot_LinkedSpecialBonus"                              "LINKEDSPECIALBONUS:"
+
+//=================================================================================================================
+// Urgot
+//=================================================================================================================
+"npc_dota_hero_broodmother"			"Urgot"
+
+		"DOTA_Tooltip_ability_imba_mirana_arrow"                                          "Acid Hunter"
+		"DOTA_Tooltip_ability_imba_mirana_arrow_Description"                              "ACTIVE: Urgot fires a missile in a line, dealing physical damage to the first enemy it hits. <br></br><br></br>Acid Hunter can also directly target enemies affected by Charge Noxian Corrosive Charge, passing over all other enemies to hit them directly, and gaining increased range."
+		"DOTA_Tooltip_ability_imba_mirana_arrow_base_damage"                              "BASE DAMAGE:"
+		"DOTA_Tooltip_ability_imba_mirana_arrow_arrow_distance"							  "MISSILE DISTANCE:"
+
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit"                            "Noxian Corrosive Charge"
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_Description"                "ACTIVE: Urgot launches a corrosive charge to the target location, dealing physical damage to all enemies hit over 5 seconds and reducing their armor for the duration."
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_radius"                     "RADIUS:"
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_cast_range"                 "CAST RANGE:"
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_armor_reduction_pct"        "ARMOR REDUCTION PCT:"
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_cooldown"                   "COOLDOWN:"
+
+		"DOTA_Tooltip_ability_imba_pipe"                                                  "Terror Capacitor"
+		"DOTA_Tooltip_ability_imba_pipe_Description"                                      "ACTIVE: Urgot shields himself"
+		"DOTA_Tooltip_ability_imba_pipe_shield_health"                                    "SHIELD HEALTH:"
+		"DOTA_Tooltip_ability_imba_pipe_duration"                                         "DURATION:"
+
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap"                            "Hyper-Kinetic Position Reverser"
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap_Description"                "ACTIVE: Urgot grants himself damage reduction and channels for 1 second, Suppression the target enemy champion for the duration. Upon completing the channel, Urgot and his target blink to each other's locations.<br></br><br></br>Upgradable with Aghanim's Scepter"
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap_range"                      "RANGE:"
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap_dmg_reduction"              "DMG REDUCTION PERCENTAGE:"
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap_dmg_red_duration"           "DMG REDUCTION DURATION:"
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_e_reduc"                                "Noxian Corrosive Charge Cooldown Halved"
+		"DOTA_Tooltip_ability_special_bonus_urgot_e_reduc_Description"                    "Double the action"
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_q_boost"                                "Acid Hunter Base Cooldown Set To 1"
+		"DOTA_Tooltip_ability_special_bonus_urgot_q_boost_Description"                    "With this you can shoot 60 Acid Hunters per sec."
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_q_boost2"                               "Acid Hunter Base Cooldown Halved"
+		"DOTA_Tooltip_ability_special_bonus_urgot_q_boost2_Description"                   "What the heck!?"
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_r_boost"                                "HKPR(ult) Damage Reduction Duration Doubled"
+		"DOTA_Tooltip_ability_special_bonus_urgot_r_boost_Description"                    "You are a big bøff some time"
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_w_boost"                                "Terror Capacitor Shield Health Doubled"
+		"DOTA_Tooltip_ability_special_bonus_urgot_w_boost_Description"                    "You are a bøff some times"			
+
+//=================================================================================================================
+// Shimakaze
+//=================================================================================================================
+"npc_dota_hero_crystal_maiden"                                                    "Shimakaze"
+"shimakaze"                                                                       "Shimakaze"
+
+"DOTA_Tooltip_ability_ap_shell"                                                   "Type 91 Armor Piercing Shell"
+"DOTA_Tooltip_ability_ap_shell_Description"                                       "Fire a Type 91 Armor Piercing Shell (lol) to lower their magic resist."
+"DOTA_Tooltip_ability_ap_shell_duration"                                          "DURATION:"
+//"DOTA_Tooltip_ability_ap_shell_speed"                                             "SPEED:"
+"DOTA_Tooltip_ability_ap_shell_magic_resist"                                      "%MAGIC RESIST REDUCTION:"
+
+		"DOTA_Tooltip_ability_dangerous_sea"                                              "Dangerous Sea"
+		"DOTA_Tooltip_ability_dangerous_sea_Description"                                  "Shimakaze leaves behind a pool of water which damages and slows nearby enemies. The damage scales with intelligence.<br></br><br></br>Damage = 60 + int * int scaling<br></br><br></br><br>Upgradeable by Aghanim's Scepter.</br>"
+		"DOTA_Tooltip_ability_dangerous_sea_damage"                                       "DAMAGE:"
+		"DOTA_Tooltip_ability_dangerous_sea_duration"                                     "DURATION:"
+		//"DOTA_Tooltip_ability_dangerous_sea_tick_interval"                                "TICK INTERVAL:"
+		"DOTA_Tooltip_ability_dangerous_sea_radius"                                       "RADIUS:"
+		"DOTA_Tooltip_ability_dangerous_sea_move_slow"                                    "%MOVEMENT SPEED SLOW:"
+		//"DOTA_Tooltip_ability_dangerous_sea_duration_slow"                               "DURATION SLOW:"
+		"DOTA_Tooltip_ability_dangerous_sea_int_scaling"                                  "INTELLECT SCALING:"
+		"DOTA_Tooltip_ability_dangerous_sea_int_scaling_aghs"                             "INTELLECT SCALING SCEPTER:"
+		//"DOTA_Tooltip_ability_dangerous_sea_distance_req"                                 "DISTANCE REQ:"
+		
+		"DOTA_Tooltip_ability_destroyer_speed"                                            "Destroyer Speed"
+		"DOTA_Tooltip_ability_destroyer_speed_Description"                                "While moving, Shimakaze builds stacks. Activating this spell at 400 stacks gives Shimakaze a slight movement speed boost."
+		//"DOTA_Tooltip_ability_destroyer_speed_max_stacks"                                 "MAX STACKS:"
+		"DOTA_Tooltip_ability_destroyer_speed_movespeed"                                  "%MOVEMENT SPEED INCREASE:"
+		"DOTA_Tooltip_ability_destroyer_speed_duration"                                   "DURATION:"
+		
+		"DOTA_Tooltip_ability_torpedo"                                                    "Torpedo Salve"
+		"DOTA_Tooltip_ability_torpedo_Description"                                        "Shimakaze launches a torpedo at every hero. Torpedoes damage and stun in an area when they collide with another hero."
+		//"DOTA_Tooltip_ability_torpedo_velocity"                                           "VELOCITY:"
+
+		"DOTA_Tooltip_ability_torpedo_damage"                                             "DAMAGE:"
+		"DOTA_Tooltip_ability_torpedo_stun_duration"                                      "STUN DURATION:"		
+		"DOTA_Tooltip_ability_torpedo_radius"                                             "RADIUS:"
+		//"DOTA_Tooltip_ability_torpedo_search_radius"                                      "SEARCH RADIUS:"
+		
+		"DOTA_Tooltip_ability_wave"                                                       "Wave"
+		"DOTA_Tooltip_ability_wave_Description"                                           "Shimakaze rides a wave to push herself forward."
+		//"DOTA_Tooltip_ability_wave_velocity"                                              "VELOCITY:"
+		"DOTA_Tooltip_ability_wave_range"                                                 "RANGE:"
+		
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_2"                                  "Destroyer Speed sets movespeed cap to %speed%"
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_2_Description"                      "It doesn't show on the HUD, but it works. Trust me."
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_2_speed"                            "SPEED:"
+		
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_3"                                  "2 torpedoes"
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_3_Description"                      ""
+
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_4"                                  "2x torpedo stun duration"
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_4_Description"                      ""
+		
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_1"                                  "Wave +%value% range"
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_1_Description"                      ""
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_1_range"                            "RANGE:"
 //=================================================================================================================
 // Brian
 //=================================================================================================================
@@ -185,18 +343,20 @@
 
 
 
-"DOTA_Tooltip_ability_hurtigbrille"               	                          "Speedy Glasses"
+"DOTA_Tooltip_ability_hurtigbrille"               	                          "Hurtig-Briller"
 		
-"DOTA_Tooltip_ability_hurtigbrille_Description"                                   "Put them on for 5 seconds."
+"DOTA_Tooltip_ability_hurtigbrille_Description"                                   "Put them on boi"
 		
 "DOTA_Tooltip_ability_hurtigbrille_move_up_self"                                  "MOVEMENT SPEED:"
 		
-"DOTA_Tooltip_ability_hurtigbrille_aspeed"                                        "ATTACK SPEED:"
+"DOTA_Tooltip_ability_hurtigbrille_aspeed"                                        "AGILITY:"
+
+"DOTA_Tooltip_ability_hurtigbrille_duration"                                      "DURATION:
 
 
 
 
-"DOTA_Tooltip_ability_red_cecil"                                                  "Red Cecil"
+"DOTA_Tooltip_ability_red_cecil"                                                  "Red 	Cecil"
 
 "DOTA_Tooltip_ability_red_cecil_Description"                                      "Smoking since the age of 12 has its benefits"
 		
@@ -226,15 +386,15 @@
 "DOTA_Tooltip_ability_mokai_bonus_armor"                                          "BONUS ARMOR:"
 
 //modifiers:
-"DOTA_Tooltip_modifier_speed_self"                                                "Speedyglasses"
+"DOTA_Tooltip_modifier_hurtigbrille"                                                "Speedyglasses"
 		
-"DOTA_Tooltip_modifier_speed_self_Description"                                    "Fast as fuck"
+"DOTA_Tooltip_modifier_hurtigbrille_Description"                                    "Fast as fuck"
 
 
 
 "DOTA_Tooltip_smokerlungs"                                                        "Second hand smoking"
 		
-"DOTA_Tooltip_smokerlungs_Description" 						  "Not used to smoking side-effects"
+"DOTA_Tooltip_smokerlungs_Description" 								  "Not used to smoking side-effects"
 
 "DOTA_Tooltip_Mokai"                                                              "Drunk on mokais"
 		
@@ -399,7 +559,7 @@
 "DOTA_Tooltip_ability_multiclick_bat_upgraded"                                    "BAT UPGRADED:"
 "DOTA_Tooltip_ability_multiclick_stacks"                                          "STACKS:"
 "DOTA_Tooltip_ability_multiclick_duration"                                        "DURATION:"
-"DOTA_Tooltip_ability_multiclick_Lore"                                            "En mand fortalte mig, at krogh er bøsse. Det var sandt."
+"DOTA_Tooltip_ability_multiclick_Lore"                                            "En mand fortalte mig, at Steven er bøsse. Det var sandt."
 
 "DOTA_Tooltip_ability_powersurge"                                                 "Powersurge"
 "DOTA_Tooltip_ability_powersurge_Description"                                     "Double or triple your base damage. Big deeps."
@@ -459,7 +619,7 @@
 		"DOTA_Tooltip_ability_gunpowder_datadriven_Description"                           "Drink a nice læskedrik"
 
 		"DOTA_Tooltip_ability_gunpowder_datadriven_bonus_agility"                         "BONUS AGILITY:"
-		"DOTA_Tooltip_ability_gunpowder_datadriven_bonus_speed"                           "BONUS MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_gunpowder_datadriven_bonus_speed"                           "MOVEMENT SPEED:"
 		"DOTA_Tooltip_ability_gunpowder_datadriven_duration"                              "DURATION:"
 		
 		"DOTA_Tooltip_ability_plant_bomb_datadriven"                                      "Plant Bomb"
@@ -497,6 +657,10 @@
 		"DOTA_Tooltip_ability_KajSucc_Description"                                        "<font color='#23D829'>SUCC</font color='#23D829'> the enemy into one point"
 		"DOTA_Tooltip_ability_KajSucc_damage"                                             "DAMAGE:"
 		"DOTA_Tooltip_ability_KajSucc_radius"                                             "RADIUS:"
+		
+		"DOTA_Tooltip_modifier_popcorn"                                                   "Popcorn!"
+		"DOTA_Tooltip_modifier_popcorn_Description"                                       "Det popper off"
+
 
 
 //=================================================================================================================
@@ -635,7 +799,7 @@
 "DOTA_Tooltip_ability_caro_crossfit_agility"                                      "AGILITY:"
 		
 "DOTA_Tooltip_ability_caro_crossfit_strength"                                     "STRENGTH:"
-
+"DOTA_Tooltip_ability_caro_crossfit_as"                                           "ATTACK SPEED:"
 
 "DOTA_Tooltip_ability_caro_matchpoint"                                            "Smash"
 		
@@ -654,7 +818,7 @@
 
 "DOTA_Tooltip_ability_caro_smash"                                                 "In the zone"
 		
-"DOTA_Tooltip_ability_caro_smash_Description"                                     "Focus on hitting some solid balls, cancelling channels"
+"DOTA_Tooltip_ability_caro_smash_Description"                                     "Focus on hitting some solid balls, with a chance of concussion."
 				
 "DOTA_Tooltip_ability_caro_smash_dmg"                                             "BONUS DMG:"
 
@@ -885,8 +1049,8 @@
 // Krogh
 //=================================================================================================================
 //hero:
-"npc_dota_hero_sven"                                                         "Krogh (gay)"
-"krogh"                                                                       "Krogh (gay)"
+"npc_dota_hero_sven"                                                         "Krogh"
+"krogh"                                                                       "Krogh"
 
 
 
@@ -908,14 +1072,80 @@
 		"DOTA_Tooltip_ability_sick_dodge_Description"                                     "How to be a dodgeball gay (god)"
 		"DOTA_Tooltip_ability_sick_dodge_duration"                                        "DURATION:"
 
+	
 		"DOTA_Tooltip_ability_social_presence"                                            "Social Presence"
 		"DOTA_Tooltip_ability_social_presence_Description"                                "So autistic you hide yourself from people. When you talk to people (men), they lose all their armor because ur so GAY"
 		"DOTA_Tooltip_ability_social_presence_bonus_damage"                               "BONUS DAMAGE:"
 		"DOTA_Tooltip_ability_social_presence_bonus_armor"                                "BONUS ARMOR:"
 		"DOTA_Tooltip_ability_social_presence_armor_reduction_duration_tooltip"           "DURATION:"
 		//"DOTA_Tooltip_ability_social_presence_projectile_speed"                           ""
+		"DOTA_Tooltip_ability_social_presence_lore" 										"The tooltips here have been writen by the self-projecting Steven"
+		"DOTA_Tooltip_ability_sick_dodge_lore"												"The tooltips here have been writen by the self-projecting Steven"
+		"DOTA_Tooltip_ability_awaken_lore"													"The tooltips here have been writen by the self-projecting Steven"	
+		"DOTA_Tooltip_ability_ha_gay_lore"													"The tooltips here have been writen by the self-projecting Steven"
 
 //modifiers:
+"DOTA_Tooltip_gayfag"                                                             "Gayfag"
+"DOTA_Tooltip_gayfag_Description"                                                 "Fuck du er bøsse!"
+
+"DOTA_Tooltip_modifier_dodgeball"                                                 "Dodgemaster"
+"DOTA_Tooltip_modifier_dodgeball_Description"                                     "Dodgeball? more like dodgeall."
+
+"DOTA_Tooltip_mod_no_pres"                                                        "No presence"
+"DOTA_Tooltip_mod_no_pres_Description"                                            "Going on unnoticed."
+
+"DOTA_Tooltip_modifier_meld_debuff"                                               "???"
+"DOTA_Tooltip_modifier_meld_debuff_Description"                                   "Who the f what that?"
+//=================================================================================================================
+// Harald
+//=================================================================================================================
+//hero:
+"npc_dota_hero_dragon_knight"                                                     "Harald Blåtand"
+"hero_harald"                                                                     "Harald Blåtand"
+
+
+//abilities: 
+"DOTA_Tooltip_ability_ha_army"                                                    "Viking army"
+"DOTA_Tooltip_ability_ha_army_Description"                                        "March forward!"
+"DOTA_Tooltip_ability_ha_army_duration"                                           "DURATION:"
+"DOTA_Tooltip_ability_ha_army_ha_amount"                                          "WARRIORS:"
+"DOTA_Tooltip_ability_ha_army_ha_amount2"                                          "RANGERS:"
+
+
+"DOTA_Tooltip_ability_ha_convert"                                                 "Convert to christianity"
+"DOTA_Tooltip_ability_ha_convert_Description"                                     "Call upon jesus to protect you from all things physical."
+"DOTA_Tooltip_ability_ha_convert_duration"                                        "DURATION:"
+//"DOTA_Tooltip_ability_ha_convert_duration_scepter"                                "DURATION SCEPTER:"
+
+"DOTA_Tooltip_ability_ha_rune"                                                    "Runesten"
+"DOTA_Tooltip_ability_ha_rune_Description"                                        "Create a cryptic runesten, giving all allies around it a slight offense buff."
+
+"DOTA_Tooltip_ability_ha_rune_pas"                                                "Runesten aura"
+"DOTA_Tooltip_ability_ha_rune_pas_Description"                                    "ルーン文字"
+
+"DOTA_Tooltip_ability_ha_thor"                                                    "Wrath of thor"
+"DOTA_Tooltip_ability_ha_thor_Description"                                        "Call upon the power of the thunder god!"
+//"DOTA_Tooltip_ability_ha_thor_true_sight_radius"                                  "TRUE SIGHT RADIUS:"
+//"DOTA_Tooltip_ability_ha_thor_sight_radius"                                       "SIGHT RADIUS:"
+//"DOTA_Tooltip_ability_ha_thor_true_sight_duration"                                "TRUE SIGHT DURATION:"
+//"DOTA_Tooltip_ability_ha_thor_sight_duration"                                     "SIGHT DURATION:"
+//"DOTA_Tooltip_ability_ha_thor_spread_aoe"                                         "SPREAD AOE:"
+
+
+//modifiers:
+"DOTA_Tooltip_modifier_guardian_angel"                                            "Jesus loves you."
+"DOTA_Tooltip_modifier_guardian_angel_Description"                                "Amen."
+
+"DOTA_Tooltip_modifier_rune_aura"                                                 "Runesten aura"
+"DOTA_Tooltip_modifier_rune_aura_Description"                                     "ルーン文字"
+
+"DOTA_Tooltip_modifier_rune_buff"                                                 "Runesten aura"
+"DOTA_Tooltip_modifier_rune_buff_Description"                                     "ルーン文字"
+
+
+
+
+
 
 //=================================================================================================================
 // Other units
@@ -937,6 +1167,10 @@
 
 "npc_elderdrake"                                                                  "Elderdrake"
 	
+"npc_rune"                                                                        "Runesten"
+
+"viking_norm"                                                                     "Viking"
+"viking_ranged"                                                                   "Viking"
 
 
 
@@ -958,6 +1192,87 @@
 		"DOTA_Tooltip_ability_item_actual_butterfly_speed_percentage"                     "%+$move_speed"
 //		"DOTA_Tooltip_ability_item_actual_butterfly_movement_speed"                       "MOVEMENT SPEED:"
 //		"DOTA_Tooltip_ability_item_actual_butterfly_duration_lol"                         "DURATION LOL:"
+//=================================================================================================================
+// EYE SURGERY
+//=================================================================================================================
+
+"DOTA_Tooltip_ability_item_laser_surgery"                                         "Laser Surgery"
+"DOTA_Tooltip_ability_item_laser_surgery_Description"                             "<h1>Use:</h1> Grants the ability to see invisible units and wards to any allied vision within 800 range of its carrier."
+//"DOTA_Tooltip_ability_item_laser_surgery_radius"                                  "RADIUS:"
+"DOTA_Tooltip_modifier_shard_of_true_sight"                                       "Laser surgery"
+"DOTA_Tooltip_modifier_shard_of_true_sight_Description"                           "Perfect vision"
+
+//=================================================================================================================
+// GOLDEN HORNS
+//=================================================================================================================
+
+"DOTA_Tooltip_modifier_item_golden_horns_aura"                                    "Golden Horns Aura"
+"DOTA_Tooltip_modifier_item_golden_horns_aura_Description"                        "viking morale."
+
+"DOTA_Tooltip_modifier_item_golden_horns_active"                                  "Golden Horns warcry"
+"DOTA_Tooltip_modifier_item_golden_horns_active_Description"                      "Buffed by viking glory."
+
+"DOTA_Tooltip_modifier_gh_spellshield"                                            "Spellblock"
+"DOTA_Tooltip_modifier_gh_spellshield_Description"                                "Block a total of 500 magic damage."
+
+"DOTA_Tooltip_ability_item_golden_horns"                                          "Golden Horns"
+"DOTA_Tooltip_ability_item_golden_horns_Description"                              "<h1>Active: Warcry</h1> Grants +%endurance_bonus_movement_speed_pct%% additional movement speed and +%aura_bonus_attack_speed% attack speed, while giving a %absorb_amount% damage spellshield to all allies in a %endurance_radius% radius for %endurance_duration% seconds. \n<h1>Passive: Viking glory </h1> grants an aura to you and all allies in a %aura_radius% radius which grants %mresistaura%%  magic resist, %hpregenaura% health regen and %aura_bonus_movement_speed% movement speed."
+"DOTA_Tooltip_ability_item_golden_horns_bonus_int"                                "+$int"
+"DOTA_Tooltip_ability_item_golden_horns_bonus_agi"                                "+$agi"
+"DOTA_Tooltip_ability_item_golden_horns_bonus_str"                                "+$str"
+"DOTA_Tooltip_ability_item_golden_horns_mresist"                                  "%+$spell_resist"
+"DOTA_Tooltip_ability_item_golden_horns_hpregen"                                  "+$hp_regen"
+"DOTA_Tooltip_ability_item_golden_horns_manaregen"                                "+$mana_regen"
+
+//		"DOTA_Tooltip_ability_item_golden_horns_aura_bonus_movement_speed"                "AURA BONUS MOVEMENT SPEED:"
+//		"DOTA_Tooltip_ability_item_golden_horns_absorb_amount"                            "ABSORB AMOUNT:"
+//		"DOTA_Tooltip_ability_item_golden_horns_endurance_bonus_movement_speed_pct"       "ENDURANCE BONUS MOVEMENT SPEED PCT:"
+//		"DOTA_Tooltip_ability_item_golden_horns_endurance_duration"                       "ENDURANCE DURATION:"
+//		"DOTA_Tooltip_ability_item_golden_horns_aura_radius"                              "AURA RADIUS:"
+//		"DOTA_Tooltip_ability_item_golden_horns_endurance_radius"                         "ENDURANCE RADIUS:"
+//		"DOTA_Tooltip_ability_item_golden_horns_mresistaura"                              "MRESISTAURA:"
+//		"DOTA_Tooltip_ability_item_golden_horns_hpregenaura"                              "HPREGENAURA:"
+//		"DOTA_Tooltip_ability_item_golden_horns_aura_bonus_attack_speed"                  "AURA BONUS ATTACK SPEED:"
+
+
+//=================================================================================================================
+// GREENLANDISH GUARD
+//=================================================================================================================
+"DOTA_Tooltip_ability_item_greenlandish_guard"                                    "Greenlandish Guard"
+"DOTA_Tooltip_ability_item_greenlandish_guard_Description"                        "<h1>Snestorm!</h1> Creates a small snowstorm in a %blast_final_radius% radius, rooting all enemies inside while chipping away at their hp. \n<h1>Passive: Kraftig kulde </h1> Gives all enemies within  a %aura_radius% radius, an %aura_attack_speed% attack speed slow and a %aura_ms% movement slow."
+"DOTA_Tooltip_ability_item_greenlandish_guard_bonus_intellect"                    "+$int"
+"DOTA_Tooltip_ability_item_greenlandish_guard_bonus_agi"                          "+$agi"
+"DOTA_Tooltip_ability_item_greenlandish_guard_bonus_str"                          "+$str"
+"DOTA_Tooltip_ability_item_greenlandish_guard_bonus_armor"                        "+$armor"
+
+//"DOTA_Tooltip_ability_item_greenlandish_guard_blast_final_radius"                 "BLAST FINAL RADIUS:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_speed_per_second"             "BLAST SPEED PER SECOND:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_damage"                       "BLAST DAMAGE:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_aura_ms"                            "AURA MS:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_debuff_duration"              "BLAST DEBUFF DURATION:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_vision_radius"                "BLAST VISION RADIUS:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_vision_duration"              "BLAST VISION DURATION:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_aura_radius"                        "AURA RADIUS:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_aura_attack_speed"                  "AURA ATTACK SPEED:"
+
+
+"DOTA_Tooltip_modifier_item_shivas_guard_datadriven_enemy_aura_visible"           "Snowstorm!"
+"DOTA_Tooltip_modifier_item_shivas_guard_datadriven_enemy_aura_visible_Description"		"Sommervejr when? - alle indtil sommer 2018."
+
+"DOTA_Tooltip_modifier_item_shivas_guard_datadriven_blast_debuff"                 "Snowstorm!"
+"DOTA_Tooltip_modifier_item_shivas_guard_datadriven_blast_debuff_Description"     "Sommervejr when? - alle indtil sommer 2018."
+
+//=================================================================================================================
+// TORDENSKJOLD
+//=================================================================================================================
+"DOTA_Tooltip_ability_item_tordenskjold"                                          "Tordenskjold"
+		"DOTA_Tooltip_ability_item_tordenskjold_Description"                              "<h1>Ignite!</h1> Burns an enemy for 500 pure damage over 5 seconds."
+		
+"DOTA_Tooltip_modifier_tsignite"                                                  "Ignited"
+"DOTA_Tooltip_modifier_tsignite_Description"                                      "Not stolen from lol."
+
+
+
 
 //=================================================================================================================
 // FAKE BUTTERFLY
@@ -995,9 +1310,9 @@
 //=================================================================================================================
 
 		"DOTA_Tooltip_ability_item_crocs"                                                 "Crocs"
-		"DOTA_Tooltip_ability_item_crocs_Description"                                     "Flat movement speed bonuses from multiple pairs of boots do not stack."
+		"DOTA_Tooltip_ability_item_crocs_Description"                                     "Movement speed bonuses from multiple pairs of boots do not stack."
+		"DOTA_Tooltip_ability_item_crocs_movement_speed"                                  "%+$move_speed"
 		"DOTA_Tooltip_ability_item_crocs_stat_gain"                                       "+$all"
-		"DOTA_Tooltip_ability_item_crocs_movement_speed"                                  "+$move_speed"
 		"DOTA_Tooltip_ability_item_crocs_as"                                              "+$attack"
 
 //=================================================================================================================
@@ -1016,6 +1331,15 @@
 		"DOTA_Tooltip_ability_item_danish_force_staff_bonus_mana_regen"                   "+$mana_regen"
 		"DOTA_Tooltip_ability_item_danish_force_staff_bonus_damage"                       "+$damage"
 		
+		
+//=================================================================================================================
+// KMS GUN
+//=================================================================================================================
+"DOTA_Tooltip_ability_item_kms_gun"                                               "Kms Gun"
+"DOTA_Tooltip_ability_item_kms_gun_Description"                                   "<h1>Active: Gun to the head</h1> Do a Kurt Cobain (with a gun instead of shotgun of course)."
+
+
+
 //=================================================================================================================
 // SWEDISH FORCE STAFF
 //=================================================================================================================
@@ -1166,6 +1490,7 @@
 		"DOTA_Tooltip_ability_item_pocket_gametecher_mana_regen"                          "+$mana_regen"
 		"DOTA_Tooltip_ability_item_pocket_gametecher_dmg"                                 "%+Spell Amplification"
 //		"DOTA_Tooltip_ability_item_pocket_gametecher_cdr"                                 "CDR:"
+		"DOTA_Tooltip_ability_item_pocket_gametecher_health"                              "+$health"
 
 //=================================================================================================================
 // Sandals

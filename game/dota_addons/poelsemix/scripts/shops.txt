@@ -22,6 +22,7 @@
 		"item"		"item_kalmar_force_staff"
 		"item"		"item_flaeskesteg_sovs_kartofler"
 		"item"		"item_hike_shox"
+		"item"		"item_grundlov"
 
 
 
