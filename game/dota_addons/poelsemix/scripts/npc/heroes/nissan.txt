@@ -1,12 +1,12 @@
-"teemo"
+"nissan"
 {
 	"override_hero"				"npc_dota_hero_ogre_magi"			// Hero to override
 	"DisableWearables" "1"
-	//"model" "models/teemo/teemo.vmdl" indsæt nissan
+	"model" "models/nissan/nissanmodel.vmdl"
 	"ModelScale" "1.0"
 	
 	"Ability1" "drift"				
-	"Ability2" "move_quick"
+	"Ability2" "runover"
 	"Ability3" "toxic_shot"
 	"Ability4" "guerrilla_warfare"
 	"Ability6" "noxious_trap"

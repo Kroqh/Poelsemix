@@ -1,8 +1,8 @@
 "drift"
 	{
 		"BaseClass"					"ability_lua"
-		"ScriptFile"				"heroes/hero_nissan/hero_nissan.lua"
-		"AbilityTextureName"		"drift"
+		"ScriptFile"				"heroes/hero_nissan/drift.lua"
+		"AbilityTextureName"		"big_clicks_icon"
 
 		"MaxLevel"						"4"
 
@@ -23,8 +23,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-
+			"particle"					"particles/units/heroes/hero_phoenix/phoenix_icarus_dive.vpcf"
+			"particle"					"particles/units/heroes/hero_phoenix/phoenix_icarus_dive_burn_debuff.vpcf"
 		}
+
 
 		"AbilitySpecial"
 		{

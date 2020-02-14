@@ -1,0 +1,51 @@
+"runover"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_nissan/runover"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"			"shimakaze_speed"
+	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+	
+	"AbilityCooldown"				"10"
+	"AbilityManaCost"       "200"
+  "AbilityCastPoint"      "1.0"
+
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+
+	"precache"
+	{
+		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
+		"particle"		"particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
+	}
+
+	"AbilitySpecial"
+	{
+	  "01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_movespeed" "25 30 35 40"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration"	"6 7 8 9"
+		}
+		"03"
+		{
+			"var_type" "FIELD_FLOAT"
+			"stun_duration"	"0.6 1 1.4 1.8"
+		}
+    "04"
+    {
+      "var_type" "FIELD_FLOAT"
+      "damage" "200 300 400 500"
+    }
+    "05"
+    {
+      "var_type" "FIELD_INTEGER"
+      "radius"   "300"
+    }
+	}
+}
