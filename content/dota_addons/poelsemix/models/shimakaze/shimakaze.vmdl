@@ -16,6 +16,7 @@
 				m_bBentNormals = false
 				m_bIgnoreCloth = false
 				m_bGetSkinningFromLod0 = false
+				m_bPreferHighDensityTrianglesInUvDensityCalculation = false
 				m_pMorphInfo = null
 			},
 		]
@@ -793,10 +794,6 @@
 		m_pObject = 
 		{
 			m_Name = ""
-			m_pReferenceSkeleton = 
-			{
-				m_pObject = null
-			}
 			m_pBoneFlagList = 
 			{
 				m_pObject = null
@@ -1088,6 +1085,10 @@
 			m_sScripts = [  ]
 			m_folderNames = [  ]
 			m_sCompileScripts = [  ]
+			m_pActivityWhiteList = 
+			{
+				m_pObject = null
+			}
 		}
 	}
 	m_pMaterialGroupList = 
@@ -1122,7 +1123,7 @@
 		m_vMaterialRemapList = 
 		[
 			{
-				m_sSearchMaterial = ".vmat"
+				m_sSearchMaterial = "*"
 				m_sReplaceMaterial = "materials/shimakaze/shimakaze_texture.vmat"
 			},
 		]
@@ -1130,6 +1131,7 @@
 	m_flFbxScale = 1.0
 	m_flQCScale = 1.0
 	m_vOrigin = [ 0.0, 0.0, 0.0 ]
+	m_bEmbedAnimsInAnimGroup = false
 	m_pPsfList = null
 	m_keyValueText = ""
 	m_bStaticProp = false

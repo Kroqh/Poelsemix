@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+*.bin
+*.cfg
+*.soc
+*.tmp
+
+*.vmat_c
+*.vagrp_c
+*.vmesh_c
+
 /game/dota_russian/
 
 steam_appid.txt

@@ -358,7 +358,7 @@ function COverthrowGameMode:UpdateScoreboard()
 			team_id = t.teamID,
 			team_score = t.teamScore
 		}
-		FireGameEvent( "score_board", score )
+		-- FireGameEvent( "score_board", score )
 	end
 	-- Leader effects (moved from OnTeamKillCredit)
 	local leader = sortedTeams[1].teamID

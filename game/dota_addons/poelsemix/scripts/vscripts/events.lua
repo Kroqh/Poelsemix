@@ -71,6 +71,8 @@ function COverthrowGameMode:OnNPCSpawned( event )
 			end
 		end
 	end
+
+	
 end
 
 --------------------------------------------------------------------------------
@@ -207,6 +209,7 @@ end
 function COverthrowGameMode:OnItemPickUp( event )
 	local item = EntIndexToHScript( event.ItemEntityIndex )
 	local owner = EntIndexToHScript( event.HeroEntityIndex )
+
 	r = 300
 	--r = RandomInt(200, 400)
 	if event.itemname == "item_bag_of_gold" then
@@ -237,13 +240,15 @@ end
 -- Event: On NPC Spawn
 --------------------------------------------------------------------------------
 function COverthrowGameMode:OnNPCSpawned( event )
-	
 	local hero = EntIndexToHScript( event.entindex )
 	
 	if hero:IsRealHero() and hero.FirstSpawn == nil then
+		
 		hero.FirstSpawn = true
-		hero:AddItemByName("item_courier")
 		COverthrowGameMode:OnHeroInGame(hero)	
+		-- hero:AddItemByName("item_courier")
+		local courier = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeam())
+		courier:SetControllableByPlayer(hero:GetPlayerID(), false)
 	end
 	
 	if hero:GetUnitName() == "npc_dota_hero_pugna" then
@@ -270,7 +275,6 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("guerrilla_warfare")
 		ability:SetLevel(1)
 	end
-
 end
 
 
