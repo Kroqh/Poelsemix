@@ -1,0 +1,101 @@
+"item_grundlov"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "grundlov"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	
+	"AbilityCastPoint"        "0.0"
+	"AbilityCooldown"       "30.0"
+  	
+
+  	"ItemCost"					"1849"
+  	"ID"						"3028"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"          "int;hard_to_tag"
+	"ItemQuality"         "rare"
+	"ItemAliases"         "gl;loven;grunde;1849"
+	"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+
+
+	"precache"
+	{
+	"particle" "particles/units/heroes/hero_troll_warlord/troll_warlord_bersekers_net_main.vpcf"
+	}
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_intellect" "15"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"resistance_dur" "4"
+		}
+		
+	}
+	
+	"OnSpellStart"
+	{
+		
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_grundlov"
+			"Target" 		"CASTER"
+		}
+
+	
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_grundlov_passive"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
+			}
+		}
+	
+			"modifier_grundlov"
+			{ 
+				"IsBuff" "1"
+				"Duration"  "%resistance_dur"
+				"TextureName" "grundlov"
+				
+				"OnCreated"
+			{
+				"AttachEffect"	
+				{
+					"EffectName"        "particles/units/heroes/hero_troll_warlord/troll_warlord_bersekers_net_main.vpcf"
+					"EffectAttachType"  "follow_overhead"
+					"Target"            "CASTER"
+				}
+				"FireSound"
+				{
+					"EffectName"	"DOTA_Item.BlackKingBar.Activate"
+					"Target" 		"CASTER"
+				}
+			}
+				
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED"
+				}   
+	
+			}
+	}
+}
