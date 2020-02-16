@@ -1,4 +1,6 @@
 # Poelsemix
-På grillen igen
+På grillen igen.
 
-[Thanks to...](credits.md)
+[Installation guide](docs/setup/install.md)
+
+[Special thanks to...](credits.md)
