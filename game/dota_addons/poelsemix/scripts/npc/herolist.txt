@@ -68,7 +68,7 @@
 	"npc_dota_hero_necrolyte"			"0"
 	"npc_dota_hero_night_stalker"		"1"
 	"npc_dota_hero_nyx_assassin"		"0"
-	"npc_dota_hero_ogre_magi"			"0"
+	"npc_dota_hero_ogre_magi"			"1"
 	"npc_dota_hero_omniknight"			"0"
 	"npc_dota_hero_oracle"				"0"
 	"npc_dota_hero_obsidian_destroyer"	"0"

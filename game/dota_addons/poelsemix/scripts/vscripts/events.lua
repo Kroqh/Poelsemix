@@ -207,8 +207,35 @@ end
 -- Event: OnItemPickUp
 --------------------------------------------------------------------------------
 function COverthrowGameMode:OnItemPickUp( event )
+
 	local item = EntIndexToHScript( event.ItemEntityIndex )
-	local owner = EntIndexToHScript( event.HeroEntityIndex )
+	local owner
+	
+	if event.HeroEntityIndex then
+		owner = EntIndexToHScript(event.HeroEntityIndex)
+	elseif event.UnitEntityIndex then
+		owner = EntIndexToHScript(event.UnitEntityIndex)
+		local vRandomSpawnPos = {
+			Vector(108, 0, 0),
+			Vector(108, 108, 0),
+			Vector(108, 0, 0),
+			Vector(0, 108, 0),
+			Vector(-108, 0, 0),
+			Vector(-108, 108, 0),
+			Vector(-108, -108, 0),
+			Vector(0, -108, 0),
+		}
+		-- Prevent courier abuse when picking up overthrow items
+		if event.itemname == "item_bag_of_gold" then
+			local newItem = CreateItem( "item_bag_of_gold", nil, nil )
+			local drop = CreateItemOnPositionForLaunch( owner:GetAbsOrigin() + vRandomSpawnPos[math.random(8)], newItem )
+		elseif event.itemname == "item_treasure_chest" then
+			local newItem = CreateItem( "item_treasure_chest", nil, nil )
+			local drop = CreateItemOnPositionForLaunch( owner:GetAbsOrigin() + vRandomSpawnPos[math.random(8)], newItem )
+		end
+
+		return
+	end
 
 	r = 300
 	--r = RandomInt(200, 400)
