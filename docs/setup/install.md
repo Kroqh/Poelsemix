@@ -17,7 +17,7 @@ A: Because the repository is set up in a less than ideal way.
 ## Cloning
 ### Please do the following in a CLI. If you know how to do it in a GUI, go ahead and do so.
  1. Find the Dota 2 root folder 'dota 2 beta'
- 2. Move everything INSIDE (not the folder itself) 'dota 2 beta' somewhere else
+ 2. Move everything inside 'dota 2 beta' (not the folder itself) somewhere else
  3. Navigate to 'dota 2 beta' in your preferred shell and do:
  
 ```shell
