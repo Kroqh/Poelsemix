@@ -1,9 +1,10 @@
 "kim_larsen"
 {
 	"override_hero"				"npc_dota_hero_night_stalker"			// Hero to override
-	"Ability1" "kim_banana"				
+	"Ability1" "kim_stille"				
 	"Ability2" "kim_paperclip"
-	"Ability3" "kim_gasolin"
+	"Ability3" "kim_banana"
+	"Ability4" "kim_gasolin"
 	"Ability6" "kim_nat"
 	
 	

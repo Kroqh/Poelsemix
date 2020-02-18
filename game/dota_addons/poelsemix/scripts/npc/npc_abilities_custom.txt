@@ -741,43 +741,6 @@
 	      	}
 	    }
 	}
-	"ax_obelix"
-{
-	"BaseClass"                 "ability_lua"
-	"AbilityTextureName"        "hurtigbrille"
-	"ScriptFile"			"heroes/hero_asterix/hero_ax"
-	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	"AbilityCooldown"               "100 90 80"
-	"AbilityManaCost"               "100"
-	"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
-	
-
-	
-	
-	"AbilitySpecial"
-	{
-	    "01"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "move_slow"      "-550"	
-	    }
-		"02"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "bonus_str"      "80 100 120"
-	    }
-		"03"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "duration"      "15"
-	    }
-			"04"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "adamage"      "350 700 1050"	
-	    }
-	}
-}
 	"bomb_b"
 	{
 		// General
@@ -3505,17 +3468,20 @@
 					"var_type"					"FIELD_INTEGER"
 					"damage"					"150 250 350 450"
 					"LinkedSpecialBonus"			"special_bonus_unique_lion_3"
+					"RequiresScepter"           "1"
 				}
 				"02"
 				{
 					"var_type"					"FIELD_INTEGER"
 					"damage_scepter"			"700 775 850 925"
 					"LinkedSpecialBonus"			"special_bonus_unique_lion_3"
+					"RequiresScepter"           "1"
 				}
 				"03"
 				{
 					"var_type"					"FIELD_INTEGER"
-					"mana_cost_scepter"			"800 1000 1000 1000"
+					"mana_cost_scepter"			"1000 1000 1000 1000"
+					"RequiresScepter"           "1"
 				}
 				"04"
 				{
@@ -3526,12 +3492,25 @@
 				{
 					"var_type"					"FIELD_FLOAT"
 					"cooldown_scepter"			"5"
+					"RequiresScepter"           "1"
 				}
 				"06"
 				{
 					"var_type"					"FIELD_FLOAT"
 					"splash_radius_scepter"		"400"
+					"RequiresScepter"           "1"
 				}
+				"07"
+	            {
+	                "var_type"                  "FIELD_INTEGER"
+	                "damage_per_kill"           "0"
+	                "CalculateSpellDamageTooltip"   "0"
+	            }
+				"08"
+	            {
+	                "var_type"                  "FIELD_FLOAT"
+	                "grace_period"              "0"
+	            }   
 			}
 		}
 	"matematik_A_datadriven"
@@ -5296,7 +5275,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityTextureName"			"banana"
 		"AOERadius"						"%activation_radius"
-	
+		"MaxLevel"              "1"
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
@@ -5313,7 +5292,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"12.0 10.0 8.0 6.0"
+		"AbilityCooldown"				"10.0"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -5341,7 +5320,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"slow_duration"				"1 2 3 4"
+				"slow_duration"				"2"
 			}
 			"05"
 			{
@@ -5804,6 +5783,50 @@
 			}	
 	
 	
+		}
+	}
+	"kim_stille"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_kim/kim_stille"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityTextureName"			"kim_stille"
+		
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityCooldown"				"16"
+		"AbilityManaCost"				"120"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"1"
+	
+		"AbilitySpecial"
+		{
+		    "01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"velocity" "1000 1000 1000 1000"
+			}
+		    "02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"dmg" "150 300 450 600"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"range" "700"
+			}
+			"04"
+			{
+				"var_type" "FIELD_INTEGER"
+				"radius" "500"
+			}
+	                "05"
+	                {
+				"var_type" "FIELD_FLOAT"
+	                        "duration" "1 2 3 4"
+			}
 		}
 	}
 	"awaken"

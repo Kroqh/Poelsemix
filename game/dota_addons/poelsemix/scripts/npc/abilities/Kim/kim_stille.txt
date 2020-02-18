@@ -1,0 +1,44 @@
+"kim_stille"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_kim/kim_stille"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityTextureName"			"kim_stille"
+	
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityCooldown"				"16"
+	"AbilityManaCost"				"120"
+	"AbilityCastRange"				"0"
+	"AbilityCastPoint"				"1"
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"velocity" "1000 1000 1000 1000"
+		}
+	    "02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"dmg" "150 300 450 600"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"range" "700"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "500"
+		}
+                "05"
+                {
+			"var_type" "FIELD_FLOAT"
+                        "duration" "1 2 3 4"
+		}
+	}
+}

@@ -48,7 +48,7 @@
                               "value0"        "sounds/woosh_krogh.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "7.00000"  }
+                    "volume"            {   "value"     "30.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -79,7 +79,7 @@
                               "value0"        "sounds/hagay.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "15.00000"  }
+                    "volume"            {   "value"     "150.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -110,7 +110,7 @@
                               "value0"        "sounds/upsie.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "15.00000"  }
+                    "volume"            {   "value"     "40.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }

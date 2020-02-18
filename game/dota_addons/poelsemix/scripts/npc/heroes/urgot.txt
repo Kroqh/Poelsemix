@@ -30,7 +30,7 @@
 	"AttributeBaseStrength"		"20"
 	"AttributeBaseIntelligence"	"40"
 	"AttributeIntelligenceGain"	"0.6"
-	"Ability10"		"special_bonus_gold_income_20"
+	"Ability10"		"special_bonus_all_stats_15"
 	"Ability11"		"special_bonus_exp_boost_25"
 	
 	"Ability12"		"special_bonus_urgot_e_reduc"

@@ -1202,6 +1202,17 @@
 "DOTA_Tooltip_modifier_shard_of_true_sight"                                       "Laser surgery"
 "DOTA_Tooltip_modifier_shard_of_true_sight_Description"                           "Perfect vision"
 
+
+
+//=================================================================================================================
+// GRUNDLOV
+//=================================================================================================================
+"DOTA_Tooltip_modifier_grundlov"                                                  "Grundloven"
+"DOTA_Tooltip_modifier_grundlov_Description"                                      "Diplomatic immunity"
+"DOTA_Tooltip_ability_item_grundlov"                                              "Grundloven"
+"DOTA_Tooltip_ability_item_grundlov_bonus_intellect"                              "+$int"
+"DOTA_Tooltip_ability_item_grundlov_Description"                                  "<h1>DIPLOMATIC IMMUNITY:</h1> Grants diplomatic immunity also known as magic immunity for 4 seconds."
+
 //=================================================================================================================
 // GOLDEN HORNS
 //=================================================================================================================
