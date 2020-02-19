@@ -1,0 +1,50 @@
+"longlights"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_nissan/longlights"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+	//"AbilityTextureName"			"ap_shell"
+	"AbilityCooldown"				"17 15 13 11"
+	"AbilityManaCost"				"105 115 125 135"
+	"AbilityCastPoint"				"0.2"
+
+	"precache"
+	{
+    "particle"        "particles/heroes/nissan/nissan_lights.vpcf"
+    "particle"        "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_debuff.vpcf"
+	}
+
+	"AbilitySpecial"
+	{
+	  "01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "7 8 9 10"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"length" "600"
+		}
+    "03"
+    {
+      "var_type" "FIELD_INTEGER"
+      "width" "180"
+    }
+    "04"
+    {
+      "var_type" "FIELD_FLOAT"
+      "damage_pr_tick" "2.0 2.5 3.0 3.5"
+    }
+    "05"
+    {
+      "var_type" "FIELD_INTEGER"
+      "miss_chance" "85 90 95 100"
+    }
+	}
+}
