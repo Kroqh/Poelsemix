@@ -2,22 +2,21 @@
 	{
 		"BaseClass"					"ability_lua"
 		"ScriptFile"				"heroes/hero_nissan/drift.lua"
-		"AbilityTextureName"		"big_clicks_icon"
+		"AbilityTextureName"		"nissan_drift_icon"
 
 		"MaxLevel"						"4"
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilitySound"					"Hero_Phoenix.IcarusDive.Cast"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30 26 22 18"
+		"AbilityCooldown"				"15 13 11 9"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"0"
+		"AbilityManaCost"				"100 110 120 130"
 		
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
@@ -25,6 +24,7 @@
 		{
 			"particle"					"particles/units/heroes/hero_phoenix/phoenix_icarus_dive.vpcf"
 			"particle"					"particles/units/heroes/hero_phoenix/phoenix_icarus_dive_burn_debuff.vpcf"
+			"soundfile" 				"soundevents/nissan_soundevent.vsndevts"
 		}
 
 
@@ -53,7 +53,8 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"20 40 60 80"
+				"damage_per_second"		"30 45 60 75"
+				"LinkedSpecialBonus" "special_bonus_nissan_3"
 			}
 			"06"
 			{

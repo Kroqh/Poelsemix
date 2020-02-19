@@ -3,12 +3,20 @@ LinkLuaModifier("modifier_race", "heroes/hero_nissan/race", LUA_MODIFIER_MOTION_
 race = class({})
 -- aldrig kig på det her igen
 
+function race:GetAbilityTextureName()
+	return "nissan_race_icon"
+end
+
 function race:OnSpellStart()
   if not IsServer() then return end
   self.caster = self:GetCaster()
   self.target = self:GetCursorTarget()
   self.duration = self:GetSpecialValueFor("duration")
   self.damage = self:GetSpecialValueFor("damage")
+
+  if self.caster:HasTalent("special_bonus_nissan_4") then
+    self.damage = self.damage + self.caster:FindAbilityByName("special_bonus_nissan_4"):GetSpecialValueFor("value")
+  end
   
   -- Track stacks
   self.caster_stacks = self:GetSpecialValueFor("stacks")
@@ -24,6 +32,31 @@ function race:OnSpellStart()
   -- Custom message
   local message = '<font color="lime">' .. self.player1 .. '</font>' .. ' JUST CHALLENGED ' .. '<font color="red">' .. self.player2 .. '</font>' .. ' TO AN EPIC RACE!!'
   GameRules:SendCustomMessage(message, self.caster:GetTeamNumber(), -1)
+
+  local song = math.random(4)
+  local songs = {"nissan_dejavu", 
+                 "nissan_gasgasgas", 
+                 "nissan_nightoffire", 
+                 "nissan_running"}
+
+  self.caster:EmitSound(songs[song])
+
+  -- Maybe has to uncomment.
+
+  -- local units = FindUnitsInRadius(self.caster:GetTeamNumber(), 
+  --                                               self.caster:GetAbsOrigin(), 
+  --                                               nil, 
+  --                                               FIND_UNITS_EVERYWHERE, 
+  --                                               DOTA_UNIT_TARGET_TEAM_ENEMY, 
+  --                                               DOTA_UNIT_TARGET_HERO, 
+  --                                               DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, 
+  --                                               FIND_ANY_ORDER, 
+  --                                               false)
+
+  -- for _, enemy in pairs(units) do 
+  --   GameRules:SendCustomMessage(message, enemy:GetTeamNumber(), -1)
+  -- end
+
 end
 
 modifier_race = class({})

@@ -5,9 +5,15 @@ LinkLuaModifier("modifier_longlights_blind", "heroes/hero_nissan/longlights", LU
 
 longlights = class({})
 
+function longlights:GetAbilityTextureName()
+	return "nissan_longlights_icon"
+end
+
 function longlights:OnSpellStart()
   if not IsServer() then return end
   self.caster = self:GetCaster()
+
+  self.caster:EmitSound("nissan_light")
 
   -- Initialize particles
   local particleName = "particles/heroes/nissan/nissan_lights.vpcf"
@@ -20,6 +26,12 @@ function longlights:OnSpellStart()
   -- Ability values
   local duration = self:GetSpecialValueFor("duration")
   local lights_length = self:GetSpecialValueFor("length")
+
+  -- Talent
+  if self.caster:HasTalent("special_bonus_nissan_1") then
+    lights_length = lights_length + self.caster:FindAbilityByName("special_bonus_nissan_1"):GetSpecialValueFor("value")
+  end
+
   local width = self:GetSpecialValueFor("width")
   local damage_per_tick = self:GetSpecialValueFor("damage_pr_tick")
   local vision_radius = self:GetSpecialValueFor("width") * 3

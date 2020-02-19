@@ -9,10 +9,10 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
-	//"AbilityTextureName"			"ap_shell"
-	"AbilityCooldown"				"17 15 13 11"
-	"AbilityManaCost"				"105 115 125 135"
-	"AbilityCastRange"				"750"
+	"AbilityTextureName"			"nissan_race_icon"
+	"AbilityCooldown"				"100 80 60"
+	"AbilityManaCost"				"100 150 200"
+	"AbilityCastRange"				"700"
 	"AbilityCastPoint"				"0.2"
 
 	"precache"
@@ -26,27 +26,18 @@
 	  "01"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration" "7 8 9 10"
+			"duration" "13"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"speed" "600 600 600 600"
+			"damage" "600 750 900"
+			"LinkedSpecialBonus" "special_bonus_nissan_4"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"magic_resist" "-35 -40 -45 -50"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "400 500 600"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"stacks" "500"
+			"stacks" "2000"
 		}
 	}
 }

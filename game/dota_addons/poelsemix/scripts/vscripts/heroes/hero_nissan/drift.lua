@@ -2,6 +2,10 @@ LinkLuaModifier("modifier_drift_dummy", "heroes/hero_nissan/drift", LUA_MODIFIER
 LinkLuaModifier("modifier_drift_burn", "heroes/hero_nissan/drift", LUA_MODIFIER_MOTION_NONE)
 drift = class({})
 
+function drift:GetAbilityTextureName()
+	return "nissan_drift_icon"
+end
+
 function drift:GetCastPoint()
 	local caster = self:GetCaster()
 
@@ -10,7 +14,12 @@ end
 
 modifier_drift_dummy = class({})
 
+function modifier_drift_dummy:IsHidden() return true end
+
 modifier_drift_burn = class({})
+
+function modifier_drift_burn:GetEffectName() return "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn.vpcf" end
+function modifier_drift_burn:GetEffectAttachType() return PATTACH_ABSORIGIN_FOLLOW end
 
 function modifier_drift_burn:OnCreated()
 	if not IsServer() then return end
@@ -19,6 +28,12 @@ function modifier_drift_burn:OnCreated()
 	local caster = self:GetCaster()
 
 	self.damage = ability:GetSpecialValueFor("damage_per_second")
+
+	-- Talent
+	if caster:HasTalent("special_bonus_nissan_3") then
+    self.damage = self.damage + caster:FindAbilityByName("special_bonus_nissan_3"):GetSpecialValueFor("value")
+  end
+
 	self.tick = ability:GetSpecialValueFor("burn_tick_interval")
 	self:StartIntervalThink(self.tick)
 end
@@ -41,6 +56,8 @@ end
 function drift:OnSpellStart()
 	if IsServer() ~= true then return end
 
+	self:GetCaster():EmitSound("nissan_drift")
+
 	--local ability = self:GetAbility()
 	local radius = self:GetSpecialValueFor("hit_radius")
 	local burn_duration = self:GetSpecialValueFor("burn_duration")
@@ -52,6 +69,11 @@ function drift:OnSpellStart()
 	local dash_length = self:GetSpecialValueFor("dash_length")
 	local dash_width = self:GetSpecialValueFor("dash_width")
 	local dash_duration = self:GetSpecialValueFor("dash_duration")
+
+	-- Talent
+  if caster:HasTalent("special_bonus_nissan_2") then
+    dash_duration = dash_duration + caster:FindAbilityByName("special_bonus_nissan_2"):GetSpecialValueFor("value")
+  end
 
 	local direction = (target_pos - caster_pos):Normalized()
 

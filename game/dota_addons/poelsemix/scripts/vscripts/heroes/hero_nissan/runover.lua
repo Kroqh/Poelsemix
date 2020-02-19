@@ -3,17 +3,22 @@ LinkLuaModifier("modifier_runover_stun", "heroes/hero_nissan/runover", LUA_MODIF
 
 runover = class({})
 
+function runover:GetAbilityTextureName()
+	return "nissan_runover_icon"
+end
+
 function runover:OnSpellStart()
   if not IsServer() then return end
   local caster = self:GetCaster()
   local duration = self:GetSpecialValueFor("duration")
+  caster:EmitSound("nissan_runover")
 
   caster:AddNewModifier(caster, self, "modifier_runover", {duration = duration})
 end
 
 modifier_runover = class({})
 
-function modifier_runover:IsHidden() return false end
+function modifier_runover:IsHidden() return true end
 function modifier_runover:IsDebuff() return false end
 
 function modifier_runover:OnCreated()

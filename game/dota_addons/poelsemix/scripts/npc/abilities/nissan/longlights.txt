@@ -8,9 +8,9 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 
-	//"AbilityTextureName"			"ap_shell"
-	"AbilityCooldown"				"17 15 13 11"
-	"AbilityManaCost"				"105 115 125 135"
+	"AbilityTextureName"			"nissan_longlights_icon"
+	"AbilityCooldown"				"25 24 23 22"
+	"AbilityManaCost"				"100 110 120 130"
 	"AbilityCastPoint"				"0.2"
 
 	"precache"
@@ -24,12 +24,13 @@
 	  "01"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration" "7 8 9 10"
+			"duration" "5 7 9 11"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
 			"length" "600"
+			"LinkedSpecialBonus" "special_bonus_nissan_1"
 		}
     "03"
     {
