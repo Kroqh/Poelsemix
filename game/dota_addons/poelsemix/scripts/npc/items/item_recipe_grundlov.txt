@@ -1,0 +1,15 @@
+"item_recipe_grundlov"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "old_recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"849"
+  		"ID"						"3039"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_grundlov"
+		"ItemRequirements"
+		{
+			"01" "item_staff_of_wizardry"
+		}
+  	}
