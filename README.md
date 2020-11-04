@@ -1,5 +1,6 @@
 # Poelsemix
-![Steam Supscriptions](https://img.shields.io/steam/subscriptions/1335473896?label=Steam%20Subscriptions)  
+![Steam Subscriptions](https://img.shields.io/steam/subscriptions/1335473896?label=Steam%20Subscriptions)
+![Favs](https://img.shields.io/steam/favorites/1335473896)  
 På grillen igen.  
 
 Poelsemix is a custom game created in Dota 2 by a small team of lazy developers. It is a derivative of Valve's custom game, Overthrow, although with different heroes. The repository is open to all who are willing to help expand and develop Poelsemix (lol) as well as those who want to learn more about Dota 2 modding through examples. You are free to fork, copy, reuse and redistribute the source code, however, it's a mess and you probably lose more by doing so.
