@@ -5,6 +5,7 @@
 	"Ability1" "Skovtur"
 	"Ability2" "SorenPassiv"
 	"Ability3" "kolonihave"
+	"Ability5" "generic_hidden"
 	"Ability6" "Skyd_en_due_datadriven"
 	
 	//hp, attack range

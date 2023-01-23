@@ -5,6 +5,8 @@
 	"Ability1" "ha_thor"				
 	"Ability2" "ha_convert"
 	"Ability3" "ha_rune"
+	"Ability4" "generic_hidden"
+	"Ability5" "generic_hidden"
 	"Ability6" "ha_army"
 	"DisableWearables" "1"
 	

@@ -5,6 +5,7 @@
 	"Ability2" "kim_paperclip"
 	"Ability3" "kim_banana"
 	"Ability4" "kim_gasolin"
+	"Ability5" "generic_hidden"
 	"Ability6" "kim_nat"
 	
 	

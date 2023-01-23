@@ -8,6 +8,7 @@
 	"Ability2" "multiclick"
 	"Ability3" "huge_click"
 	"Ability4" "powersurge"
+	"Ability5" "generic_hidden"
 	"Ability6" "upgrade_skills"
 	"Ability7" "click"
 

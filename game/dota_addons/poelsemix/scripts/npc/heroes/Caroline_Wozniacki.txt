@@ -11,7 +11,10 @@
 	"Ability1" "caro_side_swap"				
 	"Ability2" "caro_smash"
 	"Ability3" "caro_crossfit"
+	"Ability4" "generic_hidden"
+	"Ability5" "generic_hidden"
 	"Ability6" "caro_matchpoint"
+	"Ability7" "generic_hidden"
 	"ProjectileModel" "particles/econ/items/crystal_maiden/ti7_immortal_shoulder/cm_ti7_immortal_base_attack.vpcf"
 	
 	"Ability10"		"special_bonus_mp_400"

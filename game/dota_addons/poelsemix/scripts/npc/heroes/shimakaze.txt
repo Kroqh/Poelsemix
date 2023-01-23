@@ -8,6 +8,7 @@
 	"Ability2" "destroyer_speed"
 	"Ability3" "ap_shell"
 	"Ability4" "dangerous_sea"
+	"Ability5" "generic_hidden"
 	"Ability6" "torpedo"
 	"Ability7" "water"
 	

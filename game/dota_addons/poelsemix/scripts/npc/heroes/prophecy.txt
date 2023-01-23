@@ -14,6 +14,7 @@
 	"Ability2" "firestakit_datadriven"
 	"Ability3" "pr0_blockchain"
 	"Ability4" "pr0_incognito"
+	"Ability5" "generic_hidden"
 	"Ability6" "deity_datadriven"
 
 	"Ability10"		"special_bonus_mp_200"

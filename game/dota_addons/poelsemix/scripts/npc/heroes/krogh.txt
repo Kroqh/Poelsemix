@@ -9,6 +9,7 @@
 	"Ability1" "ha_gay"				
 	"Ability2" "social_presence"
 	"Ability3" "sick_dodge"
+	"Ability5" "generic_hidden"
 	"Ability6" "awaken"
 	"AttributeBaseStrength"		"20"
 	"AttributeBaseIntelligence"	"40"

@@ -5,6 +5,8 @@
 	"Ability1" "red_cecil"				
 	"Ability2" "mokai"
 	"Ability3" "hurtigbrille"
+	"Ability4" "generic_hidden"
+	"Ability5" "generic_hidden"
 	"Ability6" "brian_dak"
 	"AttributeBaseStrength"		"25"
 	

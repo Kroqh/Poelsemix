@@ -26,6 +26,8 @@
 	"Ability1" "imba_mirana_arrow"				
 	"Ability2" "imba_pipe"
 	"Ability3" "imba_phoenix_launch_fire_spirit"
+	"Ability4" "generic_hidden"
+	"Ability5" "generic_hidden"
 	"Ability6" "imba_vengefulspirit_nether_swap"
 	"AttributeBaseStrength"		"20"
 	"AttributeBaseIntelligence"	"40"

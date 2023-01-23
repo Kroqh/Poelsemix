@@ -5,6 +5,8 @@
   "Ability1"            "yahya_fodskud" 
   "Ability2"            "digtoplaesning" 
   "Ability3"            "koekkenkniv"
+  "Ability4"            "generic_hidden"
+	"Ability5"            "generic_hidden"
   "Ability6"            "den_er_flot"
 
   "Ability13" "special_bonus_movement_speed_40"
