@@ -7,6 +7,12 @@
     flow-children: down;
 }
 
+.AspectRatio16x10 .ScoreboardLeft
+{
+    margin-left: 86px;
+    margin-right: -100px;
+}
+
 .VictoryPanel
 {
     flow-children: down;
@@ -22,6 +28,7 @@
 #Goal
 {
 	margin-top: 2px;
+	margin-bottom: 2px;
     font-size: 16px;
     font-weight: bold;
     color: #9e7305;
@@ -46,7 +53,7 @@
 
 #Timer
 {
-	margin-top: -26px;
+	margin-top: -16px;
     font-size: 18px;
     font-weight: bolder;
     color: white;

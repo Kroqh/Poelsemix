@@ -22,7 +22,7 @@
     flow-children: right;
 }
 
-.hidden_instructions#InstructionsPanel
+.hidden_instructions #InstructionsPanel
 {
     visibility: collapse;
 }
