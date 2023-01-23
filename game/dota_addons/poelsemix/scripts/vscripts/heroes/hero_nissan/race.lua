@@ -30,8 +30,8 @@ function race:OnSpellStart()
   self.player2 = PlayerResource:GetPlayerName(self.target:GetPlayerID())
 
   -- Custom message
-  local message = '<font color="lime">' .. self.player1 .. '</font>' .. ' JUST CHALLENGED ' .. '<font color="red">' .. self.player2 .. '</font>' .. ' TO AN EPIC RACE!!'
-  GameRules:SendCustomMessage(message, self.caster:GetTeamNumber(), -1)
+  -- local message = '<font color="lime">' .. self.player1 .. '</font>' .. ' JUST CHALLENGED ' .. '<font color="red">' .. self.player2 .. '</font>' .. ' TO AN EPIC RACE!!'
+  -- GameRules:SendCustomMessage(message, self.caster:GetTeamNumber(), -1)
 
   local song = math.random(4)
   local songs = {"nissan_dejavu", 
