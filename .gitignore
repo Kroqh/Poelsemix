@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *.bin
 *.cfg
 *.soc
@@ -8,66 +7,31 @@
 *.vagrp_c
 *.vmesh_c
 
-/game/dota_russian/
 
-steam_appid.txt
+game/*
+# ignore all addons everything except poelsemix
+game/dota_addons/*
+!game/dota_addons/poelsemix/
 
-game/dota_addons/rpg_example/
+content/dota_addons/*
+!content/dota_addons/poelsemix/
 
-game/dota_addons/test1234/
-
-game/dota_addons/tutorial_assist_game/
-
-game/dota_addons/tutorial_basics/
-
-game/dota_addons/ui_example/
-
-game/dota_addons/workshop_testbed/
-
-game/dota_koreana/
-
-game/dota_lv/
-
-game/dota_schinese/
-
-game/thirdpartylegalnotices.txt
-
-game/dota_addons/poelsemix1/
-
-game/dota_addons/poelsemix2/
-
-game/dota_addons/addon_template/
-game/dota_addons/adventure_example/
-game/dota_addons/cavern/
-game/dota_addons/danskpoelse/
-game/dota_addons/dota2cfg.cfg
-game/dota_addons/dungeon/
-game/dota_addons/frostivus_2017/
-game/dota_addons/hero_demo/
-game/dota_addons/holdout_example/
-game/dota_addons/last_hit_trainer/
-game/dota_addons/lua_ability_example/
-game/dota_addons/new_bloom_2017/
-game/dota_addons/overthrow/
-
-content/dota_addons/poelsemix1/
-content/dota_addons/poelsemix2/
-content/dota_addons/rpg_example/
-content/dota_addons/ui_example/
-content/dota_addons/workshop_testbed/
-game/_toolsettings/
-
-content/dota_addons/addon_template/
-content/dota_addons/adventure_example/
-content/dota_addons/danskpoelse/
-content/dota_addons/holdout_example/
-content/dota_addons/lua_ability_example/
-content/dota_addons/overthrow/
-
+# ignore the big script files since we use modmanager
 game/dota_addons/poelsemix/scripts/npc/npc_abilities_custom.txt
 game/dota_addons/poelsemix/scripts/npc/npc_heroes_custom.txt
+game/dota_addons/poelsemix/scripts/npc/npc_units_custom.txt
+game/dota_addons/poelsemix/scripts/npc/npc_items_custom.txt
 
+# some random stuff and binaries we dont want
+content/_toolsautosave
+d2mod
+game/_toolsettings/
 game/dota_addons/poelsemix/tools_asset_info.bin
+steam_appid.txt
+game/dota_addons/poelsemix/tools_thumbnail_cache.bin
+game/dota_addons/poelsemix/maps/forest_solo.vpk
+game/dota_addons/poelsemix/tools_asset_info.bin
+game/dota_addons/poelsemix/maps/forest_solo.vpk
 
 content/dota_addons/poelsemix/materials/models/courier/lockjaw/lockjaw_normal.psd
 content/dota_addons/poelsemix/materials/models/courier/lockjaw/lockjaw_color.psd
@@ -78,21 +42,6 @@ content/dota
 game/bin
 game/core
 game/dota
-=======
 
-game/dota_addons/poelsemix/scripts/npc/npc_abilities_custom.txt
-game/dota_addons/poelsemix/scripts/npc/npc_heroes_custom.txt
->>>>>>> 662bc90a39b0861cefb92399290d9ce83edcddbc
-game/dota_addons/poelsemix/tools_thumbnail_cache.bin
-game/dota_addons/jungle_spirits_2019/
-game/dota_addons/winter_2018/
-game/dota_addons/poelsemix/maps/forest_solo.vpk
-game/dota_addons/poelsemix/tools_asset_info.bin
-game/dota_addons/poelsemix/maps/forest_solo.vpk
-game/dota_addons/vpks/1335473896/1335473896.vpk
-game/dota_addons/poelsemix/scripts/npc/npc_units_custom.txt
-game/dota_addons/poelsemix/scripts/npc/npc_units_custom.txt
-game/dota_addons/poelsemix/scripts/npc/npc_items_custom.txt
-game/dota_addons/poelsemix/scripts/npc/npc_heroes_custom.txt
-game/dota_addons/poelsemix/scripts/npc/npc_abilities_custom.txt
-game/dota_addons/poelsemix/scripts/npc/npc_units_custom.txt
+
+
