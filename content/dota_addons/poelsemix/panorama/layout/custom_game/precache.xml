@@ -1,0 +1,23 @@
+<root>
+	<Panel style="visibility:collapse;">
+		<Panel id="container" style="visibility:collapse;">
+
+			<Image src="file://panorama/images/heroes/selection/npc_dota_hero_lycan.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_lycan.png" hittest="false" />
+
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_lone_druid.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_lone_druid.png" hittest="false" />
+            
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_venomancer.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_venomancer.png" hittest="false" />
+
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_windrunner.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_windrunner.png" hittest="false" />
+            
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_broodmother.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_broodmother.png" hittest="false" />
+
+
+		</Panel>
+	</Panel>
+</root>

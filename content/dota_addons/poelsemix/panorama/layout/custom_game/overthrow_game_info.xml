@@ -1,6 +1,6 @@
 <root>
 	<styles>
-		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
 		<include src="file://{resources}/styles/custom_game/overthrow_game_info.css" />
 	</styles>
 	<Panel class="OverthrowGameInfo">
@@ -25,7 +25,7 @@
 		<Label id="TipsHeader" class="Header" html="true" text="#overthrow_game_info_tips_header" />
 		<Panel id="TipsRow" class="InfoRow">
 			<Label id="TipText01" class="TipText" html="true" text="#overthrow_game_info_tip01" />
-			<Label id="TipText02" class="TipText" html="true" text="#overthrow_game_info_tip02" />
+			<!--<Label id="TipText02" class="TipText" html="true" text="#overthrow_game_info_tip02" />-->
 			<Label id="TipText03" class="TipText" html="true" text="#overthrow_game_info_tip03" />
 			<Label id="TipText04" class="TipText" html="true" text="#overthrow_game_info_tip04" />
 		</Panel>

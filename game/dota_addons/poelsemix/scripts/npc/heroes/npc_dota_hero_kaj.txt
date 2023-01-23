@@ -10,15 +10,21 @@
 	"Ability5" "generic_hidden"
 	"Ability6" "KajAndrea"
 
-	"Ability10" "special_bonus_all_stats_20"
-	"Ability11" "special_bonus_exp_boost_40"
+		// Mastery layout
+		// 19|18
+		// 17|16
+		// 15|14
+		// 13|12
 
-	"Ability12" "special_bonus_cast_range_275"
-	"Ability13" "special_bonus_spell_amplify_15"
-	
-	"Ability14" "special_bonus_movement_speed_50"
-	"Ability15" "special_bonus_armor_10"
-	
-	"Ability16" "special_bonus_attack_damage_250"
-	"Ability17" "special_bonus_cooldown_reduction_50"
+		"Ability12" 	"special_bonus_all_stats_20"
+		"Ability13" 	"special_bonus_exp_boost_40"
+
+		"Ability14" "special_bonus_cast_range_275"
+		"Ability15" "special_bonus_spell_amplify_15"
+
+		"Ability16" "special_bonus_movement_speed_50"
+		"Ability17" "special_bonus_armor_10"
+
+		"Ability18" "special_bonus_attack_damage_250"
+		"Ability19" "special_bonus_cooldown_reduction_50"
 }
