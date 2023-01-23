@@ -9,6 +9,7 @@
 	"MaxLevel"	"1"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"HasScepterUpgrade"				"1"
 
 	"AbilitySpecial"
 	{
