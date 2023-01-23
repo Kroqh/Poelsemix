@@ -6,9 +6,9 @@
 *.vmat_c
 *.vagrp_c
 *.vmesh_c
+# ignore all compiled files
+*.*_c
 
-
-game/*
 # ignore all addons everything except poelsemix
 game/dota_addons/*
 !game/dota_addons/poelsemix/
@@ -23,6 +23,12 @@ game/dota_addons/poelsemix/scripts/npc/npc_units_custom.txt
 game/dota_addons/poelsemix/scripts/npc/npc_items_custom.txt
 
 # some random stuff and binaries we dont want
+thirdpartylegalnotices.txt
+game/dota_schinese/
+game/dota_russian/
+game/dota_lv/
+game/dota_koreana/
+game/dota_danish/
 content/_toolsautosave
 d2mod
 game/_toolsettings/
@@ -44,4 +50,3 @@ game/core
 game/dota
 
 .vscode
-
