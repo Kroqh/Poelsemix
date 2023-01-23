@@ -16,8 +16,35 @@
             
             <Image src="file://panorama/images/heroes/selection/npc_dota_hero_broodmother.png" hittest="false" />
             <Image src="file://panorama/images/heroes/npc_dota_hero_broodmother.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_phantom_assassin.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_phantom_assassin.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_rubick.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_rubick.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_faceless_void.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_faceless_void.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_bounty_hunter.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_bounty_hunter.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_dragon_knight.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_dragon_knight.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_ogre_magi.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_ogre_magi.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_meepo.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_meepo.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_crystal_maiden.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_crystal_maiden.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_kunkka.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_kunkka.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_brewmaster.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_brewmaster.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_dark_seer.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_dark_seer.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_night_stalker.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_night_stalker.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_sven.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_sven.png" hittest="false" />
 
-
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_pugna.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_pugna.png" hittest="false" />
 		</Panel>
 	</Panel>
 </root>
