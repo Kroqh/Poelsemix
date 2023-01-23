@@ -1,0 +1,19 @@
+"courier_superspeed"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"abilities/courier.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	//"AbilityTextureName"			""
+	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+	
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"movespeed" "4000"
+		}
+	}
+}

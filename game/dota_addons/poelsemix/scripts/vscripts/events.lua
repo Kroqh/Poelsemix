@@ -272,8 +272,12 @@ function COverthrowGameMode:OnNPCSpawned( event )
 	if hero:IsRealHero() and hero.FirstSpawn == nil then
 		
 		hero.FirstSpawn = true
-		hero:AddItemByName("item_courier")
-		COverthrowGameMode:OnHeroInGame(hero)	
+		-- hero:AddItemByName("item_courier")
+		COverthrowGameMode:OnHeroInGame(hero)
+		local courier = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, nil, nil, hero:GetTeam())
+		courier:SetControllableByPlayer(hero:GetPlayerID(), false)
+		local ability = courier:AddAbility("courier_superspeed")
+		ability:SetLevel(1)
 
 	end
 	
