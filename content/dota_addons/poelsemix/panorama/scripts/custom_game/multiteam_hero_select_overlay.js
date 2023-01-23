@@ -75,15 +75,15 @@ function UpdateTimer()
 {
 	if ( Game.IsInBanPhase() )
 	{
-		$("#TimerPanel").SetDialogVariable( "timer_text", $.Localize( "#BanPhase" ) );
+		$("#TimerPanel").SetDialogVariable( "timer_text", "Ban Phase" );
 	}
 	else if ( Game.GameStateIs( DOTA_GameState.DOTA_GAMERULES_STATE_HERO_SELECTION ) )
 	{
-		$("#TimerPanel").SetDialogVariable( "timer_text", $.Localize( "#HeroPickPhase" ) );
+		$("#TimerPanel").SetDialogVariable( "timer_text", "Hero Pick" );
 	}
 	else
 	{
-		$("#TimerPanel").SetDialogVariable( "timer_text", $.Localize( "#StrategyPhase" ) );
+		$("#TimerPanel").SetDialogVariable( "timer_text", "Strategy Phase" );
 	}
 
 	var gameTime = Game.GetGameTime();

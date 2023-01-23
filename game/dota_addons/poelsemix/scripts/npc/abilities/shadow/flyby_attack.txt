@@ -1,0 +1,58 @@
+//=================================================================================================================
+	// Ability: Shadow's Flyby Attack
+	//=================================================================================================================
+    "flyby_attack"
+	{
+        "BaseClass"					"ability_lua"
+        "ScriptFile"				"heroes/hero_shadow/flyby_attack/flyby_attack.lua"
+        "AbilityTextureName"		"shadow_teleport"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        "MaxLevel"                      "5"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				// dummy variables for display purposes only
+				// calculated as "min_damage_bonus" + 1
+				"var_type"					"FIELD_FLOAT"
+				"min_damage_bonus_dummy"	"0.00 0.25 0.30 0.35 0.40"
+			}
+			"02"
+			{
+				// dummy variables for display purposes only
+				// calculated as "max_damage_bonus" + 1
+				"var_type"					"FIELD_FLOAT"
+				"max_damage_bonus_dummy"	"1.00 1.50 1.75 2.00 2.25"	
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"min_damage_bonus"			"0.00 0.25 0.30 0.35 0.40"
+				"LinkedSpecialBonus"		"special_bonus_shadow_3"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"max_damage_bonus"			"1.00 1.50 1.75 2.00 2.25"
+				"LinkedSpecialBonus"		"special_bonus_shadow_4"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_range_for_max"		"300"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"teleport_cooldown"			"2.5 2.25 2 1.75 1.5"
+			}
+		}
+
+
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+    }

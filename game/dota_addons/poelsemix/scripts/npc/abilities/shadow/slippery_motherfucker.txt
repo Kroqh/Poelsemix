@@ -1,0 +1,32 @@
+"slippery_motherfucker"
+	{
+        // General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"phantom_assassin_blur"
+		"AbilityTextureName"		"shadow_blur"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_evasion"				"25 30 35 40"
+				"LinkedSpecialBonus" 		"special_bonus_shadow_1"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"transparency_fade"			"1.5 1.5 1.5 1.5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"0 0 0 0"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+ }

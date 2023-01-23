@@ -1,0 +1,24 @@
+"aerial_slash"
+	 {
+        //General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"juggernaut_omni_slash"
+		"AbilityTextureName"		"shadow_ult"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+	 	"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slash_jump_radius"			"425 550 675"
+	 		}
+
+		}
+	}

@@ -19,17 +19,6 @@
 		"DOTA_Tooltip_ability_item_treasure_chest"		"Treasure Chest"
 	
 		
-		"npc_dota_hero_kaj"                                                               "Kaj"
-		"prophecy"                                                                        "Pr0ph3cy"
-		
-          		
-		"npc_dota_hero_bounty_hunter"		"Bounty Hunter (Modified)"
-		"npc_dota_hero_necrolyte"			"Necrophos (Modified)"
-		"npc_dota_hero_riki"				"Riki (Modified)"
-		"npc_dota_hero_silencer"			"Silencer (Modified)"
-		"npc_dota_hero_zuus"				"Zeus (Modified)"
-		"npc_dota_hero_pudge"				"Pudge (Modified)"
-		"npc_dota_hero_obsidian_destroyer"	"Outworld Devourer (Modified)"
 
 		"DOTA_Tooltip_Ability_item_ward_sentry"			"Sentry Ward (Modified)"
 		"DOTA_Tooltip_Ability_item_dust"				"Dust of Appearance (Modified)"
@@ -267,6 +256,73 @@
 		"DOTA_Tooltip_ability_special_bonus_urgot_w_boost_Description"                    "You are a bøff some times"			
 
 //=================================================================================================================
+// Nissan
+//=================================================================================================================
+
+"npc_dota_hero_ogre_magi"                                                    "Nissan"
+"nissan"                                                                       "Nissan"
+
+"DOTA_Tooltip_ability_drift"                                                      "Drift"
+		"DOTA_Tooltip_ability_drift_Description"                                          "Drift forward and back in an arc. Burn enemies you come into contact with."
+		"DOTA_Tooltip_ability_drift_burn_duration"                                        "BURN DURATION:"
+		"DOTA_Tooltip_ability_drift_burn_tick_interval"                                   "BURN TICK INTERVAL:"
+		"DOTA_Tooltip_ability_drift_damage_per_second"                                    "DAMAGE PER SECOND:"
+		"DOTA_Tooltip_modifier_drift_burn_Description" 																		"Burned by the Nissan."
+		"DOTA_Tooltip_modifier_drift_burn" 																		"Burns"
+
+		"DOTA_Tooltip_ability_runover"                                                    "Run over"
+		"DOTA_Tooltip_ability_runover_Description"                                        "Start the engine and run over people."
+		"DOTA_Tooltip_ability_runover_bonus_movespeed"                                    "%BONUS MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_runover_duration"                                           "DURATION:"
+		"DOTA_Tooltip_ability_runover_stun_duration"                                      "STUN DURATION:"
+		"DOTA_Tooltip_ability_runover_damage"                                             "DAMAGE:"
+		//"DOTA_Tooltip_ability_runover_radius"                                             "RADIUS:"
+
+		"DOTA_Tooltip_modifier_runover_stun_Description" 																		"Flat"
+		"DOTA_Tooltip_modifier_runover_stun" 																		"Flat as a pancake."
+
+		"DOTA_Tooltip_ability_longlights"                                                 "High beam"
+		"DOTA_Tooltip_ability_longlights_Description"                                     "Turn on the fjernlys blinding enemies in front of you and damaging them. Deals damage per. tick. Tick rate is very high."
+		"DOTA_Tooltip_ability_longlights_duration"                                        "DURATION:"
+		"DOTA_Tooltip_ability_longlights_length"                                          "LENGTH:"
+		"DOTA_Tooltip_ability_longlights_damage_pr_tick"                                  "DAMAGE PR TICK:"
+		"DOTA_Tooltip_ability_longlights_miss_chance"                                     "%MISS CHANCE:"
+
+		"DOTA_Tooltip_modifier_longlights_blind_Description" 																		"Blinded by the Nissan."
+		"DOTA_Tooltip_modifier_longlights_blind" 																		"Blinded"
+
+		"DOTA_Tooltip_ability_race"                                                       "Race"
+		"DOTA_Tooltip_ability_race_Description"                                           "Start a race against an enemy. The car who moves the most wins the race. The loser takes big damage. A tie (VERY UNLIKELY) is a win for Nissan."
+		"DOTA_Tooltip_ability_race_damage"                                                "DAMAGE:"
+		"DOTA_Tooltip_ability_race_duration"                                              "DURATION:"
+		//"DOTA_Tooltip_ability_race_stacks"                                                "STACKS:"
+
+		"DOTA_Tooltip_modifier_race_Description" 																		"The lower this number is, the more you have moved."
+		"DOTA_Tooltip_modifier_race" 																		"Race"
+
+		
+
+
+
+		//Talents
+		"DOTA_Tooltip_ability_special_bonus_nissan_1"                                     "High beam +{s:value} length"
+		//"DOTA_Tooltip_ability_special_bonus_nissan_1_Description"                         ""
+		//"DOTA_Tooltip_ability_special_bonus_nissan_1_value"                               "VALUE:600"
+
+		"DOTA_Tooltip_ability_special_bonus_nissan_2"                                     "Double drift"
+		"DOTA_Tooltip_ability_special_bonus_nissan_2_Description"                         "Spin around in a circle twice."
+		//"DOTA_Tooltip_ability_special_bonus_nissan_2_value"                               "VALUE:"
+
+		"DOTA_Tooltip_ability_special_bonus_nissan_3"                                     "Drift burn +{s:value} damage"
+		//"DOTA_Tooltip_ability_special_bonus_nissan_3_Description"                         ""
+		//"DOTA_Tooltip_ability_special_bonus_nissan_3_value"                               "VALUE:"
+
+		"DOTA_Tooltip_ability_special_bonus_nissan_4"                                     "Race +{s:value} damage"
+		//"DOTA_Tooltip_ability_special_bonus_nissan_4_Description"                         ""
+		//"DOTA_Tooltip_ability_special_bonus_nissan_4_value"                               "VALUE:"
+
+
+//=================================================================================================================
 // Shimakaze
 //=================================================================================================================
 "npc_dota_hero_crystal_maiden"                                                    "Shimakaze"
@@ -278,8 +334,9 @@
 //"DOTA_Tooltip_ability_ap_shell_speed"                                             "SPEED:"
 "DOTA_Tooltip_ability_ap_shell_magic_resist"                                      "%MAGIC RESIST REDUCTION:"
 
+		
 		"DOTA_Tooltip_ability_dangerous_sea"                                              "Dangerous Sea"
-		"DOTA_Tooltip_ability_dangerous_sea_Description"                                  "Shimakaze leaves behind a pool of water which damages and slows nearby enemies. The damage scales with intelligence.<br></br><br></br>Damage = 60 + int * int scaling<br></br><br></br><br>Upgradeable by Aghanim's Scepter.</br>"
+		"DOTA_Tooltip_ability_dangerous_sea_Description"                                  "Shimakaze leaves behind a pool of water which damages and slows nearby enemies. The damage scales with intelligence.<br></br><br></br>Damage = 60 + <font color='#356BFF'>int</font> * <font color='#356BFF'>int</font> scaling<br></br><br></br><br>Upgradeable by Aghanim's Scepter.</br>"
 		"DOTA_Tooltip_ability_dangerous_sea_damage"                                       "DAMAGE:"
 		"DOTA_Tooltip_ability_dangerous_sea_duration"                                     "DURATION:"
 		//"DOTA_Tooltip_ability_dangerous_sea_tick_interval"                                "TICK INTERVAL:"
@@ -287,9 +344,14 @@
 		"DOTA_Tooltip_ability_dangerous_sea_move_slow"                                    "%MOVEMENT SPEED SLOW:"
 		//"DOTA_Tooltip_ability_dangerous_sea_duration_slow"                               "DURATION SLOW:"
 		"DOTA_Tooltip_ability_dangerous_sea_int_scaling"                                  "INTELLECT SCALING:"
-		"DOTA_Tooltip_ability_dangerous_sea_int_scaling_aghs"                             "INTELLECT SCALING SCEPTER:"
+		//"DOTA_Tooltip_ability_dangerous_sea_int_scaling_aghs"                             "INTELLECT SCALING SCEPTER:"
 		//"DOTA_Tooltip_ability_dangerous_sea_distance_req"                                 "DISTANCE REQ:"
 		
+		// SCEPTER stuff
+		//"DOTA_Tooltip_ability_dangerous_sea_scepter_int_scaling_aghs"  	     		"BLAHBLAH:"
+		"DOTA_Tooltip_ability_dangerous_sea_scepter_description" 						"Sets Dangerous Sea intelligence scaling to %int_scaling_aghs%."
+		//"DOTA_Tooltip_ability_dangerous_sea_shard_description" 						"Increases Dangerous Sea intelligence scaling."
+
 		"DOTA_Tooltip_ability_destroyer_speed"                                            "Destroyer Speed"
 		"DOTA_Tooltip_ability_destroyer_speed_Description"                                "While moving, Shimakaze builds stacks. Activating this spell at 400 stacks gives Shimakaze a slight movement speed boost."
 		//"DOTA_Tooltip_ability_destroyer_speed_max_stacks"                                 "MAX STACKS:"
@@ -320,9 +382,54 @@
 		"DOTA_Tooltip_ability_special_bonus_shimakaze_4"                                  "2x torpedo stun duration"
 		//"DOTA_Tooltip_ability_special_bonus_shimakaze_4_Description"                      ""
 		
-		"DOTA_Tooltip_ability_special_bonus_shimakaze_1"                                  "Wave +%value% range"
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_1"                                  "Wave +{s:value} range"
 		//"DOTA_Tooltip_ability_special_bonus_shimakaze_1_Description"                      ""
 		//"DOTA_Tooltip_ability_special_bonus_shimakaze_1_range"                            "RANGE:"
+
+
+//=================================================================================================================
+// Shadow
+//=================================================================================================================
+"npc_dota_hero_riki"                                                              "Shadow the Hedgehog"
+
+
+		"DOTA_Tooltip_ability_aerial_slash"                                               "Aerial Slash"
+		"DOTA_Tooltip_ability_aerial_slash_Description"                                   "Doesnt work rn"
+		"DOTA_Tooltip_ability_aerial_slash_slash_jump_radius"                             "SLASH JUMP RADIUS:"
+
+		"DOTA_Tooltip_ability_stealthy"                                                   "Stealthy"
+		"DOTA_Tooltip_ability_stealthy_Description"                                       "Shadow will fade into the shadows"
+		"DOTA_Tooltip_ability_stealthy_fade_delay"                                        "FADE DELAY:"
+		"DOTA_Tooltip_ability_stealthy_movement_speed"                                    "MOVEMENT SPEED:"
+
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_1"                                     "Special Bonus Shadow 1"
+		"DOTA_Tooltip_ability_special_bonus_shadow_1_Description"                         ""
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_2"                                     "Special Bonus Shadow 2"
+		"DOTA_Tooltip_ability_special_bonus_shadow_2_Description"                         ""
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_3"                                     "Increases flyby attack minimum damage dealt"
+		"DOTA_Tooltip_ability_special_bonus_shadow_3_Description"                         "Increases by {s:value}%"
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_4"                                     "Increases flyby attack maximum damage dealt"
+		"DOTA_Tooltip_ability_special_bonus_shadow_4_Description"                         "Increases by {s:value}%"
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_5"                                     "Fade faster"
+		"DOTA_Tooltip_ability_special_bonus_shadow_5_Description"                         "Shadow will fade faster by {s:value} seconds"
+
+
+		"DOTA_Tooltip_ability_flyby_attack"                                               "Flyby Attack"
+		"DOTA_Tooltip_ability_flyby_attack_Description"                                   "Shadow will teleport behind his target for his attack, dealing extra damage based on distance teleported"
+		"DOTA_Tooltip_ability_flyby_attack_min_damage_bonus"                              "MIN DAMAGE BONUS MULTIPLIER:"
+		"DOTA_Tooltip_ability_flyby_attack_max_damage_bonus"                              "MAX DAMAGE BONUS MULTIPLIER:"
+		"DOTA_Tooltip_ability_flyby_attack_attack_range_for_max"                          "ATTACK RANGE FOR MAX:"
+		"DOTA_Tooltip_ability_flyby_attack_teleport_cooldown"                          "TELEPORT COOLDOWN:"
+
+
+"DOTA_Tooltip_ability_slippery_motherfucker"                                      "Slippery Motherfucker"
+		"DOTA_Tooltip_ability_slippery_motherfucker_Description"                          "Shadow will casually dodge attacks by accident while looking cool"
+		"DOTA_Tooltip_ability_slippery_motherfucker_bonus_evasion"                        "BONUS EVASION:"
 //=================================================================================================================
 // Brian
 //=================================================================================================================
@@ -351,7 +458,7 @@
 		
 "DOTA_Tooltip_ability_hurtigbrille_aspeed"                                        "AGILITY:"
 
-"DOTA_Tooltip_ability_hurtigbrille_duration"                                      "DURATION:
+"DOTA_Tooltip_ability_hurtigbrille_duration"                                      "DURATION:"
 
 
 
@@ -444,6 +551,14 @@
 
 "DOTA_Tooltip_ability_kim_banana_slow_duration"                                   "SLIP DURATION:"
 
+"DOTA_Tooltip_ability_kim_stille"                                                 "Om lidt bliver der stille"
+"DOTA_Tooltip_ability_kim_stille_Description"                             		  "Kim charges forward, silencing and damaging enemies around the end point"
+"DOTA_Tooltip_ability_kim_stille_range"                                           "CHARGE RANGE:"
+"DOTA_Tooltip_ability_kim_stille_radius"                                          "DAMAGE RADIUS:"
+"DOTA_Tooltip_ability_kim_stille_dmg"                                             "DAMAGE:"
+"DOTA_Tooltip_ability_kim_stille_duration"                                        "SILENCE DURATION:"
+
+
 //modifiers:
 "DOTA_Tooltip_modifier_hunter_in_the_night_buff_datadriven"                       "Gasolin"
 		
@@ -460,6 +575,10 @@
 "DOTA_Tooltip_modifier_darkness_datadriven"                                       "Middle of the night"
 		
 "DOTA_Tooltip_modifier_darkness_datadriven_Description"                           "Paranoid and afraid"
+
+"DOTA_Tooltip_modifier_stille_silence"                                       "Silenced"
+		
+"DOTA_Tooltip_modifier_stille_silence_Description"                           "A moment of silence for a legend"
 
 "DOTA_Tooltip_modifier_darkness_aura_datadriven"                                  "Artificial night"
 		
