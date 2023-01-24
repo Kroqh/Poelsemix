@@ -16,7 +16,6 @@ function modifier_sonny_boy:OnCreated()
 
 end
 
-function modifier_sonny_boy:IsHidden() return true end
 function modifier_sonny_boy:IsPurgable() return false end
 
 function modifier_sonny_boy:GetIntrinsicModifierName() 
@@ -39,8 +38,7 @@ function modifier_sonny_boy:OnAttackLanded(keys)
     if not (keys.attacker == self:GetParent()) then return end
     local chance = self:GetAbility():GetSpecialValueFor("bashchance")
     local bash_duration = self:GetAbility():GetSpecialValueFor("bashduration")
-
-    if RollPseudoRandom(100, self) then
+    if RollPseudoRandom(chance, self) then
         -- Todo: sound effect
         local target = keys.target
         local duration = self:GetAbility():GetSpecialValueFor("bashduration")
@@ -66,5 +64,92 @@ function modifier_stun:CheckState()
     }
     return state
 end
+
+en_med_guldringen = class({})
+
+function en_med_guldringen:OnSpellStart()
+    if not IsServer() then return end
+    local caster = self:GetCaster()
+    local target = self:GetCursorTarget()
+    local duration = self:GetSpecialValueFor("duration")
+    local damage = self:GetSpecialValueFor("damage")
+    local damage_type = self:GetAbilityDamageType()
+    local damage_table = {
+        victim = target,
+        attacker = caster,
+        damage = damage,
+        damage_type = damage_type
+    }
+    ApplyDamage(damage_table)
+    target:AddNewModifier(caster, self, "modifier_stun", {duration = duration})
+    -- todo: sound effect
+end
+
+LinkLuaModifier("modifier_ask_for_help", "heroes/hero_stewart/hero_stewart", LUA_MODIFIER_MOTION_NONE)
+ask_for_help = ask_for_help or class({})
+
+function ask_for_help:OnSpellStart()
+    if not IsServer() then return end
+    local caster = self:GetCaster()
+    local radius = self:GetSpecialValueFor("radius")
+    local duration = self:GetSpecialValueFor("duration")
+    caster:AddNewModifier(caster, self, "modifier_ask_for_help", {duration = duration})
+end
+
+modifier_ask_for_help = modifier_ask_for_help or class({})
+
+function modifier_ask_for_help:IsPurgable() return false end
+
+function modifier_ask_for_help:GetIntrinsicModifierName() 
+    return "modifier_ask_for_help"
+end
+
+function modifier_ask_for_help:OnCreated()
+    if not IsServer() then return end
+    self.stats_per_hero = self:GetAbility():GetSpecialValueFor("stats_per_hero")
+    self:SetHasCustomTransmitterData(true)
+    self:StartIntervalThink(0.2)
+end
+
+function modifier_ask_for_help:DeclareFunctions() 
+    return {
+        MODIFIER_PROPERTY_STATS_STRENGTH_BONUS
+    }
+end
+
+function modifier_ask_for_help:OnIntervalThink()
+    local caster = self:GetCaster()
+    local radius = self:GetAbility():GetSpecialValueFor("radius")
+    local enemies = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+    
+    local amount_of_enemies = #enemies
+    self.total_stats = amount_of_enemies * self.stats_per_hero
+    self:OnRefresh()
+end
+
+function modifier_ask_for_help:OnRefresh()
+    if not IsServer() then return end
+    self:SendBuffRefreshToClients()
+end
+
+function modifier_ask_for_help:AddCustomTransmitterData()
+    return {
+        total_stats = self.total_stats
+    }
+end
+
+function modifier_ask_for_help:HandleCustomTransmitterData(data)
+    self.total_stats = data.total_stats
+end
+
+function modifier_ask_for_help:GetModifierBonusStats_Strength()
+    return self.total_stats
+end
+
+
+
+
+
+
 
 

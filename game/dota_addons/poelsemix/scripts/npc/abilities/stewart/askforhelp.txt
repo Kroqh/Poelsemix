@@ -1,4 +1,4 @@
-"sonny_boy"
+"ask_for_help"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@
 	"AbilityTextureName"			"ap_shell"
 	"AbilityCooldown"				"17 15 13 11"
 	"AbilityManaCost"				"105 115 125 135"
-	//"AbilityCastRange"				"750"
+    "AbilityCastRange"              "400"
 	"AbilityCastPoint"				"0.6"
 
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
@@ -21,22 +21,17 @@
 	    "01"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration" "5 6 7 8"
+			"duration" "6 7 8 9"
 		}
 		"02"
-		{	
+		{
 			"var_type" "FIELD_INTEGER"
-			"speed" "50 75 100 125"
+			"stats_per_hero" "5 7 9 11"
 		}
         "03"
         {
             "var_type" "FIELD_INTEGER"
-            "bashchance" "10 15 20 25"
-        }
-        "04"
-        {
-            "var_type" "FIELD_INTEGER"
-            "bashduration" "1 1.5 2 2.5"
+            "radius" "400"
         }
 	}
 }
