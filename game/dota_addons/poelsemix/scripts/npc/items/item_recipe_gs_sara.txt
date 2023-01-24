@@ -1,0 +1,14 @@
+"item_recipe_gs_sara"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_gs_sara"
+		"ItemRequirements"
+		{
+			"01" "item_god_shard_one;item_god_shard_two;item_god_shard_three;item_hilt_sara"
+		}
+  	}

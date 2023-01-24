@@ -1,0 +1,114 @@
+"item_gs_sara"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "gs_sara"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  	"ItemCost"					"5000"
+  	"ID"						"3038"
+
+	"AbilityCastRange"        "300"
+	"AbilityCastPoint"        "0.0"
+	"AbilityCooldown"       "30.0"
+	"FightRecapLevel"				"2"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;godsword;health;mana"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"sgs"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage"					"40"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"health"					"400"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"mana"						"400"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"active_damage"					"500"
+		}
+		"05"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"hp_restore"					"250"
+		}
+		"06"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"mp_restore"					"250"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_gs_sara"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+				"MODIFIER_PROPERTY_HEALTH_BONUS" "%health"
+				"MODIFIER_PROPERTY_MANA_BONUS" "%mana"
+			}
+		}
+	}
+	"OnSpellStart"
+	{
+		"FireEffect"
+					{
+					"EffectName" 	"particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_counter_slash.vpcf"
+					"EffectAttachType" "follow_origin"
+					"Target"	"TARGET"
+
+					}
+		"Damage"
+                    {
+                        "Target"    "TARGET"
+                        "Type"      "DAMAGE_TYPE_PHYSICAL"
+                        "Damage"    "%active_damage"
+                    }
+		"Heal"
+			{
+				"HealAmount" "%hp_restore"
+				"Target" "CASTER"
+			}
+		"RunScript"
+				{
+					"ScriptFile"		"items/item_restore_mana.lua"
+					"Function"			"restoreMana"
+				}
+
+		"FireSound"
+					{
+					"EffectName" "godsword_slash"
+					"Target" "TARGET"
+					}
+	}
+}

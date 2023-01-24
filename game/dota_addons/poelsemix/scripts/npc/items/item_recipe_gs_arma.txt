@@ -1,0 +1,14 @@
+"item_recipe_gs_arma"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_gs_arma"
+		"ItemRequirements"
+		{
+			"01" "item_god_shard_one;item_god_shard_two;item_god_shard_three;item_hilt_arma"
+		}
+  	}

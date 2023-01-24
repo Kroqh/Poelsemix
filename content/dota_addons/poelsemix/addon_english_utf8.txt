@@ -3,8 +3,8 @@
 	"Language"		"English"
 	"Tokens"
 	{		
-		"addon_game_name"								"Pølsemix"
-		"DOTA_GameMode_15"													"Pølsemix"
+		"addon_game_name"								"Poelsemix"
+		"DOTA_GameMode_15"													"Poelsemix"
 
 		"DOTA_Tooltip_modifier_get_xp"					"Golden Aura"
 		"DOTA_Tooltip_modifier_get_xp_Description"		"Gaining more gold and experience!"
@@ -481,7 +481,7 @@
 
 "DOTA_Tooltip_ability_mokai"                                                      "Mokai"
 		
-"DOTA_Tooltip_ability_mokai_Description"                                          "Get drunk and claim magic aint real"
+"DOTA_Tooltip_ability_mokai_Description"                                          "Get drunk and claim magic aint real, taunting enemies around you"
 		
 "DOTA_Tooltip_ability_mokai_duration"                                             "DURATION:"
 
@@ -508,7 +508,8 @@
 		
 "DOTA_Tooltip_Mokai_Description"   						  "Drunk man does not know any magic"
 
-
+"DOTA_Tooltip_modifier_beserkers_call_enemy_datadriven"                           "Randers swagger"
+"DOTA_Tooltip_modifier_beserkers_call_enemy_datadriven_Description"               "Taunted by a man with too much swag"
 
 
 
@@ -1397,7 +1398,7 @@
 // TORDENSKJOLD
 //=================================================================================================================
 "DOTA_Tooltip_ability_item_tordenskjold"                                          "Tordenskjold"
-		"DOTA_Tooltip_ability_item_tordenskjold_Description"                              "<h1>Ignite!</h1> Burns an enemy for 500 pure damage over 5 seconds."
+		"DOTA_Tooltip_ability_item_tordenskjold_Description"                              "<h1>Ignite!</h1> Burns an enemy for %damagetick% pure damage every second for %duration%s"
 		
 "DOTA_Tooltip_modifier_tsignite"                                                  "Ignited"
 "DOTA_Tooltip_modifier_tsignite_Description"                                      "Not stolen from lol."
@@ -1657,22 +1658,50 @@
 		"DOTA_Tooltip_ability_item_hilt_ancient_Description"                              "Brimming with potential."
 		"DOTA_Tooltip_ability_item_hilt_ancient_int"                                      "INT:"
 
-		"DOTA_Tooltip_ability_item_hilt_arma"                                             "Hilt Arma"
+		"DOTA_Tooltip_ability_item_hilt_arma"                                             "Armadyl Hilt"
 		"DOTA_Tooltip_ability_item_hilt_arma_Description"                                 "Brimming with potential."
 		"DOTA_Tooltip_ability_item_hilt_arma_agility"                                     "AGILITY:"
 
-		"DOTA_Tooltip_ability_item_hilt_bandos"                                           "Hilt Bandos"
+		"DOTA_Tooltip_ability_item_hilt_bandos"                                           "Bandos Hilt"
 		"DOTA_Tooltip_ability_item_hilt_bandos_Description"                               "Brimming with potential."
 		"DOTA_Tooltip_ability_item_hilt_bandos_str"                                       "STR:"
 
-		"DOTA_Tooltip_ability_item_hilt_sara"                                             "Hilt Sara"
+		"DOTA_Tooltip_ability_item_hilt_sara"                                             "Saradomin Hilt"
 		"DOTA_Tooltip_ability_item_hilt_sara_Description"                                 "Brimming with potential."
 		"DOTA_Tooltip_ability_item_hilt_sara_health"                                      "HEALTH:"
-		"DOTA_Tooltip_ability_item_hilt_sara_mama"                                        "MAMA:"
+		"DOTA_Tooltip_ability_item_hilt_sara_mana"                                        "MANA:"
 
-		"DOTA_Tooltip_ability_item_hilt_zamorak"                                          "Hilt Zamorak"
+		"DOTA_Tooltip_ability_item_hilt_zamorak"                                          "Zamorak Hilt"
 		"DOTA_Tooltip_ability_item_hilt_zamorak_Description"                              "Brimming with potential."
 		"DOTA_Tooltip_ability_item_hilt_zamorak_damage"                                   "DAMAGE:"
+
+//Arma
+"DOTA_Tooltip_ability_item_gs_arma"                                               "Armadyl Godsword"
+		"DOTA_Tooltip_ability_item_gs_arma_Description"                                   "<h1>Active: The Judgement</h1> Deal %active_damage% pure damage"
+		"DOTA_Tooltip_ability_item_gs_arma_damage"                                        "DAMAGE:"
+		"DOTA_Tooltip_ability_item_gs_arma_agility"                                       "AGILITY:"
+//Sara
+		"DOTA_Tooltip_ability_item_gs_sara"                                               "Saradomin Godsword"
+		"DOTA_Tooltip_ability_item_gs_sara_Description"                                   "<h1>Active: Healing Blade</h1> Deal %active_damage% physical damage and restore %hp_restore% health and %mp_restore% mana to yourself"
+		"DOTA_Tooltip_ability_item_gs_sara_damage"                                        "DAMAGE:"
+		"DOTA_Tooltip_ability_item_gs_sara_health"                                        "HEALTH:"
+		"DOTA_Tooltip_ability_item_gs_sara_mana"                                          "MANA:"
+//Bandos
+		"DOTA_Tooltip_modifier_gs_bandos_armor_reduction"                                 "Warstriked"
+		"DOTA_Tooltip_modifier_gs_bandos_armor_reduction_Description"                     "Armor reduced"
+				"DOTA_Tooltip_ability_item_gs_bandos"                             "Bandos Godsword"
+		"DOTA_Tooltip_ability_item_gs_bandos_Description"                                 "<h1>Active: Warstrike</h1> Deal %active_damage% physical damage and reduce the targets armor by %armor_reduction% for %reduction_duration%s"
+		"DOTA_Tooltip_ability_item_gs_bandos_damage"                                      "DAMAGE:"
+		"DOTA_Tooltip_ability_item_gs_bandos_str"                                         "STR:"
+
+//Zamorak
+		"DOTA_Tooltip_modifier_gs_zamorak_freeze"                                         "Frozen"
+		"DOTA_Tooltip_modifier_gs_zamorak_freeze_Description"                             "Hit by an Ice Cleave"
+		"DOTA_Tooltip_ability_item_gs_zamorak"                                            "Zamorak Godsword"
+		"DOTA_Tooltip_ability_item_gs_zamorak_Description"                                "<h1>Active: Ice Cleave</h1> Deal %active_damage% physical damage and freeze the target for %freeze_dur%s"
+		"DOTA_Tooltip_ability_item_gs_zamorak_damage"                                     "DAMAGE:"
+
+
 
 
 //=================================================================================================================

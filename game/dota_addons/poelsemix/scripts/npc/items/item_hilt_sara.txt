@@ -28,9 +28,6 @@
 			"var_type"							"FIELD_INTEGER"
 			"health"					"400"
 		}
-	}
-	"AbilitySpecial"
-	{
 		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
@@ -40,7 +37,7 @@
 	
 	"Modifiers"
 	{
-		"modifier_hilt_zamorak"
+		"modifier_hilt_sara"
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
