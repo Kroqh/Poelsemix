@@ -393,9 +393,8 @@
 "npc_dota_hero_riki"                                                              "Shadow the Hedgehog"
 
 
-		"DOTA_Tooltip_ability_aerial_slash"                                               "Aerial Slash"
-		"DOTA_Tooltip_ability_aerial_slash_Description"                                   "Doesnt work rn"
-		"DOTA_Tooltip_ability_aerial_slash_slash_jump_radius"                             "SLASH JUMP RADIUS:"
+		"DOTA_Tooltip_ability_aerial_assault"                                               "Aerial Assault"
+		"DOTA_Tooltip_ability_aerial_assault_Description"                                   "Doesnt work rn"
 
 		"DOTA_Tooltip_ability_stealthy"                                                   "Stealthy"
 		"DOTA_Tooltip_ability_stealthy_Description"                                       "Shadow will fade into the shadows"
@@ -425,6 +424,8 @@
 		"DOTA_Tooltip_ability_flyby_attack_max_damage_bonus"                              "MAX DAMAGE BONUS MULTIPLIER:"
 		"DOTA_Tooltip_ability_flyby_attack_attack_range_for_max"                          "ATTACK RANGE FOR MAX:"
 		"DOTA_Tooltip_ability_flyby_attack_teleport_cooldown"                          "TELEPORT COOLDOWN:"
+
+		"DOTA_Tooltip_modifier_flyby_attack"        					"*Teleports behind you*"
 
 
 "DOTA_Tooltip_ability_slippery_motherfucker"                                      "Slippery Motherfucker"
@@ -1634,8 +1635,53 @@
 //		"DOTA_Tooltip_ability_item_sandals_phase_duration"                                "PHASE DURATION:"
 
 //=================================================================================================================
+// GODSWORDS
+//=================================================================================================================
+
+//Shards
+		"DOTA_Tooltip_ability_item_god_shard_one"                                         "Godsword Shard One"
+		"DOTA_Tooltip_ability_item_god_shard_one_Description"                             "A part of the Godsword blade."
+		"DOTA_Tooltip_ability_item_god_shard_one_damage"                                  "DAMAGE:"
+
+		"DOTA_Tooltip_ability_item_god_shard_three"                                       "Godsword Shard Three"
+		"DOTA_Tooltip_ability_item_god_shard_three_Description"                           "A part of the Godsword blade."
+		"DOTA_Tooltip_ability_item_god_shard_three_damage"                                "DAMAGE:"
+
+		"DOTA_Tooltip_ability_item_god_shard_two"                                         "Godsword Shard Two"
+		"DOTA_Tooltip_ability_item_god_shard_two_Description"                             "A part of the Godsword blade."
+		"DOTA_Tooltip_ability_item_god_shard_two_damage"                                  "DAMAGE:"
+
+//Hilts
+
+		"DOTA_Tooltip_ability_item_hilt_ancient"                                          "Ancient Hilt"
+		"DOTA_Tooltip_ability_item_hilt_ancient_Description"                              "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_ancient_int"                                      "INT:"
+
+		"DOTA_Tooltip_ability_item_hilt_arma"                                             "Hilt Arma"
+		"DOTA_Tooltip_ability_item_hilt_arma_Description"                                 "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_arma_agility"                                     "AGILITY:"
+
+		"DOTA_Tooltip_ability_item_hilt_bandos"                                           "Hilt Bandos"
+		"DOTA_Tooltip_ability_item_hilt_bandos_Description"                               "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_bandos_str"                                       "STR:"
+
+		"DOTA_Tooltip_ability_item_hilt_sara"                                             "Hilt Sara"
+		"DOTA_Tooltip_ability_item_hilt_sara_Description"                                 "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_sara_health"                                      "HEALTH:"
+		"DOTA_Tooltip_ability_item_hilt_sara_mama"                                        "MAMA:"
+
+		"DOTA_Tooltip_ability_item_hilt_zamorak"                                          "Hilt Zamorak"
+		"DOTA_Tooltip_ability_item_hilt_zamorak_Description"                              "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_zamorak_damage"                                   "DAMAGE:"
+
+
+//=================================================================================================================
 // Sange and Yasha LATOR
 //=================================================================================================================
+
+
+
+
 
 		"DOTA_Tooltip_ability_item_sange_yasha_lator"                                     "Sange Yasha-Lator"
 		"DOTA_Tooltip_ability_item_sange_yasha_lator_Description"                         "<h1>Passive: Maim in the butt</h1> Each attack has a %maim_chance%%% chance to reduce enemy hero movement speed by %maim_slow_movement%%% and attack speed by %maim_slow_attack%%%. Lasts %maim_duration%%% seconds.\n<h1>Passive: RIP CLOTHES</h1> Every hit rips off the enemy armor by %corruption_armor%. Lasts %corruption_duration% seconds."

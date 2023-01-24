@@ -1,0 +1,56 @@
+"item_hilt_sara"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "hilt_sara"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"2000"
+  	"ID"						"3036"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"health;mana;godsword"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"Hilt"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"health"					"400"
+		}
+	}
+	"AbilitySpecial"
+	{
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"mana"					"400"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_hilt_zamorak"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS" "%health"
+				"MODIFIER_PROPERTY_MANA_BONUS" "%mana"
+			}
+		}
+	}
+}
