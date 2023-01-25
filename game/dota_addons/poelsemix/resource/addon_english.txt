@@ -1,0 +1,1847 @@
+"lang"
+{
+	"Language"		"English"
+	"Tokens"
+	{		
+		"addon_game_name"								"Poelsemix"
+		"DOTA_GameMode_15"													"Poelsemix"
+
+		"DOTA_Tooltip_modifier_get_xp"					"Golden Aura"
+		"DOTA_Tooltip_modifier_get_xp_Description"		"Gaining more gold and experience!"
+
+		"DOTA_Tooltip_modifier_get_xp_global"					"Global Aura"
+		"DOTA_Tooltip_modifier_get_xp_global_Description"		"Gaining gold and experience"
+
+		"DOTA_Tooltip_modifier_fountain_aura_effect_lua"					"Fountain Aura"
+		"DOTA_Tooltip_modifier_fountain_aura_effect_lua_Description"		"Healing"
+
+		"DOTA_Tooltip_ability_item_bag_of_gold"			"300 Gold"
+		"DOTA_Tooltip_ability_item_treasure_chest"		"Treasure Chest"
+	
+		
+
+		"DOTA_Tooltip_Ability_item_ward_sentry"			"Sentry Ward (Modified)"
+		"DOTA_Tooltip_Ability_item_dust"				"Dust of Appearance (Modified)"
+
+		"DOTA_Tooltip_ability_bounty_hunter_wind_walk_Description"					"Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability.  If he breaks the invisibility with an attack, that attack will deal bonus damage.\n\n<font color='#70EA72'>Wind Walk has increased cooldown, mana cost, and fade time, while it has reduced duration and bonus damage in Overthrow.</font>"
+
+		"DOTA_Tooltip_ability_broodmother_spin_web_Description"						"Spins a large web that renders Broodmother invisible, grants a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. Spin Web charges restore every %charge_restore_time% seconds. If damage is taken, free movement is disabled and the movement speed increase is halved for %damage_time% seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears.\n\n<font color='#70EA72'>Spin Web has reduced count, health regen, and bonus movement speed for Overthrow.</font>"
+
+		"DOTA_Tooltip_ability_necrolyte_reapers_scythe_Description"					"Stuns the target enemy hero, then deals damage based on how much life it is missing.\n\n<font color='#70EA72'>In Overthrow, heroes killed by Reaper's Scythe will have 20 seconds added to their respawn timer.</font>\n\nAny kill under this effect is credited to Necrophos.\n\nUpgradable by Aghanim's Scepter."
+
+		"DOTA_Tooltip_ability_riki_permanent_invisibility_Description"				"Riki fades into the shadows, becoming invisible and gaining additional health regeneration.  If Riki attacks an enemy, he will become visible.\n\n<font color='#70EA72'>Cloak and Dagger's fade time and fade delay have been increased for Overthrow.</font>"
+
+		"DOTA_Tooltip_ability_riki_blink_strike_Description"						"Teleports behind the target unit, striking for bonus damage if it is an enemy. \n\n<font color='#70EA72'>In Overthrow, Blink Strike has reduced range and bonus damage.</font>"
+
+		"DOTA_Tooltip_ability_silencer_glaives_of_wisdom_Description"				"Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. \n\nGlaives of Wisdom is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.\n\n<font color='#70EA72'>Glaives of Wisdom intelligence percentage and range is reduced in Overthrow.</font>"
+
+		"DOTA_Tooltip_ability_zuus_thundergods_wrath_Description"					"Strikes all enemy heroes with a bolt of lightning, no matter where they may be.  Thundergod's Wrath also provides True Sight around each hero struck.  If an enemy hero is invisible, it takes no damage, but the True Sight is still created at that hero's location.\n\nUpgradable by Aghanim's Scepter.\n\n<font color='#70EA72'>Thundergod's Wrath has increased cooldown and mana cost and has reduced damage in Overthrow.</font>"
+
+		"DOTA_Tooltip_ability_pudge_flesh_heap_Description"							"Gives Pudge resistance to magic damage, as well as bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.\n\n<font color='#70EA72'>Flesh Heap's bonus strength and range have been reduced in Overthrow.</font>"
+
+		"DOTA_Tooltip_ability_obsidian_destroyer_arcane_orb_Description"			"Adds extra pure damage to Outworld Devourer's attacks, based on his remaining mana pool. Steals %int_steal% intelligence for %int_steal_duration% seconds per hit when attacking an enemy hero. Arcane Orb also does bonus damage to summoned units and illusions.\n\nArcane Orb is a Unique Attack Modifier, and does not stack with other Unique Attack Modifiers.\n\n<font color='#70EA72'>Arcane Orb's mana pool percentage, intelligence steal, and duration have been reduced in Overthrow.</font>"
+
+		"DOTA_Tooltip_ability_item_ward_sentry_Description"							"Use: Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within its range. Lasts %duration_minutes_tooltip% minutes.\n\nHold Control to give one Sentry Ward to an allied hero.\n\n<font color='#70EA72'>In Overthrow, Sentry Wards cost 100 gold and last 6 minutes.</font>"
+
+		"DOTA_Tooltip_ability_item_dust_Description"								"Use: Reveals and slows invisible Heroes in a nearby area.\n\n<font color='#70EA72'>In Overthrow, Dust of Appearance costs 90 gold and has a reduced cooldown.</font>"
+                  	
+
+
+
+		// DOTA 2 MODKIT GENERATED TOOLTIPS FOR: poelsemix
+		// Keys already defined in addon_english.txt are not listed, nor are Modifiers with the property "IsHidden" "1".
+
+		// ******************** HEROES ********************
+				// ******************** UNITS ********************
+		"npc_dota_creature_basic_zombie"                                                  "Dota Creature Basic Zombie"
+		"npc_dota_creature_berserk_zombie"                                                "Dota Creature Berserk Zombie"
+		"npc_dota_fire_trap_ward"                                                         "Dota Fire Trap Ward"
+		"npc_dota_kobold_overboss"                                                        "Dota Kobold Overboss"
+		"npc_dota_kobold_radiantboss"                                                     "Dota Kobold Radiantboss"
+		"npc_dota_kobold_underboss"                                                       "Dota Kobold Underboss"
+		"npc_dota_pendulum_trap_ward"                                                     "Dota Pendulum Trap Ward"
+		"npc_dota_spike_trap_ward"                                                        "Dota Spike Trap Ward"
+		"npc_dota_treasure_courier"                                                       "Dota Treasure Courier"
+		"npc_dota_venom_trap_ward"                                                        "Dota Venom Trap Ward"
+		"npc_dota_xp_global"                                                              "Dota Xp Global"
+		"npc_dota_xp_granter"                                                             "Dota Xp Granter"
+		"npc_dota_xp_granter2"                                                            "Dota Xp Granter2"
+		"npc_vision_revealer"                                                             "Vision Revealer"
+		
+
+		
+
+
+// ******************** ABILITY MODIFIERS ********************
+		"DOTA_Tooltip_modifier_invis_revealed"                                            "Invis Revealed"
+		"DOTA_Tooltip_modifier_invis_revealed_Description"                                ""
+
+				"DOTA_Tooltip_modifier_unselectable"                                              "Unselectable"
+		"DOTA_Tooltip_modifier_unselectable_Description"                                  ""
+
+
+		// ******************** ITEM MODIFIERS ********************
+
+		// ******************** ABILITIES ********************
+		"DOTA_Tooltip_ability_breathe_poison"                                             "Breathe Poison"
+		"DOTA_Tooltip_ability_breathe_poison_Description"                                 ""
+		"DOTA_Tooltip_ability_breathe_poison_start_radius"                                "START RADIUS:"
+		"DOTA_Tooltip_ability_breathe_poison_end_radius"                                  "END RADIUS:"
+		"DOTA_Tooltip_ability_breathe_poison_range"                                       "RANGE:"
+		"DOTA_Tooltip_ability_breathe_poison_speed"                                       "SPEED:"
+		"DOTA_Tooltip_ability_breathe_poison_poison_damage"                               "POISON DAMAGE:"
+		"DOTA_Tooltip_ability_breathe_poison_duration"                                    "DURATION:"
+		"DOTA_Tooltip_ability_breathe_poison_strike_damage"                               "STRIKE DAMAGE:"
+		"DOTA_Tooltip_ability_breathe_poison_tick_damage"                                 "TICK DAMAGE:"
+		"DOTA_Tooltip_ability_breathe_poison_tick_interval"                               "TICK INTERVAL:"
+		"DOTA_Tooltip_ability_breathe_poison_movement_slow"                               "MOVEMENT SLOW:"
+
+		"DOTA_Tooltip_ability_dota_ability_celebrate"                                     "Dota Ability Celebrate"
+		"DOTA_Tooltip_ability_dota_ability_celebrate_Description"                         ""
+
+		"DOTA_Tooltip_ability_dota_ability_dummy"                                         "Dota Ability Dummy"
+		"DOTA_Tooltip_ability_dota_ability_dummy_Description"                             ""
+
+		"DOTA_Tooltip_ability_dota_ability_reveal_invis"                                  "Dota Ability Reveal Invis"
+		"DOTA_Tooltip_ability_dota_ability_reveal_invis_Description"                      ""
+
+		"DOTA_Tooltip_ability_dota_ability_throw_coin"                                    "Dota Ability Throw Coin"
+		"DOTA_Tooltip_ability_dota_ability_throw_coin_Description"                        ""
+
+		"DOTA_Tooltip_ability_dota_ability_throw_coin_long"                               "Dota Ability Throw Coin Long"
+		"DOTA_Tooltip_ability_dota_ability_throw_coin_long_Description"                   ""
+
+		"DOTA_Tooltip_ability_dota_ability_treasure_courier"                              "Dota Ability Treasure Courier"
+		"DOTA_Tooltip_ability_dota_ability_treasure_courier_Description"                  ""
+
+		"DOTA_Tooltip_ability_dota_ability_vision_revealer"                               "Dota Ability Vision Revealer"
+		"DOTA_Tooltip_ability_dota_ability_vision_revealer_Description"                   ""
+
+		"DOTA_Tooltip_ability_dota_ability_xp_global"                                     "Dota Ability Xp Global"
+		"DOTA_Tooltip_ability_dota_ability_xp_global_Description"                         ""
+
+		"DOTA_Tooltip_ability_dota_ability_xp_granter"                                    "Dota Ability Xp Granter"
+		"DOTA_Tooltip_ability_dota_ability_xp_granter_Description"                        ""
+
+		"DOTA_Tooltip_ability_dota_ability_xp_granter2"                                   "Dota Ability Xp Granter2"
+		"DOTA_Tooltip_ability_dota_ability_xp_granter2_Description"                       ""
+
+		
+
+		
+
+"DOTA_Tooltip_ability_pendulum_trap"                                              "Pendulum Trap"
+		"DOTA_Tooltip_ability_pendulum_trap_Description"                                  ""
+		"DOTA_Tooltip_ability_pendulum_trap_damage"                                       "DAMAGE:"
+		"DOTA_Tooltip_ability_pendulum_trap_cast_range_scepter"                           "CAST RANGE SCEPTER:"
+		"DOTA_Tooltip_ability_pendulum_trap_damage_delay"                                 "DAMAGE DELAY:"
+
+		"DOTA_Tooltip_ability_spike_trap"                                                 "Spike Trap"
+		"DOTA_Tooltip_ability_spike_trap_Description"                                     ""
+		"DOTA_Tooltip_ability_spike_trap_light_strike_array_aoe"                          "LIGHT STRIKE ARRAY AOE:"
+		"DOTA_Tooltip_ability_spike_trap_light_strike_array_delay_time"                   "LIGHT STRIKE ARRAY DELAY TIME:"
+		"DOTA_Tooltip_ability_spike_trap_light_strike_array_stun_duration"                "LIGHT STRIKE ARRAY STUN DURATION:"
+		"DOTA_Tooltip_ability_spike_trap_cast_animation"                                  "CAST ANIMATION:"
+		"DOTA_Tooltip_ability_spike_trap_light_strike_array_damage"                       "LIGHT STRIKE ARRAY DAMAGE:"
+
+		"DOTA_Tooltip_ability_trap_unselectable"                                          "Trap Unselectable"
+		"DOTA_Tooltip_ability_trap_unselectable_Description"                              ""
+
+
+		// ******************** ITEMS ********************
+//=================================================================================================================
+// Teemo
+//=================================================================================================================
+		
+"npc_dota_hero_venomancer"                                                        "Teemo"
+"teemo"                                                                           "Teemo"
+
+		"DOTA_Tooltip_ability_blinding_dart"                                              "Blinding Dart"
+		"DOTA_Tooltip_ability_blinding_dart_Description"                                  "Obscures an enemy's vision with a powerful venom, dealing damage to the target unit and blinding it for the duration.<br></br><br></br>Scales with Teemo's Intelligence.<br></br><br></br>Damage = damage + teemo int * int scaling"
+		"DOTA_Tooltip_ability_blinding_dart_duration"                                     "DURATION:"
+		"DOTA_Tooltip_ability_blinding_dart_damage"                                       "DAMAGE:"
+		"DOTA_Tooltip_ability_blinding_dart_int_scaling"                                  "INT SCALING:"
+		//"DOTA_Tooltip_ability_blinding_dart_LinkedSpecialBonus"                           "LINKEDSPECIALBONUS:"
+
+		"DOTA_Tooltip_ability_guerrilla_warfare"                                          "Guerrilla Warfare"
+		"DOTA_Tooltip_ability_guerrilla_warfare_Description"                              "If Teemo stands still and takes no actions for a %wait% seconds, he becomes Invisible indefinitely. After leaving Invisibility, Teemo gains the Element of Surprise, increasing his Attack Speed for %duration% seconds.<br></br><br></br>The attack speed changes depending on Teemo's level."
+		//"DOTA_Tooltip_ability_guerrilla_warfare_wait"                                     "WAIT:"
+				"DOTA_Tooltip_ability_guerrilla_warfare_duration"                                 "DURATION:"
+		"DOTA_Tooltip_ability_guerrilla_warfare_attackspeed"                              "ATTACK SPEED LEVEL 1:"
+
+		"DOTA_Tooltip_ability_guerrilla_warfare_attackspeed6"                             "ATTACK SPEED LEVEL 6:"
+		"DOTA_Tooltip_ability_guerrilla_warfare_attackspeed12"                            "ATTACK SPEED LEVEL 12:"
+		"DOTA_Tooltip_ability_guerrilla_warfare_attackspeed18"                            "ATTACK SPEED LEVEL 18:"
+
+		"DOTA_Tooltip_ability_move_quick"                                                 "Move Quick"
+		"DOTA_Tooltip_ability_move_quick_Description"                                     "Teemo scampers around, passively increasing his Movement Speed until he is struck by an enemy. Activate to multiply the passive bonus by %multiplier%, and prevent it from being stopped by being struck for a short time."
+		"DOTA_Tooltip_ability_move_quick_movement_speed"                                  "%MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_move_quick_multiplier"                                      "MULTIPLIER:"
+		"DOTA_Tooltip_ability_move_quick_duration"                                        "DURATION:"
+
+		"DOTA_Tooltip_ability_noxious_trap"                                               "Noxious Trap"
+		"DOTA_Tooltip_ability_noxious_trap_Description"                                   "Teemo throws an explosive poisonous trap using one of the mushrooms stored in his pack. If an enemy steps on the trap, it will release a poisonous cloud, slowing enemies and damaging them over %duration% seconds. Shrooms last for %trap_duration% seconds.<br></br><br></br>Scales with Teemo's Intelligence.<br></br><br></br>Damage per sec = damage + teemo int * int scaling"
+		"DOTA_Tooltip_ability_noxious_trap_duration"                                      "DURATION:"
+		//"DOTA_Tooltip_ability_noxious_trap_tick"                                          "TICK:"
+		"DOTA_Tooltip_ability_noxious_trap_damage"                                        "DAMAGE PER SEC:"
+		"DOTA_Tooltip_ability_noxious_trap_max_stacks"                                    "MAX TRAPS:"
+		//"DOTA_Tooltip_ability_noxious_trap_trap_duration"                                 "TRAP DURATION:"
+		//"DOTA_Tooltip_ability_noxious_trap_radius"                                        "RADIUS:"
+		"DOTA_Tooltip_ability_noxious_trap_movement_slow"                                 "%MOVEMENT SLOW:"
+		"DOTA_Tooltip_ability_noxious_trap_charge_time"                                   "CHARGE TIME:"
+		"DOTA_Tooltip_ability_noxious_trap_int_scaling"                                   "INT SCALING:"
+
+		"DOTA_Tooltip_ability_special_bonus_teemo_2"                                      "Toxic Shot +60 on-hit damage"
+		//"DOTA_Tooltip_ability_special_bonus_teemo_2_Description"                          ""
+		//"DOTA_Tooltip_ability_special_bonus_teemo_2_value"                                "VALUE:"
+
+		"DOTA_Tooltip_ability_special_bonus_teemo_3"                                      "Blinding Dart +1 to int scaling"
+		//"DOTA_Tooltip_ability_special_bonus_teemo_3_Description"                          ""
+		//"DOTA_Tooltip_ability_special_bonus_teemo_3_value"                                "VALUE:"
+
+		"DOTA_Tooltip_ability_special_bonus_teemo_4"                                      "Throw 2 more shrooms"
+		"DOTA_Tooltip_ability_special_bonus_teemo_4_Description"                          "Shroom spawns are rotated 50 degrees left and right around Teemo's position."
+
+		"DOTA_Tooltip_ability_toxic_shot"                                                 "Toxic Shot"
+		"DOTA_Tooltip_ability_toxic_shot_Description"                                     "Each of Teemo's attacks will poison the target, dealing damage on impact and each second after for %duration% seconds.<br></br><br></br>Scales with Teemo's Intelligence.<br></br><br></br>Damage on hit = damage on hit + teemo int * int scaling on hit.<br></br><br></br>Damage per sec = damage per sec + teemo int * int scaling per sec."
+		"DOTA_Tooltip_ability_toxic_shot_damage"                                          "DAMAGE PER SECOND:"
+		"DOTA_Tooltip_ability_toxic_shot_duration"                                        "DURATION:"
+		//"DOTA_Tooltip_ability_toxic_shot_tick"                                            "TICK:"
+		"DOTA_Tooltip_ability_toxic_shot_int_scaling_onhit"                               "INT SCALING ON HIT:"
+		"DOTA_Tooltip_ability_toxic_shot_int_scaling_prsec"                               "INT SCALING PR SEC:"
+		"DOTA_Tooltip_ability_toxic_shot_damage_onhit"                                    "DAMAGE ON HIT:"
+		//"DOTA_Tooltip_ability_toxic_shot_LinkedSpecialBonus"                              "LINKEDSPECIALBONUS:"
+
+//=================================================================================================================
+// Urgot
+//=================================================================================================================
+"npc_dota_hero_broodmother"			"Urgot"
+
+		"DOTA_Tooltip_ability_imba_mirana_arrow"                                          "Acid Hunter"
+		"DOTA_Tooltip_ability_imba_mirana_arrow_Description"                              "ACTIVE: Urgot fires a missile in a line, dealing physical damage to the first enemy it hits. <br></br><br></br>Acid Hunter can also directly target enemies affected by Charge Noxian Corrosive Charge, passing over all other enemies to hit them directly, and gaining increased range."
+		"DOTA_Tooltip_ability_imba_mirana_arrow_base_damage"                              "BASE DAMAGE:"
+		"DOTA_Tooltip_ability_imba_mirana_arrow_arrow_distance"							  "MISSILE DISTANCE:"
+
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit"                            "Noxian Corrosive Charge"
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_Description"                "ACTIVE: Urgot launches a corrosive charge to the target location, dealing physical damage to all enemies hit over 5 seconds and reducing their armor for the duration."
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_radius"                     "RADIUS:"
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_cast_range"                 "CAST RANGE:"
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_armor_reduction_pct"        "ARMOR REDUCTION PCT:"
+		"DOTA_Tooltip_ability_imba_phoenix_launch_fire_spirit_cooldown"                   "COOLDOWN:"
+
+		"DOTA_Tooltip_ability_imba_pipe"                                                  "Terror Capacitor"
+		"DOTA_Tooltip_ability_imba_pipe_Description"                                      "ACTIVE: Urgot shields himself"
+		"DOTA_Tooltip_ability_imba_pipe_shield_health"                                    "SHIELD HEALTH:"
+		"DOTA_Tooltip_ability_imba_pipe_duration"                                         "DURATION:"
+
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap"                            "Hyper-Kinetic Position Reverser"
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap_Description"                "ACTIVE: Urgot grants himself damage reduction and channels for 1 second, Suppression the target enemy champion for the duration. Upon completing the channel, Urgot and his target blink to each other's locations.<br></br><br></br>Upgradable with Aghanim's Scepter"
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap_range"                      "RANGE:"
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap_dmg_reduction"              "DMG REDUCTION PERCENTAGE:"
+		"DOTA_Tooltip_ability_imba_vengefulspirit_nether_swap_dmg_red_duration"           "DMG REDUCTION DURATION:"
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_e_reduc"                                "Noxian Corrosive Charge Cooldown Halved"
+		"DOTA_Tooltip_ability_special_bonus_urgot_e_reduc_Description"                    "Double the action"
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_q_boost"                                "Acid Hunter Base Cooldown Set To 1"
+		"DOTA_Tooltip_ability_special_bonus_urgot_q_boost_Description"                    "With this you can shoot 60 Acid Hunters per sec."
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_q_boost2"                               "Acid Hunter Base Cooldown Halved"
+		"DOTA_Tooltip_ability_special_bonus_urgot_q_boost2_Description"                   "What the heck!?"
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_r_boost"                                "HKPR(ult) Damage Reduction Duration Doubled"
+		"DOTA_Tooltip_ability_special_bonus_urgot_r_boost_Description"                    "You are a big bøff some time"
+
+		"DOTA_Tooltip_ability_special_bonus_urgot_w_boost"                                "Terror Capacitor Shield Health Doubled"
+		"DOTA_Tooltip_ability_special_bonus_urgot_w_boost_Description"                    "You are a bøff some times"			
+
+//=================================================================================================================
+// Nissan
+//=================================================================================================================
+
+"npc_dota_hero_ogre_magi"                                                    "Nissan"
+"nissan"                                                                       "Nissan"
+
+"DOTA_Tooltip_ability_drift"                                                      "Drift"
+		"DOTA_Tooltip_ability_drift_Description"                                          "Drift forward and back in an arc. Burn enemies you come into contact with."
+		"DOTA_Tooltip_ability_drift_burn_duration"                                        "BURN DURATION:"
+		"DOTA_Tooltip_ability_drift_burn_tick_interval"                                   "BURN TICK INTERVAL:"
+		"DOTA_Tooltip_ability_drift_damage_per_second"                                    "DAMAGE PER SECOND:"
+		"DOTA_Tooltip_modifier_drift_burn_Description" 																		"Burned by the Nissan."
+		"DOTA_Tooltip_modifier_drift_burn" 																		"Burns"
+
+		"DOTA_Tooltip_ability_runover"                                                    "Run over"
+		"DOTA_Tooltip_ability_runover_Description"                                        "Start the engine and run over people."
+		"DOTA_Tooltip_ability_runover_bonus_movespeed"                                    "%BONUS MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_runover_duration"                                           "DURATION:"
+		"DOTA_Tooltip_ability_runover_stun_duration"                                      "STUN DURATION:"
+		"DOTA_Tooltip_ability_runover_damage"                                             "DAMAGE:"
+		//"DOTA_Tooltip_ability_runover_radius"                                             "RADIUS:"
+
+		"DOTA_Tooltip_modifier_runover_stun_Description" 																		"Flat"
+		"DOTA_Tooltip_modifier_runover_stun" 																		"Flat as a pancake."
+
+		"DOTA_Tooltip_ability_longlights"                                                 "High beam"
+		"DOTA_Tooltip_ability_longlights_Description"                                     "Turn on the fjernlys blinding enemies in front of you and damaging them. Deals damage per. tick. Tick rate is very high."
+		"DOTA_Tooltip_ability_longlights_duration"                                        "DURATION:"
+		"DOTA_Tooltip_ability_longlights_length"                                          "LENGTH:"
+		"DOTA_Tooltip_ability_longlights_damage_pr_tick"                                  "DAMAGE PR TICK:"
+		"DOTA_Tooltip_ability_longlights_miss_chance"                                     "%MISS CHANCE:"
+
+		"DOTA_Tooltip_modifier_longlights_blind_Description" 																		"Blinded by the Nissan."
+		"DOTA_Tooltip_modifier_longlights_blind" 																		"Blinded"
+
+		"DOTA_Tooltip_ability_race"                                                       "Race"
+		"DOTA_Tooltip_ability_race_Description"                                           "Start a race against an enemy. The car who moves the most wins the race. The loser takes big damage. A tie (VERY UNLIKELY) is a win for Nissan."
+		"DOTA_Tooltip_ability_race_damage"                                                "DAMAGE:"
+		"DOTA_Tooltip_ability_race_duration"                                              "DURATION:"
+		//"DOTA_Tooltip_ability_race_stacks"                                                "STACKS:"
+
+		"DOTA_Tooltip_modifier_race_Description" 																		"The lower this number is, the more you have moved."
+		"DOTA_Tooltip_modifier_race" 																		"Race"
+
+		
+
+
+
+		//Talents
+		"DOTA_Tooltip_ability_special_bonus_nissan_1"                                     "High beam +{s:value} length"
+		//"DOTA_Tooltip_ability_special_bonus_nissan_1_Description"                         ""
+		//"DOTA_Tooltip_ability_special_bonus_nissan_1_value"                               "VALUE:600"
+
+		"DOTA_Tooltip_ability_special_bonus_nissan_2"                                     "Double drift"
+		"DOTA_Tooltip_ability_special_bonus_nissan_2_Description"                         "Spin around in a circle twice."
+		//"DOTA_Tooltip_ability_special_bonus_nissan_2_value"                               "VALUE:"
+
+		"DOTA_Tooltip_ability_special_bonus_nissan_3"                                     "Drift burn +{s:value} damage"
+		//"DOTA_Tooltip_ability_special_bonus_nissan_3_Description"                         ""
+		//"DOTA_Tooltip_ability_special_bonus_nissan_3_value"                               "VALUE:"
+
+		"DOTA_Tooltip_ability_special_bonus_nissan_4"                                     "Race +{s:value} damage"
+		//"DOTA_Tooltip_ability_special_bonus_nissan_4_Description"                         ""
+		//"DOTA_Tooltip_ability_special_bonus_nissan_4_value"                               "VALUE:"
+
+
+//=================================================================================================================
+// Shimakaze
+//=================================================================================================================
+"npc_dota_hero_crystal_maiden"                                                    "Shimakaze"
+"shimakaze"                                                                       "Shimakaze"
+
+"DOTA_Tooltip_ability_ap_shell"                                                   "Type 91 Armor Piercing Shell"
+"DOTA_Tooltip_ability_ap_shell_Description"                                       "Fire a Type 91 Armor Piercing Shell (lol) to lower their magic resist."
+"DOTA_Tooltip_ability_ap_shell_duration"                                          "DURATION:"
+//"DOTA_Tooltip_ability_ap_shell_speed"                                             "SPEED:"
+"DOTA_Tooltip_ability_ap_shell_magic_resist"                                      "%MAGIC RESIST REDUCTION:"
+
+		
+		"DOTA_Tooltip_ability_dangerous_sea"                                              "Dangerous Sea"
+		"DOTA_Tooltip_ability_dangerous_sea_Description"                                  "Shimakaze leaves behind a pool of water which damages and slows nearby enemies. The damage scales with intelligence.<br></br><br></br>Damage = 60 + <font color='#356BFF'>int</font> * <font color='#356BFF'>int</font> scaling<br></br><br></br><br>Upgradeable by Aghanim's Scepter.</br>"
+		"DOTA_Tooltip_ability_dangerous_sea_damage"                                       "DAMAGE:"
+		"DOTA_Tooltip_ability_dangerous_sea_duration"                                     "DURATION:"
+		//"DOTA_Tooltip_ability_dangerous_sea_tick_interval"                                "TICK INTERVAL:"
+		"DOTA_Tooltip_ability_dangerous_sea_radius"                                       "RADIUS:"
+		"DOTA_Tooltip_ability_dangerous_sea_move_slow"                                    "%MOVEMENT SPEED SLOW:"
+		//"DOTA_Tooltip_ability_dangerous_sea_duration_slow"                               "DURATION SLOW:"
+		"DOTA_Tooltip_ability_dangerous_sea_int_scaling"                                  "INTELLECT SCALING:"
+		//"DOTA_Tooltip_ability_dangerous_sea_int_scaling_aghs"                             "INTELLECT SCALING SCEPTER:"
+		//"DOTA_Tooltip_ability_dangerous_sea_distance_req"                                 "DISTANCE REQ:"
+		
+		// SCEPTER stuff
+		//"DOTA_Tooltip_ability_dangerous_sea_scepter_int_scaling_aghs"  	     		"BLAHBLAH:"
+		"DOTA_Tooltip_ability_dangerous_sea_scepter_description" 						"Sets Dangerous Sea intelligence scaling to %int_scaling_aghs%."
+		//"DOTA_Tooltip_ability_dangerous_sea_shard_description" 						"Increases Dangerous Sea intelligence scaling."
+
+		"DOTA_Tooltip_ability_destroyer_speed"                                            "Destroyer Speed"
+		"DOTA_Tooltip_ability_destroyer_speed_Description"                                "While moving, Shimakaze builds stacks. Activating this spell at 400 stacks gives Shimakaze a slight movement speed boost."
+		//"DOTA_Tooltip_ability_destroyer_speed_max_stacks"                                 "MAX STACKS:"
+		"DOTA_Tooltip_ability_destroyer_speed_movespeed"                                  "%MOVEMENT SPEED INCREASE:"
+		"DOTA_Tooltip_ability_destroyer_speed_duration"                                   "DURATION:"
+		
+		"DOTA_Tooltip_ability_torpedo"                                                    "Torpedo Salve"
+		"DOTA_Tooltip_ability_torpedo_Description"                                        "Shimakaze launches a torpedo at every hero. Torpedoes damage and stun in an area when they collide with another hero."
+		//"DOTA_Tooltip_ability_torpedo_velocity"                                           "VELOCITY:"
+
+		"DOTA_Tooltip_ability_torpedo_damage"                                             "DAMAGE:"
+		"DOTA_Tooltip_ability_torpedo_stun_duration"                                      "STUN DURATION:"		
+		"DOTA_Tooltip_ability_torpedo_radius"                                             "RADIUS:"
+		//"DOTA_Tooltip_ability_torpedo_search_radius"                                      "SEARCH RADIUS:"
+		
+		"DOTA_Tooltip_ability_wave"                                                       "Wave"
+		"DOTA_Tooltip_ability_wave_Description"                                           "Shimakaze rides a wave to push herself forward."
+		//"DOTA_Tooltip_ability_wave_velocity"                                              "VELOCITY:"
+		"DOTA_Tooltip_ability_wave_range"                                                 "RANGE:"
+		
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_2"                                  "Destroyer Speed sets movespeed cap to %speed%"
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_2_Description"                      "It doesn't show on the HUD, but it works. Trust me."
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_2_speed"                            "SPEED:"
+		
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_3"                                  "2 torpedoes"
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_3_Description"                      ""
+
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_4"                                  "2x torpedo stun duration"
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_4_Description"                      ""
+		
+		"DOTA_Tooltip_ability_special_bonus_shimakaze_1"                                  "Wave +{s:value} range"
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_1_Description"                      ""
+		//"DOTA_Tooltip_ability_special_bonus_shimakaze_1_range"                            "RANGE:"
+
+
+//=================================================================================================================
+// Shadow
+//=================================================================================================================
+"npc_dota_hero_riki"                                                              "Shadow the Hedgehog"
+
+
+		"DOTA_Tooltip_ability_aerial_assault"                                               "Aerial Assault"
+		"DOTA_Tooltip_ability_aerial_assault_Description"                                   "Shadow slashes back and forth, dealing damage to enemies he comes into contact with"
+		
+		"DOTA_Tooltip_ability_aerial_assault_damage_per_slash"                            "DAMAGE PER SLASH:"
+		"DOTA_Tooltip_ability_aerial_assault_slash_speed"                                 "SPEED:"
+		"DOTA_Tooltip_ability_aerial_assault_bounces"                                     "Slashes:"
+
+		"DOTA_Tooltip_ability_stealthy"                                                   "Stealthy"
+		"DOTA_Tooltip_ability_stealthy_Description"                                       "Shadow will fade into the shadows"
+		"DOTA_Tooltip_ability_stealthy_fade_delay"                                        "FADE DELAY:"
+		"DOTA_Tooltip_ability_stealthy_movement_speed"                                    "MOVEMENT SPEED:"
+
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_1"                                     "Special Bonus Shadow 1"
+		"DOTA_Tooltip_ability_special_bonus_shadow_1_Description"                         ""
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_2"                                     "Special Bonus Shadow 2"
+		"DOTA_Tooltip_ability_special_bonus_shadow_2_Description"                         ""
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_3"                                     "Increases flyby attack minimum damage dealt"
+		"DOTA_Tooltip_ability_special_bonus_shadow_3_Description"                         "Increases by {s:value}%"
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_4"                                     "Increases flyby attack maximum damage dealt"
+		"DOTA_Tooltip_ability_special_bonus_shadow_4_Description"                         "Increases by {s:value}%"
+
+		"DOTA_Tooltip_ability_special_bonus_shadow_5"                                     "Fade faster"
+		"DOTA_Tooltip_ability_special_bonus_shadow_5_Description"                         "Shadow will fade faster by {s:value} seconds"
+
+
+		"DOTA_Tooltip_ability_flyby_attack"                                               "Flyby Attack"
+		"DOTA_Tooltip_ability_flyby_attack_Description"                                   "Shadow will teleport behind his target for his attack, dealing extra damage based on distance teleported"
+		"DOTA_Tooltip_ability_flyby_attack_min_damage_bonus"                              "MIN DAMAGE BONUS MULTIPLIER:"
+		"DOTA_Tooltip_ability_flyby_attack_max_damage_bonus"                              "MAX DAMAGE BONUS MULTIPLIER:"
+		"DOTA_Tooltip_ability_flyby_attack_attack_range_for_max"                          "BONUS RANGE:"
+		"DOTA_Tooltip_ability_flyby_attack_teleport_cooldown"                          "TELEPORT COOLDOWN:"
+
+		"DOTA_Tooltip_modifier_flyby_attack"        					"*Teleports behind you*"
+
+
+"DOTA_Tooltip_ability_slippery_motherfucker"                                      "Slippery Motherfucker"
+		"DOTA_Tooltip_ability_slippery_motherfucker_Description"                          "Shadow will casually dodge attacks by accident while looking cool"
+		"DOTA_Tooltip_ability_slippery_motherfucker_bonus_evasion"                        "BONUS EVASION:"
+
+
+
+
+//=================================================================================================================
+// Brian
+//=================================================================================================================
+//hero: Brian
+
+"brian"                                                                           "Brian"
+"npc_dota_hero_brewmaster"                                                        "Brian"
+
+
+//abilities: 
+"DOTA_Tooltip_ability_brian_dak"                                                  "Dakke-dak"
+
+"DOTA_Tooltip_ability_brian_dak_Description"                                      "Wanna go to daisy?"		
+"DOTA_Tooltip_ability_brian_dak_radius"                                           "RADIUS:"
+		
+"DOTA_Tooltip_ability_brian_dak_duration"                              		  "DURATION:"
+
+
+
+
+"DOTA_Tooltip_ability_hurtigbrille"               	                          "Hurtig-Briller"
+		
+"DOTA_Tooltip_ability_hurtigbrille_Description"                                   "Put them on boi"
+		
+"DOTA_Tooltip_ability_hurtigbrille_move_up_self"                                  "MOVEMENT SPEED:"
+		
+"DOTA_Tooltip_ability_hurtigbrille_aspeed"                                        "AGILITY:"
+
+"DOTA_Tooltip_ability_hurtigbrille_duration"                                      "DURATION:"
+
+
+
+
+"DOTA_Tooltip_ability_red_cecil"                                                  "Red 	Cecil"
+
+"DOTA_Tooltip_ability_red_cecil_Description"                                      "Smoking since the age of 12 has its benefits"
+		
+"DOTA_Tooltip_ability_red_cecil_range"                                            "RANGE:"
+				
+"DOTA_Tooltip_ability_red_cecil_dmg_reduction_pct"                                "%DAMAGE REDUCTION:"
+			
+"DOTA_Tooltip_ability_red_cecil_slow"						 					  "%SLOW:"
+
+
+"DOTA_Tooltip_ability_red_cecil_debuff_duration"                                  "DEBUFF DURATION:"
+
+
+
+"DOTA_Tooltip_ability_mokai"                                                      "Mokai"
+		
+"DOTA_Tooltip_ability_mokai_Description"                                          "Get drunk and claim magic aint real, taunting enemies around you"
+		
+"DOTA_Tooltip_ability_mokai_duration"                                             "DURATION:"
+
+		
+"DOTA_Tooltip_ability_mokai_bonus_strength" 					  "BONUS STRENGTH:"
+		
+"DOTA_Tooltip_ability_mokai_radius"                                               "TAUNT RADIUS:"
+
+                         
+"DOTA_Tooltip_ability_mokai_bonus_armor"                                          "BONUS ARMOR:"
+
+//modifiers:
+"DOTA_Tooltip_modifier_hurtigbrille"                                                "Speedyglasses"
+		
+"DOTA_Tooltip_modifier_hurtigbrille_Description"                                    "Fast as fuck"
+
+
+
+"DOTA_Tooltip_smokerlungs"                                                        "Second hand smoking"
+		
+"DOTA_Tooltip_smokerlungs_Description" 								  "Not used to smoking side-effects"
+
+"DOTA_Tooltip_Mokai"                                                              "Drunk on mokais"
+		
+"DOTA_Tooltip_Mokai_Description"   						  "Drunk man does not know any magic"
+
+"DOTA_Tooltip_modifier_beserkers_call_enemy_datadriven"                           "Randers swagger"
+"DOTA_Tooltip_modifier_beserkers_call_enemy_datadriven_Description"               "Taunted by a man with too much swag"
+
+
+
+
+//=================================================================================================================
+// Kim Larsen
+//=================================================================================================================
+//hero:
+"kim_larsen"                                                                      "Kim Larsen"
+
+
+"npc_dota_hero_night_stalker"                                                     "Kim Larsen"
+
+
+//abilities: 
+"DOTA_Tooltip_ability_kim_gasolin"                                                "Gasolin"
+		
+"DOTA_Tooltip_ability_kim_gasolin_Description"                                    "Gasolin is playing all night! Massive stat boost during playtime"
+		
+"DOTA_Tooltip_ability_kim_gasolin_statboost"                                      "ALL STATS:"
+
+"DOTA_Tooltip_ability_kim_nat"                                                    "Midt om natten"
+		
+"DOTA_Tooltip_ability_kim_nat_Description"                                        "The day turns night, opponents get paranoid of the cops and you get run at max speed."
+	
+"DOTA_Tooltip_ability_kim_nat_duration"                                           "DURATION:"
+		
+"DOTA_Tooltip_ability_kim_nat_blind_percentage"                                   "%BLIND:"
+
+
+"DOTA_Tooltip_ability_kim_paperclip"                                              "Paperklip"
+
+"DOTA_Tooltip_ability_kim_paperclip_Description"                                  "You cut an evil copy of the enemy"
+"DOTA_Tooltip_ability_kim_paperclip_illusion_duration"                            "COPY DURATION:"
+
+"DOTA_Tooltip_ability_kim_paperclip_illusion_outgoing_tooltip"                    "%COPY DAMAGE:"
+
+"DOTA_Tooltip_ability_kim_banana"                                                 "Køb Bananer"
+		
+"DOTA_Tooltip_ability_kim_banana_Description"                                     "The good old banana peel slip"
+
+"DOTA_Tooltip_ability_kim_banana_slow_duration"                                   "SLIP DURATION:"
+
+"DOTA_Tooltip_ability_kim_stille"                                                 "Om lidt bliver der stille"
+"DOTA_Tooltip_ability_kim_stille_Description"                             		  "Kim charges forward, silencing and damaging enemies around the end point"
+"DOTA_Tooltip_ability_kim_stille_range"                                           "CHARGE RANGE:"
+"DOTA_Tooltip_ability_kim_stille_radius"                                          "DAMAGE RADIUS:"
+"DOTA_Tooltip_ability_kim_stille_dmg"                                             "DAMAGE:"
+"DOTA_Tooltip_ability_kim_stille_duration"                                        "SILENCE DURATION:"
+
+
+//modifiers:
+"DOTA_Tooltip_modifier_hunter_in_the_night_buff_datadriven"                       "Gasolin"
+		
+"DOTA_Tooltip_modifier_hunter_in_the_night_buff_datadriven_Description"           "Gasolin is playing all night!"
+
+
+
+"DOTA_Tooltip_modifier_stasis_trap_stun_datadriven"                               "Banana peeled"
+		
+"DOTA_Tooltip_modifier_stasis_trap_stun_datadriven_Description"                   "Oopsie"
+
+
+
+"DOTA_Tooltip_modifier_darkness_datadriven"                                       "Middle of the night"
+		
+"DOTA_Tooltip_modifier_darkness_datadriven_Description"                           "Paranoid and afraid"
+
+"DOTA_Tooltip_modifier_stille_silence"                                       "Silenced"
+		
+"DOTA_Tooltip_modifier_stille_silence_Description"                           "A moment of silence for a legend"
+
+"DOTA_Tooltip_modifier_darkness_aura_datadriven"                                  "Artificial night"
+		
+"DOTA_Tooltip_modifier_darkness_aura_datadriven_Description"                      "Catch the criminals"
+
+
+//=================================================================================================================
+// Søren
+//=================================================================================================================
+//hero: 
+"npc_dota_hero_lone_druid"                                                       "Søren Ryge"
+"npc_dota_hero_Soren_Ryge_datadriven"                                             "Søren Ryge"
+
+//abilities: 
+"DOTA_Tooltip_ability_Skovtur"                                                    "Skovtur"
+		
+"DOTA_Tooltip_ability_Skovtur_Description"                                        "Go to the forest and relax"
+		
+"DOTA_Tooltip_ability_Skovtur_hp"                                                 "HP REGEN:"
+		
+"DOTA_Tooltip_ability_Skovtur_res"                                                "RESISTANCE:"
+
+"DOTA_Tooltip_ability_Skovtur_duration"                                           "DURATION:"
+
+"DOTA_Tooltip_ability_Skyd_en_due_datadriven"                                     "Duejagt"
+		
+"DOTA_Tooltip_ability_Skyd_en_due_datadriven_Description"                         "Remember to reveal your license first"
+				
+"DOTA_Tooltip_ability_Skyd_en_due_datadriven_channel_time"                        "TALKING TIME:"
+		
+"DOTA_Tooltip_ability_Skyd_en_due_datadriven_tooltip_range"                       "RANGE:"
+				
+
+"DOTA_Tooltip_ability_SorenPassiv"                                                "Hindbærsnitte"
+
+			
+"DOTA_Tooltip_ability_SorenPassiv_Description"                                    "Eat a hindbærsnitte and relax"
+		
+"DOTA_Tooltip_ability_SorenPassiv_heal_amount"                                    "HEAL:"
+		
+"DOTA_Tooltip_ability_SorenPassiv_chance"					  "%CHANCE:"
+"DOTA_Tooltip_ability_kolonihave"                                                 "Køkkenhave"
+		
+"DOTA_Tooltip_ability_kolonihave_Description"                                     "Plant a køkkenhave and relax"
+
+		
+"DOTA_Tooltip_ability_kolonihave_passiv"                                          "Køkkenhave"
+		
+"DOTA_Tooltip_ability_kolonihave_passiv_Description"				"Hello my friend"
+
+//modifiers:
+"DOTA_Tooltip_modifier_kolonihave_aura"                                           "Køkkenhave Aura"
+		
+"DOTA_Tooltip_modifier_kolonihave_aura_Description"                               "Beautiful aint it?"
+
+		
+"DOTA_Tooltip_modifier_kolonihave_agilityboost"                                   "Flot køkkenhave"
+		
+"DOTA_Tooltip_modifier_kolonihave_agilityboost_Description"			  "This sight gives me energy"
+
+"DOTA_Tooltip_modifier_shackles"                                                  "Søren is speaking"
+		
+"DOTA_Tooltip_modifier_shackles_Description"                                      "Listen closely"
+"DOTA_Tooltip_modifier_rygeagi"                                                   "Kagebords counter"
+		
+"DOTA_Tooltip_modifier_rygeagi_Description"                                       "Snitterne væk"
+
+
+
+
+
+//=================================================================================================================
+// Cid
+//=================================================================================================================
+
+
+//spells
+"DOTA_Tooltip_ability_big_clicks"                                                 "Big Clicks"
+"DOTA_Tooltip_ability_big_clicks_Description"                                     "Your next attacks deals big damage. Bonus is a percentage of your base damage."
+"DOTA_Tooltip_ability_big_clicks_damage"                                          "%DAMAGE:"
+"DOTA_Tooltip_ability_big_clicks_upgraded_damage"                                 "%UPGRADED DAMAGE:"
+"DOTA_Tooltip_ability_big_clicks_stacks"                                          "STACKS:"
+"DOTA_Tooltip_ability_big_clicks_upgraded_stacks"                                 "UPGRADED STACKS:"
+"DOTA_Tooltip_ability_big_clicks_duration"                                        "DURATION:"
+"DOTA_Tooltip_ability_big_clicks_Lore"											  "I love clicking very much"
+
+"DOTA_Tooltip_ability_huge_click"                                                 "Huge Click"
+"DOTA_Tooltip_ability_huge_click_Description"                                     "You have a chance to deal pretty good damage lol. (175% means 75% increased damage. quality consistency)"
+"DOTA_Tooltip_ability_huge_click_chance"                                          "CHANCE:"
+"DOTA_Tooltip_ability_huge_click_damage_modifier"                                 "%DAMAGE MODIFIER:"
+"DOTA_Tooltip_ability_huge_click_damage_modifier_upgraded"                        "%DAMAGE MODIFIER UPGRADED:"
+"DOTA_Tooltip_ability_huge_click_Lore"											  "OMEGALUL"
+
+"DOTA_Tooltip_ability_multiclick"                                                 "Multiclick"
+"DOTA_Tooltip_ability_multiclick_Description"                                     "Reduce your base attack time for the next few attacks. When this spell is upgraded, it turns into a passive LUL."
+"DOTA_Tooltip_ability_multiclick_bat"                                             "BAT:"
+"DOTA_Tooltip_ability_multiclick_bat_upgraded"                                    "BAT UPGRADED:"
+"DOTA_Tooltip_ability_multiclick_stacks"                                          "STACKS:"
+"DOTA_Tooltip_ability_multiclick_duration"                                        "DURATION:"
+"DOTA_Tooltip_ability_multiclick_Lore"                                            "En mand fortalte mig, at Steven er bøsse. Det var sandt."
+
+"DOTA_Tooltip_ability_powersurge"                                                 "Powersurge"
+"DOTA_Tooltip_ability_powersurge_Description"                                     "Double or triple your base damage. Big deeps."
+"DOTA_Tooltip_ability_powersurge_damage_modifier_tooltip"                         "DAMAGE MULTIPLIER:"
+"DOTA_Tooltip_ability_powersurge_damage_modifier_upgraded_tooltip"                "DAMAGE MULTIPLIER UPGRADED:"
+"DOTA_Tooltip_ability_powersurge_duration"                                        "DURATION:"
+"DOTA_Tooltip_ability_powersurge_Lore"                                            "BIG DAMAGE"
+
+"DOTA_Tooltip_ability_upgrade_skills"                                             "Upgrade Skills"
+"DOTA_Tooltip_ability_upgrade_skills_Description"                                 "Upgrade your other spells and increase your movement speed"
+"DOTA_Tooltip_ability_upgrade_skills_ms"                                          "MOVEMENT SPEED:"
+"DOTA_Tooltip_ability_upgrade_skills_duration"                                    "DURATION:"
+"DOTA_Tooltip_ability_upgrade_skills_Lore"                                        "All according to the lore"
+
+//modifiers
+
+"DOTA_Tooltip_modifier_big_clicks"												  "Big Clicks"
+"DOTA_Tooltip_modifier_big_clicks_Description"									  "Big women"
+
+"DOTA_Tooltip_modifier_multiclick" 												  "Multiclick"
+"DOTA_Tooltip_modifier_multiclick_Description" 									  "VERY FAST ATTACKS"
+
+"DOTA_Tooltip_modifier_multiclick_passive" 												  "Multiclick UPGRADED"
+"DOTA_Tooltip_modifier_multiclick_passive_Description" 									  "VERY VERY VERY FAST ATTACKS. maybe broken idk."
+
+
+"DOTA_Tooltip_modifier_powersurge" 												  "Powersurge"
+"DOTA_Tooltip_modifier_powersurge_Description" 									  "BZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
+
+"DOTA_Tooltip_modifier_upgrade_skills" 												  "UPGRADE"
+"DOTA_Tooltip_modifier_upgrade_skills_Description" 									  "THE FUCK IS GOING ON?"
+
+//=================================================================================================================
+// Baseboys
+//=================================================================================================================
+
+//hero:
+
+"npc_dota_hero_baseboys_datadriven"                                                            "Baseboys"
+
+"npc_dota_hero_meepo"                                                            	       "Baseboys"
+
+"DOTA_Tooltip_modifier_choke_stun"                                                "Mathilde"
+"DOTA_Tooltip_modifier_choke_stun_Description"                                    "Hejjj"
+
+"DOTA_Tooltip_modifier_gunpowder"                                                 "Gunpowder"
+"DOTA_Tooltip_modifier_gunpowder_Description"                                     "Now this is epic"
+
+"DOTA_Tooltip_ability_choke_datadriven"                                           "Choke"
+"DOTA_Tooltip_ability_choke_datadriven_Description"                               "Chance to stun when hit and on hit."
+"DOTA_Tooltip_ability_choke_datadriven_chance"                                    "CHANCE:"
+"DOTA_Tooltip_ability_choke_datadriven_duration"                                  "DURATION:"
+
+"DOTA_Tooltip_ability_naga_siren_mirror_image"                                    "Concert (mirror image)"
+
+		"DOTA_Tooltip_ability_gunpowder_datadriven"                                       "Gunpowder"
+		"DOTA_Tooltip_ability_gunpowder_datadriven_Description"                           "Drink a nice læskedrik"
+
+		"DOTA_Tooltip_ability_gunpowder_datadriven_bonus_agility"                         "BONUS AGILITY:"
+		"DOTA_Tooltip_ability_gunpowder_datadriven_bonus_speed"                           "MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_gunpowder_datadriven_duration"                              "DURATION:"
+		
+		"DOTA_Tooltip_ability_plant_bomb_datadriven"                                      "Plant Bomb"
+		"DOTA_Tooltip_ability_plant_bomb_datadriven_Description"                          "Plant a bomb on yourself. Press the detonate before u kill urself. Slightly broken."
+		"DOTA_Tooltip_ability_plant_bomb_datadriven_bomb_timer"                           "BOMB TIMER:"
+		"DOTA_Tooltip_ability_plant_bomb_datadriven_silence_duration"                     "SILENCE DURATION:"
+		"DOTA_Tooltip_ability_plant_bomb_datadriven_stun_duration"                        "STUN DURATION:"
+		"DOTA_Tooltip_ability_plant_bomb_datadriven_explosion_damage"                     "EXPLOSION DAMAGE:"
+		
+		"DOTA_Tooltip_ability_plant_bomb_explosion_datadriven"                            "Detonate"
+		"DOTA_Tooltip_ability_plant_bomb_explosion_datadriven_Description"                "Press dat bomb before everything bugs out"
+		
+//=================================================================================================================
+// Kaj og Andrea
+//=================================================================================================================
+		"npc_dota_hero_rubick"                                                            "Kaj"
+		
+		"DOTA_Tooltip_ability_KajAndrea"                                                  "Andrea"
+		"DOTA_Tooltip_ability_KajAndrea_Description"                                      "Turn into the cutest bird ever and bomb everything lol oWo"
+		"DOTA_Tooltip_ability_KajAndrea_bombDmg"                                          "BOMB DAMAGE:"		
+		"DOTA_Tooltip_ability_KajAndrea_radius"                                           "BOMB RADIUS:"
+		"DOTA_Tooltip_ability_KajAndrea_rockets_per_second"                               "ROCKETS PER SECOND:"
+		"DOTA_Tooltip_ability_KajAndrea_duration"                                         "DURATION:"
+
+		"DOTA_Tooltip_ability_KajPopcorn"                                                 "Popcorn"
+		"DOTA_Tooltip_ability_KajPopcorn_Description"                                     "En lille popcorn til dig min ven"
+		"DOTA_Tooltip_ability_KajPopcorn_popDmg"                                          "POP DAMAGE:"
+		"DOTA_Tooltip_ability_KajPopcorn_duration"                                        "DURATION:"
+
+		"DOTA_Tooltip_ability_KajRap"                                                     "Rap"
+		"DOTA_Tooltip_ability_KajRap_Description"                                         "Et lille wrapnummer rundt om dig selv"
+		"DOTA_Tooltip_ability_KajRap_AOEdmg"                                              "DAMAGE:"
+		
+		"DOTA_Tooltip_ability_KajSucc"                                                    "Succ"
+		"DOTA_Tooltip_ability_KajSucc_Description"                                        "<font color='#23D829'>SUCC</font color='#23D829'> the enemy into one point"
+		"DOTA_Tooltip_ability_KajSucc_damage"                                             "DAMAGE:"
+		"DOTA_Tooltip_ability_KajSucc_radius"                                             "RADIUS:"
+		
+		"DOTA_Tooltip_modifier_popcorn"                                                   "Popcorn!"
+		"DOTA_Tooltip_modifier_popcorn_Description"                                       "Det popper off"
+
+
+
+//=================================================================================================================
+// Lars
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_LarsFadbamse"                                               "Fadbamse"
+		"DOTA_Tooltip_ability_LarsFadbamse_Description"                                   "Run towards some nice øl"
+		"DOTA_Tooltip_ability_LarsFadbamse_duration"                                      "DURATION:"
+		"DOTA_Tooltip_ability_LarsFadbamse_bonus_dmg"                                     "BONUS DAMAGE:"
+		"DOTA_Tooltip_ability_LarsFadbamse_bonus_armor"                                   "BONUS ARMOR:"
+		"DOTA_Tooltip_ability_LarsFadbamse_bonus_speed"                                   "BONUS MOVEMENT SPEED:"
+
+		"DOTA_Tooltip_ability_LarsTaunt"                                                  "Skat"
+		"DOTA_Tooltip_ability_LarsTaunt_Description"                                      "Get some easy tax money"
+		"DOTA_Tooltip_ability_LarsTaunt_radiusAOE"                                        "RADIUS:"
+
+		"DOTA_Tooltip_ability_LarsTauntTarget"                                            "Shift the blame"
+		"DOTA_Tooltip_ability_LarsTauntTarget_Description"                                "Shift all political blame towards some scrub"
+		"DOTA_Tooltip_ability_LarsTauntTarget_duration"                                   "DURATION:"
+
+		"DOTA_Tooltip_ability_LarsTeam"                                                   "Nyt samarbejde"
+		"DOTA_Tooltip_ability_LarsTeam_Description"                                       "Trump is a great ally"
+		"DOTA_Tooltip_ability_LarsTeam_duration"                                          "DURATION:"
+
+
+//=================================================================================================================
+// GameTecher
+//=================================================================================================================
+//hero:
+
+"npc_dota_hero_gametecher_datadriven"						  "Gametecher"
+"npc_dota_hero_pugna"                                                             "Gametecher"
+
+//abilities: 
+"DOTA_Tooltip_ability_lion_finger_of_death"                                       "Finger in the arse"
+		
+"DOTA_Tooltip_ability_lion_finger_of_death_Description"                           "Pull it out now"
+		
+"DOTA_Tooltip_ability_lion_finger_of_death_damage"                                "DAMAGE:"
+		
+		
+"DOTA_Tooltip_ability_lion_finger_of_death_damage_scepter"                        "SCEPTER DMG:"
+		
+"DOTA_Tooltip_ability_lion_finger_of_death_cooldown_scepter"                      "SCEPTER COOLDOWN"
+		
+"DOTA_Tooltip_ability_lion_finger_of_death_splash_radius_scepter"                 "SCEPTER AOE:"
+"DOTA_Tooltip_ability_lion_finger_of_death_mana_cost_scepter"                     "SCEPTER COST:"
+
+
+"DOTA_Tooltip_ability_matematik_A_datadriven"                                     "Matematik A"
+		
+"DOTA_Tooltip_ability_matematik_A_datadriven_Description"                         "Rush that math assignment for tomorrow with all your energy"
+
+"DOTA_Tooltip_ability_matematik_A_datadriven_bonus_duration"                      "BONUS DURATION:"
+		
+"DOTA_Tooltip_ability_matematik_A_datadriven_bonus_int"                           "BONUS INT:"
+				
+"DOTA_Tooltip_ability_matematik_A_datadriven_bonus_range"                         "BONUS RANGE:"
+		
+"DOTA_Tooltip_ability_matematik_A_datadriven_bonus_as"                            "BONUS AS:"
+				
+"DOTA_Tooltip_ability_matematik_A_datadriven_loss_duration"                       "EXHAUST DURATION:"
+
+
+"DOTA_Tooltip_ability_matematik_A_datadriven_speed_loss"                          "SPEED LOSS:"
+
+"DOTA_Tooltip_ability_dropout_datadriven"                                         "Dropout"
+		
+"DOTA_Tooltip_ability_dropout_datadriven_Description"                             "I'm smart enough without this education - man whom has no future"
+		
+"DOTA_Tooltip_ability_dropout_datadriven_bonus_intellect"                         "BONUS PERMANENT INT:"
+
+
+
+"DOTA_Tooltip_ability_bloodseeker_thirst"                                         "Thirsty"
+		
+"DOTA_Tooltip_ability_bloodseeker_thirst_Description"                             "I just can't control my hormones, when it's been over 420 days"
+		
+		
+"DOTA_Tooltip_ability_bloodseeker_thirst_bonus_movement_speed"                    "BONUS MOVEMENT SPEED:"
+				
+"DOTA_Tooltip_ability_bloodseeker_thirst_bonus_damage"                            "BONUS DAMAGE:"
+"DOTA_Tooltip_ability_bloodseeker_thirst_min_bonus_pct"                           "%MIN BONUS:"
+
+			
+"DOTA_Tooltip_ability_bloodseeker_thirst_max_bonus_pct"                           "%MAX BONUS:"
+		
+
+"DOTA_Tooltip_ability_anime_power_datadriven"                                     "Anime Power" 
+"DOTA_Tooltip_ability_anime_power_datadriven_Description"                         "I have the power of god and anime on my side! (Disclaimer: won't bother explaining what it does, just try using it)"
+		
+
+
+//modifiers:
+"DOTA_Tooltip_modifier_eclipse"                                                   "Weeaboo"
+		
+"DOTA_Tooltip_modifier_eclipse_Description"                                       "Don't judge, for he has autism"
+
+
+"DOTA_Tooltip_modifier_chronosphere_tooltip_datadriven"                           "Cringing"
+		
+"DOTA_Tooltip_modifier_chronosphere_tooltip_datadriven_Description"               " "
+
+
+"DOTA_Tooltip_modifier_stat_boost"                                                "Dropout counter"
+		
+"DOTA_Tooltip_modifier_stat_boost_Description"                                    "A leech on the education system"
+
+
+"DOTA_Tooltip_modifier_intellect_boost"                                           "Powercalculating"
+		
+"DOTA_Tooltip_modifier_intellect_boost_Description"                               "Brain running at 100%"
+
+		
+"DOTA_Tooltip_modifier_lose_speed"                                                "Exhausted"
+		
+"DOTA_Tooltip_modifier_lose_speed_Description"                                    "Math is torture"
+
+
+
+
+//=================================================================================================================
+// Caroline_Wozniacki
+//=================================================================================================================
+//hero:
+"npc_dota_hero_windrunner"                                                        "Caroline Wozniacki"
+
+
+"Caroline_Wozniacki"                                                              "Caroline Wozniacki"
+//abilities: 
+"DOTA_Tooltip_ability_caro_crossfit"                                              "Crossfit"
+		
+"DOTA_Tooltip_ability_caro_crossfit_Description"                                  "Crossfitter btw"
+		
+"DOTA_Tooltip_ability_caro_crossfit_agility"                                      "AGILITY:"
+		
+"DOTA_Tooltip_ability_caro_crossfit_strength"                                     "STRENGTH:"
+"DOTA_Tooltip_ability_caro_crossfit_as"                                           "ATTACK SPEED:"
+
+"DOTA_Tooltip_ability_caro_matchpoint"                                            "Smash"
+		
+"DOTA_Tooltip_ability_caro_matchpoint_Description"                                "They won't return this one"
+						
+"DOTA_Tooltip_ability_caro_matchpoint_arrow_range"                                "RANGE:"
+						
+"DOTA_Tooltip_ability_caro_matchpoint_stun"                                       "STUN:"
+
+"DOTA_Tooltip_ability_caro_side_swap"   					  "Sideskift!"
+		
+"DOTA_Tooltip_ability_caro_side_swap_Description"                                 "Let's change sides"
+		
+"DOTA_Tooltip_ability_caro_side_swap_tooltip_range"                               "RANGE:"
+		
+
+"DOTA_Tooltip_ability_caro_smash"                                                 "In the zone"
+		
+"DOTA_Tooltip_ability_caro_smash_Description"                                     "Focus on hitting some solid balls, with a chance of concussion."
+				
+"DOTA_Tooltip_ability_caro_smash_dmg"                                             "BONUS DMG:"
+
+
+//modifiers:
+"DOTA_Tooltip_modifier_powershot_charge_datadriven"                               "Serving"
+"DOTA_Tooltip_modifier_powershot_charge_datadriven_Description"                   "Readying up for a smash"
+
+
+"DOTA_Tooltip_smash"                                                              "Smashed!"
+		
+"DOTA_Tooltip_smash_Description"                                                  "I have concussion"
+
+
+//=================================================================================================================
+// Marvelous
+//=================================================================================================================	
+//hero:
+"npc_dota_hero_faceless_void"                                                     "Marvelous Mosell"
+"npc_dota_hero_marvelous_mosell_datadriven"                             	  "Marvelous Mosell"
+
+
+//abilities: 
+
+		"DOTA_Tooltip_ability_faceless_void_backtrack"                                    "Dance moves"
+		"DOTA_Tooltip_ability_faceless_void_backtrack_Description"                        "Dance so hard you avoid both spells and attacks"
+		"DOTA_Tooltip_ability_faceless_void_backtrack_dodge_chance_pct"                   "DODGE CHANCE:"
+
+		"DOTA_Tooltip_ability_jeg_var_syg_datadriven"                                     "Jeg Var Syg"
+		"DOTA_Tooltip_ability_jeg_var_syg_datadriven_Description"                         "Infect another person with your sygdom"
+		"DOTA_Tooltip_ability_jeg_var_syg_datadriven_damage"                              "DAMAGE:"
+		"DOTA_Tooltip_ability_jeg_var_syg_datadriven_speed_loss"                          "MOVEMENT SPEED LOSS:"
+		"DOTA_Tooltip_ability_jeg_var_syg_datadriven_as_loss"                             "ATTACK SPEED LOSS:"
+		//"DOTA_Tooltip_ability_jeg_var_syg_datadriven_radius"                              "RADIUS:"
+		"DOTA_Tooltip_ability_jeg_var_syg_datadriven_dot_duration"                        "DOT DURATION:"
+		"DOTA_Tooltip_ability_jeg_var_syg_datadriven_duration"                            "DURATION:"
+
+		"DOTA_Tooltip_ability_koldblodet_reptil_datadriven"                               "Koldblodet Reptil"
+		"DOTA_Tooltip_ability_koldblodet_reptil_datadriven_Description"                   "Summon that disgusting reptil to fight for you... ew."
+		"DOTA_Tooltip_ability_koldblodet_reptil_datadriven_duration"                      "DURATION:"
+		
+		"DOTA_Tooltip_ability_antikommerciel_masseappel_datadriven"                       "Antikommerciel Masseappel"
+		"DOTA_Tooltip_ability_antikommerciel_masseappel_datadriven_Description"           "Hvad skal det overhovedet betyde?"
+
+		"DOTA_Tooltip_ability_antikommerciel_masseappel_datadriven_attack_speed"          "ATTACK SPEED:"
+		"DOTA_Tooltip_ability_antikommerciel_masseappel_datadriven_damage"                "DAMAGE:"
+		"DOTA_Tooltip_ability_antikommerciel_masseappel_datadriven_radius"                "RADIUS:"
+		"DOTA_Tooltip_ability_antikommerciel_masseappel_datadriven_duration"              "DURATION:"
+
+//modifiers:
+
+//=================================================================================================================
+// Cid
+//=================================================================================================================
+//hero:
+"npc_dota_hero_phantom_assassin"                                                            "Cid"
+"npc_dota_hero_cid_datadriven"                                                               "Cid"
+
+
+//abilities: 
+
+//modifiers:
+
+//=================================================================================================================
+// Pr0ph3cy
+//=================================================================================================================
+//hero:
+"npc_dota_hero_bounty_hunter"                                                            "PR0PH3CY"
+"PR0PH3CY"                                                                        		 "PR0PH3CY"
+	
+//abilities: 
+"DOTA_Tooltip_ability_pr0_blockchain"                                             "Hackerjob"
+		
+"DOTA_Tooltip_ability_pr0_blockchain_Description"                                 "You have been tasked to hack a blockchain, current hackercoin value: 583, Doesn't always go as planned"
+
+
+"DOTA_Tooltip_ability_pr0_blockchain_chance"                                      "%SUCCES RATE:"
+
+
+
+"DOTA_Tooltip_ability_deity_datadriven"                                           "D31TY"
+		
+"DOTA_Tooltip_ability_deity_datadriven_Description"                               "Call upon the legend, to do the ultimate cyberattack, hacking the stats of you and your opponents"
+		
+"DOTA_Tooltip_ability_deity_datadriven_stat_loss"                                 "STATHACKS:"
+				
+"DOTA_Tooltip_ability_deity_datadriven_duration"                                  "DURATION:"
+		
+"DOTA_Tooltip_ability_deity_datadriven_stat_gain"                                 "D31TY INT:"
+
+	
+
+"DOTA_Tooltip_ability_firestakit_datadriven"                                      "Firestakit"
+		
+"DOTA_Tooltip_ability_firestakit_datadriven_Description"                          "Can't call it a firewall"
+				
+"DOTA_Tooltip_ability_firestakit_datadriven_duration"                             "DURATION:"
+				
+"DOTA_Tooltip_ability_firestakit_datadriven_damage"                               "DMG PER TICK:"	
+
+"DOTA_Tooltip_ability_pr0_hack"                                                   "Hack"
+		
+"DOTA_Tooltip_ability_pr0_hack_Description"                                       "Launch a cyberattack on your enemy"
+		
+"DOTA_Tooltip_ability_pr0_hack_hacktimer"                                         "DURATION:"
+		
+"DOTA_Tooltip_ability_pr0_hack_dmg_tick"                                          "DMG PER TICK:"
+
+
+
+"DOTA_Tooltip_ability_pr0_incognito"                                              "Incognito"
+		
+"DOTA_Tooltip_ability_pr0_incognito_Description"                                  "Goodbye FBI"
+		
+"DOTA_Tooltip_ability_pr0_incognito_fade_time"                                    "FADE TIME:"
+
+
+
+
+//modifiers:
+"DOTA_Tooltip_modifier_deity"                                                     "U1TR4 H4CK3D"
+		
+"DOTA_Tooltip_modifier_deity_Description"                                         "01101000 01100001 00100000 01100111 01100001 01111001"
+
+		
+"DOTA_Tooltip_modifier_deity_boost"                                               "D31TY"
+"DOTA_Tooltip_modifier_deity_boost_Description"                                   "Hackerman"
+"DOTA_Tooltip_pr0hacked"                                                          "H4CK3D"		
+"DOTA_Tooltip_pr0hacked_Description"											  "01100111 01100001 01111001"
+"DOTA_Tooltip_modifier_permanent_invisibility_datadriven"                         "Incognito"
+		
+"DOTA_Tooltip_modifier_permanent_invisibility_datadriven_Description"             "Proxy"
+
+
+
+//=================================================================================================================
+// LarsLykke
+//=================================================================================================================
+//hero:
+"npc_dota_hero_lycan"                                                             "Lars Lykke"
+"npc_dota_hero_lars"                                                              "Lars Lykke"
+
+//abilities: 
+
+//modifiers:
+
+//=================================================================================================================
+// Yahya
+//=================================================================================================================
+//hero:
+"yahya_hassan"                                                                    "Yahya Hassan"
+"npc_dota_hero_kunkka"                                                            "Yahya Hassan"
+
+
+
+//abilities: 
+
+		"DOTA_Tooltip_ability_den_er_flot"                                                "Den Er Flot"
+		"DOTA_Tooltip_ability_den_er_flot_Description"                                    "Det er den"
+		"DOTA_Tooltip_ability_den_er_flot_duration"                                       "DURATION:"
+		"DOTA_Tooltip_ability_den_er_flot_base_attack_time"                               "BASE ATTACK TIME:"
+		//"DOTA_Tooltip_ability_den_er_flot_bonus_health"                                   "BONUS HEALTH:"
+		"DOTA_Tooltip_ability_den_er_flot_bonus_health_regen"                             "BONUS HEALTH REGEN:"
+		"DOTA_Tooltip_ability_den_er_flot_bonus_mana_regen"                               "BONUS MANA REGEN:"
+		"DOTA_Tooltip_ability_den_er_flot_bonus_movespeed"                                "BONUS MOVEMENT SPEED:"
+
+		"DOTA_Tooltip_ability_digtoplaesning"                                             "Digtoplæsning"
+		"DOTA_Tooltip_ability_digtoplaesning_Description"                                 "Yahya Hassans digte er så dybe, at alle falder i søvn"
+		"DOTA_Tooltip_ability_digtoplaesning_radius"                                      "RADIUS:"
+		"DOTA_Tooltip_ability_digtoplaesning_damage_tooltip"                              "DAMAGE:"
+		"DOTA_Tooltip_ability_digtoplaesning_duration"                                    "DURATION:"
+
+		"DOTA_Tooltip_ability_koekkenkniv"                                                "Koekkenkniv"
+		"DOTA_Tooltip_ability_koekkenkniv_Description"                                    "En kniv der giver dig lidt mere potentiale"
+		"DOTA_Tooltip_ability_koekkenkniv_manacost"                                       "MANA COST PER ATTACK:"
+
+		"DOTA_Tooltip_ability_yahya_fodskud"                                              "Fodskud"
+		"DOTA_Tooltip_ability_yahya_fodskud_Description"                                  "Skyd en anden mands fod uden grund."
+		"DOTA_Tooltip_ability_yahya_fodskud_damage"                                       "DAMAGE:"
+
+		"DOTA_Tooltip_ability_yahya_fodskud_bonus_movespeed"                              "MOVEMENT SPEED LOSS:"
+		"DOTA_Tooltip_ability_yahya_fodskud_duration"                                     "DURATION:"
+		
+		//"DOTA_Tooltip_ability_digtoplaesning_animation_rate"                              "ANIMATION RATE:"
+		//"DOTA_Tooltip_ability_digtoplaesning_linger_duration"                             "LINGER DURATION:"
+		//"DOTA_Tooltip_ability_digtoplaesning_ability_damage"                              "ABILITY DAMAGE:"
+		
+//modifiers:
+
+//=================================================================================================================
+// Herobrine
+//=================================================================================================================
+//hero:
+"npc_dota_hero_dark_seer"                                                         "Herobrine"
+"Herobrine"                                                                       "Herobrine"
+
+
+
+//abilities: 
+		
+		"DOTA_Tooltip_ability_herobrine_creepypasta"                                      "Creepypasta"
+		"DOTA_Tooltip_ability_herobrine_creepypasta_Description"                          "This name makes no sense lol"
+		"DOTA_Tooltip_ability_herobrine_creepypasta_blink_range"                          "BLINK RANGE:"
+		
+		"DOTA_Tooltip_ability_hb_grief"                                                   "Grief"
+		"DOTA_Tooltip_ability_hb_grief_Description"                                       "Some nice TNT"
+		"DOTA_Tooltip_ability_hb_grief_bonus_damage"                                      "DAMAGE:"
+		//"DOTA_Tooltip_ability_hb_grief_as_reduction"                                      "AS REDUCTION:"
+		
+		"DOTA_Tooltip_ability_hb_diamonds"                                                "Mine Diamonds"
+		"DOTA_Tooltip_ability_hb_diamonds_Description"                                    "You love Minecraft, and you love to mine diamonds. Mine and get some dollah."
+		"DOTA_Tooltip_ability_hb_diamonds_radius"                                         "RADIUS:"
+		"DOTA_Tooltip_ability_hb_diamonds_duration"                                       "DURATION:"
+		"DOTA_Tooltip_ability_hb_diamonds_slow"                                           "SLOW:"
+		"DOTA_Tooltip_ability_hb_diamonds_stone_duration"                                 "STONE DURATION:"
+		//"DOTA_Tooltip_ability_hb_diamonds_face_duration"                                  "FACE DURATION:"
+		//"DOTA_Tooltip_ability_hb_diamonds_vision_cone"                                    "VISION CONE:"
+		//"DOTA_Tooltip_ability_hb_diamonds_bonus_physical_damage"                          "BONUS PHYSICAL DAMAGE:"
+		//"DOTA_Tooltip_ability_hb_diamonds_bonus_magic_resist"                             "BONUS MAGIC RESIST:"
+		"DOTA_Tooltip_ability_hb_diamonds_bonus_gold"                                     "BONUS GOLD:"
+		
+		"DOTA_Tooltip_ability_hb_elder"                                                   "Elder Drake"
+		"DOTA_Tooltip_ability_hb_elder_Description"                                       "Spawn an Elder Drake slave"
+		"DOTA_Tooltip_ability_hb_elder_duration"                                          "DURATION:"
+		
+//modifiers:
+//=================================================================================================================
+// Krogh
+//=================================================================================================================
+//hero:
+"npc_dota_hero_sven"                                                         "Krogh"
+"krogh"                                                                       "Krogh"
+
+
+
+//abilities: 
+
+		"DOTA_Tooltip_ability_awaken"                                                     "Awaken"
+		"DOTA_Tooltip_ability_awaken_Description"                                         "With the power of some gay ass Jojo doujinshi"
+		"DOTA_Tooltip_ability_awaken_agility"                                             "AGILITY:"
+		"DOTA_Tooltip_ability_awaken_strength"                                            "STRENGTH:"
+		"DOTA_Tooltip_ability_awaken_basicrate"                                           "BASE ATTACK TIME:"
+		"DOTA_Tooltip_ability_awaken_hp"                                                  "BONUS HEALTH:"
+		//"DOTA_Tooltip_ability_awaken_model_scale"                                         "MODEL SCALE:"
+
+		"DOTA_Tooltip_ability_ha_gay"                                                     "Ha Gay"
+		"DOTA_Tooltip_ability_ha_gay_Description"                                         "Gay runs over to another gay? Seems right."
+		"DOTA_Tooltip_ability_ha_gay_timer"                                               "DURATION:"
+
+		"DOTA_Tooltip_ability_sick_dodge"                                                 "Sick Dodge"
+		"DOTA_Tooltip_ability_sick_dodge_Description"                                     "How to be a dodgeball gay (god)"
+		"DOTA_Tooltip_ability_sick_dodge_duration"                                        "DURATION:"
+
+	
+		"DOTA_Tooltip_ability_social_presence"                                            "Social Presence"
+		"DOTA_Tooltip_ability_social_presence_Description"                                "So autistic you hide yourself from people. When you talk to people (men), they lose all their armor because ur so GAY"
+		"DOTA_Tooltip_ability_social_presence_bonus_damage"                               "BONUS DAMAGE:"
+		"DOTA_Tooltip_ability_social_presence_bonus_armor"                                "ARMOR REDUCTION:"
+		"DOTA_Tooltip_ability_social_presence_armor_reduction_duration_tooltip"           "DURATION:"
+		//"DOTA_Tooltip_ability_social_presence_projectile_speed"                           ""
+		"DOTA_Tooltip_ability_social_presence_lore" 										"The tooltips here have been writen by the self-projecting Steven"
+		"DOTA_Tooltip_ability_sick_dodge_lore"												"The tooltips here have been writen by the self-projecting Steven"
+		"DOTA_Tooltip_ability_awaken_lore"													"The tooltips here have been writen by the self-projecting Steven"	
+		"DOTA_Tooltip_ability_ha_gay_lore"													"The tooltips here have been writen by the self-projecting Steven"
+
+//modifiers:
+"DOTA_Tooltip_gayfag"                                                             "Gayfag"
+"DOTA_Tooltip_gayfag_Description"                                                 "Fuck du er bøsse!"
+
+"DOTA_Tooltip_modifier_dodgeball"                                                 "Dodgemaster"
+"DOTA_Tooltip_modifier_dodgeball_Description"                                     "Dodgeball? more like dodgeall."
+
+"DOTA_Tooltip_mod_no_pres"                                                        "No presence"
+"DOTA_Tooltip_mod_no_pres_Description"                                            "Going on unnoticed."
+
+"DOTA_Tooltip_modifier_meld_debuff"                                               "???"
+"DOTA_Tooltip_modifier_meld_debuff_Description"                                   "Who the f what that?"
+//=================================================================================================================
+// Harald
+//=================================================================================================================
+//hero:
+"npc_dota_hero_dragon_knight"                                                     "Harald Blåtand"
+"hero_harald"                                                                     "Harald Blåtand"
+
+
+//abilities: 
+"DOTA_Tooltip_ability_ha_army"                                                    "Viking army"
+"DOTA_Tooltip_ability_ha_army_Description"                                        "March forward!"
+"DOTA_Tooltip_ability_ha_army_duration"                                           "DURATION:"
+"DOTA_Tooltip_ability_ha_army_ha_amount"                                          "WARRIORS:"
+"DOTA_Tooltip_ability_ha_army_ha_amount2"                                          "RANGERS:"
+
+
+"DOTA_Tooltip_ability_ha_convert"                                                 "Convert to christianity"
+"DOTA_Tooltip_ability_ha_convert_Description"                                     "Call upon jesus to protect you from all things physical."
+"DOTA_Tooltip_ability_ha_convert_duration"                                        "DURATION:"
+//"DOTA_Tooltip_ability_ha_convert_duration_scepter"                                "DURATION SCEPTER:"
+
+"DOTA_Tooltip_ability_ha_rune"                                                    "Runesten"
+"DOTA_Tooltip_ability_ha_rune_Description"                                        "Create a cryptic runesten, giving all allies around it a slight offense buff."
+
+"DOTA_Tooltip_ability_ha_rune_pas"                                                "Runesten aura"
+"DOTA_Tooltip_ability_ha_rune_pas_Description"                                    "ルーン文字"
+
+"DOTA_Tooltip_ability_ha_thor"                                                    "Wrath of thor"
+"DOTA_Tooltip_ability_ha_thor_Description"                                        "Call upon the power of the thunder god!"
+//"DOTA_Tooltip_ability_ha_thor_true_sight_radius"                                  "TRUE SIGHT RADIUS:"
+//"DOTA_Tooltip_ability_ha_thor_sight_radius"                                       "SIGHT RADIUS:"
+//"DOTA_Tooltip_ability_ha_thor_true_sight_duration"                                "TRUE SIGHT DURATION:"
+//"DOTA_Tooltip_ability_ha_thor_sight_duration"                                     "SIGHT DURATION:"
+//"DOTA_Tooltip_ability_ha_thor_spread_aoe"                                         "SPREAD AOE:"
+
+
+//modifiers:
+"DOTA_Tooltip_modifier_guardian_angel"                                            "Jesus loves you."
+"DOTA_Tooltip_modifier_guardian_angel_Description"                                "Amen."
+
+"DOTA_Tooltip_modifier_rune_aura"                                                 "Runesten aura"
+"DOTA_Tooltip_modifier_rune_aura_Description"                                     "ルーン文字"
+
+"DOTA_Tooltip_modifier_rune_buff"                                                 "Runesten aura"
+"DOTA_Tooltip_modifier_rune_buff_Description"                                     "ルーン文字"
+
+
+
+
+
+
+//=================================================================================================================
+// Other units
+//=================================================================================================================
+//other units		
+"npc_kolonihave"                                                                 "Kolonihave"
+
+"npc_banan"                                                                      "Banan"
+
+"npc_koldblodet_reptil_1"                                                         "Koldblodet Reptil"
+		
+"npc_koldblodet_reptil_2"                                                         "Koldblodet Reptil"
+		
+"npc_koldblodet_reptil_3"                                                         "Koldblodet Reptil"
+
+"npc_dota_creature_gnoll_assassin"                                                "Dota Creature Gnoll Assassin"
+
+"npc_dummy_unit"                                                                  "Dummy Unit"
+
+"npc_elderdrake"                                                                  "Elderdrake"
+	
+"npc_rune"                                                                        "Runesten"
+
+"viking_norm"                                                                     "Viking"
+"viking_ranged"                                                                   "Viking"
+
+
+
+
+
+
+//StevenSection
+//=================================================================================================================
+// ACTUAL BUTTERFLY
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_actual_butterfly"                                      "Actual Butterfly"
+		"DOTA_Tooltip_ability_item_actual_butterfly_Description"                          "<h1>Active: Danish Butterfly</h1> Grants +%movement_speed% additional movement speed for %duration_lol% seconds."
+		"DOTA_Tooltip_ability_item_actual_butterfly_agility"                              "+$agi"
+		"DOTA_Tooltip_ability_item_actual_butterfly_as"                                   "+$attack"
+		"DOTA_Tooltip_ability_item_actual_butterfly_damage"                               "+$damage"
+		"DOTA_Tooltip_ability_item_actual_butterfly_evasion"                              "%+$evasion"
+		"DOTA_Tooltip_ability_item_actual_butterfly_regen_health"                         "+$hp_regen"
+		"DOTA_Tooltip_ability_item_actual_butterfly_speed_percentage"                     "%+$move_speed"
+//		"DOTA_Tooltip_ability_item_actual_butterfly_movement_speed"                       "MOVEMENT SPEED:"
+//		"DOTA_Tooltip_ability_item_actual_butterfly_duration_lol"                         "DURATION LOL:"
+//=================================================================================================================
+// EYE SURGERY
+//=================================================================================================================
+
+"DOTA_Tooltip_ability_item_laser_surgery"                                         "Laser Surgery"
+"DOTA_Tooltip_ability_item_laser_surgery_Description"                             "<h1>Use:</h1> Grants the ability to see invisible units and wards to any allied vision within 800 range of its carrier."
+//"DOTA_Tooltip_ability_item_laser_surgery_radius"                                  "RADIUS:"
+"DOTA_Tooltip_modifier_shard_of_true_sight"                                       "Laser surgery"
+"DOTA_Tooltip_modifier_shard_of_true_sight_Description"                           "Perfect vision"
+
+
+
+//=================================================================================================================
+// GRUNDLOV
+//=================================================================================================================
+"DOTA_Tooltip_modifier_grundlov"                                                  "Grundloven"
+"DOTA_Tooltip_modifier_grundlov_Description"                                      "Diplomatic immunity"
+"DOTA_Tooltip_ability_item_grundlov"                                              "Grundloven"
+"DOTA_Tooltip_ability_item_grundlov_bonus_intellect"                              "+$int"
+"DOTA_Tooltip_ability_item_grundlov_Description"                                  "<h1>DIPLOMATIC IMMUNITY:</h1> Grants diplomatic immunity also known as magic immunity for 4 seconds."
+
+//=================================================================================================================
+// GOLDEN HORNS
+//=================================================================================================================
+
+"DOTA_Tooltip_modifier_item_golden_horns_aura"                                    "Golden Horns Aura"
+"DOTA_Tooltip_modifier_item_golden_horns_aura_Description"                        "viking morale."
+
+"DOTA_Tooltip_modifier_item_golden_horns_active"                                  "Golden Horns warcry"
+"DOTA_Tooltip_modifier_item_golden_horns_active_Description"                      "Buffed by viking glory."
+
+"DOTA_Tooltip_modifier_gh_spellshield"                                            "Spellblock"
+"DOTA_Tooltip_modifier_gh_spellshield_Description"                                "Block a total of 500 magic damage."
+
+"DOTA_Tooltip_ability_item_golden_horns"                                          "Golden Horns"
+"DOTA_Tooltip_ability_item_golden_horns_Description"                              "<h1>Active: Warcry</h1> Grants +%endurance_bonus_movement_speed_pct%% additional movement speed and +%aura_bonus_attack_speed% attack speed, while giving a %absorb_amount% damage spellshield to all allies in a %endurance_radius% radius for %endurance_duration% seconds. \n<h1>Passive: Viking glory </h1> grants an aura to you and all allies in a %aura_radius% radius which grants %mresistaura%%  magic resist, %hpregenaura% health regen and %aura_bonus_movement_speed% movement speed."
+"DOTA_Tooltip_ability_item_golden_horns_bonus_int"                                "+$int"
+"DOTA_Tooltip_ability_item_golden_horns_bonus_agi"                                "+$agi"
+"DOTA_Tooltip_ability_item_golden_horns_bonus_str"                                "+$str"
+"DOTA_Tooltip_ability_item_golden_horns_mresist"                                  "%+$spell_resist"
+"DOTA_Tooltip_ability_item_golden_horns_hpregen"                                  "+$hp_regen"
+"DOTA_Tooltip_ability_item_golden_horns_manaregen"                                "+$mana_regen"
+
+//		"DOTA_Tooltip_ability_item_golden_horns_aura_bonus_movement_speed"                "AURA BONUS MOVEMENT SPEED:"
+//		"DOTA_Tooltip_ability_item_golden_horns_absorb_amount"                            "ABSORB AMOUNT:"
+//		"DOTA_Tooltip_ability_item_golden_horns_endurance_bonus_movement_speed_pct"       "ENDURANCE BONUS MOVEMENT SPEED PCT:"
+//		"DOTA_Tooltip_ability_item_golden_horns_endurance_duration"                       "ENDURANCE DURATION:"
+//		"DOTA_Tooltip_ability_item_golden_horns_aura_radius"                              "AURA RADIUS:"
+//		"DOTA_Tooltip_ability_item_golden_horns_endurance_radius"                         "ENDURANCE RADIUS:"
+//		"DOTA_Tooltip_ability_item_golden_horns_mresistaura"                              "MRESISTAURA:"
+//		"DOTA_Tooltip_ability_item_golden_horns_hpregenaura"                              "HPREGENAURA:"
+//		"DOTA_Tooltip_ability_item_golden_horns_aura_bonus_attack_speed"                  "AURA BONUS ATTACK SPEED:"
+
+
+//=================================================================================================================
+// GREENLANDISH GUARD
+//=================================================================================================================
+"DOTA_Tooltip_ability_item_greenlandish_guard"                                    "Greenlandish Guard"
+"DOTA_Tooltip_ability_item_greenlandish_guard_Description"                        "<h1>Snestorm!</h1> Creates a small snowstorm in a %blast_final_radius% radius, rooting all enemies inside while chipping away at their hp. \n<h1>Passive: Kraftig kulde </h1> Gives all enemies within  a %aura_radius% radius, an %aura_attack_speed% attack speed slow and a %aura_ms% movement slow."
+"DOTA_Tooltip_ability_item_greenlandish_guard_bonus_intellect"                    "+$int"
+"DOTA_Tooltip_ability_item_greenlandish_guard_bonus_agi"                          "+$agi"
+"DOTA_Tooltip_ability_item_greenlandish_guard_bonus_str"                          "+$str"
+"DOTA_Tooltip_ability_item_greenlandish_guard_bonus_armor"                        "+$armor"
+
+//"DOTA_Tooltip_ability_item_greenlandish_guard_blast_final_radius"                 "BLAST FINAL RADIUS:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_speed_per_second"             "BLAST SPEED PER SECOND:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_damage"                       "BLAST DAMAGE:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_aura_ms"                            "AURA MS:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_debuff_duration"              "BLAST DEBUFF DURATION:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_vision_radius"                "BLAST VISION RADIUS:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_blast_vision_duration"              "BLAST VISION DURATION:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_aura_radius"                        "AURA RADIUS:"
+//		"DOTA_Tooltip_ability_item_greenlandish_guard_aura_attack_speed"                  "AURA ATTACK SPEED:"
+
+
+"DOTA_Tooltip_modifier_item_shivas_guard_datadriven_enemy_aura_visible"           "Snowstorm!"
+"DOTA_Tooltip_modifier_item_shivas_guard_datadriven_enemy_aura_visible_Description"		"Sommervejr when? - alle indtil sommer 2018."
+
+"DOTA_Tooltip_modifier_item_shivas_guard_datadriven_blast_debuff"                 "Snowstorm!"
+"DOTA_Tooltip_modifier_item_shivas_guard_datadriven_blast_debuff_Description"     "Sommervejr when? - alle indtil sommer 2018."
+
+//=================================================================================================================
+// TORDENSKJOLD
+//=================================================================================================================
+"DOTA_Tooltip_ability_item_tordenskjold"                                          "Tordenskjold"
+		"DOTA_Tooltip_ability_item_tordenskjold_Description"                              "<h1>Ignite!</h1> Burns an enemy for %damagetick% pure damage every second for %duration%s"
+		
+"DOTA_Tooltip_modifier_tsignite"                                                  "Ignited"
+"DOTA_Tooltip_modifier_tsignite_Description"                                      "Not stolen from lol."
+
+
+
+
+//=================================================================================================================
+// FAKE BUTTERFLY
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_fake_butterfly"                                        "Fake Butterfly"
+//		"DOTA_Tooltip_ability_item_fake_butterfly_Description"                            ""
+		"DOTA_Tooltip_ability_item_fake_butterfly_agility"                                "+$agi"
+		"DOTA_Tooltip_ability_item_fake_butterfly_as"                                     "+$attack"
+		"DOTA_Tooltip_ability_item_fake_butterfly_speed"                                  "+$move_speed"
+		"DOTA_Tooltip_ability_item_fake_butterfly_regen_health"                           "+$hp_regen"
+
+//=================================================================================================================
+// DOUBLE BUTTERFLY
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_double_butterfly"                                      "Double Butterfly"
+		"DOTA_Tooltip_ability_item_double_butterfly_Description"                          "<h1>Active: Double Flutter</h1> Grants +%speed% additional movement speed for %duration% seconds."
+		"DOTA_Tooltip_ability_item_double_butterfly_agility"                              "+$agi"
+		"DOTA_Tooltip_ability_item_double_butterfly_as"                                   "+$attack"
+		"DOTA_Tooltip_ability_item_double_butterfly_damage"                               "+$damage"
+		"DOTA_Tooltip_ability_item_double_butterfly_evasion"                              "%+$evasion"
+//		"DOTA_Tooltip_ability_item_double_butterfly_speed"                                "SPEED:"
+//		"DOTA_Tooltip_ability_item_double_butterfly_duration"                             "DURATION:"
+
+//=================================================================================================================
+// BRUN SOVS
+//=================================================================================================================
+		"DOTA_Tooltip_ability_item_brun_sovs"                                             "Brun Sovs"
+//		"DOTA_Tooltip_ability_item_brun_sovs_Description"                                 ""
+		"DOTA_Tooltip_ability_item_brun_sovs_armor"                                       "+$armor"
+
+//=================================================================================================================
+// CROCS
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_crocs"                                                 "Crocs"
+		"DOTA_Tooltip_ability_item_crocs_Description"                                     "Movement speed bonuses from multiple pairs of boots do not stack."
+		"DOTA_Tooltip_ability_item_crocs_movement_speed"                                  "%+$move_speed"
+		"DOTA_Tooltip_ability_item_crocs_stat_gain"                                       "+$all"
+		"DOTA_Tooltip_ability_item_crocs_as"                                              "+$attack"
+
+//=================================================================================================================
+// DANISH FORCE STAFF
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_danish_force_staff"                                    "Danish Force Staff"
+		"DOTA_Tooltip_ability_item_danish_force_staff_Description"                        "<h1>Active: Force</h1>Pushes any target unit %push_length% units in the direction it is facing."
+		"DOTA_Tooltip_ability_item_danish_force_staff_bonus_intellect"                    "+$int"
+		"DOTA_Tooltip_ability_item_danish_force_staff_bonus_health_regen"                 "+$hp_regen"
+//		"DOTA_Tooltip_ability_item_danish_force_staff_push_length"                        "PUSH LENGTH:"
+//		"DOTA_Tooltip_ability_item_danish_force_staff_push_speed"                         "PUSH SPEED:"
+//		"DOTA_Tooltip_ability_item_danish_force_staff_push_duration"                      "PUSH DURATION:"
+//		"DOTA_Tooltip_ability_item_danish_force_staff_tree_radius"                        "TREE RADIUS:"
+		"DOTA_Tooltip_ability_item_danish_force_staff_bonus_attack_speed"                 "+$attack"
+		"DOTA_Tooltip_ability_item_danish_force_staff_bonus_mana_regen"                   "+$mana_regen"
+		"DOTA_Tooltip_ability_item_danish_force_staff_bonus_damage"                       "+$damage"
+		
+		
+//=================================================================================================================
+// KMS GUN
+//=================================================================================================================
+"DOTA_Tooltip_ability_item_kms_gun"                                               "Kms Gun"
+"DOTA_Tooltip_ability_item_kms_gun_Description"                                   "<h1>Active: Gun to the head</h1> Do a Kurt Cobain (with a gun instead of shotgun of course)."
+
+
+
+//=================================================================================================================
+// SWEDISH FORCE STAFF
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_swedish_force_staff"                                    "Swedish Force Staff"
+		"DOTA_Tooltip_ability_item_swedish_force_staff_Description"                        "<h1>Active: Regressive Force</h1>Pushes any target unit %push_length% units in the reverse direction of where it is facing."
+		"DOTA_Tooltip_ability_item_swedish_force_staff_bonus_intellect"                    "+$int"
+		"DOTA_Tooltip_ability_item_swedish_force_staff_bonus_health_regen"                 "+$hp_regen"
+//		"DOTA_Tooltip_ability_item_swedish_force_staff_push_length"                        "PUSH LENGTH:"
+//		"DOTA_Tooltip_ability_item_swedish_force_staff_push_speed"                         "PUSH SPEED:"
+//		"DOTA_Tooltip_ability_item_swedish_force_staff_push_duration"                      "PUSH DURATION:"
+//		"DOTA_Tooltip_ability_item_swedish_force_staff_tree_radius"                        "TREE RADIUS:"
+		"DOTA_Tooltip_ability_item_swedish_force_staff_bonus_attack_speed"                 "+$attack"
+		"DOTA_Tooltip_ability_item_swedish_force_staff_bonus_mana_regen"                   "+$mana_regen"
+		"DOTA_Tooltip_ability_item_swedish_force_staff_bonus_damage"                       "+$damage"
+		
+//=================================================================================================================
+// KALMAR FORCE STAFF
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_kalmar_force_staff"                                    "Kalmar Force Staff"
+		"DOTA_Tooltip_ability_item_kalmar_force_staff_Description"                        "<h1>Active: Force</h1>Pushes any target unit a fuckton (%push_length% units) in the direction it is facing."
+		"DOTA_Tooltip_ability_item_kalmar_force_staff_bonus_intellect"                    "+$int"
+		"DOTA_Tooltip_ability_item_kalmar_force_staff_bonus_health_regen"                 "+$hp_regen"
+//		"DOTA_Tooltip_ability_item_kalmar_force_staff_push_length"                        "PUSH LENGTH:"
+//		"DOTA_Tooltip_ability_item_kalmar_force_staff_push_speed"                         "PUSH SPEED:"
+//		"DOTA_Tooltip_ability_item_kalmar_force_staff_push_duration"                      "PUSH DURATION:"
+//		"DOTA_Tooltip_ability_item_kalmar_force_staff_tree_radius"                        "TREE RADIUS:"
+		"DOTA_Tooltip_ability_item_kalmar_force_staff_bonus_attack_speed"                 "+$attack"
+		"DOTA_Tooltip_ability_item_kalmar_force_staff_bonus_mana_regen"                   "+$mana_regen"
+		"DOTA_Tooltip_ability_item_kalmar_force_staff_bonus_damage"                       "+$damage"
+
+//=================================================================================================================
+// FLÆSKESTEG
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_flaeskesteg"                                           "Flæskesteg"
+		"DOTA_Tooltip_ability_item_flaeskesteg_Description"                               "<h1>Passive: BIG ASS FLAESKESTEG</h1> Regenerate %health_regen_percent_per_second%%% of the bearer's max health every second. If damage is taken from a hero, this ability is disabled for %cooldown_tooltip% seconds."
+		"DOTA_Tooltip_ability_item_flaeskesteg_str"                                       "+$str"
+		"DOTA_Tooltip_ability_item_flaeskesteg_hp"                                        "+$health"
+//		"DOTA_Tooltip_ability_item_flaeskesteg_health_regen_percent_per_second"           "HEALTH REGEN PERCENT PER SECOND:"
+//		"DOTA_Tooltip_ability_item_flaeskesteg_cooldown_melee"                            "COOLDOWN MELEE:"
+//		"DOTA_Tooltip_ability_item_flaeskesteg_heal_interval"                             "HEAL INTERVAL:"
+
+//=================================================================================================================
+// FLÆSKESTEG MED SOVS OG KARTOFLER
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler"                            "Flæskesteg med Sovs og Kartofler"
+		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler_Description"                "<h1>Passive: BIG ASS MEAL</h1> Regnereate %health_regen_percent_per_second%%% of the bearer's max health every second. If damage is taken from a hero, this ability is disabled for %cooldown_tooltip% seconds.\nMagic resistance from kartoffel does not stack with kartoffel-derived items."
+		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler_str"                        "+$str"
+		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler_hp"                         "+$health"
+//		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler_health_regen_percent_per_second"		"HEALTH REGEN PERCENT PER SECOND:"
+//		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler_cooldown_melee"             "COOLDOWN MELEE:"
+//		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler_heal_interval"              "HEAL INTERVAL:"
+		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler_armor"                      "+$armor"
+		"DOTA_Tooltip_ability_item_flaeskesteg_sovs_kartofler_magic_resist"               "%+$spell_resist"
+
+//=================================================================================================================
+// HIKE SHOX
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_hike_shox"                                             "Hike Shox"
+		"DOTA_Tooltip_ability_item_hike_shox_Description"                                 "<h1>Active: REAL PRODUCT</h1> Use the power of a real product to increase your armor by %bonus_armor% for %duration% seconds.\nFlat movement speed bonuses from multiple pairs of boots do not stack."
+		"DOTA_Tooltip_ability_item_hike_shox_armor"                                       "+$armor"
+		"DOTA_Tooltip_ability_item_hike_shox_move_speed"                                  "+$move_speed"
+		"DOTA_Tooltip_ability_item_hike_shox_regen_health"                                "+$hp_regen"
+		"DOTA_Tooltip_ability_item_hike_shox_bonus_health"                                "+$health"
+//		"DOTA_Tooltip_ability_item_hike_shox_duration"                                    "DURATION:"
+//		"DOTA_Tooltip_ability_item_hike_shox_bonus_armor"                                 "BONUS ARMOR:"
+
+
+//=================================================================================================================
+// HJEMMEVÆRNET
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_hjemmevaernet"                                         "Hjemmeværnet"
+		"DOTA_Tooltip_ability_item_hjemmevaernet_Description"                             "<h1>Passive: MILITARY POWER</h1> Grants each attack a %chance%%% to deal %damage% bonus magical damage.\n<h1>Passive: True Strike</h1> You can't miss."
+		"DOTA_Tooltip_ability_item_hjemmevaernet_as"                                      "+$attack"
+
+//=================================================================================================================
+// HTX
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_htx"                                                   "HTX"
+		"DOTA_Tooltip_ability_item_htx_Description"                                       "<h1>Passive: The Mind of HTX</h1> Reduces the cooldown of all spells and items by %cdr%%%."
+		"DOTA_Tooltip_ability_item_htx_health"                                            "+$health"
+		"DOTA_Tooltip_ability_item_htx_mana"                                              "+$mana"
+		"DOTA_Tooltip_ability_item_htx_int"                                               "+$int"
+		"DOTA_Tooltip_ability_item_htx_dmg"                                               "%+Spell Amplification"	
+//		"DOTA_Tooltip_ability_item_htx_cdr"                                               "CDR:"
+
+//=================================================================================================================
+// Hummel Shirt
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_hummel_shirt"                                          "Bummel Shirt"
+		"DOTA_Tooltip_ability_item_hummel_shirt_Description"                              "<h1>Active: Self Defence</h1> For %duration% seconds, duplicates any damage taken back to the unit that tried to fuck you in the ass.\n<h1>Passive: Sexual Assault Aura</h1> Grants %as_aura% attack speed and %armor_gain_aura% armor to nearby allied units and structures, and fucks enemy units' and structures' armor and butt by %armor_loss_aura%."
+		"DOTA_Tooltip_ability_item_hummel_shirt_armor"                                    "+$armor"
+		"DOTA_Tooltip_ability_item_hummel_shirt_intellect"                                "+$int"
+		"DOTA_Tooltip_ability_item_hummel_shirt_damage"                                   "+$damage"
+		"DOTA_Tooltip_ability_item_hummel_shirt_as"                                       "+$attack"
+//		"DOTA_Tooltip_ability_item_hummel_shirt_armor_loss_aura"                          "ARMOR LOSS AURA:"
+//		"DOTA_Tooltip_ability_item_hummel_shirt_armor_gain_aura"                          "ARMOR GAIN AURA:"
+//		"DOTA_Tooltip_ability_item_hummel_shirt_as_aura"                                  "AS AURA:"
+//		"DOTA_Tooltip_ability_item_hummel_shirt_radius"                                   "RADIUS:"
+//		"DOTA_Tooltip_ability_item_hummel_shirt_duration"                                 "DURATION:"
+
+//=================================================================================================================
+// Kartoffel
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_kartofler"                                             "Kartoffel"
+		"DOTA_Tooltip_ability_item_kartofler_Description"                                 "Magic resistance from kartoffel does not stack with kartoffel-derived items."
+		"DOTA_Tooltip_ability_item_kartofler_magic_resist"                                "%+$spell_resist"
+
+//=================================================================================================================
+// Mensa IQ
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_mensa_iq"                                              "Mensa IQ"
+		"DOTA_Tooltip_ability_item_mensa_iq_Description"                                  ""
+		"DOTA_Tooltip_ability_item_mensa_iq_int"                                          "+$int"
+		"DOTA_Tooltip_ability_item_mensa_iq_mana"                                         "+$mana"
+		"DOTA_Tooltip_ability_item_mensa_iq_mana_regen"                                   "+$mana_regen"
+		"DOTA_Tooltip_ability_item_mensa_iq_dmg"                                          "%+Spell Amplification"
+
+//=================================================================================================================
+// Ninja Tabi
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_ninja_tabi"                                            "Ninja Tabi"
+		"DOTA_Tooltip_ability_item_ninja_tabi_Description"                                "<h1>Active: LoL</h1> Use the power of a copied product to increase your armor by %bonus_armor% for %duration% seconds.\nFlat movement speed bonuses from multiple pairs of boots do not stack."
+		"DOTA_Tooltip_ability_item_ninja_tabi_armor"                                      "+$armor"
+		"DOTA_Tooltip_ability_item_ninja_tabi_move_speed"                                 "+$move_speed"
+		"DOTA_Tooltip_ability_item_ninja_tabi_regen_health"                               "+$hp_regen"
+//		"DOTA_Tooltip_ability_item_ninja_tabi_duration"                                   "DURATION:"
+//		"DOTA_Tooltip_ability_item_ninja_tabi_bonus_armor"                                "BONUS ARMOR:"
+
+//=================================================================================================================
+// Pocket GameTecher
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_pocket_gametecher"                                     "Pocket GameTecher"
+		"DOTA_Tooltip_ability_item_pocket_gametecher_Description"                         "<h1>Passive: FINAL EVOLUTION GAMETECHER</h1> Reduces the cooldown of all spells and items by %cdr%%%."
+		"DOTA_Tooltip_ability_item_pocket_gametecher_int"                                 "+$int"
+		"DOTA_Tooltip_ability_item_pocket_gametecher_mana"                                "+$mana"
+		"DOTA_Tooltip_ability_item_pocket_gametecher_mana_regen"                          "+$mana_regen"
+		"DOTA_Tooltip_ability_item_pocket_gametecher_dmg"                                 "%+Spell Amplification"
+//		"DOTA_Tooltip_ability_item_pocket_gametecher_cdr"                                 "CDR:"
+		"DOTA_Tooltip_ability_item_pocket_gametecher_health"                              "+$health"
+
+//=================================================================================================================
+// Sandals
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_sandals"                                               "Sandals"
+		"DOTA_Tooltip_ability_item_sandals_Description"                                   "<h1>Active: NO SOCKS</h1> RUN WITH SANDALS LIKE A GOD. %phase_ms%%% increased movement speed and ignored unit collision for %phase_duration% seconds."
+		"DOTA_Tooltip_ability_item_sandals_damage"                                        "+$damage"
+		"DOTA_Tooltip_ability_item_sandals_move_speed"                                    "+$move_speed"
+//		"DOTA_Tooltip_ability_item_sandals_phase_ms"                                      "PHASE MS:"
+//		"DOTA_Tooltip_ability_item_sandals_phase_duration"                                "PHASE DURATION:"
+
+//=================================================================================================================
+// GODSWORDS
+//=================================================================================================================
+
+//Shards
+		"DOTA_Tooltip_ability_item_god_shard_one"                                         "Godsword Shard One"
+		"DOTA_Tooltip_ability_item_god_shard_one_Description"                             "A part of the Godsword blade."
+		"DOTA_Tooltip_ability_item_god_shard_one_damage"                                  "DAMAGE:"
+
+		"DOTA_Tooltip_ability_item_god_shard_three"                                       "Godsword Shard Three"
+		"DOTA_Tooltip_ability_item_god_shard_three_Description"                           "A part of the Godsword blade."
+		"DOTA_Tooltip_ability_item_god_shard_three_damage"                                "DAMAGE:"
+
+		"DOTA_Tooltip_ability_item_god_shard_two"                                         "Godsword Shard Two"
+		"DOTA_Tooltip_ability_item_god_shard_two_Description"                             "A part of the Godsword blade."
+		"DOTA_Tooltip_ability_item_god_shard_two_damage"                                  "DAMAGE:"
+
+//Hilts
+
+		"DOTA_Tooltip_ability_item_hilt_ancient"                                          "Ancient Hilt"
+		"DOTA_Tooltip_ability_item_hilt_ancient_Description"                              "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_ancient_int"                                      "INT:"
+
+		"DOTA_Tooltip_ability_item_hilt_arma"                                             "Armadyl Hilt"
+		"DOTA_Tooltip_ability_item_hilt_arma_Description"                                 "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_arma_agility"                                     "AGILITY:"
+
+		"DOTA_Tooltip_ability_item_hilt_bandos"                                           "Bandos Hilt"
+		"DOTA_Tooltip_ability_item_hilt_bandos_Description"                               "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_bandos_str"                                       "STR:"
+
+		"DOTA_Tooltip_ability_item_hilt_sara"                                             "Saradomin Hilt"
+		"DOTA_Tooltip_ability_item_hilt_sara_Description"                                 "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_sara_health"                                      "HEALTH:"
+		"DOTA_Tooltip_ability_item_hilt_sara_mana"                                        "MANA:"
+
+		"DOTA_Tooltip_ability_item_hilt_zamorak"                                          "Zamorak Hilt"
+		"DOTA_Tooltip_ability_item_hilt_zamorak_Description"                              "Brimming with potential."
+		"DOTA_Tooltip_ability_item_hilt_zamorak_damage"                                   "DAMAGE:"
+
+//Arma
+"DOTA_Tooltip_ability_item_gs_arma"                                               "Armadyl Godsword"
+		"DOTA_Tooltip_ability_item_gs_arma_Description"                                   "<h1>Active: The Judgement</h1> Deal %active_damage% pure damage"
+		"DOTA_Tooltip_ability_item_gs_arma_damage"                                        "DAMAGE:"
+		"DOTA_Tooltip_ability_item_gs_arma_agility"                                       "AGILITY:"
+//Sara
+		"DOTA_Tooltip_ability_item_gs_sara"                                               "Saradomin Godsword"
+		"DOTA_Tooltip_ability_item_gs_sara_Description"                                   "<h1>Active: Healing Blade</h1> Deal %active_damage% physical damage and restore %hp_restore% health and %mp_restore% mana to yourself"
+		"DOTA_Tooltip_ability_item_gs_sara_damage"                                        "DAMAGE:"
+		"DOTA_Tooltip_ability_item_gs_sara_health"                                        "HEALTH:"
+		"DOTA_Tooltip_ability_item_gs_sara_mana"                                          "MANA:"
+//Bandos
+		"DOTA_Tooltip_modifier_gs_bandos_armor_reduction"                                 "Warstriked"
+		"DOTA_Tooltip_modifier_gs_bandos_armor_reduction_Description"                     "Armor reduced"
+				"DOTA_Tooltip_ability_item_gs_bandos"                             "Bandos Godsword"
+		"DOTA_Tooltip_ability_item_gs_bandos_Description"                                 "<h1>Active: Warstrike</h1> Deal %active_damage% physical damage and reduce the targets armor by %armor_reduction% for %reduction_duration%s"
+		"DOTA_Tooltip_ability_item_gs_bandos_damage"                                      "DAMAGE:"
+		"DOTA_Tooltip_ability_item_gs_bandos_str"                                         "STR:"
+
+//Zamorak
+		"DOTA_Tooltip_modifier_gs_zamorak_freeze"                                         "Frozen"
+		"DOTA_Tooltip_modifier_gs_zamorak_freeze_Description"                             "Hit by an Ice Cleave"
+		"DOTA_Tooltip_ability_item_gs_zamorak"                                            "Zamorak Godsword"
+		"DOTA_Tooltip_ability_item_gs_zamorak_Description"                                "<h1>Active: Ice Cleave</h1> Deal %active_damage% physical damage and freeze the target for %freeze_dur%s"
+		"DOTA_Tooltip_ability_item_gs_zamorak_damage"                                     "DAMAGE:"
+
+//Ancient
+		"DOTA_Tooltip_ability_item_gs_ancient"                                            "Ancient Godsword"
+		"DOTA_Tooltip_ability_item_gs_ancient_Description"                                "<h1>Active: Blood Sacrifice</h1> Deal %active_damage% physical damage and mark the enemy for sacrifce, if the marked enemy does not move %dist_to_move% units within %mark_duration%s, they take an additional %bonus_magic_damage% magical damage and you heal for %bonus_self_heal%"
+		"DOTA_Tooltip_ability_item_gs_ancient_damage"                                     "DAMAGE:"
+		"DOTA_Tooltip_ability_item_gs_ancient_int"                                        "INT:"
+		"DOTA_Tooltip_modifier_gs_ancient_mark"                                         	"Marked for sacrifice."
+		"DOTA_Tooltip_modifier_gs_zamorak_freeze_Description"                             "You better get your move on!"
+
+
+//=================================================================================================================
+// Sange and Yasha LATOR
+//=================================================================================================================
+
+
+
+
+
+		"DOTA_Tooltip_ability_item_sange_yasha_lator"                                     "Sange Yasha-Lator"
+		"DOTA_Tooltip_ability_item_sange_yasha_lator_Description"                         "<h1>Passive: Maim in the butt</h1> Each attack has a %maim_chance%%% chance to reduce enemy hero movement speed by %maim_slow_movement%%% and attack speed by %maim_slow_attack%%%. Lasts %maim_duration%%% seconds.\n<h1>Passive: RIP CLOTHES</h1> Every hit rips off the enemy armor by %corruption_armor%. Lasts %corruption_duration% seconds."
+		"DOTA_Tooltip_ability_item_sange_yasha_lator_damage"                              "+$damage"
+		"DOTA_Tooltip_ability_item_sange_yasha_lator_str"                                 "+$str"
+		"DOTA_Tooltip_ability_item_sange_yasha_lator_agi"                                 "+$agi"
+		"DOTA_Tooltip_ability_item_sange_yasha_lator_as"                                  "+$attack"
+		"DOTA_Tooltip_ability_item_sange_yasha_lator_move_speed"                          "%+$move_speed"
+//		"DOTA_Tooltip_ability_item_sange_yasha_lator_maim_chance"                         "MAIM CHANCE:"
+//		"DOTA_Tooltip_ability_item_sange_yasha_lator_maim_slow_movement"                  "MAIM SLOW MOVEMENT:"
+//		"DOTA_Tooltip_ability_item_sange_yasha_lator_maim_slow_attack"                    "MAIM SLOW ATTACK:"
+//		"DOTA_Tooltip_ability_item_sange_yasha_lator_maim_duration"                       "MAIM DURATION:"
+//		"DOTA_Tooltip_ability_item_sange_yasha_lator_corruption_armor"                    "CORRUPTION ARMOR:"
+//		"DOTA_Tooltip_ability_item_sange_yasha_lator_corruption_duration"                 "CORRUPTION DURATION:"
+
+//=================================================================================================================
+// Sovs med Kartofler
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_sovs_kartofler"                                        "Sovs med Kartofler "
+		"DOTA_Tooltip_ability_item_sovs_kartofler_Description"                            "Magic resistance from kartoffel does not stack with kartoffel-derived items."
+		"DOTA_Tooltip_ability_item_sovs_kartofler_armor"                                  "+$armor"
+		"DOTA_Tooltip_ability_item_sovs_kartofler_magic_resist"                           "+$spell_resist"
+
+//=================================================================================================================
+// Værnepligt
+//=================================================================================================================
+
+		"DOTA_Tooltip_ability_item_vaernepligt"                                           "Værnepligt"
+		"DOTA_Tooltip_ability_item_vaernepligt_Description"                               "<h1>Passive: MILITARY TRAINING</h1> Grants each attack a %chance%%% to deal %damage% bonus magical damage."
+//		"DOTA_Tooltip_ability_item_vaernepligt_chance"                                    "CHANCE:"
+//		"DOTA_Tooltip_ability_item_vaernepligt_damage"                                    "DAMAGE:"
+
+//=================================================================================================================
+// Dagon
+//=================================================================================================================
+
+//dagon1
+		"DOTA_Tooltip_ability_item_dagon_datadriven"                                      "Dagon"
+		"DOTA_Tooltip_ability_item_dagon_datadriven_Description"                          "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%<br>Range: %range_tooltip%<br>"
+		"DOTA_Tooltip_ability_item_dagon_datadriven_bonus_intellect"                      "+$int"
+		"DOTA_Tooltip_ability_item_dagon_datadriven_bonus_all_stats"                      "+$all"
+		"DOTA_Tooltip_ability_item_dagon_datadriven_bonus_damage"                         "+$damage"
+//		"DOTA_Tooltip_ability_item_dagon_datadriven_damage"                               "DAMAGE:"
+//		"DOTA_Tooltip_ability_item_dagon_datadriven_range_tooltip"                        "RANGE TOOLTIP:"
+//dagon2
+
+		"DOTA_Tooltip_ability_item_dagon_2_datadriven"                                    "Dagon 2"
+		"DOTA_Tooltip_ability_item_dagon_2_datadriven_Description"                        "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%<br>Range: %range_tooltip%<br>"
+		"DOTA_Tooltip_ability_item_dagon_2_datadriven_bonus_intellect"                    "+$int"
+		"DOTA_Tooltip_ability_item_dagon_2_datadriven_bonus_all_stats"                    "+$all"
+		"DOTA_Tooltip_ability_item_dagon_2_datadriven_bonus_damage"                       "+$damage"
+//		"DOTA_Tooltip_ability_item_dagon_2_datadriven_damage"                             "DAMAGE:"
+//		"DOTA_Tooltip_ability_item_dagon_2_datadriven_range_tooltip"                      "RANGE TOOLTIP:"
+
+//dagon3
+		"DOTA_Tooltip_ability_item_dagon_3_datadriven"                                    "Dagon 3"
+		"DOTA_Tooltip_ability_item_dagon_3_datadriven_Description"                        "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%<br>Range: %range_tooltip%<br>"
+		"DOTA_Tooltip_ability_item_dagon_3_datadriven_bonus_intellect"                    "+$int"
+		"DOTA_Tooltip_ability_item_dagon_3_datadriven_bonus_all_stats"                    "+$all"
+		"DOTA_Tooltip_ability_item_dagon_3_datadriven_bonus_damage"                       "+$damage"
+//		"DOTA_Tooltip_ability_item_dagon_3_datadriven_damage"                             "DAMAGE:"
+//		"DOTA_Tooltip_ability_item_dagon_3_datadriven_range_tooltip"                      "RANGE TOOLTIP:"
+
+//dagon4
+		"DOTA_Tooltip_ability_item_dagon_4_datadriven"                                    "Dagon 4"
+		"DOTA_Tooltip_ability_item_dagon_4_datadriven_Description"                        "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%<br>Range: %range_tooltip%<br>"
+		"DOTA_Tooltip_ability_item_dagon_4_datadriven_bonus_intellect"                    "+$int"
+		"DOTA_Tooltip_ability_item_dagon_4_datadriven_bonus_all_stats"                    "+$all"
+		"DOTA_Tooltip_ability_item_dagon_4_datadriven_bonus_damage"                       "+$damage"
+//		"DOTA_Tooltip_ability_item_dagon_4_datadriven_damage"                             "DAMAGE:"
+//		"DOTA_Tooltip_ability_item_dagon_4_datadriven_range_tooltip"                      "RANGE TOOLTIP:"
+
+//dagon 5
+		"DOTA_Tooltip_ability_item_dagon_5_datadriven"                                    "Dagon 5"
+		"DOTA_Tooltip_ability_item_dagon_5_datadriven_Description"                        "<h1>Active: Energy Burst</h1> Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.<br><br>Damage: %damage%<br>Range: %range_tooltip%<br>"
+		"DOTA_Tooltip_ability_item_dagon_5_datadriven_bonus_intellect"                    "+$int"
+		"DOTA_Tooltip_ability_item_dagon_5_datadriven_bonus_all_stats"                    "+$all"
+		"DOTA_Tooltip_ability_item_dagon_5_datadriven_bonus_damage"                       "+$damage"
+//		"DOTA_Tooltip_ability_item_dagon_5_datadriven_damage"                             "DAMAGE:"
+//		"DOTA_Tooltip_ability_item_dagon_5_datadriven_range_tooltip"                      "RANGE TOOLTIP:"
+
+//=================================================================================================================
+// Stewart Stardust
+//=================================================================================================================
+		
+		"npc_dota_hero_beastmaster"                                                       "Stewart Stardust"
+
+
+		"DOTA_Tooltip_ability_ask_for_help"                                               "spørg om hjælp"
+		"DOTA_Tooltip_ability_ask_for_help_Description"                                   "Stewart Stardust asks for a little hjælp from his enemies and gains strength for each nearby enemy hero."
+		"DOTA_Tooltip_ability_ask_for_help_duration"                                      "DURATION:"
+		"DOTA_Tooltip_ability_ask_for_help_stats_per_hero"                                "STRENGTH PER HERO:"
+		"DOTA_Tooltip_ability_ask_for_help_radius"                                        "RADIUS:"
+
+		"DOTA_Tooltip_ability_en_med_guldringen"                                          "En Med Guldringen"
+		"DOTA_Tooltip_ability_en_med_guldringen_Description"                              "Knock out your enemy for a few seconds with the guldring."
+		"DOTA_Tooltip_ability_en_med_guldringen_damage"                                   "DAMAGE:"
+		"DOTA_Tooltip_ability_en_med_guldringen_duration"                                 "STUN DURATION:"
+
+		"DOTA_Tooltip_ability_jul_pa_vesterbro"                                           "Jul Pa Vesterbro"
+		"DOTA_Tooltip_ability_jul_pa_vesterbro_Description"                               "Stewart visits his enemies and wishes them a glædelig jul."
+		"DOTA_Tooltip_ability_jul_pa_vesterbro_tpdelay"                                   "VISIT DELAY:"
+		"DOTA_Tooltip_ability_jul_pa_vesterbro_damage"                                    "DAMAGE:"
+
+		"DOTA_Tooltip_ability_sonny_boy"                                                  "Sonny Boy"
+		"DOTA_Tooltip_ability_sonny_boy_Description"                                      "Run fast and bash your sonny boy enemies to show them that they shall not be fræk."
+		"DOTA_Tooltip_ability_sonny_boy_bashchance"                                       "%BASH CHANCE:"
+		"DOTA_Tooltip_ability_sonny_boy_bashduration"                                     "BASH DURATION:"
+		"DOTA_Tooltip_ability_sonny_boy_speed"                                            "MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_sonny_boy_duration"                                         "DURATION:"
+		
+		"DOTA_Tooltip_modifier_stun"                                            "Stunned"
+		"DOTA_Tooltip_modifier_stun_Description"                                "This unit is stunned and cannot act."
+		"DOTA_Tooltip_modifier_sonny_boy" 									"Sonny boy destroyer"
+		"DOTA_Tooltip_modifier_sonny_boy_Description"						"Showing them who's the boss."
+		"DOTA_Tooltip_modifier_ask_for_help"                                          "Asking for hjælp"
+		"DOTA_Tooltip_modifier_ask_for_help_Description"                              "Stewart is asking for hjælp and gaining styrke."
+	}
+}
