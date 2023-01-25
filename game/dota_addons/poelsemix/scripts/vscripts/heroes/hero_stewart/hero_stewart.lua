@@ -47,7 +47,6 @@ end
 
 modifier_stun = class({})
 function modifier_stun:IsPurgable() return false end    
-function modifier_stun:IsHidden() return false end
 
 function modifier_stun:GetEffectName()
     return "particles/generic_gameplay/generic_stunned.vpcf"
