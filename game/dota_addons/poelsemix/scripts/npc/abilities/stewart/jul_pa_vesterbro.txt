@@ -10,10 +10,10 @@
     "AbilityUnitDamageType"             "DAMAGE_TYPE_PHYSICAL"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
-	"AbilityTextureName"			"ap_shell"
+	"AbilityTextureName"			"god_jul"
 	"AbilityCooldown"				"17 15 13 11"
 	"AbilityManaCost"				"105 115 125 135"
-	//"AbilityCastRange"				"750"
+	//"AbilityCastRange"			"750"
 	"AbilityCastPoint"				"0.6"
 
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"

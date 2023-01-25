@@ -8,7 +8,7 @@
 	//"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	//"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 
-	"AbilityTextureName"			"ap_shell"
+	"AbilityTextureName"			"sonny"
 	"AbilityCooldown"				"17 15 13 11"
 	"AbilityManaCost"				"80 90 100 110"
 	//"AbilityCastRange"				"750"

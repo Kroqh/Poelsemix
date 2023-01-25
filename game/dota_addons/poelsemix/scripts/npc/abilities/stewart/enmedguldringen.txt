@@ -9,7 +9,7 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
     "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 
-	"AbilityTextureName"			"ap_shell"
+	"AbilityTextureName"			"burp"
 	"AbilityCooldown"				"19 18 17 16"
 	"AbilityManaCost"				"105 115 125 135"
 	"AbilityCastRange"				"150"

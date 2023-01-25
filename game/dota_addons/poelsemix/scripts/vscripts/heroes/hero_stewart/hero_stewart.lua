@@ -81,7 +81,7 @@ function en_med_guldringen:OnSpellStart()
     }
     ApplyDamage(damage_table)
     target:AddNewModifier(caster, self, "modifier_stun", {duration = duration})
-    -- todo: sound effect
+    self:EmitSound("stewart_burp")
 end
 
 LinkLuaModifier("modifier_ask_for_help", "heroes/hero_stewart/hero_stewart", LUA_MODIFIER_MOTION_NONE)
@@ -106,6 +106,7 @@ end
 function modifier_ask_for_help:OnCreated()
     if not IsServer() then return end
     self.stats_per_hero = self:GetAbility():GetSpecialValueFor("stats_per_hero")
+    self:GetAbility():EmitSound("stewart_sporg_om_hjalp")
     self:SetHasCustomTransmitterData(true)
     self:StartIntervalThink(0.2)
 end
