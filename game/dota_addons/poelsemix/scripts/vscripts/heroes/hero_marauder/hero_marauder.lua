@@ -10,7 +10,7 @@ end
 
 modifier_move_only = modifier_move_only or class({})
 
-function modifier_move_only:IsHidden() return false end
+function modifier_move_only:IsHidden() return true end
 function modifier_move_only:IsPurgeable() return false end
 
 function modifier_move_only:CheckState()
