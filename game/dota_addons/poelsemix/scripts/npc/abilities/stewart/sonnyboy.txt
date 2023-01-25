@@ -1,0 +1,48 @@
+"sonny_boy"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_stewart/hero_stewart"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	//"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	//"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+	"AbilityTextureName"			"sonny"
+	"AbilityCooldown"				"17 15 13 11"
+	"AbilityManaCost"				"80 90 100 110"
+	//"AbilityCastRange"				"750"
+	"AbilityCastPoint"				"0.6"
+
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
+
+	"precache"
+	{
+		"soundfile"		"soundevents/stewart_soundevent.vsndevts"
+	}
+
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "5 6 7 8"
+		}
+		"02"
+		{	
+			"var_type" "FIELD_INTEGER"
+			"speed" "50 75 100 125"
+		}
+        "03"
+        {
+            "var_type" "FIELD_INTEGER"
+            "bashchance" "10 15 20 25"
+        }
+        "04"
+        {
+            "var_type" "FIELD_INTEGER"
+            "bashduration" "0.75 1.0 1.25 1.5"
+        }
+	}
+}

@@ -46,6 +46,9 @@
             <Image src="file://panorama/images/heroes/selection/npc_dota_hero_pugna.png" hittest="false" />
             <Image src="file://panorama/images/heroes/npc_dota_hero_pugna.png" hittest="false" />
 
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_beastmaster.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_beastmaster.png" hittest="false" />
+            
             <Image src="file://panorama/images/heroes/selection/npc_dota_hero_riki.png" hittest="false" />
             <Image src="file://panorama/images/heroes/npc_dota_hero_riki.png" hittest="false" />
 		</Panel>
