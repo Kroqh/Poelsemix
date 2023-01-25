@@ -158,7 +158,7 @@
 		            "Radius"    "%radiusAOE"
 		            "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 		            "Types"     "DOTA_UNIT_TARGET_HERO"
-					"Flags" "DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS | DOTA_UNIT_TARGET_FLAG_NOT_SUMMONED"
+			"Flags" "DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS | DOTA_UNIT_TARGET_FLAG_NOT_SUMMONED"
 				
 		        }
 		    

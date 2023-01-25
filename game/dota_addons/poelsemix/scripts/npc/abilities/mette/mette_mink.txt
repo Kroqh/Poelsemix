@@ -8,6 +8,11 @@
 
 	//FOR CHANGING STATS OF THE MINK, REFER TO unit_mink 1-5
 	//common+uncommon+rare+epic+legendary percent should always add up 100 percent for the level
+
+			"precache"
+        {
+	"soundfile" "soundevents/mette_soundevent.vsndevts"
+        }
 	"AbilitySpecial"
 	{
 		"01"
@@ -43,7 +48,7 @@
 		"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"lifetime"		"30"
+				"lifetime"		"30" //sync den her med den på press meeting
 			}
 	}
 }

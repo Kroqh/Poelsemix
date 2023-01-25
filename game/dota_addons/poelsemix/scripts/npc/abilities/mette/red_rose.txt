@@ -1,0 +1,19 @@
+	"red_rose"
+{
+	"BaseClass"                 "ability_lua"
+	"AbilityTextureName"        "mette_rose"
+	"ScriptFile"			"heroes/hero_mette/rose"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+	"AbilitySpecial"
+	{
+		"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"reflect_percent"		"5 10 15 20"
+			}
+
+	}
+}

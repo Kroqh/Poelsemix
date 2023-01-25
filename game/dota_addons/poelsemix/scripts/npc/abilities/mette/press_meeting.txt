@@ -1,0 +1,31 @@
+"press_meeting"
+	 {
+        //General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"		"mette_press"
+		"ScriptFile"			"heroes/hero_mette/press_meeting.lua"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityCastAnimation"			"ACT_DOTA_VICTORY"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"	
+	"AbilityCastPoint"				"0.2"
+
+	
+		"AbilityCooldown"               "150 125 100"
+		"AbilityManaCost"               "200"
+
+			"precache"
+	{
+		"particle"			"particles/heroes/mette/rose_bed.vpcf"
+
+	}
+	"AbilitySpecial"
+	{
+		"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"lifetime"		"30" //sync den her med den på mink
+			}
+
+	}
+}

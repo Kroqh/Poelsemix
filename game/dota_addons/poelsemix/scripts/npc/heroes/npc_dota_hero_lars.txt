@@ -12,5 +12,5 @@
 	"Ability14" "special_bonus_hp_350"
 	"Ability15" "special_bonus_armor_10"
 	"Ability16" "special_bonus_hp_regen_35"
-	"Ability17" "special_bonus_gold_income_70"
+	"Ability17" "special_bonus_all_stats_15"
 }

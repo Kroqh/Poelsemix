@@ -22,34 +22,34 @@ function modifier_mink_passive:OnIntervalThink()
 	if IsServer() then
         local ability = self:GetAbility()
         local parent = self:GetParent()
-            self:StartIntervalThink(CalcInterval(self:GetParent():GetIntellect(), ability:GetSpecialValueFor("base_interval")))
-        
+        self:StartIntervalThink(CalcInterval(self:GetParent():GetIntellect(), ability:GetSpecialValueFor("base_interval")))
+        if parent:IsAlive() == false then return end
         local roll = math.random(100)
         local sum = 0
-        print(roll)
+        EmitSoundOn("mette_chirp", parent)
         if roll <= ability:GetSpecialValueFor("common") then 
-            local unit = CreateUnitByName("unit_mink_1",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam())
+            unit = CreateUnitByName("unit_mink_1",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam())
             unit:AddNewModifier(unit, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
             return
         else sum = sum + ability:GetSpecialValueFor("common") end
         if roll <= ability:GetSpecialValueFor("uncommon") + sum then 
-            local unit = CreateUnitByName("unit_mink_2",parent:GetAbsOrigin(), true, parent, nil, parent:GetTeam())
+            unit = CreateUnitByName("unit_mink_2",parent:GetAbsOrigin(), true, parent, nil, parent:GetTeam())
             unit:AddNewModifier(unit, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
             return
         else sum = sum + ability:GetSpecialValueFor("uncommon") end
         if roll <= ability:GetSpecialValueFor("rare") + sum then 
-            local unit = CreateUnitByName("unit_mink_3",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam())
+            unit = CreateUnitByName("unit_mink_3",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam())
             unit:AddNewModifier(unit, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
             return
         else sum = sum + ability:GetSpecialValueFor("rare") end
 
         if roll <= ability:GetSpecialValueFor("epic") + sum then 
-            local unit = CreateUnitByName("unit_mink_4",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam())
+            unit = CreateUnitByName("unit_mink_4",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam())
             unit:AddNewModifier(unit, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
             return
         else sum = sum + ability:GetSpecialValueFor("epic") end
         if roll <= ability:GetSpecialValueFor("legendary") + sum then
-            local unit = CreateUnitByName("unit_mink_5",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam()) 
+            unit = CreateUnitByName("unit_mink_5",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam()) 
             unit:AddNewModifier(unit, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
             return
         end

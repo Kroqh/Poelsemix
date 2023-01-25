@@ -51,6 +51,9 @@
             
             <Image src="file://panorama/images/heroes/selection/npc_dota_hero_riki.png" hittest="false" />
             <Image src="file://panorama/images/heroes/npc_dota_hero_riki.png" hittest="false" />
+
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_hoodwink.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_hoodwink.png" hittest="false" />
 		</Panel>
 	</Panel>
 </root>

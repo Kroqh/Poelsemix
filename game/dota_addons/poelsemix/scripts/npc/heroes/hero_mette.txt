@@ -2,12 +2,12 @@
 {
 	// HERO: hoodwink
 	"override_hero"				"npc_dota_hero_hoodwink"			// Hero to override
-	"Ability1" "red_cecil"				
+	"Ability1" "red_rose"				
 	"Ability2" "mette_mink"
 	"Ability3" "hurtigbrille"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
-	"Ability6" "brian_dak"
+	"Ability6" "press_meeting"
 	"ProjectileModel"		"particles/heroes/mette/rose_projectile.vpcf"
 
 
