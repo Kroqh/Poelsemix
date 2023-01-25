@@ -1,0 +1,49 @@
+	"mette_mink"
+{
+	"BaseClass"                 "ability_lua"
+	"AbilityTextureName"        "mette_mink"
+	"ScriptFile"			"heroes/hero_mette/mink"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	//FOR CHANGING STATS OF THE MINK, REFER TO unit_mink 1-5
+	//common+uncommon+rare+epic+legendary percent should always add up 100 percent for the level
+	"AbilitySpecial"
+	{
+		"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"common"		"70 50 30 10"
+			}
+		"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"uncommon"		"25 25 15 10"
+			}
+		"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"rare"		"4 15 25 30"
+			}
+		"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"epic"		"1 9 20 30"
+			}
+		"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"legendary"		"0 1 10 20"
+			}
+		"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"base_interval"		"15"
+			}
+		"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"lifetime"		"30"
+			}
+	}
+}

@@ -2,6 +2,7 @@ modifier_flyby_passive = class({})
 LinkLuaModifier( "modifier_flyby_attack", "heroes/hero_shadow/flyby_attack/modifier_flyby_attack", LUA_MODIFIER_MOTION_NONE )
 
 function modifier_flyby_passive :IsPurgeable() return false end
+function modifier_flyby_passive :IsPassive() return true end
 function modifier_flyby_passive :IsHidden() return true end
 
 function modifier_flyby_passive :OnCreated()

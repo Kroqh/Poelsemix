@@ -1,0 +1,35 @@
+"Mette"
+{
+	// HERO: hoodwink
+	"override_hero"				"npc_dota_hero_hoodwink"			// Hero to override
+	"Ability1" "red_cecil"				
+	"Ability2" "mette_mink"
+	"Ability3" "hurtigbrille"
+	"Ability4" "generic_hidden"
+	"Ability5" "generic_hidden"
+	"Ability6" "brian_dak"
+	"ProjectileModel"		"particles/heroes/mette/rose_projectile.vpcf"
+
+
+	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
+	"AttributeBaseIntelligence"	"19"
+	"AttributeIntelligenceGain"	"4.7"
+	"AttributeBaseAgility"		"16"
+	"AttributeAgilityGain"		"2.1"
+	"AttackAcquisitionRange"	"450"
+	"AttackRange"			"450"
+
+	//Lav nye talents
+	
+	"Ability10"		"special_bonus_cooldown_reduction_15"
+	"Ability11"		"special_bonus_movement_speed_40"
+	
+	"Ability12"		"special_bonus_attack_damage_50"
+	"Ability13"		"special_bonus_hp_500"
+	
+	"Ability14"		"special_bonus_strength_25"
+	"Ability15"		"special_bonus_evasion_20"
+	
+	"Ability16"		"special_bonus_armor_20"
+	"Ability17"		"special_bonus_magic_resistance_20"							
+}
