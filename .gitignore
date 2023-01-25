@@ -50,3 +50,6 @@ game/core
 game/dota
 
 .vscode
+
+content/dota_addons/poelsemix/addon_english_utf8.txt
+content/dota_addons/poelsemix/tooltips_english.txt
