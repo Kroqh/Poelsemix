@@ -21,6 +21,7 @@
         {
         "particle" "particles/econ/items/bloodseeker/bloodseeker_ti7/bloodseeker_ti7_ambient_trail.vpcf"
 	"particle" "particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_v2_trigger_elec.vpcf"
+	"soundfile" "soundevents/shadow_soundevent.vsndevts"
         }
 
 		// Special

@@ -1,4 +1,4 @@
-"awaken"
+"shadow_slash"
 {
     "operator_stacks"
     {
@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/awaken.vsnd"
+                              "value0"        "sounds/shadow/slash.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -22,14 +22,14 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "9999.000"  }
+                    "distance_max"      {   "value"     "1000.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
         }
     }
 }
-"woosh_krogh"
+"shadow_teleport_behind"
 {
     "operator_stacks"
     {
@@ -45,22 +45,22 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/woosh_krogh.vsnd"
+                              "value0"        "sounds/shadow/teleport.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "30.00000"  }
+                    "volume"            {   "value"     "2.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1000.000"  }
+                    "distance_max"      {   "value"     "800.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
         }
     }
 }
-"hagay"
+"shadow_ult"
 {
     "operator_stacks"
     {
@@ -76,10 +76,10 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/hagay.vsnd"
+                              "value0"        "sounds/shadow/faster.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "150.00000"  }
+                    "volume"            {   "value"     "6.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -91,35 +91,3 @@
         }
     }
 }
-"upsie"
-{
-    "operator_stacks"
-    {
-        "update_stack"
-        {
-            "reference_operator"
-            {
-                "operator"              "sos_reference_stack"
-                "reference_stack"       "dota_src1_3d"
-                "operator_variables"
-                {
-                    "vsnd_files"
-                    {
-                        "value"
-                        {
-                              "value0"        "sounds/upsie.vsnd"
-                        }
-                    }
-                    "volume"            {   "value"     "40.00000"  }
-                    "pitch_rand_min"    {   "value"     "-0.05000"  }
-                    "pitch_rand_max"    {   "value"     "0.050000"  }
-                    "pitch"             {   "value"     "1.000000"  }
-                    "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1000.000"  }
-                    "event_type"        {   "value"     "1.000000"  }
-                }
-            }
-        }
-    }
-}
-

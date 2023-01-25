@@ -8,6 +8,7 @@ function aerial_assault:OnSpellStart()
         -- prevent double casting
         if self:GetCaster():FindModifierByName("modifier_mid_aerial") then
 			self:RefundManaCost()
+            self:EndCooldown()
 			return
 		end
         local caster = self:GetCaster()
@@ -22,7 +23,7 @@ function aerial_assault:OnSpellStart()
 
 
         -- Play the cast sound
-
+        EmitSoundOn("shadow_ult", caster)
 
 
         self.target_location = CalcNextLocation(self.start_loc, self.radius, self.angle)
@@ -54,6 +55,7 @@ function aerial_assault:OnSpellStart()
 		}
         self.projectileID = ProjectileManager:CreateLinearProjectile(self.projectile)
         caster:FaceTowards(self.target_location)
+        EmitSoundOn("shadow_slash", caster)
         caster:AddNewModifier(caster, self, "modifier_mid_aerial", {})
     end
 end
@@ -91,7 +93,7 @@ function aerial_assault:OnProjectileHit_ExtraData(target, location, ExtraData)
                 self.projectile.fDistance = self.distance_to_location
                 self.projectile.vVelocity = self.direction * self.speed * Vector(1, 1, 0)
                 self.projectileID = ProjectileManager:CreateLinearProjectile(self.projectile)
-                
+                EmitSoundOn("shadow_slash", caster)
                 caster:FaceTowards(self.target_location)
                 self.bounces = self.bounces + 1
             elseif self.bounces == self.max_bounces then
@@ -104,6 +106,7 @@ function aerial_assault:OnProjectileHit_ExtraData(target, location, ExtraData)
                 self.projectile.vVelocity = self.direction * self.speed * Vector(1, 1, 0)
                 self.projectileID = ProjectileManager:CreateLinearProjectile(self.projectile)
                 caster:FaceTowards(self.target_location)
+                EmitSoundOn("shadow_slash", caster)
                 self.bounces = self.bounces + 1
             else
                 if caster:FindModifierByName("modifier_mid_aerial") then

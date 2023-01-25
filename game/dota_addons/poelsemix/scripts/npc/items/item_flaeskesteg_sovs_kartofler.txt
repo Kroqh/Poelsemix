@@ -6,7 +6,7 @@
   	"BaseClass"                 "item_datadriven"
   	"AbilityTextureName"        "flaeskesteg_sovs_kartofler"
   	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"10400"
+  	"ItemCost"					"11000"
   	"ID"						"2006"
 	"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	
@@ -33,7 +33,7 @@
 		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"hp"						"1000"
+			"hp"						"750"
 		}
 		"03"
 		{

@@ -38,7 +38,7 @@
 		"03"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"health_regen_percent_per_second"	"10"
+			"health_regen_percent_per_second"	"8"
 		}
 		"04"
 		{

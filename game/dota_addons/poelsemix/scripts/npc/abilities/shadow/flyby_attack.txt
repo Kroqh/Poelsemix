@@ -16,6 +16,7 @@
 	"precache"
 	{
 	"particle" "particles/econ/items/void_spirit/void_spirit_immortal_2021/void_spirit_immortal_2021_astral_step_dmg_blood.vpcf"
+	"soundfile" "soundevents/shadow_soundevent.vsndevts"
 	}	
 
 		"AbilitySpecial"

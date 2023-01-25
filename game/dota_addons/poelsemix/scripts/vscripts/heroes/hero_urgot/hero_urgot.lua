@@ -13,19 +13,20 @@ function imba_mirana_arrow:IsHiddenWhenStolen()
 end
 
 function imba_mirana_arrow:GetCooldown()
-	local caster = self:GetCaster()
-	local qcooldown = self:GetSpecialValueFor("cooldown")
+	if IsServer() then
+		local caster = self:GetCaster()
+		local qcooldown = self:GetSpecialValueFor("cooldown")
 
-	if caster:HasTalent("special_bonus_urgot_q_boost") then
-		qcooldown = 1
-	end
-	
-	if caster:HasTalent("special_bonus_urgot_q_boost2") then
-		qcooldown = qcooldown/2	
-	end
+		if caster:HasTalent("special_bonus_urgot_q_boost") then
+			qcooldown = 1
+		end
+		
+		if caster:HasTalent("special_bonus_urgot_q_boost2") then
+			qcooldown = qcooldown/2	
+		end
 
-	return qcooldown
-	
+		return qcooldown
+	end
 end
 
 function imba_mirana_arrow:OnSpellStart()
@@ -97,7 +98,6 @@ function FireSacredArrow(caster, ability, spawn_point, direction, targethero)
 		arrow_distance = ability:GetSpecialValueFor("arrow_distance")
 	end
 	if targethero == nil or targethero:HasModifier("modifier_imba_phoenix_fire_spirits_debuff") == false then
-		print(targethero)
 		EmitSoundOn("urgotQNonTargeted", caster)
 		local arrow_projectile = {  Ability = ability,
 			EffectName = particle_arrow,
@@ -121,7 +121,6 @@ function FireSacredArrow(caster, ability, spawn_point, direction, targethero)
 		}
 		ProjectileManager:CreateLinearProjectile(arrow_projectile)
 	else
-		print(targethero)
 		EmitSoundOn("urgotQTargeted", caster)
 		local arrow_projectile = {  Ability = ability,
 			Target = targethero,
@@ -250,7 +249,6 @@ end
 function modifier_shield:OnCreated(keys)
 	if IsServer() then
 		self.remaining_health = keys.remaining_health
-		print(self.remaining_health)
 		self:SetStackCount(self.remaining_health)
 		self:StartIntervalThink(0.1)
 	end
@@ -265,7 +263,6 @@ end
 function modifier_shield:OnIntervalThink()
 	if IsServer() then
 		if self.remaining_health <= 0 then
-			print("Sletter shield")
 			self:GetParent():RemoveModifierByName("modifier_shield")
 		end
 	end
@@ -308,19 +305,21 @@ function imba_phoenix_launch_fire_spirit:IsNetherWardStealable() 	return false e
 function imba_phoenix_launch_fire_spirit:GetAbilityTextureName()   return "urgotE" end
 
 function imba_phoenix_launch_fire_spirit:GetCooldown()
-	if self:GetCaster():HasTalent("special_bonus_urgot_e_reduc") then
-		return self:GetSpecialValueFor("cooldown")/2
-	else
-		return self:GetSpecialValueFor("cooldown")
+	if IsServer() then
+		if self:GetCaster():HasTalent("special_bonus_urgot_e_reduc") then
+			return self:GetSpecialValueFor("cooldown")/2
+		else
+			return self:GetSpecialValueFor("cooldown")
+		end
 	end
+
 end
 
 function imba_phoenix_launch_fire_spirit:OnSpellStart()
-
+	if IsServer() then
 	local caster		= self:GetCaster()
 	local point 		= self:GetCursorPosition()
 	local ability		= self
-	print(self:GetCursorPosition())
 
 
 	caster:StartGesture(ACT_DOTA_OVERRIDE_ABILITY_2)
@@ -349,9 +348,8 @@ function imba_phoenix_launch_fire_spirit:OnSpellStart()
 			bProvidesVision = false,						-- Optional
 			iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_HITLOCATION
 		}
-		print("yes")
 	ProjectileManager:CreateTrackingProjectile(info)
-
+	end
 end
 
 
@@ -649,7 +647,6 @@ function imba_vengefulspirit_nether_swap:OnChannelFinish(bInterrupted)
 
 				local counter = math.random(0,table.getn(self.allEnemies)-1)
 				for _,unit in pairs(self.allEnemies) do
-					print(counter%table.getn(self.allEnemies))
 					local targetPos = allEnemiesPos[counter%table.getn(self.allEnemies)]
 
 					Timers:CreateTimer(FrameTime(), function()
