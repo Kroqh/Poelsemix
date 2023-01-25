@@ -55,7 +55,10 @@ function modifier_bonus_to_stealth_passive:OnAbilityExecuted(keys)
 		local parent = self:GetParent()
 
 		if keys.unit == parent then
-			self.count = 0
+			self.count = -0.5 --delay for aerial assault
+			if parent:HasModifier("modifier_bonus_to_stealth_invis") then
+                parent:RemoveModifierByName("modifier_bonus_to_stealth_invis")
+            end
 		end
 	end
 end

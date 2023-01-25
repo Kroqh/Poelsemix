@@ -82,9 +82,9 @@ function modifier_flyby_attack:OnAttackStart( params )
 	----------------------------------------------------
 	--    Determins damage bonus based on distance    --
 	----------------------------------------------------
-	min_damage = self.min_damage_bonus - 1
-	max_damage = self.max_damage_bonus - 1
-	attackRange = params.attacker:GetBaseAttackRange()
+	min_damage = self.min_damage_bonus
+	max_damage = self.max_damage_bonus
+	attackRange = params.attacker:GetBaseAttackRange() + self:GetAbility():GetSpecialValueFor("attack_range_for_max")
 	dist_bonus = 0
 	if dis < attackRange / 3 then
 		dist_bonus = min_damage
@@ -103,11 +103,22 @@ end
 
 function modifier_flyby_attack:OnAttackLanded( params )
 	if (params.attacker ~= self:GetParent()) then return end 
+	local particle_blood = "particles/econ/items/void_spirit/void_spirit_immortal_2021/void_spirit_immortal_2021_astral_step_dmg_blood.vpcf"
+    local particle_blood_fx = ParticleManager:CreateParticle(particle_blood, PATTACH_ABSORIGIN_FOLLOW, params.target)
+    ParticleManager:SetParticleControl(particle_blood_fx, 0, params.target:GetAbsOrigin())
+    ParticleManager:ReleaseParticleIndex(particle_blood_fx)
+	local damage = params.damage * damage_bonus
 
-	if damage_bonus >= 0 then
-		ApplyDamage({ victim = params.target, attacker = params.attacker, damage = params.damage * damage_bonus, damage_type = DAMAGE_TYPE_PURE  })
-	else
-		params.target:Heal((-damage_bonus) * params.damage, params.target)
-	end
+	local damageTable = {
+			victim = params.target,
+            damage = damage,
+            damage_type = DAMAGE_TYPE_PHYSICAL,
+            attacker = params.attacker,
+            ability = self:GetAbility()
+        }
+        ApplyDamage(damageTable)
+
+	self:GetParent():RemoveModifierByName("modifier_flyby_attack")
+	
 end
 --------------------------------------------------------------------------------

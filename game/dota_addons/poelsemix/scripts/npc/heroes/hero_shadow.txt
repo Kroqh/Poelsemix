@@ -2,8 +2,9 @@
 	"shadow"
 	{
 		"override_hero"				"npc_dota_hero_riki"			// Hero to override
-		"DisableWearables" "0"
+		"DisableWearables" "1"
 		"ModelScale" "1.0"
+		"model" "models/shadow/shadow.vmdl"
 		
 		"Ability1" "stealthy"				
 		"Ability2" "slippery_motherfucker"

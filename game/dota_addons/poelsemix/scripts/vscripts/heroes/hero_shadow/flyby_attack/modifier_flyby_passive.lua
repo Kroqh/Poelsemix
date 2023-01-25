@@ -30,9 +30,8 @@ function modifier_flyby_passive:OnAttackStart(keys)
 		if keys.attacker == parent then
 			
             if parent:HasModifier("modifier_flyby_attack") then
-                self.count = 0
-                parent:RemoveModifierByName("modifier_flyby_attack")
-            end
+				count = 0
+			end
 		end
 	end
 end
@@ -42,7 +41,9 @@ function modifier_flyby_passive:OnAbilityExecuted(keys)
 		local parent = self:GetParent()
 
 		if keys.unit == parent then
-			self.count = 0
+			self.count = 0 --Ddunno what this does
+
+			
 		end
 	end
 end

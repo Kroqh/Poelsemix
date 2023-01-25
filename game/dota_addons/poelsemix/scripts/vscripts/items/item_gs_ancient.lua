@@ -8,35 +8,37 @@ function item_gs_ancient:GetIntrinsicModifierName()
 end
 
 function item_gs_ancient:OnSpellStart()
-    local caster = self:GetCaster()
-    local ability = self
-	local target = self:GetCursorTarget()
-    local sound_cast = "godsword_slash"    
-	local particle_slash = "particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_counter_slash.vpcf"
-    local modifier_mark = "modifier_item_gs_ancient_mark"
+    if IsServer() then
+        local caster = self:GetCaster()
+        local ability = self
+        local target = self:GetCursorTarget()
+        local sound_cast = "godsword_slash"    
+        local particle_slash = "particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_counter_slash.vpcf"
+        local modifier_mark = "modifier_item_gs_ancient_mark"
 
-    -- Ability specials
-    local mark_duration = ability:GetSpecialValueFor("mark_duration")
+        -- Ability specials
+        local mark_duration = ability:GetSpecialValueFor("mark_duration")
 
-    EmitSoundOn(sound_cast, target)
+        EmitSoundOn(sound_cast, target)
 
 
-    local particle_slash_fx = ParticleManager:CreateParticle(particle_slash, PATTACH_ABSORIGIN_FOLLOW, target)
-	ParticleManager:SetParticleControl(particle_slash_fx, 0, target:GetAbsOrigin())
-	ParticleManager:ReleaseParticleIndex(particle_slash_fx)
+        local particle_slash_fx = ParticleManager:CreateParticle(particle_slash, PATTACH_ABSORIGIN_FOLLOW, target)
+        ParticleManager:SetParticleControl(particle_slash_fx, 0, target:GetAbsOrigin())
+        ParticleManager:ReleaseParticleIndex(particle_slash_fx)
 
-    local damageTable = {
-		victim = target,
-		attacker = self:GetCaster(),
-		damage = self:GetSpecialValueFor("active_damage"),
-		damage_type = DAMAGE_TYPE_PHYSICAL,
-		ability = self
-	}
+        local damageTable = {
+            victim = target,
+            attacker = self:GetCaster(),
+            damage = self:GetSpecialValueFor("active_damage"),
+            damage_type = DAMAGE_TYPE_PHYSICAL,
+            ability = self
+        }
 
-    ApplyDamage(damageTable)
+        ApplyDamage(damageTable)
 
-    if target:IsAlive() then
-        target:AddNewModifier(caster, ability, modifier_mark, {duration = mark_duration})
+        if target:IsAlive() then
+            target:AddNewModifier(caster, ability, modifier_mark, {duration = mark_duration})
+        end
     end
 
 end

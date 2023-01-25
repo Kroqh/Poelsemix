@@ -1701,7 +1701,13 @@
 		"DOTA_Tooltip_ability_item_gs_zamorak_Description"                                "<h1>Active: Ice Cleave</h1> Deal %active_damage% physical damage and freeze the target for %freeze_dur%s"
 		"DOTA_Tooltip_ability_item_gs_zamorak_damage"                                     "DAMAGE:"
 
-
+//Ancient
+		"DOTA_Tooltip_ability_item_gs_ancient"                                            "Ancient Godsword"
+		"DOTA_Tooltip_ability_item_gs_ancient_Description"                                "<h1>Active: Blood Sacrifice</h1> Deal %active_damage% physical damage and mark the enemy for sacrifce, if the marked enemy does not move %dist_to_move% units within %mark_duration%s, they take an additional %bonus_magic_damage% magical damage and you heal for %bonus_self_heal%"
+		"DOTA_Tooltip_ability_item_gs_ancient_damage"                                     "DAMAGE:"
+		"DOTA_Tooltip_ability_item_gs_ancient_int"                                        "INT:"
+		"DOTA_Tooltip_modifier_gs_ancient_mark"                                         	"Marked for sacrifice."
+		"DOTA_Tooltip_modifier_gs_zamorak_freeze_Description"                             "You better get your move on!"
 
 
 //=================================================================================================================

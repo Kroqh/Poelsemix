@@ -13,6 +13,11 @@
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
+	"precache"
+	{
+	"particle" "particles/econ/items/void_spirit/void_spirit_immortal_2021/void_spirit_immortal_2021_astral_step_dmg_blood.vpcf"
+	}	
+
 		"AbilitySpecial"
 		{
 			"01"
@@ -20,7 +25,7 @@
 				// dummy variables for display purposes only
 				// calculated as "min_damage_bonus" + 1
 				"var_type"					"FIELD_FLOAT"
-				"min_damage_bonus_dummy"	"0.00 0.25 0.30 0.35 0.40"
+				"min_damage_bonus_dummy"	"0.20 0.30 0.40 0.50 0.60"
 			}
 			"02"
 			{
@@ -32,7 +37,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"min_damage_bonus"			"0.00 0.25 0.30 0.35 0.40"
+				"min_damage_bonus"			"0.20 0.30 0.40 0.50 0.60"
 				"LinkedSpecialBonus"		"special_bonus_shadow_3"
 			}
 			"04"
