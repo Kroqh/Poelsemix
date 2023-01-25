@@ -3,6 +3,7 @@ LinkLuaModifier( "modifier_bonus_to_stealth_invis", "heroes/hero_shadow/bonus_to
 
 function modifier_bonus_to_stealth_passive:IsPurgeable() return false end
 function modifier_bonus_to_stealth_passive:IsHidden() return true end
+function modifier_bonus_to_stealth_passive:IsPassive() return true end
 
 function modifier_bonus_to_stealth_passive:OnCreated()
 	print("passive created")

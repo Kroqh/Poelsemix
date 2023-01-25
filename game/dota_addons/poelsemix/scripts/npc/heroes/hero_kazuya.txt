@@ -1,0 +1,30 @@
+//"Kazuya" ONHOLD UNTIL ACTUAL MODEL FOUND OR MADE
+//{
+	// HERO: Tusk
+	//"override_hero"	"npc_dota_hero_tusk"			// Hero to override
+	//"model"	"models/kazuya/kazuya.vmdl"
+	//"ModelScale"	"1"
+	//"DisableWearables" "1"
+	
+	//"Ability1" "kaz_electric_wind_god_fist" //https://tekken.fandom.com/wiki/Electric_Wind_God_Fist				
+	//"Ability2" "kaz_reverse_neck_throw" //https://tekken.fandom.com/wiki/Reverse_Neck_Throw
+	//"Ability3" "kaz_spinning_demon" //https://tekken.fandom.com/wiki/Spinning_Demon_(Kazuya_Mishima)
+	//"Ability5" "kaz_rage"
+	//"Ability6" "kaz_inferno" //https://tekken.fandom.com/wiki/Inferno_(move)
+	//"AttributeBaseStrength"		"25"
+	//"AttributeIntelligenceGain"	"0.6"
+	//"Ability10"		"special_bonus_movement_speed_20"
+	//"Ability11"		"special_bonus_strength_20"
+	
+	//"Ability12"		"special_bonus_attack_damage_40"
+	//"Ability13"		"special_bonus_spell_amplify_20"
+	
+	//"Ability14"		"special_bonus_all_stats_20"
+	//"Ability15"		"special_bonus_spell_amplify_20"
+	
+	//"Ability16"		"special_bonus_armor_20"
+	//"Ability17"		"special_bonus_lifesteal_10"
+                 
+	//"MovementSpeed"               "300"
+	//"StatusHealth"                "470"
+//}
