@@ -146,7 +146,46 @@ function modifier_ask_for_help:GetModifierBonusStats_Strength()
     return self.total_stats
 end
 
+jul_pa_vesterbro = jul_pa_vesterbro or class({})
 
+function jul_pa_vesterbro:OnSpellStart()
+    if not IsServer() then return end
+    local caster = self:GetCaster()
+    local damage = self:GetSpecialValueFor("damage")
+    local damage_type = self:GetAbilityDamageType()
+    local tpdelay = self:GetSpecialValueFor("tpdelay")
+    local caster_pos = caster:GetAbsOrigin()
+    local damage_table = {
+        victim = nil,
+        attacker = caster,
+        damage = damage,
+        damage_type = damage_type
+    }
+
+    local radius = FIND_UNITS_EVERYWHERE
+    local enemies = FindUnitsInRadius(caster:GetTeamNumber(), caster_pos, nil, radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+
+    -- teleport to each enemy
+    for i, enemy in pairs(enemies) do
+        Timers:CreateTimer({
+            endTime = i * tpdelay,
+            callback = function()
+                FindClearSpaceForUnit(caster, enemy:GetAbsOrigin(), true)
+                damage_table.victim = enemy
+                ApplyDamage(damage_table)
+                -- todo: sound effect
+            end
+        })
+    end
+
+    -- go back to original position
+    Timers:CreateTimer({
+        endTime = #enemies * tpdelay + tpdelay,
+        callback = function()
+            FindClearSpaceForUnit(caster, caster_pos, true)
+        end
+    })
+end
 
 
 
