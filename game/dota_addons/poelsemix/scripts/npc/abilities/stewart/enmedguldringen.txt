@@ -10,7 +10,7 @@
     "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 
 	"AbilityTextureName"			"ap_shell"
-	"AbilityCooldown"				"17 15 13 11"
+	"AbilityCooldown"				"19 18 17 16"
 	"AbilityManaCost"				"105 115 125 135"
 	"AbilityCastRange"				"150"
 	"AbilityCastPoint"				"0.6"
@@ -22,7 +22,7 @@
 	    "01"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration" "7 8 9 10"
+			"duration" "1 1.25 1.5 1.75"
 		}
 		"02"
 		{

@@ -4,7 +4,7 @@ sonny_boy = class({})
 
 function sonny_boy:OnSpellStart()
     if not IsServer() then return end
-    -- Todo: Add sound effect
+    self:EmitSound("stewart_sonnyboy")
     local caster = self:GetCaster()
     local duration = self:GetSpecialValueFor("duration")
     caster:AddNewModifier(caster, self, "modifier_sonny_boy", {duration = duration})
@@ -39,7 +39,6 @@ function modifier_sonny_boy:OnAttackLanded(keys)
     local chance = self:GetAbility():GetSpecialValueFor("bashchance")
     local bash_duration = self:GetAbility():GetSpecialValueFor("bashduration")
     if RollPseudoRandom(chance, self) then
-        -- Todo: sound effect
         local target = keys.target
         local duration = self:GetAbility():GetSpecialValueFor("bashduration")
         target:AddNewModifier(self:GetCaster(), self:GetAbility(), "modifier_stun", {duration = bash_duration})
@@ -173,7 +172,7 @@ function jul_pa_vesterbro:OnSpellStart()
                 FindClearSpaceForUnit(caster, enemy:GetAbsOrigin(), true)
                 damage_table.victim = enemy
                 ApplyDamage(damage_table)
-                -- todo: sound effect
+                self:EmitSound("stewart_god_jul")
             end
         })
     end
