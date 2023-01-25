@@ -1,0 +1,47 @@
+"item_hilt_ancient"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "hilt_ancient"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"2000"
+  	"ID"						"3033"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"int;godsword"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"Hilt"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"int"					"20"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_hilt_ancient"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%int"
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+"item_god_shard_three"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "god_shard_three"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"1500"
+  	"ID"						"3031"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;godsword"
+	"ItemQuality"					"component"
+	"ItemAliases"					"godshard3"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage"					"27"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_god_shard_three"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+			}
+		}
+	}
+}

@@ -40,7 +40,20 @@
 	{
 		"particle"			"particles/units/heroes/hero_jakiro/jakiro_macropyre_firehit.vpcf"
 
-	}	
+	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damagetick"					"80"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"duration"					"5"
+		}	
+	}
 
 		"OnSpellStart"
 	{
@@ -48,7 +61,7 @@
             {
                 "ModifierName"  "modifier_tsignite"
                 "Target"        "TARGET"
-                "Duration"      "5"
+                "Duration"      "%duration"
             }
 			"FireSound"
 		{
@@ -75,7 +88,7 @@
                     {
                         "Target"    "TARGET"
                         "Type"      "DAMAGE_TYPE_PURE"
-                        "Damage"    "100"
+                        "Damage"    "%damagetick"
                     }
 				
 						"FireEffect"

@@ -66,10 +66,14 @@
 		"item"		"item_claymore"				
 		"item"		"item_javelin"
 		"item"		"item_mithril_hammer"
-
 		"item"		"item_mensa_iq"
 		"item"		"item_hummel_shirt"
-		"item"		"item_hjemmevaernet"	
+		"item"		"item_hjemmevaernet"
+		"item"		"item_gs_arma"
+		"item"		"item_gs_sara"
+		"item"		"item_gs_bandos"
+		"item"		"item_gs_zamorak"
+		"item"		"item_gs_ancient"			
 	}
 			
 	"misc"

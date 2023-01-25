@@ -1,0 +1,405 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc32:version{c5dcef98-b629-46ab-88e3-a17c005c935e} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/shadow/shadow.vmat"
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = "Main"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -22.367367, -14.424709, -18.0849 ]
+								hitbox_maxs = [ 23.382038, 25.283779, 16.992111 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "toprightarm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.883256, -7.035581, -9.646343 ]
+								hitbox_maxs = [ 0.679645, 2.214732, 3.633259 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "toplarm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.925699, -7.053029, -11.146034 ]
+								hitbox_maxs = [ 12.59753, 10.430661, 2.928879 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "toprleg"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.841312, -7.793731, -11.622602 ]
+								hitbox_maxs = [ 0.512045, 0.218545, 4.115181 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "toplleg"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.051644, -7.90496, -8.00428 ]
+								hitbox_maxs = [ 5.096527, 0.017182, 4.008934 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "bottomrarm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.137638, -12.188506, -5.516533 ]
+								hitbox_maxs = [ 0.071804, 3.479791, 2.759853 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "bottomlarm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.083454, -11.989048, -5.231541 ]
+								hitbox_maxs = [ 6.423342, 2.581638, 2.91061 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "bottomrleg"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.091477, -3.141801, -9.501995 ]
+								hitbox_maxs = [ 3.535427, 5.200138, 1.01226 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "bottomlleg"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.921438, -4.166011, -7.869293 ]
+								hitbox_maxs = [ 5.939073, 3.697128, 3.81613 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "tail"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.41104, -5.064832, -1.666218 ]
+								hitbox_maxs = [ 7.549357, 8.878403, 5.316441 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -25.034702, -32.365189, -25.142349 ]
+								hitbox_maxs = [ 25.915241, 38.92939, 41.0103 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "righthand"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.042519, -4.23418, -4.051117 ]
+								hitbox_maxs = [ 3.988216, 10.19874, 6.454037 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "lefthand"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.1031, -4.424495, -4.064659 ]
+								hitbox_maxs = [ 5.927635, 10.008425, 6.440495 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "rightfoot"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -8.674306, -15.817808, -6.19587 ]
+								hitbox_maxs = [ 6.42748, 10.206419, 12.321411 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "leftfoot"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.920881, -15.991295, -6.793156 ]
+								hitbox_maxs = [ 7.180902, 10.032934, 12.575342 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "tailtip"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.873488, 0.598333, -2.187313 ]
+								hitbox_maxs = [ 4.075297, 9.904255, 2.556015 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "shadow"
+						filename = "models/shadow/shadow.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_origin"
+						parent_bone = "Main"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Main"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "righthand"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "lefthand"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "shadow_idle"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/shadow/shadow_anim.fbx"
+						import_bone_scales = false
+						start_frame = 1
+						end_frame = 28
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "shadow_attack1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/shadow/shadow_anim.fbx"
+						import_bone_scales = false
+						start_frame = 207
+						end_frame = 239
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "shadow_attack2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/shadow/shadow_anim.fbx"
+						import_bone_scales = false
+						start_frame = 240
+						end_frame = 280
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "shadow_unused"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/shadow/shadow_anim.fbx"
+						import_bone_scales = false
+						start_frame = 280
+						end_frame = 324
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "shadow_walk"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/shadow/shadow_anim.fbx"
+						import_bone_scales = false
+						start_frame = 143
+						end_frame = 170
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "shadow_ult"
+						activity_name = "ACT_DOTA_CAST_ABILITY_4"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/shadow/shadow_anim.fbx"
+						import_bone_scales = false
+						start_frame = 183
+						end_frame = 199
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "shadow_death"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/shadow/shadow_anim.fbx"
+						import_bone_scales = false
+						start_frame = 337
+						end_frame = 365
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+"""
+	}
+}

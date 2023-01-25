@@ -1,0 +1,116 @@
+"item_gs_bandos"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "gs_bandos"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  	"ItemCost"					"5000"
+  	"ID"						"3040"
+
+	"AbilityCastRange"        "300"
+	"AbilityCastPoint"        "0.0"
+	"AbilityCooldown"       "30.0"
+	"FightRecapLevel"				"2"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;godsword;str"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"bgs"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage"					"40"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"str"						"20"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"armor_reduction"				"-40"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"active_damage"					"500"
+		}
+		"05"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"reduction_duration"				"8"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_gs_bandos"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%str"
+			}
+		}
+		"modifier_gs_bandos_armor_reduction"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+			"Duration" "%reduction_duration"
+			"TextureName"        "gs_bandos"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%armor_reduction"
+			}
+		}
+	}
+	"OnSpellStart"
+	{
+		"FireEffect"
+					{
+					"EffectName" 	"particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_counter_slash.vpcf"
+					"EffectAttachType" "follow_origin"
+					"Target"	"TARGET"
+
+					}
+		"Damage"
+                    {
+                        "Target"    "TARGET"
+                        "Type"      "DAMAGE_TYPE_PHYSICAL"
+                        "Damage"    "%active_damage"
+                    }
+		"ApplyModifier"
+				{
+					"ModifierName"	"modifier_gs_bandos_armor_reduction"
+					"Target" 		"TARGET"
+				}
+		
+
+		"FireSound"
+					{
+					"EffectName" "godsword_slash"
+					"Target" "TARGET"
+					}
+	}
+}

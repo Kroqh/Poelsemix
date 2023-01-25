@@ -1,0 +1,30 @@
+//=================================================================================================================
+	// Ability: Shadow's +30 to stealth
+	//=================================================================================================================
+	"stealthy"
+	{
+        "BaseClass"					"ability_lua"
+        "ScriptFile"				"heroes/hero_shadow/bonus_to_stealth/bonus_to_stealth.lua"
+        "AbilityTextureName"		"shadow_fade"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_delay"					"4 3 2 1"
+				"LinkedSpecialBonus"		"Special_bonus_shadow_5"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_speed"			"20 40 60 80"
+			}
+		}
+	}

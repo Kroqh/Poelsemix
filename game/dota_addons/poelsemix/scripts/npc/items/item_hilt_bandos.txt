@@ -1,0 +1,47 @@
+"item_hilt_bandos"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "hilt_bandos"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"2000"
+  	"ID"						"3034"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"str;godsword"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"Hilt"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"str"					"20"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_hilt_bandos"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%str"
+			}
+		}
+	}
+}

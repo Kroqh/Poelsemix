@@ -1,0 +1,79 @@
+"item_gs_ancient"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_lua"
+  	"AbilityTextureName"        "gs_ancient"
+	"ScriptFile"					"items/item_gs_ancient.lua"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  	"ItemCost"					"5000"
+  	"ID"						"3042"
+
+	"AbilityCastRange"        "300"
+	"AbilityCastPoint"        "0.0"
+	"AbilityCooldown"       "30.0"
+	"FightRecapLevel"				"2"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;godsword;int"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"ags"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage"					"80"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"mark_duration"						"5"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"active_damage"						"500"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"bonus_magic_damage"						"500"
+		}
+		"05"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"int"						"20"
+		}
+		"06"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"bonus_self_heal"						"250"
+		}
+		"07"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"dist_to_move"						"700"
+		}
+	}
+
+	"precache"
+	{
+		"particle" "particles/status_fx/status_effect_life_stealer_rage.vpcf"
+		"particle" "particles/econ/items/riki/riki_immortal_ti6/riki_immortal_ti6_blinkstrike_r_backstab_hit_blood.vpcf"
+		"particle" "particles/econ/items/templar_assassin/ta_2022_immortal/ta_2022_immortal_trap_gold_ring_inner_start.vpcf"
+	}
+	
+}

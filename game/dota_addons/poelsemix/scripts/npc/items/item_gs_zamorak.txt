@@ -1,0 +1,112 @@
+"item_gs_zamorak"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "gs_zamorak"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  	"ItemCost"					"5000"
+  	"ID"						"3041"
+
+	"AbilityCastRange"        "300"
+	"AbilityCastPoint"        "0.0"
+	"AbilityCooldown"       "30.0"
+	"FightRecapLevel"				"2"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;godsword"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"zgs"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage"					"80"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"freeze_dur"						"3"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"active_damage"						"500"
+		}
+	}
+
+	"precache"
+	{
+		"particle" "particles/generic_gameplay/generic_frozen.vpcf"
+	}
+	
+	"Modifiers"
+	{
+		"modifier_gs_zamorak"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%str"
+			}
+		}
+		"modifier_gs_zamorak_freeze"
+		{
+			"Passive"			"0"
+			"IsHidden"			"0"
+			"IsDebuff"			"1"
+			"Duration" "%freeze_dur"
+			"TextureName"        "gs_zamorak"
+			"EffectName"					"particles/generic_gameplay/generic_frozen.vpcf"
+			"States"
+			{
+				"MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"
+			}
+		}
+	}
+	"OnSpellStart"
+	{
+		"FireEffect"
+					{
+					"EffectName" 	"particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_counter_slash.vpcf"
+					"EffectAttachType" "follow_origin"
+					"Target"	"TARGET"
+
+					}
+		"Damage"
+                    {
+                        "Target"    "TARGET"
+                        "Type"      "DAMAGE_TYPE_PHYSICAL"
+                        "Damage"    "%active_damage"
+                    }
+		"ApplyModifier"
+				{
+					"ModifierName"	"modifier_gs_zamorak_freeze"
+					"Target" 		"TARGET"
+				}
+		
+
+		"FireSound"
+					{
+					"EffectName" "godsword_slash"
+					"Target" "TARGET"
+					}
+	}
+}

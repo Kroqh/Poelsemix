@@ -7,7 +7,7 @@
 *.vagrp_c
 *.vmesh_c
 # ignore all compiled files
-*.*_c
+# *.*_c
 
 # ignore all addons everything except poelsemix
 game/dota_addons/*
