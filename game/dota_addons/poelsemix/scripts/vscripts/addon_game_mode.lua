@@ -285,6 +285,14 @@ function COverthrowGameMode:SetUpFountains()
 	LinkLuaModifier( "modifier_fountain_aura_lua", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
 
+	--PRINTS A LIST OF ALL WEARABLES AND THEIR IDS IN THE CONSOLE
+	--local items = LoadKeyValues("scripts/items/items_game.txt")['items']
+    --local modelmap = {}
+    --for k,v in pairs(items) do
+		--print(v.name)
+		--print(k)
+	--end
+
 	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
 	for _,fountainEnt in pairs( fountainEntities ) do
 		--print("fountain unit " .. tostring( fountainEnt ) )
