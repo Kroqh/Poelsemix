@@ -309,6 +309,11 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("guerrilla_warfare")
 		ability:SetLevel(1)
 	end
+
+	if hero:GetUnitName() == "npc_dota_hero_slardar" then
+		local ability = hero:FindAbilityByName("move_only")
+		ability:SetLevel(1)
+	end
 end
 
 
