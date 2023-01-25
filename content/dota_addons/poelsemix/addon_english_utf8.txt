@@ -394,7 +394,11 @@
 
 
 		"DOTA_Tooltip_ability_aerial_assault"                                               "Aerial Assault"
-		"DOTA_Tooltip_ability_aerial_assault_Description"                                   "Doesnt work rn"
+		"DOTA_Tooltip_ability_aerial_assault_Description"                                   "Shadow slashes back and forth, dealing damage to enemies he comes into contact with"
+		
+		"DOTA_Tooltip_ability_aerial_assault_damage_per_slash"                            "DAMAGE PER SLASH:"
+		"DOTA_Tooltip_ability_aerial_assault_slash_speed"                                 "SPEED:"
+		"DOTA_Tooltip_ability_aerial_assault_bounces"                                     "Slashes:"
 
 		"DOTA_Tooltip_ability_stealthy"                                                   "Stealthy"
 		"DOTA_Tooltip_ability_stealthy_Description"                                       "Shadow will fade into the shadows"
@@ -422,7 +426,7 @@
 		"DOTA_Tooltip_ability_flyby_attack_Description"                                   "Shadow will teleport behind his target for his attack, dealing extra damage based on distance teleported"
 		"DOTA_Tooltip_ability_flyby_attack_min_damage_bonus"                              "MIN DAMAGE BONUS MULTIPLIER:"
 		"DOTA_Tooltip_ability_flyby_attack_max_damage_bonus"                              "MAX DAMAGE BONUS MULTIPLIER:"
-		"DOTA_Tooltip_ability_flyby_attack_attack_range_for_max"                          "ATTACK RANGE FOR MAX:"
+		"DOTA_Tooltip_ability_flyby_attack_attack_range_for_max"                          "BONUS RANGE:"
 		"DOTA_Tooltip_ability_flyby_attack_teleport_cooldown"                          "TELEPORT COOLDOWN:"
 
 		"DOTA_Tooltip_modifier_flyby_attack"        					"*Teleports behind you*"
@@ -431,6 +435,10 @@
 "DOTA_Tooltip_ability_slippery_motherfucker"                                      "Slippery Motherfucker"
 		"DOTA_Tooltip_ability_slippery_motherfucker_Description"                          "Shadow will casually dodge attacks by accident while looking cool"
 		"DOTA_Tooltip_ability_slippery_motherfucker_bonus_evasion"                        "BONUS EVASION:"
+
+
+
+
 //=================================================================================================================
 // Brian
 //=================================================================================================================
@@ -1197,7 +1205,7 @@
 		"DOTA_Tooltip_ability_social_presence"                                            "Social Presence"
 		"DOTA_Tooltip_ability_social_presence_Description"                                "So autistic you hide yourself from people. When you talk to people (men), they lose all their armor because ur so GAY"
 		"DOTA_Tooltip_ability_social_presence_bonus_damage"                               "BONUS DAMAGE:"
-		"DOTA_Tooltip_ability_social_presence_bonus_armor"                                "BONUS ARMOR:"
+		"DOTA_Tooltip_ability_social_presence_bonus_armor"                                "ARMOR REDUCTION:"
 		"DOTA_Tooltip_ability_social_presence_armor_reduction_duration_tooltip"           "DURATION:"
 		//"DOTA_Tooltip_ability_social_presence_projectile_speed"                           ""
 		"DOTA_Tooltip_ability_social_presence_lore" 										"The tooltips here have been writen by the self-projecting Steven"
@@ -1509,7 +1517,7 @@
 //=================================================================================================================
 
 		"DOTA_Tooltip_ability_item_flaeskesteg"                                           "Flæskesteg"
-		"DOTA_Tooltip_ability_item_flaeskesteg_Description"                               "<h1>Passive: BIG ASS FLAESKESTEG</h1> Regnereate %health_regen_percent_per_second%%% of the bearer's max health every second. If damage is taken from a hero, this ability is disabled for %cooldown_tooltip% seconds."
+		"DOTA_Tooltip_ability_item_flaeskesteg_Description"                               "<h1>Passive: BIG ASS FLAESKESTEG</h1> Regenerate %health_regen_percent_per_second%%% of the bearer's max health every second. If damage is taken from a hero, this ability is disabled for %cooldown_tooltip% seconds."
 		"DOTA_Tooltip_ability_item_flaeskesteg_str"                                       "+$str"
 		"DOTA_Tooltip_ability_item_flaeskesteg_hp"                                        "+$health"
 //		"DOTA_Tooltip_ability_item_flaeskesteg_health_regen_percent_per_second"           "HEALTH REGEN PERCENT PER SECOND:"

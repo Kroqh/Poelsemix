@@ -1843,5 +1843,30 @@
 		"DOTA_Tooltip_modifier_sonny_boy_Description"						"Showing them who's the boss."
 		"DOTA_Tooltip_modifier_ask_for_help"                                          "Asking for hjælp"
 		"DOTA_Tooltip_modifier_ask_for_help_Description"                              "Stewart is asking for hjælp and gaining styrke."
+
+//=================================================================================================================
+// Mette
+//=================================================================================================================
+		"Mette"                                                                           "Mette"
+		"npc_dota_hero_hoodwink"                                                          "Mette"		
+
+		"unit_mink_1"                                                                     "Common Mink"
+		"unit_mink_2"                                                                     "Uncommon Mink"
+		"unit_mink_3"                                                                     "Rare Mink"
+		"unit_mink_4"                                                                     "Epic Mink"
+		"unit_mink_5"                                                                     "Legendary"
+
+		"DOTA_Tooltip_ability_mette_mink"                                                 "Let loose the mink!"
+		"DOTA_Tooltip_ability_mette_mink_Description"                                     "Mette occasionally summons mink, the mink are uncontrollable, but will freely attack nearby enemies.\n Size of the mink increases with rarity, the bigger the better! \n Interval decreases with more intellect."
+		"DOTA_Tooltip_ability_mette_mink_common"                                          "%COMMON:"
+		"DOTA_Tooltip_ability_mette_mink_uncommon"                                        "%UNCOMMON:"
+		"DOTA_Tooltip_ability_mette_mink_rare"                                            "%RARE:"
+		"DOTA_Tooltip_ability_mette_mink_epic"                                            "%EPIC:"
+		"DOTA_Tooltip_ability_mette_mink_legendary"                                       "%LEGENDARY:"
+		"DOTA_Tooltip_ability_mette_mink_base_interval"                                   "BASE INTERVAL:"
+		"DOTA_Tooltip_ability_mette_mink_lifetime"                                        "LIFETIME:"
+
+
+
 	}
 }
