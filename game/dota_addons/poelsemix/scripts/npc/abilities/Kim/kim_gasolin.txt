@@ -42,7 +42,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"scripts/vscripts/heroes/kim/gasolin.lua"
+					"ScriptFile"	"scripts/vscripts/heroes/hero_kim/gasolin.lua"
 					"Function"		"HunterInTheNight"
 					"modifier"		"modifier_hunter_in_the_night_buff_datadriven"
 				}

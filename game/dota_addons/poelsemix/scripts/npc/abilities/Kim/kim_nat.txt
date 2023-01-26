@@ -75,7 +75,7 @@
 
 		"RunScript"
 		{
-			"ScriptFile"	"scripts/vscripts/heroes/kim/darkness.lua"
+			"ScriptFile"	"scripts/vscripts/heroes/hero_kim/darkness.lua"
 			"Function"		"Darkness"
 		}
 	}
@@ -108,7 +108,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"scripts/vscripts/heroes/kim/darkness.lua"
+					"ScriptFile"	"scripts/vscripts/heroes/hero_kim/darkness.lua"
 					"Function"		"ReduceVision"
 				}
 			}
@@ -117,7 +117,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"scripts/vscripts/heroes/kim/darkness.lua"
+					"ScriptFile"	"scripts/vscripts/heroes/hero_kim/darkness.lua"
 					"Function"		"RevertVision"
 				}
 			}

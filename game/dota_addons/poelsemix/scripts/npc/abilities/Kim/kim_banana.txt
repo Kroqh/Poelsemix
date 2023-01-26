@@ -97,7 +97,7 @@
 
 		"RunScript"
 		{
-			"ScriptFile"	"scripts/vscripts/heroes/kim/banana.lua"
+			"ScriptFile"	"scripts/vscripts/heroes/hero_kim/banana.lua"
 			"Function"		"StasisTrapPlant"
 			"Target"		"POINT"
 			"modifier_stasis_trap"	"modifier_stasis_trap_datadriven"
@@ -131,7 +131,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"scripts/vscripts/heroes/kim/banana.lua"
+					"ScriptFile"	"scripts/vscripts/heroes/hero_kim/banana.lua"
 					"Function"		"StasisTrapTracker"
 					"modifier_trigger"	"modifier_stasis_trap_trigger_datadriven"
 				}
@@ -178,7 +178,7 @@
 
 				"RunScript"
 				{
-					"ScriptFile"	"scripts/vscripts/heroes/kim/banana.lua"
+					"ScriptFile"	"scripts/vscripts/heroes/hero_kim/banana.lua"
 					"Function"		"StasisTrapRemove"
 				}
 			}

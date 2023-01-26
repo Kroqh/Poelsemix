@@ -54,7 +54,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.00000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1000.000"  }
+                    "distance_max"      {   "value"     "800.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -80,12 +80,12 @@
                               "value0"        "sounds/kim_stille.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "20.00000"  }
+                    "volume"            {   "value"     "4.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.00000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1500.000"  }
+                    "distance_max"      {   "value"     "1000.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }

@@ -57,7 +57,7 @@
 	{
 		"RunScript"
 		{
-			"ScriptFile"		"scripts/vscripts/heroes/kim/paperclip.lua"
+			"ScriptFile"		"scripts/vscripts/heroes/hero_kim/paperclip.lua"
 			"Function"			"ReflectionCast"
 		}
 	}
@@ -67,7 +67,7 @@
 
 		"RunScript"
 		{
-			"ScriptFile"		"scripts/vscripts/heroes/kim/paperclip.lua"
+			"ScriptFile"		"scripts/vscripts/heroes/hero_kim/paperclip.lua"
 			"Function"			"Reflection"
 		}
 	}

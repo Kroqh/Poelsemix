@@ -8,10 +8,10 @@
 	"AbilityTextureName"			"kim_stille"
 	
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityCooldown"				"16"
+	"AbilityCooldown"				"16 15 14 13"
 	"AbilityManaCost"				"120"
 	"AbilityCastRange"				"0"
-	"AbilityCastPoint"				"1"
+	"AbilityCastPoint"				"´0.1"
 
 	"AbilitySpecial"
 	{
