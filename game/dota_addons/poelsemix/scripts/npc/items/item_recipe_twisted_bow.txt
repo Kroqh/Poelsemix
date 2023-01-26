@@ -1,0 +1,14 @@
+"item_recipe_twisted_bow"
+{
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "recipe"
+  	"Model"						"models/props_gameplay/recipe.mdl"
+  	"ItemCost"					"1500"
+	"ItemShopTags"				""
+	"ItemRecipe"				"1"
+	"ItemResult"				"item_twisted_bow"
+	"ItemRequirements"
+	{
+		"01" "item_gloves;item_hyperstone;item_eagle"
+	}
+}

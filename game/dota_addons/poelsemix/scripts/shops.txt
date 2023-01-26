@@ -73,7 +73,8 @@
 		"item"		"item_gs_sara"
 		"item"		"item_gs_bandos"
 		"item"		"item_gs_zamorak"
-		"item"		"item_gs_ancient"			
+		"item"		"item_gs_ancient"
+		"item"		"item_twisted_bow"			
 	}
 			
 	"misc"

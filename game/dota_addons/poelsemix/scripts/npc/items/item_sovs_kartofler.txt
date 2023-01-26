@@ -31,7 +31,7 @@
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"magic_resist" "25"
+			"magic_resist" "15"
 		}
 	}
 	
@@ -46,7 +46,7 @@
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%armor"
-				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_ITEM_UNIQUE"		"%magic_resist"
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"		"%magic_resist"
 			}
 		}
 	}

@@ -1,22 +1,26 @@
-"item_kartofler"
+"item_twisted_bow"
 {
-	// General
+// General
 	//-------------------------------------------------------------------------------------------------------------
 	
-  	"BaseClass"                 "item_datadriven"
-  	"AbilityTextureName"        "kartofler"
+  	"BaseClass"                 "item_lua"
+  	"AbilityTextureName"        "twisted_bow"
+	"ScriptFile"					"items/item_twisted_bow.lua"
   	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"1050"
-  	"ID"						"2009"
+  	"ItemCost"					"6750"
+  	"ID"						"3043"
+
+	"FightRecapLevel"				"2"
+  	
 	
 	// Stats		
 	//-------------------------------------------------------------------------------------------------------------
 		
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemShopTags"					"str;regen_health;health_pool"
-	"ItemQuality"					"component"
-	"ItemAliases"					"kartofler"
+	"ItemShopTags"					"agi;range;attack_speed;"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"tbow"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
 	// Special	
@@ -26,21 +30,18 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"magic_resist"					"10"
+			"agi"						"25"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"bonus_range"						"150"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"attack_speed"						"100"
 		}
 	}
 	
-	"Modifiers"
-	{
-		"modifier_kartofler"
-		{
-			"Passive"			"1"
-			"IsHidden"			"1"
-			
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"		"%magic_resist"
-			}
-		}
-	}
 }

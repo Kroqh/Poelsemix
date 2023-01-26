@@ -25,7 +25,7 @@ function modifier_mette_rose:OnTakeDamage(keys)
 		
 			local damageTable = {
 				victim			= keys.attacker,
-				damage			= keys.original_damage * (self:GetAbility():GetSpecialValueFor("reflect_percent")/100),
+				damage			= keys.damage * (self:GetAbility():GetSpecialValueFor("reflect_percent")/100),
 				damage_type		= DAMAGE_TYPE_PURE,
 				damage_flags	= DOTA_DAMAGE_FLAG_REFLECTION + DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL + DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION,
 				attacker		= self:GetParent(),
