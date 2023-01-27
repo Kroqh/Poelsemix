@@ -1,0 +1,86 @@
+"item_melee_bag"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3045"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"BaseClass"                     "item_datadriven"
+		// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"          "consumable"
+	"ItemAliases"         ""
+	"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+
+
+		// Stats	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"200"
+		"ItemQuality"					"consumable"
+		"ItemPurchasable"				"1"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"ItemStockMax"					"3"
+		"ItemStockTime"					"60"
+		"ItemInitialCharges"			"1"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		"IsTempestDoubleClonable"		"0"
+		"AbilityTextureName"        "melee_bag"
+		
+	"precache"
+	{
+		"particle"			"particles/items/protectmelee.vpcf"
+
+	}
+	"AbilitySpecial"
+	{
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"duration"					"3"
+		}	
+	}
+
+		"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_melee_bag"
+			"Target" 		"CASTER"
+		}
+		"SpendCharge"
+		{}
+	
+	}
+	"Modifiers"
+	{
+	
+			"modifier_melee_bag"
+			{ 
+				"IsBuff" "1"
+				"Duration"  "%duration"
+				"TextureName" "melee_bag"
+				
+				"OnCreated"
+			{
+				"AttachEffect"	
+				{
+					"EffectName"        "particles/items/protectmelee.vpcf"
+					"EffectAttachType"  "follow_overhead"
+					"Target"            "CASTER"
+				}
+			}
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL" "1"
+				}   
+	
+			}
+	}
+	}
+	

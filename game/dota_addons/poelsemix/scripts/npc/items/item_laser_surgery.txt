@@ -41,6 +41,7 @@
 				"IsPurgable"		"0"
 				"IsBuff"			"1"
 				"AllowIllusionDuplicate"	"0"
+				"TextureName" "eye_laser"
 				
 				"OnCreated"
 				{
@@ -64,6 +65,7 @@
 				"IsHidden"			"1"
 				"Duration"			"0.5"
 				"Priority"			"MODIFIER_PRIORITY_HIGH"
+
 				"States"
 				{
 					"MODIFIER_STATE_INVISIBLE"		"MODIFIER_STATE_VALUE_DISABLED"

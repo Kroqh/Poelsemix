@@ -15,14 +15,11 @@
 		"item"		"item_dust"
 		"item"		"item_ward_observer"
 		"item"		"item_ward_sentry"
-		"item"		"item_actual_butterfly"
-		"item"		"item_crocs"
-		"item"		"item_danish_force_staff"
-		"item"		"item_swedish_force_staff"
-		"item"		"item_kalmar_force_staff"
-		"item"		"item_flaeskesteg_sovs_kartofler"
-		"item"		"item_hike_shox"
-		"item"		"item_grundlov"
+		"item"		"item_magic_bag"
+		"item"		"item_melee_bag"
+		"Item"		"item_laser_surgery"
+		
+		
 
 
 
@@ -74,7 +71,12 @@
 		"item"		"item_gs_bandos"
 		"item"		"item_gs_zamorak"
 		"item"		"item_gs_ancient"
-		"item"		"item_twisted_bow"			
+		"item"		"item_twisted_bow"
+		"item"		"item_actual_butterfly"
+		"item"		"item_crocs"
+		"item"		"item_flaeskesteg_sovs_kartofler"
+		"item"		"item_hike_shox"
+				
 	}
 			
 	"misc"
@@ -89,7 +91,7 @@
 		"item"		"item_gloves"
 		"item"		"item_cloak"
 		"item"		"item_gem"
-		"Item"		"item_laser_surgery"
+		
 		"item"		"item_lifesteal"
 		"item"		"item_ghost"
 		"item"		"item_blink"		
@@ -97,6 +99,10 @@
 		"item"		"item_ring_of_health"
 		"item"		"item_void_stone"
 		"item"		"item_golden_horns"
+		"item"		"item_danish_force_staff"
+		"item"		"item_swedish_force_staff"
+		"item"		"item_kalmar_force_staff"
+		"item"		"item_grundlov"	
 			
 	}	
 	
@@ -264,5 +270,7 @@
 		"item"		"item_eagle"
 		"item"		"item_relic"
 		"item"		"item_greenlandish_guard"
+		"item"          "item_dagon_datadriven"
+		"item"          "item_pocket_gametecher"
 	}	
 }
