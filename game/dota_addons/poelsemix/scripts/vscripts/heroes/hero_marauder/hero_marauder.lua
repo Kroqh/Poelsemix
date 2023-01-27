@@ -34,9 +34,16 @@ LinkLuaModifier("modifier_poe_cyclone", "heroes/hero_marauder/hero_marauder", LU
 LinkLuaModifier("modifier_poe_cyclone_motion", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
 poe_cyclone = poe_cyclone or class({})
 
--- assumes only one
+-- ASSUMES ONLY ONE
+-- IF LEVEL 30 THEN INCREASED AOE + damage
 local function calculateCycloneRadius(caster)
 	local radius = caster:FindAbilityByName("poe_cyclone"):GetSpecialValueFor("radius")
+	
+	if caster:HasTalent("marauder_cyclone_inc_aoe") then
+		local new_range = caster:FindAbilityByName("marauder_cyclone_inc_aoe"):GetSpecialValueFor("radius")
+		print("new_range = " .. new_range)
+		return radius + new_range
+	end
 
 	if caster:HasTalent("conc_effect") then
 		local new_range = caster:FindAbilityByName("conc_effect"):GetSpecialValueFor("radius_reduction")
@@ -44,11 +51,6 @@ local function calculateCycloneRadius(caster)
 		return radius * (1 - new_range)
 	end
 
-	if caster:HasTalent("marauder_cyclone_inc_aoe") then
-		local new_range = caster:FindAbilityByName("marauder_cyclone_inc_aoe"):GetSpecialValueFor("radius")
-		print("new_range = " .. new_range)
-		return radius + new_range
-	end
 
 	return radius
 end
@@ -231,3 +233,122 @@ modifier_poe_cyclone_motion = modifier_poe_cyclone_motion or class({})
 -- 	-- self:GetParent():SetForwardVector(new_angle:Forward())
 -- 	self.forward = self:GetParent():GetForwardVector()
 -- end
+
+--------------------------------------------------------------------------------
+-- LEAP SLAM
+--------------------------------------------------------------------------------
+-- add sound
+-- add particle
+-- add damage -- done
+-- add fortify
+LinkLuaModifier("modifier_leap_slam", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
+leap_slam = leap_slam or class({})
+
+function leap_slam:OnSpellStart() 
+	if not IsServer() then return end
+	local caster = self:GetCaster()
+	local duration = self:GetSpecialValueFor("leap_duration")
+	caster:AddNewModifier(caster, self, "modifier_leap_slam", {duration = duration})
+end
+
+modifier_leap_slam = modifier_leap_slam or class({})
+
+function modifier_leap_slam:IsMotionController() return true end
+function modifier_leap_slam:GetMotionControllerPriority() return DOTA_MOTION_CONTROLLER_PRIORITY_HIGHEST end
+
+function modifier_leap_slam:CheckState()
+	if not IsServer() then return end
+	local state = {	[MODIFIER_STATE_STUNNED] = true,
+		[MODIFIER_STATE_NO_UNIT_COLLISION] = true, }
+	return state
+end
+
+function modifier_leap_slam:OnCreated()
+	if not IsServer() then return end
+	local caster = self:GetCaster()
+	self.click_location = caster:GetCursorPosition()
+
+	self.max_distance = (self.click_location - caster:GetAbsOrigin()):Length2D()
+	self.direction = (self.click_location - caster:GetAbsOrigin()):Normalized()
+	self.distance_to_move_pr_frame = self.max_distance / self:GetDuration()
+	self.distance_traveled = 0
+	
+	caster:SetForwardVector(self.direction)
+	self:StartIntervalThink(FrameTime())
+end
+
+function modifier_leap_slam:OnIntervalThink()
+	if not IsServer() then return end
+	self:HorizontalMotion(self:GetParent(), FrameTime())
+	self:VerticalMotion(self:GetParent(), FrameTime())
+end
+
+function modifier_leap_slam:HorizontalMotion(me, dt)
+	if not IsServer() then return end
+	local caster = self:GetCaster()
+	local distance = self.distance_to_move_pr_frame * dt
+	local new_pos = caster:GetAbsOrigin() + self.direction * distance
+	caster:SetAbsOrigin(new_pos)
+
+	self.distance_traveled = self.distance_traveled + distance
+	if self.distance_traveled >= self.max_distance then
+		self:Destroy()
+	end
+end
+
+function modifier_leap_slam:VerticalMotion(me, dt)
+	if not IsServer() then return end
+	local caster = self:GetCaster()
+	local distance = self.distance_to_move_pr_frame * dt
+	local height = 0
+	local height_change = 20
+
+	if self.distance_traveled < self.max_distance / 2 then
+		height = height_change
+	else
+		height = (-1 * height_change)
+	end
+
+	local new_pos = caster:GetAbsOrigin() + Vector(0,0,height)
+	caster:SetAbsOrigin(new_pos)
+end
+
+function modifier_leap_slam:OnDestroy()
+	if not IsServer() then return end
+	local caster = self:GetCaster()
+	FindClearSpaceForUnit(caster, self.click_location, true)
+	self:leap_slam_damage(self, self.click_location)
+end
+
+function modifier_leap_slam:leap_slam_damage(self, click_location) 
+	local caster = self:GetCaster()
+	local ability = self:GetAbility()
+
+	local radius = ability:GetSpecialValueFor("radius")
+	local damage = ability:GetSpecialValueFor("damage")
+	local damage_type = ability:GetAbilityDamageType()
+
+
+	local enemies = FindUnitsInRadius(caster:GetTeamNumber(), 
+									  click_location, 
+									  nil, 
+									  radius, 
+									  DOTA_UNIT_TARGET_TEAM_ENEMY, 
+									  DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 
+									  DOTA_UNIT_TARGET_FLAG_NONE, 
+									  FIND_ANY_ORDER, 
+									  false)
+
+	for _, enemy in pairs(enemies) do
+		ApplyDamage({victim = enemy, 
+				attacker = caster, 
+				damage = damage, 
+				damage_type = damage_type,
+				ability = ability
+			})
+	end
+	-- particle
+	-- sound
+end
+
+

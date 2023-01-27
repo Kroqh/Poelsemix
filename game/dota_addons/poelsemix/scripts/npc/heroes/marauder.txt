@@ -6,8 +6,8 @@
 	"ModelScale" "1.0"
 	
 	"Ability1" "poe_cyclone"				
-	"Ability2" "runover"
-	"Ability3" "longlights"
+	"Ability2" "leap_slam"
+	"Ability3" "leap_slam"
 	"Ability4" "move_only"
 	"Ability5" "generic_hidden"
 	"Ability6" "race"
