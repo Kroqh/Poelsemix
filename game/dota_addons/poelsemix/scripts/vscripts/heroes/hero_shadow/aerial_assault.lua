@@ -60,6 +60,11 @@ function aerial_assault:OnSpellStart()
     end
 end
 
+function aerial_assault:GetAOERadius()
+    return self:GetSpecialValueFor("circle_radius")
+end
+
+
 function aerial_assault:OnProjectileThink_ExtraData(location, ExtraData)
     local caster = self:GetCaster()
 
