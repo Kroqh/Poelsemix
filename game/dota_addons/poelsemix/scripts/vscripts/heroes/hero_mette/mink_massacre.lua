@@ -38,7 +38,7 @@ function mink_massacre:OnSpellStart()
 
         countInt = 0
         if (caster:HasTalent("special_bonus_mette_1")) then
-            countInt= (self:GetSpecialValueFor("base_int_mink")+caster:FindAbilityByName("special_bonus_mette_1"):GetSpecialValueFor("value")) * rarityCount
+            countInt= caster:FindAbilityByName("special_bonus_mette_1"):GetSpecialValueFor("value") + (rarityCount * self:GetSpecialValueFor("base_int_mink"))
         else
             countInt = self:GetSpecialValueFor("base_int_mink") * rarityCount
         end

@@ -191,6 +191,7 @@ function COverthrowGameMode:InitGameMode()
 	self.tier2ItemBucket = {}
 	self.tier3ItemBucket = {}
 	self.tier4ItemBucket = {}
+	self.hogriderAlreadyHappened = false
 
 	self.TEAM_KILLS_TO_WIN = 25
 	self.CLOSE_TO_VICTORY_THRESHOLD = 5
@@ -260,10 +261,15 @@ function COverthrowGameMode:InitGameMode()
 	Convars:RegisterCommand( "overthrow_force_gold_drop", function(...) self:ForceSpawnGold() end, "Force gold drop.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_set_timer", function(...) return SetTimer( ... ) end, "Set the timer.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_force_end_game", function(...) return self:EndGame( DOTA_TEAM_GOODGUYS ) end, "Force the game to end.", FCVAR_CHEAT )
+	Convars:RegisterCommand( "poelse_force_hog_rider", function(...) return self:HogRiders( PlayerResource:GetSelectedHeroEntity(0) ) end, "Force spawn hogriders", FCVAR_CHEAT )
+	Convars:RegisterCommand( "poelse_populate_few", function(...) return self:PopulateEnemies(0) end, "Force spawn hogriders", FCVAR_CHEAT )
+	Convars:RegisterCommand( "poelse_populate_mid", function(...) return self:PopulateEnemies(1) end, "Force spawn hogriders", FCVAR_CHEAT )
+	Convars:RegisterCommand( "poelse_populate_max", function(...) return self:PopulateEnemies(2) end, "Force spawn hogriders", FCVAR_CHEAT )
 	Convars:SetInt( "dota_server_side_animation_heroesonly", 0 )
-
 	COverthrowGameMode:SetUpFountains()
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
+
+
 
 	-- Spawning monsters
 	spawncamps = {}
@@ -275,6 +281,49 @@ function COverthrowGameMode:InitGameMode()
 			WaypointName = "camp"..i.."_path_wp1"
 		}
 	end
+end
+
+function COverthrowGameMode:PopulateEnemies(i)
+
+	SendToConsole("dota_create_unit npc_dota_hero_brewmaster enemy")
+	SendToConsole("dota_create_unit npc_dota_hero_riki custom1")
+	SendToConsole("dota_create_unit npc_dota_hero_meepo custom2")
+
+	if i == 0 then return end
+	SendToConsole("dota_create_unit npc_dota_hero_kunkka custom3")
+	SendToConsole("dota_create_unit npc_dota_hero_beastmaster custom4")
+	SendToConsole("dota_create_unit npc_dota_hero_dragon_knight custom5")
+
+	if i == 1 then return end
+
+	SendToConsole("dota_create_unit npc_dota_hero_sven custom6")
+	SendToConsole("dota_create_unit npc_dota_hero_broodmother custom7")
+	SendToConsole("dota_create_unit npc_dota_hero_hoodwink custom8")
+
+end
+
+
+
+function COverthrowGameMode:HogRiders(hero)
+	self.hogriderAlreadyHappened = true
+	dur = 60
+	unit = CreateUnitByName("unit_hog_rider",Vector(-500, 0), true, nil, nil, DOTA_TEAM_NEUTRALS)
+	unit:AddNewModifier(nil, nil, "modifier_kill", { duration = dur } )
+	unit:SetForceAttackTarget(hero)
+
+	unit2 = CreateUnitByName("unit_hog_rider",Vector(0, -500), true, nil, nil, DOTA_TEAM_NEUTRALS)
+	unit2:AddNewModifier(nil, nil, "modifier_kill", { duration = dur } )
+	unit2:SetForceAttackTarget(hero)
+	unit3 = CreateUnitByName("unit_hog_rider",Vector(500, 0), true, nil, nil, DOTA_TEAM_NEUTRALS)
+	unit3:AddNewModifier(nil, nil, "modifier_kill", { duration = dur } )
+	unit3:SetForceAttackTarget(hero)
+	unit4 = CreateUnitByName("unit_hog_rider",Vector(0, 500), true, nil, nil, DOTA_TEAM_NEUTRALS)
+	unit4:AddNewModifier(nil, nil, "modifier_kill", { duration = dur } )
+	unit4:SetForceAttackTarget(hero)
+
+
+	EmitSoundOnLocationWithCaster(Vector(0,0),"hog_rider", hero)
+
 end
 
 ---------------------------------------------------------------------------
@@ -378,6 +427,7 @@ function COverthrowGameMode:UpdateScoreboard()
 	if sortedTeams[1].teamScore == sortedTeams[2].teamScore then
 		self.isGameTied = true
 	else
+		if self.leadingTeamScore >= self.runnerupTeamScore + 10  and self.hogriderAlreadyHappened == false then self:HogRiders(hero) end
 		self.isGameTied = false
 	end
 	local allHeroes = HeroList:GetAllHeroes()

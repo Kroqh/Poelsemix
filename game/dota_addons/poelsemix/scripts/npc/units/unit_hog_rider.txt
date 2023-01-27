@@ -8,9 +8,10 @@
 		"Level"						"20"
 		"IsSummoned"				"0"
 		"IsAncient"					"0"
-		"ModelScale" 				"1"
+		"ModelScale" 				"0.7"
 
-
+		
+		"Ability1"					"hog_bash"	
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"0"		// Physical protection.
@@ -19,11 +20,11 @@
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"100"		// Damage range min.
-		"AttackDamageMax"			"150"		// Damage range max.	
+		"AttackDamageMax"			"125"		// Damage range max.	
 		"AttackRate"				"1"		// Speed of attack.
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
-		"AttackRange"				"100"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"9999"		// Range within a target can be acquired.
+		"AttackRange"				"50"		// Range within a target can be attacked.
 		
 
 		// Bounds
@@ -41,11 +42,11 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"				"450"		// Speed.
+		"MovementSpeed"				"500"		// Speed.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"100"		// Base health.
+		"StatusHealth"				"1000"		// Base health.
 		"StatusHealthRegen"			"1"		// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.		 
@@ -57,9 +58,8 @@
 		"RingRadius"            "15"
 		// Team
 		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_BADGUYS"							// Team name.
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 
 		"Creature"
@@ -67,7 +67,7 @@
 			"AttachWearables"
 			{
 				"Wearable1" { "ItemDef" "4392" }
-				"Wearable2" { "ItemDef" "4614" }
+				//"Wearable2" { "ItemDef" "4614" }
 			}
 			"DisableClumpingBehavior"       "1"
 		}

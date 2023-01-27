@@ -1,13 +1,14 @@
-"choke_datadriven"
+"hog_bash"
 {
 	//General
 	//--------------------------
 	"BaseClass" "ability_datadriven"
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_baseboys/hero_baseboys"
+	"ScriptFile"			"abilities/hog_bash"
 	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
-	"AbilityTextureName" "hej_mathilde"
+	"AbilityTextureName" "hog_rider"
+	"MaxLevel"                      "1"
 	
 	//Casting
 	//--------------------------
@@ -19,7 +20,7 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"chance" "25"
+			"chance" "20"
 		}
 		"02"
 		{

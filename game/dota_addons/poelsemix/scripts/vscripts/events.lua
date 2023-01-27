@@ -135,6 +135,7 @@ function COverthrowGameMode:OnEntityKilled( event )
 		self.allSpawned = true
 		--print("Hero has been killed")
 		--Add extra time if killed by Necro Ult
+		
 		if hero:IsRealHero() == true then
 			if event.entindex_inflictor ~= nil then
 				local inflictor_index = event.entindex_inflictor
@@ -148,7 +149,9 @@ function COverthrowGameMode:OnEntityKilled( event )
 							end
 						end
 					end
+					
 				end
+				
 			end
 		end
 		if hero:IsRealHero() and heroTeam ~= killedTeam then
@@ -190,6 +193,7 @@ function COverthrowGameMode:OnEntityKilled( event )
 		else
 			COverthrowGameMode:SetRespawnTime( killedTeam, killedUnit, extraTime )
 		end
+
 	end
 end
 
@@ -280,7 +284,10 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		ability:SetLevel(1)
 
 	end
-	
+	if hero:GetUnitName() == "unit_hog_rider" then
+		local ability = hero:FindAbilityByName("hog_bash")
+		ability:SetLevel(1)
+	end
 	if hero:GetUnitName() == "npc_dota_hero_pugna" then
 		local ability = hero:FindAbilityByName("bloodseeker_thirst")
 		ability:SetLevel(1)
