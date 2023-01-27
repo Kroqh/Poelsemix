@@ -5,6 +5,7 @@
 	"ScriptFile"			"heroes/hero_mette/mink"
 	"MaxLevel"                  "4"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 
 	//FOR CHANGING STATS OF THE MINK, REFER TO unit_mink 1-5
 	//common+uncommon+rare+epic+legendary percent should always add up 100 percent for the level
@@ -44,6 +45,7 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"base_interval"		"15"
+				"LinkedSpecialBonus" "special_bonus_mette_3"
 			}
 		"07"
 			{
