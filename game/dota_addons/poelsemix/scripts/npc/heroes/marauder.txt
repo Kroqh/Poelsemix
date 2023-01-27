@@ -5,7 +5,7 @@
 	// "model" "models/nissan/nissanmodel.vmdl"
 	"ModelScale" "1.0"
 	
-	"Ability1" "drift"				
+	"Ability1" "poe_cyclone"				
 	"Ability2" "runover"
 	"Ability3" "longlights"
 	"Ability4" "move_only"
@@ -16,8 +16,8 @@
 
 	// "Ability10" "special_bonus_movement_speed_20"
 	// "Ability11" "special_bonus_hp_225"
-	// "Ability12" "special_bonus_intelligence_20"
-	// "Ability13"	"special_bonus_nissan_1"
+	"Ability12" "conc_effect"
+	"Ability13"	"marauder_cyclone_inc_aoe"
 	// "Ability14" "special_bonus_nissan_2"
 	// "Ability15" "special_bonus_nissan_3"
 	// "Ability16" "special_bonus_nissan_4"
