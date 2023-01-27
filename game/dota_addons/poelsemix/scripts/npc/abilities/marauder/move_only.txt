@@ -15,6 +15,7 @@
 	{
 		"particle"  "particles/heroes/marauder/cyclone_particle.vpcf"
 		"particle"  "particles/units/heroes/hero_crystalmaiden/maiden_crystal_nova.vpcf"
+		"particle"  "particles/econ/items/earthshaker/earthshaker_totem_ti6/earthshaker_totem_ti6_leap_v2_impact_dust.vpcf"
 		// "particle"	"particles/heroes/shimakaze/shimakaze_run_water_ground.vpcf"
 		// "particle" 	"particles/heroes/shimakaze/shimakaze_run_water_splash.vpcf"
 		// "particle" 	"particles/heroes/shimakaze/shimakaze_torpedo.vpcf"
@@ -27,5 +28,6 @@
 		//sound
 		// "soundfile" "soundevents/shimakaze_soundevent.vsndevts"
 		"soundfile"    "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+		"soundfile"    "soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
 	}
 }

@@ -8,7 +8,7 @@
 	"AbilityTextureName"			"noxious_trap"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 
-	"AbilityCooldown"				"10 9 8 7"
+	"AbilityCooldown"				"%cooldown"
 	"AbilityManaCost"				"50 65 80 95"
 	"AbilityCastPoint"				"0"
 	"AbilityCastRange"				"650"
@@ -31,12 +31,22 @@
 		"03"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage"	"50 75 100 125"
+			"damage"	"80 105 130 155"
 		}
         "04"
         {
             "var_type"	"FIELD_INTEGER"
             "fortify_armor"	"10"
         }
+		"05"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"fortify_duration"	"4"
+		}
+		"06"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"cooldown"	"10 9 8 7"
+		}
 	}
 }

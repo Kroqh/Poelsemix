@@ -12,6 +12,7 @@ modifier_move_only = modifier_move_only or class({})
 
 function modifier_move_only:IsHidden() return true end
 function modifier_move_only:IsPurgeable() return false end
+function modifier_move_only:IsPassive() return true end
 
 function modifier_move_only:CheckState()
 	local state = {
@@ -237,12 +238,28 @@ modifier_poe_cyclone_motion = modifier_poe_cyclone_motion or class({})
 --------------------------------------------------------------------------------
 -- LEAP SLAM
 --------------------------------------------------------------------------------
--- add sound
--- add particle
+-- add sound -- done
+-- add particle -- done
 -- add damage -- done
--- add fortify
+-- add fortify -- done
+-- add cooldown reduction talent -- TEST
 LinkLuaModifier("modifier_leap_slam", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_leap_slam_fortify", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
 leap_slam = leap_slam or class({})
+
+function leap_slam:GetCooldown()
+	local caster = self:GetCaster()
+	local cooldown = self:GetSpecialValueFor("cooldown")
+
+	if caster:HasTalent("leap_slam_reduced_cooldown_bonus") then
+		local talent = caster:FindAbilityByName("leap_slam_reduced_cooldown_bonus")
+		local reduction = talent:GetSpecialValueFor("cooldown_reduction_seconds")
+		
+		return cooldown - reduction
+	end
+
+	return cooldown
+end
 
 function leap_slam:OnSpellStart() 
 	if not IsServer() then return end
@@ -259,7 +276,7 @@ function modifier_leap_slam:GetMotionControllerPriority() return DOTA_MOTION_CON
 function modifier_leap_slam:CheckState()
 	if not IsServer() then return end
 	local state = {	[MODIFIER_STATE_STUNNED] = true,
-		[MODIFIER_STATE_NO_UNIT_COLLISION] = true, }
+		[MODIFIER_STATE_NO_UNIT_COLLISION] = true }
 	return state
 end
 
@@ -348,7 +365,31 @@ function modifier_leap_slam:leap_slam_damage(self, click_location)
 			})
 	end
 	-- particle
+	local particle = "particles/econ/items/earthshaker/earthshaker_totem_ti6/earthshaker_totem_ti6_leap_v2_impact_dust.vpcf"
+	local pfx = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN, caster)
+	ParticleManager:ReleaseParticleIndex(pfx)
+	
 	-- sound
+	caster:EmitSound("Hero_EarthShaker.Totem")
+
+	-- APPLY FORTIFY ON HIT
+	if caster:HasTalent("leap_slam_fortify_bonus") and #enemies > 0 then
+		local duration = ability:GetSpecialValueFor("fortify_duration")
+		caster:AddNewModifier(caster, ability, "modifier_leap_slam_fortify", {duration = duration})
+	end
+end
+
+modifier_leap_slam_fortify = modifier_leap_slam_fortify or class({})
+
+function modifier_leap_slam_fortify:IsHidden() return false end
+
+function modifier_leap_slam_fortify:DeclareFunctions()
+	local funcs = { MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS }
+	return funcs
+end
+
+function modifier_leap_slam_fortify:GetModifierPhysicalArmorBonus()
+	return self:GetAbility():GetSpecialValueFor("fortify_armor")
 end
 
 

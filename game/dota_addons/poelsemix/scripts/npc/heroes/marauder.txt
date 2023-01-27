@@ -14,8 +14,8 @@
 	
 	"AttackRange"			"10"
 
-	// "Ability10" "special_bonus_movement_speed_20"
-	// "Ability11" "special_bonus_hp_225"
+	"Ability10" "leap_slam_fortify_bonus"
+	"Ability11" "leap_slam_reduced_cooldown_bonus"
 	"Ability12" "conc_effect"
 	"Ability13"	"marauder_cyclone_inc_aoe"
 	// "Ability14" "special_bonus_nissan_2"
