@@ -30,6 +30,7 @@ end
 -- - Add talents -- DONE
 -- - Prevent toggle if vaal cyclone is active
 -- - Add aghs upgrade  -- DONE
+-- - Fix hover on ability when not leveled gives error??
 --------------------------------------------------------------------------------
 LinkLuaModifier("modifier_poe_cyclone", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_poe_cyclone_motion", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
@@ -37,7 +38,7 @@ poe_cyclone = poe_cyclone or class({})
 
 -- ASSUMES ONLY ONE
 -- IF LEVEL 30 THEN INCREASED AOE + damage
-local function calculateCycloneRadius(caster)
+function calculateCycloneRadius(caster)
 	local radius = caster:FindAbilityByName("poe_cyclone"):GetSpecialValueFor("radius")
 	
 	if caster:HasTalent("marauder_cyclone_inc_aoe") then
@@ -111,7 +112,7 @@ function modifier_poe_cyclone:OnCreated()
 	self.pfx = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN_FOLLOW, self:GetParent())
 	ParticleManager:SetParticleControl(self.pfx, 1, Vector(self.radius * 0.35, 0, 0))
 
-	self:StartIntervalThink(0.2)
+	self:StartIntervalThink(aps)
 end
 
 function modifier_poe_cyclone:GetModifierMoveSpeedBonus_Percentage()
@@ -391,5 +392,112 @@ end
 function modifier_leap_slam_fortify:GetModifierPhysicalArmorBonus()
 	return self:GetAbility():GetSpecialValueFor("fortify_armor")
 end
+
+---------------------------
+-- VAAL CYCLONE
+-- TODO
+-- Add particle
+-- add damage - done
+-- add suck
+-- add animation
+-- add charges
+---------------------------
+
+LinkLuaModifier("modifier_vaal_cyclone", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_vaal_cyclone_stack", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_stunned", "heroes/hero_stewart/hero_stewart", LUA_MODIFIER_MOTION_NONE)
+vaal_cyclone = vaal_cyclone or class({})
+
+function vaal_cyclone:GetIntrinsicModifierName()
+	return "modifier_vaal_cyclone_stack"
+end
+
+function vaal_cyclone:CastFilterResult()
+	if not IsServer() then return end
+	local caster = self:GetCaster()
+	local modifier = "modifier_vaal_cyclone_stack"
+	local max_stacks = self:GetSpecialValueFor("stacks_needed")
+
+	local current_stacks = caster:GetModifierStackCount(modifier, caster)
+	if current_stacks >= max_stacks then
+		return UF_SUCCESS
+	end
+	
+	return UF_FAIL_CUSTOM
+end
+
+function vaal_cyclone:GetCustomCastError()
+	return "Not enough stacks"
+end
+
+function vaal_cyclone:OnSpellStart()
+	local caster = self:GetCaster()
+	local duration = self:GetSpecialValueFor("duration")
+
+	caster:AddNewModifier(caster, self, "modifier_vaal_cyclone", {duration = duration})
+	caster:AddNewModifier(caster, self, "modifier_stunned", {duration = duration})
+end
+
+modifier_vaal_cyclone = modifier_vaal_cyclone or class({})
+
+function modifier_vaal_cyclone:IsHidden() return false end
+
+function modifier_vaal_cyclone:CheckState()
+	local state = {[MODIFIER_STATE_NO_UNIT_COLLISION] = true }
+	return state
+end
+
+function modifier_vaal_cyclone:OnCreated()
+	if not IsServer() then return end
+	local caster = self:GetCaster()
+	local ability = self:GetAbility()
+	
+	local min_aps = ability:GetSpecialValueFor("min_aps")
+	local aps_base = ability:GetSpecialValueFor("aps_base")
+	local aps_scaling = ability:GetSpecialValueFor("aps_scaling")
+
+	local aps = aps_base - (caster:GetAttackSpeed() * aps_scaling)
+
+	self:StartIntervalThink(aps)
+end
+
+function modifier_vaal_cyclone:OnIntervalThink()
+	if not IsServer() then return end
+	local caster = self:GetCaster()
+	local ability = self:GetAbility()
+	local damage_type = ability:GetAbilityDamageType()
+
+	local base_dmg = ability:GetSpecialValueFor("base_damage")
+	local damage_scaling = ability:GetSpecialValueFor("damage_scaling")
+	local damage = base_dmg + (caster:GetAttackDamage() * damage_scaling)
+
+	local radius = ability:GetSpecialValueFor("radius")
+
+	local enemies = FindUnitsInRadius(caster:GetTeamNumber(), 
+									  caster:GetAbsOrigin(), 
+									  nil, 
+									  radius, 
+									  DOTA_UNIT_TARGET_TEAM_ENEMY, 
+									  DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 
+									  DOTA_UNIT_TARGET_FLAG_NONE, 
+									  FIND_ANY_ORDER, 
+									  false)
+
+	for _, enemy in pairs(enemies) do
+		ApplyDamage({victim = enemy, 
+				attacker = caster, 
+				damage = damage, 
+				damage_type = damage_type,
+				ability = ability
+			})
+	end
+end
+
+modifier_vaal_cyclone_stack = modifier_vaal_cyclone_stack or class({})
+
+function modifier_vaal_cyclone_stack:IsHidden() return false end
+function modifier_vaal_cyclone_stack:IsPurgable() return false end
+function modifier_vaal_cyclone_stack:IsPassive() return true end
+
 
 

@@ -6,7 +6,7 @@
 	"ModelScale" "1.0"
 	
 	"Ability1" "poe_cyclone"				
-	"Ability2" "leap_slam"
+	"Ability2" "vaal_cyclone"
 	"Ability3" "leap_slam"
 	"Ability4" "move_only"
 	"Ability5" "generic_hidden"
