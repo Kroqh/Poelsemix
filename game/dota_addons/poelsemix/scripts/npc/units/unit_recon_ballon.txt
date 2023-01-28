@@ -1,9 +1,9 @@
-"npc_rune"
+"unit_recon_ballon"
 {
         // General
         //----------------------------------------------------------------
         "BaseClass"             "npc_dota_creature"
-        "Model"                 "models/props_rock/badside_rocks001.vmdl"
+        "Model"                 "models/props_gameplay/rat_balloon.vmdl"
         "ModelScale"            "1"
         "Level"                 "1"
         "HealthBarOffset"       "0"
@@ -11,8 +11,6 @@
         "HasInventory"          "0"
         // Abilities
         //----------------------------------------------------------------
-        "Ability1"              "ha_rune_pas"
-		"Ability2"				"tower_passive"
 	
         // Armor
         //----------------------------------------------------------------
@@ -35,12 +33,13 @@
        	"BountyXP"              "0"
         // Bounds
         //----------------------------------------------------------------
-        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "BoundsHullName"        "DOTA_HULL_SIZE_SMALL"
        
         // Movement
         //----------------------------------------------------------------
-        "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_NONE"
-        "MovementSpeed"         "0"
+        "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_FLY"
+	"AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
+        "MovementSpeed"         "200"
         "MovementTurnRate"      "10.0"
        
         // Status
@@ -52,8 +51,8 @@
        
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"    "500"
-        "VisionNighttimeRange"  "500"
+        "VisionDaytimeRange"    "1200"
+        "VisionNighttimeRange"  "1000"
        
         // Team
         //----------------------------------------------------------------

@@ -1,0 +1,88 @@
+"intruder_sniper"
+{
+    "operator_stacks"
+    {
+        "update_stack"
+        {
+            "reference_operator"
+            {
+                "operator"              "sos_reference_stack"
+                "reference_stack"       "dota_src1_3d"
+                "operator_variables"
+                {
+                    "vsnd_files"
+                    {
+                        "value"
+                        {
+                              "value0"        "sounds/intruder/intruder_sniper.vsnd"
+                        }
+                    }
+                    "volume"            {   "value"     "2.00000"  }
+                    "pitch"             {   "value"     "1.000000"  }
+                    "soundlevel"        {   "value"     "100.00000" }
+                    "distance_max"      {   "value"     "1800.000"  }
+                    "event_type"        {   "value"     "1.000000"  }
+                }
+            }
+        }
+    }
+}
+"intruder_reload_sniper"
+{
+    "operator_stacks"
+    {
+        "update_stack"
+        {
+            "reference_operator"
+            {
+                "operator"              "sos_reference_stack"
+                "reference_stack"       "dota_src1_3d"
+                "operator_variables"
+                {
+                    "vsnd_files"
+                    {
+                        "value"
+                        {
+                              "value0"        "sounds/intruder/intruder_reload_sniper.vsnd"
+                        }
+                    }
+                    "volume"            {   "value"     "2.00000"  }
+                    "pitch"             {   "value"     "1.000000"  }
+                    "soundlevel"        {   "value"     "100.00000" }
+                    "distance_max"      {   "value"     "1800.000"  }
+                    "event_type"        {   "value"     "1.000000"  }
+                }
+            }
+        }
+    }
+}
+"intruder_bloon"
+{
+    "operator_stacks"
+    {
+        "update_stack"
+        {
+            "reference_operator"
+            {
+                "operator"              "sos_reference_stack"
+                "reference_stack"       "dota_src1_3d"
+                "operator_variables"
+                {
+                    "vsnd_files"
+                    {
+                        "value"
+                        {
+                              "value0"        "sounds/intruder/intruder_bloon.vsnd"
+                        }
+                    }
+                    "volume"            {   "value"     "2.00000"  }
+                    "pitch"             {   "value"     "1.000000"  }
+                    "soundlevel"        {   "value"     "100.00000" }
+                    "distance_max"      {   "value"     "700.000"  }
+                    "event_type"        {   "value"     "1.000000"  }
+                }
+            }
+        }
+    }
+}
+

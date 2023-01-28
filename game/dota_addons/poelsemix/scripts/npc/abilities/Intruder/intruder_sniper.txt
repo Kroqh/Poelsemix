@@ -1,0 +1,56 @@
+"intruder_sniper"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_intruder/intruder_sniper"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName" "intruder_sniper"
+	"HasScepterUpgrade"				"1"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"100 95 90"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150"
+
+
+		"precache"
+	{
+		"particle" "particles/econ/items/sniper/sniper_charlie/sniper_crosshair_b_charlie.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "200 250 300"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"range" "600 750 900"
+			"LinkedSpecialBonus" "special_bonus_intruder_3"
+		}
+
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"ammo"	"3 4 5"
+			"LinkedSpecialBonus" "special_bonus_intruder_4"
+		}
+		"04"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"base_as_penalty" "3.5"
+		}
+	}
+}

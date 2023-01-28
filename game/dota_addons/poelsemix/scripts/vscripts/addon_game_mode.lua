@@ -337,7 +337,7 @@ function COverthrowGameMode:SetUpFountains()
 	--PRINTS A LIST OF ALL WEARABLES AND THEIR IDS IN THE CONSOLE
 	--local items = LoadKeyValues("scripts/items/items_game.txt")['items']
     --local modelmap = {}
-    --for k,v in pairs(items) do
+   -- for k,v in pairs(items) do
 		--print(v.name)
 		--print(k)
 	--end
@@ -643,6 +643,20 @@ function COverthrowGameMode:OnHeroInGame(hero)
 		DkSword:FollowEntity(hero, true)
 
 	end
+
+	if npcName == "npc_dota_hero_sniper" then
+		
+		local sniper_cloak = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_cloak/sharpshooter_cloak.vmdl"})
+		sniper_cloak:FollowEntity(hero, true)
+		
+		local sniper_weapon = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/hare_hunt_rifle/hare_hunt_rifle.vmdl"})
+		sniper_weapon:FollowEntity(hero, true)
+		
+		local sniper_mask = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"})
+		sniper_mask :FollowEntity(hero, true)
+
+	end
+
 	if npcName == "npc_dota_hero_omniknight" then
 		local OkheadLol = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/omniknight/head.vmdl"})
 		OkheadLol:FollowEntity(hero, true)

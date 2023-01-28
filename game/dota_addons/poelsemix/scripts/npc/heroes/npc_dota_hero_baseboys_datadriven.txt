@@ -12,8 +12,13 @@
 	"Ability6" "naga_siren_mirror_image"
 	"Ability7" "plant_bomb_explosion_datadriven"
 
-	"Ability13"	"special_bonus_hp_500"
+	"Ability10"  "special_bonus_attack_speed_15"
+	"Ability11"  "special_bonus_strength_10"
+	"Ability12"  "special_bonus_evasion_15"
+	"Ability13"  "special_bonus_hp_500"
 	"Ability14" "special_bonus_all_stats_12"
+	"Ability15" "special_bonus_armor_20"
+	"Ability16" "special_bonus_attack_speed_100"
 	"Ability17" "special_bonus_unique_naga_siren"
 	
 	"AbilityDraftIgnoreCount" "7"

@@ -1,0 +1,28 @@
+"intruder_bloon_cam"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_intruder/intruder_bloon_cam"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityTextureName"			"intruder_bloon_cam"
+	
+	"AbilityCooldown"				"40 36 32 28"
+	"AbilityManaCost"				"100"
+	"AbilityCastRange"				"400 500 600 700"
+	"AbilityCastPoint"				"0.25"
+
+	"precache"
+	{
+		"soundfile" "soundevents/intruder_soundevent.vsndevts"
+	}
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"duration" "30 33 36 39"
+		}
+	}
+}

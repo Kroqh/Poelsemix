@@ -37,7 +37,7 @@
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"				"450"		// Speed.
 
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
@@ -49,13 +49,13 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"300"		// Range of vision at night time.
 
 		// Team
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     }
