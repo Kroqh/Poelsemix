@@ -74,7 +74,7 @@
 	"npc_dota_hero_obsidian_destroyer"	"0"
 	"npc_dota_hero_phantom_assassin"	"1"
 	"npc_dota_hero_phantom_lancer"		"0"
-	"npc_dota_hero_pangolier"			"0"
+	"npc_dota_hero_pangolier"			"1"
 	"npc_dota_hero_phoenix"				"0"
 	"npc_dota_hero_puck"				"0"
 	"npc_dota_hero_pudge"				"0"
