@@ -1,0 +1,41 @@
+"intruder_decoy"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_intruder/intruder_decoy"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "intruder_decoy"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20 18 16 14"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"75"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"clone_dur" "3"
+		}
+		"02"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"invis_dur" "2 3 4 5"
+		}
+		"03"
+		{
+			"var_type" "FIELD_FLOAT"
+			"clone_outgoing" "-90" //10% of dmg
+		}
+	}
+}

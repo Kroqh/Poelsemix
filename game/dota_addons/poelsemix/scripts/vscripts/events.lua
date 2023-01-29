@@ -272,18 +272,13 @@ end
 --------------------------------------------------------------------------------
 function COverthrowGameMode:OnNPCSpawned( event )
 	local hero = EntIndexToHScript( event.entindex )
-	
-	if hero:IsRealHero() and hero.FirstSpawn == nil then
-		
-		hero.FirstSpawn = true
-		-- hero:AddItemByName("item_courier")
-		COverthrowGameMode:OnHeroInGame(hero)
-		local courier = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, nil, nil, hero:GetTeam())
-		courier:SetControllableByPlayer(hero:GetPlayerID(), false)
-		local ability = courier:AddAbility("courier_superspeed")
-		ability:SetLevel(1)
 
-	end
+	
+	-- only hero stuff afterswards, also called on illusions before they are turned into actual illusions (thanks valve), create a timer like at the bottom if it should not happen on illusions
+	if not hero:IsRealHero() then return end
+
+	local npcName = hero:GetUnitName()
+
 	if hero:GetUnitName() == "unit_hog_rider" then
 		local ability = hero:FindAbilityByName("hog_bash")
 		ability:SetLevel(1)
@@ -316,6 +311,65 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("guerrilla_warfare")
 		ability:SetLevel(1)
 	end
+
+
+	if npcName == "npc_dota_hero_dragon_knight" then
+		
+		local DkBracer = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_arms/aurora_warrior_set_arms.vmdl"})
+		DkBracer:FollowEntity(hero, true)
+		
+		local DkShield = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_off_hand/aurora_warrior_set_off_hand.vmdl"})
+		DkShield:FollowEntity(hero, true)
+		
+		local DkHead = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_head/aurora_warrior_set_head.vmdl"})
+		DkHead:FollowEntity(hero, true)
+		
+		local DkLegs = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_back/aurora_warrior_set_back.vmdl"})
+		DkLegs:FollowEntity(hero, true)
+		
+		local DkShoulder = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_shoulder/aurora_warrior_set_shoulder.vmdl"})
+		DkShoulder:FollowEntity(hero, true)
+
+		local DkSword = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_weapon/aurora_warrior_set_weapon.vmdl"})
+		DkSword:FollowEntity(hero, true)
+
+	end
+
+	if npcName == "npc_dota_hero_sniper" then
+		
+		local sniper_cloak = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_cloak/sharpshooter_cloak.vmdl"})
+		sniper_cloak:FollowEntity(hero, true)
+		
+		local sniper_weapon = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/hare_hunt_rifle/hare_hunt_rifle.vmdl"})
+		sniper_weapon:FollowEntity(hero, true)
+		
+		local sniper_mask = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"})
+		sniper_mask :FollowEntity(hero, true)
+
+	end
+
+
+	Timers:CreateTimer({
+		endTime = 0.1,
+		callback = function()
+			SpawnCourier(hero)
+		end
+		})
+
+
 end
+
+function SpawnCourier(hero)
+	if hero:IsRealHero() and hero.FirstSpawn == nil then
+		hero.FirstSpawn = true
+		-- hero:AddItemByName("item_courier")
+		COverthrowGameMode:OnHeroInGame(hero)
+		local courier = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, nil, nil, hero:GetTeam())
+		courier:SetControllableByPlayer(hero:GetPlayerID(), false)
+		local ability = courier:AddAbility("courier_superspeed")
+		ability:SetLevel(1)
+	end
+end
+
 
 

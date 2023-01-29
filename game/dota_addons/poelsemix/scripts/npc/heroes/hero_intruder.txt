@@ -5,13 +5,13 @@
 	"Ability1" "caro_side_swap"				
 	"Ability2" "caro_smash"
 	"Ability3" "caro_crossfit"
-	"Ability4" "generic_hidden"
+	"Ability4" "intruder_decoy"
 	"Ability5" "intruder_bloon_cam"
 	"Ability6" "intruder_sniper"
 
 	
 	"MovementSpeed"               "280"
-	"AttackAcquisitionRange"	"400"
+	"AttackAcquisitionRange"	"800"
 	"AttackRange"			"400"
 	"AttackRate"                 "1.8" 
 	"ArmorPhysical"		"-2" 
@@ -30,7 +30,7 @@
 	"Ability12"		"special_bonus_movement_speed_50"
 	"Ability13"		"special_bonus_agility_20"
 	
-	"Ability14"		"special_bonus_hp_600"
+	"Ability14"		"special_bonus_cast_range_200"
 	"Ability15"		"special_bonus_cooldown_reduction_20"
 	
 	"Ability16"		"special_bonus_intruder_3"

@@ -2,7 +2,7 @@ press_meeting = press_meeting or class({})
 
 
 function press_meeting:OnSpellStart()
-
+    if not IsServer() then return end
     caster = self:GetCaster()
     local radius = 700
     local angle = 30

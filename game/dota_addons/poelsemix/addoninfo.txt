@@ -2,24 +2,28 @@
 {
 	"HeroGuidesSupported"		"1"
 	"PenaltiesEnabled"		"0"
-	"mines_trio"
-	{
-		"MaxPlayers"		"9"
-	}
-	"desert_duo"
+	"poelsemix"
 	{
 		"MaxPlayers"		"10"
 	}
-	"forest_solo"
-	{
-		"MaxPlayers"		"10"
-	}
-	"desert_quintet"
-	{
-		"MaxPlayers"		"15"
-	}
-	"temple_quartet"
-	{
-		"MaxPlayers"		"16"
-	}
+	//"mines_trio"
+	//{
+	//	"MaxPlayers"		"9"
+	//}
+	//"desert_duo"
+	//{
+	//	"MaxPlayers"		"10"
+	//}
+	//"forest_solo"
+	//{
+	//	"MaxPlayers"		"10"
+	//}
+	//"desert_quintet"
+	//{
+	//	"MaxPlayers"		"15"
+	//}
+	//"temple_quartet"
+	//{
+	//	"MaxPlayers"		"16"
+	//}
 }

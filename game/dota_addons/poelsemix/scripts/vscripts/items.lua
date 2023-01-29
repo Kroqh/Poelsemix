@@ -213,7 +213,7 @@ function COverthrowGameMode:PlanNextSpawn()
 		targetname = "item_spawn_missing"
 	}
 
-	local r = RandomInt( 1, 8 )
+	local r = RandomInt( 1, 4 )
 	if GetMapName() == "desert_quintet" then
 		print("map is desert_quintet")
 		r = RandomInt( 1, 6 )

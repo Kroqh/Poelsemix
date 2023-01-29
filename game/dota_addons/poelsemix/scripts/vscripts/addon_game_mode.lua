@@ -622,50 +622,6 @@ function COverthrowGameMode:ExecuteOrderFilter( filterTable )
 end
 function COverthrowGameMode:OnHeroInGame(hero)
 	local npcName = hero:GetUnitName()
-	if npcName == "npc_dota_hero_dragon_knight" then
-		
-		local DkBracer = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_arms/aurora_warrior_set_arms.vmdl"})
-		DkBracer:FollowEntity(hero, true)
-		
-		local DkShield = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_off_hand/aurora_warrior_set_off_hand.vmdl"})
-		DkShield:FollowEntity(hero, true)
-		
-		local DkHead = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_head/aurora_warrior_set_head.vmdl"})
-		DkHead:FollowEntity(hero, true)
-		
-		local DkLegs = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_back/aurora_warrior_set_back.vmdl"})
-		DkLegs:FollowEntity(hero, true)
-		
-		local DkShoulder = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_shoulder/aurora_warrior_set_shoulder.vmdl"})
-		DkShoulder:FollowEntity(hero, true)
 
-		local DkSword = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/dragon_knight/aurora_warrior_set_weapon/aurora_warrior_set_weapon.vmdl"})
-		DkSword:FollowEntity(hero, true)
-
-	end
-
-	if npcName == "npc_dota_hero_sniper" then
-		
-		local sniper_cloak = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_cloak/sharpshooter_cloak.vmdl"})
-		sniper_cloak:FollowEntity(hero, true)
-		
-		local sniper_weapon = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/hare_hunt_rifle/hare_hunt_rifle.vmdl"})
-		sniper_weapon:FollowEntity(hero, true)
-		
-		local sniper_mask = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"})
-		sniper_mask :FollowEntity(hero, true)
-
-	end
-
-	if npcName == "npc_dota_hero_omniknight" then
-		local OkheadLol = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/omniknight/head.vmdl"})
-		OkheadLol:FollowEntity(hero, true)
-		
-		local Okhat = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/omniknight/helmet_winged.vmdl"})
-		Okhat:FollowEntity(hero, true)
-		
-		local Okcape = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/omniknight/cape_hierophant.vmdl"})
-		Okcape:FollowEntity(hero, true)
-		hero:SetModelScale(0.6)
-	end
+	--leaving it here just in case anyone wanna hook into it
 end
