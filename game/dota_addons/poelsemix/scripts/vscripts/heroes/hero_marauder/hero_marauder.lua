@@ -28,7 +28,7 @@ end
 -- - Add particle -- DONE
 -- - Add movement slow -- DONE
 -- - Add talents -- DONE
--- - Prevent toggle if vaal cyclone is active
+-- - Prevent toggle if vaal cyclone is active -- DONE
 -- - Add aghs upgrade  -- DONE
 -- - Fix hover on ability when not leveled gives error??
 --------------------------------------------------------------------------------
@@ -162,6 +162,17 @@ function modifier_poe_cyclone:OnIntervalThink()
 		IceNova(self, enemies)
 	end
 
+	-- VAAL CYCLONE stacks
+	local vaal_cyclone_spell = caster:FindAbilityByName("vaal_cyclone")
+	if vaal_cyclone_spell then
+		local vaal_cyclone_modifier = caster:FindModifierByName("modifier_vaal_cyclone_stack")
+		if vaal_cyclone_modifier then
+			local stacks = vaal_cyclone_modifier:GetStackCount()
+			if stacks < vaal_cyclone_spell:GetSpecialValueFor("stacks_needed") then
+				vaal_cyclone_modifier:IncrementStackCount()
+			end
+		end
+	end
 
 	caster:ReduceMana(self:GetAbility():GetManaCost(-1))
 
@@ -398,9 +409,10 @@ end
 -- TODO
 -- Add particle
 -- add damage - done
--- add suck
--- add animation
--- add charges
+-- add suck 
+-- add animation 
+-- add charges - done
+-- add talents 
 ---------------------------
 
 LinkLuaModifier("modifier_vaal_cyclone", "heroes/hero_marauder/hero_marauder", LUA_MODIFIER_MOTION_NONE)
@@ -420,6 +432,13 @@ function vaal_cyclone:CastFilterResult()
 
 	local current_stacks = caster:GetModifierStackCount(modifier, caster)
 	if current_stacks >= max_stacks then
+		caster:FindModifierByName("modifier_vaal_cyclone_stack"):SetStackCount(0)
+
+		local cyclone_spell = caster:FindAbilityByName("poe_cyclone")
+		if cyclone_spell:GetToggleState() then
+			cyclone_spell:ToggleAbility()
+		end
+
 		return UF_SUCCESS
 	end
 	
