@@ -420,7 +420,7 @@ end
 ---------------------------
 -- VAAL CYCLONE
 -- TODO
--- Add particle
+-- Add particle - done
 -- add damage - done
 -- add suck - done
 -- add animation 
@@ -484,6 +484,8 @@ end
 
 function modifier_vaal_cyclone:OnCreated()
 	if not IsServer() then return end
+	local particle = "particles/heroes/marauder/cyclone_particle.vpcf"
+
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
 	
@@ -492,7 +494,14 @@ function modifier_vaal_cyclone:OnCreated()
 	local aps_scaling = ability:GetSpecialValueFor("ats_scaling")
 
 	local aps = aps_base - caster:GetAttackSpeed() * aps_scaling
+	local radius = ability:GetSpecialValueFor("radius")
 
+	if aps < min_aps then
+		aps = min_aps
+	end
+
+	self.pfx = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN_FOLLOW, self:GetParent())
+	ParticleManager:SetParticleControl(self.pfx, 1, Vector(self.radius * 0.35, 0, 0))
 	
 	self:StartIntervalThink(aps)
 end
@@ -527,6 +536,12 @@ function modifier_vaal_cyclone:OnIntervalThink()
 				ability = ability
 			})
 	end
+end
+
+function modifier_vaal_cyclone:OnDestroy()
+	if not IsServer() then return end
+	ParticleManager:DestroyParticle(self.pfx, false)
+	ParticleManager:ReleaseParticleIndex(self.pfx)
 end
 
 modifier_vaal_cyclone_stack = modifier_vaal_cyclone_stack or class({})
