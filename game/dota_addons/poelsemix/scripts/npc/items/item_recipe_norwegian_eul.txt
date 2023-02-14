@@ -1,0 +1,14 @@
+"item_recipe_norwegian_eul"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "old_recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_norwegian_eul"
+		"ItemRequirements"
+		{
+			"01" "item_cyclone;item_cyclone;item_mystic_staff"
+		}
+  	}

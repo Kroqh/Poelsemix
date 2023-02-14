@@ -4,7 +4,7 @@
 
 	"Ability1" "caro_side_swap"				
 	"Ability2" "caro_smash"
-	"Ability3" "caro_crossfit"
+	"Ability3" "intruder_smoke"
 	"Ability4" "intruder_decoy"
 	"Ability5" "intruder_bloon_cam"
 	"Ability6" "intruder_sniper"

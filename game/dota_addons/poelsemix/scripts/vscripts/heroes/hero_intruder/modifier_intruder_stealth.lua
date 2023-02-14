@@ -28,6 +28,7 @@ end
 function modifier_intruder_stealth:OnAbilityExecuted(keys)
 	if IsServer() then
 		if keys.ability:GetCaster() ~= self:GetParent() then return end
+		if keys.ability:GetAbilityName() == "intruder_sniper" then return end
 		self:Destroy()
 	end
 end

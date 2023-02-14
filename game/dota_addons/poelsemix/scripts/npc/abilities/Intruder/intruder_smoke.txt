@@ -1,0 +1,49 @@
+"intruder_smoke"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_intruder/intruder_smoke"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "intruder_smoke"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCastRange"				"600 650 700 750"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20 19 18 17"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 95 90 85"
+
+
+		"precache"
+	{
+		"particle" "particles/units/heroes/hero_invoker/invoker_chaos_meteor_smoke.vpcf"
+		"particle" "particles/units/heroes/hero_intruder/sniper_shard_concussive_grenade_model.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"smoke_dur" "3 3.5 4 4.5"
+		}
+		"01"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"proj_speed" "700"
+		}
+		"02"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"smoke_radius" "300 500 700 900" // high numbers for projectile test
+		}
+	}
+}

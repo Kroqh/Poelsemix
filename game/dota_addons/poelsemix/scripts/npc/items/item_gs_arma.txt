@@ -57,7 +57,7 @@
 	
 	"Modifiers"
 	{
-		"modifier_hilt_zamorak"
+		"modifier_gs_arma"
 		{
 			"Passive"			"1"
 			"IsHidden"			"1"
