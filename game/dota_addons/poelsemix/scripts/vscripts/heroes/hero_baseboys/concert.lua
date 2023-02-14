@@ -19,6 +19,8 @@ function Phantasm( keys )
 	local chance = RandomInt(1, 100)
 	local casterOrigin = caster:GetAbsOrigin()
 	local casterAngles = caster:GetAngles()
+	
+	
 
 	-- Stop any actions of the caster otherwise its obvious which unit is real
 	caster:Stop()

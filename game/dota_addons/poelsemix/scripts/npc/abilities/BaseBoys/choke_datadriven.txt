@@ -8,6 +8,8 @@
 	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "hej_mathilde"
+
+	"MaxLevel" "5"
 	
 	//Casting
 	//--------------------------
@@ -19,7 +21,7 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"chance" "25"
+			"chance" "10 15 20 25 30"
 		}
 		"02"
 		{

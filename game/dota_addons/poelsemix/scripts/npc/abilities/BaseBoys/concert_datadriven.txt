@@ -5,7 +5,6 @@
 		"ID"							"5467"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilitySound"					"Hero_NagaSiren.MirrorImage"
 		"AbilityTextureName" "koncert"
 
 		// Casting
@@ -68,5 +67,6 @@
 				"radius" "1500"
 			}
 		}
+
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}

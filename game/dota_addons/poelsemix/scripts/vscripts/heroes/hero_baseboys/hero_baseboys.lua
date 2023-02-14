@@ -183,7 +183,7 @@ function modifier_choke:IsHidden() return true end
 
 function modifier_choke:DeclareFunctions()
 	local decFuncs = 
-	{MODIFIER_EVENT_ON_ATTACKED}
+	{MODIFIER_EVENT_ON_ATTACKED, MODIFIER_EVENT_ON_ABILITY_EXECUTED}
 	return decFuncs
 end
 
@@ -205,6 +205,24 @@ function modifier_choke:OnAttacked(keys)
 
 				keys.attacker:AddNewModifier(caster, ability, "modifier_choke_stun", {duration = duration})
 				ability:EmitSound("hej_mathilde")
+			end
+		end
+	end
+end
+
+function modifier_choke:OnAbilityExecuted(keys)
+	if IsServer() then
+		print("test")
+		local parent = self:GetParent()
+		if keys.unit == parent and keys.ability:GetAbilityName() == "naga_siren_mirror_image" then
+			
+			print("test")
+			if parent:HasItemInInventory("item_norwegian_eul") then
+				print("test2")
+				parent:EmitSound("baseboys_1000_norsk")
+			else
+				print("test3")
+				parent:EmitSound("baseboys_1000_dansk")
 			end
 		end
 	end

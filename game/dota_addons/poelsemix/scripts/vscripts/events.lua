@@ -335,6 +335,10 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("flyby_attack")
 		ability:SetLevel(1)
 	end
+	if hero:GetUnitName() == "npc_dota_hero_meepo" then
+		local ability = hero:FindAbilityByName("choke_datadriven")
+		ability:SetLevel(1)
+	end
 
 	if hero:GetUnitName() == "npc_dota_hero_crystal_maiden" then
 		local ability = hero:FindAbilityByName("water")
