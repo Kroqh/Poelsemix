@@ -45,6 +45,7 @@
 		"item"		"item_sange_yasha_lator"
 		"item"		"item_sandals"
 		"item"		"item_sovs_kartofler"
+		"item"		"item_roids_2"
 	}
 
 	"weapons_armor"

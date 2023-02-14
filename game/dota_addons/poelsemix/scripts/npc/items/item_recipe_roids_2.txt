@@ -1,0 +1,14 @@
+"item_recipe_roids_2"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"444"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_roids_2"
+		"ItemRequirements"
+		{
+			"01" "item_roids_1;item_orb_of_venom;item_roids_1;item_orb_of_venom"
+		}
+  	}

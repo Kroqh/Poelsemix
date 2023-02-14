@@ -1,0 +1,55 @@
+"item_roids_1"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "tren"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"3075"
+  	"ID"						"3047"
+	"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"str;regen_health"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"roids;tren"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"str"					"40"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"health_regen_percent_per_second"	"-10"
+		}
+	}
+	
+	"Modifiers"
+	{
+		"modifier_item_roids_one"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%str"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%health_regen_percent_per_second"
+			}
+		}
+		
+	}
+}
