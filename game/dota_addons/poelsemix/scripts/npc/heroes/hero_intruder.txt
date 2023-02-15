@@ -3,7 +3,7 @@
 	"override_hero"				"npc_dota_hero_sniper"			// Hero to override
 
 	"Ability1" "caro_side_swap"				
-	"Ability2" "caro_smash"
+	"Ability2" "intruder_flash"
 	"Ability3" "intruder_smoke"
 	"Ability4" "intruder_decoy"
 	"Ability5" "intruder_bloon_cam"
@@ -23,11 +23,10 @@
 
 	
 
-	//NEED NEW TALENT 5 and 6
 	"Ability10"		"special_bonus_attack_speed_50"
 	"Ability11"		"special_bonus_attack_damage_30"
 	
-	"Ability12"		"special_bonus_movement_speed_50"
+	"Ability12"		"special_bonus_intruder_1"
 	"Ability13"		"special_bonus_intruder_2"
 	
 	"Ability14"		"special_bonus_cast_range_200"
@@ -43,7 +42,7 @@
 	"precache"
 		{
 			"model" 	"models/items/sniper/sharpshooter_cloak/sharpshooter_cloak.vmdl"
-			"model" 	"models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdll"
+			"model" 	"models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"
 			"model" 	"models/items/sniper/hare_hunt_rifle/hare_hunt_rifle.vmdl"
 		}
 }

@@ -55,6 +55,10 @@ function intruder_smoke:OnProjectileHit(target, location)
     return true
 end
 
+function intruder_smoke:GetAOERadius()
+    return self:GetSpecialValueFor("smoke_radius")
+end
+
 
 
 

@@ -1,12 +1,13 @@
-"intruder_smoke"
+"intruder_flash"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_intruder/intruder_smoke"
+	"ScriptFile"			"heroes/hero_intruder/intruder_flash"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
-	"AbilityTextureName" "intruder_smoke"
+	"AbilityTextureName" "intruder_flash_bang"
+
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	
@@ -26,7 +27,7 @@
 
 		"precache"
 	{
-		"particle" "particles/units/heroes/hero_intruder/riki_smokebomb.vpcf"
+		"particle" "particles/units/heroes/hero_intruder/sniper_shard_concussive_grenade_impact_flash.vpcf"
 		"particle" "particles/units/heroes/hero_intruder/sniper_shard_concussive_grenade_model.vpcf"
 	}
 	
@@ -35,23 +36,23 @@
 		"01"
 		{
 			"var_type"	"FIELD_FLOAT"
-			"smoke_dur" "3 3.5 4 4.5"
+			"duration" "1 1.25 1.5 1.75"
 			"LinkedSpecialBonus" "special_bonus_intruder_1"
 		}
-		"02"
+		"01"
 		{
 			"var_type"	"FIELD_INTEGER"
 			"proj_speed" "700"
 		}
+		"02"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"radius" "250"
+		}
 		"03"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"smoke_radius" "280"
-		}
-		"04"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"smoke_vision" "-95"
+			"damage" "200 250 300 350"
 		}
 	}
 }
