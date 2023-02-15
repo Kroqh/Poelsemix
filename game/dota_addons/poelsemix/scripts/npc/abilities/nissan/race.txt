@@ -19,6 +19,7 @@
 	{
 		"particle"        "particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
 		"soundfile"       "soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
+		"particle" 		"particles/econ/events/ti11/duel/dueling_glove_outcome_win_beam.vpcf"
 	}
 
 	"AbilitySpecial"

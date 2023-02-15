@@ -26,10 +26,11 @@ function race:OnSpellStart()
   self.caster:AddNewModifier(self.caster, self, "modifier_race", {duration = self.duration})
   self.target:AddNewModifier(self.caster, self, "modifier_race", {duration = self.duration})
 
-  self.player1 = PlayerResource:GetPlayerName(self.caster:GetPlayerID())
-  self.player2 = PlayerResource:GetPlayerName(self.target:GetPlayerID())
+  
 
   -- Custom message
+  --self.player1 = PlayerResource:GetPlayerName(self.caster:GetPlayerID())
+  --self.player2 = PlayerResource:GetPlayerName(self.target:GetPlayerID())
   -- local message = '<font color="lime">' .. self.player1 .. '</font>' .. ' JUST CHALLENGED ' .. '<font color="red">' .. self.player2 .. '</font>' .. ' TO AN EPIC RACE!!'
   -- GameRules:SendCustomMessage(message, self.caster:GetTeamNumber(), -1)
 
@@ -71,6 +72,10 @@ function modifier_race:OnCreated()
   self:SetStackCount(self.stacks)
 
   self:StartIntervalThink(0.1)
+end
+
+function modifier_race:GetEffectName()
+  return "particles/econ/events/ti11/duel/dueling_glove_outcome_win_beam.vpcf"
 end
 
 function modifier_race:OnIntervalThink()
