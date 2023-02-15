@@ -2,7 +2,7 @@ modifier_intruder_stealth = modifier_intruder_stealth or class({})
 
 function modifier_intruder_stealth:IsPurgeable() return false end
 function modifier_intruder_stealth:IsDebuff() return false end
-function modifier_intruder_stealth:IsHidden() return true end
+function modifier_intruder_stealth:IsHidden() return false end
 
 function modifier_intruder_stealth:DeclareFunctions()
 	local decFuncs = {
@@ -11,6 +11,10 @@ function modifier_intruder_stealth:DeclareFunctions()
 	MODIFIER_EVENT_ON_ABILITY_EXECUTED
 	}
 	return decFuncs
+end
+
+function modifier_intruder_stealth:GetTexture()
+	return "intruder_stealth"
 end
 
 function modifier_intruder_stealth:GetModifierInvisibilityLevel()

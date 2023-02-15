@@ -24,7 +24,7 @@
 
 		"precache"
 	{
-		"particle" "particles/units/heroes/hero_invoker/invoker_chaos_meteor_smoke.vpcf"
+		"particle" "particles/units/heroes/hero_intruder/riki_smokebomb.vpcf"
 		"particle" "particles/units/heroes/hero_intruder/sniper_shard_concussive_grenade_model.vpcf"
 	}
 	
@@ -34,6 +34,7 @@
 		{
 			"var_type"	"FIELD_FLOAT"
 			"smoke_dur" "3 3.5 4 4.5"
+			"LinkedSpecialBonus" "special_bonus_intruder_2"
 		}
 		"01"
 		{
@@ -43,7 +44,12 @@
 		"02"
 		{
 			"var_type"	"FIELD_FLOAT"
-			"smoke_radius" "300 500 700 900" // high numbers for projectile test
+			"smoke_radius" "280"
+		}
+		"03"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"smoke_vision" "-95"
 		}
 	}
 }
