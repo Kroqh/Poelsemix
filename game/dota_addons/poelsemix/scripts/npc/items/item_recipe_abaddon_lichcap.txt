@@ -1,0 +1,14 @@
+"item_recipe_abaddon_lichcap"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"1500"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_abaddon_lichcap"
+		"ItemRequirements"
+		{
+			"01" "item_relic;item_relic"
+		}
+  	}

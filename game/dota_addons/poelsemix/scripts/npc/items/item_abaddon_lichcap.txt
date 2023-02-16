@@ -1,0 +1,40 @@
+"item_abaddon_lichcap"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_lua"
+  	"AbilityTextureName"        "abaddons_lichcap"
+	"ScriptFile"					"items/item_abaddon_lichcap.lua"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"9000"
+  	"ID"						"3049"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"deathcap"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage"					"120"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage_multi_percentage"						"45" //base attack only, because of limitations i guess
+		}
+
+	}	
+}

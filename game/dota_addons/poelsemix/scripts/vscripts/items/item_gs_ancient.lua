@@ -52,7 +52,7 @@ function modifier_item_gs_ancient:GetAttributes()	return MODIFIER_ATTRIBUTE_MULT
 function modifier_item_gs_ancient:DeclareFunctions()
 	return {
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
-		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
+		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE
 	}
 end
 
