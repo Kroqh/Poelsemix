@@ -2,7 +2,7 @@
 {
 	"override_hero"				"npc_dota_hero_sniper"			// Hero to override
 
-	"Ability1" "caro_side_swap"				
+	"Ability1" "intruder_remote_charge"				
 	"Ability2" "intruder_flash"
 	"Ability3" "intruder_smoke"
 	"Ability4" "intruder_decoy"

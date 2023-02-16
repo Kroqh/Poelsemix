@@ -1,10 +1,9 @@
-// Made by BMD
-"npc_shroom"
+"npc_remote_charge"
 {
 	// General
 	//
 	"BaseClass" "npc_dota_base_additive" // Class of entity of link to.
-	"Model" "models/items/furion/treant/shroomling_treant/shroomling_treant.vmdl" // Model.
+	"Model" "models/heroes/techies/techies_sign.vmdl" // Model.
 	"SoundSet" "Creep_Good_Range" // Name of sound set.
 	"Level" "0"
 	// Abilities

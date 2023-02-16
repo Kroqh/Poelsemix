@@ -65,5 +65,10 @@
 			"var_type" "FIELD_FLOAT"
 			"int_scaling" "0.6"
 		}
+		"10"
+		{
+			"var_type" "FIELD_FLOAT"
+			"delay" "2" //invis and explosion arming time
+		}
 	}
 }

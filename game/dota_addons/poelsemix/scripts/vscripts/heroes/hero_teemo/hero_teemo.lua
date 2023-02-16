@@ -288,7 +288,7 @@ LinkLuaModifier("modifier_noxious_trap_handler", "heroes/hero_teemo/hero_teemo",
 LinkLuaModifier("modifier_noxious_trap_stack_handler", "heroes/hero_teemo/hero_teemo", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_noxious_trap_explosion", "heroes/hero_teemo/hero_teemo", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_noxious_trap_explosion_damage", "heroes/hero_teemo/hero_teemo", LUA_MODIFIER_MOTION_NONE)
-noxious_trap = class({})
+noxious_trap = noxious_trap or class({})
 
 function noxious_trap:GetAbilityTextureName()
 	return "noxious_trap"
@@ -309,7 +309,6 @@ function noxious_trap:OnSpellStart()
 		caster:FindModifierByName("modifier_noxious_trap_stack_handler"):SetStackCount(modifier_stacks - 1)
 		local unit = CreateUnitByName("npc_shroom", pos, true, caster, caster, caster:GetTeamNumber())
 		unit:AddNewModifier(caster, self, "modifier_noxious_trap_handler", {})
-		unit:AddNewModifier(caster, self, "modifier_noxious_trap_explosion", {})
 
 		if caster:HasTalent("special_bonus_teemo_4") then
 			--print("caster has talent")
@@ -324,12 +323,10 @@ function noxious_trap:OnSpellStart()
 			--left unit
 			local unit2 = CreateUnitByName("npc_shroom", left_spawn, true, caster, caster, caster:GetTeamNumber())
 			unit2:AddNewModifier(caster, self, "modifier_noxious_trap_handler", {})
-			unit2:AddNewModifier(caster, self, "modifier_noxious_trap_explosion", {})
 
 			--right unit
 			local unit3 = CreateUnitByName("npc_shroom", right_spawn, true, caster, caster, caster:GetTeamNumber())
 			unit3:AddNewModifier(caster, self, "modifier_noxious_trap_handler", {})
-			unit3:AddNewModifier(caster, self, "modifier_noxious_trap_explosion", {})
 		end
 
 		EmitSoundOn("teemo_trap_use", caster)
@@ -401,33 +398,29 @@ end
 
 modifier_noxious_trap_handler = class({})
 
+function modifier_noxious_trap_handler:IsHidden() return true end
+
 function modifier_noxious_trap_handler:OnCreated()
 	if IsServer() then
-		self.lifetime = self:GetAbility():GetSpecialValueFor("trap_duration")
-		self.count = 0
-		self.interval = 1
-		self:StartIntervalThink(self.interval)
+		local ability = self:GetAbility()
+		self:GetParent():AddNewModifier(self:GetParent(), ability, "modifier_kill", { duration = ability:GetSpecialValueFor("trap_duration") } )
+		self:StartIntervalThink(ability:GetSpecialValueFor("delay"))
 	end
 end
 
 function modifier_noxious_trap_handler:OnIntervalThink()
 	if IsServer() then
-		--print(self.lifetime)
-		if self.count >= self.lifetime then
-			self:GetParent():AddNoDraw()
-			self:GetParent():ForceKill(false)
-		end
-
-		if self.count == 1 then
 			local parent = self:GetParent()
-			parent:AddNewModifier(parent, nil, "modifier_noxious_trap_invis", {})
-		end
-		self.count = self.count + self.interval
-		--print(self.count)
+			local ability = self:GetAbility()
+			parent:AddNewModifier(parent, ability, "modifier_noxious_trap_invis", {})
+			parent:AddNewModifier(parent, ability, "modifier_noxious_trap_explosion", {})
+			parent:RemoveModifierByName("modifier_noxious_trap_handler")
 	end
 end
 
 modifier_noxious_trap_invis = class({})
+
+function modifier_noxious_trap_invis:IsHidden() return true end
 
 function modifier_noxious_trap_invis:IsPurgeable() return false end
 function modifier_noxious_trap_invis:IsDebuff() return false end
@@ -457,18 +450,19 @@ function modifier_noxious_trap_explosion:OnCreated()
 		local ability = self:GetAbility()
 		self.radius = ability:GetSpecialValueFor("radius")
 		self.duration = ability:GetSpecialValueFor("duration")
-		self.wait = 0
 		self:StartIntervalThink(0.1)
 	end
 end
 
+function modifier_noxious_trap_explosion:IsHidden() return false end
+
 function modifier_noxious_trap_explosion:OnIntervalThink()
 	if IsServer() then
-		self.wait = self.wait + 0.1
 
 		local unit = self:GetParent()
 		local unit_pos = unit:GetAbsOrigin()
-		local caster = self:GetCaster()
+		local ability = self:GetAbility()
+		local caster = ability:GetCaster()
 		local enemies = FindUnitsInRadius(unit:GetTeamNumber(), 
 			unit_pos, 
 			nil, 
@@ -484,18 +478,18 @@ function modifier_noxious_trap_explosion:OnIntervalThink()
 		end
 
 		--EXPLOSION HAPPENS HERE
-		if enemies ~= nil and self.wait >= 1.2 then
+		if enemies ~= nil then --hardcoded explosion delay for some reason
 			self:StartIntervalThink(-1)
-			for _, unit in pairs(enemies) do
-				unit:AddNewModifier(caster, self:GetAbility(), "modifier_noxious_trap_explosion_damage", {duration = self.duration})
+			for _, enemy in pairs(enemies) do
+				enemy:AddNewModifier(caster, self:GetAbility(), "modifier_noxious_trap_explosion_damage", {duration = self.duration})
 			end
-			unit:RemoveModifierByName("modifier_noxious_trap_invis")
+			--unit:RemoveModifierByName("modifier_noxious_trap_invis")
 			local particle = "particles/heroes/teemo/noxious_trap_explosion.vpcf"
 			local pfx = ParticleManager:CreateParticle(particle, PATTACH_WORLDORIGIN, unit)
 			ParticleManager:SetParticleControl(pfx, 0, unit:GetAbsOrigin())
 			ParticleManager:SetParticleControl(pfx, 1, Vector(0.65,0.65,0.65))
 
-			EmitSoundOn("teemo_trap_explosion", self:GetParent())
+			EmitSoundOn("teemo_trap_explosion", unit)
 			unit:AddNoDraw()
 			unit:ForceKill(false)
 		end
@@ -507,7 +501,7 @@ modifier_noxious_trap_explosion_damage = class({})
 function modifier_noxious_trap_explosion_damage:OnCreated()
 	if IsServer() then
 		local ability = self:GetAbility()
-		local caster = self:GetCaster()
+		local caster = ability:GetCaster()
 		self.speed = CustomNetTables:GetTableValue("player_table", "modifier_noxious_trap_explosion_damage").speed
 		--print(self.speed)
 		local intellect = caster:GetIntellect()

@@ -1,0 +1,56 @@
+"intruder_remote_charge"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_intruder/intruder_remote_charge"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "intruder_remote_charge"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.0"
+	"AbilityCastRange"				"500"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"16 14 12 10"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"120 110 100 90"
+
+
+		"precache"
+	{
+		"particle" "particles/heroes/intruder/trap_explosion.vpcf"
+	}
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"lifetime" "30 33 36 39"
+		}
+		"02"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"explosion_damage" "200 300 400 500"
+		}
+		"03"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"explosion_radius" "150"
+		}
+		"04"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"delay" "1.5"
+		}
+	}
+}
