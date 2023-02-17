@@ -1,0 +1,69 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf51:version{6d03d500-2498-454e-b833-f654e870bb3d} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_nInitialParticles = 1
+	m_flConstantRadius = 0.0
+	m_ConstantColor = [ 0, 0, 0, 255 ]
+	m_nConstantSequenceNumber = 1
+	m_flStopSimulationAfterTime = 100000000.0
+	m_nBehaviorVersion = 12
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_StatusEffect"
+			m_flDetail2Scale = 1.0
+			m_flColorWarpIntensity = 0.65
+			m_flDetail2BlendFactor = 0.5
+			m_nDetail2Combo = "DETAIL_2_COMBO_ADD_SELF_ILLUM"
+			m_flEnvMapIntensity = 1.0
+			m_flAmbientScale = 0.0
+			m_flRimLightScale = 10.0
+			m_flSpecularScale = 0.5
+			m_flSpecularExponent = 0.05
+			m_flSpecularExponentBlendToFull = 1.0
+			m_flSpecularBlendToFull = 1.0
+			m_flReflectionsTintByBaseBlendToNone = 2.0
+			m_flMetalnessBlendToFull = 1.0
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = [ 160, 82, 45 ]
+			m_ColorMax = [ 139, 69, 19 ]
+			m_nFieldOutput = 22
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = [ 20, 7, 1 ]
+			m_ColorMax = [ 73, 30, 0 ]
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_RampScalarLinearSimple"
+			m_Rate = 400.0
+			m_flEndTime = 340282346638528859811704183484516925440.0
+			m_nField = 5
+		},
+		{
+			_class = "C_OP_EndCapTimedDecay"
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderStatusEffect"
+			m_pTextureDetail2 = resource:"materials/models/heroes/statuseffects/dark_stone_status.vtex"
+			m_pTextureColorWarp = resource:"materials/models/heroes/statuseffects/colorwarp_aghs_boss.vtex"
+			m_pTextureSpecularWarp = resource:"materials/models/heroes/statuseffects/colorwarp_goldenglow2.vtex"
+		},
+	]
+}

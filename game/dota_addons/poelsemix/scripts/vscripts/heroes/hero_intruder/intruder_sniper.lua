@@ -31,7 +31,7 @@ function modifier_intruder_sniper:IsHidden() return false end
 function modifier_intruder_sniper:DeclareFunctions()
     local decFuncs =
         {
-                MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
+                MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE,
                 MODIFIER_EVENT_ON_ATTACK_LANDED,
                 MODIFIER_PROPERTY_ATTACK_RANGE_BONUS,
                 MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT,
@@ -58,7 +58,7 @@ function modifier_intruder_sniper:OnAttackLanded(params)
     end
 end
 
-function modifier_intruder_sniper:GetModifierPreAttack_BonusDamage()
+function modifier_intruder_sniper:GetModifierBaseAttack_BonusDamage()
     if self:GetAbility() then
         return self:GetAbility():GetSpecialValueFor("damage")
     end

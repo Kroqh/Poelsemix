@@ -19,8 +19,6 @@
 	"AttackAcquisitionRange"	"450"
 	"AttackRange"			"450"
 
-	//Lav nye talents
-	
 	"Ability10"		"special_bonus_attack_speed_30"
 	"Ability11"		"special_bonus_movement_speed_30"
 	
