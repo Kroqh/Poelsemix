@@ -4,12 +4,15 @@
 		<include src="file://{resources}/styles/custom_game/overthrow_game_info.css" />
 	</styles>
 	<Panel class="OverthrowGameInfo">
+	<Label id="linkWebsite" class="InfoRow" html="true" text="Poelsemix.com" />
 		<Panel id="Title">
-			<Label id="TitleName" text="Poelsemix" />
+			<Label id="TitleName" text="Poelsemix"/>
 		</Panel>
+		
 		<Label id="ObjectiveHeader" class="Header" html="true" text="#overthrow_game_info_header_objective" />
 		<Label id="BriefDescription" text="#overthrow_brief_description" />
 		<Label id="HowToPlayHeader" class="Header" html="true" text="#overthrow_game_info_header_how_to_play" />
+		
 		<Panel id="ThroneRow" class="InfoRow">
 			<Label id="ThroneText" html="true" text="#overthrow_game_info_throne" />
 			<Image id="ThroneImage" src="file://{images}/custom_game/game_info/throne.psd" />

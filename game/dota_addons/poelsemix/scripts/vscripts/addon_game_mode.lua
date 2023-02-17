@@ -262,9 +262,10 @@ function COverthrowGameMode:InitGameMode()
 	Convars:RegisterCommand( "overthrow_set_timer", function(...) return SetTimer( ... ) end, "Set the timer.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "overthrow_force_end_game", function(...) return self:EndGame( DOTA_TEAM_GOODGUYS ) end, "Force the game to end.", FCVAR_CHEAT )
 	Convars:RegisterCommand( "poelse_force_hog_rider", function(...) return self:HogRiders( PlayerResource:GetSelectedHeroEntity(0) ) end, "Force spawn hogriders", FCVAR_CHEAT )
-	Convars:RegisterCommand( "poelse_populate_few", function(...) return self:PopulateEnemies(0) end, "Force spawn hogriders", FCVAR_CHEAT )
-	Convars:RegisterCommand( "poelse_populate_mid", function(...) return self:PopulateEnemies(1) end, "Force spawn hogriders", FCVAR_CHEAT )
-	Convars:RegisterCommand( "poelse_populate_max", function(...) return self:PopulateEnemies(2) end, "Force spawn hogriders", FCVAR_CHEAT )
+	Convars:RegisterCommand( "poelse_populate_few", function(...) return self:PopulateEnemies(0) end, "Spawn 3 heroes", FCVAR_CHEAT )
+	Convars:RegisterCommand( "poelse_populate_mid", function(...) return self:PopulateEnemies(1) end, "Spawn 6 heroes", FCVAR_CHEAT )
+	Convars:RegisterCommand( "poelse_populate_max", function(...) return self:PopulateEnemies(2) end, "Spawn 9 heroes", FCVAR_CHEAT )
+	Convars:RegisterCommand( "poelse_healthy_enemies", function(...) return self:HealthyEnemies() end, "Give enemies 25 levels and flæskesteg + kartofler", FCVAR_CHEAT )
 	Convars:SetInt( "dota_server_side_animation_heroesonly", 0 )
 	COverthrowGameMode:SetUpFountains()
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
@@ -300,6 +301,10 @@ function COverthrowGameMode:PopulateEnemies(i)
 	SendToConsole("dota_create_unit npc_dota_hero_broodmother custom7")
 	SendToConsole("dota_create_unit npc_dota_hero_hoodwink custom8")
 
+end
+function COverthrowGameMode:HealthyEnemies()
+	SendToConsole("dota_bot_give_level 25")
+	SendToConsole("dota_bot_give_item item_flaeskesteg_sovs_kartofler")
 end
 
 

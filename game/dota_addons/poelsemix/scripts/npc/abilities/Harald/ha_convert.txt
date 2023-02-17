@@ -29,7 +29,7 @@
 		"02"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"duration_scepter"			"7.0 8.0 9.0 10.0"
+			"duration_scepter"			"7.0 8.0 9.0 10.0" //Tror ikke det her gør shit lol
 		}
 	}
 

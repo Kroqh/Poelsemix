@@ -1,0 +1,48 @@
+	"pr0_hack"
+	{
+		"BaseClass"                 "ability_lua"
+		"AbilityTextureName"        "hacked"
+		"ScriptFile"			"heroes/hero_pr0ph3cy/prophecy_hack"
+		"MaxLevel"                  "4"
+		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+		"AbilityCooldown"               "18 17 16 15"
+		"AbilityManaCost"               "90 110 130 150"
+		"AbilityCastRange" "700"
+		"HasScepterUpgrade"				"1"
+
+	    "precache"
+        {
+            "particle"          "particles/units/heroes/hero_phantom_lancer/phantomlancer_spiritlance_projectile.vpcf"
+	    "particle"			"particles/status_fx/status_effect_electrical.vpcf"
+        }
+		
+	"AbilitySpecial"
+		{
+  		    "01"
+		    {
+		        "var_type"          "FIELD_FLOAT"
+		        "hacktimer"             "2.5 3 3.5 4"
+			"LinkedSpecialBonus" "special_bonus_prophecy_1"
+		    }
+		    "02"
+		    {
+		        "var_type"          "FIELD_INTEGER"
+		        "dmg_tick"             "50 65 80 95"	
+		    }
+		    "03"
+		    {
+		        "var_type"          "FIELD_INTEGER"
+		        "stat_steal"             "20"	//both int, str and agi, IS AGI EFFECT
+		    }
+		   "04"
+		    {
+		        "var_type"          "FIELD_FLOAT"
+		        "hackticks"             "0.5"
+		    }
+		  
+
+		}																				
+	}	

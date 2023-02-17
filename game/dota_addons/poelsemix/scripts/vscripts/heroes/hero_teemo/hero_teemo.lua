@@ -1,5 +1,5 @@
 LinkLuaModifier("modifier_blinding_dart_blind", "heroes/hero_teemo/hero_teemo", LUA_MODIFIER_MOTION_NONE)
-blinding_dart = class({})
+blinding_dart = blinding_dart or class({})
 
 function blinding_dart:GetAbilityTextureName()
 	return "blinding_dart"
