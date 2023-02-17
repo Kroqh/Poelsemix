@@ -130,6 +130,12 @@ function modifier_pro_hack_stat_gain:IsDebuff()		return false end
 function modifier_pro_hack_stat_gain:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
 
 
+function modifier_pro_hack_stat_gain:OnCreated()
+	if IsServer() then
+		self:GetParent():CalculateStatBonus(false)
+	end
+end
+
 function modifier_pro_hack_stat_gain:DeclareFunctions()
 	local funcs = {
                     MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,

@@ -20,26 +20,6 @@ function modifier_flyby_attack:IsDebuff()
 	return false
 end
 
---------------------------------------------------------------------------------
-
-function modifier_flyby_attack:OnCreated( kv )
-	self.min_damage_bonus = self:GetAbility():GetSpecialValueFor( "min_damage_bonus" )
-	self.max_damage_bonus = self:GetAbility():GetSpecialValueFor( "max_damage_bonus" )
-	-- self.attack_range = self:GetAbility():GetSpecialValueFor( "attack_range" )
-	self.attack_range_for_max = self:GetAbility():GetSpecialValueFor( "attack_range_for_max" )
-end
-
---------------------------------------------------------------------------------
-
-function modifier_flyby_attack:OnRefresh( kv )
-	self.min_damage_bonus = self:GetAbility():GetSpecialValueFor( "min_damage_bonus" )
-	self.max_damage_bonus = self:GetAbility():GetSpecialValueFor( "max_damage_bonus" )
-	-- self.attack_range = self:GetAbility():GetSpecialValueFor( "attack_range" )
-	self.attack_range_for_max = self:GetAbility():GetSpecialValueFor( "attack_range_for_max" )
-end
-
---------------------------------------------------------------------------------
-
 function modifier_flyby_attack:DeclareFunctions()
 	local funcs = {
 		MODIFIER_EVENT_ON_ATTACK_START,
@@ -52,7 +32,11 @@ function modifier_flyby_attack:DeclareFunctions()
 	return funcs
 end
 function modifier_flyby_attack:GetModifierAttackRangeBonus()
-	return self:GetAbility():GetSpecialValueFor("attack_range_for_max")
+	if self:GetParent():HasScepter() then
+		return self:GetAbility():GetSpecialValueFor("attack_range_for_max") * self:GetAbility():GetSpecialValueFor("aghs_multi")
+	else 
+		return self:GetAbility():GetSpecialValueFor("attack_range_for_max")
+	end
 end
 --------------------------------------------------------------------------------
 
@@ -80,11 +64,19 @@ function modifier_flyby_attack:OnAttackStart( params )
 
 	
 	----------------------------------------------------
-	--    Determins damage bonus based on distance    --
+	--    Determines damage bonus based on distance    --
 	----------------------------------------------------
-	min_damage = self.min_damage_bonus
-	max_damage = self.max_damage_bonus
-	attackRange = params.attacker:GetBaseAttackRange() + self:GetAbility():GetSpecialValueFor("attack_range_for_max")
+	min_damage = self:GetAbility():GetSpecialValueFor( "min_damage_bonus" )
+	max_damage = self:GetAbility():GetSpecialValueFor( "max_damage_bonus" )
+	attackRange = self:GetAbility():GetSpecialValueFor("attack_range_for_max")
+
+	if self:GetParent():HasScepter() then
+		min_damage = min_damage * self:GetAbility():GetSpecialValueFor("aghs_multi")
+		max_damage = max_damage * self:GetAbility():GetSpecialValueFor("aghs_multi")
+		attackRange = attackRange * self:GetAbility():GetSpecialValueFor("aghs_multi")
+	end
+
+	attackRange = attackRange + params.attacker:GetBaseAttackRange()
 	dist_bonus = 0
 	if dis < attackRange / 3 then
 		dist_bonus = min_damage

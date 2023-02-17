@@ -539,7 +539,7 @@ end
 LinkLuaModifier("modifier_guerrilla_warfare_passive", "heroes/hero_teemo/hero_teemo", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_guerrilla_warfare_invis", "heroes/hero_teemo/hero_teemo", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_guerrilla_warfare_attackspeed", "heroes/hero_teemo/hero_teemo", LUA_MODIFIER_MOTION_NONE)
-guerrilla_warfare = class({})
+guerrilla_warfare = guerrilla_warfare or class({})
 
 function guerrilla_warfare:GetAbilityTextureName()
 	return "guerrilla_warfare"
@@ -549,7 +549,7 @@ function guerrilla_warfare:GetIntrinsicModifierName()
 	return "modifier_guerrilla_warfare_passive"
 end
 
-modifier_guerrilla_warfare_passive = class({})
+modifier_guerrilla_warfare_passive = modifier_guerrilla_warfare_passive or class({})
 
 function modifier_guerrilla_warfare_passive:IsPurgeable() return false end
 function modifier_guerrilla_warfare_passive:IsHidden() return true end
@@ -612,7 +612,7 @@ function modifier_guerrilla_warfare_passive:OnIntervalThink()
 	end
 end
 
-modifier_guerrilla_warfare_invis = class({})
+modifier_guerrilla_warfare_invis = modifier_guerrilla_warfare_invis or class({})
 
 function modifier_guerrilla_warfare_invis:IsPurgeable() return false end
 function modifier_guerrilla_warfare_invis:IsDebuff() return false end
@@ -620,7 +620,7 @@ function modifier_guerrilla_warfare_invis:IsDebuff() return false end
 function modifier_guerrilla_warfare_invis:DeclareFunctions()
 	local decFuncs = {
 	MODIFIER_PROPERTY_INVISIBILITY_LEVEL, 
-	MODIFIER_EVENT_ON_ATTACK,
+	MODIFIER_EVENT_ON_ATTACK_START,
 	MODIFIER_EVENT_ON_ABILITY_EXECUTED}
 	return decFuncs
 end
@@ -635,11 +635,34 @@ function modifier_guerrilla_warfare_invis:OnAbilityExecuted(keys)
 	end
 end
 
-function modifier_guerrilla_warfare_invis:OnAttack(keys)
+function modifier_guerrilla_warfare_invis:OnAttackStart(keys)
 	if IsServer() then
 		local parent = self:GetParent()
 
 		if keys.attacker == parent then
+
+			if parent:HasScepter() then
+				local ability = parent:FindAbilityByName("blinding_dart")
+				if ability:GetLevel() == 0 then return end
+				
+				local cdleft = ability:GetCooldownTimeRemaining()
+				ability:EndCooldown()
+				local manaRestore = ability:GetManaCost(ability:GetLevel())
+				if parent:GetMana() < manaRestore then --Incase the hero doesnt have enough mana
+					parent:GiveMana(manaRestore)
+					manaRestore = 0 -- make sure it doesnt double restore
+				end
+	
+				parent:CastAbilityOnTarget(keys.target, ability, 0)
+				if cdleft == 0 then
+					ability:EndCooldown()
+				else
+					ability:EndCooldown() --needs to be ended before it can be restarted lmao
+					ability:StartCooldown(cdleft)
+				end
+				
+				parent:GiveMana(manaRestore) -- restore mana after
+				end
 			self:Destroy()
 		end
 	end

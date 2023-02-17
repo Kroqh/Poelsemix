@@ -6,6 +6,7 @@
         "BaseClass"					"ability_lua"
         "ScriptFile"				"heroes/hero_shadow/flyby_attack/flyby_attack.lua"
         "AbilityTextureName"		"shadow_teleport"
+	"HasScepterUpgrade"		"1"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -56,6 +57,11 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"teleport_cooldown"			"2.5 2.25 2 1.75 1.5"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"aghs_multi"			"2"
 			}
 		}
 

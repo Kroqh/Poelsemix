@@ -52,7 +52,6 @@ modifier_item_abaddon_lichcap_unique = modifier_item_abaddon_lichcap_unique or c
 function modifier_item_abaddon_lichcap_unique:IsHidden()		return true end
 function modifier_item_abaddon_lichcap_unique:IsPurgable()		return false end
 function modifier_item_abaddon_lichcap_unique:RemoveOnDeath()	return false end
-function modifier_item_abaddon_lichcap_unique:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
 
 function modifier_item_abaddon_lichcap_unique:DeclareFunctions()
 	return {
