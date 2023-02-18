@@ -3,6 +3,7 @@
         "BaseClass"					"ability_lua"
         "ScriptFile"				"heroes/hero_damian/damian_faded.lua"
         "AbilityTextureName"		"damian_faded"
+	"HasScepterUpgrade"		"1"
 
 	"MaxLevel" 		"1"
 	"precache"
@@ -38,6 +39,11 @@
 				"var_type"					"FIELD_FLOAT"
 				"poop_duration"	"6"
 				"LinkedSpecialBonus" "special_bonus_damian_2"	
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aghs_interval"					"10"	//1 cap gained every interval
 			}
 		}
     }
