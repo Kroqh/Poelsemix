@@ -11,7 +11,7 @@
 
 	"LinkedAbility"
 	{
-			"01"	"intruder_fadedthanaho"
+			"01"	"damian_fadedthanaho"
 	}	
 	
 	// Special

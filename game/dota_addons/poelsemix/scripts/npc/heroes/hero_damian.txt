@@ -3,7 +3,7 @@
 	// HERO: treant
 	"override_hero"				"npc_dota_hero_treant"			// Hero to override
 	"ModelScale"	"0.6"
-	"Ability1" "red_rose"				
+	"Ability1" "damian_penjamin"				
 	"Ability2" "damian_fadedthanaho"
 	"Ability3" "damian_faded"
 	"Ability4" "generic_hidden"
@@ -38,6 +38,6 @@
 	"Ability14"		"special_bonus_damian_1"
 	"Ability15"		"special_bonus_damian_2"
 	
-	"Ability16"		"special_bonus_movement_speed_30"
+	"Ability16"		"special_bonus_damian_3"
 	"Ability17"		"special_bonus_movement_speed_30"							
 }

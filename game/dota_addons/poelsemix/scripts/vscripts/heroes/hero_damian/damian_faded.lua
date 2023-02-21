@@ -61,6 +61,8 @@ function modifier_damian_faded:OnStackCountChanged(old)
             self:SetStackCount(0)
             if parent:HasModifier("modifier_damian_fadedthanaho_stack") then parent:RemoveModifierByName("modifier_damian_fadedthanaho_stack") end
 
+            if (parent:FindAbilityByName("damian_penjamin"):GetToggleState()) then parent:FindAbilityByName("damian_penjamin"):ToggleAbility() end
+
             duration = self:GetAbility():GetSpecialValueFor("poop_duration")
             if parent:HasTalent("special_bonus_damian_2") then duration = duration + parent:FindAbilityByName("special_bonus_damian_2"):GetSpecialValueFor("value") end 
             parent:AddNewModifier(parent,self:GetAbility(),"modifier_damian_faded_pooped", {duration = duration})

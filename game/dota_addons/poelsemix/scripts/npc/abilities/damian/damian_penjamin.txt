@@ -1,0 +1,49 @@
+"damian_penjamin"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"				"heroes/hero_damian/damian_penjamin.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"			"damian_penjamin"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+
+		"precache"
+		{
+		"particle"	"particles/units/heroes/hero_winter_wyvern/wyvern_taunt_ring_smoke.vpcf"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_per_sec"			"25 22 19 16"	 //Specifically per sec since it shouldnt be doubled when tick rate talent is applied			
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_restore_per_tick"		"30 45 60 75"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"faded_stack_per_tick"			"6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tick_rate"				"1"
+				"LinkedSpecialBonus" "special_bonus_damian_3"
+			}
+		}
+	}
