@@ -8,37 +8,48 @@
 	"AbilityTextureName"			"kim_stille"
 	
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityCooldown"				"16 15 14 13"
+	"AbilityCooldown"				"20 18 16 14"
 	"AbilityManaCost"				"120"
 	"AbilityCastRange"				"0"
-	"AbilityCastPoint"				"´0.1"
+	"AbilityCastPoint"				"0.0"
+
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_enigma/enigma_base_attack.vpcf"
+	}
 
 	"AbilitySpecial"
 	{
 	    "01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"velocity" "1000 1000 1000 1000"
+			"velocity" "1000"
 		}
 	    "02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"dmg" "150 300 450 600"
+			"dmg" "125 250 375 500"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"range" "700"
+			"range" "700" //dash range
 		}
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"radius" "500"
+			"radius" "500" //aoe firing range at end of dash
 		}
                 "05"
                 {
 			"var_type" "FIELD_FLOAT"
-                        "duration" "1 2 3 4"
+                        "duration" "1 2 3 4" //silence duration
+		}
+
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"velocity_projectile" "500"
 		}
 	}
 }

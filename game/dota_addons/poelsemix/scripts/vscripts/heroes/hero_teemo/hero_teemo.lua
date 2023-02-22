@@ -252,7 +252,7 @@ function modifier_toxic_shot_passive:OnAttackLanded(keys)
 	end
 end
 
-modifier_toxic_shot_dot = class({})
+modifier_toxic_shot_dot = modifier_toxic_shot_dot or class({})
 
 function modifier_toxic_shot_dot:OnCreated()
 	if IsServer() then
@@ -280,6 +280,7 @@ function modifier_toxic_shot_dot:OnIntervalThink()
 		damage = self.damage,
 		ability = self:GetAbility()
 		})
+		self:StartIntervalThink(self.tick)
 	end
 end
 

@@ -19,7 +19,6 @@ end
 
 modifier_stille_cast = class ({})
 
-function modifier_stille_cast:GetAttributes() return MODIFIER_ATTRIBUTE_MULTIPLE end
 function modifier_stille_cast:IsPurgable() return	false end
 function modifier_stille_cast:IsHidden() return	true end
 function modifier_stille_cast:IgnoreTenacity() return true end
@@ -43,7 +42,6 @@ function modifier_stille_cast:OnCreated()
 		local max_distance = ability:GetSpecialValueFor("range") + GetCastRangeIncrease(caster)
 	
 		
-		print(max_distance)
 		local distance = (caster:GetAbsOrigin() - caster:GetCursorPosition() ):Length2D()
 		if distance > max_distance then distance = max_distance end
 
@@ -77,23 +75,46 @@ function modifier_stille_cast:HorizontalMotion(me, dt)
         else
 			
     		local ability = self:GetAbility()
-    		local ability_level = ability:GetLevel() - 1
 			local target_teams = DOTA_UNIT_TARGET_TEAM_ENEMY 
 			local target_types = DOTA_UNIT_TARGET_ALL 
 			local target_flags = DOTA_UNIT_TARGET_FLAG_NONE 
-			local radius = ability:GetLevelSpecialValueFor("radius", ability_level)
-			local duration = ability:GetSpecialValueFor("duration")
+			local radius = ability:GetSpecialValueFor("radius")
+			local projectile_speed = ability:GetSpecialValueFor("velocity_projectile")
 
 
 			local units = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, radius, target_teams, target_types, target_flags, FIND_CLOSEST, false)
 			for _, enemy in  pairs(units) do
-				ApplyDamage({victim = enemy, attacker = caster, damage = ability:GetLevelSpecialValueFor("dmg", ability_level), damage_type = ability:GetAbilityDamageType()})
-				enemy:AddNewModifier(caster, ability, "modifier_stille_silence", {duration = duration})
+
+				local  bolt_projectile = {Target = enemy,
+							  Source = caster,
+							  Ability = ability,
+							  EffectName = "particles/units/heroes/hero_enigma/enigma_base_attack.vpcf",
+							  iMoveSpeed = projectile_speed,
+							  bDodgeable = false, 
+							  bVisibleToEnemies = true,
+							  bReplaceExisting = false,
+							  bProvidesVision = true,
+							  iVisionRadius = 20,
+							  iVisionTeamNumber = caster:GetTeamNumber()
+	}
+
+				ProjectileManager:CreateTrackingProjectile(bolt_projectile)  
+				
+				
+				
 				
     		end
 			self:Destroy()
 		end
 	end
+end
+
+function kim_stille:OnProjectileHit(target, location)
+	if not IsServer() then return end
+		local caster = self:GetCaster()
+		local duration = self:GetSpecialValueFor("duration")
+		ApplyDamage({victim = target, attacker = caster, damage = self:GetSpecialValueFor("dmg"), damage_type = self:GetAbilityDamageType()})
+		target:AddNewModifier(caster, self, "modifier_stille_silence", {duration = duration})
 end
 
 function modifier_stille_cast:OnRemoved()
@@ -110,7 +131,9 @@ end
 
 
 LinkLuaModifier("modifier_stille_silence", "heroes/hero_kim/kim_stille", LUA_MODIFIER_MOTION_NONE)
-modifier_stille_silence = class({})
+modifier_stille_silence = modifier_stille_silence or class({})
+
+function modifier_stille_silence:IsDebuff() return true end
 
 function modifier_stille_silence:GetEffectName()
 	return "particles/generic_gameplay/generic_silenced.vpcf"

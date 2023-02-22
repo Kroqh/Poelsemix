@@ -1,12 +1,12 @@
 intruder_flash = intruder_flash or class({})
 
 function intruder_flash:OnSpellStart()
-    if not IsServer then return end
+    if not IsServer() then return end
     local caster = self:GetCaster()
     local target_point = self:GetCursorPosition()
     local distance = (caster:GetAbsOrigin() - target_point):Length2D()
     local direction = (target_point - caster:GetAbsOrigin()):Normalized()
-    caster:EmitSound("intruder_throw_flash") -- change
+    caster:EmitSound("intruder_throw_flash")
 
     -- Launch the smoke grenade projectile
     local smoke_projectile = {
@@ -37,9 +37,9 @@ end
 
 
 function intruder_flash:OnProjectileHit(target, location)
-    if not IsServer then return end
+    if not IsServer() then return end
     local caster = self:GetCaster()
-    EmitSoundOnLocationWithCaster(location,"intruder_flash",caster) -- change
+    EmitSoundOnLocationWithCaster(location,"intruder_flash",caster)
 
     dur = self:GetSpecialValueFor("duration")
     if caster:HasTalent("special_bonus_intruder_1") then  dur = dur + caster:FindAbilityByName("special_bonus_intruder_1"):GetSpecialValueFor("value") end

@@ -2,33 +2,33 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_AOE"
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_kim/kim_banana"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityTextureName"			"banana"
-	"AOERadius"						"%activation_radius"
-	"MaxLevel"              "1"
+	"HasScepterUpgrade" "1"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{		
 
 		"soundfile" "soundevents/kim_soundevent.vsndevts"
-		"model" "models/props_gameplay/banana_prop_open.vmdl"
+		"particle" "particles/heroes/kim/banana_kim_proj.vpcf"
 	}
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"750"
+	"AbilityCastRange"				"600"
 	"AbilityCastPoint"				"0"
 	
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"10.0"
+	"AbilityCooldown"				"20.0 17.0 14.0 11.0"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"0 0 0 0"
+	"AbilityManaCost"				"100 90 80 70"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -37,167 +37,55 @@
 		"01"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"activation_radius"			"100"
+			"gold_stolen"			"40 55 70 85"
 		}
 		"02"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"explode_delay"			"0.2"
+			"var_type"					"FIELD_INTEGER"
+			"target_heal"			"250 255 260 265"
 		}
 		"03"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"slow_radius"				"200"
+			"projectile_speed"				"500"
 		}
 		"04"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"slow_duration"				"2"
+			"var_type"					"FIELD_INTEGER"
+			"slip_distance"				"500"
 		}
 		"05"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"activation_time"			"0.5"
-		}	
+			"var_type"					"FIELD_INTEGER"
+			"aghs_poison_per_tick"			"150"
+		}
 		"06"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"fade_time"					"1.0"
+			"aghs_tick_rate"			"1.0"
 		}
 		"07"
 		{
 			"var_type"					"FIELD_FLOAT"
-			"duration"					"100.0"
+			"aghs_tick_duration"			"3"
 		}
-		// Extra
 		"08"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"vision_radius"				"300"
+			"var_type"					"FIELD_INTEGER"
+			"peel_duration"			"30 32 34 36"
 		}
 		"09"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"vision_duration"			"1.0"
+			"var_type"					"FIELD_INTEGER"
+			"peel_radius"			"25"
 		}
+		"10"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"slip_velocity"			"700"
+		}			
 
 	}
 
-"OnAbilityPhaseStart"
-{
-		"FireSound"
-		{
-					"EffectName"	"bananer"
-					"TARGET"		"CASTER"
-		}
-}
 
-	"OnSpellStart"
-	{
-
-		"RunScript"
-		{
-			"ScriptFile"	"scripts/vscripts/heroes/hero_kim/banana.lua"
-			"Function"		"StasisTrapPlant"
-			"Target"		"POINT"
-			"modifier_stasis_trap"	"modifier_stasis_trap_datadriven"
-			"modifier_tracker"		"modifier_stasis_trap_tracker_datadriven"
-			"modifier_stasis_trap_invisibility"	"modifier_stasis_trap_invisibility_datadriven"
-		}
-
-	}
-
-	"Modifiers"
-	{
-		"modifier_stasis_trap_datadriven"
-		{
-			"IsHidden"		"1"
-			"IsPurgable"	"0"
-
-
-			"States"
-			{
-				"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
-
-		"modifier_stasis_trap_tracker_datadriven"
-		{
-			"IsHidden"		"1"
-			"IsPurgable"	"0"
-
-			"ThinkInterval"  "0.1"
-			"OnIntervalThink"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"scripts/vscripts/heroes/hero_kim/banana.lua"
-					"Function"		"StasisTrapTracker"
-					"modifier_trigger"	"modifier_stasis_trap_trigger_datadriven"
-				}
-			}
-		}
-
-		"modifier_stasis_trap_invisibility_datadriven"
-		{
-			"IsHidden"		"0"
-			"IsPurgable"	"0"
-
-			"States"
-			{
-				"MODIFIER_STATE_INVISIBLE"		"MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
-
-		"modifier_stasis_trap_trigger_datadriven"
-		{
-			"OnCreated"
-			{
-				
-				"ActOnTargets"
-				{
-					"Target"
-					{
-						"Center"  	"TARGET"
-						"Radius" 	"%slow_radius"
-						"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-						"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-					}
-				
-					"Action"    
-					{
-						"ApplyModifier"
-						{
-							"ModifierName"	"modifier_stasis_trap_stun_datadriven"
-							"Target" 		"TARGET"
-							"Duration"		"%slow_duration"
-						}
-					}
-				}
-
-
-				"RunScript"
-				{
-					"ScriptFile"	"scripts/vscripts/heroes/hero_kim/banana.lua"
-					"Function"		"StasisTrapRemove"
-				}
-			}
-		}
-
-		"modifier_stasis_trap_stun_datadriven"
-		{
-			"IsDebuff"	"1"
-			"States"
-			{
-				"MODIFIER_STATE_FLYING" "MODIFIER_STATE_VALUE_ENABLED"
-				"MODIFIER_STATE_ROOTED" "MODIFIER_STATE_VALUE_ENABLED"
-			}	
-			"Properties"
-				{
-				"MODIFIER_PROPERTY_DISABLE_HEALING" "1"
-				}
-			
-		}
-
-	}
 }
