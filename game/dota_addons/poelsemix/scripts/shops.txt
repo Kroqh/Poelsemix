@@ -71,6 +71,7 @@
 		"item"		"item_gs_zamorak"
 		"item"		"item_gs_ancient"
 		"item"		"item_twisted_bow"
+		"item"		"item_skattevaesenet"
 		"item"		"item_actual_butterfly"
 		"item"		"item_crocs"
 		"item"		"item_flaeskesteg_sovs_kartofler"

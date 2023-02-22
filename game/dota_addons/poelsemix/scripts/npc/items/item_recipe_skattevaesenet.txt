@@ -1,0 +1,14 @@
+"item_recipe_skattevaesenet"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"0"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_skattevaesenet"
+		"ItemRequirements"
+		{
+			"01" "item_hand_of_midas;item_vitality_booster"
+		}
+  	}

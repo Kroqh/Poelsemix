@@ -153,7 +153,8 @@
         }
     }
 }
-"tskjold"
+
+"item_cash"
 {
     "operator_stacks"
     {
@@ -169,10 +170,10 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/tskjold.vsnd"
+                              "value0"        "sounds/item_cash.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "5.00000"  }
+                    "volume"            {   "value"     "3.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }

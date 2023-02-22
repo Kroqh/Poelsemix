@@ -1,0 +1,67 @@
+"item_skattevaesenet"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_lua"
+  	"AbilityTextureName"        "skat"
+	"ScriptFile"					"items/item_skattevaesenet.lua"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  	"ItemCost"					"3200"
+  	"ID"						"3050"
+
+	"AbilityCastRange"        "600"
+	"AbilityCastPoint"        "0.0"
+	"AbilityCooldown"       "30.0"
+	"FightRecapLevel"				"2"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"health;attack_speed"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"tax"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"attack_speed"					"50"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"health"						"300"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"tax_percent"						"12"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"min_gold"						"50"
+		}
+		"05"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"cast_range_bonus"						"50"
+		}
+	}
+
+	"precache"
+	{
+		"particle" "particles/econ/courier/courier_flopjaw_gold/flopjaw_death_gold.vpcf"
+	}
+	
+}
