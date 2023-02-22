@@ -46,6 +46,7 @@
 		"item"		"item_sandals"
 		"item"		"item_sovs_kartofler"
 		"item"		"item_roids_2"
+		"item"		"item_talisman_of_tax_evasion"
 	}
 
 	"weapons_armor"

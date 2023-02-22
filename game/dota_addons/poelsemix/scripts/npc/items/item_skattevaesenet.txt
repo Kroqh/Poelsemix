@@ -62,6 +62,7 @@
 	"precache"
 	{
 		"particle" "particles/econ/courier/courier_flopjaw_gold/flopjaw_death_gold.vpcf"
+		"particle" "particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_msg_deny_symbol.vpcf"
 	}
 	
 }

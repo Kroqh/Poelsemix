@@ -1,0 +1,14 @@
+"item_recipe_talisman_of_tax_evasion"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"500"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_talisman_of_tax_evasion"
+		"ItemRequirements"
+		{
+			"01" "item_talisman_of_evasion"
+		}
+  	}

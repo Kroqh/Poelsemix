@@ -1,0 +1,48 @@
+"item_talisman_of_tax_evasion"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "amulet_of_tax_evasion"
+  	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"1800"
+  	"ID"						"3051"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"evasion"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"skattely"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"evasion"					"20"
+		}
+	}
+
+	
+	"Modifiers"
+	{
+		"modifier_talisman_of_tax_evasion"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_EVASION_CONSTANT" "%evasion"
+			}
+		}
+	}
+}
