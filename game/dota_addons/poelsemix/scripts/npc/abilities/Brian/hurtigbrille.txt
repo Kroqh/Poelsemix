@@ -2,16 +2,18 @@
 {
 	"BaseClass"                 "ability_lua"
 	"AbilityTextureName"        "hurtigbrille"
-	"ScriptFile"			"heroes/hero_brian/hero_brian"
+	"ScriptFile"			"heroes/hero_brian/brian_hurtigbrille"
 	"MaxLevel"                  "4"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityCooldown"               "15"
 	"AbilityManaCost"               "100"
+	"HasScepterUpgrade"				"1"
 	
 
 		"precache"
         {
         "particle" "particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_ambient_esl_fire.vpcf"
+	"particle" "particles/econ/items/ogre_magi/ogre_2022_cc/ogre_2022_cc_trail_fire.vpcf"
         }
 	
 	
@@ -31,6 +33,22 @@
 	    {
 	        "var_type"          "FIELD_INTEGER"
 	        "duration"      "4 5 6 7"
+		"LinkedSpecialBonus" "special_bonus_brian_1"
+	    }
+		"04"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "scepter_damage_tick"      "25"
+	    }
+		"05"
+		{
+	        "var_type"          "FIELD_INTEGER"
+	        "scepter_radius"      "250"
+	    }
+		"06"
+		{
+	        "var_type"          "FIELD_FLOAT"
+	        "scepter_tick_rate"      "0.2"
 	    }
 
 	}
