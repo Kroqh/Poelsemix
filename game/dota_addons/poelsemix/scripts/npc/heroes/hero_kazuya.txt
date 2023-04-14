@@ -6,7 +6,7 @@
 	"ModelScale"	"1.8"
 	"DisableWearables" "1"
 	
-	//"Ability1" "kaz_electric_wind_god_fist" //https://tekken.fandom.com/wiki/Electric_Wind_God_Fist				
+	"Ability1" "kazuya_god_fist" //https://tekken.fandom.com/wiki/Electric_Wind_God_Fist				
 	//"Ability2" "kaz_reverse_neck_throw" //https://tekken.fandom.com/wiki/Reverse_Neck_Throw
 	//"Ability3" "kaz_spinning_demon" //https://tekken.fandom.com/wiki/Spinning_Demon_(Kazuya_Mishima)
 	//"Ability4" "kaz_rage"
