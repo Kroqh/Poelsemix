@@ -1,100 +1,48 @@
 	"brian_dak"
 	{
-		"BaseClass"                 "ability_datadriven"
+		"BaseClass"                 "ability_lua"
 		"AbilityTextureName" "brian_dak"
 		"MaxLevel"                  "3"
+		"ScriptFile"			"heroes/hero_brian/brian_dak"
 		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"SpellImmunityType"                "SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"     "DAMAGE_TYPE_PURE"
-		"AOERadius"					"800"
+		"AOERadius"					"%radius"
 		"AbilityCooldown"           "120"
 		"AbilityManaCost"           "200"
-		"AbilityDamage"             "25 50 75"
 "precache"
 {
 	"soundfile" "soundevents/brian_soundevent.vsndevts"
+	"particle" "particles/units/heroes/hero_brian/dak.vpcf"
 }
-		"OnSpellStart"
-		{
-		    "ApplyModifier"
-		    {
-		        "ModifierName"  "modifier_face4"
-		        "Target"        "CASTER"
-		        "Duration"		"12"
-		    }
-			"FireSound"
-			{
-				"EffectName"		"max_sprit"
-				"Target"			"CASTER"
-			}
-		}
-		"Modifiers"
-		{
-		    "modifier_face4"
-		    {
-		        "Passive"           "0"
-		        "IsHidden"          "0"
-		        "IsDebuff"          "0"
 		
-		        "ThinkInterval"  "0.25"
-		        "OnIntervalThink"
-		        {
-		            "Damage"
-		            {
-		                "Target"
-		                {
-		                    "Center"    "CASTER"
-		                    "Radius"    "800"
-		                    "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-		                    "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		                }
-		                "Type"      "DAMAGE_TYPE_PURE"
-		                "Damage"    "%AbilityDamage"
-		            }
-					"AttachEffect"
-					{
-						"Target"			"CASTER"
-						"EffectName"		"particles/units/heroes/hero_sandking/sandking_epicenter.vpcf"
-						"EffectAttachType"	"start_at_customorigin"
-						"ControlPoints"
-						{
-							"01"			"800 800 800"
-						}
-					}
-		            "Knockback"
-		            {
-		                "Target"
-		                {
-		                    "Center"    "CASTER"
-		                    "Radius"    "800"
-		                    "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-		                    "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		                }
-		                "Center"            "TARGET"
-		                "Duration"          "0.1"
-		                "Height"            "50"
-		                "IsFixedDistance"   "1"
-		                "Distance"			"0"
-		                "ShouldStun"        "1"    
-		            }
-		        }
-		    }
-		}
 		"AbilitySpecial"
 		{
 
 			"01"
 		    {
-		        "var_type"          "FIELD_FLOAT"
-		        "radius"          "800"
+		        "var_type"          "FIELD_INTEGER"
+		        "radius"          "700 800 900"
+			"LinkedSpecialBonus" "special_bonus_brian_3"
 		    }
 			"02"
 		    {
 		        "var_type"          "FIELD_FLOAT"
-		        "duration"          "12"
+		        "duration"          "12" //matches sound clip
+		    }
+			"03"
+		    {
+		        "var_type"          "FIELD_FLOAT"
+		        "tick_rate"          "0.25"
+			"LinkedSpecialBonus" "special_bonus_brian_2"
+		    }
+			"04"
+		    {
+		        "var_type"          "FIELD_INTEGER"
+		        "damage_tick"          "25 50 75"
 		    }
 		}
 	}	

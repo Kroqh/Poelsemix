@@ -1,29 +1,9 @@
 "AddonInfo"
 {
-	"HeroGuidesSupported"		"1"
+	"HeroGuidesSupported"		"0"
 	"PenaltiesEnabled"		"0"
 	"poelsemix"
 	{
 		"MaxPlayers"		"10"
 	}
-	//"mines_trio"
-	//{
-	//	"MaxPlayers"		"9"
-	//}
-	//"desert_duo"
-	//{
-	//	"MaxPlayers"		"10"
-	//}
-	//"forest_solo"
-	//{
-	//	"MaxPlayers"		"10"
-	//}
-	//"desert_quintet"
-	//{
-	//	"MaxPlayers"		"15"
-	//}
-	//"temple_quartet"
-	//{
-	//	"MaxPlayers"		"16"
-	//}
 }

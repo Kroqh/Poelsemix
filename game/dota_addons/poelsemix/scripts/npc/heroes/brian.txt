@@ -17,10 +17,10 @@
 	"Ability13"		"special_bonus_hp_500"
 	
 	"Ability14"		"special_bonus_strength_25"
-	"Ability15"		"special_bonus_evasion_20"
+	"Ability15"		"special_bonus_armor_20"
 	
-	"Ability16"		"special_bonus_armor_20"
-	"Ability17"		"special_bonus_magic_resistance_20"
+	"Ability16"		"special_bonus_brian_2"
+	"Ability17"		"special_bonus_brian_3"
 	
 	"MovementSpeed"               "280"
 	"StatusHealth"                "750"								

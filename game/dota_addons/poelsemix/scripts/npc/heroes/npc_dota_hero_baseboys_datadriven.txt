@@ -10,7 +10,6 @@
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "naga_siren_mirror_image"
-	//"Ability7" "plant_bomb_explosion_datadriven"
 
 	"Ability10"  "special_bonus_attack_speed_15"
 	"Ability11"  "special_bonus_strength_10"

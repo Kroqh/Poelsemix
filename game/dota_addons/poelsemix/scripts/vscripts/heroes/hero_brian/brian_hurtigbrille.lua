@@ -1,7 +1,7 @@
 --hurtigbrille
 
 LinkLuaModifier("modifier_hurtigbrille", "heroes/hero_brian/brian_hurtigbrille", LUA_MODIFIER_MOTION_NONE)
-hurtigbrille = class({})
+hurtigbrille = hurtigbrille or class({})
 
 function hurtigbrille:OnSpellStart()
     if IsServer() then
