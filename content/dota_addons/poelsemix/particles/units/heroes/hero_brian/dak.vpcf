@@ -132,10 +132,4 @@
 			]
 		},
 	]
-	m_Children = 
-	[
-		{
-			m_ChildRef = resource:"particles/units/heroes/hero_brian/dak_pulse.vpcf"
-		},
-	]
 }

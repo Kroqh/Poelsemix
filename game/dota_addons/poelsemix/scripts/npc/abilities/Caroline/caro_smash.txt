@@ -48,7 +48,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"particle"				"particles/econ/items/enchantress/enchantress_virgas/ench_impetus_virgas.vpcf"
+		"particle"				"particles/heroes/caroline/smash_ball.vpcf"
 		"particle"				"particles/generic_gameplay/generic_purge.vpcf"
 	}
 	
@@ -63,7 +63,7 @@
 			"Orb"
 			{
 				"Priority"					"DOTA_ORB_PRIORITY_ABILITY"
-				"ProjectileName"			"particles/econ/items/enchantress/enchantress_virgas/ench_impetus_virgas.vpcf"
+				"ProjectileName"			"particles/heroes/caroline/smash_ball.vpcf"
 				"CastAttack"				"1"
 			}
 

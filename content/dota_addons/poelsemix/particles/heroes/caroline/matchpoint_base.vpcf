@@ -1,0 +1,42 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf54:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 0
+	m_flConstantRadius = 2.0
+	m_bShouldSort = false
+	m_flMaxRecreationTime = -1.0
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_g.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_f.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_trail.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_b.vpcf"
+		},
+		{
+			m_bEndCap = true
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_destruction.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_d.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_h.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/heroes/caroline/matchpoint_light.vpcf"
+		},
+	]
+	m_PreEmissionOperators = [  ]
+	m_nBehaviorVersion = 12
+}

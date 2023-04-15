@@ -103,7 +103,7 @@
 	"precache"
 	{
 
-		"particle"					"particles/units/heroes/hero_windrunner/windrunner_spell_powershot.vpcf"
+		"particle"					"particles/heroes/caroline/matchpoint.vpcf"
 	}
 	
 	"OnSpellStart"

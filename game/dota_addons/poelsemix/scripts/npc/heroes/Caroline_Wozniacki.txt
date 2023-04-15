@@ -15,10 +15,10 @@
 	"Ability5" "generic_hidden"
 	"Ability6" "caro_matchpoint"
 	"Ability7" "generic_hidden"
-	"ProjectileModel" "particles/econ/items/crystal_maiden/ti7_immortal_shoulder/cm_ti7_immortal_base_attack.vpcf"
+	"ProjectileModel" "particles/heroes/caroline/tennis_ball.vpcf"
 	
-	"Ability10"		"special_bonus_mp_400"
-	"Ability11"		"special_bonus_hp_500"
+	"Ability10"		"special_bonus_caro_2"
+	"Ability11"		"special_bonus_mp_400"
 	
 	"Ability12"		"special_bonus_movement_speed_50"
 	"Ability13"		"special_bonus_agility_20"

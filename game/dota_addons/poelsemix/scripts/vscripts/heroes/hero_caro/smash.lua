@@ -69,7 +69,7 @@ function powershot_start_traverse( keys )
 	local ability = keys.ability
 	local startAttackSound = "Ability.PowershotPull"
 	local startTraverseSound = "Ability.Powershot"
-	local projectileName = "particles/units/heroes/hero_windrunner/windrunner_spell_powershot.vpcf"
+	local projectileName = "particles/heroes/caroline/matchpoint.vpcf"
 	
 	-- Stop sound event and fire new one, can do this in datadriven but for continuous purpose, let's put it here
 	StopSoundEvent( startAttackSound, caster )

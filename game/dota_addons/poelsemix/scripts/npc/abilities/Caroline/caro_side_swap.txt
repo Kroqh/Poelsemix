@@ -2,16 +2,16 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"				"ability_lua"
 	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET |DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+	"ScriptFile"			"heroes/hero_caro/caro_side_swap"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"				"2"
 	"AbilityTextureName"			"caro_sides"
 	"CastFilterRejectCaster" 		"1"
-"AbilityChannelTime" "0.3"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
@@ -19,22 +19,16 @@
 	{
 		"soundfile" "soundevents/caro_soundevent.vsndevts"
 		"particle"			"particles/units/heroes/hero_vengeful/vengeful_nether_swap.vpcf"
-		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_nether_swap_pink.vpcf"
+		"particle"  		"particles/units/heroes/hero_vengeful/vengeful_nether_swap_target.vpcf"
 						
 	}
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"500 750 100 1250"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0"
-	
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"15.0"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 100 100 100"
+	"AbilityManaCost"				"60"
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -42,15 +36,14 @@
 	{
 		"01"
 		{
-			"var_type"						"FIELD_INTEGER"
-			"tooltip_range"					"500 750 100 1250"
+			"var_type"						"FIELD_FLOAT"
+			"cast_time"					"1.25 1 0.75 0.5"
+			"LinkedSpecialBonus" "special_bonus_caro_2"
 		}
-
-		// Extra
-		"03"
+		"02"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"tree_radius"					"300"
+			"cast_range"					"800 950 1100 1250"
 		}
 	}
 
