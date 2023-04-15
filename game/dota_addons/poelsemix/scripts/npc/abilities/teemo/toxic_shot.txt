@@ -14,7 +14,7 @@
 	    "01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage" "15 25 35 45"
+			"damage_tick" "10 20 30 40"
 		}
 		"02"
 		{
@@ -24,22 +24,22 @@
 		"03"
 		{
 			"var_type" "FIELD_FLOAT"
-			"tick" "1"
+			"tick_rate" "1"
 		}
 		"04"
 		{
 			"var_type" "FIELD_FLOAT"
-			"int_scaling_onhit" "1.35"
+			"int_scaling_onhit" "1.1"
 		}
 		"05"
 		{
 			"var_type" "FIELD_FLOAT"
-			"int_scaling_prsec" "0.45"
+			"int_scaling_prsec" "0.35"
 		}
 		"06"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage_onhit" "15 22 29 36"
+			"damage_onhit" "12 19 26 33"
 			"LinkedSpecialBonus" "special_bonus_teemo_2"
 		}
 	}

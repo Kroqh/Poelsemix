@@ -261,10 +261,10 @@ function modifier_toxic_shot_dot:OnCreated()
 		local intellect = caster:GetIntellect()
 
 		self.int_scaling_prsec = ability:GetSpecialValueFor("int_scaling_prsec")
-		self.damage = ability:GetSpecialValueFor("damage") + intellect * self.int_scaling_prsec
+		self.damage = ability:GetSpecialValueFor("damage_tick") + intellect * self.int_scaling_prsec
 		--print(self.damage)
 		--print("int is ", intellect)
-		self.tick = ability:GetSpecialValueFor("tick")
+		self.tick = ability:GetSpecialValueFor("tick_rate")
 		self:StartIntervalThink(self.tick-0.1)
 	end
 end

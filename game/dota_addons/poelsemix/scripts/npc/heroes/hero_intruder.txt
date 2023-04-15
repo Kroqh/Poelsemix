@@ -12,14 +12,16 @@
 	
 	"MovementSpeed"               "280"
 	"AttackAcquisitionRange"	"800"
-	"AttackRange"			"400"
-	"AttackRate"                 "1.8" 
+	"AttackRange"			"4"
+	"AttackRate"                 "1.7" 
 	"ArmorPhysical"		"-2" 
-	"AttributeBaseAgility"		"25"
+	"AttributeBaseAgility"		"26"
 	"AttributeAgilityGain"		"3.4"
 	"AttributeBaseStrength"			"18"
 	"AttributeStrengthGain"			"1.8"	
 	"StatusHealth"                "500"
+	"AttackDamageMin"			"46"
+	"AttackDamageMax"			"48"
 
 	
 

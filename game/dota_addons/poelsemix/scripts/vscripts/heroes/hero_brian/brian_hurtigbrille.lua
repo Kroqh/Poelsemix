@@ -53,7 +53,6 @@ function modifier_hurtigbrille:OnCreated()
     if self:GetParent():HasScepter() then
             local particle = "particles/econ/items/ogre_magi/ogre_2022_cc/ogre_2022_cc_trail_fire.vpcf"
             self.pfx_fire = ParticleManager:CreateParticle(particle, PATTACH_OVERHEAD_FOLLOW, self:GetParent())
-            --ParticleManager:SetParticleControl(self.pfx_fire, 0, self:GetParent():GetAbsOrigin())
             self.damage = ability:GetSpecialValueFor("scepter_damage_tick")
             self.radius = ability:GetSpecialValueFor("scepter_radius")
             self:StartIntervalThink(ability:GetSpecialValueFor("scepter_tick_rate"))

@@ -409,7 +409,6 @@ function upgrade_skills:OnSpellStart()
 		ParticleManager:SetParticleControl( reborn, 3, caster:GetAbsOrigin() )
 		ParticleManager:ReleaseParticleIndex(reborn)
 		StartSoundEvent( "Hero_Phoenix.SuperNova.Explode", caster)
-		caster:SetModelScale(2)
 	end
 end
 
@@ -425,21 +424,21 @@ function modifier_upgrade_skills:OnCreated()
 		self.pfx_circle = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster()) 
 		
 
-		ParticleManager:SetParticleControlEnt(self.pfx_circle, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
-		ParticleManager:SetParticleControlEnt(self.pfx, 3, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+		ParticleManager:SetParticleControlEnt(self.pfx_circle, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_hitloc", self:GetCaster():GetAbsOrigin(), true)
+		ParticleManager:SetParticleControlEnt(self.pfx, 3, self:GetCaster(), PATTACH_POINT_FOLLOW, "attach_hitloc", self:GetCaster():GetAbsOrigin(), true)
 		-- 10 second delayed, run once using gametime (respect pauses)
  		Timers:CreateTimer({
   		 	endTime = 0.20,
    			callback = function()
     			self.pfx_circle2 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
-    			ParticleManager:SetParticleControlEnt(self.pfx_circle2, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle2, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_hitloc", self:GetCaster():GetAbsOrigin(), true)
  		    end
  			})
  		Timers:CreateTimer({
   		 	endTime = 0.4,
    			callback = function()
     			self.pfx_circle3 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
-    			ParticleManager:SetParticleControlEnt(self.pfx_circle3, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle3, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_hitloc", self:GetCaster():GetAbsOrigin(), true)
  		    end
  			})
 
@@ -447,7 +446,7 @@ function modifier_upgrade_skills:OnCreated()
   		 	endTime = 0.6,
    			callback = function()
     			self.pfx_circle4 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
-    			ParticleManager:SetParticleControlEnt(self.pfx_circle4, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle4, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_hitloc", self:GetCaster():GetAbsOrigin(), true)
  		    end
  			})
 
@@ -455,7 +454,7 @@ function modifier_upgrade_skills:OnCreated()
   		 	endTime = 0.8,
    			callback = function()
     			self.pfx_circle5 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
-    			ParticleManager:SetParticleControlEnt(self.pfx_circle5, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle5, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_hitloc", self:GetCaster():GetAbsOrigin(), true)
  		    end
  			})
 
@@ -463,7 +462,7 @@ function modifier_upgrade_skills:OnCreated()
   		 	endTime = 1,
    			callback = function()
     			self.pfx_circle6 = ParticleManager:CreateParticle(self.particle_circle, PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())
-    			ParticleManager:SetParticleControlEnt(self.pfx_circle6, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_origin", self:GetCaster():GetAbsOrigin(), true)
+    			ParticleManager:SetParticleControlEnt(self.pfx_circle6, 1, self:GetCaster(), PATTACH_OVERHEAD_FOLLOW, "attach_hitloc", self:GetCaster():GetAbsOrigin(), true)
  		    end
  			})
 	end
@@ -492,7 +491,6 @@ end
 function modifier_upgrade_skills:OnDestroy()
 	if IsServer() then
 		local caster = self:GetCaster()
-		caster:SetModelScale(1)
 		ParticleManager:DestroyParticle(self.pfx, false)
 		ParticleManager:ReleaseParticleIndex(self.pfx)
 

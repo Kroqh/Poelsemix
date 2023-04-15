@@ -317,43 +317,43 @@ function COverthrowGameMode:OnNPCSpawned( event )
 
 	if hero:GetUnitName() == "unit_hog_rider" then
 		local ability = hero:FindAbilityByName("hog_bash")
-		ability:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 	if hero:GetUnitName() == "npc_dota_hero_pugna" then
 		local ability = hero:FindAbilityByName("bloodseeker_thirst")
-		ability:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 	if hero:GetUnitName() == "npc_dota_hero_bounty_hunter" then
 		local ability = hero:FindAbilityByName("pr0_incognito")
-		ability:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 	if hero:GetUnitName() == "npc_dota_hero_phantom_assassin" then
 		local ability = hero:FindAbilityByName("click")
-		ability:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 	if hero:GetUnitName() == "npc_dota_hero_riki" then
 		local ability = hero:FindAbilityByName("flyby_attack")
-		ability:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 	if hero:GetUnitName() == "npc_dota_hero_treant" then
 		local ability = hero:FindAbilityByName("damian_faded")
-		ability:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 	if hero:GetUnitName() == "npc_dota_hero_meepo" then
 		local ability = hero:FindAbilityByName("choke_datadriven")
-		ability:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 
 	if hero:GetUnitName() == "npc_dota_hero_crystal_maiden" then
 		local ability = hero:FindAbilityByName("water")
 		local ability2 = hero:FindAbilityByName("dangerous_sea")
-		ability:SetLevel(1)
-		ability2:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
+		if ability2:GetLevel() == 0 then ability2:SetLevel(1) end
 	end
 
 	if hero:GetUnitName() == "npc_dota_hero_venomancer" then
 		local ability = hero:FindAbilityByName("guerrilla_warfare")
-		ability:SetLevel(1)
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 
 		--Timers:CreateTimer({

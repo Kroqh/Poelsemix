@@ -30,12 +30,12 @@
 			"02"
 			{
 				"var_type" "FIELD_INTEGER"
-				"ha_amount" "3 6 9"
+				"ha_amount" "3 5 7"
 			}
 			"03"
 			{
 				"var_type" "FIELD_INTEGER"
-				"ha_amount2" "3 6 9"
+				"ha_amount2" "3 5 7"
 			}
 		}
 		

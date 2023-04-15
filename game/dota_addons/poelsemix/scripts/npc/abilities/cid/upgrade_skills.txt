@@ -25,7 +25,7 @@
 		"01"
 		{
 			"var_type"	"FIELD_FLOAT"
-			"duration"	"20 30 40"
+			"duration"	"10 18 26"
 		}
 		"02"
 		{

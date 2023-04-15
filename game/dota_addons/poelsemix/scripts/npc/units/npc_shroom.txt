@@ -19,8 +19,8 @@
 	"Ability8" "" // Ability 8 - Extra.
 	// Armor
 	//----------------------------------------------------------------
-	"ArmorPhysical" "999" // Physical protection.
-	"MagicalResistance" "999" // Magical protection.
+	"ArmorPhysical" "25" // Physical protection.
+	"MagicalResistance" "25" // Magical protection.
 	// Attack
 	//----------------------------------------------------------------
 	"AttackCapabilities" "DOTA_UNIT_CAP_NO_ATTACK" // Type of attack - melee, ranged, etc.

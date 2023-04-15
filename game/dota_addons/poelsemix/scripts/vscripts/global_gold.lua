@@ -5,12 +5,13 @@ function GiveGoldBig(keys)
 	local caster = keys.caster
 	
 	local target_location = target:GetAbsOrigin()
-	local units = FindUnitsInRadius(caster:GetTeamNumber(), target_location, nil, 3400, DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS, 0, false)
+	local units = HeroList:GetAllHeroes()
 	for i,unit in ipairs(units) do
 		if unit:IsRealHero() then 
 			unit:ModifyGold(6, true, 0)
 		end
 	end
+
 end
 
 function GiveGoldSmall(keys)

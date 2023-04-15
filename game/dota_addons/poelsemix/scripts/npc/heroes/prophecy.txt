@@ -5,10 +5,11 @@
 	"Model"				"models/items/courier/bookwyrm/bookwyrm.vmdl"
 	"ModelScale"		"1.5"
 	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
-	"AttributeBaseIntelligence"	"30"
+	"AttributeBaseIntelligence"	"32"
 	"AttributeIntelligenceGain"	"3.6"
-	"AttributeBaseAgility"		"19"
+	"AttributeBaseAgility"		"20"
 	"AttributeAgilityGain"		"2.2"
+	"AttackRate"			"1.6"
 	
 	"Ability1" "pr0_hack"				
 	"Ability2" "firestakit_datadriven"
