@@ -4,6 +4,10 @@
 ------------------------------------
 fox_laser = fox_laser or class({})
 
+function fox_laser:OnAbilityPhaseStart()
+	self:EmitSound("fox_laserStart")
+end
+
 --------------------------------------------------------------------------------
 -- Ability Start
 function fox_laser:OnSpellStart()
@@ -13,7 +17,7 @@ function fox_laser:OnSpellStart()
 	local point = self:GetCursorPosition()
 
 	-- load data
-	local projectile_name = "particles/units/heroes/hero_mirana/mirana_spell_arrow.vpcf"
+	local projectile_name = "particles/heroes/fox/fox_laser3.vpcf"
 	local projectile_speed = self:GetSpecialValueFor("arrow_speed")
 	local projectile_distance = self:GetSpecialValueFor("arrow_range")
 	local projectile_start_radius = self:GetSpecialValueFor("arrow_width")
@@ -70,7 +74,7 @@ function fox_laser:OnSpellStart()
 	ProjectileManager:CreateLinearProjectile(info)
 
 	-- Effects
-	local sound_cast = "Hero_Mirana.ArrowCast"
+	local sound_cast = "fox_laserShot"
 	EmitSoundOn( sound_cast, caster )
 end
 
@@ -107,8 +111,10 @@ function fox_laser:OnProjectileHit_ExtraData( hTarget, vLocation, extraData )
 	}
 	ApplyDamage(damageTable)
 
-	-- stun
+	-- Reduce W cooldown
+	self:GetCaster():GetAbilityByIndex(1):EndCooldown()
 
+	-- stun
 	AddFOWViewer( self:GetCaster():GetTeamNumber(), vLocation, 500, 3, false )
 
 	-- effects
@@ -132,9 +138,9 @@ function fox_shine:OnSpellStart()
 	local caster = self:GetCaster()
 	local caster_pos = caster:GetAbsOrigin()
 	local ability = self
-	local duration = 30
+	local duration = 0.5
 	local shield_health = 100
-	local radius = 1000
+	local radius = 500
 	local mini_stun = 0.25
 	
 	--Refelct modifier
@@ -151,7 +157,12 @@ function fox_shine:OnSpellStart()
 		print('unit: ', unit)
 		ApplyDamage({victim = unit, attacker = caster, damage_type = DAMAGE_TYPE_MAGICAL, damage = 100, ability = ability})
 		unit:AddNewModifier(caster, ability, "modifier_shine_stun", {duration = mini_stun})
+
+		-- Reduce E cooldown
+		self:GetCaster():GetAbilityByIndex(2):EndCooldown()
 	end
+
+	self:EmitSound("fox_shine")
 end
 
 modifier_shine_stun = modifier_shine_stun or class({})
@@ -240,7 +251,7 @@ fox_dash = fox_dash or class({})
 
 LinkLuaModifier("modifier_wave_cast", "heroes/hero_fox/hero_fox", LUA_MODIFIER_MOTION_NONE)
 
---thanks dota imba for the tutorial luv u mwah hehe xd
+--Gaming
 function fox_dash:GetAbilityTextureName()
 	return "shimakaze_wave"
 end
@@ -249,7 +260,7 @@ function fox_dash:OnSpellStart()
 	local caster = self:GetCaster()
 
 	caster:AddNewModifier(caster, self, "modifier_wave_cast", {})
-	self:EmitSound("shimakaze_wave")
+	self:EmitSound("fox_dash")
 end
 
 function fox_dash:OnAbilityPhaseStart() 
@@ -312,7 +323,7 @@ function modifier_wave_cast:OnIntervalThink()
 			if enemy:IsRealHero() and dashHasHitEnemy == false then
 				hasHitEnemy = true
 				print('Skal reduce')
-				print(caster:GetAbilityByIndex(1):EndCooldown())
+				print(caster:GetAbilityByIndex(0):EndCooldown())
 			end
 
 			-- Play hit particle only on hit heroes, and their illusions to prevent the caster from finding the real hero with this skill.

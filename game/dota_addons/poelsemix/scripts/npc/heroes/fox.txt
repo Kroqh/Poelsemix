@@ -6,12 +6,12 @@
 	"ModelScale"	"1.3"
 	"DisableWearables" "1"
 	
-	"Ability1" "fox_shine"				
+	"Ability1" "fox_laser"				
 	"Ability2" "fox_shine"
-	"Ability3" "fox_shine"
+	"Ability3" "fox_dash"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
-	"Ability6" "fox_shine"
+	"Ability6" "fox_ult"
 	
 	"AttributeBaseStrength"		"20"
 	"AttributeBaseIntelligence"	"40"
