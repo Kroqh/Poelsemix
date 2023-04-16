@@ -1,5 +1,5 @@
 LinkLuaModifier("modifier_stille_cast", "heroes/hero_kim/kim_stille", LUA_MODIFIER_MOTION_NONE)
-kim_stille = class({})
+kim_stille = kim_stille or class({})
 --thanks dota imba for the tutorial luv u mwah hehe xd
 function kim_stille:GetAbilityTextureName()
 	return "kim_stille"

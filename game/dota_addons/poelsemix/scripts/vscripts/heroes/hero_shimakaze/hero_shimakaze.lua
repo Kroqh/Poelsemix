@@ -442,7 +442,7 @@ function modifier_torpedo_taunt:OnIntervalThink()
 			ParticleManager:SetParticleControl(explosion_pfx, 3, unit_pos)
 			ability:EmitSound("torpedo_hit")
 			for _, enemy in pairs(explosion) do
-				ApplyDamage({victim = enemy, attacker = caster, damage_type = DAMAGE_TYPE_PURE, damage = self.damage, ability = ability})
+				ApplyDamage({victim = enemy, attacker = caster, damage_type = ability:GetAbilityDamageType(), damage = self.damage, ability = ability})
 				enemy:AddNewModifier(caster, ability, "modifier_torpedo_stun", {duration = stun_duration})
 			end
 			unit:AddNoDraw()

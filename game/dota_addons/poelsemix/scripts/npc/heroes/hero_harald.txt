@@ -16,8 +16,8 @@
 	"Ability12"		"special_bonus_cooldown_reduction_20"
 	"Ability13"		"special_bonus_hp_400"
 	
-	"Ability14"		"special_bonus_attack_speed_50"
-	"Ability15"		"special_bonus_spell_amplify_20"
+	"Ability14"		"special_bonus_harald_1"
+	"Ability15"		"special_bonus_harald_2"
 	
 	"Ability16"		"special_bonus_armor_20"
 	"Ability17"		"special_bonus_spell_amplify_25"

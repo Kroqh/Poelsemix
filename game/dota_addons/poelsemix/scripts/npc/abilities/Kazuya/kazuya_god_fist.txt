@@ -12,7 +12,7 @@
 	"AbilityTextureName"			"kazuya_god_fist"
 	
 	"AbilityCooldown"				"0.5"
-	"AbilityManaCost"				"24 22 20 18"
+	"AbilityManaCost"				"0"
 	"AbilityCastRange"				"150"
 
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
@@ -35,6 +35,11 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"damage" "150 225 300 375"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"fury_cost" "24 22 20 18"
 		}
 	}
 }

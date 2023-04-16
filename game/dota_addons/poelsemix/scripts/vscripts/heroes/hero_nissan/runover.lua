@@ -86,6 +86,7 @@ end
 
 modifier_runover_stun = class({})
 
+function modifier_runover_stun:IgnoreTenacity() return true end
 function modifier_runover_stun:IsPurgeable() return false end
 function modifier_runover_stun:IsHidden() return true end
 
@@ -115,23 +116,5 @@ function modifier_runover_stun:OnDestroy()
   local parent = self:GetParent()
   local angles = parent:GetAngles()
   local radius = self.ability:GetSpecialValueFor("radius")
-  local found = false;
-  local units = FindUnitsInRadius(parent:GetTeamNumber(), 
-                                  parent:GetAbsOrigin(), 
-                                  nil, 
-                                  radius, 
-                                  DOTA_UNIT_TARGET_TEAM_ENEMY, 
-                                  DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,
-                                  DOTA_UNIT_TARGET_FLAG_NONE, 
-                                  FIND_ANY_ORDER, false)
-  
-  for _, enemy in pairs(units) do
-    if enemy:GetUnitName() == "npc_dota_hero_ogre_magi" then found = true end;
-  end
-
-  if found then
-    parent:SetAngles(-90, angles.y, angles.z)
-  else
-    parent:SetAngles(0, angles.y, angles.z)
-  end
+  parent:SetAngles(0, angles.y, angles.z)
 end

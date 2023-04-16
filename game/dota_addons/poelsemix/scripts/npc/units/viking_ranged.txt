@@ -28,7 +28,7 @@
 		"AttackAnimationPoint"		"0.25"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
 		"AttackRange"				"600"		// Range within a target can be attacked.
-"ProjectileModel"		"particles/units/heroes/hero_troll_warlord/troll_warlord_base_attack.vpcf"	// Particle system model for projectile.
+		"ProjectileModel"		"particles/units/heroes/hero_troll_warlord/troll_warlord_base_attack.vpcf"	// Particle system model for projectile.
 		"ProjectileSpeed"			"900"			// Speed of projectile.		   
 
 		// Bounds
@@ -57,12 +57,12 @@
 		"RingRadius"            "15"
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1200"		// Range of vision during day light.
-		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"400"		// Range of vision at night time.
 
 		// Team
 		//----------------------------------------------------------------
-		"TeamName"					"DOTA_TEAM_BADGUYS"							// Team name.
+		"TeamName"					"DOTA_TEAM_GOODGUYS"							// Team name.
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"

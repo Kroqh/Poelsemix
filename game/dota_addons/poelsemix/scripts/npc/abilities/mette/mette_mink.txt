@@ -44,7 +44,7 @@
 		"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"base_interval"		"15"
+				"base_interval"		"12"
 				"LinkedSpecialBonus" "special_bonus_mette_3"
 			}
 		"07"

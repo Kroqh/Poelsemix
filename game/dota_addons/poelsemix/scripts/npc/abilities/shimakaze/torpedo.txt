@@ -7,7 +7,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityTextureName"			"shimakaze_torpedo"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
 	"AbilityCooldown"				"90 80 70"
@@ -31,7 +31,7 @@
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage" "600 700 800"
+			"damage" "600 650 700"
 		}
 		"04"
 		{

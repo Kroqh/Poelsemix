@@ -3,14 +3,16 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		
-		"BaseClass"             		"ability_datadriven"
+		"BaseClass"             		"ability_lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"ScriptFile"			"heroes/hero_harald/harald_army"
 		"AbilityTextureName"			"ha_army"
 		"AbilityCooldown"				"105 90 75"
 		"AbilityManaCost"				"100"
 		"AbilityCastPoint"				"0.5"
 		"AbilityCastRange" 				"600"
 		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"HasScepterUpgrade"		"1"
 		
 
 		"precache"
@@ -30,69 +32,23 @@
 			"02"
 			{
 				"var_type" "FIELD_INTEGER"
-				"ha_amount" "3 5 7"
+				"ha_amount_melee" "3 5 7"
+				"LinkedSpecialBonus" "special_bonus_harald_1"
 			}
 			"03"
 			{
 				"var_type" "FIELD_INTEGER"
-				"ha_amount2" "3 5 7"
+				"ha_amount_range" "3 5 7"
+				"LinkedSpecialBonus" "special_bonus_harald_2"
+			}
+			"04"
+			{
+				"var_type" "FIELD_INTEGER"
+				"ha_amount_mage" "3 5 7"
 			}
 		}
 		
-		"OnSpellStart"
-		{
-					"FireSound"
-		{
-			"EffectName"	"ha_army"
-			"Target"		"CASTER"
-		}
+
 
 			
-
-					
-			"SpawnUnit"
-			{
-				"UnitName"		"viking_norm"
-				"Target" 		"POINT"
-				"Duration"		"%duration"
-				"UnitCount"		"%ha_amount"
-				"UnitLimit"		"99"
-				"GrantsGold"	"20"
-				"GrantsXP"		"20"
-				"SpawnRadius"	"80"
-				
-				"OnSpawn"
-				{
-					"ApplyModifier"
-					{
-						"ModifierName"	"modifier_phased"
-						"Target"		"TARGET"
-						"Duration"		"0.03"
-					}
-				}
-			}
-						"SpawnUnit"
-			{
-				"UnitName"		"viking_ranged"
-				"Target" 		"POINT"
-				"Duration"		"%duration"
-				"UnitCount"		"%ha_amount"
-				"UnitLimit"		"99"
-				"GrantsGold"	"20"
-				"GrantsXP"		"20"
-				"SpawnRadius"	"80"
-				
-				"OnSpawn"
-				{
-					"ApplyModifier"
-					{
-						"ModifierName"	"modifier_phased"
-						"Target"		"TARGET"
-						"Duration"		"0.03"
-					}
-				}
-			}
-
-			
-}
 }
