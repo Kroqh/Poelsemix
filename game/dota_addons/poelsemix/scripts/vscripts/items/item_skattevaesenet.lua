@@ -49,7 +49,7 @@ function modifier_item_skattevaesenet:DeclareFunctions()
 	}
 end
 
-function modifier_item_skattevaesenet:GetModifierAttackSpeedBonus_Constan()
+function modifier_item_skattevaesenet:GetModifierAttackSpeedBonus_Constant()
     if self:GetAbility() then
 		return self:GetAbility():GetSpecialValueFor("attack_speed")
 	end

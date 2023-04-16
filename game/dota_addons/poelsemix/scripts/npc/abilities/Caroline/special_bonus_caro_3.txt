@@ -1,0 +1,25 @@
+//=================================================================================================================
+// caro TALENT 3 crossfit more point allocated
+//=================================================================================================================
+"special_bonus_caro_3"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"caro_crossfit"
+	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"value" "50"
+		}
+	}		
+	
+}

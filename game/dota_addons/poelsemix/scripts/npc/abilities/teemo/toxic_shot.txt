@@ -8,6 +8,7 @@
 	"AbilityTextureName"			"toxic_shot"
 	
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 
 	"AbilitySpecial"
 	{

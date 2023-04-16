@@ -2,15 +2,11 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_caro/caro_crossfit"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"caro_crossfit"
 	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
-
-	// Precache
-	//-------------------------------------------------------------------------------------------------------------
-
-
 		
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -20,37 +16,18 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"agility"			"6 12 18 24"
+			"total_stats"			"25 50 75 100"
+			"LinkedSpecialBonus" "special_bonus_caro_3"
 		}
 		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"strength"			"4 8 12 16"
+			"reroll_delay"			"10"
 		}
-	
-		"03"
+		"02"
 		{
-			"var_type"							"FIELD_INTEGER"
-			"as"			"10 20 30 40"
+			"var_type"							"FIELD_FLOAT"
+			"attacktime_per_stack"			"-0.01"
 		}
-	}
-
-	"Modifiers"
-	{
-		"crossfit_mod"
-		{
-			"Passive"	"1"
-			"IsHidden"	"1"
-						"Properties"
-			{
-
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%strength"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%agility"
-				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
-			}
-	
-		}
-
-	
 	}
 }

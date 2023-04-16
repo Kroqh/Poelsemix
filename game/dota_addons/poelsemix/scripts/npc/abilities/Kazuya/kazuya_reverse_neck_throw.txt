@@ -1,0 +1,53 @@
+"kazuya_reverse_neck_throw"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_kazuya/kazuya_reverse_neck_throw"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+
+	"AbilityTextureName"			"kazuya_neck_throw"
+	
+	"AbilityCooldown"				"0.5"
+	"AbilityManaCost"				"0"
+	"AbilityCastRange"				"150"
+
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_3"
+	
+	"Precache"
+	{
+		"particle"  "particles/units/heroes/hero_marci/marci_dispose_aoe_damage.vpcf"
+	}
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"air_duration" "0.5"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "100 150 200 250"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"fury_cost" "26 24 22 20"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"air_height" "150"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"throw_distance_behind" "100"
+		}
+	}
+}
