@@ -10,6 +10,24 @@
 	m_flAggregateRadius = 512.0
 	m_nBehaviorVersion = 12
 	m_nFirstMultipleOverride_BackwardCompat = 6
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
 	m_Emitters = 
 	[
 		{
@@ -29,26 +47,10 @@
 			m_fSpeedMax = 1300.0
 			m_TransformInput = 
 			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
 				m_nControlPoint = 1
-				m_nControlPointRangeMax = 0
 			}
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -61,27 +63,11 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin = [ 252, 251, 198 ]
-			m_ColorMax = [ 169, 197, 255 ]
+			m_ColorMin = [ 128, 0, 128 ]
+			m_ColorMax = [ 75, 0, 130 ]
 			m_flUpdateThreshold = 128.0
-			m_TintMin = [ 0, 0, 0 ]
-			m_TintMax = [ 255, 255, 255 ]
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -90,23 +76,8 @@
 				m_flRandomMax = 4.0
 				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
 			}
-			m_nOutputField = 3
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -128,7 +99,6 @@
 			m_vecOutputMax = [ 0.0, 0.0, 100.0 ]
 			m_TransformInput = 
 			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
 				m_nControlPoint = 1
 			}
 		},
@@ -151,7 +121,6 @@
 			m_flEndTime_max = 0.2
 			m_TransformInput = 
 			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
 				m_nControlPoint = 1
 			}
 		},

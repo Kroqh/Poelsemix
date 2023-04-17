@@ -4,9 +4,27 @@
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 1
 	m_flConstantRadius = 128.0
-	m_ConstantColor = [ 41, 197, 255, 255 ]
+	m_ConstantColor = [ 128, 0, 128, 255 ]
 	m_bShouldSort = false
 	m_nBehaviorVersion = 12
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 9
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
 	m_Emitters = 
 	[
 		{
@@ -24,26 +42,10 @@
 			_class = "C_INIT_CreateWithinSphereTransform"
 			m_TransformInput = 
 			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
 				m_nControlPoint = 9
-				m_nControlPointRangeMax = 0
 			}
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -53,20 +55,6 @@
 			m_nOutputField = 1
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -94,14 +82,12 @@
 			_class = "C_OP_PositionLock"
 			m_TransformInput = 
 			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
 				m_nControlPoint = 9
 			}
 		},
 		{
 			_class = "C_OP_ColorInterpolate"
 			m_flFadeEndTime = 0.5
-			m_ColorFade = [ 255, 255, 255 ]
 		},
 		{
 			_class = "C_OP_FadeOutSimple"
@@ -134,7 +120,6 @@
 				},
 			]
 			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
-			m_OutlineColor = [ 255, 255, 255 ]
 		},
 	]
 }

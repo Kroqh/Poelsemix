@@ -4,7 +4,7 @@
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 16
 	m_flConstantRadius = 70.0
-	m_ConstantColor = [ 7, 50, 211, 255 ]
+	m_ConstantColor = [ 128, 0, 128, 255 ]
 	m_nConstantSequenceNumber = 5
 	m_nBehaviorVersion = 12
 	m_nFirstMultipleOverride_BackwardCompat = 3
@@ -45,20 +45,6 @@
 	m_Initializers = 
 	[
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -68,20 +54,6 @@
 			m_nOutputField = 1
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -141,7 +113,6 @@
 		{
 			_class = "C_OP_ColorInterpolate"
 			m_flFadeEndTime = 0.5
-			m_ColorFade = [ 255, 255, 255 ]
 		},
 		{
 			_class = "C_OP_SetCPOrientationToDirection"
@@ -160,7 +131,7 @@
 			m_vecTexturesInput = 
 			[
 				{
-					m_hTexture = resource:"materials/particle/beam_hotblue2.vtex"
+					m_hTexture = resource:"materials/particle/beam_hotwhite.vtex"
 					m_TextureControls = 
 					{
 						m_flFinalTextureScaleU = 
@@ -199,6 +170,7 @@
 		},
 		{
 			m_ChildRef = resource:"particles/heroes/kazuya/inferno_a_g.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/heroes/kazuya/inferno_a_h.vpcf"
