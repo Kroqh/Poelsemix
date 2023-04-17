@@ -8,7 +8,7 @@
 	"AbilityTextureName"			"intruder_bloon_cam"
 	
 	"AbilityCooldown"				"40 36 32 28"
-	"AbilityManaCost"				"100"
+	"AbilityManaCost"				"70 60 50 40"
 	"AbilityCastRange"				"400 500 600 700"
 	"AbilityCastPoint"				"0.25"
 

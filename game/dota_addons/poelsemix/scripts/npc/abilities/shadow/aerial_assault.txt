@@ -14,7 +14,7 @@
 	"AbilityCastPoint"				"0.2"
 
 	
-		"AbilityCooldown"               "120 110 100"
+		"AbilityCooldown"               "45 40 35"
 		"AbilityManaCost"               "200"
 		
 		"precache"

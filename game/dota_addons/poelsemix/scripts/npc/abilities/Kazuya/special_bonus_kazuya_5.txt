@@ -1,0 +1,25 @@
+//=================================================================================================================
+// kazuya TALENT 5 god fist strength scaling +
+//=================================================================================================================
+"special_bonus_kazuya_5"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"kazuya_god_fist"
+	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"value" "1"
+		}
+	}		
+	
+}

@@ -4,7 +4,6 @@
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 16
 	m_flConstantRadius = 24.0
-	m_ConstantColor = [ 27, 102, 155, 255 ]
 	m_nConstantSequenceNumber = 7
 	m_bShouldSort = false
 	m_nBehaviorVersion = 5
@@ -189,7 +188,7 @@
 			m_vecTexturesInput = 
 			[
 				{
-					m_hTexture = resource:"materials/particle/spotlight/spotlight_single_recentered.vtex"
+					m_hTexture = resource:"materials/particle/particle_glow_irregular1_brightmod.vtex"
 					m_TextureControls = 
 					{
 						m_flFinalTextureScaleV = 

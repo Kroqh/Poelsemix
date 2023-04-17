@@ -1,0 +1,27 @@
+//=================================================================================================================
+// kazuya TALENT 4 FURY COST REDUCTION BASE ABILITIES
+//=================================================================================================================
+"special_bonus_kazuya_4"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"kazuya_god_fist"
+			"02"	"kazuya_spinning_demon"
+			"03"	"kazuya_reverse_neck_throw"
+	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"value" "-2"
+		}
+	}		
+	
+}

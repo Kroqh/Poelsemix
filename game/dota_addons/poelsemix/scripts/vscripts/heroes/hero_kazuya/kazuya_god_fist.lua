@@ -8,10 +8,20 @@ function kazuya_god_fist:OnSpellStart()
 		local caster = self:GetCaster()
         local target = self:GetCursorTarget()
 
+		local fury_cost  = self:GetSpecialValueFor("fury_cost")
+		if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+		caster:FindModifierByName("modifier_kazuya_rage_fury_handler"):ChangeFury(-fury_cost, false)
+		
+		if target:TriggerSpellAbsorb( self ) then return end
+
+		local str_scale = self:GetSpecialValueFor("strength_scaling")
+		if caster:HasTalent("special_bonus_kazuya_5") then str_scale = str_scale + caster:FindAbilityByName("special_bonus_kazuya_5"):GetSpecialValueFor("value") end
+		local damage = self:GetSpecialValueFor("damage") + (caster:GetStrength() * str_scale)
+
 	    ApplyDamage({victim = target,
 	    attacker = caster,
-	    damage_type = DAMAGE_TYPE_PHYSICAL,
-	    damage = self:GetSpecialValueFor("damage"),
+	    damage_type = self:GetAbilityDamageType(),
+	    damage = damage,
 	    ability = self})
 
         EmitSoundOn("kazuya_god_fist", caster)
@@ -24,6 +34,28 @@ function kazuya_god_fist:OnSpellStart()
 		ParticleManager:ReleaseParticleIndex(pfx)
     end
 end
+
+function kazuya_god_fist:GetCustomCastErrorTarget()
+	local caster = self:GetCaster()
+	local fury_cost  = self:GetSpecialValueFor("fury_cost")
+	if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+	return string.format("Fury needed: %s", fury_cost)
+end
+
+function kazuya_god_fist:CastFilterResultTarget()
+	if IsServer() then
+		local caster = self:GetCaster()
+		local fury_cost  = self:GetSpecialValueFor("fury_cost")
+		if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+		if caster:FindModifierByName("modifier_kazuya_rage_fury_handler"):GetEnoughFury(fury_cost) then
+			return UF_SUCCESS
+		else
+			return UF_FAIL_CUSTOM
+		end
+	end
+end
+
+
 
 
 modifier_kazuya_god_fist_knockup = modifier_kazuya_god_fist_knockup or class({})

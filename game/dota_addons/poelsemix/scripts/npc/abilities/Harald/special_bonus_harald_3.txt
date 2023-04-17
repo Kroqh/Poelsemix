@@ -1,0 +1,25 @@
+//=================================================================================================================
+// harald TALENT 3 thunder stun
+//=================================================================================================================
+"special_bonus_harald_3"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"ha_thor"
+	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"value" "1.5" //stun dur
+		}
+	}		
+	
+}

@@ -19,8 +19,8 @@
 	"Ability14"		"special_bonus_harald_1"
 	"Ability15"		"special_bonus_harald_2"
 	
-	"Ability16"		"special_bonus_armor_20"
-	"Ability17"		"special_bonus_spell_amplify_25"
+	"Ability16"		"special_bonus_harald_3"
+	"Ability17"		"special_bonus_harald_4"
 	
 								"precache"
 		{

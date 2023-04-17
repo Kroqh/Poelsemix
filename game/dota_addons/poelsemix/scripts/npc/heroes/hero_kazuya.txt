@@ -9,28 +9,28 @@
 	"Ability1" "kazuya_god_fist" //https://tekken.fandom.com/wiki/Electric_Wind_God_Fist	
 	"Ability2" "kazuya_spinning_demon" //https://tekken.fandom.com/wiki/Spinning_Demon_(Kazuya_Mishima)			
 	"Ability3" "kazuya_reverse_neck_throw" //https://tekken.fandom.com/wiki/Reverse_Neck_Throw
-	
-	//"Ability4" "kaz_rage"
-	//"Ability6" "kaz_inferno" //https://tekken.fandom.com/wiki/Inferno_(move)
+	"Ability4" "kazuya_rage"
+	"Ability5" "generic_hidden"
+	"Ability6" "kazuya_inferno" //https://tekken.fandom.com/wiki/Inferno_(move)
 
 
 	//CHANGE THIS SHIT UNDER
 	"AttributeBaseStrength"		"25"
 	"AttributeIntelligenceGain"	"0.6"
-	"Ability10"		"special_bonus_movement_speed_20"
-	"Ability11"		"special_bonus_strength_20"
+	"Ability10"		"special_bonus_kazuya_5"
+	"Ability11"		"special_bonus_kazuya_6"
 	
-	"Ability12"		"special_bonus_attack_damage_40"
-	"Ability13"		"special_bonus_spell_amplify_20"
+	"Ability12"		"special_bonus_kazuya_3"
+	"Ability13"		"special_bonus_kazuya_8"
 	
-	"Ability14"		"special_bonus_all_stats_20"
-	"Ability15"		"special_bonus_spell_amplify_20"
+	"Ability14"		"special_bonus_kazuya_4"
+	"Ability15"		"special_bonus_kazuya_7"
 	
-	"Ability16"		"special_bonus_armor_20"
-	"Ability17"		"special_bonus_lifesteal_10"
+	"Ability16"		"special_bonus_kazuya_1"
+	"Ability17"		"special_bonus_kazuya_2"
                  
 	"MovementSpeed"               "300"
-	"StatusHealth"                "470"
+	"StatusHealth"                "435"
 	"AttackAcquisitionRange"	"450"
-	"AttackRange"			"125"
+	"AttackRange"			"110"
 }

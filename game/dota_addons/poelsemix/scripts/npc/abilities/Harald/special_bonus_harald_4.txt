@@ -1,0 +1,17 @@
+//=================================================================================================================
+// harald TALENT 3 thunder extra target
+//=================================================================================================================
+"special_bonus_harald_4"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"ha_thor"
+	}	
+	
+}

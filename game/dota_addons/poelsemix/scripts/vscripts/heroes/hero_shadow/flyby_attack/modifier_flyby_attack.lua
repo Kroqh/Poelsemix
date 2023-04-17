@@ -49,6 +49,7 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_flyby_attack:OnAttackStart( params )
+	if not IsServer() then return end
 	if (params.attacker ~= self:GetParent()) then return end
 	if params.target == nil then
 		return

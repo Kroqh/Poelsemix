@@ -9,8 +9,6 @@ function modifier_bonus_to_stealth_invis:IsHidden() return true end
 function modifier_bonus_to_stealth_invis:DeclareFunctions()
 	local decFuncs = {
 	MODIFIER_PROPERTY_INVISIBILITY_LEVEL, 
-	MODIFIER_EVENT_ON_ATTACK,
-	MODIFIER_EVENT_ON_ABILITY_EXECUTED,
 	MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT}
 	return decFuncs
 end

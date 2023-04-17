@@ -1,0 +1,375 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf54:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_nInitialParticles = 1
+	m_flConstantRadius = 10.0
+	m_ConstantColor = [ 198, 0, 0, 255 ]
+	m_nConstantSequenceNumber = 1
+	m_nBehaviorVersion = 4
+	m_nFirstMultipleOverride_BackwardCompat = 11
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.0
+			}
+			m_nOutputField = 16
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = -57.295776
+			}
+			m_nOutputField = 5
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_nFieldOutput = 17
+			m_flMax = -1.0
+			m_flMin = -1.0
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_nComponent = 1
+			m_flMax = -1.0
+			m_flMin = -1.0
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = 12.0
+			m_flMax = 12.0
+			m_nComponent = 2
+			m_nFieldOutput = 17
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = -1.0
+			m_flMax = -1.0
+			m_nComponent = 1
+			m_nFieldOutput = 17
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_nComponent = 2
+			m_flMax = -1.0
+			m_flMin = -1.0
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = 2.0
+			m_flMax = 2.0
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_nFieldOutput = 2
+			m_flMax = 75.0
+			m_flMin = 75.0
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = 1.0
+			m_flMax = 1.0
+			m_nComponent = 1
+			m_nFieldOutput = 2
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = 1.0
+			m_flMax = 1.0
+			m_nComponent = 2
+			m_nFieldOutput = 2
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_nFieldOutput = 15
+			m_flMax = 1.0
+			m_flMin = 1.0
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = -1.0
+			m_flMax = -1.0
+			m_nComponent = 2
+			m_nFieldOutput = 15
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = 0.1
+			m_flMax = 0.1
+			m_nComponent = 1
+			m_nFieldOutput = 15
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = -1.0
+			m_flMax = -1.0
+			m_nFieldOutput = 21
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_nFieldOutput = 21
+			m_nComponent = 1
+			m_flMax = -1.0
+			m_flMin = -1.0
+		},
+		{
+			_class = "C_INIT_RandomVectorComponent"
+			m_flMin = -1.0
+			m_flMax = -1.0
+			m_nComponent = 2
+			m_nFieldOutput = 21
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = [ 154, 0, 0 ]
+			m_ColorMax = [ 158, 0, 0 ]
+			m_nFieldOutput = 22
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = [ 133, 0, 0, 255 ]
+			m_ColorMax = [ 135, 0, 0, 255 ]
+		},
+		{
+			_class = "C_INIT_StatusEffect"
+			m_nDetail2Combo = "DETAIL_2_COMBO_ADD"
+			m_flDetail2BlendFactor = 0.3
+			m_flColorWarpIntensity = 0.7
+			m_rimLightColor = [ 0, 0, 0, null ]
+			m_flRimLightScale = 5.0
+			m_flSelfIllumBlendToFull = 1.0
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 0.0
+				m_NamedValue = ""
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 6.0
+				m_flRandomMax = 12.0
+				m_bHasRandomSignFlip = false
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flLOD0 = 0.0
+				m_flLOD1 = 0.0
+				m_flLOD2 = 0.0
+				m_flLOD3 = 0.0
+				m_nNoiseInputVectorAttribute = 0
+				m_flNoiseOutputMin = 0.0
+				m_flNoiseOutputMax = 1.0
+				m_flNoiseScale = 0.1
+				m_vecNoiseOffsetRate = [ 0.0, 0.0, 0.0 ]
+				m_flNoiseOffset = 0.0
+				m_nNoiseOctaves = 1
+				m_nNoiseTurbulence = "PF_NOISE_TURB_NONE"
+				m_nNoiseType = "PF_NOISE_TYPE_PERLIN"
+				m_nNoiseModifier = "PF_NOISE_MODIFIER_NONE"
+				m_flNoiseTurbulenceScale = 1.0
+				m_flNoiseTurbulenceMix = 0.5
+				m_flNoiseImgPreviewScale = 1.0
+				m_bNoiseImgPreviewLive = true
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.0
+				m_flInput0 = 0.0
+				m_flInput1 = 1.0
+				m_flOutput0 = 0.0
+				m_flOutput1 = 1.0
+				m_flNotchedRangeMin = 0.0
+				m_flNotchedRangeMax = 1.0
+				m_flNotchedOutputOutside = 0.0
+				m_flNotchedOutputInside = 1.0
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.0
+				m_Curve = 
+				{
+					m_spline = [  ]
+					m_tangents = [  ]
+					m_vDomainMins = [ 0.0, 0.0 ]
+					m_vDomainMaxs = [ 0.0, 0.0 ]
+				}
+			}
+			m_flOpStrength = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 2.0
+				m_NamedValue = ""
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.0
+				m_flRandomMax = 1.0
+				m_bHasRandomSignFlip = false
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flLOD0 = 0.0
+				m_flLOD1 = 0.0
+				m_flLOD2 = 0.0
+				m_flLOD3 = 0.0
+				m_nNoiseInputVectorAttribute = 0
+				m_flNoiseOutputMin = 0.0
+				m_flNoiseOutputMax = 1.0
+				m_flNoiseScale = 0.1
+				m_vecNoiseOffsetRate = [ 0.0, 0.0, 0.0 ]
+				m_flNoiseOffset = 0.0
+				m_nNoiseOctaves = 1
+				m_nNoiseTurbulence = "PF_NOISE_TURB_NONE"
+				m_nNoiseType = "PF_NOISE_TYPE_PERLIN"
+				m_nNoiseModifier = "PF_NOISE_MODIFIER_NONE"
+				m_flNoiseTurbulenceScale = 1.0
+				m_flNoiseTurbulenceMix = 0.5
+				m_flNoiseImgPreviewScale = 1.0
+				m_bNoiseImgPreviewLive = true
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.0
+				m_flInput0 = 0.0
+				m_flInput1 = 1.0
+				m_flOutput0 = 0.0
+				m_flOutput1 = 1.0
+				m_flNotchedRangeMin = 0.0
+				m_flNotchedRangeMax = 1.0
+				m_flNotchedOutputOutside = 0.0
+				m_flNotchedOutputInside = 1.0
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.0
+				m_Curve = 
+				{
+					m_spline = [  ]
+					m_tangents = [  ]
+					m_vDomainMins = [ 0.0, 0.0 ]
+					m_vDomainMaxs = [ 0.0, 0.0 ]
+				}
+			}
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_OscillateVectorSimple"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_OFF"
+			m_nField = 15
+			m_Rate = [ 0.0, 1.0, 0.0 ]
+			m_Frequency = [ 0.0, 0.5, 0.0 ]
+			m_flOscAdd = 0.75
+			m_flOscMult = 1.5
+			m_flOpStrength = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 2.0
+				m_NamedValue = ""
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.0
+				m_flRandomMax = 1.0
+				m_bHasRandomSignFlip = false
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flLOD0 = 0.0
+				m_flLOD1 = 0.0
+				m_flLOD2 = 0.0
+				m_flLOD3 = 0.0
+				m_nNoiseInputVectorAttribute = 0
+				m_flNoiseOutputMin = 0.0
+				m_flNoiseOutputMax = 1.0
+				m_flNoiseScale = 0.1
+				m_vecNoiseOffsetRate = [ 0.0, 0.0, 0.0 ]
+				m_flNoiseOffset = 0.0
+				m_nNoiseOctaves = 1
+				m_nNoiseTurbulence = "PF_NOISE_TURB_NONE"
+				m_nNoiseType = "PF_NOISE_TYPE_PERLIN"
+				m_nNoiseModifier = "PF_NOISE_MODIFIER_NONE"
+				m_flNoiseTurbulenceScale = 1.0
+				m_flNoiseTurbulenceMix = 0.5
+				m_flNoiseImgPreviewScale = 1.0
+				m_bNoiseImgPreviewLive = true
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.0
+				m_flInput0 = 0.0
+				m_flInput1 = 1.0
+				m_flOutput0 = 0.0
+				m_flOutput1 = 1.0
+				m_flNotchedRangeMin = 0.0
+				m_flNotchedRangeMax = 1.0
+				m_flNotchedOutputOutside = 0.0
+				m_flNotchedOutputInside = 1.0
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.0
+				m_Curve = 
+				{
+					m_spline = [  ]
+					m_tangents = [  ]
+					m_vDomainMins = [ 0.0, 0.0 ]
+					m_vDomainMaxs = [ 0.0, 0.0 ]
+				}
+			}
+		},
+		{
+			_class = "C_OP_ClampVector"
+			m_nFieldOutput = 15
+			m_vecOutputMax = [ 1.0, 0.8, 1.0 ]
+		},
+		{
+			_class = "C_OP_RampScalarSplineSimple"
+			m_nField = 4
+			m_Rate = 4.0
+			m_flEndTime = 0.25
+			m_bEaseOut = true
+		},
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_nFieldOutput = 22
+			m_flFadeEndTime = 0.25
+			m_ColorFade = [ 87, 0, 0, 0 ]
+		},
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_flFadeEndTime = 0.5
+			m_ColorFade = [ 67, 0, 0 ]
+		},
+		{
+			_class = "C_OP_RampScalarLinearSimple"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
+			m_nField = 4
+			m_Rate = -4.0
+			m_flEndTime = 999999.0
+			m_bDisableOperator = true
+		},
+		{
+			_class = "C_OP_ClampScalar"
+			m_nFieldOutput = 4
+			m_bDisableOperator = true
+		},
+		{
+			_class = "C_OP_Decay"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderStatusEffect"
+			m_pTextureColorWarp = resource:"materials/models/heroes/statuseffects/colorwarp_electrical.vtex"
+			m_pTextureDetail2 = resource:"materials/models/heroes/statuseffects/burning.vtex"
+		},
+	]
+}

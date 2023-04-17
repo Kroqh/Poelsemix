@@ -11,7 +11,7 @@
 
 	"AbilityTextureName"			"kazuya_god_fist"
 	
-	"AbilityCooldown"				"0.5"
+	"AbilityCooldown"				"0.25"
 	"AbilityManaCost"				"0"
 	"AbilityCastRange"				"150"
 
@@ -40,6 +40,12 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"fury_cost" "24 22 20 18"
+			"LinkedSpecialBonus" "special_bonus_kazuya_4"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"strength_scaling" "1.2 1.4 1.6 1.8"
 		}
 	}
 }

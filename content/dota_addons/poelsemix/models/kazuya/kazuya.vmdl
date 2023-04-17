@@ -121,6 +121,15 @@
 						weight = 1.0
 						ignore_rotation = false
 					},
+					{
+						_class = "Attachment"
+						name = "attach_eyes"
+						parent_bone = "Head"
+						relative_origin = [ 0.0, 6.0, 10.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
 				]
 			},
 			{
@@ -538,7 +547,7 @@
 						import_bone_scales = false
 						start_frame = 0
 						end_frame = 61
-						framerate = 30.0
+						framerate = 60.0
 						reverse = false
 					},
 					{
@@ -560,7 +569,7 @@
 						import_bone_scales = false
 						start_frame = 0
 						end_frame = 59
-						framerate = 90.0
+						framerate = 150.0
 						reverse = false
 					},
 					{

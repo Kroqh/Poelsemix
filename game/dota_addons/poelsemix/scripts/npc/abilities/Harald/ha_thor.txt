@@ -2,8 +2,9 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_harald/harald_thor"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
@@ -20,13 +21,8 @@
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"700"
-	"AbilityCastPoint"				"0.25 0.25 0.25 0.25"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"110 240 370 500"
-
+	"AbilityCastRange"				"600 650 700 750"
+	"AbilityCastPoint"				"0.25"
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"10.0 9.0 8.0 7.0"
@@ -45,96 +41,14 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"true_sight_radius"		"750"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"sight_radius"			"750"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"true_sight_duration"	"5.0"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"sight_duration"		"4.5"
+			"damage"		"110 240 370 500"
 		}
 		"05"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"spread_aoe"	"375"
+			"radius"	"175"
 		}
 	}
 	
-	"OnSpellStart"
-	{
-		"RunScript"
-		{
-			"ScriptFile"	"heroes/hero_harald/ha_thor.lua"
-			"Function"		"SearchArea"
-			"particle"		"particles/units/heroes/hero_zuus/zuus_lightning_bolt.vpcf"
-		}
-		
-		"ActOnTargets"
-		{
-			"Target"
-			{
-				"Center"  				"TARGET"
-				"Radius" 				"%true_sight_radius"
-				"Teams" 				"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Types" 				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_OTHER"
-			}
 	
-			"Action"
-			{
-				"ApplyModifier"
-				{
-					"ModifierName"	"modifier_truesight"
-					"Target"		"TARGET"
-					"Duration"		"%true_sight_duration"
-				}
-			}
-		}
-		
-		"ActOnTargets"
-		{
-			"Target"
-			{
-				"Center"  				"POINT"
-				"Radius" 				"%true_sight_radius"
-				"Teams" 				"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Types" 				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL | DOTA_UNIT_TARGET_OTHER"
-			}
-	
-			"Action"
-			{
-				"ApplyModifier"
-				{
-					"ModifierName"	"modifier_truesight"
-					"Target"		"TARGET"
-					"Duration"		"%true_sight_duration"
-				}
-			}
-		}
-		
-		"FireSound"
-		{
-			"EffectName"	"ha_thor"
-			"Target"		"CASTER"
-		}
-		
-		"AttachEffect"
-		{
-			"Target"					"CASTER"
-			"EffectName"				"particles/units/heroes/hero_zuus/zuus_lightning_bolt_start.vpcf"
-			"EffectAttachType"			"start_at_customorigin"
-			"ControlPointEntities"
-			{
-				"CASTER"				"attach_attack1"
-			}
-		}
-	}
 }

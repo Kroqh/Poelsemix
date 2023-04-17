@@ -46,7 +46,7 @@
                               "value0"        "sounds/kazuya/kazuya_spinning_demon.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "25.00000"  }
+                    "volume"            {   "value"     "50.00000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
                     "distance_max"      {   "value"     "800.000"  }
@@ -75,7 +75,7 @@
                               "value0"        "sounds/kazuya/kazuya_inferno.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "10.00000"  }
+                    "volume"            {   "value"     "25.00000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
                     "distance_max"      {   "value"     "2000.000"  }
@@ -133,7 +133,7 @@
                               "value0"        "sounds/kazuya/kazuya_neck_throw.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "20.00000"  }
+                    "volume"            {   "value"     "30.00000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
                     "distance_max"      {   "value"     "800.000"  }
@@ -162,10 +162,39 @@
                               "value0"        "sounds/kazuya/kazuya_rage_activate.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "10.00000"  }
+                    "volume"            {   "value"     "25.00000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
                     "distance_max"      {   "value"     "800.000"  }
+                    "event_type"        {   "value"     "1.000000"  }
+                }
+            }
+        }
+    }
+}
+"kazuya_inferno_kill"
+{
+    "operator_stacks"
+    {
+        "update_stack"
+        {
+            "reference_operator"
+            {
+                "operator"              "sos_reference_stack"
+                "reference_stack"       "dota_src1_3d"
+                "operator_variables"
+                {
+                    "vsnd_files"
+                    {
+                        "value"
+                        {
+                              "value0"        "sounds/kazuya/kazuya_inferno_kill.vsnd"
+                        }
+                    }
+                    "volume"            {   "value"     "15.00000"  }
+                    "pitch"             {   "value"     "1.000000"  }
+                    "soundlevel"        {   "value"     "100.00000" }
+                    "distance_max"      {   "value"     "1200.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }

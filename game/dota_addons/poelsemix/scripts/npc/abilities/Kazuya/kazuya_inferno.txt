@@ -1,0 +1,80 @@
+"kazuya_inferno"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_kazuya/kazuya_inferno"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"FightRecapLevel"				"1"
+	"AbilityTextureName"			"kazuya_inferno"
+	"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+	"HasScepterUpgrade"			"1"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3"
+	
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"15 "
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"0"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"		"800 1000 1200"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"		"500 650 800"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"laser_width"			"40" //Avoid changing if possible
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"demon_duration"			"12 14 16"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"demon_spell_amp"			"20 25 30"
+		}
+		"06"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"demon_attack_damage"			"33 66 99"
+		}
+		"07"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"fury_cost"			"80 75 70"
+			"LinkedSpecialBonus" "special_bonus_kazuya_7"
+		}
+	}
+	
+	// Data driven
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+
+		"particle"			"particles/heroes/kazuya/inferno.vpcf"
+		"particle"			"particles/heroes/kazuya/kazuya_demon.vpcf"
+		"particle"			"particles/heroes/kazuya/kazuya_demon_rage.vpcf"
+	}
+}

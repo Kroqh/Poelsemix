@@ -24,7 +24,7 @@
 			"var_type"							"FIELD_INTEGER"
 			"reroll_delay"			"10"
 		}
-		"02"
+		"03"
 		{
 			"var_type"							"FIELD_FLOAT"
 			"attacktime_per_stack"			"-0.01"

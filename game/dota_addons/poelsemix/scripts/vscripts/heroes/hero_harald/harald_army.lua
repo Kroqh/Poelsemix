@@ -9,7 +9,7 @@ function ha_army:OnSpellStart()
 	local target = self:GetCursorPosition()
 	
 
-    EmitSoundOn("ha_army", self:GetCaster())
+    EmitSoundOn("ha_army", caster)
     local count = 0
     local melee = self:GetSpecialValueFor("ha_amount_melee")
     if (caster:HasTalent("special_bonus_harald_1")) then melee = melee + caster:FindAbilityByName("special_bonus_harald_1"):GetSpecialValueFor("value") end

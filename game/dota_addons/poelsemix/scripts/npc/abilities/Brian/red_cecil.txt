@@ -91,7 +91,7 @@
 			"EndRadius" "%end_size"
 			"FixedDistance" "%range"
 			"TargetTeams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
-			"TargetTypes" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO | DOTA_UNITY_TARGET_MECHANICAL"
+			"TargetTypes" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 			"TargetFlags" "DOTA_UNIT_TARGET_FLAG_NONE"
 			"HasFrontalCone" "1"
 			"ProvidesVision" "0"

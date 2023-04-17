@@ -3,7 +3,9 @@ kazuya_spinning_demon = kazuya_spinning_demon or class({})
 
 function kazuya_spinning_demon:OnSpellStart()
 	local caster = self:GetCaster()
-
+	local fury_cost  = self:GetSpecialValueFor("fury_cost")
+	if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+	caster:FindModifierByName("modifier_kazuya_rage_fury_handler"):ChangeFury(-fury_cost, false)
     caster:AddNewModifier(caster, self, "modifier_spinning_demon_cast", {})
     
 end
@@ -12,6 +14,27 @@ function kazuya_spinning_demon:OnAbilityPhaseStart()
 	self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_2)
 	return true
 end
+
+function kazuya_spinning_demon:GetCustomCastErrorLocation()
+	local caster = self:GetCaster()
+	local fury_cost  = self:GetSpecialValueFor("fury_cost")
+	if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+	return string.format("Fury needed: %s", fury_cost)
+end
+
+function kazuya_spinning_demon:CastFilterResultLocation()
+	if IsServer() then
+		local caster = self:GetCaster()
+		local fury_cost  = self:GetSpecialValueFor("fury_cost")
+		if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+		if caster:FindModifierByName("modifier_kazuya_rage_fury_handler"):GetEnoughFury(fury_cost) then
+			return UF_SUCCESS
+		else
+			return UF_FAIL_CUSTOM
+		end
+	end
+end
+
 
 modifier_spinning_demon_cast = class ({})
 
@@ -29,6 +52,9 @@ function modifier_spinning_demon_cast:CheckState()
 		return state
 	end
 end
+
+
+
 
 function modifier_spinning_demon_cast:OnCreated()
 	if not IsServer() then return end
@@ -83,7 +109,11 @@ function modifier_spinning_demon_cast:HorizontalMotion(me, dt)
 			local target_types = DOTA_UNIT_TARGET_ALL 
 			local target_flags = DOTA_UNIT_TARGET_FLAG_NONE 
 			local radius = ability:GetSpecialValueFor("radius")
-			local damage = ability:GetSpecialValueFor("damage")
+
+			local str_scale = ability:GetSpecialValueFor("strength_scaling")
+			if caster:HasTalent("special_bonus_kazuya_6") then str_scale = str_scale + caster:FindAbilityByName("special_bonus_kazuya_6"):GetSpecialValueFor("value") end
+			local damage = ability:GetSpecialValueFor("damage") + (caster:GetStrength() * str_scale)
+
 
 			local units = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, radius, target_teams, target_types, target_flags, FIND_CLOSEST, false)
 			for _, enemy in  pairs(units) do

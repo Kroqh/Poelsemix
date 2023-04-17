@@ -6,7 +6,9 @@ function kazuya_reverse_neck_throw:OnSpellStart()
 	-- unit identifier
 	local caster = self:GetCaster()
 	local target = self:GetCursorTarget()
-
+	local fury_cost  = self:GetSpecialValueFor("fury_cost")
+	if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+	caster:FindModifierByName("modifier_kazuya_rage_fury_handler"):ChangeFury(-fury_cost, false)
 	-- cancel if linken
 	if target:TriggerSpellAbsorb( self ) then return end
 
@@ -15,7 +17,8 @@ function kazuya_reverse_neck_throw:OnSpellStart()
 	local height = self:GetSpecialValueFor( "air_height" )
 	local distance = self:GetSpecialValueFor( "throw_distance_behind" )
 
-	local damage = self:GetSpecialValueFor( "damage" )
+	local str_scale = self:GetSpecialValueFor("strength_scaling")
+	local damage = self:GetSpecialValueFor("damage") + (caster:GetStrength() * str_scale)
     caster:FaceTowards(target:GetOrigin())
 	-- set target pos
 	local targetpos = caster:GetOrigin() - caster:GetForwardVector() * distance
@@ -57,4 +60,25 @@ function kazuya_reverse_neck_throw:OnSpellStart()
 		-- destroy trees
 		GridNav:DestroyTreesAroundPoint( target:GetOrigin(), 100, false )
 	end)
+
+end
+
+function kazuya_reverse_neck_throw:GetCustomCastErrorTarget()
+	local caster = self:GetCaster()
+	local fury_cost  = self:GetSpecialValueFor("fury_cost")
+	if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+	return string.format("Fury needed: %s", fury_cost)
+end
+
+function kazuya_reverse_neck_throw:CastFilterResultTarget()
+	if IsServer() then
+		local caster = self:GetCaster()
+		local fury_cost  = self:GetSpecialValueFor("fury_cost")
+		if caster:HasTalent("special_bonus_kazuya_4") then fury_cost = fury_cost + caster:FindAbilityByName("special_bonus_kazuya_4"):GetSpecialValueFor("value") end
+		if caster:FindModifierByName("modifier_kazuya_rage_fury_handler"):GetEnoughFury(fury_cost) then
+			return UF_SUCCESS
+		else
+			return UF_FAIL_CUSTOM
+		end
+	end
 end

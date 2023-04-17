@@ -284,7 +284,7 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		sniper_weapon:FollowEntity(hero, true)
 		
 		local sniper_mask = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"})
-		sniper_mask :FollowEntity(hero, true)
+		sniper_mask:FollowEntity(hero, true)
 
 	end
 
@@ -353,6 +353,10 @@ function COverthrowGameMode:OnNPCSpawned( event )
 
 	if hero:GetUnitName() == "npc_dota_hero_venomancer" then
 		local ability = hero:FindAbilityByName("guerrilla_warfare")
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
+	end
+	if hero:GetUnitName() == "npc_dota_hero_tusk" then
+		local ability = hero:FindAbilityByName("kazuya_rage")
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 
