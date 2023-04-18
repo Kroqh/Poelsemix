@@ -17,7 +17,7 @@
                               "value0"        "sounds/KajRap1.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "10.00000"  }
+                    "volume"            {   "value"     "3.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -49,7 +49,7 @@
                               "value0"        "sounds/KajRap2.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "10.00000"  }
+                    "volume"            {   "value"     "3.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -143,7 +143,7 @@
                               "value0"        "sounds/KajAndrea2.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "6.00000"  }
+                    "volume"            {   "value"     "3.00000"  }
                     "pitch_rand_min"    {   "value"     "0.00000"  }
                     "pitch_rand_max"    {   "value"     "0.000000"  }
                     "pitch"             {   "value"     "1.000000"  }

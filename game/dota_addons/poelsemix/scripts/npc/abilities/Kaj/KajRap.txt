@@ -14,12 +14,12 @@
           "01"
           {
               "var_type"          "FIELD_FLOAT"
-              "duration"          "2 3 4 5"
+              "duration"          "2 2.5 3 3.5"
           }
 		  "02"
 		  {
-			"var_type"          "FIELD_FLOAT"
-            "AOEdmg"          "300 500 750 1200"
+			"var_type"          "FIELD_INTEGER"
+            "damage"          "300 425 650 775"
 		  }
         }
 
@@ -92,7 +92,7 @@
                      {
                         "Target"    "TARGET"
                         "Type"      "DAMAGE_TYPE_MAGICAL"
-                        "Damage"    "%AOEdmg"
+                        "Damage"    "%damage"
                     }
 						"Knockback"
 		            {

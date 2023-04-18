@@ -26,9 +26,9 @@ function ha_thor:OnSpellStart()
             ApplyDamage({victim = unit, attacker = caster, damage = damage, damage_type = self:GetAbilityDamageType()})
             -- Renders the particle on the target
             local particle = ParticleManager:CreateParticle(particle_hit, PATTACH_WORLDORIGIN, unit)
-            -- Raise 1000 value if you increase the camera height above 1000
+            -- Raise 1000 value if you increase the camera height above 1250
             ParticleManager:SetParticleControl(particle, 0, Vector(unit:GetAbsOrigin().x,unit:GetAbsOrigin().y,unit:GetAbsOrigin().z + unit:GetBoundingMaxs().z ))
-            ParticleManager:SetParticleControl(particle, 1, Vector(unit:GetAbsOrigin().x,unit:GetAbsOrigin().y,1000 ))
+            ParticleManager:SetParticleControl(particle, 1, Vector(unit:GetAbsOrigin().x,unit:GetAbsOrigin().y,1250 ))
             ParticleManager:SetParticleControl(particle, 2, Vector(unit:GetAbsOrigin().x,unit:GetAbsOrigin().y,unit:GetAbsOrigin().z + unit:GetBoundingMaxs().z ))
 
             count = count + 1
@@ -37,9 +37,9 @@ function ha_thor:OnSpellStart()
 
     if count == 0 then --fire particle on ground instead if no enemies hit
         local particle = ParticleManager:CreateParticle(particle_hit, PATTACH_WORLDORIGIN, caster)
-        -- Raise 1000 value if you increase the camera height above 1000
+        -- Raise 1000 value if you increase the camera height above 1250
         ParticleManager:SetParticleControl(particle, 0, Vector(point.x,point.y,point.z))
-        ParticleManager:SetParticleControl(particle, 1, Vector(point.x,point.y,1000))
+        ParticleManager:SetParticleControl(particle, 1, Vector(point.x,point.y,1250))
         ParticleManager:SetParticleControl(particle, 2, Vector(point.x,point.y,point.z))
     end
 end
