@@ -7,10 +7,12 @@
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityCooldown"               "15 14 13 12"
 	"AbilityManaCost"               "70 60 50 40"
 	"AbilityCastPoint"               "0.15"
 	"AbilityCastRange"				"800"
+	
 
 	"precache"
 	{

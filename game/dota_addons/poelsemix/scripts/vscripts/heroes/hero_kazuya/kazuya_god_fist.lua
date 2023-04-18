@@ -62,7 +62,7 @@ modifier_kazuya_god_fist_knockup = modifier_kazuya_god_fist_knockup or class({})
 
 function modifier_kazuya_god_fist_knockup:IsDebuff() return true end
 function modifier_kazuya_god_fist_knockup:IsHidden() return false end
-function modifier_kazuya_god_fist_knockup:IsPurgable() return true end
+function modifier_kazuya_god_fist_knockup:IsPurgable() return false end
 function modifier_kazuya_god_fist_knockup:IsStunDebuff() return true end
 function modifier_kazuya_god_fist_knockup:IsMotionController()  return true end
 function modifier_kazuya_god_fist_knockup:GetMotionControllerPriority()  return DOTA_MOTION_CONTROLLER_PRIORITY_MEDIUM end

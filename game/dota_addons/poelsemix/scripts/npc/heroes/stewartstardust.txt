@@ -2,7 +2,6 @@
 {
 	"override_hero"				"npc_dota_hero_beastmaster"			// Hero to override
 	"DisableWearables" "1"
-	//"model" "models/shimakaze/shimakaze.vmdl"
 	"ModelScale" "0.6"
 	"Ability1" "sonny_boy"				
 	"Ability2" "en_med_guldringen"

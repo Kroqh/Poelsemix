@@ -9,7 +9,6 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"kazuya_inferno"
 	"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
 	"HasScepterUpgrade"			"1"
