@@ -1,27 +1,51 @@
 "ha_rune"
 {
-	"BaseClass"                 "ability_datadriven"
+	"BaseClass"                 "ability_lua"
 	"AbilityTextureName"        "ha_rune"
+	"ScriptFile"			"heroes/hero_harald/harald_runesten"
 	"MaxLevel"                  "4"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
-	"AbilityCooldown"               "12 9 6 3"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityCooldown"               "15 14 13 12"
 	"AbilityManaCost"               "70 60 50 40"
-	"AbilityCastRange"				"875"
+	"AbilityCastPoint"               "0.15"
+	"AbilityCastRange"				"800"
 
-	
-	"OnSpellStart"
+	"precache"
 	{
-	        "SpawnUnit"
-	   		{
-			    "UnitName"      "npc_rune"
-   			    "Target"        "POINT"
-   			    "Duration"      "15"
-	   		    "UnitCount"     "1"
-	   		    "UnitLimit"     "0"
-			    "GrantsGold"    "1"
-   			    "GrantsXP"      "1"
-   			    "SpawnRadius"   "10"
-   			}
-
+		
+		"particle"			"particles/econ/items/omniknight/omni_crimson_witness_2021/omniknight_crimson_witness_2021_degen_aura_debuff_runes.vpcf"
 	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"duration"		"6 7 8 9"
+			"LinkedSpecialBonus" "special_bonus_harald_6"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"aura_radius"	"500 550 600 650"
+			"LinkedSpecialBonus" "special_bonus_harald_5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"aura_damage"	"20 25 30 35"
+		}
+		"04"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"aura_movespeed"	"15 18 21 24"
+		}
+		"05"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"aura_attackspeed"	"25 30 35 40"
+		}
+	}
+
 }

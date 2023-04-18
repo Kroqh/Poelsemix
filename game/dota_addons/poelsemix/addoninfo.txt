@@ -2,6 +2,7 @@
 {
 	"HeroGuidesSupported"		"0"
 	"PenaltiesEnabled"		"0"
+	"EnablePickRules"               "0" //ÆNDRE TIL 0 for dev, 1 for release
 	"poelsemix"
 	{
 		"MaxPlayers"		"10"

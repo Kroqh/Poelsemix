@@ -1,7 +1,7 @@
 //=================================================================================================================
-// kazuya TALENT 4 FURY COST REDUCTION BASE ABILITIES
+// harald TALENT 6 rune duration +
 //=================================================================================================================
-"special_bonus_kazuya_4"
+"special_bonus_harald_6"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
@@ -11,17 +11,16 @@
 
 	"LinkedAbility"
 	{
-			"01"	"kazuya_god_fist"
-			"02"	"kazuya_spinning_demon"
-			"03"	"kazuya_reverse_neck_throw"
-	}
+			"01"	"ha_rune"
+	}	
+
 	"AbilitySpecial"
 	{
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"value" "-3"
+			"value" "3"
 		}
-	}		
+	}	
 	
 }

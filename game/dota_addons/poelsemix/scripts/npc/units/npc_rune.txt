@@ -3,7 +3,7 @@
         // General
         //----------------------------------------------------------------
         "BaseClass"             "npc_dota_creature"
-        "Model"                 "models/props_rock/badside_rocks001.vmdl"
+        "Model"                 "models/props_gameplay/runesten.vmdl"
         "ModelScale"            "1"
         "Level"                 "1"
         "HealthBarOffset"       "0"
@@ -11,8 +11,7 @@
         "HasInventory"          "0"
         // Abilities
         //----------------------------------------------------------------
-        "Ability1"              "ha_rune_pas"
-		"Ability2"				"tower_passive"
+	"Ability2"				"tower_passive"
 	
         // Armor
         //----------------------------------------------------------------
@@ -35,7 +34,7 @@
        	"BountyXP"              "0"
         // Bounds
         //----------------------------------------------------------------
-        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HUGE"
        
         // Movement
         //----------------------------------------------------------------
@@ -52,8 +51,8 @@
        
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"    "500"
-        "VisionNighttimeRange"  "500"
+        "VisionDaytimeRange"    "200"
+        "VisionNighttimeRange"  "200"
        
         // Team
         //----------------------------------------------------------------
