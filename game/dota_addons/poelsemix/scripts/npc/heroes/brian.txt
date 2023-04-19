@@ -10,18 +10,18 @@
 	"Ability6" "brian_dak"
 	"AttributeBaseStrength"		"25"
 	
-	"Ability10"		"special_bonus_cooldown_reduction_15"
+	"Ability10"		"special_bonus_brian_5"
 	"Ability11"		"special_bonus_brian_1"
 	
-	"Ability12"		"special_bonus_attack_damage_50"
+	"Ability12"		"special_bonus_brian_4"
 	"Ability13"		"special_bonus_hp_500"
 	
-	"Ability14"		"special_bonus_strength_25"
+	"Ability14"		"special_bonus_brian_6"
 	"Ability15"		"special_bonus_armor_20"
 	
 	"Ability16"		"special_bonus_brian_2"
 	"Ability17"		"special_bonus_brian_3"
 	
 	"MovementSpeed"               "280"
-	"StatusHealth"                "750"								
+	"StatusHealth"                "700"								
 }

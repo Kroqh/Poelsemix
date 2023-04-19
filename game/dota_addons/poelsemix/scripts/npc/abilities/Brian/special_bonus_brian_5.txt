@@ -1,0 +1,18 @@
+//=================================================================================================================
+// brian TALENT 5 Drunk expertice (no more miss chance)
+//=================================================================================================================
+"special_bonus_brian_5"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"mokai"
+	}	
+	
+	
+}

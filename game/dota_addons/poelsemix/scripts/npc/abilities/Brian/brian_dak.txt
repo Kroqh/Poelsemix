@@ -10,7 +10,6 @@
 		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"SpellImmunityType"                "SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"     "DAMAGE_TYPE_PURE"
-		"AOERadius"					"%radius"
 		"AbilityCooldown"           "120"
 		"AbilityManaCost"           "200"
 "precache"

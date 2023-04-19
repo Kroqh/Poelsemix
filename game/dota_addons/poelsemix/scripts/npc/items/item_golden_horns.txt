@@ -32,6 +32,7 @@
 			"precache"
 	{
 		"soundfile" "soundevents/items_soundevent.vsndevts"
+		"particle" "particles/status_fx/status_effect_beserkers_call.vpcf" //Just precaching this on a random item so its always loaded for generic taunt
 	}		
 	"AbilitySpecial"
 	{

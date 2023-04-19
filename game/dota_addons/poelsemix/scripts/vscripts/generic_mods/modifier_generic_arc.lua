@@ -1,4 +1,4 @@
-modifier_generic_arc_lua = class({})
+modifier_generic_arc = class({})
 
 --[[
 	Generic Jump Arc
@@ -27,43 +27,43 @@ modifier_generic_arc_lua = class({})
 
 --------------------------------------------------------------------------------
 -- Classifications
-function modifier_generic_arc_lua:IsHidden()
+function modifier_generic_arc:IsHidden()
 	return true
 end
 
-function modifier_generic_arc_lua:IsDebuff()
+function modifier_generic_arc:IsDebuff()
 	return false
 end
 
-function modifier_generic_arc_lua:IsStunDebuff()
+function modifier_generic_arc:IsStunDebuff()
 	return false
 end
 
-function modifier_generic_arc_lua:IsPurgable()
+function modifier_generic_arc:IsPurgable()
 	return true
 end
 
-function modifier_generic_arc_lua:GetAttributes()
+function modifier_generic_arc:GetAttributes()
 	return MODIFIER_ATTRIBUTE_MULTIPLE
 end
 
 --------------------------------------------------------------------------------
 -- Initializations
-function modifier_generic_arc_lua:OnCreated( kv )
+function modifier_generic_arc:OnCreated( kv )
 	if not IsServer() then return end
 	self.interrupted = false
 	self:SetJumpParameters( kv )
 	self:Jump()
 end
 
-function modifier_generic_arc_lua:OnRefresh( kv )
+function modifier_generic_arc:OnRefresh( kv )
 	self:OnCreated( kv )
 end
 
-function modifier_generic_arc_lua:OnRemoved()
+function modifier_generic_arc:OnRemoved()
 end
 
-function modifier_generic_arc_lua:OnDestroy()
+function modifier_generic_arc:OnDestroy()
 	if not IsServer() then return end
 
 	-- preserve height
@@ -84,7 +84,7 @@ end
 
 --------------------------------------------------------------------------------
 -- Modifier Effects
-function modifier_generic_arc_lua:DeclareFunctions()
+function modifier_generic_arc:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_DISABLE_TURNING,
 	}
@@ -95,16 +95,16 @@ function modifier_generic_arc_lua:DeclareFunctions()
 	return funcs
 end
 
-function modifier_generic_arc_lua:GetModifierDisableTurning()
+function modifier_generic_arc:GetModifierDisableTurning()
 	if not self.isForward then return end
 	return 1
 end
-function modifier_generic_arc_lua:GetOverrideAnimation()
+function modifier_generic_arc:GetOverrideAnimation()
 	return self:GetStackCount()
 end
 --------------------------------------------------------------------------------
 -- Status Effects
-function modifier_generic_arc_lua:CheckState()
+function modifier_generic_arc:CheckState()
 	local state = {
 		[MODIFIER_STATE_STUNNED] = self.isStun or false,
 		[MODIFIER_STATE_COMMAND_RESTRICTED] = self.isRestricted or false,
@@ -116,7 +116,7 @@ end
 
 --------------------------------------------------------------------------------
 -- Motion Effects
-function modifier_generic_arc_lua:UpdateHorizontalMotion( me, dt )
+function modifier_generic_arc:UpdateHorizontalMotion( me, dt )
 	if self.fix_duration and self:GetElapsedTime()>=self.duration then return end
 
 	-- set relative position
@@ -124,7 +124,7 @@ function modifier_generic_arc_lua:UpdateHorizontalMotion( me, dt )
 	me:SetOrigin( pos )
 end
 
-function modifier_generic_arc_lua:UpdateVerticalMotion( me, dt )
+function modifier_generic_arc:UpdateVerticalMotion( me, dt )
 	if self.fix_duration and self:GetElapsedTime()>=self.duration then return end
 
 	local pos = me:GetOrigin()
@@ -148,19 +148,19 @@ function modifier_generic_arc_lua:UpdateVerticalMotion( me, dt )
 	end
 end
 
-function modifier_generic_arc_lua:OnHorizontalMotionInterrupted()
+function modifier_generic_arc:OnHorizontalMotionInterrupted()
 	self.interrupted = true
 	self:Destroy()
 end
 
-function modifier_generic_arc_lua:OnVerticalMotionInterrupted()
+function modifier_generic_arc:OnVerticalMotionInterrupted()
 	self.interrupted = true
 	self:Destroy()
 end
 
 --------------------------------------------------------------------------------
 -- Motion Helper
-function modifier_generic_arc_lua:SetJumpParameters( kv )
+function modifier_generic_arc:SetJumpParameters( kv )
 	self.parent = self:GetParent()
 
 	-- load types
@@ -260,7 +260,7 @@ function modifier_generic_arc_lua:SetJumpParameters( kv )
 	self:InitVerticalArc( height_start, height_max, height_end, self.duration )
 end
 
-function modifier_generic_arc_lua:Jump()
+function modifier_generic_arc:Jump()
 	-- apply horizontal motion
 	if self.distance>0 then
 		if not self:ApplyHorizontalMotionController() then
@@ -278,7 +278,7 @@ function modifier_generic_arc_lua:Jump()
 	end
 end
 
-function modifier_generic_arc_lua:InitVerticalArc( height_start, height_max, height_end, duration )
+function modifier_generic_arc:InitVerticalArc( height_start, height_max, height_end, duration )
 	local height_end = height_end - height_start
 	local height_max = height_max - height_start
 
@@ -298,16 +298,16 @@ function modifier_generic_arc_lua:InitVerticalArc( height_start, height_max, hei
 	self.const2 = 4*height_max*duration_end*duration_end/(duration*duration)
 end
 
-function modifier_generic_arc_lua:GetVerticalPos( time )
+function modifier_generic_arc:GetVerticalPos( time )
 	return self.const1*time - self.const2*time*time
 end
 
-function modifier_generic_arc_lua:GetVerticalSpeed( time )
+function modifier_generic_arc:GetVerticalSpeed( time )
 	return self.const1 - 2*self.const2*time
 end
 
 --------------------------------------------------------------------------------
 -- Helper
-function modifier_generic_arc_lua:SetEndCallback( func )
+function modifier_generic_arc:SetEndCallback( func )
 	self.endCallback = func
 end

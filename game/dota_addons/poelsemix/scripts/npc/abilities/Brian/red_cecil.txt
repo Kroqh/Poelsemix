@@ -111,7 +111,7 @@
 		{
 			"ModifierName"	"smokerlungs"
 			"Target" 		"TARGET"
-			"Duration"		"%reduction_duration"
+			"Duration"		"%debuff_duration"
 		}
 
 		"Damage"

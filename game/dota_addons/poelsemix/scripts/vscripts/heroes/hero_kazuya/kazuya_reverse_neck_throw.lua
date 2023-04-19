@@ -1,5 +1,5 @@
 kazuya_reverse_neck_throw = kazuya_reverse_neck_throw or class({})
-LinkLuaModifier( "modifier_generic_arc_lua", "generic_mods/modifier_generic_arc", LUA_MODIFIER_MOTION_BOTH )
+LinkLuaModifier( "modifier_generic_arc", "generic_mods/modifier_generic_arc", LUA_MODIFIER_MOTION_BOTH )
 
 -- Ability Start
 function kazuya_reverse_neck_throw:OnSpellStart()
@@ -28,7 +28,7 @@ function kazuya_reverse_neck_throw:OnSpellStart()
 	local arc = target:AddNewModifier(
 		caster, -- player source
 		self, -- ability source
-		"modifier_generic_arc_lua", -- modifier name
+		"modifier_generic_arc", -- modifier name
 		{
 			target_x = targetpos.x,
 			target_y = targetpos.y,
