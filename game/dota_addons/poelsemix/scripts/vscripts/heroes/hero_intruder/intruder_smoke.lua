@@ -7,7 +7,7 @@ LinkLuaModifier("intruder_smoke_cloud_modifier_hostile", "heroes/hero_intruder/i
 LinkLuaModifier("intruder_smoke_cloud_modifier_debuff", "heroes/hero_intruder/intruder_smoke", LUA_MODIFIER_MOTION_NONE)
 
 function intruder_smoke:OnSpellStart()
-    if not IsServer then return end
+    if not IsServer() then return end
     local caster = self:GetCaster()
     local target_point = self:GetCursorPosition()
     local distance = (caster:GetAbsOrigin() - target_point):Length2D()
@@ -38,7 +38,7 @@ function intruder_smoke:OnSpellStart()
 end
 
 function intruder_smoke:OnProjectileHit(target, location)
-    if not IsServer then return end
+    if not IsServer() then return end
     local caster = self:GetCaster()
     EmitSoundOnLocationWithCaster(location,"intruder_smoke",caster)
 

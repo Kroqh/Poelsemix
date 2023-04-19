@@ -47,9 +47,6 @@ function modifier_hurtigbrille:OnCreated()
     local partfire = "particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_ambient_esl_fire.vpcf"
 	self.pfx = ParticleManager:CreateParticle(partfire, PATTACH_ABSORIGIN_FOLLOW, self:GetParent())
 
-
-
-
     if self:GetParent():HasScepter() then
             local particle = "particles/econ/items/ogre_magi/ogre_2022_cc/ogre_2022_cc_trail_fire.vpcf"
             self.pfx_fire = ParticleManager:CreateParticle(particle, PATTACH_OVERHEAD_FOLLOW, self:GetParent())
@@ -58,6 +55,7 @@ function modifier_hurtigbrille:OnCreated()
             self:StartIntervalThink(ability:GetSpecialValueFor("scepter_tick_rate"))
     end
 end
+
 function modifier_hurtigbrille:OnDestroy()
     if self.pfx ~= nil then
         ParticleManager:DestroyParticle(self.pfx, false)

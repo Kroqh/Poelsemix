@@ -17,7 +17,7 @@
                               "value0"        "sounds/brian/max_sprit.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "5.00000"  }
+                    "volume"            {   "value"     "4.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -110,7 +110,7 @@
                               "value0"        "sounds/brian/cough_brian.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "10.00000"  }
+                    "volume"            {   "value"     "3.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.00000"  }
@@ -141,7 +141,7 @@
                               "value0"        "sounds/brian/brian_fc.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "10.00000"  }
+                    "volume"            {   "value"     "5.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.00000"  }
