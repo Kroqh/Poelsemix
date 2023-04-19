@@ -5,7 +5,7 @@
 	"PointsToWin_VeryCloseToVictory"				"+{d:points_to_win} more!"
 	"PointsToWin_Victory"							"Victory!"
 
-	"InstructionsTitle"								"OVERTHROW"
+	"InstructionsTitle"								"POELSEMIX"
 	"InstructionsObjective"							"OBJECTIVE"
 	"InstructionsObjectiveText"						"Slay your enemies! Be the first to earn the goal number of kills, or the team with the most kills when the round ends, and you will be victorious."
 	"InstructionsHowToPlay"							"HOW TO PLAY"
@@ -49,8 +49,11 @@
 	"KillMessageHero"								"{s:hero_id}"
 	"KillMessageText"								"HAS KILLED THE LEADER"
 	"KillMessageBounty"								"FOR 500 BONUS GOLD!"
-	
-	"addonname"										"Pølsemix"
+	"goal"										"GOAL"
+	"timer"									"Time left"
+
+	"addonname"										"Poelsemix"
+	"website"					"stevendankmeister.github.io/poelsemix-official/index.html"
 	"overthrow_game_info_header_objective"			"Objective:"
 	"overthrow_brief_description"					"Slay your enemies! First team to hit the kill limit wins!"
 	"overthrow_game_info_header_how_to_play"		"How To Play:"
@@ -63,13 +66,6 @@
 	"overthrow_game_info_tip03"						"You may need to coordinate with an opposing team to take out a strong opponent."
 	"overthrow_game_info_tip04"						"The fewer kills your team has, the stronger items you will recieve from a delivery."
 
-	"npc_dota_hero_silencer_notification"			"Silencer"
-	"npc_dota_hero_necrolyte_notification"			"Necrophos"
-	"npc_dota_hero_zuus_notification"				"Zeus"
-	"npc_dota_hero_riki_notification"				"Riki"
-	"npc_dota_hero_bounty_hunter_notification"		"Bounty Hunter"
-	"npc_dota_hero_broodmother_notification"		"Broodmother"
-	"npc_dota_hero_pudge_notification"				"Pudge"
 	
 }
 

@@ -8,7 +8,7 @@
 			<Image id="seq_bg" class="SeqBg" src="file://{images}/custom_game/loading_screen/loading_seq_bg.psd" />
 		</Panel>
 		<Panel id="TitlePanel">
-			<Label id="OverthrowTitle" text="#addon_game_name" style="" />
+			<Label id="OverthrowTitle" text="#addonname" style="" />
 		</Panel>
 	</Panel>
 </root>

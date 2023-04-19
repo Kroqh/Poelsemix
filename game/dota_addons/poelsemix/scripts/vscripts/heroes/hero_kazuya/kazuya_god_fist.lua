@@ -28,10 +28,10 @@ function kazuya_god_fist:OnSpellStart()
         target:AddNewModifier(caster,self,"modifier_kazuya_god_fist_knockup",{duration = self:GetSpecialValueFor("knockup_duration")})
 
 
-        local particle = "particles/econ/items/disruptor/disruptor_ti8_immortal_weapon/disruptor_ti8_immortal_thunder_strike_aoe_electric.vpcf"
-		local pfx = ParticleManager:CreateParticle(particle, PATTACH_POINT_FOLLOW, caster)
-		ParticleManager:SetParticleControlEnt(pfx, 0, caster, PATTACH_POINT_FOLLOW, "attach_attack1", caster:GetAbsOrigin(), false)
-		ParticleManager:ReleaseParticleIndex(pfx)
+
+        local particle_self = "particles/units/heroes/hero_zuus/zuus_lightning_bolt_start.vpcf"
+    	local pfx_fire = ParticleManager:CreateParticle(particle_self, PATTACH_POINT_FOLLOW, caster)
+    	ParticleManager:SetParticleControlEnt(pfx_fire, 0, caster, PATTACH_POINT_FOLLOW, "attach_attack1", caster:GetAbsOrigin(), false)
     end
 end
 

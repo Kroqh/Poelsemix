@@ -4,9 +4,9 @@
 		<include src="file://{resources}/styles/custom_game/overthrow_game_info.css" />
 	</styles>
 	<Panel class="OverthrowGameInfo">
-	<Label id="linkWebsite" class="InfoRow" html="true" text="Poelsemix.com" />
+	<Label id="linkWebsite" class="InfoRow" html="true" text="#website" />
 		<Panel id="Title">
-			<Label id="TitleName" text="Poelsemix"/>
+			<Label id="TitleName" text="#addonname"/>
 		</Panel>
 		
 		<Label id="ObjectiveHeader" class="Header" html="true" text="#overthrow_game_info_header_objective" />

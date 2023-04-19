@@ -3,6 +3,10 @@ LinkLuaModifier("modifier_harald_convert_bonus","heroes/hero_harald/harald_conve
 
 ha_convert = ha_convert or class({})
 
+function ha_convert:OnAbilityPhaseStart() --doesnt auto start for some reason
+	--self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_2)
+end
+
 function ha_convert:OnSpellStart()
 	if not IsServer() then return end
     local caster = self:GetCaster()

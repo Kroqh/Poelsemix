@@ -6,7 +6,7 @@
 	<Panel hittest="false" class="HeroSelectOverlayTimer">
 		<Image id="TimerBg" src="file://{images}/status_icons/timer_background.psd" />
 		<Image id="TimerRing" src="file://{images}/status_icons/timer_ring.psd" />
-		<Label id="Timer" text="Time left" />
+		<Label id="Timer" text="#timer" />
 		<Label id="TimerLabel" text="{s:timer_text}" />
 	</Panel>
 </root>

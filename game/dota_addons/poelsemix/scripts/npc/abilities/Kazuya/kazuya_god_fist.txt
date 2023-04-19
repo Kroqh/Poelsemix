@@ -19,7 +19,7 @@
 	
 	"Precache"
 	{
-		"particle"  "particles/econ/items/disruptor/disruptor_ti8_immortal_weapon/disruptor_ti8_immortal_thunder_strike_aoe_electric.vpcf"
+		"particle"  "particles/units/heroes/hero_zuus/zuus_lightning_bolt_start.vpcf"
 
 		"soundfile" "soundevents/kazuya_soundevent.vsndevts"
 	}

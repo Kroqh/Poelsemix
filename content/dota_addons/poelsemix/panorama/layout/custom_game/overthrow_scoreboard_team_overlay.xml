@@ -10,11 +10,11 @@
 		<Panel id="TeamNotices">
 			<Image hittest="false" id="FirstPlaceIndicator" src="file://{images}/custom_game/crown001.psd" />
 			<Panel hittest="false" id="VictoryStatusRow">
-				<Label hittest="false" id="PointsToWin" text="999" />
+				<Label hittest="false" id="PointsToWin" text="#PointsToWin" />
 			</Panel>
 		</Panel>
 		<Panel hittest="false" id="TempStatusRow">
-			<Label hittest="false" id="RecentScore" text="999"/>
+			<Label hittest="false" id="RecentScore" text="#RecentScore"/>
 		</Panel>
 	</Panel>
 </root>

@@ -1,6 +1,10 @@
 ha_army = ha_army or class({})
 
 
+function ha_army:OnAbilityPhaseStart()  --doesnt auto start for some reason
+	self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_4)
+end
+
 function ha_army:OnSpellStart()
     if not IsServer() then return end
 

@@ -14,7 +14,7 @@
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"30 28 26 24"
-	"AbilityCastPoint"				"0"
+	"AbilityCastPoint"				"0.2"
 	"AbilityCastRange"				"600"
 	
 	// Cost

@@ -1,6 +1,14 @@
 ha_thor = ha_thor or class({})
 
 
+function ha_thor:OnAbilityPhaseStart() 
+    if not IsServer() then return end
+    local caster = self:GetCaster()
+    local particle_self = "particles/units/heroes/hero_zuus/zuus_lightning_bolt_start.vpcf"
+
+    local pfx_fire = ParticleManager:CreateParticle(particle_self, PATTACH_POINT_FOLLOW, caster)
+    ParticleManager:SetParticleControlEnt(pfx_fire, 0, caster, PATTACH_POINT_FOLLOW, "attach_attack1", caster:GetAbsOrigin(), false)
+end
 function ha_thor:OnSpellStart()
     if not IsServer() then return end
 
@@ -12,10 +20,7 @@ function ha_thor:OnSpellStart()
     local particle_hit = "particles/units/heroes/hero_zuus/zuus_lightning_bolt.vpcf"
 
 
-    local particle_self = "particles/units/heroes/hero_zuus/zuus_lightning_bolt_start.vpcf"
-
-    local pfx_fire = ParticleManager:CreateParticle(particle_self, PATTACH_POINT_FOLLOW, caster)
-    ParticleManager:SetParticleControlEnt(pfx_fire, 0, caster, PATTACH_POINT_FOLLOW, "attach_attack1", caster:GetAbsOrigin(), false)
+    
     
     EmitSoundOnLocationWithCaster(point,"ha_thor", caster)
     local targets = 1

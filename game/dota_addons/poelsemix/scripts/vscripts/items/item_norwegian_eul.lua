@@ -80,11 +80,6 @@ function modifier_item_norwegian_eul_active:OnCreated()
 end
 
 function modifier_item_norwegian_eul_active:OnIntervalThink()
-	-- Remove force if conflicting
-	if not self:CheckMotionControllers() then
-		self:Destroy()
-		return
-	end
 	self:HorizontalMotion(self:GetParent(), FrameTime())
 end
 
