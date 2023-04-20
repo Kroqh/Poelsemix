@@ -1,6 +1,11 @@
 LinkLuaModifier("modifier_brian_dak", "heroes/hero_brian/brian_dak", LUA_MODIFIER_MOTION_NONE)
 brian_dak = brian_dak or class({})
 
+function brian_dak:OnAbilityPhaseStart()  --doesnt auto start for some reason
+	self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_4)
+end
+
+
 function brian_dak:OnSpellStart()
     if IsServer() then
 		local caster = self:GetCaster()
@@ -34,6 +39,10 @@ function modifier_brian_dak:OnCreated()
     self:StartIntervalThink(tick_rate)
 end
 
+function modifier_brian_dak:OnDestroy()
+    if not IsServer() then return end
+    self:GetCaster():FadeGesture(ACT_DOTA_CAST_ABILITY_4)
+end
 function modifier_brian_dak:OnIntervalThink()
 	if not IsServer() then return end
 

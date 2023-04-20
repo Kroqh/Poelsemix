@@ -4,14 +4,24 @@ LinkLuaModifier("modifier_generic_taunt","generic_mods/modifier_generic_taunt.lu
 
 mokai = mokai or class({})
 
+function mokai:OnAbilityPhaseStart()  --doesnt auto start for some reason
+	self:GetCaster():StartGesture(ACT_DOTA_CHANNEL_ABILITY_2)
+end
 
 function mokai:OnSpellStart()
 	if not IsServer() then return end
-    self:GetCaster():EmitSound("mokaidrink")
+    local caster = self:GetCaster()
+    caster:EmitSound("mokaidrink")
+    self.caster_particle = ParticleManager:CreateParticle( "particles/units/heroes/hero_brewmaster/brewmaster_drunken_haze_debuff_drips_b.vpcf", PATTACH_OVERHEAD_FOLLOW, caster)
+    ParticleManager:SetParticleControlEnt(self.caster_particle, 0, caster, PATTACH_OVERHEAD_FOLLOW, "follow_overhead", caster:GetAbsOrigin(), true)
+
 end
 
 function mokai:OnChannelFinish(interrupt)
-	if not IsServer() or interrupt then return end
+	if not IsServer() then return end
+    self:GetCaster():FadeGesture(ACT_DOTA_CHANNEL_ABILITY_2)
+    ParticleManager:DestroyParticle(self.caster_particle, true)
+    if interrupt then return end
     local caster = self:GetCaster()
     local duration = self:GetSpecialValueFor("duration")
     if caster:HasTalent("special_bonus_brian_6") then duration = duration + caster:FindAbilityByName("special_bonus_brian_6"):GetSpecialValueFor("value") end

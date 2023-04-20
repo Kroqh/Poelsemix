@@ -2,6 +2,9 @@
 {
 	// HERO: Brewmaster
 	"override_hero"				"npc_dota_hero_brewmaster"			// Hero to override
+	"DisableWearables" "1"
+	"ModelScale" "1.25"
+	"model" "models/randers_brian/brian.vmdl"
 	"Ability1" "red_cecil"				
 	"Ability2" "mokai"
 	"Ability3" "hurtigbrille"
@@ -9,6 +12,7 @@
 	"Ability5" "generic_hidden"
 	"Ability6" "brian_dak"
 	"AttributeBaseStrength"		"25"
+	
 	
 	"Ability10"		"special_bonus_brian_5"
 	"Ability11"		"special_bonus_brian_1"

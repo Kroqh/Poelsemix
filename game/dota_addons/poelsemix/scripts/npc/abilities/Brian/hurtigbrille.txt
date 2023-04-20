@@ -4,7 +4,7 @@
 	"AbilityTextureName"        "hurtigbrille"
 	"ScriptFile"			"heroes/hero_brian/brian_hurtigbrille"
 	"MaxLevel"                  "4"
-	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	"AbilityCooldown"               "15"
 	"AbilityManaCost"               "100"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"

@@ -2,7 +2,9 @@ LinkLuaModifier("modifier_smokerlungs","heroes/hero_brian/brian_red_cecil.lua",L
 
 red_cecil = red_cecil or class({})
 
-
+function red_cecil:OnAbilityPhaseStart()  --doesnt auto start for some reason
+	self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_1)
+end
 
 function red_cecil:OnSpellStart()
 	if not IsServer() then return end
@@ -27,7 +29,6 @@ function red_cecil:OnSpellStart()
         bProvidesVision = false,
         bHasFrontalCone = false,
         vVelocity = (((target_point - caster:GetAbsOrigin()) * Vector(1, 1, 0)):Normalized()) * self:GetSpecialValueFor("proj_speed"),
-        --iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1, --change to mouth when it model implemented
     }
     ProjectileManager:CreateLinearProjectile(smoke_projectile)
 end

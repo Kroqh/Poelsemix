@@ -6,41 +6,99 @@
 	m_hFallback = resource:"particles/heroes/brian/red_cecil_mid.vpcf"
 	m_nFallbackMaxCount = 2
 	m_flConstantRadius = 32.0
-	m_ConstantColor = [ 255, 208, 209, 155 ]
+	m_ConstantColor = [ 186, 186, 186, 150 ]
 	m_bShouldSort = false
-	m_Renderers = 
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 2
+	m_controlPointConfigurations = 
 	[
 		{
-			_class = "C_OP_RenderSprites"
-			m_flStartFadeSize = 0.575
-			m_flEndFadeSize = 0.65
-			m_flMaxSize = 0.75
-			m_flOverbrightFactor = 2.0
-			m_flAddSelfAmount = 1.0
-			m_bSaturateColorPreAlphaBlend = false
-			m_flAnimationRate = 0.5
-			m_nOrientationType = "PARTICLE_ORIENTATION_WORLD_Z_ALIGNED"
-			m_nHSVShiftControlPoint = 62
-			m_vecTexturesInput = 
+			m_name = "preview"
+			m_drivers = 
 			[
 				{
-					m_hTexture = resource:"materials/particle/fire_particle_2/fire_particle_2.vtex"
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 1.0, 1.0, 1.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 53.639137, 3.645905, 128.02475 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 60
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 50.0, 255.0, 50.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 61
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 62
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
 				},
 			]
-			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ALPHA"
-			m_nFogType = "PARTICLE_FOG_GAME_DEFAULT"
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		{
+			_class = "C_OP_HSVShiftToCP"
+			m_DefaultHSVColor = [ 255, 218, 109, 255 ]
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.0
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
 		},
 		{
-			_class = "C_OP_RenderDeferredLight"
-			m_flStartFalloff = 0.1
-			m_flAlphaScale = 4.0
-			m_flRadiusScale = 10.0
-			m_hTexture = resource:"materials/particle/fire_particle_2/fire_particle_2.vtex"
-			m_vecColorScale = 
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
 			{
-				m_nType = "PVEC_TYPE_LITERAL_COLOR"
-				m_LiteralColor = [ 249, 201, 86 ]
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.2
 			}
+			m_nOutputField = 1
+		},
+		{
+			_class = "C_INIT_PositionOffset"
+			m_bLocalCoords = true
+			m_OffsetMax = [ 50.0, 0.0, 0.0 ]
+			m_OffsetMin = [ 50.0, 0.0, 0.0 ]
+		},
+		{
+			_class = "C_INIT_VelocityFromCP"
+			m_nControlPoint = 1
+		},
+		{
+			_class = "C_INIT_PositionPlaceOnGround"
+			m_flOffset = 128.0
+			m_bIncludeWater = true
+			m_flMaxTraceLength = 1024.0
+			m_CollisionGroupName = "DEBRIS"
 		},
 	]
 	m_Operators = 
@@ -64,7 +122,6 @@
 			m_flOffset = 128.0
 			m_flTolerance = 96.0
 			m_nLerpCP = 3
-			m_nTraceMissBehavior = "PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END"
 		},
 		{
 			_class = "C_OP_RadiusDecay"
@@ -85,77 +142,36 @@
 			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
 		},
 	]
-	m_Initializers = 
+	m_Renderers = 
 	[
 		{
-			_class = "C_INIT_CreateWithinSphereTransform"
-			m_TransformInput = 
-			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
-				m_nControlPoint = 0
-				m_nControlPointRangeMax = 0
-			}
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.575
+			m_flEndFadeSize = 0.65
+			m_flMaxSize = 0.75
+			m_flOverbrightFactor = 2.0
+			m_flAddSelfAmount = 1.0
+			m_bSaturateColorPreAlphaBlend = false
+			m_flAnimationRate = 0.5
+			m_nOrientationType = "PARTICLE_ORIENTATION_WORLD_Z_ALIGNED"
+			m_nHSVShiftControlPoint = 62
+			m_vecTexturesInput = 
+			[
+				{
+					m_hTexture = resource:"materials/particle/fire_particle_10/fire_particle_10_low_white.vtex"
+				},
+			]
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
-			_class = "C_INIT_InitFloat"
-			m_InputValue = 
+			_class = "C_OP_RenderDeferredLight"
+			m_flStartFalloff = 0.1
+			m_flAlphaScale = 4.0
+			m_flRadiusScale = 10.0
+			m_hTexture = resource:"materials/particle/fire_particle_2/fire_particle_2.vtex"
+			m_vecColorScale = 
 			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.2
-			}
-			m_nOutputField = 1
-		},
-		{
-			_class = "C_INIT_PositionOffset"
-			m_bLocalCoords = true
-			m_OffsetMax = [ 50.0, 0.0, 0.0 ]
-			m_OffsetMin = [ 50.0, 0.0, 0.0 ]
-			m_TransformInput = 
-			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
-				m_nControlPoint = 0
-			}
-		},
-		{
-			_class = "C_INIT_VelocityFromCP"
-			m_nControlPoint = 1
-		},
-		{
-			_class = "C_INIT_PositionPlaceOnGround"
-			m_flOffset = 128.0
-			m_bIncludeWater = true
-			m_flMaxTraceLength = 1024.0
-			m_CollisionGroupName = "DEBRIS"
-			m_nTraceMissBehavior = "PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END"
-		},
-	]
-	m_Emitters = 
-	[
-		{
-			_class = "C_OP_InstantaneousEmitter"
-			m_flStartTime = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.0
-			}
-			m_nParticlesToEmit = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 1.0
+				m_nType = "PVEC_TYPE_LITERAL_COLOR"
+				m_LiteralColor = [ 249, 201, 86 ]
 			}
 		},
 	]
@@ -163,9 +179,6 @@
 	[
 		{
 			m_ChildRef = resource:"particles/heroes/brian/red_cecil_b_g.vpcf"
-		},
-		{
-			m_ChildRef = resource:"particles/heroes/brian/red_cecil_b_d.vpcf"
 		},
 		{
 			m_ChildRef = resource:"particles/heroes/brian/red_cecil_c.vpcf"
@@ -178,75 +191,6 @@
 		},
 		{
 			m_ChildRef = resource:"particles/heroes/brian/red_cecil_a_e.vpcf"
-		},
-		{
-			m_ChildRef = resource:"particles/heroes/brian/red_cecil_b_launch.vpcf"
-		},
-	]
-	m_PreEmissionOperators = 
-	[
-		{
-			_class = "C_OP_HSVShiftToCP"
-			m_DefaultHSVColor = [ 255, 218, 109, 255 ]
-		},
-	]
-	m_nBehaviorVersion = 5
-	m_nFirstMultipleOverride_BackwardCompat = 2
-	m_controlPointConfigurations = 
-	[
-		{
-			m_name = "preview"
-			m_drivers = 
-			[
-				{
-					m_iAttachType = "PATTACH_WORLDORIGIN"
-					m_vecOffset = [ 0.0, 0.0, 0.0 ]
-					m_angOffset = [ 0.0, 0.0, 0.0 ]
-					m_entityName = "self"
-				},
-				{
-					m_iControlPoint = 1
-					m_iAttachType = "PATTACH_WORLDORIGIN"
-					m_vecOffset = [ 1.0, 1.0, 1.0 ]
-					m_angOffset = [ 0.0, 0.0, 0.0 ]
-					m_entityName = "self"
-				},
-				{
-					m_iControlPoint = 2
-					m_iAttachType = "PATTACH_WORLDORIGIN"
-					m_vecOffset = [ 0.0, 0.0, 0.0 ]
-					m_angOffset = [ 0.0, 0.0, 0.0 ]
-					m_entityName = "self"
-				},
-				{
-					m_iControlPoint = 3
-					m_iAttachType = "PATTACH_WORLDORIGIN"
-					m_vecOffset = [ 53.639137, 3.645905, 128.02475 ]
-					m_angOffset = [ 0.0, 0.0, 0.0 ]
-					m_entityName = "self"
-				},
-				{
-					m_iControlPoint = 60
-					m_iAttachType = "PATTACH_WORLDORIGIN"
-					m_vecOffset = [ 50.0, 255.0, 50.0 ]
-					m_angOffset = [ 0.0, 0.0, 0.0 ]
-					m_entityName = "self"
-				},
-				{
-					m_iControlPoint = 61
-					m_iAttachType = "PATTACH_WORLDORIGIN"
-					m_vecOffset = [ 0.0, 0.0, 0.0 ]
-					m_angOffset = [ 0.0, 0.0, 0.0 ]
-					m_entityName = "self"
-				},
-				{
-					m_iControlPoint = 62
-					m_iAttachType = "PATTACH_WORLDORIGIN"
-					m_vecOffset = [ 0.0, 0.0, 0.0 ]
-					m_angOffset = [ 0.0, 0.0, 0.0 ]
-					m_entityName = "self"
-				},
-			]
 		},
 	]
 }

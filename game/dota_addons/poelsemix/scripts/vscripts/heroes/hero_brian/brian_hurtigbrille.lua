@@ -1,7 +1,10 @@
---hurtigbrille
-
 LinkLuaModifier("modifier_hurtigbrille", "heroes/hero_brian/brian_hurtigbrille", LUA_MODIFIER_MOTION_NONE)
 hurtigbrille = hurtigbrille or class({})
+
+function hurtigbrille:OnAbilityPhaseStart()  --doesnt auto start for some reason
+	self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_3)
+end
+
 
 function hurtigbrille:OnSpellStart()
     if IsServer() then

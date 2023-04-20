@@ -891,9 +891,9 @@
 					m_Loop = 
 					{
 						m_bLoop = true
-						m_bSmoothLoop = false
-						m_nSmoothLoopStart = 0
-						m_nSmoothLoopEnd = 0
+						m_bSmoothLoop = true
+						m_nSmoothLoopStart = 3
+						m_nSmoothLoopEnd = 3
 						m_StartLoop = 
 						{
 							_class = "CVAnimCmdStartLoop"

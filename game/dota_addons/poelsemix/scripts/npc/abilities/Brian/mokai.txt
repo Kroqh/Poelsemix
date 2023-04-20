@@ -12,7 +12,6 @@
 		"ScriptFile"			"heroes/hero_brian/brian_mokai"
 		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 		"AbilityTextureName" "MOKAI"
-		"AbilityCastAnimation" "ACT_DOTA_SPAWN"
 		
 
 		// Casting
