@@ -3,7 +3,8 @@ modifier_generic_taunt = modifier_generic_taunt or class({})
 --------------------------------------------------------------------------------
 -- Classifications
 function modifier_generic_taunt:IsHidden()
-	return false
+    if not IsServer() then end
+	return  self.is_hidden
 end
 
 function modifier_generic_taunt:IsDebuff()
@@ -15,17 +16,28 @@ function modifier_generic_taunt:IsStunDebuff()
 end
 
 function modifier_generic_taunt:IsPurgable()
-	return false
+    if not IsServer() then end
+	return self.is_purgeable
 end
 
 --------------------------------------------------------------------------------
--- Initializations, takes optional target, status effect, status_priority
+-- Initializations, takes optional target, status effect, status_priority, is_hidden, is_purgeable (is_hidden not working it seems)
 function modifier_generic_taunt:OnCreated(kv)
+    self.is_hidden = kv.is_hidden
+    if not self.is_hidden then
+        self.is_hidden = false
+    end
     if IsServer() then
         self.taunt_target = kv.taunt_target
         self.status_priority = kv.status_priority
         self.status_effect = kv.status_effect
+        
+        self.is_purgeable = kv.is_purgeable
 
+        if not self.is_purgeable then
+            self.is_purgeable = false
+        end
+       
         if not self.status_priority then
             self.status_priority = 1
         end

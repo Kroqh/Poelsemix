@@ -1,89 +1,30 @@
 	"ha_gay"
 	{
-		"BaseClass"                 "ability_datadriven"
+		"BaseClass"                 "ability_lua"
+		"ScriptFile"			"heroes/hero_krogh/krogh_ha_gay"
 		"AbilityTextureName"        "hagay"
 		"MaxLevel"                  "4"
 		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
-		"AbilityCooldown"               "20"
-		"AbilityManaCost"               "100 110 120 130"
-		"AbilityCastRange" "800"
-		"AbilityCastPoint"				"0.6"
-	    "precache"
-        {
-            
-        }
-		"OnAbilityPhaseStart"
-		{
-		"FireSound"
-			{
-		"EffectName" "hagay"
-        "Target" "CASTER"
-			}
-		}
-		"OnSpellStart"
-		{
-		
+		"AbilityCooldown"               "20 18 16 14"
+		"AbilityManaCost"               "100 95 90 85"
+		"AbilityCastRange" "700 775 850 925"
+		"AbilityCastPoint"				"0.2"
 
-						
-				
-			
-		 "ApplyModifier"
-		{
-		"Target"	"TARGET"
-				"ModifierName"	"gayfag"
-				
-				
-		}			
-		}
-			
-		
-		
-		
-		"Modifiers"
-		{
-		     "gayfag"
-		{	
-		"Duration" "%timer"
-			"IsPurgeable" "0"
-			"IsDebuff" "1"
-			
-			"StatusEffectName" 		"particles/status_fx/status_effect_beserkers_call.vpcf" 	   
-			"StatusEffectPriority"  "10"
-			
-			"ThinkInterval"  "0.1"
-			"OnIntervalThink"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/hero_brian/berserkers_call.lua"
-					"Function"		"BerserkersCall"
-				}
-			}
-
-			"OnDestroy"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/hero_brian/berserkers_call.lua"
-					"Function"		"BerserkersCallEnd"
-				}
-			}
-		}
-			
-			
-		}
 		"AbilitySpecial"
 		{
   			"01"
 		    {
 		        "var_type"          "FIELD_FLOAT"
-		        "timer"             "4.0 5.0 6.0 7.0"
+		        "duration"             "3.5 4 4.5 5"
+			"LinkedSpecialBonus" "special_bonus_krogh_2"
 		    }
-
-		  
-
 		}
-		"OverrideAnimation"     "ACT_DOTA_CAST_ABILITY_1"																			
+		"precache"
+		{
+			"particle" "particles/heroes/krogh/ha_gay_chain.vpcf"
+			"particle" "particles/econ/events/plus/high_five/high_five_lvl3_overhead_hearts.vpcf"
+		}
+																				
 }	
