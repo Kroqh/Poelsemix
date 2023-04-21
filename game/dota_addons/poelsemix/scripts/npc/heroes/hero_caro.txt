@@ -24,10 +24,10 @@
 	"Ability13"		"special_bonus_caro_1"
 	
 	"Ability14"		"special_bonus_caro_3"
-	"Ability15"		"special_bonus_attack_speed_50"
+	"Ability15"		"special_bonus_caro_8"
 	
 	"Ability16"		"special_bonus_caro_5"
-	"Ability17"		"special_bonus_attack_speed_60"
+	"Ability17"		"special_bonus_caro_7"
 	
 	"MovementSpeed"               "310"
 }

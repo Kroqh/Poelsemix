@@ -1,0 +1,17 @@
+//=================================================================================================================
+// caro TALENT 7 matchpoint pierce
+//=================================================================================================================
+"special_bonus_caro_7"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"caro_matchpoint"
+	}	
+	
+}

@@ -92,7 +92,9 @@ function powershot_start_traverse( keys )
 		iUnitTargetFlags = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES,
 		iUnitTargetType = DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,
 		iVisionRadius = ability.powershot_vision_radius,
-		iVisionTeamNumber = caster:GetTeamNumber()
+		iVisionTeamNumber = caster:GetTeamNumber(),
+		bIgnoreSource = true
+		
 	}
 	caster.powershot_projectileID = ProjectileManager:CreateLinearProjectile( projectileTable )
 	
