@@ -29,7 +29,6 @@ function press_meeting:OnSpellStart()
             unit:AddNewModifier(caster, self, "modifier_kill", { duration = self:GetSpecialValueFor("lifetime") } )
 
             if caster:HasScepter() then
-                print("test")
                 enemy:AddNewModifier(caster, self, "modifier_stunned", { duration = self:GetSpecialValueFor("stun_dur_aghs") } )
             end
             

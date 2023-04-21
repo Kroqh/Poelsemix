@@ -42,6 +42,7 @@ end
 
 function modifier_item_twisted_bow:OnAttackLanded(params)
 	if (params.attacker ~= self:GetParent()) then return end 
+	if not IsServer() then return end
 	local tbow_damage = params.damage * params.target:GetMagicalArmorValue()
 	local damageTable = {
 			victim = params.target,

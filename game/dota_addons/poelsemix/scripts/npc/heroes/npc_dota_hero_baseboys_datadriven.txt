@@ -20,5 +20,4 @@
 	"Ability16" "special_bonus_attack_speed_100"
 	"Ability17" "special_bonus_unique_naga_siren"
 	
-	"AbilityDraftIgnoreCount" "7"
 }

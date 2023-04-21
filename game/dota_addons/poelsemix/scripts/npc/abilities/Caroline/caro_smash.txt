@@ -2,123 +2,57 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"						"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"BaseClass"						"ability_lua"
+	"ScriptFile"				"heroes/hero_caro/caro_smash.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 	"AbilityTextureName"			"caro_smash"
-
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"650"
-	"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
-
-	// Time		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"0.0 0.0 0.0 0.0"
-	"AbilityDuration"				"0.1"
-
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"0 0 0 0"
-
-	// Cost
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"90 75 60 45"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
 	{
 
+		
 		"01"
 		{
-			"var_type"						"FIELD_FLOAT"
-			"smash_stun_du"	"0.15"
+			"var_type"						"FIELD_INTEGER"
+			"bonus_damage"	"45 65 85 105"
 		}
 		"02"
 		{
+			"var_type"						"FIELD_INTEGER"
+			"bonus_range"	"25 50 75 100"
+			"LinkedSpecialBonus" "special_bonus_caro_1"
+		}
+		"03"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"mana_cost"	"90 75 60 45"
+			"LinkedSpecialBonus" "special_bonus_caro_5"
+		}
+		"04"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"stun_chance"	" 10 15 20 25"
+			"LinkedSpecialBonus" "special_bonus_caro_6"
+		}
+		"05"
+		{
 			"var_type"						"FIELD_FLOAT"
-			"dmg"	"65 85 105 125"
+			"stun_duration"	"0.1"
+		}
+		"06"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"projectile_speed_bonus"	"100 125 150 175"
 		}
 	}
 	
-	// Data driven
-	//-------------------------------------------------------------------------------------------------------------
+
 	"precache"
 	{
 		"particle"				"particles/heroes/caroline/smash_ball.vpcf"
-		"particle"				"particles/generic_gameplay/generic_purge.vpcf"
 	}
 	
-	"Modifiers"
-	{
-		"modifier_frost_arrows_caster_datadriven"
-		{
-			"Passive"               		"1"
-			"IsHidden"						"1"
-			"IsPurgable"					"0"
-			
-			"Orb"
-			{
-				"Priority"					"DOTA_ORB_PRIORITY_ABILITY"
-				"ProjectileName"			"particles/heroes/caroline/smash_ball.vpcf"
-				"CastAttack"				"1"
-			}
-
-			"OnOrbFire"
-			{
-				"SpendMana"
-				{
-					"Mana"					"%AbilityManaCost"
-				}
-				"FireSound"
-				{
-					"EffectName"			"carohit"
-					"Target"				"CASTER"
-				}
-			}
-
-			"OnOrbImpact"
-			{
-				
-				"Random"
-		    {
-		        "Chance"            "20"
-		        "OnSuccess"
-				{
-				"ApplyModifier"
-				{
-					"Target"
-					{
-						"Center"			"TARGET"
-						"Type"				"DOTA_UNIT_TARGET_HERO"
-					}
-					"ModifierName"			"modifier_frost_arrows_slow_datadriven"
-					"Duration"				"%smash_stun_du"
-				}
-				}
-			}
-				"Damage"
-				{
-				    "Target"    "TARGET"
-				    "Type"      "DAMAGE_TYPE_MAGICAL"
-				    "Damage"    "%dmg"
-				}
-			}
-		}
-		
-		"modifier_frost_arrows_slow_datadriven"
-		{
-			"IsHidden"						"1"
-		
-			"EffectName"					"particles/generic_gameplay/generic_purge.vpcf"
-		
-			"States"
-			{
-				"MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"
-			}
-		}
-	}
+	
 }

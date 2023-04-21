@@ -15,13 +15,8 @@ end
 modifier_damian_penjamin = modifier_damian_penjamin or class({})
 
 
-function modifier_damian_penjamin:IsDebuff()				return false end
-function modifier_damian_penjamin:IsHidden() 				return false end
+function modifier_damian_penjamin:IsHidden() 				return true end
 function modifier_damian_penjamin:IsPurgable() 				return false end
-function modifier_damian_penjamin:IsPurgeException() 		return false end
-function modifier_damian_penjamin:IsStunDebuff() 			return false end
-function modifier_damian_penjamin:RemoveOnDeath() 			return false end
-function modifier_damian_penjamin:AllowIllusionDuplicate() 	return false end
 
 
 function modifier_damian_penjamin:OnCreated()
@@ -43,7 +38,10 @@ function modifier_damian_penjamin:OnIntervalThink()
 	if mana_after <= 0 then
 		caster:SetMana(0)
         ability:ToggleAbility()
-	else
+	elseif mana_after < 0 then
+        ability:ToggleAbility()
+        return
+    else
 		caster:SetMana(mana_after)
 	end
 

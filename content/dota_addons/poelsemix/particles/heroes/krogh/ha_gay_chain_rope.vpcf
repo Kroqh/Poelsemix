@@ -29,7 +29,6 @@
 			m_bUseWorldLocation = true
 			m_vecRotation = [ -90.0, 0.0, 0.0 ]
 			m_nCP = 0
-			m_bDisableOperator = true
 		},
 	]
 	m_Emitters = 

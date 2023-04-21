@@ -46,12 +46,6 @@ function modifier_caro_crossfit:RollStats()
         elseif roll == 5 then self.at = self.at + 1 end
         count = count + 1
     end
-    print("Rolling")
-    print(self.as)
-    print(self.ad)
-    print(self.agi)
-    print(self.str)
-    print(self.at)
 end
 
 function modifier_caro_crossfit:DeclareFunctions()

@@ -3,11 +3,14 @@
 	"override_hero" "npc_dota_hero_dark_seer"
 	"DisableWearables" "1"
 	"ModelScale" "0.6"
+	
+	"Model" "models/herobrine/herobrine.vmdl"
+
+	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
 	"MovementSpeed"	"0"
 	"AttributeBaseAgility"		"0"
 	"AttributeAgilityGain"		"0"
 	"AttributeIntelligenceGain"	"3"
-	"Model" "models/herobrine/herobrine.vmdl"
 	
 	"Ability1" "herobrine_creepypasta"
 	"Ability2" "hb_elder"

@@ -5,22 +5,27 @@
 	"model"	"models/urgot/urgot.vmdl"
 	"ModelScale"	"1.3"
 	"DisableWearables" "1"
+
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 	"AttackAcquisitionRange"	"400"
-	"AttackRange"			"400"
+
 	"ProjectileModel"		"particles/units/heroes/hero_pugna/pugna_base_attack.vpcf"
+
+
+	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"
 
 	//Dota xDDDD
 	"MovementTurnRate"		"100"
-	
-	"DisableWearables"				"1"
-	"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+
+	"AttackRange"			"400"
 	"AttributeBaseStrength"		"25"
-	"AttributeStrengthGain"		"3.100000"
+	"AttributeStrengthGain"		"2.7"
 	"AttributeBaseIntelligence"		"15"
-	"AttributeIntelligenceGain"		"1.75000"
-	"AttributeBaseAgility"		"18"
-	"AttributeAgilityGain"		"1.900000"	
+	"AttributeIntelligenceGain"		"1.75"
+	"AttributeBaseAgility"		"24"
+	"AttributeAgilityGain"		"2.5"	
+	"StatusHealth"                "490"
+	"MovementSpeed"               "285"
 
 
 	"Ability1" "imba_mirana_arrow"				
@@ -29,9 +34,7 @@
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "imba_vengefulspirit_nether_swap"
-	"AttributeBaseStrength"		"20"
-	"AttributeBaseIntelligence"	"40"
-	"AttributeIntelligenceGain"	"0.6"
+
 	"Ability10"		"special_bonus_all_stats_15"
 	"Ability11"		"special_bonus_exp_boost_25"
 	
@@ -44,6 +47,6 @@
 	"Ability16"		"special_bonus_urgot_r_boost"
 	"Ability17"		"special_bonus_urgot_q_boost2"
                  
-	"MovementSpeed"               "300"
-	"StatusHealth"                "500"
+
+
 }

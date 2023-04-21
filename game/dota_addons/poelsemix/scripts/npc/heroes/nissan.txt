@@ -4,6 +4,7 @@
 	"DisableWearables" "1"
 	"model" "models/nissan/nissanmodel.vmdl"
 	"ModelScale" "0.8"
+	"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
 	
 	"Ability1" "drift"				
 	"Ability2" "runover"
@@ -26,13 +27,13 @@
 	"ArmorPhysical"		"2"
 
 	"AttributeBaseStrength"			"21"									// Base strength
-	"AttributeStrengthGain"			"2"									// Strength bonus per level.
-	"AttributeBaseIntelligence"		"23"									// Base intelligence
-	"AttributeIntelligenceGain"		"3.9"									// Intelligence bonus per level.
-	"AttributeBaseAgility"		"22"
-	"AttributeAgilityGain"		"1.5"
+	"AttributeStrengthGain"			"2.1"									// Strength bonus per level.
+	"AttributeBaseIntelligence"		"21"									// Base intelligence
+	"AttributeIntelligenceGain"		"1.5"									// Intelligence bonus per level.
+	"AttributeBaseAgility"		"24"
+	"AttributeAgilityGain"		"3.9"
 
 	"StatusHealthRegen"		"2.1"
 
-	"MovementSpeed"		"295"
+	"MovementSpeed"		"305"
 }
