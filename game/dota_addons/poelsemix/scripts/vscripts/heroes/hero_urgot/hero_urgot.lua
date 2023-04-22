@@ -12,14 +12,10 @@ function imba_mirana_arrow:IsHiddenWhenStolen()
 	return false
 end
 
-function imba_mirana_arrow:GetCooldown()
+function imba_mirana_arrow:GetCooldown(level)
 	if IsServer() then
 		local caster = self:GetCaster()
-		local qcooldown = self:GetSpecialValueFor("cooldown")
-
-		if caster:HasTalent("special_bonus_urgot_q_boost") then
-			qcooldown = 1
-		end
+		local qcooldown = self.BaseClass.GetCooldown(self,level)
 		
 		if caster:HasTalent("special_bonus_urgot_q_boost2") then
 			qcooldown = qcooldown/2	
@@ -34,13 +30,7 @@ function imba_mirana_arrow:OnSpellStart()
 	local caster = self:GetCaster()
 	local ability = self
 	local target_point = self:GetCursorPosition()
-	local sound_cast = "Hero_Mirana.ArrowCast"
 
-	-- Ability specials
-	local spawn_distance = ability:GetSpecialValueFor("spawn_distance")
-
-	-- Play cast sound
-	--EmitSoundOn(sound_cast, caster)
 
 	-- Set direction for main arrow
 	local direction = (target_point - caster:GetAbsOrigin()):Normalized()
@@ -48,7 +38,7 @@ function imba_mirana_arrow:OnSpellStart()
 	-- Get spawn point
 	--local spawn_point = caster:GetAbsOrigin() + direction * spawn_distance -- Gammel kode
 
-	local spawn_point = caster:GetAttachmentOrigin(caster:ScriptLookupAttachment("attach_qhand")) + direction * spawn_distance
+	local spawn_point = caster:GetAttachmentOrigin(caster:ScriptLookupAttachment("attach_qhand")) + direction * 51 --For at det ligner det kommer fra håndet i suppose
 
 
 	--Kode fra zuus lightning bolt, bruges til at finde en hero tæt på der hvor at jeg aimede.
@@ -78,33 +68,18 @@ end
 
 function FireSacredArrow(caster, ability, spawn_point, direction, targethero)
 	local particle_arrow = "particles/units/heroes/hero_mirana/mirana_spell_arrow.vpcf"
-	-- Ability specials
 
-	local arrow_radius
-	local arrow_speed
-	local vision_radius
-	local arrow_distance
-
-	-- If ability is not levelled, assign level 1 values
-	if ability:GetLevel() == 0 then
-		arrow_radius = ability:GetLevelSpecialValueFor("arrow_radius", 1)
-		arrow_speed = ability:GetLevelSpecialValueFor("arrow_speed", 1)
-		vision_radius = ability:GetLevelSpecialValueFor("vision_radius", 1)
-		arrow_distance = ability:GetLevelSpecialValueFor("arrow_distance", 1)
-	else
-		arrow_radius = ability:GetSpecialValueFor("arrow_radius")
-		arrow_speed = ability:GetSpecialValueFor("arrow_speed")
-		vision_radius = ability:GetSpecialValueFor("vision_radius")
-		arrow_distance = ability:GetSpecialValueFor("arrow_distance")
-	end
+	local arrow_speed = ability:GetSpecialValueFor("arrow_speed")
+	local vision_radius = ability:GetSpecialValueFor("vision_radius")
+	local arrow_distance = ability:GetSpecialValueFor("arrow_distance")
 	if targethero == nil or targethero:HasModifier("modifier_imba_phoenix_fire_spirits_debuff") == false then
 		EmitSoundOn("urgotQNonTargeted", caster)
 		local arrow_projectile = {  Ability = ability,
 			EffectName = particle_arrow,
 			vSpawnOrigin = spawn_point,
 			fDistance = arrow_distance,
-			fStartRadius = arrow_radius,
-			fEndRadius = arrow_radius,
+			fStartRadius = 50,
+			fEndRadius = 50,
 			Source = caster,
 			bHasFrontalCone = false,
 			bReplaceExisting = false,
@@ -125,7 +100,7 @@ function FireSacredArrow(caster, ability, spawn_point, direction, targethero)
 		local arrow_projectile = {  Ability = ability,
 			Target = targethero,
 			EffectName = "particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger.vpcf",
-			iMoveSpeed = 1500,
+			iMoveSpeed = arrow_speed,
 			vSpawnOrigin = spawn_point,
 			Source = caster,
 			bHasFrontalCone = false,
@@ -152,47 +127,25 @@ function imba_mirana_arrow:OnProjectileHit_ExtraData(target, location, extra_dat
 
 	-- Ability properties
 	local caster = self:GetCaster()
-	local ability = self
-	local cast_response_hero = {"mirana_mir_ability_arrow_01", "mirana_mir_ability_arrow_07", "mirana_mir_lasthit_03"}
-	local cast_response_hero_perfect = "mirana_mir_ability_arrow_02"
-	local cast_response_creep = {"mirana_mir_ability_arrow_03", "mirana_mir_ability_arrow_04", "mirana_mir_ability_arrow_05", "mirana_mir_ability_arrow_06", "mirana_mir_ability_arrow_08"}
-	local sound_impact = "Hero_Mirana.ArrowImpact"
+
 
 	-- Ability specials
-	local base_damage = ability:GetSpecialValueFor("base_damage")
-	local vision_radius = ability:GetSpecialValueFor("vision_radius")
-	local vision_linger_duration = ability:GetSpecialValueFor("vision_linger_duration")
-
-	-- Cast response for creeps
-	if target:IsCreep() then
-		local chosen_response = cast_response_creep[math.random(1, 5)]
-		EmitSoundOn("urgotQHit", caster)
-	end
-
-
+	local damage = self:GetSpecialValueFor("damage")
+	if caster:HasTalent("special_bonus_urgot_q_boost") then damage = damage + caster:FindAbilityByName("special_bonus_urgot_q_boost"):GetSpecialValueFor("value") end
 
 	-- Play impact sound
 	EmitSoundOn("urgotQHit", target)
 
-	-- Add FOW viewer for the linger duration
-	AddFOWViewer(caster:GetTeamNumber(), location, vision_radius, vision_linger_duration, false)
-
-	-- Calculate damage -- Ændret til kun at være base damage
-	local damage = base_damage
 
 	-- Apply damage
 	local damageTable = {victim = target,
 		damage = damage,
-		damage_type = DAMAGE_TYPE_MAGICAL,
+		damage_type = self:GetAbilityDamageType(),
 		attacker = caster,
-		ability = ability
+		ability = self
 	}
 
 	ApplyDamage(damageTable)
-
-	-- Calculate stun duration
-	local stun_duration = base_stun
-
 
 	return true
 end
@@ -216,7 +169,7 @@ end
 function imba_pipe:OnSpellStart()
 	local caster = self:GetCaster()
 	local duration = self:GetSpecialValueFor("duration")
-	local shield_health = 100
+	local shield_health = 0
 
 	if caster:HasTalent("special_bonus_urgot_w_boost") then
 		 shield_health = self:GetSpecialValueFor("shield_health")*2
@@ -293,7 +246,6 @@ end
 -------------------------------------------------------------------
 
 LinkLuaModifier("modifier_imba_phoenix_fire_spirits_debuff", "heroes/hero_urgot/hero_urgot", LUA_MODIFIER_MOTION_NONE)
-LinkLuaModifier( "modifier_grenade_armor_reduc", "heroes/hero_urgot/hero_urgot", LUA_MODIFIER_MOTION_NONE )
 
 
 imba_phoenix_launch_fire_spirit = imba_phoenix_launch_fire_spirit or class({})
@@ -304,12 +256,12 @@ function imba_phoenix_launch_fire_spirit:IsStealable() 				return false end
 function imba_phoenix_launch_fire_spirit:IsNetherWardStealable() 	return false end
 function imba_phoenix_launch_fire_spirit:GetAbilityTextureName()   return "urgotE" end
 
-function imba_phoenix_launch_fire_spirit:GetCooldown()
+function imba_phoenix_launch_fire_spirit:GetCooldown(level)
 	if IsServer() then
 		if self:GetCaster():HasTalent("special_bonus_urgot_e_reduc") then
-			return self:GetSpecialValueFor("cooldown")/2
+			return self.BaseClass.GetCooldown(self,level)/2
 		else
-			return self:GetSpecialValueFor("cooldown")
+			return self.BaseClass.GetCooldown(self,level)
 		end
 	end
 
@@ -326,29 +278,20 @@ function imba_phoenix_launch_fire_spirit:OnSpellStart()
 	EmitSoundOn("urgotEshoot", caster)
 
 	-- Projectile
-	local direction = (point - caster:GetAbsOrigin()):Normalized()
-	local DummyUnit = CreateUnitByName("npc_dummy_unit",point,false,caster,caster:GetOwner(),caster:GetTeamNumber())
-	DummyUnit:AddNewModifier(caster, ability, "modifier_kill", {duration = 0.1})
-	local cast_target = DummyUnit
+	local distance = (caster:GetAbsOrigin()-point):Length2D()
 
 	local info =
 		{
-			Target = cast_target,
+			vSpawnOrigin = caster:GetAbsOrigin(),
 			Source = caster,
 			Ability = ability,
-			EffectName = "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf",
-			iMoveSpeed = self:GetSpecialValueFor("spirit_speed"),
-			vSourceLoc = direction,							-- Optional (HOW)
-			bDrawsOnMinimap = false,						-- Optional
-			bDodgeable = false,								-- Optional
-			bIsAttack = false,								-- Optional
+			fDistance = distance,
+			vVelocity = (((point - caster:GetAbsOrigin()) * Vector(1, 1, 0)):Normalized()) * self:GetSpecialValueFor("spirit_speed"),
+			EffectName = "particles/units/heroes/hero_venomancer/venomancer_venomous_gale.vpcf",
 			bVisibleToEnemies = true,						-- Optional
-			bReplaceExisting = false,						-- Optional
-			flExpireTime = GameRules:GetGameTime() + 10,	-- Optional but recommended
-			bProvidesVision = false,						-- Optional
-			iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_HITLOCATION
+			iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1
 		}
-	ProjectileManager:CreateTrackingProjectile(info)
+	ProjectileManager:CreateLinearProjectile(info)
 	end
 end
 
@@ -364,9 +307,7 @@ function imba_phoenix_launch_fire_spirit:OnProjectileHit( hTarget, vLocation)
 	if hTarget then
 		location = hTarget:GetAbsOrigin()
 	end
-	-- Particles and sound
-	local DummyUnit = CreateUnitByName("npc_dummy_unit",location,false,caster,caster:GetOwner(),caster:GetTeamNumber())
-	DummyUnit:AddNewModifier(caster, ability, "modifier_kill", {duration = 0.1})
+
 	self.pfx_explosion = ParticleManager:CreateParticle("particles/econ/items/viper/viper_immortal_tail_ti8/viper_immortal_ti8_nethertoxin.vpcf", PATTACH_WORLDORIGIN, nil)
 	ParticleManager:SetParticleControl(self.pfx_explosion, 0, location)
 
@@ -376,10 +317,7 @@ function imba_phoenix_launch_fire_spirit:OnProjectileHit( hTarget, vLocation)
 	end)
 
 
-	EmitSoundOn("urgotEHit", DummyUnit)
-
-	-- Vision
-	AddFOWViewer(caster:GetTeamNumber(), DummyUnit:GetAbsOrigin(), 175, 1, true)
+	EmitSoundOnLocationWithCaster(location, "urgotEHit", caster)
 
 	local units = FindUnitsInRadius(caster:GetTeamNumber(),
 		location,
@@ -394,7 +332,6 @@ function imba_phoenix_launch_fire_spirit:OnProjectileHit( hTarget, vLocation)
 		if unit ~= caster then
 			if unit:GetTeamNumber() ~= caster:GetTeamNumber() then
 				unit:AddNewModifier(caster, self, "modifier_imba_phoenix_fire_spirits_debuff", {duration = self:GetSpecialValueFor("duration")} )
-				unit:AddNewModifier(caster, self, "modifier_grenade_armor_reduc", {duration = self:GetSpecialValueFor("duration")} )	
 			end
 		end
 	end
@@ -414,27 +351,13 @@ function modifier_imba_phoenix_fire_spirits_debuff:IsPurgeException() 	return tr
 function modifier_imba_phoenix_fire_spirits_debuff:IsStunDebuff() 		return false end
 function modifier_imba_phoenix_fire_spirits_debuff:RemoveOnDeath() 		return true  end
 
-function modifier_imba_phoenix_fire_spirits_debuff:DeclareFunctions()
-	local decFuns =
-		{
-			MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT
-		}
-	return decFuns
-end
-
 function modifier_imba_phoenix_fire_spirits_debuff:GetTexture()
 	return "urgotE"
 end
 
 function modifier_imba_phoenix_fire_spirits_debuff:GetEffectName() return "particles/units/heroes/hero_broodmother/broodmother_poison_debuff_c.vpcf" end
 function modifier_imba_phoenix_fire_spirits_debuff:GetEffectAttachType() return PATTACH_ABSORIGIN_FOLLOW end
-function modifier_imba_phoenix_fire_spirits_debuff:GetModifierAttackSpeedBonus_Constant()
-	if self:GetCaster():GetTeamNumber() == self:GetParent():GetTeamNumber() then
-		return 0
-	else
-		return self:GetAbility():GetSpecialValueFor("attackspeed_slow") * (-1)
-	end
-end
+
 
 function modifier_imba_phoenix_fire_spirits_debuff:OnCreated()
 	if not IsServer() then
@@ -461,35 +384,22 @@ function modifier_imba_phoenix_fire_spirits_debuff:OnIntervalThink()
 		victim = self:GetParent(),
 		attacker = caster,
 		damage = dmg,
-		damage_type = DAMAGE_TYPE_MAGICAL,
-		ability = self:GetAbility(),
+		damage_type = ability:GetAbilityDamageType(),
+		ability = ability,
 	}
 	ApplyDamage(damageTable)
 end
 
-modifier_grenade_armor_reduc = modifier_grenade_armor_reduc or class({})
-
--- Modifier properties
-function modifier_grenade_armor_reduc:IsDebuff()			return true end
-function modifier_grenade_armor_reduc:IsHidden() 			return false  end
-function modifier_grenade_armor_reduc:IsPurgable() 			return true end
-function modifier_grenade_armor_reduc:IsPurgeException() 	return true end
-function modifier_grenade_armor_reduc:IsStunDebuff() 		return false end
-function modifier_grenade_armor_reduc:RemoveOnDeath() 		return true  end
-
-function modifier_grenade_armor_reduc:OnCreated()
-	local ability = self:GetAbility()
-	self.base_armor_reduction = ability:GetSpecialValueFor("armor_reduction_pct")
-end
-
-function modifier_grenade_armor_reduc:DeclareFunctions()
+function modifier_imba_phoenix_fire_spirits_debuff:DeclareFunctions()
 	local func = {MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS}
 	return func
 end
 
-function modifier_grenade_armor_reduc:GetModifierPhysicalArmorBonus()
-		return self.base_armor_reduction * 0.01 * self:GetParent():GetPhysicalArmorBaseValue() * (-1)
+function modifier_imba_phoenix_fire_spirits_debuff:GetModifierPhysicalArmorBonus()
+		return self:GetAbility():GetSpecialValueFor("armor_reduction_pct") * 0.01 * self:GetParent():GetPhysicalArmorBaseValue() * (-1)
 end
+
+
 
 
 
@@ -561,16 +471,24 @@ function imba_vengefulspirit_nether_swap:OnChannelThink(flInterval)
 		
 		if caster:HasScepter() then
 			for _,unit in pairs(self.allEnemies) do
-				unit:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.2})
+				if not unit:HasModifier("modifier_stunned") then
+					unit:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.1})
+				end
+			end
+		else
+			if not unit:HasModifier("modifier_stunned") then
+				target:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.1})
 			end
 		end
-
-		target:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.2})
 	end
 end
 
 function imba_vengefulspirit_nether_swap:OnChannelFinish(bInterrupted)
 	if IsServer() then
+	if bInterrupted then 
+		self:GetCaster():RemoveModifierByName("modifier_swap_dmg_reduction")
+		return end
+
 		local caster = self:GetCaster()
 		local target = self:GetCursorTarget()
 
@@ -612,10 +530,6 @@ function imba_vengefulspirit_nether_swap:OnChannelFinish(bInterrupted)
 		local caster_loc = caster:GetAbsOrigin()
 		
 
-		if bInterrupted then
-			--Channel blev fucked
-			return
-		else
 			-- Swap positions
 			Timers:CreateTimer(FrameTime(), function()
 				FindClearSpaceForUnit(caster, target_loc, true)
@@ -658,7 +572,6 @@ function imba_vengefulspirit_nether_swap:OnChannelFinish(bInterrupted)
 				end
 			end	
 			
-		end
 	end
 end
 

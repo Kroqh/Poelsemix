@@ -2,12 +2,13 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"				"ability_lua"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"ScriptFile"			"heroes/hero_krogh/krogh_awaken"
 	"AbilityTextureName"			"awaken"
 	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-	"MaxLevel"						"1"
-	"RequiredLevel"       				        "16"
+	"MaxLevel"						"4"
+	"RequiredLevel"       				        "12 18 24 30"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 
@@ -15,7 +16,6 @@
 		"precache"
 	{	
 		"soundfile" "soundevents/krogh_soundevent.vsndevts"
-		"particle"	"particles/status_fx/status_effect_doom.vpcf"
 	}	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -25,27 +25,27 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"agility"			"40"
+			"agility"			"15 30 45 60"
 		}
-	"02"
+		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"strength"			"80"
+			"strength"			"25 50 75 100"
 		}
 		"03"
 		{
-			"var_type"							"FIELD_FLOAT"
-			"basicrate"			"1.4"
+			"var_type"							"FIELD_INTEGER"
+			"attack_damage"			"20 40 60 80"
 		}
 		"04"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"hp"			"100"
+			"attack_range"			"25 50 75 100"
 		}
-				"05"
+		"05"
 		{
 			"var_type" "FIELD_FLOAT"
-			"model_scale" "1.8"
+			"model_scale" "20 40 60 80"
 		}
 	}
 	
@@ -53,42 +53,5 @@
 
 		
 
-	"Modifiers"
-	{
-		"awaken_mod"
-		{
-					"StatusEffectName"		"particles/status_fx/status_effect_doom.vpcf"
-			"StatusEffectPriority"	"1"
-			"Passive"	"1"
-			"OnCreated"
-			{	
-					"RunScript"
-				{
-					"ScriptFile" "heroes/scale_model.lua"
-					"Function" "ChangeModel"
-					
-				}
-						"FireSound"
-						{
-					"EffectName" "awaken"
-					"Target" "CASTER"
-					
 
-			
-						}
-			}
-			"IsHidden"	"1"
-						"Properties"
-			{
-
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%strength"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%agility"
-				"MODIFIER_PROPERTY_HEALTH_BONUS" 		"%hp"
-				"MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT"	"%basicrate"
-			}
-	
-		}
-
-	
-	}
 }

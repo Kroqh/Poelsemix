@@ -10,81 +10,81 @@ function longlights:GetAbilityTextureName()
 end
 
 function longlights:OnSpellStart()
-  if not IsServer() then return end
-  self.caster = self:GetCaster()
+    if not IsServer() then return end
+    self.caster = self:GetCaster()
 
-  self.caster:EmitSound("nissan_light")
+    self.caster:EmitSound("nissan_light")
 
-  -- Initialize particles
-  local particleName = "particles/heroes/nissan/nissan_lights.vpcf"
-  local pfx = ParticleManager:CreateParticle(particleName, PATTACH_WORLDORIGIN, nil)
-  local attach_point = self.caster:ScriptLookupAttachment("attach_origin")
+    -- Initialize particles
+    local particleName = "particles/heroes/nissan/nissan_lights.vpcf"
+    local pfx = ParticleManager:CreateParticle(particleName, PATTACH_WORLDORIGIN, nil)
+    local attach_point = self.caster:ScriptLookupAttachment("attach_origin")
 
-  -- Dummy modifier
-  local modifier_dummy_name = "modifier_longlights_dummy"
+    -- Dummy modifier
+    local modifier_dummy_name = "modifier_longlights_dummy"
 
-  -- Ability values
-  local duration = self:GetSpecialValueFor("duration")
-  local lights_length = self:GetSpecialValueFor("length")
+    -- Ability values
+    local duration = self:GetSpecialValueFor("duration")
+    local lights_length = self:GetSpecialValueFor("length")
 
-  -- Talent
-  if self.caster:HasTalent("special_bonus_nissan_1") then
-    lights_length = lights_length + self.caster:FindAbilityByName("special_bonus_nissan_1"):GetSpecialValueFor("value")
-  end
-
-  local width = self:GetSpecialValueFor("width")
-  local damage_per_tick = self:GetSpecialValueFor("damage_pr_tick")
-  local vision_radius = self:GetSpecialValueFor("width") * 3
-  local numVision = math.ceil(lights_length / vision_radius)
-
-  local update_time = 0.03
-
-  self.caster:AddNewModifier(self.caster, self, modifier_dummy_name, { duration = duration })
-
-  self.caster:SetContextThink(DoUniqueString("updateLongLights"), function()
-    if not self.caster:HasModifier(modifier_dummy_name) then
-      ParticleManager:DestroyParticle(pfx, false)
-      return nil
+    -- Talent
+    if self.caster:HasTalent("special_bonus_nissan_1") then
+      lights_length = lights_length + self.caster:FindAbilityByName("special_bonus_nissan_1"):GetSpecialValueFor("value")
     end
 
-    local forward_direction = self.caster:GetForwardVector()
-    local caster_pos = self.caster:GetAbsOrigin()
+    local width = self:GetSpecialValueFor("width")
+    local damage_per_tick = self:GetSpecialValueFor("damage_pr_tick")
+    local vision_radius = self:GetSpecialValueFor("width") * 3
+    local numVision = math.ceil(lights_length / vision_radius)
 
-    local particle_end_pos = caster_pos + forward_direction * lights_length
+    local update_time = 0.03
 
-    local units = FindUnitsInLine(self.caster:GetTeamNumber(), 
-                                  caster_pos, 
-                                  particle_end_pos, 
-                                  self.caster, 
-                                  width, 
-                                  DOTA_UNIT_TARGET_TEAM_ENEMY, 
-                                  DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 
-                                  DOTA_UNIT_TARGET_FLAG_NONE)
+    self.caster:AddNewModifier(self.caster, self, modifier_dummy_name, { duration = duration })
 
-    for _, enemy in pairs(units) do
-      ApplyDamage({victim = enemy, 
-                   attacker = self.caster, 
-                   damage_type = DAMAGE_TYPE_MAGICAL, 
-                   damage = damage_per_tick, 
-                   ability = self})
-      enemy:AddNewModifier(self.caster, self, "modifier_longlights_blind", {duration = 0.2})
-    end
+    self.caster:SetContextThink(DoUniqueString("updateLongLights"), function()
+      if not self.caster:HasModifier(modifier_dummy_name) then
+        ParticleManager:DestroyParticle(pfx, false)
+        return nil
+      end
 
-    ParticleManager:SetParticleControl(pfx, 0, self.caster:GetAttachmentOrigin(attach_point))
+      local forward_direction = self.caster:GetForwardVector()
+      local caster_pos = self.caster:GetAbsOrigin()
+
+      local particle_end_pos = caster_pos + forward_direction * lights_length
+
+      local units = FindUnitsInLine(self.caster:GetTeamNumber(), 
+                                    caster_pos, 
+                                    particle_end_pos, 
+                                    self.caster, 
+                                    width, 
+                                    self:GetAbilityTargetTeam(), 
+                                    self:GetAbilityTargetType(), 
+                                    self:GetAbilityTargetFlags())
+
+      for _, enemy in pairs(units) do
+        ApplyDamage({victim = enemy, 
+                    attacker = self.caster, 
+                    damage_type = self:GetAbilityDamageType(), 
+                    damage = damage_per_tick, 
+                    ability = self})
+        enemy:AddNewModifier(self.caster, self, "modifier_longlights_blind", {duration = 0.2})
+      end
+
+      ParticleManager:SetParticleControl(pfx, 0, self.caster:GetAttachmentOrigin(attach_point))
+      
+      ParticleManager:SetParticleControl(pfx, 1, particle_end_pos)
+
+      for i=1, numVision do
+        AddFOWViewer(self.caster:GetTeamNumber(), 
+                    (caster_pos + forward_direction * (vision_radius * 2 * (i-1))), 
+                    vision_radius, 
+                    update_time, false)
+      end
+
+      return update_time
+    end, 0.0)
     
-    ParticleManager:SetParticleControl(pfx, 1, particle_end_pos)
-
-    for i=1, numVision do
-      AddFOWViewer(self.caster:GetTeamNumber(), 
-                  (caster_pos + forward_direction * (vision_radius * 2 * (i-1))), 
-                   vision_radius, 
-                   update_time, false)
-    end
-
-    return update_time
-  end, 0.0)
-  
-  ParticleManager:SetParticleControl(pfx, 0, self.caster:GetAttachmentOrigin(attach_point))
+    ParticleManager:SetParticleControl(pfx, 0, self.caster:GetAttachmentOrigin(attach_point))
 end
 
 modifier_longlights_dummy = modifier_longlights_dummy or class({})

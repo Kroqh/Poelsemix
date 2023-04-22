@@ -47,7 +47,7 @@ function modifier_drift_burn:OnIntervalThink()
 	ApplyDamage({
 				victim = target,
 				attacker = caster,
-				damage_type = DAMAGE_TYPE_MAGICAL,
+				damage_type = self:GetAbility():GetAbilityTargetType(),
 				damage = self.damage,
 				ability = self:GetAbility()
 	})

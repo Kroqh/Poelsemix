@@ -11,3 +11,5 @@ function RevertModel(keys)
 	
 	target:SetModelScale(1)
 end
+
+--bliver der her overhovedet brugt af noget i dunno

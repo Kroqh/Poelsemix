@@ -39,12 +39,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"shield_health"					"200 400 600 800"
+				"shield_health"					"200 275 350 425"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"5"
+				"duration"					"3 3.5 4 4.5"
 			}
 		}
 	}

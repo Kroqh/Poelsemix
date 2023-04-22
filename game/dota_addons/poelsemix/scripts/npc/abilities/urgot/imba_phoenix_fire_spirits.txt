@@ -8,7 +8,7 @@
 		"AbilityTextureName"		"urgotE"
 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"	
+		"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"	
 		"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"		"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"			"1"
@@ -16,7 +16,7 @@
 
 		"FightRecapLevel"			"1"
 
-		"AbilityCastRange"			"600 800 1000 1200"
+		"AbilityCastRange"			"%cast_range"
 		"AbilityCastPoint"			"0.01"
 		
 		"AbilityCooldown"			"12 11 10 9"
@@ -30,7 +30,7 @@
 			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
 			"particle"					"particles/units/heroes/hero_phoenix/phoenix_fire_spirits.vpcf"
 			"particle"					"particles/econ/items/viper/viper_immortal_tail_ti8/viper_immortal_ti8_nethertoxin.vpcf"
-			"particle"					"particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+			"particle"					"particles/units/heroes/hero_venomancer/venomancer_noxious_plague_projectile.vpcf"
 			"particle"					"particles/units/heroes/hero_broodmother/broodmother_poison_debuff_c.vpcf"
 			"particle"					"particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn.vpcf"
 
@@ -39,65 +39,41 @@
 
 		"AbilitySpecial"
 		{
+
 			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"hp_cost_perc"		"20"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"spirit_duration"	"20"
-			}
-			"03"
 			{	
 				"var_type"			"FIELD_INTEGER"
 				"spirit_speed"		"900 1000 1100 1200"
 			}
-			"04"
+			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
 				"radius"			"175 205 235 265"
 			}
-			"05"
+			"03"
 			{
 				"var_type"			"FIELD_FLOAT"
 				"duration"			"5.0"
 			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_per_second"	"30 50 70 90"
+			}
 			"06"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"attackspeed_slow"	"0"
-			}
-			"07"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"damage_per_second"	"40 60 80 100"
-			}
-			"08"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"spirit_count"		"4"
-			}
-			"09"
 			{
 				"var_type"			"FIELD_FLOAT"
 				"tick_interval"		"0.5"
 			}
-			"10"
+			"07"
 			{
 				"var_type"			"FIELD_INTEGER"
 				"cast_range"		"600 800 1000 1200"
 			}
-			"11"
+			"08"
 			{
 				"var_type"			"FIELD_FLOAT"
 				"armor_reduction_pct"		"20 40 60 80"
-			}
-			"12"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"cooldown"		"12 11 10 9"
 			}
 
 

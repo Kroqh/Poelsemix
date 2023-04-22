@@ -58,9 +58,9 @@ function modifier_runover:OnIntervalThink()
                                     caster:GetAbsOrigin(), 
                                     nil, 
                                     radius, 
-                                    DOTA_UNIT_TARGET_TEAM_ENEMY, 
-                                    DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,
-                                    DOTA_UNIT_TARGET_FLAG_NONE, 
+                                    GetAbilityTargetTeam(), 
+                                    ability:GetAbilityTargetType(),
+                                    ability:GetAbilityTargetFlags(), 
                                     FIND_ANY_ORDER, false)
   
   for _, enemy in pairs(enemies) do 
@@ -73,7 +73,7 @@ function modifier_runover:OnIntervalThink()
       ApplyDamage({
 				victim = enemy,
 				attacker = caster,
-				damage_type = DAMAGE_TYPE_MAGICAL,
+				damage_type = ability:GetAbilityDamageType(),
 				damage = damage,
 				ability = ability
 	    })

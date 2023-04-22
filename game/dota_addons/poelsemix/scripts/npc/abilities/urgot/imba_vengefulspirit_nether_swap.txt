@@ -21,7 +21,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"					"700"
+		"AbilityCastRange"					"%range"
 		"AbilityCastPoint"					"0.3"
 		"AbilityChannelTime"            			"1.0"
 
@@ -73,11 +73,6 @@
 			{
 				"var_type"							"FIELD_INTEGER"
 				"tooltip_illu_amp_scepter"			"150"
-			}
-			"06"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"cooldown_scepter"					"10"
 			}
 			"07"
 			{

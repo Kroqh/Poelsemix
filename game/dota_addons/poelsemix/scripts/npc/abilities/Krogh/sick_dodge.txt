@@ -3,8 +3,7 @@
 	"BaseClass"                 "ability_datadriven"
 	"AbilityTextureName"        "dodgeball"
 	"MaxLevel"                  "4"
-	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	"AOERadius"					"600"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityCooldown"               "13 11 9 7"
 	"AbilityManaCost"               "69"
 	

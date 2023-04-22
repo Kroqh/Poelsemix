@@ -7,10 +7,12 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityTextureName"		"nissan_runover_icon"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	
-	"AbilityCooldown"				"19 17 15 13"
+	"AbilityCooldown"				"22 20 18 16"
 	"AbilityManaCost"       "110 120 130 140"
-  "AbilityCastPoint"      "1.0"
+  	"AbilityCastPoint"      "0.5"
 
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 
@@ -31,22 +33,22 @@
 		"02"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration"	"4 5 6 7"
+			"duration"	"3 3.5 4 4.5"
 		}
 		"03"
 		{
 			"var_type" "FIELD_FLOAT"
 			"stun_duration"	"0.6"
 		}
-    "04"
-    {
-      "var_type" "FIELD_FLOAT"
-      "damage" "80 110 140 170"
-    }
-    "05"
-    {
-      "var_type" "FIELD_INTEGER"
-      "radius"   "300"
-    }
+  		  "04"
+   		 {
+    			  "var_type" "FIELD_FLOAT"
+    			  "damage" "80 110 140 170"
+    		}
+   			 "05"
+   		 {
+    			  "var_type" "FIELD_INTEGER"
+      				"radius"   "150"
+   		 }
 	}
 }
