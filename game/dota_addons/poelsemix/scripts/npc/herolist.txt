@@ -45,7 +45,7 @@
 	"npc_dota_hero_invoker"				"0"
 	"npc_dota_hero_wisp"				"0"
 	"npc_dota_hero_jakiro"				"0"
-	"npc_dota_hero_juggernaut"			"0"
+	"npc_dota_hero_juggernaut"			"1"
 	"npc_dota_hero_keeper_of_the_light"	"0"
 	"npc_dota_hero_kunkka"				"1"
 	"npc_dota_hero_legion_commander"	"0"

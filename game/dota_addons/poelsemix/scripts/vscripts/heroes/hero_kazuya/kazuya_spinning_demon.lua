@@ -44,14 +44,11 @@ function modifier_spinning_demon_cast:IgnoreTenacity() return true end
 function modifier_spinning_demon_cast:IsMotionController() return true end
 function modifier_spinning_demon_cast:GetMotionControllerPriority() return DOTA_MOTION_CONTROLLER_PRIORITY_MEDIUM end
 
-function modifier_spinning_demon_cast:CheckState()
+function modifier_spinning_demon_cast:CheckState() --otherwise dash is cancelable, dont want that
 	if IsServer() then
-		local state = {	[MODIFIER_STATE_STUNNED] = true,
-			[MODIFIER_STATE_INVULNERABLE] = true,
-			[MODIFIER_STATE_NO_UNIT_COLLISION] = true, }
+		local state = {	[MODIFIER_STATE_STUNNED] = true }
 		return state
 	end
-end
 
 
 

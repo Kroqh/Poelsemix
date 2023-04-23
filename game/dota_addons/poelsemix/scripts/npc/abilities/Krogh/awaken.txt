@@ -25,7 +25,7 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"agility"			"15 30 45 60"
+			"agility"			"10 20 30 40"
 		}
 		"02"
 		{

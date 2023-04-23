@@ -25,11 +25,9 @@ function modifier_stille_cast:IgnoreTenacity() return true end
 function modifier_stille_cast:IsMotionController() return true end
 function modifier_stille_cast:GetMotionControllerPriority() return DOTA_MOTION_CONTROLLER_PRIORITY_MEDIUM end
 
-function modifier_stille_cast:CheckState()
+function modifier_stille_cast:CheckState() --otherwise dash is cancelable, dont want that
 	if IsServer() then
-		local state = {	[MODIFIER_STATE_STUNNED] = true,
-			[MODIFIER_STATE_INVULNERABLE] = true,
-			[MODIFIER_STATE_NO_UNIT_COLLISION] = true, }
+		local state = {	[MODIFIER_STATE_STUNNED] = true }
 		return state
 	end
 end
