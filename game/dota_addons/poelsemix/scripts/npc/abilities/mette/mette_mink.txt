@@ -7,9 +7,6 @@
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 
-	//FOR CHANGING STATS OF THE MINK, REFER TO unit_mink 1-5
-	//common+uncommon+rare+epic+legendary percent should always add up 100 percent for the level
-
 			"precache"
         {
 	"soundfile" "soundevents/mette_soundevent.vsndevts"
@@ -18,39 +15,26 @@
 	{
 		"01"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"common"		"70 50 30 10"
+				"var_type"					"FIELD_FLOAT"
+				"hp_str_scaling"		"3 4 5 6"
+				"LinkedSpecialBonus" "special_bonus_mette_6"
 			}
 		"02"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"uncommon"		"25 25 15 10"
+				"var_type"					"FIELD_FLOAT"
+				"dmg_agi_scaling"		"0.5 0.75 1 1.25"
+				"LinkedSpecialBonus" "special_bonus_mette_5"
 			}
 		"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"rare"		"4 15 25 30"
+				"base_interval"		"15"
+				"LinkedSpecialBonus" "special_bonus_mette_3"
 			}
 		"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"epic"		"1 9 20 30"
-			}
-		"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"legendary"		"0 1 10 20"
-			}
-		"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"base_interval"		"12"
-				"LinkedSpecialBonus" "special_bonus_mette_3"
-			}
-		"07"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"lifetime"		"30" //sync den her med den på press meeting
+				"lifetime"		"20"
 			}
 	}
 }

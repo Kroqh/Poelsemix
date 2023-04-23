@@ -337,6 +337,10 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("kazuya_rage")
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
+	if hero:GetUnitName() == "npc_dota_hero_hoodwink" then
+		local ability = hero:FindAbilityByName("mette_mink")
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
+	end
 
 		--Timers:CreateTimer({
 		--endTime = 0.1,

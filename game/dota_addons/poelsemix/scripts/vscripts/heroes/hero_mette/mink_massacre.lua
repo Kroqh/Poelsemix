@@ -31,7 +31,7 @@ function mink_massacre:OnSpellStart()
         else
             countGold = self:GetSpecialValueFor("base_gold_mink") * rarityCount
         end
-        print(countGold)
+
         caster:ModifyGold(rarityCount * countGold, true, 0)
         EmitSoundOnLocationWithCaster(target_point,"mette_scream", caster)
         modifier = caster:FindModifierByName("modifier_mink_massacre_mod")
@@ -42,7 +42,7 @@ function mink_massacre:OnSpellStart()
         else
             countInt = self:GetSpecialValueFor("base_int_mink") * rarityCount
         end
-        print(countInt)
+
         if modifier then
             modifier:SetStackCount(modifier:GetStackCount() + countInt)
         else
@@ -83,16 +83,8 @@ function modifier_mink_massacre_mod:GetModifierBonusStats_Intellect()
 end
 
 
-function GetRarityMulti(unit_name)
-    if unit_name == "unit_mink_1" then
+function GetRarityMulti(unit_name) --legacy fra den gang der var forskellige mink rarities, hold den på 1 fra nu af
+    if unit_name == "unit_mink" then
         return 1
-    elseif unit_name == "unit_mink_2" then
-        return 2
-    elseif unit_name == "unit_mink_3" then
-        return 3
-    elseif unit_name == "unit_mink_4" then
-        return 4
-    elseif unit_name == "unit_mink_5" then
-        return 5
     else return 0 end
 end

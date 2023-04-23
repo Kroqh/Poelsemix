@@ -26,13 +26,13 @@
 		"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"base_int_mink"				"1"
+				"base_int_mink"				"1 2 3 4"
 				"LinkedSpecialBonus" "special_bonus_mette_1"
 			}
 		"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"base_gold_mink"			"2 3 4 5"
+				"base_gold_mink"			"4 8 12 16"
 				"LinkedSpecialBonus" "special_bonus_mette_2"
 			}
 		"01"

@@ -22,11 +22,6 @@
 	"AbilitySpecial"
 	{
 		"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"lifetime"		"30" //sync den her med den på mink
-			}
-		"02"
 	   		{
 	    			"var_type" "FIELD_FLOAT"
 	    			"stun_dur_aghs" "2.5"
