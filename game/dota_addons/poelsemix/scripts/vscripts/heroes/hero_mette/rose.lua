@@ -9,7 +9,7 @@ end
 modifier_mette_rose = modifier_mette_rose or class({})
 
 function modifier_mette_rose:IsPurgeable() return false end
-function modifier_mette_rose:IsHidden() return true end
+function modifier_mette_rose:IsHidden() return false end
 function modifier_mette_rose:IsPassive() return true end
 function modifier_mette_rose:RemoveOnDeath()	return false end
 
@@ -18,6 +18,13 @@ function modifier_mette_rose:DeclareFunctions()
 
 	return decFuncs
 end
+
+function modifier_mette_rose:OnCreated()
+	if not IsServer() then return end
+	self:ResetMinkThreshold()
+	self:StartIntervalThink(self:GetAbility():GetSpecialValueFor("base_interval")) --for instaspawning the first
+end
+
 
 function modifier_mette_rose:OnTakeDamage(keys)
 	if not IsServer() then return end
@@ -43,8 +50,29 @@ function modifier_mette_rose:OnTakeDamage(keys)
 			
             
 			ApplyDamage(damageTable)
+			self:LowerMinkThreshold(keys.damage)
 			
 			
 		end
 	end
+end
+
+function modifier_mette_rose:LowerMinkThreshold(damage)
+	self.damage_to_mink = self.damage_to_mink - damage
+	
+	if self.damage_to_mink <= 0 then
+	self:GetParent():FindModifierByName("modifier_mink_passive"):SpawnMink(1,self:GetParent())
+	self:ResetMinkThreshold()
+	else
+		self:SetStackCount(self.damage_to_mink)
+	end
+end
+
+function modifier_mette_rose:ResetMinkThreshold(damage)
+	local threshold = self:GetAbility():GetSpecialValueFor("mink_threshold")
+	if (self:GetParent():HasTalent("special_bonus_mette_7")) then
+		threshold = threshold + self:GetParent():FindAbilityByName("special_bonus_mette_7"):GetSpecialValueFor("value")
+	end
+	self.damage_to_mink = threshold
+	self:SetStackCount(self.damage_to_mink)
 end

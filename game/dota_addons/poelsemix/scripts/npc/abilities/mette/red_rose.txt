@@ -16,6 +16,12 @@
 				"reflect_percent"		"5 10 15 20"
 				"LinkedSpecialBonus" "special_bonus_mette_4"
 			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"mink_threshold"		"2000 1875 1750 1625 "
+				"LinkedSpecialBonus" "special_bonus_mette_7"
+			}
 
 	}
 }

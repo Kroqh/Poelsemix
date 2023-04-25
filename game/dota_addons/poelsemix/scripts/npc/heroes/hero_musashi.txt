@@ -5,12 +5,12 @@
 	"DisableWearables" "1"
 	"model" "models/miyamoto_musashi/musashi.vmdl"
 
-	"Ability1" "damian_penjamin"				
+	"Ability1" "musashi_earth"				
 	"Ability2" "damian_fadedthanaho"
 	"Ability3" "musashi_wind"
-	"Ability4" "generic_hidden"
+	"Ability4" "musashi_water"
 	"Ability5" "generic_hidden"
-	"Ability6" "press_meeting"
+	"Ability6" "red_rose"
 
 
 	"MovementSpeed"		"300"
@@ -20,12 +20,12 @@
 	"Ability10"		"special_bonus_musashi_1"
 	"Ability11"		"special_bonus_musashi_2"
 	
-	"Ability12"		"special_bonus_movement_speed_30"
-	"Ability13"		"special_bonus_movement_speed_30"
+	"Ability12"		"special_bonus_musashi_3"
+	"Ability13"		"special_bonus_musashi_4"
 	
 	"Ability14"		"special_bonus_damian_1"
 	"Ability15"		"special_bonus_damian_2"
 	
-	"Ability16"		"special_bonus_damian_3"
+	"Ability16"		"special_bonus_musashi_5"
 	"Ability17"		"special_bonus_movement_speed_30"							
 }

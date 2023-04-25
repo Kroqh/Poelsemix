@@ -25,9 +25,10 @@ function modifier_musashi_wind_dash:IgnoreTenacity() return true end
 function modifier_musashi_wind_dash:IsMotionController() return true end
 function modifier_musashi_wind_dash:GetMotionControllerPriority() return DOTA_MOTION_CONTROLLER_PRIORITY_MEDIUM end
 
-function modifier_musashi_wind_dash:CheckState() --otherwise dash is cancelable, dont want that
+function modifier_musashi_wind_dash:CheckState() --otherwise dash is cancelable, dont want that - needs no unit collision to not get caught at the end of dash
 	if IsServer() then
-		local state = {	[MODIFIER_STATE_STUNNED] = true }
+		local state = {	[MODIFIER_STATE_STUNNED] = true,
+		[MODIFIER_STATE_NO_UNIT_COLLISION]  = true}
 		return state
 	end
 end
@@ -85,7 +86,7 @@ function modifier_musashi_wind_dash:HorizontalMotion(me, dt)
 	end
 end
 function modifier_musashi_wind_dash:GetEffectName()
-	return "particles/units/heroes/hero_windrunner/windrunner_windrun.vpcf" --replace
+	return "particles/units/heroes/hero_windrunner/windrunner_windrun.vpcf"
 end
 
 
@@ -117,7 +118,7 @@ function modifier_musashi_wind_ms:GetModifierMoveSpeedBonus_Percentage()
 end
 
 function modifier_musashi_wind_ms:GetEffectName()
-	return "particles/units/heroes/hero_windrunner/windrunner_windrun_magic_trail.vpcf" --replace
+	return "particles/units/heroes/hero_windrunner/windrunner_windrun_magic_trail.vpcf"
 end
 
 function modifier_musashi_wind_ms:GetEffectAttachType()

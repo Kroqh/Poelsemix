@@ -402,7 +402,7 @@
 						activity_weight = 1
 						weight_list_name = ""
 						fade_in_time = 0.2
-						fade_out_time = 0.2
+						fade_out_time = 0.4
 						looping = false
 						delta = false
 						worldSpace = false
@@ -412,9 +412,9 @@
 						animgraph_additive = false
 						source_filename = "models/miyamoto_musashi/earth.fbx"
 						import_bone_scales = false
-						start_frame = 0
-						end_frame = 144
-						framerate = 30.0
+						start_frame = -1
+						end_frame = 100
+						framerate = 270.0
 						reverse = false
 					},
 					{
@@ -576,7 +576,7 @@
 						import_bone_scales = false
 						start_frame = 0
 						end_frame = 36
-						framerate = 30.0
+						framerate = 45.0
 						reverse = false
 					},
 					{

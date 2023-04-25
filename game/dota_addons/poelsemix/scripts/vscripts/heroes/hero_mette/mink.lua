@@ -32,28 +32,31 @@ function modifier_mink_passive:OnIntervalThink()
         if parent:IsAlive() == false then return end --no spawn on death
         local roll = math.random(100)
         local sum = 0
-        EmitSoundOn("mette_chirp", parent)
-        self:SpawnMink(1)
+        
+        self:SpawnMink(1, parent)
 	end
 end
 
-function modifier_mink_passive:SpawnMink(scaler)
+function modifier_mink_passive:SpawnMink(scaler, target)
+
     local caster = self:GetCaster()
     local ability = self:GetAbility()
     local parent = self:GetParent()
     local str = parent:GetStrength() * scaler
     local agi = parent:GetAgility() * scaler
-    local size_multi = (str + agi) / 3 --mink hitbox is annoying, so dont let them get too big
-
+    local size_multi = ((str + agi) / 3) * scaler --mink hitbox is annoying, so dont let them get too big
     local str_scaling = ability:GetSpecialValueFor("hp_str_scaling")
     local agi_scaling = ability:GetSpecialValueFor("dmg_agi_scaling")
     if caster:HasTalent("special_bonus_mette_6") then str_scaling = str_scaling + caster:FindAbilityByName("special_bonus_mette_6"):GetSpecialValueFor("value") end
     if caster:HasTalent("special_bonus_mette_5") then agi_scaling  = agi_scaling  + caster:FindAbilityByName("special_bonus_mette_5"):GetSpecialValueFor("value") end
 
+
+    EmitSoundOn("mette_chirp", parent)
+
     local dmg = math.floor(agi * agi_scaling)
     local hp = math.floor(str * str_scaling) --minks have 1 hp by defeault as to not insta die
 
-    unit = CreateUnitByName("unit_mink",parent:GetAbsOrigin(), true, parent, nil,parent:GetTeam())
+    unit = CreateUnitByName("unit_mink",target:GetAbsOrigin(), true, parent, nil, parent:GetTeam())
     unit:AddNewModifier(caster, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
     unit:AddNewModifier(caster, ability, "modifier_mink_stats", {dmg = dmg, size_multi = size_multi} )
     unit:SetBaseMaxHealth(hp)

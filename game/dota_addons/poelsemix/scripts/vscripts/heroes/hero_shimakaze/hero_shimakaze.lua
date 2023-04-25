@@ -26,10 +26,9 @@ function modifier_wave_cast:IgnoreTenacity() return true end
 function modifier_wave_cast:IsMotionController() return true end
 function modifier_wave_cast:GetMotionControllerPriority() return DOTA_MOTION_CONTROLLER_PRIORITY_MEDIUM end
 
-function modifier_wave_cast:CheckState()
+function modifier_wave_cast:CheckState() --otherwise dash is cancelable, dont want that, needs no unit collision to not get caught at the end of dash
 	if IsServer() then
 		local state = {	[MODIFIER_STATE_STUNNED] = true,
-			[MODIFIER_STATE_INVULNERABLE] = true,
 			[MODIFIER_STATE_NO_UNIT_COLLISION] = true, }
 		return state
 	end
@@ -45,8 +44,6 @@ function modifier_wave_cast:OnCreated()
 			local bonus_range = caster:FindAbilityByName("special_bonus_shimakaze_1"):GetSpecialValueFor("value")
 			max_distance = max_distance + bonus_range
 		end
-		
-		print(max_distance)
 		local distance = (caster:GetAbsOrigin() - caster:GetCursorPosition() ):Length2D()
 		if distance > max_distance then distance = max_distance end
 
