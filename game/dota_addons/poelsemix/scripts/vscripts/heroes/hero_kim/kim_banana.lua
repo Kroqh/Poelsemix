@@ -52,8 +52,10 @@ function kim_banana:OnProjectileHit(target, location)
         return true
     elseif target:IsRealHero() then
         local gold = self:GetSpecialValueFor("gold_stolen")
-        caster:ModifyGold(gold, true, 0)
-        target:ModifyGold(-gold, true, 0)
+		if target:GetTeamNumber() ~= caster:GetTeamNumber() then
+        	caster:ModifyGold(gold, true, 0)
+    		target:ModifyGold(-gold, true, 0)
+		end
 
         if not caster:HasScepter() then
             target:Heal(self:GetSpecialValueFor("target_heal"),self)

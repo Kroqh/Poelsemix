@@ -11,8 +11,19 @@ function ha_gay:OnSpellStart()
     target:EmitSound("hagay")
     local duration = self:GetSpecialValueFor("duration")
     if caster:HasTalent("special_bonus_krogh_2") then duration = duration + caster:FindAbilityByName("special_bonus_krogh_2"):GetSpecialValueFor("value") end
-    target:AddNewModifier(caster, self, "modifier_generic_taunt", {duration = duration, is_hidden = true, is_purgeable = true})
+
+
+
+    target:AddNewModifier(caster, self, "modifier_generic_taunt", {duration = duration})
     target:AddNewModifier(caster, self, "modifier_ha_gay", {duration = duration})
+    if caster:HasScepter() then
+        for _, enemy in pairs(FindUnitsInRadius(caster:GetTeamNumber(), target:GetAbsOrigin(), nil, self:GetSpecialValueFor("aghs_range"), self:GetAbilityTargetTeam(), self:GetAbilityTargetType(), self:GetAbilityTargetFlags(), FIND_ANY_ORDER, false)) do
+			if enemy ~= target then
+                enemy:AddNewModifier(caster, self, "modifier_generic_taunt", {duration = duration})
+                enemy:AddNewModifier(caster, self, "modifier_ha_gay", {duration = duration})
+            end
+	end
+    end
 end
 
 modifier_ha_gay = modifier_ha_gay or class({})

@@ -11,6 +11,7 @@
 		"AbilityManaCost"               "100 95 90 85"
 		"AbilityCastRange" "700 775 850 925"
 		"AbilityCastPoint"				"0.2"
+		"HasScepterUpgrade"			"1"
 
 		"AbilitySpecial"
 		{
@@ -19,6 +20,11 @@
 		        "var_type"          "FIELD_FLOAT"
 		        "duration"             "3.5 4 4.5 5"
 			"LinkedSpecialBonus" "special_bonus_krogh_2"
+		    }
+			"02"
+		    {
+		        "var_type"          "FIELD_integer"
+		        "aghs_range"             "250"
 		    }
 		}
 		"precache"

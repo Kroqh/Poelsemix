@@ -51,9 +51,22 @@ function modifier_generic_taunt:OnCreated(kv)
             self:GetParent():SetForceAttackTarget( taunt_target ) -- for creeps
             self:GetParent():MoveToTargetToAttack( taunt_target ) -- for heroes
         end
+
+        self:StartIntervalThink(0.1) --or it fucks up sometimes
 	end
 end
 
+function modifier_generic_taunt:OnIntervalThink()
+    if not IsServer() then return end
+    
+    if not self.taunt_target then
+        self:GetParent():SetForceAttackTarget( self:GetCaster() ) -- for creeps
+        self:GetParent():MoveToTargetToAttack( self:GetCaster() ) -- for heroes
+    else
+        self:GetParent():SetForceAttackTarget( taunt_target ) -- for creeps
+        self:GetParent():MoveToTargetToAttack( taunt_target ) -- for heroes
+    end
+end
 function modifier_generic_taunt:OnRefresh()
 end
 

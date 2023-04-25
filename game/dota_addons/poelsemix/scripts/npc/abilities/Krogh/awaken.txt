@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"ScriptFile"			"heroes/hero_krogh/krogh_awaken"
-	"AbilityTextureName"			"awaken"
+	"AbilityTextureName"			"krogh_awaken"
 	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 	"MaxLevel"						"4"
 	"RequiredLevel"       				        "12 18 24 30"
