@@ -3,10 +3,10 @@
 	// General 
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_teemo/hero_teemo"
+	"ScriptFile"			"heroes/hero_teemo/teemo_noxious_trap"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityTextureName"			"noxious_trap"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
 
@@ -39,6 +39,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"max_stacks" "3"
+			"LinkedSpecialBonus" "special_bonus_teemo_1"
 		}
 		"05"
 		{

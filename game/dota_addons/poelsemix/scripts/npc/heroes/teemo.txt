@@ -14,19 +14,19 @@
 	
 	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"
 	
-	"Ability10" "special_bonus_movement_speed_20"
-	"Ability11" "special_bonus_attack_speed_25"
-	"Ability12" "special_bonus_intelligence_20"
-	"Ability13"	"special_bonus_all_stats_12"
+	"Ability10" "special_bonus_teemo_5"
+	"Ability11" "special_bonus_teemo_6"
+	"Ability12" "special_bonus_teemo_1"
+	"Ability13"	"special_bonus_teemo_8"
 	"Ability14" "special_bonus_teemo_3"
 	"Ability15" "special_bonus_teemo_2"
 	"Ability16" "special_bonus_teemo_4"
-	"Ability17" "special_bonus_attack_speed_200"
+	"Ability17" "special_bonus_teemo_7"
 
-	"ArmorPhysical"		"3"
+	"ArmorPhysical"		"1"
 
 	"AttributeBaseStrength"			"17"									// Base strength
-	"AttributeStrengthGain"			"2.3"									// Strength bonus per level.
+	"AttributeStrengthGain"			"1.9"									// Strength bonus per level.
 	"AttributeBaseIntelligence"		"20"									// Base intelligence
 	"AttributeIntelligenceGain"		"2.3"									// Intelligence bonus per level.
 	"AttributeBaseAgility"		"20"

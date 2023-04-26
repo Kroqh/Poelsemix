@@ -3,7 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_teemo/hero_teemo"
+	"ScriptFile"			"heroes/hero_teemo/teemo_guerrilla_warfare"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"MaxLevel"						"1"
 	"AbilityTextureName"			"guerrilla_warfare"
@@ -20,6 +20,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"attackspeed" "60"
+			"LinkedSpecialBonus" "special_bonus_teemo_7"
 		}
 		"03"
 		{
@@ -30,16 +31,19 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"attackspeed6" "85"
+			"LinkedSpecialBonus" "special_bonus_teemo_7"
 		}
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
 			"attackspeed12" "110"
+			"LinkedSpecialBonus" "special_bonus_teemo_7"
 		}
 		"06"
 		{
 			"var_type" "FIELD_INTEGER"
 			"attackspeed18" "135"
+			"LinkedSpecialBonus" "special_bonus_teemo_7"
 		}
 	}
 }

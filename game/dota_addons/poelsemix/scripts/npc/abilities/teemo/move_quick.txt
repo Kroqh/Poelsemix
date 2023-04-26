@@ -3,11 +3,10 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_teemo/hero_teemo"
+	"ScriptFile"			"heroes/hero_teemo/teemo_move_quick"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityTextureName"			"move_quick"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityCooldown"				"10"
 	"AbilityManaCost"				"40"
 
@@ -22,6 +21,7 @@
 	    {
 	        "var_type"          "FIELD_FLOAT"
 	        "multiplier"        "2"
+		"LinkedSpecialBonus" "special_bonus_teemo_8"
 	    }
 		"03"
 		{

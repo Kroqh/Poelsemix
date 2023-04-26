@@ -3,7 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_teemo/hero_teemo"
+	"ScriptFile"			"heroes/hero_teemo/teemo_toxic_shot"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"toxic_shot"
 	
@@ -31,11 +31,13 @@
 		{
 			"var_type" "FIELD_FLOAT"
 			"int_scaling_onhit" "1.1"
+			"LinkedSpecialBonus" "special_bonus_teemo_5"
 		}
 		"05"
 		{
 			"var_type" "FIELD_FLOAT"
 			"int_scaling_prsec" "0.35"
+			"LinkedSpecialBonus" "special_bonus_teemo_6"
 		}
 		"06"
 		{

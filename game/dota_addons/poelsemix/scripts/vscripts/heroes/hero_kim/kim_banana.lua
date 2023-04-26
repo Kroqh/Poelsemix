@@ -17,7 +17,7 @@ function kim_banana:OnSpellStart()
         EffectName = "particles/heroes/kim/banana_kim_proj.vpcf",
         fStartRadius		= 50,
 		fEndRadius			= 50,
-        iUnitTargetTeam = DOTA_UNIT_TARGET_TEAM_ENEMY,
+        iUnitTargetTeam = DOTA_UNIT_TARGET_TEAM_BOTH,
         iUnitTargetType = DOTA_UNIT_TARGET_HERO,
         bDodgeable = false,
         bIgnoreSource = true,
