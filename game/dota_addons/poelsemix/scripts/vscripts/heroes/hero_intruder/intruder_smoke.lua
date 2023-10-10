@@ -119,7 +119,7 @@ function  intruder_smoke_cloud_modifier_debuff:IsHidden() return false end
 
 function intruder_smoke_cloud_modifier_debuff:DeclareFunctions()
 	local decFuncs = {
-    MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE
+    MODIFIER_PROPERTY_BONUS_VISION_PERCENTAGE,
 	}
 	return decFuncs
 end

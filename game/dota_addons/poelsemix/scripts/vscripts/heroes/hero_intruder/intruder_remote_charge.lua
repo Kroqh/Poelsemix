@@ -30,7 +30,7 @@ function modifier_remote_charge_handler:IsHidden() return true end
 function modifier_remote_charge_handler:OnCreated()
 	if IsServer() then
 		local ability = self:GetAbility()
-		self:GetParent():AddNewModifier(self:GetParent(), ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
+		self:GetParent():AddNewModifier(self:GetCaster(), ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
 		self:StartIntervalThink(ability:GetSpecialValueFor("delay"))
 	end
 end
@@ -39,8 +39,8 @@ function modifier_remote_charge_handler:OnIntervalThink()
 	if IsServer() then
 			local parent = self:GetParent()
 			local ability = self:GetAbility()
-			parent:AddNewModifier(parent, ability, "modifier_remote_charge_invis", {})
-			parent:AddNewModifier(parent, ability, "modifier_remote_charge_explosion", {})
+			parent:AddNewModifier(self:GetCaster(), ability, "modifier_remote_charge_invis", {})
+			parent:AddNewModifier(self:GetCaster(), ability, "modifier_remote_charge_explosion", {})
 			parent:RemoveModifierByName("modifier_remote_charge_handler")
 	end
 end
@@ -77,6 +77,7 @@ function modifier_remote_charge_explosion:OnCreated()
 		local ability = self:GetAbility()
 		self.radius = ability:GetSpecialValueFor("explosion_radius")
 		self.damage = ability:GetSpecialValueFor("explosion_damage")
+		if self:GetCaster():HasTalent("special_bonus_intruder_5") then  self.damage = self.damage + self:GetCaster():FindAbilityByName("special_bonus_intruder_5"):GetSpecialValueFor("value") end
 		self:StartIntervalThink(0.1)
 	end
 end

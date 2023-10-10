@@ -31,11 +31,13 @@
 		{
 			"var_type"	"FIELD_FLOAT"
 			"invis_dur" "2 3 4 5"
+			"LinkedSpecialBonus" "special_bonus_intruder_8"
 		}
 		"03"
 		{
 			"var_type" "FIELD_FLOAT"
 			"clone_outgoing" "-90" //10% of dmg
+			"LinkedSpecialBonus" "special_bonus_intruder_7"
 		}
 	}
 }

@@ -4,10 +4,14 @@ LinkLuaModifier("modifier_intruder_stealth", "heroes/hero_intruder/modifier_intr
 function intruder_decoy:OnSpellStart()
     if not IsServer() then return end
     local caster = self:GetCaster()
-    caster:AddNewModifier(caster, ability, "modifier_intruder_stealth", {duration = self:GetSpecialValueFor("invis_dur")})
+	local dur = self:GetSpecialValueFor("invis_dur")
+	if caster:HasTalent("special_bonus_intruder_8") then dur = dur + caster:FindAbilityByName("special_bonus_intruder_8"):GetSpecialValueFor("value") end
+    caster:AddNewModifier(caster, ability, "modifier_intruder_stealth", {duration = dur})
+	local outgoing = self:GetSpecialValueFor("clone_outgoing")
+	if caster:HasTalent("special_bonus_intruder_7") then outgoing = outgoing + caster:FindAbilityByName("special_bonus_intruder_7"):GetSpecialValueFor("value") end
 
 	local illusions = CreateIllusions(caster, caster, {
-		outgoing_damage = self:GetSpecialValueFor("clone_outgoing"),
+		outgoing_damage = outgoing,
 		incoming_damage	= 0,
 		bounty_base		= 0,
 		bounty_growth	= nil,

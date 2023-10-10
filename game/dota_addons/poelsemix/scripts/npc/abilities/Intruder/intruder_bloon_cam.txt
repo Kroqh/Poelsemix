@@ -23,6 +23,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"duration" "30 33 36 39"
+			"LinkedSpecialBonus" "special_bonus_intruder_6"
 		}
 	}
 }
