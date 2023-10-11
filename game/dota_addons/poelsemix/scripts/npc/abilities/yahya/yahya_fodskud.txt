@@ -37,11 +37,13 @@
     {
       "var_type"  "FIELD_INTEGER"
       "damage" "200 250 300 350"
+      "LinkedSpecialBonus" "special_bonus_yahya_1"
     }
     "04"
     {
       "var_type"  "FIELD_INTEGER"
       "range" "500 525 550 575"
+      "LinkedSpecialBonus" "special_bonus_yahya_5"
     }
 	
   }

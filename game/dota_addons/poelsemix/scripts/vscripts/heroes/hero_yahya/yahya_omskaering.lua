@@ -16,13 +16,6 @@ modifier_yahya_omskaering = modifier_yahya_omskaering or class({})
 
 function modifier_yahya_omskaering:IsBuff() return true end
 
-function modifier_yahya_omskaering:OnCreated()
-        local ability = self:GetAbility()
-        local caster = self:GetCaster()
-        
-        
-end
-
 function modifier_yahya_omskaering:DeclareFunctions()
 	local decFuncs = {MODIFIER_PROPERTY_STATS_STRENGTH_BONUS, MODIFIER_PROPERTY_STATS_AGILITY_BONUS, MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT, MODIFIER_EVENT_ON_HERO_KILLED}
 	return decFuncs
@@ -32,9 +25,11 @@ function modifier_yahya_omskaering:GetModifierBonusStats_Agility()
 end
 
 function modifier_yahya_omskaering:GetModifierBonusStats_Strength()
+    if self:GetCaster():FindAbilityByName("special_bonus_yahya_8"):GetLevel() > 0 then return (-self:GetAbility().str + (self:GetAbility().str * (self:GetCaster():FindAbilityByName("special_bonus_yahya_8"):GetSpecialValueFor("value") / 100))) end
     return -self:GetAbility().str
 end
 function modifier_yahya_omskaering:GetModifierBaseAttackTimeConstant()
+    if self:GetCaster():FindAbilityByName("special_bonus_yahya_4"):GetLevel() > 0 then return self:GetAbility():GetSpecialValueFor("base_attack_time") + self:GetCaster():FindAbilityByName("special_bonus_yahya_4"):GetSpecialValueFor("value") end
 	return self:GetAbility():GetSpecialValueFor("base_attack_time")
 end 
 function modifier_yahya_omskaering:OnHeroKilled(keys)

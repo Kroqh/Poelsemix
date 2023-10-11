@@ -1,10 +1,10 @@
 //E
-"koekkenkniv"
+"yahya_koekkenkniv"
 {
    	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_yahya/yahya_koekkenkniv"
   "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_TOGGLE"
-  "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_NONE"
+  "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
   "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO"
   "AbilityUnitDamageType"      "DAMAGE_TYPE_PHYSICAL"
   "AbilityTextureName"         "koekkenkniv"
@@ -36,11 +36,13 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"cleave_ending_width"		"120 140 160 180"
+				"LinkedSpecialBonus" "special_bonus_yahya_2"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"cleave_distance"			"220 260 300 340"
+				"LinkedSpecialBonus" "special_bonus_yahya_2"
 			}
 			"06"
 			{

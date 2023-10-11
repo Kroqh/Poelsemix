@@ -28,6 +28,7 @@ function yahya_fodskud:OnSpellStart()
 end
 
 function yahya_fodskud:GetCastRange()
+	if self:GetCaster():FindAbilityByName("special_bonus_yahya_5"):GetLevel() > 0 then return self:GetSpecialValueFor("range") + self:GetCaster():FindAbilityByName("special_bonus_yahya_5"):GetSpecialValueFor("value") end
     return self:GetSpecialValueFor("range")
 end
 
@@ -39,6 +40,7 @@ function yahya_fodskud:OnProjectileHit(target)
 	local caster = self:GetCaster()
 
 	local damage = self:GetSpecialValueFor("damage")
+	if caster:HasTalent("special_bonus_yahya_1") then damage = damage + caster:FindAbilityByName("special_bonus_yahya_1"):GetSpecialValueFor("value") end
 	local duration = self:GetSpecialValueFor("duration")
 
 	ApplyDamage({victim = target,

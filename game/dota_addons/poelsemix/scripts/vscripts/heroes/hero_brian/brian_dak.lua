@@ -54,8 +54,8 @@ function modifier_brian_dak:OnIntervalThink()
 	ParticleManager:SetParticleControl(particle_epicenter_fx, 1, Vector(self.radius, self.radius, self.radius))
 	ParticleManager:ReleaseParticleIndex(particle_epicenter_fx)
 
-	local units = FindUnitsInRadius(caster:GetTeamNumber(), self:GetParent():GetAbsOrigin(), nil, self.radius, DOTA_UNIT_TARGET_TEAM_ENEMY, 
-	ability:GetAbilityTargetType(), DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+	local units = FindUnitsInRadius(caster:GetTeamNumber(), self:GetParent():GetAbsOrigin(), nil, self.radius, ability:GetAbilityTargetTeam(), 
+	ability:GetAbilityTargetType(), ability:GetAbilityTargetFlags(), FIND_ANY_ORDER, false)
 
     
 	for _, enemy in pairs(units) do

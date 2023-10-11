@@ -1,0 +1,62 @@
+"yahya_digtoplaesning"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+ 	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_yahya/yahya_digtoplaesning"
+  "AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
+  "AbilityTextureName"      "digtoplaesning"
+"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+  // Casting
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.4"
+  "AbilityCastRange"        "%radius"
+
+  // Time   
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCooldown"       "30 28 26 24"
+
+  // Cost
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityManaCost"       "100 95 90 85"
+  
+  // Special
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "radius"          "250 275 300 325"
+	"LinkedSpecialBonus" "special_bonus_yahya_6"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "duration"          "5.0"
+    }
+     "03"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "tick_rate"          "0.1"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "stun_per_interval_ratio"          "1 1.1 1.2 1.3"
+    }
+  }
+
+  // Data driven
+  //-------------------------------------------------------------------------------------------------------------
+  "precache"
+  {
+    "particle"          "particles/units/heroes/hero_omniknight/omniknight_heavenly_grace_buff.vpcf"
+  }
+
+  
+}
