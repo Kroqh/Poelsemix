@@ -1,0 +1,29 @@
+"hero_mewtwo"
+{
+	 HERO: Tusk
+	"override_hero"	"npc_dota_hero_ancient_apparition"			// Hero to override
+	"model"	"models/mewtwo/mewtwo.vmdl"
+	"ModelScale"	"1.8"
+	"DisableWearables" "1"
+	
+	//"Ability1" "mewtwo_psychic"
+	//"Ability2" "mewtwo_shadow_ball"		
+	//"Ability3" "mewtwo_barrier"
+	//"Ability4" "mewtwo_teleport"
+	//"Ability5" "generic_hidden"
+	//"Ability6" "mewtwo_hyper_beam"
+
+
+	//"Ability10"		"special_bonus_kazuya_5"
+	//"Ability11"		"special_bonus_kazuya_6"
+	
+	//"Ability12"		"special_bonus_kazuya_3"
+	//"Ability13"		"special_bonus_kazuya_8"
+	
+	//"Ability14"		"special_bonus_kazuya_4"
+	//"Ability15"		"special_bonus_kazuya_7"
+	
+	//"Ability16"		"special_bonus_kazuya_1"
+	//"Ability17"		"special_bonus_kazuya_2"
+
+}
