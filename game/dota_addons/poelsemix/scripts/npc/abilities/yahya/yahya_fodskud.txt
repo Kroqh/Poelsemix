@@ -2,22 +2,23 @@
 "yahya_fodskud"
 {
   //General
-  "ID"                "6541"
-  "BaseClass"         "ability_datadriven"
+ 	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_yahya/yahya_fodskud"
   "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
   "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
   "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-  "AbilityCooldown"        "8.0 5.0 3.5 2.0"
-  "AbilityManaCost"        "100 90 70 50"
+  "AbilityCooldown"        "8.0 7.5 7.0 6.5"
+  "AbilityManaCost"        "100 90 80 70"
   "AbilityTextureName"    "pistol"
-
-  "AbilityCastRange"        "100"
-  "AbilityCastPoint"        "0.3"
-  "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_1"
+"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+  "AbilityCastPoint"        "0.15"
+  "AbilityCastAnimation"    "ACT_DOTA_CAST2_STATUE"
 
   "precache"
   {
     "soundfile" "soundevents/yahya_soundevent.vsndevts"
+    "particle"  "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
   }
 
   "AbilitySpecial"
@@ -30,47 +31,19 @@
     "02"
     {
       "var_type"          "FIELD_INTEGER"
-      "bonus_movespeed"   "-30 -50 -70 -90" 
+      "movespeed_debuff_percent"   "30 35 40 45" 
     }
     "03"
     {
       "var_type"  "FIELD_INTEGER"
-      "damage" "150 225 300 375"
+      "damage" "200 250 300 350"
     }
+    "04"
+    {
+      "var_type"  "FIELD_INTEGER"
+      "range" "500 525 550 575"
+    }
+	
   }
 
-  "Modifiers"
-  {
-    "modifier_armor_break"
-    {
-      "IsDebuff"      "1"
-      "Duration"      "%duration"
-
-      "Properties"
-      {
-        "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%bonus_movespeed" 
-      }
-    }
-  }
-
-  "OnSpellStart"
-  {
-    "Damage"
-    {
-      "Target"    "TARGET"
-      "Type"      "DAMAGE_TYPE_PHYSICAL"
-      "Damage"    "%damage"
-    }
-    "ApplyModifier"
-    {
-      "ModifierName"  "modifier_armor_break"
-      "Target"     "TARGET" 
-      "Duration"    "%duration"
-    }
-    "FireSound"
-    {
-      "EffectName"  "pistol_skud"
-      "Target"     "CASTER"
-    }
-  }
 }

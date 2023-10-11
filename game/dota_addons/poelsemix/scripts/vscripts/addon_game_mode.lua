@@ -343,8 +343,8 @@ function COverthrowGameMode:SetUpFountains()
 	--local items = LoadKeyValues("scripts/items/items_game.txt")['items']
     --local modelmap = {}
    	--for k,v in pairs(items) do
-		--print(v.name)
-		--print(k)
+	--	print(v.name)
+	--	print(k)
 	--end
 
 	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")

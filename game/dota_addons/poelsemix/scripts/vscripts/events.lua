@@ -286,6 +286,21 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local sniper_mask = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"})
 		sniper_mask:FollowEntity(hero, true)
 
+	elseif npcName == "npc_dota_hero_kunkka" then
+		
+		local yahya_sword = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/kunkka/gunsword/kunkka_gunsword.vmdl"})
+		yahya_sword:FollowEntity(hero, true)
+		
+		local yahya_hands = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/kunkka/green_sleeves_of_the_voyager/green_sleeves_of_the_voyager.vmdl"})
+		yahya_hands:FollowEntity(hero, true)
+		
+		local yahya_legs= SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/kunkka/legs_admirableadmiral.vmdl"})
+		yahya_legs:FollowEntity(hero, true)
+
+		local yahya_hat= SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/kunkka/kunkka_bandana.vmdl"})
+		yahya_hat:FollowEntity(hero, true)
+
+
 	end
 	
 	-- only hero stuff afterswards, also called on illusions before they are turned into actual illusions (thanks valve), create a timer like at the bottom if it should not happen on illusions
