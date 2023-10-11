@@ -1,0 +1,53 @@
+LinkLuaModifier("modifier_yahya_omskaering", "heroes/hero_yahya/yahya_omskaering", LUA_MODIFIER_MOTION_NONE)
+yahya_omskaering= yahya_omskaering or class({})
+
+function yahya_omskaering:OnSpellStart()
+    
+    local caster = self:GetCaster()
+    self.str = caster:GetStrength()
+    self.duration = self:GetSpecialValueFor("duration")
+    self.multiplier = self:GetSpecialValueFor("str_to_agi_ratio")
+	if IsServer() then  
+		EmitSoundOn("min_er_flot", caster)
+        caster:AddNewModifier(caster, self, "modifier_yahya_omskaering", {duration = self.duration})
+	end
+end
+modifier_yahya_omskaering = modifier_yahya_omskaering or class({})
+
+function modifier_yahya_omskaering:IsBuff() return true end
+
+function modifier_yahya_omskaering:OnCreated()
+        local ability = self:GetAbility()
+        local caster = self:GetCaster()
+        
+        
+end
+
+function modifier_yahya_omskaering:DeclareFunctions()
+	local decFuncs = {MODIFIER_PROPERTY_STATS_STRENGTH_BONUS, MODIFIER_PROPERTY_STATS_AGILITY_BONUS, MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT, MODIFIER_EVENT_ON_HERO_KILLED}
+	return decFuncs
+end
+function modifier_yahya_omskaering:GetModifierBonusStats_Agility()
+    return self:GetAbility().str * self:GetAbility().multiplier
+end
+
+function modifier_yahya_omskaering:GetModifierBonusStats_Strength()
+    return -self:GetAbility().str
+end
+function modifier_yahya_omskaering:GetModifierBaseAttackTimeConstant()
+	return self:GetAbility():GetSpecialValueFor("base_attack_time")
+end 
+function modifier_yahya_omskaering:OnHeroKilled(keys)
+    if not IsServer() then return end
+    if keys.attacker ~= self:GetParent() then return end
+    if self:GetCaster():HasScepter() then 
+        self:SetDuration(self:GetAbility().duration, true) 
+        EmitSoundOn("yahya_onkill", self:GetCaster())
+    end
+end
+function modifier_yahya_omskaering:GetEffectAttachType()
+    return "PATTACH_ABSORIGIN_FOLLOW"
+end
+function modifier_yahya_omskaering:GetEffectName()
+    return "particles/units/heroes/hero_yahya/yahya_omskaering.vpcf"
+end

@@ -8,7 +8,7 @@
   "Ability3"            "koekkenkniv"
   "Ability4"            "generic_hidden"
 	"Ability5"            "generic_hidden"
-  "Ability6"            "den_er_flot"
+  "Ability6"            "yahya_omskaering"
 
   "Ability10" "special_bonus_attack_damage_30"
   "Ability11" "special_bonus_strength_15"
@@ -28,4 +28,5 @@
 	"AttributeBaseAgility"		"17"
 	"AttributeAgilityGain"		"1.6"
 	"MovementSpeed"		"300"
+	"StatusHealth"                "330"
 }

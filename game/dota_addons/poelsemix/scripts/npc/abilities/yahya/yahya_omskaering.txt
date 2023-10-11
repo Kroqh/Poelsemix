@@ -1,0 +1,55 @@
+"yahya_omskaering"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+   	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_yahya/yahya_omskaering"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  "AbilityType"         "DOTA_ABILITY_TYPE_ULTIMATE"
+  "FightRecapLevel"       "2"
+  "AbilityTextureName"      "den_er_flot"
+  "HasScepterUpgrade" "1"
+
+  // Casting
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.1"
+
+  // Time   
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCooldown"       "40 35 30"
+
+  // Cost
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityManaCost"       "100"
+
+	"precache"
+  {
+    "particle"  "particles/units/heroes/hero_yahya/yahya_omskaering.vpcf"
+  }
+
+  // Special  
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "duration"        "6"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "base_attack_time"    "1.2 1 0.8"
+    }
+    "03"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "str_to_agi_ratio"      "1.5 1.75 2"
+    }
+  }
+
+  
+
+  
+}
+

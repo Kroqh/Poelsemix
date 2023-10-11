@@ -32,10 +32,11 @@ end
 
 function modifier_damian_penjamin:OnIntervalThink()
 	if not IsServer() then return end
+
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
-	local mana_after = caster:GetMana() - self.mana_cost
-	if mana_after <= 0 then
+	local mana_after == caster:GetMana() - self.mana_cost
+	if mana_after == 0 then
 		caster:SetMana(0)
         ability:ToggleAbility()
 	elseif mana_after < 0 then

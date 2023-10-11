@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/awaken.vsnd"
+                              "value0"        "sounds/krogh/awaken.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -45,7 +45,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/woosh_krogh.vsnd"
+                              "value0"        "sounds/krogh/woosh_krogh.vsnd"
                         }
                     }
                     "volume"            {   "value"     "30.00000"  }
@@ -76,7 +76,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/hagay.vsnd"
+                              "value0"        "sounds/krogh/hagay.vsnd"
                         }
                     }
                     "volume"            {   "value"     "150.00000"  }
@@ -107,7 +107,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/upsie.vsnd"
+                              "value0"        "sounds/krogh/upsie.vsnd"
                         }
                     }
                     "volume"            {   "value"     "40.00000"  }

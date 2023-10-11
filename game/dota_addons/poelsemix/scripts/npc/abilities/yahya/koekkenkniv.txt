@@ -1,77 +1,53 @@
 //E
 "koekkenkniv"
 {
-  "BaseClass"                 "ability_datadriven"
+   	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_yahya/yahya_koekkenkniv"
   "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_TOGGLE"
-  "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+  "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_NONE"
   "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO"
-  "AbilityUnitDamageType"      "DAMAGE_TYPE_MAGICAL"
+  "AbilityUnitDamageType"      "DAMAGE_TYPE_PHYSICAL"
   "AbilityTextureName"         "koekkenkniv"
   
-
-  "AbilityCooldown"       "0.0 0.0 0.0 0.0"
-  "AbilityDamage"         "50 75 100 150"
+"precache"
+	{
+		"particle"	"particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+	}
+	
 
   "AbilitySpecial"
   {
     "01"
     {
       "var_type"      "FIELD_INTEGER"
-      "manacost"      "30 25 20 15"
+      "manacost"      "30 27 24 21"
     }
-  }
-
-  "Modifiers"
-  {
-    "modifier_nyslebet_kniv"
+   "02"
     {
-      
-      "IsPurgable"    "0"
-      "IsHidden"      "0"
-      "IsBuff"        "1"
-      "IsDebuff"      "0"
-      "IsStunDebuff"  "0"
-      //Purge(bool RemovePositiveBuffs, bool RemoveDebuffs, bool BuffsCreatedThisFrameOnly, bool RemoveStuns, bool RemoveExceptions)"
-      "TextureName"   "koekkenkniv"
-    
-      "OnAttack"
-      {
-        "SpendMana"
-        {
-          "Mana"    "%AbilityManaCost"
-        }
-
-        "FireSound"
-        {
-          "EffectName"  "koekkenkniv"
-          "Target"     "CASTER"
-        }
-      }
-
-
-
-      "Properties"
-      {
-        "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "%AbilityDamage"
-      }   
+      "var_type"      "FIELD_INTEGER"
+      "bonus_damage"      "40 60 800 100"
     }
+	"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cleave_starting_width"		"100"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cleave_ending_width"		"120 140 160 180"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cleave_distance"			"220 260 300 340"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cleave_damage_percent"			"50 55 60 65"
+			}
   }
 
-  "OnToggleOn"
-  {
-    "ApplyModifier"
-    {
-      "ModifierName"  "modifier_nyslebet_kniv"
-      "Target"     "CASTER"
-    }
-  }
 
-  "OnToggleOff"
-  {
-    "RemoveModifier"
-    {
-      "ModifierName"  "modifier_nyslebet_kniv"
-      "Target"     "CASTER"
-    }
-  }
 }
