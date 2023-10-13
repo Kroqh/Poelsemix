@@ -94,7 +94,7 @@ end
 
 modifier_kazuya_demon = modifier_kazuya_demon or class({})
 
-function modifier_kazuya_demon:IsPurgeable() return false end
+function modifier_kazuya_demon:IsPurgable() return false end
 function modifier_kazuya_demon:IsHidden() return false end
 
 function modifier_kazuya_demon:DeclareFunctions()
@@ -158,7 +158,7 @@ end
 
 modifier_kazuya_status = modifier_kazuya_status or class({}) --Exists to make sure demon form is correctly raged visually
 
-function modifier_kazuya_status:IsPurgeable() return false end
+function modifier_kazuya_status:IsPurgable() return false end
 function modifier_kazuya_status:IsHidden() return true end
 function modifier_kazuya_status:GetStatusEffectName()
 

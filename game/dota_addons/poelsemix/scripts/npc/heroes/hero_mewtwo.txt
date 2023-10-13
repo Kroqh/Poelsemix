@@ -7,7 +7,7 @@
 	"DisableWearables" "1"
 	
 	//"Ability1" "mewtwo_psychic"
-	//"Ability2" "mewtwo_shadow_ball"		
+	"Ability2" "mewtwo_shadow_ball"		
 	//"Ability3" "mewtwo_barrier"
 	//"Ability4" "mewtwo_teleport"
 	//"Ability5" "generic_hidden"

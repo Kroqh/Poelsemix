@@ -6,14 +6,14 @@
 	"model" "models/miyamoto_musashi/musashi.vmdl"
 
 	"Ability1" "musashi_earth"				
-	"Ability2" "damian_fadedthanaho"
+	"Ability2" "musashi_fire"
 	"Ability3" "musashi_wind"
 	"Ability4" "musashi_water"
 	"Ability5" "generic_hidden"
-	"Ability6" "red_rose"
+	"Ability6" "musashi_void"
 
 
-	"MovementSpeed"		"300"
+	"MovementSpeed"		"305"
 
 	//Lav nye talents
 	
@@ -23,9 +23,9 @@
 	"Ability12"		"special_bonus_musashi_3"
 	"Ability13"		"special_bonus_musashi_4"
 	
-	"Ability14"		"special_bonus_damian_1"
-	"Ability15"		"special_bonus_damian_2"
+	"Ability14"		"special_bonus_musashi_6"
+	"Ability15"		"special_bonus_musashi_5"
 	
-	"Ability16"		"special_bonus_musashi_5"
-	"Ability17"		"special_bonus_movement_speed_30"							
+	"Ability16"		"special_bonus_musashi_7"
+	"Ability17"		"special_bonus_musashi_8"							
 }

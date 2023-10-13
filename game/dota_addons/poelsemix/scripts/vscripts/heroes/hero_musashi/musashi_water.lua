@@ -67,9 +67,9 @@ function modifier_musashi_water:OnAttackLanded( params )
 			self:GetParent():GetAbsOrigin(),	-- point, center point
 			nil,	-- handle, cacheUnit. (not known)
 			range,	-- float, radius. or use FIND_UNITS_EVERYWHERE
-			DOTA_UNIT_TARGET_TEAM_ENEMY,	-- int, team filter
-			DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,	-- int, type filter
-			DOTA_UNIT_TARGET_FLAG_NONE,	-- int, flag filter
+			self:GetAbility():GetAbilityTargetTeam(),	-- int, team filter
+			self:GetAbility():GetAbilityTargetType(),	-- int, type filter
+			self:GetAbility():GetAbilityTargetFlags(),	-- int, flag filter
 			0,	-- int, order filter
 			false	-- bool, can grow cache
 		    )

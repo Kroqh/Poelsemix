@@ -1,0 +1,82 @@
+"musashi_fire"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE" 	//defined inside script since it deals mixed
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+		"AbilityTextureName"			"musashi_fire"
+		"ScriptFile"			"heroes/hero_musashi/musashi_fire"
+		"MaxLevel"						"4"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"20 18 16 14"
+		"AbilityManaCost"				"125 115 105 95"
+		"AbilityCastRange"				"%range"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/units/heroes/hero_musashi/musashi_fire.vpcf"
+			"particle"				"particles/generic_gameplay/generic_hit_blood.vpcf"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_pangolier.vsndevts"
+			"particle"			"particles/units/heroes/hero_clinkz/clinkz_burning_army_ambient.vpcf"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"				"250"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_slash_physical"			"15 20 25 30"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"attack_interval"			"0.1"
+			}
+
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"strikes"				"10"
+				"LinkedSpecialBonus" "special_bonus_musashi_7"	
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_duration"		"3"
+				"LinkedSpecialBonus" "special_bonus_musashi_6"				
+			}
+			
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"60" //avoid touching
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_tick_rate"		"1"				
+			}
+				"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_burn_magical"		"7 11 15 19"				
+			}
+		}
+	}

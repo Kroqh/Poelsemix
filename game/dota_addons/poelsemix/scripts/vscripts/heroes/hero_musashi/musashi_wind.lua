@@ -13,7 +13,11 @@ end
 
 function musashi_wind:OnAbilityPhaseStart() 
 	self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_3)
-	self:GetCaster():FaceTowards(self:GetCaster():GetCursorPosition())
+	local caster = self:GetCaster()
+	local point = caster:GetCursorPosition()
+	local direction = (point - caster:GetAbsOrigin()):Normalized()
+	caster:SetForwardVector(direction)
+
 	return true
 end
 

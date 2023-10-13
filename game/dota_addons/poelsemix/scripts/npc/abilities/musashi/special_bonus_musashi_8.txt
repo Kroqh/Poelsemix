@@ -1,0 +1,18 @@
+//=================================================================================================================
+// musashi TALENT 8 invisible while charging ult
+//=================================================================================================================
+"special_bonus_musashi_8"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"musashi_void"
+	}
+	
+	
+}

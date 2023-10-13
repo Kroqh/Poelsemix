@@ -1,0 +1,66 @@
+"musashi_void"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"	
+		"AbilityTextureName"			"musashi_void"
+		"ScriptFile"			"heroes/hero_musashi/musashi_void"
+		"MaxLevel"						"3"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"60 55 50"
+		"AbilityManaCost"				"200 175 150"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/units/heroes/hero_musashi/musashi_void_slash.vpcf"
+			"particle"					"particles/units/heroes/hero_void_spirit/void_spirit_inactive_aether_remnant_b.vpcf"
+			"particle"					"particles/status_fx/status_effect_void_spirit_astral_step_debuff.vpcf"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"			"250 300 450"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"start_radius"			"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"end_radius"		"200"				
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"travel_distance"		"400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"1800"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"charge_duration"		"3"
+			}
+		}
+	}
