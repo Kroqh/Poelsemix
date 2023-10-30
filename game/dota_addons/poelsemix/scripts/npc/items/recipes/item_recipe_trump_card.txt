@@ -1,0 +1,14 @@
+"item_recipe_trump_card"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"500"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_trump_card"
+		"ItemRequirements"
+		{
+			"01" "item_mystic_staff;item_robe;item_energy_booster;item_robe"
+		}
+  	}

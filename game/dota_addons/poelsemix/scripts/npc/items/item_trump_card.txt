@@ -1,0 +1,45 @@
+"item_trump_card"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_lua"
+  	"AbilityTextureName"        "trump_card"
+	"ScriptFile"					"items/item_trump_card.lua"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"5000"
+  	"ID"						"3052"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"joker"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"int"					"50"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"mana"						"300"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"spell_amp_ratio"						"5"
+		}
+
+	}	
+}
