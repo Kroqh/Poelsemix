@@ -1,4 +1,4 @@
-LinkLuaModifier("modifier_hindbersnitte", "heroes/hero_ryge/hindbersnitte", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_hindbersnitte", "heroes/hero_ryge/ryge_hindbersnitte", LUA_MODIFIER_MOTION_NONE)
 
 
 hindbersnitte = hindbersnitte or class({})

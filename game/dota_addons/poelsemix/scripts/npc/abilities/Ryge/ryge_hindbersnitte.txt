@@ -1,7 +1,7 @@
 "hindbersnitte"
 {
 	"BaseClass"                 "ability_lua"
-	"ScriptFile"				"heroes/hero_ryge/hindbersnitte.lua"
+	"ScriptFile"				"heroes/hero_ryge/ryge_hindbersnitte.lua"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"        "Soren2"
 	"MaxLevel"                  "4"

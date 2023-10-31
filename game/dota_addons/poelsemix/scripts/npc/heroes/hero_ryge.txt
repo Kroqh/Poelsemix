@@ -6,7 +6,7 @@
 	"Ability2" "hindbersnitte"
 	"Ability3" "kolonihave"
 	"Ability5" "generic_hidden"
-	"Ability6" "Skyd_en_due_datadriven"
+	"Ability6" "ryge_skyd_en_due"
 	
 	"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
 

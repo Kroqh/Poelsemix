@@ -41,7 +41,7 @@ function modifier_yahya_omskaering:OnHeroKilled(keys)
     end
 end
 function modifier_yahya_omskaering:GetEffectAttachType()
-    return "PATTACH_ABSORIGIN_FOLLOW"
+    return PATTACH_ABSORIGIN_FOLLOW
 end
 function modifier_yahya_omskaering:GetEffectName()
     return "particles/units/heroes/hero_yahya/yahya_omskaering.vpcf"

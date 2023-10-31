@@ -209,9 +209,11 @@
 		{
 			m_bEndCap = true
 			m_ChildRef = resource:"particles/units/heroes/hero_krogh/krogh_social_presence_hit.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_krogh/krogh_social_presence_explosion.vpcf"
+			m_bDisableChild = true
 		},
 		{
 			m_ChildRef = resource:"particles/units/heroes/hero_krogh/krogh_social_presence_plasma.vpcf"
