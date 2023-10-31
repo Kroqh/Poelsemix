@@ -14,22 +14,20 @@ function sick_dodge:OnSpellStart()
 end
 
 function sick_dodge:GetCooldown(level)
-	if not IsServer() then return end
-    if self:GetCaster():HasTalent("special_bonus_krogh_5") then  --it works men den kan godt lide at spamme consolen hvis du hover over banan
-        return self.BaseClass.GetCooldown(self,level) + self:GetCaster():FindAbilityByName("special_bonus_krogh_5"):GetSpecialValueFor("value")
-    else
-        return self.BaseClass.GetCooldown(self,level)
-    end
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_krogh_5"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_krogh_5"):GetSpecialValueFor("value") end
+    return cd
 end
 
 
 modifier_krogh_sick_dodge = modifier_krogh_sick_dodge or class({})
 
 function modifier_krogh_sick_dodge:OnCreated()
+    self.ms = 0
+    if self:GetCaster():FindAbilityByName("special_bonus_krogh_4"):GetLevel() > 0 then self.ms = self:GetCaster():FindAbilityByName("special_bonus_krogh_4"):GetSpecialValueFor("value") end
     if not IsServer() then return end
     local caster = self:GetCaster()
-    self.ms = 0
-    if caster:HasTalent("special_bonus_krogh_4") then self.ms  = caster:FindAbilityByName("special_bonus_krogh_4"):GetSpecialValueFor("value") end
+    
 end
 
 function modifier_krogh_sick_dodge:OnRemoved()
@@ -55,7 +53,6 @@ function modifier_krogh_sick_dodge:DeclareFunctions()
 end
 
 function modifier_krogh_sick_dodge:GetModifierMoveSpeedBonus_Percentage()
-    if not IsServer() then return end
 	return self.ms
 end
 

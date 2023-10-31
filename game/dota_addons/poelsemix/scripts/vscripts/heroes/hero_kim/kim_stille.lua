@@ -16,6 +16,10 @@ function kim_stille:OnAbilityPhaseStart()
 	self:GetCaster():StartGesture(ACT_DOTA_CAST_ABILITY_1)
 	return true
 end
+function kim_stille:GetCastRange()
+	local range = self:GetSpecialValueFor("range")
+	return range
+end
 
 modifier_stille_cast = class ({})
 

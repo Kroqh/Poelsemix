@@ -30,12 +30,10 @@ function kim_banana:OnSpellStart()
 end
 
 function kim_banana:GetCooldown(level)
-	if not IsServer() then return end
-    if self:GetCaster():HasTalent("special_bonus_kim_3") then  --it works men den kan godt lide at spamme consolen hvis du hover over banan
-        return self.BaseClass.GetCooldown(self,level) + self:GetCaster():FindAbilityByName("special_bonus_kim_3"):GetSpecialValueFor("value")
-    else
-        return self.BaseClass.GetCooldown(self,level)
-    end
+
+	local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_kim_3"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_kim_3"):GetSpecialValueFor("value") end
+    return cd
 end
 
 

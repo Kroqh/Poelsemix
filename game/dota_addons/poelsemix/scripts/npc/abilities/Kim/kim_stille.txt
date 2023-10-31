@@ -10,7 +10,6 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityCooldown"				"20 18 16 14"
 	"AbilityManaCost"				"120"
-	"AbilityCastRange"				"%range"
 	"AbilityCastPoint"				"0.0"
 
 	"precache"
