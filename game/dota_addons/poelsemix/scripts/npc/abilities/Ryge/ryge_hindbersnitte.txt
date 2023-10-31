@@ -1,0 +1,29 @@
+"hindbersnitte"
+{
+	"BaseClass"                 "ability_lua"
+	"ScriptFile"				"heroes/hero_ryge/hindbersnitte.lua"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"        "Soren2"
+	"MaxLevel"                  "4"
+
+	"precache"
+        {
+	"particle" "particles/econ/items/ogre_magi/ogre_2022_cc/ogre_2022_cc_trail_fire.vpcf"
+        }
+	"AbilitySpecial"
+	{
+	    "01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "heal_amount"             "40 45 50 55"
+	    }
+		"02"
+		{
+			"var_type"          "FIELD_INTEGER"
+	        "chance"             "8 12 16 20"
+		}
+
+	}
+
+
+}
