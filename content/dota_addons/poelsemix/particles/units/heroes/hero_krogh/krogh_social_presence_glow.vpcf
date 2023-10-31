@@ -3,83 +3,38 @@
 	_class = "CParticleSystemDefinition"
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 16
-	m_flConstantRadius = 50.0
+	m_flConstantRadius = 25.0
 	m_ConstantColor = [ 232, 189, 255, 100 ]
-	m_Renderers = 
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 3
+	m_controlPointConfigurations = 
 	[
 		{
-			_class = "C_OP_RenderSprites"
-			m_flAnimationRate = 0.75
-			m_vecTexturesInput = 
+			m_name = "preview"
+			m_drivers = 
 			[
 				{
-					m_hTexture = resource:"materials/particle/particle_glow_04.vtex"
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
 				},
 			]
-			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
-			m_nFogType = "PARTICLE_FOG_GAME_DEFAULT"
 		},
 	]
-	m_Operators = 
+	m_Emitters = 
 	[
 		{
-			_class = "C_OP_BasicMovement"
-			m_fDrag = 0.1
-		},
-		{
-			_class = "C_OP_InterpolateRadius"
-			m_flStartScale = 0.25
-			m_flEndScale = 3.0
-			m_flBias = 0.75
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_OFF"
-		},
-		{
-			_class = "C_OP_PositionLock"
-			m_flEndTime_max = 0.1
-			m_flEndTime_min = 0.1
-			m_flStartTime_max = 0.05
-			m_flStartTime_min = 0.05
-			m_TransformInput = 
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
 			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
-				m_nControlPoint = 3
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 32.0
 			}
-		},
-		{
-			_class = "C_OP_Decay"
-		},
-		{
-			_class = "C_OP_FadeOutSimple"
-			m_flFadeOutTime = 0.5
-		},
-		{
-			_class = "C_OP_RampScalarLinearSimple"
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
-			m_Rate = -12.0
-			m_flEndTime = 99999.0
-		},
-		{
-			_class = "C_OP_ColorInterpolate"
-			m_ColorFade = [ 232, 0, 0, 255 ]
 		},
 	]
 	m_Initializers = 
 	[
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -92,30 +47,15 @@
 			_class = "C_INIT_CreateWithinSphereTransform"
 			m_TransformInput = 
 			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
 				m_nControlPoint = 3
-				m_nControlPointRangeMax = 0
 			}
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMax = [ 255, 127, 253, 255 ]
+			m_ColorMax = [ 128, 0, 0 ]
+			m_ColorMin = [ 255, 0, 0 ]
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -140,28 +80,60 @@
 			}
 		},
 	]
-	m_Emitters = 
+	m_Operators = 
 	[
 		{
-			_class = "C_OP_ContinuousEmitter"
-			m_flEmissionDuration = 
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.1
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartScale = 0.25
+			m_flEndScale = 3.0
+			m_flBias = 0.75
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_OFF"
+		},
+		{
+			_class = "C_OP_PositionLock"
+			m_flEndTime_max = 0.1
+			m_flEndTime_min = 0.1
+			m_flStartTime_max = 0.05
+			m_flStartTime_min = 0.05
+			m_TransformInput = 
 			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.0
-			}
-			m_flStartTime = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.0
-			}
-			m_flEmitRate = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 32.0
+				m_nControlPoint = 3
 			}
 		},
+		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 0.5
+		},
+		{
+			_class = "C_OP_RampScalarLinearSimple"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
+			m_Rate = -12.0
+			m_flEndTime = 99999.0
+		},
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = [ 160, 82, 45 ]
+		},
 	]
-	m_PreEmissionOperators = [  ]
-	m_nBehaviorVersion = 5
-	m_nFirstMultipleOverride_BackwardCompat = 3
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderSprites"
+			m_flAnimationRate = 0.75
+			m_vecTexturesInput = 
+			[
+				{
+					m_hTexture = resource:"materials/particle/particle_glow_03.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+		},
+	]
 }

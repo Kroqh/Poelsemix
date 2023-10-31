@@ -1,0 +1,68 @@
+"mewtwo_hyper_beam"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                   	"heroes/hero_mewtwo/mewtwo_hyper_beam"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"mewtwo_hyper_beam"
+		"FightRecapLevel"				"1"
+		"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_6"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"80 75 70"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200 175 150"
+
+
+			"precache"
+	{	
+
+		"particle"  "particles/heroes/mewtwo/hyper_beam.vpcf"
+	}
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"		"600 900 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tick_rate"			"0.2"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"channel_duration"						"3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"		"600 700 800"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"		"75"
+			}
+			
+		}
+		
+	}

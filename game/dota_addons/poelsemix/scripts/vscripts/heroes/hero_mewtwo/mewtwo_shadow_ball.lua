@@ -87,7 +87,7 @@ end
 
 function mewtwo_shadow_ball:OnProjectileHit(keys)
     if  not IsServer() then return end
-
+	
     EmitSoundOnLocationWithCaster(keys.target, "mewtwo_shadow_ball_hit", keys.caster);
 	local nearby_enemy_units = FindUnitsInRadius(
 		keys.caster:GetTeam(),
@@ -113,6 +113,7 @@ function mewtwo_shadow_ball:OnProjectileHit(keys)
 
             enemy:AddNewModifier(keys.caster, keys.ability, "modifier_mewtwo_shadow_ball_debuff", {duration = keys.debuff_duration});
 	end
+
     return true
 end
 
@@ -142,6 +143,7 @@ function modifier_mewtwo_shadow_ball_debuff:OnRemoved()
 	if IsServer() then
 		ParticleManager:DestroyParticle(self.hit_particle, false);
 		ParticleManager:ReleaseParticleIndex(self.hit_particle);
+		
 	end
 end
 
