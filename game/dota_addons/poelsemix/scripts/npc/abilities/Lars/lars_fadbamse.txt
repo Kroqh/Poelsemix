@@ -1,4 +1,4 @@
-"LarsFadbamse"
+"lars_fadbamse"
     {
         "BaseClass"                 "ability_datadriven"
         "AbilityTextureName"        "LarsFadbamse"

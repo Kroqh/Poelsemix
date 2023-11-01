@@ -1,0 +1,41 @@
+"lars_team"
+    {
+        "BaseClass"                 "ability_lua"
+	"ScriptFile"			"heroes/hero_lars/lars_team"
+        "AbilityTextureName"        "LarsAlly"
+        "MaxLevel"                  "4"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+        "AbilityCooldown"           "40 37 34 31"
+        "AbilityManaCost"           "150 140 130 120"
+		"AbilityCastRange"			"700"
+
+
+        "AbilitySpecial"
+        {
+          "01"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "duration"          "4 4.75 5.5 6.25"
+          }
+        }
+
+			"precache"
+	{
+		"particle"		"particles/units/heroes/hero_marci/marci_sidekick_buff.vpcf"
+		"particle"		"particles/units/heroes/hero_lars/lars_team_beer.vpcf"
+
+	}
+
+       
+
+    
+}
+
+
+
+
+
+
+

@@ -11,7 +11,6 @@
 	"AbilityCooldown"				"1"
 	"AbilityManaCost"				"0"
 
-	//"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 
 	"AbilitySpecial"
 	{
@@ -24,7 +23,7 @@
 		"02"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration"	"6 7 8 9"
+			"duration"	"5 5.5 6 6.5"
 		}
 		"03"
 		{

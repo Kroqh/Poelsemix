@@ -1,13 +1,4 @@
-// Rewrite of the Axe Berserkers Call ability
-// Author: Pizzalol
-// Date: October 14, 2015
-// Version: 6.83
-// Type: Datadriven
-//
-// ----- FILE REQUIREMENTS -----
-// Script files:
-// scripts/vscripts/heroes/hero_axe/berserkers_call.lua
-"LarsTaunt"
+"lars_skat"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
@@ -15,17 +6,12 @@
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
-	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
 	"AbilityTextureName"		"LarsSkat"
-	"AOERadius"					"%radiusAOE"
 
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
-		"particle"			"particles/units/heroes/hero_axe/axe_beserkers_call_owner.vpcf"
-		"particle"			"particles/status_fx/status_effect_beserkers_call.vpcf"
 		"particle"			"particles/econ/items/necrolyte/necrophos_sullen_gold/necro_sullen_pulse_enemy_hand_gold.vpcf"
 	}
 
