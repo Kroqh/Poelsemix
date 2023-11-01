@@ -1,9 +1,9 @@
-"dangerous_sea"
+"shimakaze_dangerous_sea"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
+	"ScriptFile"			"heroes/hero_shimakaze/shimakaze_dangerous_sea"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"shimakaze_sea"
 	"MaxLevel"	"1"
@@ -21,12 +21,13 @@
 	    "02"
 	    {
 	        "var_type"          "FIELD_FLOAT"
-	        "duration"             "5 5 5 5"
+	        "duration"             "2"
+		"LinkedSpecialBonus" "special_bonus_shimakaze_7"
 	    }
 	    "03"
 	    {
 	    	"var_type"	"FIELD_FLOAT"
-	    	"tick_interval"	"0.5 0.5 0.5 0.5"
+	    	"tick_interval"	"0.5"
 	    }
 	    "04"
 	    {
@@ -36,7 +37,8 @@
 	    "05"
 	    {
 	    	"var_type"	"FIELD_INTEGER"
-	    	"move_slow" "-45"
+	    	"move_slow" "-25"
+		"LinkedSpecialBonus" "special_bonus_shimakaze_8"
 	    }
 	    "06"
 	    {

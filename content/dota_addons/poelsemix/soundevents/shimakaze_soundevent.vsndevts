@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/shimakaze_ap_shell.vsnd"
+                              "value0"        "sounds/shimakaze/shimakaze_ap_shell.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -43,7 +43,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/shimakaze_ossoi.vsnd"
+                              "value0"        "sounds/shimakaze/shimakaze_ossoi.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.000000"  }
@@ -72,7 +72,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/shimakaze_shelling.vsnd"
+                              "value0"        "sounds/shimakaze/shimakaze_shelling.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -101,7 +101,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/shimakaze_wave.vsnd"
+                              "value0"        "sounds/shimakaze/shimakaze_wave.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -131,7 +131,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/torpedo_hit.vsnd"
+                              "value0"        "sounds/shimakaze/torpedo_hit.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }

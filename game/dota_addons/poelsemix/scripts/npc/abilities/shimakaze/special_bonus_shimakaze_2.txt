@@ -1,5 +1,5 @@
 //=================================================================================================================
-// Shimakaze Talent 2 (Level 25): Increase movement speed cap
+// Shimakaze Talent 2: less destroyer stacks required
 //=================================================================================================================
 "special_bonus_shimakaze_2"
 {
@@ -11,7 +11,7 @@
 
 	"LinkedAbility"
 	{
-			"01"	"destroyer_speed"
+			"01"	"shimakaze_destroyer_speed"
 	}	
 	
 	// Special
@@ -21,7 +21,7 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"speed" "800"
+			"value" "-200"
 		}
 	}	
 }

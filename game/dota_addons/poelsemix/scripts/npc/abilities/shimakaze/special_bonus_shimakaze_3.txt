@@ -11,7 +11,7 @@
 
 	"LinkedAbility"
 	{
-			"01"	"torpedo"
+			"01"	"shimakaze_torpedo"
 	}	
 	
 	// Special

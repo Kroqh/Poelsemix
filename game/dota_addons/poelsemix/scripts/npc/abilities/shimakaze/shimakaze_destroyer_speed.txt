@@ -1,9 +1,9 @@
-"destroyer_speed"
+"shimakaze_destroyer_speed"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_shimakaze/hero_shimakaze"
+	"ScriptFile"			"heroes/hero_shimakaze/shimakaze_destroyer_speed"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityTextureName"			"shimakaze_speed"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
@@ -18,7 +18,8 @@
 	    "01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"max_stacks" "400 400 400 400"
+			"max_stacks" "400"
+			"LinkedSpecialBonus" "special_bonus_shimakaze_2"
 		}
 		"02"
 		{
@@ -28,7 +29,7 @@
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"movespeed"	"20 30 40 50"
+			"movespeed"	"30 35 40 45"
 		}
 	}
 }

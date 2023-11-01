@@ -4,19 +4,18 @@
 	"DisableWearables" "1"
 	"model" "models/shimakaze/shimakaze.vmdl"
 	"ModelScale" "2"
-	"Ability1" "wave"				
-	"Ability2" "destroyer_speed"
-	"Ability3" "ap_shell"
-	"Ability4" "dangerous_sea"
+	"Ability1" "shimakaze_wave"				
+	"Ability2" "shimakaze_destroyer_speed"
+	"Ability3" "shimakaze_ap_shell"
+	"Ability4" "shimakaze_dangerous_sea"
 	"Ability5" "generic_hidden"
-	"Ability6" "torpedo"
-	"Ability7" "water"
+	"Ability6" "shimakaze_torpedo"
 	
 	"Ability10" "special_bonus_shimakaze_1"
-	"Ability11" "special_bonus_exp_boost_40"
-	"Ability12" "special_bonus_intelligence_20"
-	"Ability13" "special_bonus_all_stats_12"
-	"Ability14" "special_bonus_hp_800"
+	"Ability11" "special_bonus_shimakaze_5"
+	"Ability12" "special_bonus_shimakaze_6"
+	"Ability13" "special_bonus_shimakaze_7"
+	"Ability14" "special_bonus_shimakaze_8"
 	"Ability15" "special_bonus_shimakaze_2"
 	"Ability16" "special_bonus_shimakaze_3"
 	"Ability17" "special_bonus_shimakaze_4"
@@ -26,11 +25,11 @@
 	"AttributeBaseStrength"			"20"									// Base strength
 	"AttributeStrengthGain"			"2"									// Strength bonus per level.
 	"AttributeBaseIntelligence"		"28"									// Base intelligence
-	"AttributeIntelligenceGain"		"5"									// Intelligence bonus per level.
+	"AttributeIntelligenceGain"		"3"									// Intelligence bonus per level.
 	"AttributeBaseAgility"		"14"
 	"AttributeAgilityGain"		"2"
 
-	"StatusHealthRegen"		"5"
+	"StatusHealthRegen"		"2.5"
 
-	"MovementSpeed"		"280"
+	"MovementSpeed"		"260"
 }

@@ -11,7 +11,7 @@
 
 	"LinkedAbility"
 	{
-			"01"	"wave"
+			"01"	"shimakaze_wave"
 	}	
 	
 	// Special
