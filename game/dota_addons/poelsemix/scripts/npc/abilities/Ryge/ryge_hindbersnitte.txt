@@ -16,11 +16,14 @@
 	    {
 	        "var_type"          "FIELD_INTEGER"
 	        "heal_amount"             "40 45 50 55"
+		"LinkedSpecialBonus" "special_bonus_ryge_1"
 	    }
 		"02"
 		{
 			"var_type"          "FIELD_INTEGER"
-	        "chance"             "8 12 16 20"
+	        	"chance"             "8 12 16 20"
+			"LinkedSpecialBonus" "special_bonus_ryge_5"
+
 		}
 
 	}

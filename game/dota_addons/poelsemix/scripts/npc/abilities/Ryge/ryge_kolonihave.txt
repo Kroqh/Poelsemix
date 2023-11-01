@@ -28,6 +28,7 @@
 	    {
 	        "var_type"          "FIELD_INTEGER"
 	        "radius"             "300 335 370 405"
+		"LinkedSpecialBonus" "special_bonus_ryge_6"
 	    }
 		"03"
 		{

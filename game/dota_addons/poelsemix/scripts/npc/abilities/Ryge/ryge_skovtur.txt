@@ -1,0 +1,38 @@
+"skovtur"
+{
+	"BaseClass"                 "ability_lua"
+	"ScriptFile"				"heroes/hero_ryge/ryge_skovtur.lua"
+	"AbilityTextureName"        "Soren1"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+	"AbilityCooldown"           "20 18 16 14"
+	"AbilityManaCost"           "100"
+	"AbilityCastRange"			"650"
+
+	"AbilitySpecial"
+	{
+	    "01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "hp_regen_sec_perc"             "5 7 9 11"
+		"LinkedSpecialBonus" "special_bonus_ryge_3"
+	    }
+	    "03"
+	    {
+	        "var_type"          "FIELD_FLOAT"
+	        "duration"          "3"
+	    }
+	}
+
+"precache"
+{
+	"model" "models/props_tree/tree_oak_00.vmdl"
+	"particle"			"particles/econ/courier/courier_onibi/courier_onibi_yellow_ambient_fire_lvl18.vpcf"
+
+}
+
+	
+
+}

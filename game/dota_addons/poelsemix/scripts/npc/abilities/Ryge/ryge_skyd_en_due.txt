@@ -9,9 +9,9 @@
 "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
-"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 "FightRecapLevel"				"1"
 "AbilityTextureName"			"Soren4"
+"HasScepterUpgrade"		"1"
 
 
 "AbilityCastPoint"				"0.0"
@@ -23,7 +23,7 @@
 	"particle"  "particles/units/heroes/hero_sniper/sniper_assassinate.vpcf"
 	"particle"  "particles/econ/items/sniper/sniper_fall20_immortal/sniper_fall20_immortal_crosshair_bullseye.vpcf" 
 	"particle"	"particles/econ/items/witch_doctor/wd_ti10_immortal_weapon/wd_ti10_immortal_ambient_crimson_birds.vpcf"	
-	"soundfile" "soundevents/Soren_sounds.vsndevts"
+	"soundfile" "soundevents/ryge_soundevent.vsndevts"
 
 }
 "AbilitySpecial"
@@ -44,21 +44,33 @@
 	{
 		"var_type"					"FIELD_FLOAT"
 		"damage_agi_scaling"				"2 2.5 3"
+		"LinkedSpecialBonus" "special_bonus_ryge_7"
 	}
 	"04"
 	{
 		"var_type"					"FIELD_INTEGER"
-		"base_range"				"700 900 1100"
+		"base_range"				"700 850 1000"
 	}
 	"05"
 	{
 		"var_type"					"FIELD_FLOAT"
 		"range_agi_scaling"				"1 1.25 1.5"
+		"LinkedSpecialBonus" "special_bonus_ryge_8"
 	}
 	"06"
 	{
 		"var_type"					"FIELD_INTEGER"
-		"projectile_speed"			"3000"
+		"projectile_speed"			"2225"
+	}
+	"06"
+	{
+		"var_type"					"FIELD_INTEGER"
+		"scepter_ricochets"			"2"
+	}
+	"07"
+	{
+		"var_type"					"FIELD_INTEGER"
+		"scepter_range"			"400"
 	}
 }
 

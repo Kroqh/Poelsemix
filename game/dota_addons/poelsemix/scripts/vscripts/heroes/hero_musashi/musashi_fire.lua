@@ -217,12 +217,13 @@ function modifier_musashi_fire_burn:OnIntervalThink()
 		damage = damage,
 		ability = self:GetAbility()
 		})
+	self:StartIntervalThink(self:GetAbility():GetSpecialValueFor("burn_tick_rate"))
 	end
 end
 
 
 function modifier_musashi_fire_burn:GetEffectAttachType()
-    return "PATTACH_ABSORIGIN_FOLLOW"
+    return PATTACH_ABSORIGIN_FOLLOW
 end
 function modifier_musashi_fire_burn:GetEffectName()
     return "particles/units/heroes/hero_clinkz/clinkz_burning_army_ambient.vpcf"

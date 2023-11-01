@@ -14,10 +14,10 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/SorenUltStart.vsnd"
+                              "value0"        "sounds/ryge/SorenUltStart.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "10.00000"  }
+                    "volume"            {   "value"     "8.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -46,7 +46,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/SorenUltHit.vsnd"
+                              "value0"        "sounds/ryge/SorenUltHit.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -78,7 +78,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/SorenKageSound.vsnd"
+                              "value0"        "sounds/ryge/SorenKageSound.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -109,7 +109,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/SorenHave.vsnd"
+                              "value0"        "sounds/ryge/SorenHave.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -141,10 +141,10 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/SorenSkov.vsnd"
+                              "value0"        "sounds/ryge/SorenSkov.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "1.00000"  }
+                    "volume"            {   "value"     "3.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }

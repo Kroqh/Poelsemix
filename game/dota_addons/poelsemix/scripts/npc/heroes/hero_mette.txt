@@ -19,7 +19,7 @@
 	"AttributeIntelligenceGain"	"2.5"
 	"AttributeBaseAgility"		"18"
 	"AttributeAgilityGain"		"2.3"
-	"AttackAcquisitionRange"	"450"
+	"AttackAcquisitionRange"	"600"
 	"AttackRange"			"450"
 
 	"Ability10"		"special_bonus_mette_1"

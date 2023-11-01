@@ -28,5 +28,5 @@
 	"AttributeBaseAgility"		"17"
 	"AttributeAgilityGain"		"1.6"
 	"MovementSpeed"		"300"
-	"StatusHealth"                "330"
+	"StatusHealth"                "300"
 }

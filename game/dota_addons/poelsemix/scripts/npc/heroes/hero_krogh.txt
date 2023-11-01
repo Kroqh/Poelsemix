@@ -30,5 +30,5 @@
 	"Ability17"		"special_bonus_krogh_8"
                  
 	"MovementSpeed"               "290"
-	"StatusHealth"                "500"
+	"StatusHealth"                "330"
 }

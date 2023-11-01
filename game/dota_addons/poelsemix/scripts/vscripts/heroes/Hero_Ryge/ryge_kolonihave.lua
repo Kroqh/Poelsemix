@@ -4,14 +4,19 @@ kolonihave = kolonihave or class({});
 
 
 
-
+function kolonihave:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_ryge_2"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_ryge_2"):GetSpecialValueFor("value") end
+    return cd
+end
 
 function kolonihave:GetAOERadius()
 	return self:GetSpecialValueFor("radius")
 end
 
 function kolonihave:OnSpellStart()
-	
+	if not IsServer() then return end
+	self:GetCaster():EmitSound("SorenHave")
 	CreateModifierThinker(self:GetCaster(), self, "modifier_ryge_kolonihave_thinker", {
 		duration = self:GetSpecialValueFor("duration")
 	}, self:GetCursorPosition(), self:GetCaster():GetTeamNumber(), false)
@@ -23,6 +28,9 @@ function modifier_ryge_kolonihave_thinker:OnCreated()
 	if not self:GetAbility() then self:Destroy() return end
 	
 	self.radius	= self:GetAbility():GetSpecialValueFor("radius")
+	if self:GetCaster():FindAbilityByName("special_bonus_ryge_6"):GetLevel() > 0 then self.radius = self.radius + self:GetCaster():FindAbilityByName("special_bonus_ryge_6"):GetSpecialValueFor("value") end
+
+
 	if not IsServer() then return end
     self:StartIntervalThink(0)
 	

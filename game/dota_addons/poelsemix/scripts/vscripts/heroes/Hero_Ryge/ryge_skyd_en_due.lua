@@ -6,15 +6,17 @@ ryge_skyd_en_due = ryge_skyd_en_due or class({})
 
 
 function ryge_skyd_en_due:GetCastRange()
-	return self:GetSpecialValueFor("base_range") + (self:GetSpecialValueFor("range_agi_scaling") * self:GetCaster():GetAgility())
+	local scaling = self:GetSpecialValueFor("range_agi_scaling")
+	if self:GetCaster():FindAbilityByName("special_bonus_ryge_8"):GetLevel() > 0 then scaling = scaling + self:GetCaster():FindAbilityByName("special_bonus_ryge_8"):GetSpecialValueFor("value") end
+	return self:GetSpecialValueFor("base_range") + (scaling * self:GetCaster():GetAgility())
 end
 
 function ryge_skyd_en_due:OnSpellStart()
 	local caster = self:GetCaster()
 	self.target = self:GetCursorTarget()
 	if not IsServer() then return end
-	target:EmitSound("SorenUltStart")
-	caster:EmitSound("SorenUltStart") --called on both to make sure both you and target hear it with great range
+	self.target:EmitSound("SorenUltStart")
+	self.ricochets = 0
 	
 	caster:AddNewModifier(caster, self, "modifier_ryge_skyd_en_due", {duration = self:GetSpecialValueFor("channel_time")})
 	self.target:AddNewModifier(caster, self, "modifier_ryge_skyd_en_due_target", {duration = self:GetSpecialValueFor("channel_time")})
@@ -26,13 +28,42 @@ function ryge_skyd_en_due:OnProjectileHit(target)
 	end
 
 	local caster = self:GetCaster()
-	local damage = self:GetSpecialValueFor("base_damage") + self:GetSpecialValueFor("damage_agi_scaling") * caster:GetAgility()
+
+	local scaling = self:GetSpecialValueFor("damage_agi_scaling")
+	if caster:FindAbilityByName("special_bonus_ryge_7"):GetLevel() > 0 then scaling = scaling + caster:FindAbilityByName("special_bonus_ryge_7"):GetSpecialValueFor("value") end
+
+	local damage = self:GetSpecialValueFor("base_damage") + (scaling * caster:GetAgility())
 	target:EmitSound("SorenUltHit")
 	ApplyDamage({victim = target,
 	attacker = caster,
 	damage_type = self:GetAbilityDamageType(),
 	damage = damage,
 	ability = self})
+
+	if caster:HasScepter() and self.ricochets < self:GetSpecialValueFor("scepter_ricochets") then
+		local units = FindUnitsInRadius(caster:GetTeamNumber(), target:GetAbsOrigin(), nil, self:GetSpecialValueFor("scepter_range"), self:GetAbilityTargetTeam(), self:GetAbilityTargetType(), self:GetAbilityTargetFlags(), FIND_ANY_ORDER, false)
+		local new_target = units[1]
+		if new_target == target then new_target = units[2] end
+		if new_target ~= nil then 
+			local proj = 
+		{
+			Target = new_target,
+			Source = target,
+			Ability = self,
+			EffectName = "particles/units/heroes/hero_sniper/sniper_assassinate.vpcf",
+			iMoveSpeed =  self:GetSpecialValueFor("projectile_speed"),
+			bDodgeable = false,
+			bVisibleToEnemies = true,
+			bReplaceExisting = false,
+			bProvidesVision = false,
+			iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_HITLOCATION,
+			ExtraData = {}
+		}
+		ProjectileManager:CreateTrackingProjectile(proj)
+		self.ricochets = self.ricochets + 1
+		end
+	end
+
 end
 
 modifier_ryge_skyd_en_due = modifier_ryge_skyd_en_due or class({})
