@@ -67,6 +67,8 @@
             <Image src="file://panorama/images/heroes/npc_dota_hero_juggernaut.png" hittest="false" />
             <Image src="file://panorama/images/heroes/selection/npc_dota_hero_ancient_apparition.png" hittest="false" />
             <Image src="file://panorama/images/heroes/npc_dota_hero_ancient_apparition.png" hittest="false" />
+             <Image src="file://panorama/images/heroes/selection/npc_dota_hero_magnataur.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_magnataur.png" hittest="false" />
 
             <Image src="file://materials/particle/pfmagic.tga" hittest="false" />
             <Image src="file://materials/particle/pfmelee.tga" hittest="false" />

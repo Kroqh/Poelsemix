@@ -3,7 +3,6 @@ modifier_generic_taunt = modifier_generic_taunt or class({})
 --------------------------------------------------------------------------------
 -- Classifications
 function modifier_generic_taunt:IsHidden()
-    if not IsServer() then end
 	return  self.is_hidden
 end
 
@@ -21,7 +20,7 @@ function modifier_generic_taunt:IsPurgable()
 end
 
 --------------------------------------------------------------------------------
--- Initializations, takes optional target, status effect, status_priority, is_hidden, is_purgeable (is_hidden not working it seems)
+-- Initializations, takes optional target, status effect, status_priority, is_hidden, is_purgeable (keyvalues not working properly it seems)
 function modifier_generic_taunt:OnCreated(kv)
     self.is_hidden = kv.is_hidden
     if not self.is_hidden then

@@ -1,137 +1,58 @@
 "lars_blame"
     {
-        "BaseClass"                 "ability_datadriven"
+        "BaseClass"                 "ability_lua"
+	"ScriptFile"			"heroes/hero_lars/lars_blame"
         "AbilityTextureName"        "LarsTaunt"
         "MaxLevel"                  "3"
         "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
         "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NOT_NONE"
         "AbilityCooldown"           "80 70 60"
         "AbilityManaCost"           "100 150 200"
-		"AbilityCastRange"			"750"
+	"HasScepterUpgrade"		"1"
 
 
         "AbilitySpecial"
         {
           "01"
           {
-              "var_type"          "FIELD_FLOAT"
-              "duration"          "10 13 16"
+              "var_type"          "FIELD_INTEGER"
+              "duration"          "6 8 10"
           }
+	   "02"
+          {
+              "var_type"          "FIELD_INTEGER"
+              "cast_range"          "500 650 800"
+          }
+	  "03"
+          {
+              "var_type"          "FIELD_INTEGER"
+              "target_slow"          "30 40 50"
+          }
+	  "04"
+          {
+              "var_type"          "FIELD_INTEGER"
+              "taunt_speed"          "20 30 40"
+          }
+	 
+	 "05"
+          {
+              "var_type"          "FIELD_INTEGER"
+              "scepter_dirt_damage"          "65"
+          }
+	
         }
 
 			"precache"
 	{
-		"particle"			"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_explosion_white_d_arcana1.vpcf"
-		"particle"			"particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf"
         	"soundfile"  		"soundevents/lars_soundevent.vsndevts"
-
-
+		"particle"		"particles/econ/events/ti9/ti9_monkey_projectile.vpcf"
+		"particle"		"particles/units/heroes/hero_grimstroke/grimstroke_soulchain_marker.vpcf"
 	}
 
-        "OnSpellStart"
-        {
-			"FireSound"
-  		{
-	    	"EffectName"		"LarsUlt"
-	    	"Target"			"CASTER"
-	  	}
-					"ApplyModifier"
-				{
-					"ModifierName"	"modifier_beserkers_call_enemy_datadriven"
-					"Target" 		"TARGET"
-					"Duration"		"%duration"
-				}
-
-		"ApplyModifier"
-		{
-			"Target"
-			{
-				"Center"  				"CASTER"
-				"Radius" 				"GLOBAL"
-				"Teams" 				"DOTA_UNIT_TARGET_TEAM_ENEMY"
-				"Types" 				"DOTA_UNIT_TARGET_HERO" 
-			}
-			"ModifierName"		"speedBoost"
-            "Duration" "%duration"
-		}
-
-
-	}
-	"Modifiers"
-	{
-
-		"modifier_beserkers_call_enemy_datadriven"
-		{
-			"IsPurgable"		"0"
-			"IsDebuff"			"1"
-
-			"StatusEffectName" 		"particles/status_fx/status_effect_beserkers_call.vpcf" 	   
-			"StatusEffectPriority"  "10"
-
-			"ThinkInterval"  "0.1"
-			"OnIntervalThink"
-			{
-            		"RunScript"
-				{
-					"ScriptFile"	"heroes/Hero_Lars/LarsTaunt.lua"
-					"Function"		"BerserkersCall"
-
-				}
-			}
-
-			"OnDestroy"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/Hero_Lars/LarsTaunt.lua"
-					"Function"		"BerserkersCallEnd"
-				}
-			}
-            		"Properties"
-		{
-			"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "-750"
-		}
-        "OnDeath"
-        {
-				"ApplyModifier"
-				{
-					"ModifierName"	"modifier_duel_damage_datadriven"
-					"Target" 		"CASTER"
-				}
-
-        }
         
-	}
-
-
-        "speedBoost"
-        {
-        "IsBuff"	"1"
-	    "IsHidden"          "0"
-	    "Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
-
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "500"
-			}
-        }
-		
-			"modifier_duel_damage_datadriven"
-		{
-			"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE"
-			"IsBuff"		"1"
-			"IsPurgable"	"0"
-			"IsHidden"		"1"
-			
-
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"20"
-			}
-		}
-	}
 
     
 }
