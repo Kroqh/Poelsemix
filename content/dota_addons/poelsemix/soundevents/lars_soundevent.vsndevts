@@ -113,7 +113,7 @@
                               "value0"        "sounds/lars/LarsSkat1.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "3.00000"  }
+                    "volume"            {   "value"     "4.00000"  }
                     "pitch_rand_min"    {   "value"     "0.000000"  }
                     "pitch_rand_max"    {   "value"     "0.000000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -144,12 +144,12 @@
                               "value0"        "sounds/lars/LarsSkat2.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "3.00000"  }
+                    "volume"            {   "value"     "2.00000"  }
                     "pitch_rand_min"    {   "value"     "0.000000"  }
                     "pitch_rand_max"    {   "value"     "0.000000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1009.000"  }
+                    "distance_max"      {   "value"     "1000.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }

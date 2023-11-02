@@ -2,32 +2,26 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_lars/lars_skat"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS | DOTA_UNIT_TARGET_FLAG_NOT_SUMMONED"
 	"AbilityTextureName"		"LarsSkat"
 
-	// Precache
-	//-------------------------------------------------------------------------------------------------------------
-	"precache"
-	{
-		"particle"			"particles/econ/items/necrolyte/necrophos_sullen_gold/necro_sullen_pulse_enemy_hand_gold.vpcf"
-	}
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastPoint"				"0"
-	"AbilityChannelTime"			"8"
-	"AOERadius"         "%radiusAOE"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"16 14 12 10"
+	"AbilityCooldown"				"15 14 13 12"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"80 90 100 110"	
+	"AbilityManaCost"				"100"	
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -36,6 +30,7 @@
 	{
 		"particle"	"particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf"
 		"particle"	"particles/econ/items/lina/lina_ti7/lina_spell_light_strike_array_ti7_gold_ring_collapse_f.vpcf"
+		"particle"			"particles/heroes/lars/lars_midas.vpcf"
 
 	}
 	        "AbilitySpecial"
@@ -43,153 +38,24 @@
           "01"
           {
               "var_type"          "FIELD_FLOAT"
-              "radiusAOE"          "420 620 820"
+              "radius"          "250 300 350"
+          }
+	 "02"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "tax_rate"          "3 4 5 6"
+          }
+	"03"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "tick_rate"          "1"
+          }
+	"04"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "channel_time"          "5"
           }
 		}
 
-	"OnSpellStart"
-	{
-
-			"ApplyModifier"
-		{
-			"ModifierName"	"modifier_skat"
-			"Target" 		"CASTER"
-		}
-			"FireSound"
-   		{
-	    	"EffectName"		"LarsSkat1"
-	    	"Target"			"CASTER"
-	   	}
-	}
-			"OnChannelFinish"
-		{
-			"RemoveModifier"
-			{
-				"ModifierName"	"modifier_skat"
-				"Target" 		"CASTER"
-			}
-		}
-		
-
-
-	"Modifiers"
-	{
-		"modifier_skat"
-		{
-				"Passive"           "0"
-		        "IsHidden"          "0"
-				"RemoveOnDeath"		"1"
-
-		        "Aura"              "modifier_skat_debuff"
-		        "Aura_Radius"       "%radiusAOE"
-		        "Aura_Teams"        "DOTA_UNIT_TARGET_TEAM_ENEMY"
-		        "Aura_Types"        "DOTA_UNIT_TARGET_HERO"
-		        "Aura_Flags"        "DOTA_UNIT_TARGET_FLAG_NONE"
-		        "Aura_ApplyToCaster" "0"
-
-			"ThinkInterval"	"1"
-			"OnIntervalThink"
-			{
-				"AttachEffect"
-				{
-					"EffectName" "particles/econ/items/lina/lina_ti7/lina_spell_light_strike_array_ti7_gold_ring_collapse_f.vpcf"
-					"EffectAttachType" "attach_origin"
-					"Target" "CASTER"
-				
-					"ControlPoints"
-					{
-						"00" "CASTER"
-						"01" "%radiusAOE %radiusAOE 1.5"
-						"03" "0 0 0"
-					}
-				}
-				"FireEffect"
-				{
-					"EffectName" "particles/econ/items/monkey_king/ti7_weapon/mk_ti7_golden_immortal_strike_cast_weapon_glow_tip.vpcf"
-					"EffectAttachType" "attach_origin"
-					"Target" "CASTER"
-				}
-
-
-			}
-			"OnDeath"
-            { 
-			   	    "RemoveModifier"
-			   	    {
-			   	        "ModifierName"  "modifier_skat"
-			   	        "Target"        "CASTER"
-			   	    }
-            }
-
-			"OnOrder"
-	            { 
-				   	"RemoveModifier"
-				   	{
-				   	    "ModifierName"  "modifier_skat"
-				   	    "Target"        "CASTER"
-				   	}
-	            }
-		}
-		"modifier_skat_debuff"
-		{
-			"ThinkInterval"	"1"
-			"OnIntervalThink"
-			{
-
-			"ActOnTargets"
-		    {
-		        "Target"
-		        {
-		            "Center"    "CASTER"
-		            "Radius"    "%radiusAOE"
-		            "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-		            "Types"     "DOTA_UNIT_TARGET_HERO"
-			"Flags" "DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS | DOTA_UNIT_TARGET_FLAG_NOT_SUMMONED"
-				
-		        }
-		    
-		        "Action"    
-		        {
-					"GrantXPGold"
-					{
-						"Target"  "CASTER"
-						"GoldAmount" "30"
-					}
-
-					"GrantXPGold"
-					{
-						"Target"  "TARGET"
-						"GoldAmount" "-20"
-					}
-
-				"FireEffect"
-				{
-					"EffectName" "particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf"
-					"EffectAttachType" "attach_origin"
-					"Target" "TARGET"
-				}
-
-						"TrackingProjectile"
-						{					
-							"Target" "TARGET"
-							"EffectName" "particles/econ/items/necrolyte/necrophos_sullen_gold/necro_sullen_pulse_enemy_hand_gold.vpcf"
-							"Dodgeable" "0"
-							"ProvidesVision" "0"
-							"MoveSpeed" "800"
-							"SourceAttachment" "DOTA_PROJECTILE_ATTACHMENT_HITLOCATION"
-						}
-
-				"FireSound"
-			    {
-			    	"EffectName"		"LarsSkat2"
-			    	"Target"			"CASTER"
-		    	}
-
-		        }
-		    }
-
-
-			}
-		}
-	}
+	
 }
