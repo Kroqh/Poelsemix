@@ -74,7 +74,7 @@ function modifier_multiclick:OnCreated()
 	self.attackTime = self:GetAbility():GetSpecialValueFor("bat")
 	
 	local caster = self:GetCaster()
-    if caster:FindAbilityByName("special_bonus_cid_7"):GetLevel() > 0 then self.attackTime = self.attackTime + caster:FindAbilityByName("special_bonus_cid_7"):GetSpecialValueFor("value") end
+    if caster:FindAbilityByName("special_bonus_cid_8"):GetLevel() > 0 then self.attackTime = self.attackTime + caster:FindAbilityByName("special_bonus_cid_8"):GetSpecialValueFor("value") end
 
 	self.pfx = "particles/econ/items/wisp/wisp_guardian_ti7.vpcf"
 	self.wisp_fx = ParticleManager:CreateParticle(self.pfx, PATTACH_ABSORIGIN_FOLLOW, caster) 
@@ -124,7 +124,7 @@ end
 function modifier_multiclick_passive:OnCreated()
 	self.upgraded_bat = self:GetAbility():GetSpecialValueFor("bat_upgraded")
     local caster = self:GetCaster()
-    if caster:FindAbilityByName("special_bonus_cid_7"):GetLevel() > 0 then self.upgraded_bat = self.upgraded_bat + caster:FindAbilityByName("special_bonus_cid_7"):GetSpecialValueFor("value") end
+    if caster:FindAbilityByName("special_bonus_cid_8"):GetLevel() > 0 then self.upgraded_bat = self.upgraded_bat + caster:FindAbilityByName("special_bonus_cid_8"):GetSpecialValueFor("value") end
 end
 
 function modifier_multiclick_passive:OnRefresh()
@@ -148,7 +148,8 @@ function modifier_multiclick_thinker:OnIntervalThink()
 		local ability = self:GetAbility()
 
 		if caster:HasModifier("modifier_upgrade_skills") then
-			caster:AddNewModifier(caster, ability, "modifier_multiclick_passive", {}) 
+			caster:AddNewModifier(caster, ability, "modifier_multiclick_passive", {})
+            caster:RemoveModifierByName("modifier_multiclick") 
 		else
 			caster:RemoveModifierByName("modifier_multiclick_passive")
 		end

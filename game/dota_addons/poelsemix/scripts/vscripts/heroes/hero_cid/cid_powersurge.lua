@@ -21,6 +21,7 @@ function powersurge:OnSpellStart()
 	end
 end
 
+
 modifier_powersurge = modifier_powersurge or class({})
 
 function modifier_powersurge:DeclareFunctions()
@@ -45,7 +46,7 @@ function modifier_powersurge:OnCreated()
             if caster:FindAbilityByName("special_bonus_cid_7"):GetLevel() > 0 then damage_multiplier_upgraded = damage_multiplier_upgraded + caster:FindAbilityByName("special_bonus_cid_7"):GetSpecialValueFor("value") end
 			self.baseDamage = baseDamageAverage * damage_multiplier_upgraded
 		else
-            if caster:FindAbilityByName("special_bonus_cid_7"):GetLevel() > 0 then damage_multiplier = damage_multiplier+ caster:FindAbilityByName("special_bonus_cid_7"):GetSpecialValueFor("value") end
+            if caster:FindAbilityByName("special_bonus_cid_7"):GetLevel() > 0 then damage_multiplier = damage_multiplier + caster:FindAbilityByName("special_bonus_cid_7"):GetSpecialValueFor("value") end
 			self.baseDamage = baseDamageAverage * damage_multiplier
 		end
         self:SendBuffRefreshToClients()
@@ -61,7 +62,6 @@ function modifier_powersurge:GetEffectAttachType()
 end
 
 function modifier_powersurge:OnRefresh()
-	self.baseDamage = 0
 	self:OnCreated()
 end
 
