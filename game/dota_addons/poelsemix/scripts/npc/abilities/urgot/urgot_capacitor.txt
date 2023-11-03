@@ -1,12 +1,10 @@
-	//=================================================================================================================
-	// Ember Spirit: Flame Guard
-	//=================================================================================================================
-	"imba_pipe"
+
+	"urgot_capacitor"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"					"ability_lua"
-		"ScriptFile"				"heroes/hero_urgot/hero_urgot"
+		"ScriptFile"				"heroes/hero_urgot/urgot_capacitor"
 		"AbilityType"				"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityTextureName"		"urgotW"
@@ -18,22 +16,20 @@
 
 		// Time
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"			"18.0"
+		"AbilityCooldown"			"18 17 16 15"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"			"50"
 
-		// Precache
-		//-------------------------------------------------------------------------------------------------------------
-		//"precache"
-		//{
-		//	"particle"				"particles/econ/items/medusa/medusa_daughters/medusa_daughters_mana_shield.vpcf"
-		//	"soundfile"				"soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts"
-		//}
 
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"				"particles/econ/items/urgot/capacitor.vpcf"
+
+		}
+
+
 		"AbilitySpecial"
 		{
 			"01"

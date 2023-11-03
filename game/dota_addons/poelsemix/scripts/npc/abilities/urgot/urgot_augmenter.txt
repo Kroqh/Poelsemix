@@ -1,0 +1,25 @@
+"urgot_augmenter"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_urgot/urgot_augmenter"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"MaxLevel"						"1"
+	"AbilityTextureName"			"urgotPassive"
+
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage_reduction" "-15"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "2.5"
+		}
+
+	}
+}

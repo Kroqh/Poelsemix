@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/urgotQNonTargeted.vsnd"
+                              "value0"        "sounds/urgot/urgotQNonTargeted.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }
@@ -22,7 +22,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1600.000"  }
+                    "distance_max"      {   "value"     "1200.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -45,7 +45,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/urgotQTargeted.vsnd"
+                              "value0"        "sounds/urgot/urgotQTargeted.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }
@@ -53,7 +53,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1600.000"  }
+                    "distance_max"      {   "value"     "1200.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -77,7 +77,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/urgotQHit.vsnd"
+                              "value0"        "sounds/urgot/urgotQHit.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }
@@ -85,7 +85,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1600.000"  }
+                    "distance_max"      {   "value"     "1200.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -109,7 +109,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/urgotEshoot.vsnd"
+                              "value0"        "sounds/urgot/urgotEshoot.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }
@@ -117,7 +117,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1600.000"  }
+                    "distance_max"      {   "value"     "1200.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -141,7 +141,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/urgotEHit.vsnd"
+                              "value0"        "sounds/urgot/urgotEHit.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }
@@ -149,7 +149,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1600.000"  }
+                    "distance_max"      {   "value"     "1200.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -173,7 +173,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/urgotRStart.vsnd"
+                              "value0"        "sounds/urgot/urgotRStart.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }
@@ -181,7 +181,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1600.000"  }
+                    "distance_max"      {   "value"     "1200.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -205,7 +205,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/urgotREnd.vsnd"
+                              "value0"        "sounds/urgot/urgotREnd.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }
@@ -213,7 +213,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1600.000"  }
+                    "distance_max"      {   "value"     "1200.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -237,7 +237,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/urgotW.vsnd"
+                              "value0"        "sounds/urgot/urgotW.vsnd"
                         }
                     }
                     "volume"            {   "value"     "1.00000"  }
@@ -245,7 +245,7 @@
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
-                    "distance_max"      {   "value"     "1600.000"  }
+                    "distance_max"      {   "value"     "800.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }

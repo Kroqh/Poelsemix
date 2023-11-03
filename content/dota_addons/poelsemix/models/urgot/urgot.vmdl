@@ -535,28 +535,6 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "urgot_attack2"
-						activity_name = "ACT_DOTA_ATTACK2"
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						animgraph_additive = false
-						source_filename = "models/urgot/urgot_anim.fbx"
-						import_bone_scales = false
-						start_frame = 906
-						end_frame = 940
-						framerate = 30.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
 						name = "urgot_idle"
 						activity_name = "ACT_DOTA_IDLE"
 						activity_weight = 1
@@ -601,7 +579,7 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "urgot_death_copy"
+						name = "urgot_idle_rare"
 						activity_name = "ACT_DOTA_IDLE_RARE"
 						activity_weight = 1
 						weight_list_name = ""
@@ -618,6 +596,94 @@
 						import_bone_scales = false
 						start_frame = 1933
 						end_frame = 2178
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "urgot_e"
+						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.1
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/urgot/urgot_anim.fbx"
+						import_bone_scales = false
+						start_frame = 436
+						end_frame = 466
+						framerate = 50.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "urgot_e1"
+						activity_name = "ACT_DOTA_CAST_ABILITY_6"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/urgot/urgot_anim.fbx"
+						import_bone_scales = false
+						start_frame = 625
+						end_frame = 654
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "urgot_attack3"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/urgot/urgot_anim.fbx"
+						import_bone_scales = false
+						start_frame = 906
+						end_frame = 940
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "urgot_attack2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/urgot/urgot_anim.fbx"
+						import_bone_scales = false
+						start_frame = 843
+						end_frame = 874
 						framerate = 30.0
 						reverse = false
 					},

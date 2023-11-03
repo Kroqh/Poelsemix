@@ -1,40 +1,34 @@
 
-	//=================================================================================================================
-	// Mirana's Sacred Arrow
-	//=================================================================================================================
-	"imba_mirana_arrow"
+	"urgot_acid_hunter"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"					"ability_lua"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"ScriptFile"					"heroes/hero_urgot/urgot_acid_hunter"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"				"urgotQ"
-		"ScriptFile"					"heroes/hero_urgot/hero_urgot"
+		
 
 
 		// Precache
 		//-------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_mirana.vsndevts"
-			"soundfile"					"soundevents/voscripts/game_sounds_vo_mirana.vsndevts"
-			"particle"					"particles/units/heroes/hero_mirana/mirana_spell_arrow.vpcf"
-			"particle"					"particles/hero/mirana/mirana_sacred_boost.vpcf"
+			"particle"					"particles/units/heroes/urgot/acid_hunter.vpcf"
+			"particle"				"particles/units/heroes/urgot/q_targeted.vpcf"
 		}
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"%arrow_distance"
-		"AbilityCastPoint"				"0"
+		"AbilityCastPoint"				"0.1"
 
 		// Time
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"3"
+		"AbilityCooldown"				"5 4.5 4 3.5"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -53,12 +47,12 @@
 			"02"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"arrow_speed"						"1200"
+				"proj_speed"						"900"
 			}
 			"03"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"arrow_distance"					"600 700 800 900"
+				"range"					"600 700 800 900"
 			}
 
 		}

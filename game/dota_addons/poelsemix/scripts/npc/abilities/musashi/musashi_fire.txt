@@ -7,7 +7,6 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE" 	//defined inside script since it deals mixed
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
 		"AbilityTextureName"			"musashi_fire"
 		"ScriptFile"			"heroes/hero_musashi/musashi_fire"

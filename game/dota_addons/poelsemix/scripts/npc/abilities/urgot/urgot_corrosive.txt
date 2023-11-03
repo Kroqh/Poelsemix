@@ -1,0 +1,74 @@
+
+	"urgot_corrosive"
+	{
+		"BaseClass"					"ability_lua"
+		"ScriptFile"				"heroes/hero_urgot/urgot_corrosive"
+		"AbilityTextureName"		"urgotE"
+
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"	
+		"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
+
+
+		"AbilityCastPoint"			"0.1"
+		
+		"AbilityCooldown"			"14 13 12 11"
+
+		"AbilityManaCost"			"80 75 70 60"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/econ/items/viper/viper_immortal_tail_ti8/viper_immortal_ti8_nethertoxin.vpcf"
+			"particle"					"particles/units/heroes/hero_venomancer/venomancer_noxious_plague_projectile.vpcf"
+			"particle"					"particles/units/heroes/hero_broodmother/broodmother_poison_debuff_c.vpcf"
+
+
+		}
+
+		"AbilitySpecial"
+		{
+
+			"01"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"proj_speed"		"900 1000 1100 1200"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"335" //Hardcoded into particle, avoid changed much
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"5.0"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_per_second"	"30 50 70 90"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"tick_interval"		"0.5"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"cast_range"		"600 700 800 900"
+			}
+			"08"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"armor_reduction_pct"		"20 30 40 50"
+			}
+
+
+		}
+	}

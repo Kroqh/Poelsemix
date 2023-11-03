@@ -3,9 +3,6 @@ LinkLuaModifier("modifier_guerrilla_warfare_invis", "heroes/hero_teemo/teemo_gue
 LinkLuaModifier("modifier_guerrilla_warfare_attackspeed", "heroes/hero_teemo/teemo_guerrilla_warfare", LUA_MODIFIER_MOTION_NONE)
 guerrilla_warfare = guerrilla_warfare or class({})
 
-function guerrilla_warfare:GetAbilityTextureName()
-	return "guerrilla_warfare"
-end
 
 function guerrilla_warfare:GetIntrinsicModifierName()
 	return "modifier_guerrilla_warfare_passive"
