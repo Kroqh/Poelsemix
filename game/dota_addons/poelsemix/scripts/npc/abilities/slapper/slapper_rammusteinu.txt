@@ -1,0 +1,43 @@
+"slapper_rammusteinu"
+{
+	"BaseClass"                 "ability_lua"
+	"AbilityTextureName"        "slapper_rammusteinu"
+	"ScriptFile"			"heroes/hero_slapper/slapper_rammusteinu"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityCooldown"               "70 60 50"
+	"AbilityManaCost"               "100"
+	"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+	"AbilityCastPoint"				"0.3"
+	
+
+		"precache"
+        {
+        "particle" "particles/heroes/slapper/rammusteinu_attack.vpcf"
+	"model"		"models/slapper/slapper_rammusteinu.vmdl"
+	"particle"		"particles/econ/courier/courier_greevil_purple/courier_greevil_purple_ambient_3_e.vpcf"
+	"soundfile" "soundevents/slapper_soundevent.vsndevts"
+	"particle"	"particles/units/heroes/hero_slapper/rammusteinu_burst.vpcf"
+        }
+	
+	
+	"AbilitySpecial"
+	{
+	    "01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "duration"      "8 10 12"	
+	    }
+		"02"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "bonus_range"      "350 400 450"
+	    }
+		"03"
+	    {
+	        "var_type"          "FIELD_FLOAT"
+	        "int_magic_damage_ratio"      "1 1.5 2"
+	    }
+
+	}
+}

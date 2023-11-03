@@ -2,8 +2,17 @@ LinkLuaModifier("modifier_lars_blame_taunt", "heroes/hero_lars/lars_blame", LUA_
 LinkLuaModifier("modifier_lars_blame_target", "heroes/hero_lars/lars_blame", LUA_MODIFIER_MOTION_NONE)
 lars_blame = lars_blame or class({})
 
+
+function lars_blame:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_lars_8"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_lars_8"):GetSpecialValueFor("value") end
+    return cd
+end
+
 function lars_blame:GetCastRange()
-    return self:GetSpecialValueFor("cast_range")
+    local value = self:GetSpecialValueFor("cast_range") 
+    if self:GetCaster():FindAbilityByName("special_bonus_lars_6"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_lars_6"):GetSpecialValueFor("value") end 
+    return value
 end
 
 function lars_blame:OnSpellStart()

@@ -74,6 +74,16 @@ end
 function modifier_lars_fadbamse:GetStatusEffectName() return "particles/status_fx/status_effect_beserkers_call.vpcf" end
 function modifier_lars_fadbamse:StatusEffectPriority() return 3 end
 
-function modifier_lars_fadbamse:GetModifierPhysicalArmorBonus() return self:GetAbility():GetSpecialValueFor("bonus_armor") end
-function modifier_lars_fadbamse:GetModifierPreAttack_BonusDamage() return self:GetAbility():GetSpecialValueFor("bonus_dmg") end
-function modifier_lars_fadbamse:GetModifierMoveSpeedBonus_Constant() return self:GetAbility():GetSpecialValueFor("bonus_speed") end
+function modifier_lars_fadbamse:GetModifierPhysicalArmorBonus() return 
+    self:GetAbility():GetSpecialValueFor("bonus_armor") 
+end
+function modifier_lars_fadbamse:GetModifierPreAttack_BonusDamage() 
+    local value = self:GetAbility():GetSpecialValueFor("bonus_dmg") 
+    if self:GetCaster():FindAbilityByName("special_bonus_lars_2"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_lars_2"):GetSpecialValueFor("value") end 
+    return value
+end
+function modifier_lars_fadbamse:GetModifierMoveSpeedBonus_Constant()
+    local value = self:GetAbility():GetSpecialValueFor("bonus_speed") 
+    if self:GetCaster():FindAbilityByName("special_bonus_lars_1"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_lars_1"):GetSpecialValueFor("value") end 
+    return value
+end

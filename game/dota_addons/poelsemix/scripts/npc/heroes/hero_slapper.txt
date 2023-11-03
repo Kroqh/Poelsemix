@@ -10,7 +10,7 @@
 	"Ability3" "musashi_wind"
 	"Ability4" "musashi_water"
 	"Ability5" "generic_hidden"
-	"Ability6" "musashi_void"
+	"Ability6" "slapper_rammusteinu"
 
 
 	"MovementSpeed"		"300"

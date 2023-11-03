@@ -1,6 +1,13 @@
 LinkLuaModifier("modifier_lars_team_swap", "heroes/hero_lars/lars_team", LUA_MODIFIER_MOTION_NONE)
 lars_team = lars_team or class({})
 
+
+function lars_team :GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_lars_7"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_lars_7"):GetSpecialValueFor("value") end
+    return cd
+end
+
 function lars_team:OnSpellStart()
 	if IsServer() then
 		local caster = self:GetCaster()
@@ -43,10 +50,10 @@ function modifier_lars_team_swap:IsDebuff() return true end
 function modifier_lars_team_swap:IsPurgable() return false end
 
 function modifier_lars_team_swap:OnCreated()
+	self.buff = self:GetCaster():FindAbilityByName("special_bonus_lars_5"):GetLevel() > 0
 	if not IsServer() then return end
     local caster = self:GetCaster()
 	local target = self:GetParent()
-
 	AddFOWViewer(target:GetTeam(), target:GetAbsOrigin(), target:GetCurrentVisionRange(), self:GetDuration(), false)
 
 	local larsTeamNumb = caster:GetTeamNumber()
@@ -54,6 +61,24 @@ function modifier_lars_team_swap:OnCreated()
 
 	target:SetTeam(larsTeamNumb)
 	target:SetFriction(0)
+end
+
+
+function modifier_lars_team_swap:DeclareFunctions()
+	return {
+		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE, 
+		MODIFIER_PROPERTY_ATTACKSPEED_PERCENTAGE
+	}
+end
+function modifier_lars_team_swap:GetModifierSpellAmplify_Percentage()
+	local value = 0
+	if self.buff then value = self:GetCaster():FindAbilityByName("special_bonus_lars_5"):GetSpecialValueFor("spell_amp_percent") end
+	return value
+end
+function modifier_lars_team_swap:GetModifierAttackSpeedPercentage()
+	local value = 0
+	if self.buff then value = self:GetCaster():FindAbilityByName("special_bonus_lars_5"):GetSpecialValueFor("attack_speed_percent") end
+	return value
 end
 
 function modifier_lars_team_swap:OnRemoved()

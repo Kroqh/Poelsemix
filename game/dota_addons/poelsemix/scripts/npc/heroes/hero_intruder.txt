@@ -19,7 +19,7 @@
 	"AttributeAgilityGain"		"3.4"
 	"AttributeBaseStrength"			"18"
 	"AttributeStrengthGain"			"1.8"	
-	"StatusHealth"                "500"
+	"StatusHealth"                "100"
 	"AttackDamageMin"			"46"
 	"AttackDamageMax"			"48"
 

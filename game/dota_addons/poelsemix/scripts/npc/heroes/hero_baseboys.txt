@@ -3,7 +3,7 @@
 	"override_hero" "npc_dota_hero_meepo"
 	
 	"AbilityLayout" "4"
-	
+	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"
 	"Ability1" "gunpowder_datadriven"
 	"Ability2" "bomb_b"
 	"Ability3" "choke_datadriven"
@@ -19,5 +19,20 @@
 	"Ability15" "special_bonus_armor_20"
 	"Ability16" "special_bonus_attack_speed_100"
 	"Ability17" "special_bonus_unique_naga_siren"
+
+
+	"MovementSpeed"               "305"
+	"AttackRange"			"150"
+	"AttackRate"                 "1.7" 
+	"ArmorPhysical"		"3" 
+
+	"AttributeBaseAgility"		"23"
+	"AttributeAgilityGain"		"2.4"
+
+	"AttributeBaseIntelligence"	"16"
+	"AttributeIntelligenceGain"	"1.7"
+	"AttributeBaseStrength"			"21"
+	"AttributeStrengthGain"			"2.1"	
+	"StatusHealth"                "500"
 	
 }

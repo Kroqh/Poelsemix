@@ -25,6 +25,7 @@
           {
               "var_type"          "FIELD_INTEGER"
               "cast_range"          "500 650 800"
+		 "LinkedSpecialBonus" "special_bonus_lars_6"
           }
 	  "03"
           {

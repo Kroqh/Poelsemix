@@ -10,6 +10,7 @@ function lars_skat:OnSpellStart()
     caster:AddNewModifier(caster, self, "modifier_lars_skat", {duration = duration})
 
 end
+
 function lars_skat:GetAOERadius()
     return self:GetSpecialValueFor("radius")
 end
@@ -20,13 +21,14 @@ end
 
 function lars_skat:OnChannelFinish(interrupted)
     if  not IsServer() then return end
-    self:GetCaster():RemoveModifierByName("modifier_lars_skat")
+    if self:GetCaster():FindAbilityByName("special_bonus_lars_4"):GetLevel() == 0 then self:GetCaster():RemoveModifierByName("modifier_lars_skat") end
 
 end
 
 function lars_skat:OnProjectileHit(target)
     ParticleManager:CreateParticle("particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf", PATTACH_ABSORIGIN, target)
-    local tax_rate = self:GetSpecialValueFor("tax_rate")
+    local tax_rate = self:GetSpecialValueFor("tax_rate") 
+	if self:GetCaster():FindAbilityByName("special_bonus_lars_3"):GetLevel() > 0 then tax_rate = tax_rate + self:GetCaster():FindAbilityByName("special_bonus_lars_3"):GetSpecialValueFor("value") end 
     local gold = target:GetGold() * (tax_rate / 100)
     target:ModifyGold(-gold, false, 0)
     self:GetCaster():ModifyGold(gold, false, 0)
@@ -45,6 +47,33 @@ function modifier_lars_skat:OnCreated()
 		local tick = ability:GetSpecialValueFor("tick_rate")
 		self:StartIntervalThink(tick-0.1)
 end
+
+
+function modifier_lars_skat:DeclareFunctions()
+	local decFuncs = {MODIFIER_EVENT_ON_ABILITY_EXECUTED, MODIFIER_EVENT_ON_ATTACK_START}
+	return decFuncs
+end
+
+function modifier_lars_skat:OnAttackStart(keys)
+	if IsServer() then
+		local parent = self:GetParent()
+
+		if keys.attacker == parent then
+                parent:RemoveModifierByName("modifier_lars_skat")
+		end
+	end
+end
+
+function modifier_lars_skat:OnAbilityExecuted(keys)
+	if IsServer() then
+		local parent = self:GetParent()
+
+		if keys.unit == parent then
+                parent:RemoveModifierByName("modifier_lars_skat")
+		end
+	end
+end
+
 
 function modifier_lars_skat:OnIntervalThink()
 	if not IsServer() then end

@@ -45,6 +45,7 @@
           {
               "var_type"          "FIELD_FLOAT"
               "tax_rate"          "3 4 5 6"
+	      "LinkedSpecialBonus" "special_bonus_lars_3"
           }
 	"03"
           {
