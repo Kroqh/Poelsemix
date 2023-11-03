@@ -15,11 +15,11 @@ function modifier_item_abaddon_lichcap:GetAttributes()	return MODIFIER_ATTRIBUTE
 
 function modifier_item_abaddon_lichcap:DeclareFunctions()
 	return {
-		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE
+		MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE
 	}
 end
 
-function modifier_item_abaddon_lichcap:GetModifierPreAttack_BonusDamage()
+function modifier_item_abaddon_lichcap:GetModifierBaseAttack_BonusDamage()
     if self:GetAbility() then
         return self:GetAbility():GetSpecialValueFor("damage")
     end

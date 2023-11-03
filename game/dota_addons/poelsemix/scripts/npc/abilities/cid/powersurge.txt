@@ -3,7 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_cid/hero_cid"
+	"ScriptFile"			"heroes/hero_cid/cid_powersurge"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "powersurge_icon"
@@ -18,34 +18,26 @@
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"110 110 110 110"
+	"AbilityManaCost"				"110"
 
 	"AbilitySpecial"
 	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage_modifier_tooltip" "2 2 2 2"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage_modifier_upgraded_tooltip" "3 3 3 3"
-		}
 		"03"
 		{
 			"var_type"	"FIELD_FLOAT"
-			"duration"	"10"
+			"duration"	"7"
 		}
 		"04"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage_multiplier" "1 1 1 1"
+			"damage_multiplier" "1.8 1.9 2 2.1" //gets -1 in code to work properly, so 2 is equal to double your damage
+			"LinkedSpecialBonus" "special_bonus_cid_7"
 		}
 		"05"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage_multiplier_upgraded" "2 2 2 2"
+			"damage_multiplier_upgraded" "2.6 2.8 3 3.2" //gets -1 in code to work properly
+			"LinkedSpecialBonus" "special_bonus_cid_7"
 		}
 	}
 }

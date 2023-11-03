@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/big_clicks.vsnd"
+                              "value0"        "sounds/cid/big_clicks.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -43,7 +43,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/ch2_conquer.vsnd"
+                              "value0"        "sounds/cid/ch2_conquer.vsnd"
                         }
                     }
                     "volume"            {   "value"     "12.000000"  }
@@ -72,7 +72,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/click.vsnd"
+                              "value0"        "sounds/cid/click.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -101,7 +101,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/huge_click.vsnd"
+                              "value0"        "sounds/cid/huge_click.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }

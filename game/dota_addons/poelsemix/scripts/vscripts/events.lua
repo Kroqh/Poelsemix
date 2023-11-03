@@ -321,7 +321,7 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 	if hero:GetUnitName() == "npc_dota_hero_phantom_assassin" then
-		local ability = hero:FindAbilityByName("click")
+		local ability = hero:FindAbilityByName("huge_click")
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 	if hero:GetUnitName() == "npc_dota_hero_riki" then

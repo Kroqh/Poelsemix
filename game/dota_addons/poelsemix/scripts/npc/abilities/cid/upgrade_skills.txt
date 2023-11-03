@@ -3,7 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_cid/hero_cid"
+	"ScriptFile"			"heroes/hero_cid/cid_upgrade_skills"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
 	"AbilityTextureName" "upgrade_skills"
@@ -25,7 +25,7 @@
 		"01"
 		{
 			"var_type"	"FIELD_FLOAT"
-			"duration"	"10 18 26"
+			"duration"	"10 12 14"
 		}
 		"02"
 		{

@@ -3,15 +3,12 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_cid/hero_cid"
+	"ScriptFile"			"heroes/hero_cid/cid_huge_click"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "huge_click_icon"
+	"MaxLevel"						"5"
 	
-	// Casting
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.0"
-
 	// Precache
 	//--------------------------------------
 	"precache"
@@ -32,8 +29,6 @@
 		"particle"	"particles/units/heroes/hero_stormspirit/stormspirit_overload_ambient.vpcf"
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
 
-		//Dragon
-		"model"	"models/creeps/neutral_creeps/n_creep_dragonspawn_a/n_creep_dragonspawn_a.vmdl"
 
 		//Tornado
 		"particle"	"particles/heroes/cid/cid_tornado.vpcf"
@@ -51,17 +46,20 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"chance" "20 25 30 35"
+			"chance" "10 15 20 25 30"
+			"LinkedSpecialBonus" "special_bonus_cid_5"
 		}
 		"02"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage_modifier"	"175 200 225 250"
+			"damage_modifier"	"150 175 200 225 250"
+			"LinkedSpecialBonus" "special_bonus_cid_1"
 		}
 		"03"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage_modifier_upgraded" "300 350 400 450"
+			"damage_modifier_upgraded" "250 275 300 325 350"
+			"LinkedSpecialBonus" "special_bonus_cid_1"
 		}
 	}
 }

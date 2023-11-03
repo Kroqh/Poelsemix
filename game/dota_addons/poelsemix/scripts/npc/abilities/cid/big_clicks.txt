@@ -3,7 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_cid/hero_cid"
+	"ScriptFile"			"heroes/hero_cid/cid_big_clicks"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "big_clicks_icon"
@@ -26,6 +26,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"damage" "50 60 70 80"
+			"LinkedSpecialBonus" "special_bonus_cid_4"
 		}
 		"02"
 		{
@@ -36,16 +37,19 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"stacks"	"6"
+			"LinkedSpecialBonus" "special_bonus_cid_6"
 		}
 		"04"
 		{
 			"var_type"	"FIELD_INTEGER"
 			"upgraded_damage" "120 140 160 180"
+			"LinkedSpecialBonus" "special_bonus_cid_4"
 		}
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
 			"upgraded_stacks" "12"
+			"LinkedSpecialBonus" "special_bonus_cid_6"
 		}
 	}
 }
