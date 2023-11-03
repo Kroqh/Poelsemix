@@ -36,11 +36,22 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"shield_health"					"200 275 350 425"
+				"LinkedSpecialBonus" "special_bonus_urgot_3"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"duration"					"3 3.5 4 4.5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow_percent"					"15 18 21 24"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_duration"					"1.5"
 			}
 		}
 	}

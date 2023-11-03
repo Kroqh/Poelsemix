@@ -6,6 +6,7 @@ LinkLuaModifier( "modifier_urgot_reverser", "heroes/hero_urgot/urgot_reverser", 
 
 function urgot_reverser:GetCastRange()
     local value = self:GetSpecialValueFor("cast_range") 
+	if self:GetCaster():FindAbilityByName("special_bonus_urgot_5"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_urgot_5"):GetSpecialValueFor("value") end 
     return value
 end
 
@@ -35,13 +36,7 @@ function urgot_reverser:OnSpellStart()
 		EmitSoundOn("urgotRStart", target)
 
 		--dmg reduction til urgot del
-		local dmgReducDur = 0
-
-		if self:GetCaster():HasTalent("special_bonus_urgot_r_boost") then
-			dmgReducDur = self:GetSpecialValueFor("dmg_red_duration")*2
-		else
-			dmgReducDur = self:GetSpecialValueFor("dmg_red_duration")
-		end
+		local dmgReducDur = self:GetSpecialValueFor("dmg_red_duration")
 
 		caster:AddNewModifier(caster, self, "modifier_urgot_reverser", {duration = dmgReducDur} )	
 	end
@@ -110,21 +105,17 @@ function urgot_reverser:OnChannelFinish(bInterrupted)
 		
 
 			-- Swap positions
-			Timers:CreateTimer(FrameTime(), function()
-				FindClearSpaceForUnit(caster, target_loc, true)
-				FindClearSpaceForUnit(target, caster_loc, true)
-			end)
+			
 
 
 			if caster:HasScepter() then
-
 				self.allEnemies = FindUnitsInRadius(caster:GetTeamNumber(),
 				Vector(0, 0, 0),
 				nil,
 				FIND_UNITS_EVERYWHERE,
-				DOTA_UNIT_TARGET_TEAM_ENEMY,
-				DOTA_UNIT_TARGET_ALL,
-				DOTA_UNIT_TARGET_FLAG_NONE,
+				DOTA_UNIT_TARGET_TEAM_BOTH,
+				self:GetAbilityTargetType(),
+				self:GetAbilityTargetFlags(),
 				FIND_ANY_ORDER,
 				false)
 
@@ -138,15 +129,20 @@ function urgot_reverser:OnChannelFinish(bInterrupted)
 				local counter = math.random(0,table.getn(self.allEnemies)-1)
 				for _,unit in pairs(self.allEnemies) do
 					local targetPos = allEnemiesPos[counter%table.getn(self.allEnemies)]
-
-					Timers:CreateTimer(FrameTime(), function()
-						FindClearSpaceForUnit(unit, targetPos, true)
-						EmitSoundOn("urgotREnd", unit)
-					end)
+					
+						Timers:CreateTimer(FrameTime(), function()
+							FindClearSpaceForUnit(unit, targetPos, true)
+							EmitSoundOn("urgotREnd", unit)
+						end)
 
 					counter = counter+1
 				end
-			end	
+			else
+				Timers:CreateTimer(FrameTime(), function()
+					FindClearSpaceForUnit(caster, target_loc, true)
+					FindClearSpaceForUnit(target, caster_loc, true)
+				end)
+			end
 			
 	end
 end

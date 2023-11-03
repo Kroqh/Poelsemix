@@ -14,8 +14,7 @@ function modifier_item_trump_card:RemoveOnDeath()	return false end
 function modifier_item_trump_card:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
 
 function modifier_item_trump_card:DeclareFunctions()
-	return {
-		MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE, 
+	return { 
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS, 
 		MODIFIER_PROPERTY_MANA_BONUS
 	}

@@ -44,5 +44,7 @@ function modifier_urgot_augmenter_debuff:DeclareFunctions()
 end
 
 function modifier_urgot_augmenter_debuff:GetModifierTotalDamageOutgoing_Percentage()
-	return self:GetAbility():GetSpecialValueFor("damage_reduction")
+	local value = self:GetAbility():GetSpecialValueFor("damage_reduction")
+	if self:GetCaster():FindAbilityByName("special_bonus_urgot_2"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_urgot_2"):GetSpecialValueFor("value") end
+	return value
 end

@@ -8,6 +8,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
 		"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"				"urgotQ"
@@ -28,7 +29,7 @@
 
 		// Time
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"5 4.5 4 3.5"
+		"AbilityCooldown"				"4.5 4 3.5 3"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -42,7 +43,7 @@
 			{
 				"var_type"							"FIELD_INTEGER"
 				"damage"						"150 225 300 375"
-				"LinkedSpecialBonus" "special_bonus_urgot_q_boost"
+				"LinkedSpecialBonus" "special_bonus_urgot_1"
 			}
 			"02"
 			{
@@ -53,6 +54,7 @@
 			{
 				"var_type"							"FIELD_INTEGER"
 				"range"					"600 700 800 900"
+				"LinkedSpecialBonus" "special_bonus_urgot_4"
 			}
 
 		}

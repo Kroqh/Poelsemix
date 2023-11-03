@@ -2,22 +2,16 @@
 urgot_acid_hunter = urgot_acid_hunter or class({})
 
 function urgot_acid_hunter:GetCastRange()
-    local value = self:GetSpecialValueFor("range") 
+    local value = self:GetSpecialValueFor("range")
+	if self:GetCaster():FindAbilityByName("special_bonus_urgot_4"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_urgot_4"):GetSpecialValueFor("value") end 
     return value
 end
 
 
 function urgot_acid_hunter:GetCooldown(level)
-	if IsServer() then
-		local caster = self:GetCaster()
-		local qcooldown = self.BaseClass.GetCooldown(self,level)
-		
-		if caster:HasTalent("special_bonus_urgot_q_boost2") then
-			qcooldown = qcooldown/2	
-		end
-
-		return qcooldown
-	end
+	local cd = self.BaseClass.GetCooldown(self,level)
+	if self:GetCaster():FindAbilityByName("special_bonus_urgot_7"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_urgot_7"):GetSpecialValueFor("value") end 
+    return cd
 end
 
 function urgot_acid_hunter:OnSpellStart()
@@ -60,7 +54,6 @@ end
 
 function FireProjectile(caster, ability, spawn_point, direction, targethero)
 	local particle_arrow = "particles/units/heroes/urgot/acid_hunter.vpcf"
-
 	local arrow_speed = ability:GetSpecialValueFor("proj_speed")
 	local arrow_distance = ability:GetSpecialValueFor("range")
 	if targethero == nil or targethero:HasModifier("modifier_urgot_corrosive") == false then
@@ -74,8 +67,8 @@ function FireProjectile(caster, ability, spawn_point, direction, targethero)
 			Source = caster,
 			bHasFrontalCone = false,
 			bReplaceExisting = false,
-			iUnitTargetTeam = DOTA_UNIT_TARGET_TEAM_ENEMY,
-			iUnitTargetType = DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,
+			iUnitTargetTeam = ability:GetAbilityTargetTeam(),
+			iUnitTargetType = ability:GetAbilityTargetType(),
 			bDeleteOnHit = true,
 			vVelocity = direction * arrow_speed * Vector(1, 1, 0),
 			bProvidesVision = false,
@@ -95,8 +88,8 @@ function FireProjectile(caster, ability, spawn_point, direction, targethero)
 			Source = caster,
 			bHasFrontalCone = false,
 			bReplaceExisting = false,
-			iUnitTargetTeam = DOTA_UNIT_TARGET_TEAM_ENEMY,
-			iUnitTargetType = DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,
+			iUnitTargetTeam = ability:GetAbilityTargetTeam(),
+			iUnitTargetType = ability:GetAbilityTargetType(),
 			bDeleteOnHit = true,
 			bProvidesVision = true,
 			iVisionRadius = vision_radius,
@@ -121,7 +114,8 @@ function urgot_acid_hunter:OnProjectileHit_ExtraData(target, location, extra_dat
 
 	-- Ability specials
 	local damage = self:GetSpecialValueFor("damage")
-	if caster:HasTalent("special_bonus_urgot_q_boost") then damage = damage + caster:FindAbilityByName("special_bonus_urgot_q_boost"):GetSpecialValueFor("value") end
+	if caster:FindAbilityByName("special_bonus_urgot_1"):GetLevel() > 0 then damage = damage + caster:FindAbilityByName("special_bonus_urgot_1"):GetSpecialValueFor("value") end
+
 
 	-- Play impact sound
 	EmitSoundOn("urgotQHit", target)

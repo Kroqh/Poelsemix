@@ -12,15 +12,11 @@ function urgot_corrosive:GetAOERadius()
     local value = self:GetSpecialValueFor("radius") 
     return value
 end
-function urgot_corrosive:GetCooldown(level)
-	if IsServer() then
-		if self:GetCaster():HasTalent("special_bonus_urgot_e_reduc") then
-			return self.BaseClass.GetCooldown(self,level)/2
-		else
-			return self.BaseClass.GetCooldown(self,level)
-		end
-	end
 
+function urgot_corrosive:GetCooldown(level)
+	local cd = self.BaseClass.GetCooldown(self,level)
+	if self:GetCaster():FindAbilityByName("special_bonus_urgot_8"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_urgot_8"):GetSpecialValueFor("value") end 
+    return cd
 end
 
 function urgot_corrosive:OnSpellStart()
@@ -113,7 +109,9 @@ function modifier_urgot_corrosive:GetEffectAttachType() return PATTACH_ABSORIGIN
 
 function modifier_urgot_corrosive:OnCreated()
     local ability = self:GetAbility()
-    self.armor_reduc = self:GetParent():GetPhysicalArmorValue(false) * (ability:GetSpecialValueFor("armor_reduction_pct") / 100)
+	local armor_reduction_pct = self:GetAbility():GetSpecialValueFor("armor_reduction_pct")
+	if self:GetCaster():FindAbilityByName("special_bonus_urgot_6"):GetLevel() > 0 then armor_reduction_pct = armor_reduction_pct + self:GetCaster():FindAbilityByName("special_bonus_urgot_6"):GetSpecialValueFor("value") end
+    self.armor_reduc = self:GetParent():GetPhysicalArmorValue(false) * (armor_reduction_pct / 100)
 	if not IsServer() then
 		return
 	end
