@@ -49,5 +49,10 @@
       "var_type" "FIELD_INTEGER"
       "miss_chance" "85 90 95 100"
     }
+	"06"
+		{
+			"var_type" "FIELD_FLOAT"
+			"tick_rate" "0.03"
+		}
 	}
 }

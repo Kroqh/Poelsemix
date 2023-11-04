@@ -30,7 +30,7 @@
 		    "02"
 		    {
 		        "var_type"          "FIELD_INTEGER"
-		        "dmg_tick"             "50 65 80 95"	
+		        "damage_tick"             "50 65 80 95"	
 		    }
 		    "03"
 		    {

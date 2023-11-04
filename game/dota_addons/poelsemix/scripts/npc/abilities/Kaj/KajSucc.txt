@@ -1,12 +1,4 @@
-// Rewrite of the Dark Seer Vacuum ability
-// Author: Pizzalol
-// Date: January 1, 2016
-// Version: 6.86
-// Type: Datadriven
-//
-// ----- FILE REQUIREMENTS -----
-// Script files:
-// scripts/vscripts/heroes/hero_dark_seer/vacuum.lua
+
 "KajSucc"
 {
 	// General
@@ -16,8 +8,7 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"KajSucc"
 	"AOERadius"						"%radius"

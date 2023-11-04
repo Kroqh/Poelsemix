@@ -1,8 +1,4 @@
-// Rewrite of Gyrocopter Rocket Barrage
-// Author: YOLOSPAGHETTI
-// Date: March 28, 2016
-// Version: 6.86
-// Type: Datadriven
+
 "KajAndrea"
 {
 	// General

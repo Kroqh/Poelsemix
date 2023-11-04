@@ -1,9 +1,9 @@
-"npc_dota_hero_kaj"
+"hero_kaj"
 {
 	"override_hero" "npc_dota_hero_rubick"
     "DisableWearables"				"1"
 	"Model"				"models/courier/frog/frog.vmdl"
-	"Ability1" "KajPopcorn"
+	"Ability1" "kaj_popcorn"
 	"Ability2" "KajRap"
 	"Ability3" "KajSucc"
 	"Ability4" "generic_hidden"
@@ -27,4 +27,9 @@
 
 		"Ability18" "special_bonus_attack_damage_100"
 		"Ability19" "special_bonus_cooldown_reduction_20"
+
+		"AttackRange"			"500"
+		"AttributeBaseStrength"			"15"
+		"AttributeStrengthGain"			"1.5"	
+		"StatusHealth"                "90"
 }

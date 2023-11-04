@@ -82,18 +82,16 @@ modifier_pro_hack_damage = modifier_pro_hack_damage or class({})
 
 function modifier_pro_hack_damage:IsHidden()		return false end
 function modifier_pro_hack_damage:IsDebuff()		return true end
-function modifier_pro_hack_damage:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
 
 
 function modifier_pro_hack_damage:OnCreated()
 	if IsServer() then
 		local ability = self:GetAbility()
 		local caster = self:GetCaster()
-		local intellect = caster:GetIntellect()
 
-		self.damage = ability:GetSpecialValueFor("dmg_tick")
-		local tick = ability:GetSpecialValueFor("hackticks")
-		self:StartIntervalThink(tick-0.1)
+		self.damage = ability:GetSpecialValueFor("damage_tick")
+		self.tick = ability:GetSpecialValueFor("hackticks")
+		self:StartIntervalThink(self.tick-0.1)
 	end
 end
 
@@ -104,10 +102,11 @@ function modifier_pro_hack_damage:OnIntervalThink()
 
 		ApplyDamage({victim = target,
 		attacker = caster,
-		damage_type = DAMAGE_TYPE_MAGICAL,
+		damage_type = self:GetAbility():GetAbilityDamageType(),
 		damage = self.damage,
 		ability = self:GetAbility()
 		})
+		self:StartIntervalThink(self.tick)
 	end
 end
 
@@ -127,7 +126,6 @@ modifier_pro_hack_stat_gain = modifier_pro_hack_stat_gain or class({})
 function modifier_pro_hack_stat_gain:IsHidden()		return false end
 function modifier_pro_hack_stat_gain:IsPurgable()		return false end
 function modifier_pro_hack_stat_gain:IsDebuff()		return false end
-function modifier_pro_hack_stat_gain:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
 
 
 function modifier_pro_hack_stat_gain:OnCreated()
@@ -155,7 +153,6 @@ modifier_pro_hack_stat_steal = modifier_pro_hack_stat_steal or class({})
 function modifier_pro_hack_stat_steal:IsHidden()		return false end
 function modifier_pro_hack_stat_steal:IsPurgable()		return false end
 function modifier_pro_hack_stat_steal:IsDebuff()		return true end
-function modifier_pro_hack_stat_steal:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
 
 
 function modifier_pro_hack_stat_steal:DeclareFunctions()
@@ -175,6 +172,12 @@ function modifier_pro_hack_stat_steal:OnDestroy()
         local pro_modifier = self:GetAbility():GetCaster():FindModifierByName("modifier_pro_hack_stat_gain")
         pro_modifier:DecrementStackCount()
         if pro_modifier:GetStackCount() == 0 then pro_modifier:Destroy() end
+    end
+end
+
+function modifier_pro_hack_stat_steal:OnRefresh()
+    if IsServer() then
+        self:OnDestroy()
     end
 end
 

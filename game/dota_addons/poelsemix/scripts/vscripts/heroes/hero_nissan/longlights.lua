@@ -37,7 +37,7 @@ function longlights:OnSpellStart()
     local vision_radius = self:GetSpecialValueFor("width") * 3
     local numVision = math.ceil(lights_length / vision_radius)
 
-    local update_time = 0.03
+    local update_time = self:GetSpecialValueFor("tick_rate")
 
     if self.caster:HasModifier(modifier_dummy_name) then 
       self.caster:RemoveModifierByName(modifier_dummy_name) 

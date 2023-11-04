@@ -1,0 +1,63 @@
+"kaj_popcorn"
+{
+        "BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_kaj/kaj_popcorn"
+        "AbilityTextureName"        "KajPop"
+        "MaxLevel"                  "4"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "AbilityCooldown"           "20 18 16 14"
+        "AbilityManaCost"           "100 90 80 70"
+	"AbilityCastPoint"				"0.2"
+
+
+        "AbilitySpecial"
+        {
+         	 "01"
+         	 {
+              		"var_type"          "FIELD_FLOAT"
+              		"duration"          "3"
+         	 }
+		 "02"
+		  {
+			"var_type"          "FIELD_INTEGER"
+            		"damage_tick"          "60 90 120 150"
+		  }
+        
+		"03"
+		  {
+			"var_type"          "FIELD_FLOAT"
+           		 "tick_rate"          "1"
+		  }
+        
+		"04"
+		  {
+			"var_type"          "FIELD_INTEGER"
+            		"cast_range"          "500 550 600 650"
+		  }
+		"05"
+		  {
+			"var_type"          "FIELD_INTEGER"
+            		"proj_speed"          "900"
+		  }
+        }
+
+			"precache"
+	{
+		"particle"			"particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_explosion_white_d_arcana1.vpcf"
+		"particle"			"particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf"
+
+	}
+
+      
+	
+}
+
+
+
+
+
+
+

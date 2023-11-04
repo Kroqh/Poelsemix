@@ -1,4 +1,4 @@
-"prophecy"
+"hero_prophecy"
 {
 	"override_hero"				"npc_dota_hero_bounty_hunter"			// Hero to override
     "DisableWearables"				"1"
