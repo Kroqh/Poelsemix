@@ -5,7 +5,7 @@
 	"Model"				"models/courier/frog/frog.vmdl"
 	"Ability1" "kaj_popcorn"
 	"Ability2" "KajRap"
-	"Ability3" "KajSucc"
+	"Ability3" "kaj_succ"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "KajAndrea"
