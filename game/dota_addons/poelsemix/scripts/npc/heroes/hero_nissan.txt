@@ -16,25 +16,25 @@
 	
 	"AttackRange"			"125"
 
-	"Ability10" "special_bonus_movement_speed_20"
-	"Ability11" "special_bonus_hp_225"
-	"Ability12" "special_bonus_intelligence_20"
+	"Ability10" "special_bonus_nissan_5"
+	"Ability11" "special_bonus_nissan_6"
+	"Ability12" "special_bonus_nissan_7"
 	"Ability13"	"special_bonus_nissan_1"
 	"Ability14" "special_bonus_nissan_2"
 	"Ability15" "special_bonus_nissan_3"
 	"Ability16" "special_bonus_nissan_4"
-	"Ability17" "special_bonus_spell_amplify_25"
+	"Ability17" "special_bonus_nissan_8"
 
-	"ArmorPhysical"		"2"
+	"ArmorPhysical"		"5"
 
-	"AttributeBaseStrength"			"27"									// Base strength
-	"AttributeStrengthGain"			"2.1"									// Strength bonus per level.
-	"AttributeBaseIntelligence"		"21"									// Base intelligence
-	"AttributeIntelligenceGain"		"1.9"									// Intelligence bonus per level.
+	"AttributeBaseStrength"			"27"									
+	"AttributeStrengthGain"			"2.1"									
+	"AttributeBaseIntelligence"		"21"									
+	"AttributeIntelligenceGain"		"1.6"									
 	"AttributeBaseAgility"		"24"
 	"AttributeAgilityGain"		"2.7"
 
 	"StatusHealthRegen"		"2.1"
 
-	"MovementSpeed"		"305"
+	"MovementSpeed"		"310"
 }

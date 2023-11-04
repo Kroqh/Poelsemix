@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/omae_wa_mou_shindeiru.vsnd"
+                              "value0"        "sounds/gametecher/omae_wa_mou_shindeiru.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -44,7 +44,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/further_beyond.vsnd"
+                              "value0"        "sounds/gametecher/further_beyond.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -74,7 +74,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/nani.vsnd"
+                              "value0"        "sounds/gametecher/nani.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -104,7 +104,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/dropout.vsnd"
+                              "value0"        "sounds/gametecher/dropout.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -134,7 +134,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/kapow.vsnd"
+                              "value0"        "sounds/gametecher/kapow.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -164,7 +164,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/matematikA.vsnd"
+                              "value0"        "sounds/gametecher/matematikA.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }

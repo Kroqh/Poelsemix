@@ -57,6 +57,42 @@
 						weight = 1.0
 						ignore_rotation = false
 					},
+					{
+						_class = "Attachment"
+						name = "attach_overhead"
+						parent_bone = "Default"
+						relative_origin = [ 0.0, 0.0, 173.407394 ]
+						relative_angles = [ 0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Default"
+						relative_origin = [ 0.0, -0.0, 133.688812 ]
+						relative_angles = [ 0.0, -0.000058, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "Default"
+						relative_origin = [ 51.274509, -205.655228, 52.671127 ]
+						relative_angles = [ 0.0, -0.000063, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "Default"
+						relative_origin = [ -51.274502, -205.654999, 52.671101 ]
+						relative_angles = [ 0.0, -0.000063, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
 				]
 			},
 			{

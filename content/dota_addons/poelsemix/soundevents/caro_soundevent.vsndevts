@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/carohit.vsnd"
+                              "value0"        "sounds/caro/carohit.vsnd"
                         }
                     }
                     "volume"            {   "value"     "8.00000"  }
@@ -45,7 +45,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/caroswap.vsnd"
+                              "value0"        "sounds/caro/caroswap.vsnd"
                         }
                     }
                     "volume"            {   "value"     "20.00000"  }
@@ -76,7 +76,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/carogrunt.vsnd"
+                              "value0"        "sounds/caro/carogrunt.vsnd"
                         }
                     }
                     "volume"            {   "value"     "12.00000"  }

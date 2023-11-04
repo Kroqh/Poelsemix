@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/level1000.vsnd"
+                              "value0"        "sounds/baseboys/level1000.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -43,7 +43,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/baseboys_norsk_1000.vsnd"
+                              "value0"        "sounds/baseboys/baseboys_norsk_1000.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -74,7 +74,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/hej_mathilde.vsnd"
+                              "value0"        "sounds/baseboys/hej_mathilde.vsnd"
                         }
                     }
                     "volume"            {   "value"     "6.00000"  }
@@ -104,7 +104,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/bombe_paa_B.vsnd"
+                              "value0"        "sounds/baseboys/bombe_paa_B.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -134,7 +134,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/FUCKDIG.vsnd"
+                              "value0"        "sounds/baseboys/FUCKDIG.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -164,13 +164,42 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/gratisgunpowder.vsnd"
+                              "value0"        "sounds/baseboys/gratisgunpowder.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
                     "distance_max"      {   "value"     "1600.000"  }
+                    "event_type"        {   "value"     "1.000000"  }
+                }
+            }
+        }
+    }
+}
+"wuuh"
+{
+    "operator_stacks"
+    {
+        "update_stack"
+        {
+            "reference_operator"
+            {
+                "operator"              "sos_reference_stack"
+                "reference_stack"       "dota_src1_3d"
+                "operator_variables"
+                {
+                    "vsnd_files"
+                    {
+                        "value"
+                        {
+                              "value0"        "sounds/baseboys/wuuh.vsnd"
+                        }
+                    }
+                    "volume"            {   "value"     "5.00000"  }
+                    "pitch"             {   "value"     "1.000000"  }
+                    "soundlevel"        {   "value"     "100.00000" }
+                    "distance_max"      {   "value"     "1000.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }

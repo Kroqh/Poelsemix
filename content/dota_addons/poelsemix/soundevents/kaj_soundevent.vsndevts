@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajRap1.vsnd"
+                              "value0"        "sounds/kaj/KajRap1.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -46,7 +46,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajRap2.vsnd"
+                              "value0"        "sounds/kaj/KajRap2.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -78,7 +78,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajSucc.vsnd"
+                              "value0"        "sounds/kaj/KajSucc.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -109,7 +109,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajAndrea1.vsnd"
+                              "value0"        "sounds/kaj/KajAndrea1.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -140,7 +140,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajAndrea2.vsnd"
+                              "value0"        "sounds/kaj/KajAndrea2.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -172,7 +172,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajAndrea3.vsnd"
+                              "value0"        "sounds/kaj/KajAndrea3.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -203,7 +203,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajAndrea4.vsnd"
+                              "value0"        "sounds/kaj/KajAndrea4.vsnd"
                         }
                     }
                     "volume"            {   "value"     "5.00000"  }
@@ -234,7 +234,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajPop1.vsnd"
+                              "value0"        "sounds/kaj/KajPop1.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }
@@ -265,7 +265,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/KajPop2.vsnd"
+                              "value0"        "sounds/kaj/KajPop2.vsnd"
                         }
                     }
                     "volume"            {   "value"     "10.00000"  }

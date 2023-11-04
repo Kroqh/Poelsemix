@@ -11,6 +11,7 @@ function runover:OnSpellStart()
   if not IsServer() then return end
   local caster = self:GetCaster()
   local duration = self:GetSpecialValueFor("duration")
+  if caster:FindAbilityByName("special_bonus_nissan_6"):GetLevel() > 0 then duration = duration + caster:FindAbilityByName("special_bonus_nissan_6"):GetSpecialValueFor("value") end 
   caster:EmitSound("nissan_runover")
 
   caster:AddNewModifier(caster, self, "modifier_runover", {duration = duration})
@@ -18,13 +19,15 @@ end
 
 modifier_runover = class({})
 
-function modifier_runover:IsHidden() return true end
+function modifier_runover:IsHidden() return false end
+function modifier_runover:IsPurgable() return false end
 function modifier_runover:IsDebuff() return false end
 
 function modifier_runover:OnCreated()
   self.movespeed = self:GetAbility():GetSpecialValueFor("bonus_movespeed")
+  
   local caster = self:GetCaster()
-
+  if caster:FindAbilityByName("special_bonus_nissan_7"):GetLevel() > 0 then self.movespeed = self.movespeed + caster:FindAbilityByName("special_bonus_nissan_7"):GetSpecialValueFor("value") end 
   if not IsServer() then return end
   self.particle = "particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
   local pfx = ParticleManager:CreateParticle(self.particle, PATTACH_ABSORIGIN_FOLLOW, caster)
@@ -34,6 +37,10 @@ function modifier_runover:OnCreated()
   caster:EmitSound("Hero_Techies.Suicide")
 
   self:StartIntervalThink(0.1)
+end
+
+function modifier_runover:OnRefresh()
+	self:OnCreated()
 end
 
 function modifier_runover:DeclareFunctions()
@@ -58,7 +65,7 @@ function modifier_runover:OnIntervalThink()
                                     caster:GetAbsOrigin(), 
                                     nil, 
                                     radius, 
-                                    GetAbilityTargetTeam(), 
+                                    ability:GetAbilityTargetTeam(), 
                                     ability:GetAbilityTargetType(),
                                     ability:GetAbilityTargetFlags(), 
                                     FIND_ANY_ORDER, false)
@@ -88,7 +95,7 @@ modifier_runover_stun = class({})
 
 function modifier_runover_stun:IgnoreTenacity() return true end
 function modifier_runover_stun:IsPurgeable() return false end
-function modifier_runover_stun:IsHidden() return true end
+function modifier_runover_stun:IsHidden() return false end
 
 function modifier_runover_stun:GetEffectName()
 	return "particles/generic_gameplay/generic_stunned.vpcf"

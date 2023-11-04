@@ -1,29 +1,21 @@
 LinkLuaModifier("modifier_drift_dummy", "heroes/hero_nissan/drift", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_drift_burn", "heroes/hero_nissan/drift", LUA_MODIFIER_MOTION_NONE)
-drift = class({})
+drift = drift  or class({})
 
-function drift:GetAbilityTextureName()
-	return "nissan_drift_icon"
-end
 
-function drift:GetCastPoint()
-	local caster = self:GetCaster()
+modifier_drift_dummy = modifier_drift_dummy or class({})
 
-	return self:GetSpecialValueFor("cast_point")
-end
+function modifier_drift_dummy:IsHidden() return false end
+function modifier_drift_dummy:IsPurgable() return false end
 
-modifier_drift_dummy = class({})
-
-function modifier_drift_dummy:IsHidden() return true end
-
-modifier_drift_burn = class({})
+modifier_drift_burn = modifier_drift_burn or class({})
 
 function modifier_drift_burn:GetEffectName() return "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn.vpcf" end
 function modifier_drift_burn:GetEffectAttachType() return PATTACH_ABSORIGIN_FOLLOW end
 
 function modifier_drift_burn:OnCreated()
 	if not IsServer() then return end
-
+	
 	local ability = self:GetAbility()
 	local caster = self:GetCaster()
 
@@ -47,48 +39,52 @@ function modifier_drift_burn:OnIntervalThink()
 	ApplyDamage({
 				victim = target,
 				attacker = caster,
-				damage_type = self:GetAbility():GetAbilityTargetType(),
+				damage_type = self:GetAbility():GetAbilityDamageType(),
 				damage = self.damage,
 				ability = self:GetAbility()
 	})
 end
 
-function drift:OnSpellStart()
-	if IsServer() ~= true then return end
+function drift:IsRefreshable() return false end
 
-	self:GetCaster():EmitSound("nissan_drift")
-
+function drift:DoDrift(target_pos)
+	local caster = self:GetCaster()
+	
 	--local ability = self:GetAbility()
 	local radius = self:GetSpecialValueFor("hit_radius")
 	local burn_duration = self:GetSpecialValueFor("burn_duration")
 
-	local caster = self:GetCaster()
-	local target_pos = self:GetCursorPosition()
+	caster:EmitSound("nissan_drift")
+	local target_pos = target_pos
 	local caster_pos = caster:GetAbsOrigin()
 
 	local dash_length = self:GetSpecialValueFor("dash_length")
 	local dash_width = self:GetSpecialValueFor("dash_width")
-	local dash_duration = self:GetSpecialValueFor("dash_duration")
 
-	-- Talent
-  if caster:HasTalent("special_bonus_nissan_2") then
-    dash_duration = dash_duration + caster:FindAbilityByName("special_bonus_nissan_2"):GetSpecialValueFor("value")
-  end
+	local dash_duration = self:GetSpecialValueFor("dash_duration")
+	local dash_multi = 1
+	if caster:HasTalent("special_bonus_nissan_2") then
+		dash_multi = dash_multi + caster:FindAbilityByName("special_bonus_nissan_2"):GetSpecialValueFor("value")
+	end
+	if(caster:HasScepter()) then
+		dash_multi = dash_multi * 2
+		dash_duration = dash_duration / 2
+	end --Makes sure it takes the right time no matter what talents /aghs affects it
 
 	local direction = (target_pos - caster_pos):Normalized()
 
 	caster:SetForwardVector(direction)
 
 	local forward_direction = caster:GetForwardVector()
-  local right_direction = caster:GetRightVector()
-  local caster_angles = caster:GetAngles()
+  	local right_direction = caster:GetRightVector()
+  	local caster_angles = caster:GetAngles()
 
 	local start_time = GameRules:GetGameTime()
 	local ellipse_center = caster_pos + forward_direction * (dash_length / 2)
 
 	local pfx = ParticleManager:CreateParticle( "particles/units/heroes/hero_phoenix/phoenix_icarus_dive.vpcf", PATTACH_WORLDORIGIN, nil )
 
-  caster:AddNewModifier(caster, self, "modifier_drift_dummy", {duration = dash_duration})
+  	caster:AddNewModifier(caster, self, "modifier_drift_dummy", {duration = dash_duration})
 
 	caster:SetContextThink(DoUniqueString("drift_update"), function() 
 		ParticleManager:SetParticleControl(pfx, 0, caster:GetAbsOrigin() + caster:GetRightVector() * 32 )
@@ -96,13 +92,19 @@ function drift:OnSpellStart()
 			ParticleManager:DestroyParticle(pfx, false)
 			ParticleManager:ReleaseParticleIndex(pfx)
 			caster:SetAbsOrigin(caster_pos)
+			caster:SetAngles(0, caster_angles.y, caster_angles.z)
+			if caster:HasScepter() and not self.done_8 then
+				self:DoDrift(caster_pos - (target_pos-caster_pos))
+				self.done_8 = true
+			end
 	    return nil 
 		end
 		-- ellipse calculations
 		local elapsed_time = GameRules:GetGameTime() - start_time
-		local progress = elapsed_time / dash_duration
+		local progress = (elapsed_time / dash_duration) * dash_multi
 
-		self.progress = progress
+		
+
 		-- thanks dota imba for fixing
 		local t = -dash_duration * math.pi * progress
 		local x = math.sin(t) * dash_width  * 0.5
@@ -116,7 +118,7 @@ function drift:OnSpellStart()
 		pos = GetGroundPosition(pos, caster)
 		
 		caster:SetAbsOrigin(pos)
-		caster:SetAngles(caster_angles.x, yaw, caster_angles.z)
+		caster:SetAngles(0, yaw, caster_angles.z)
 
 		GridNav:DestroyTreesAroundPoint(pos, 80, false)
 
@@ -129,4 +131,15 @@ function drift:OnSpellStart()
 
 		return 0.03
 	end, 0)
+end
+
+function drift:GetCastRange()
+	local value = self:GetSpecialValueFor("dash_length")
+	return value
+  end
+function drift:OnSpellStart()
+	if IsServer() ~= true then return end
+	self.done_8 = false
+	self:DoDrift(self:GetCursorPosition())
+
 end

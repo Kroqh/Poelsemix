@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/pr0_ching.vsnd"
+                              "value0"        "sounds/pr0/pr0_ching.vsnd"
                         }
                     }
                     "volume"            {   "value"     "14.00000"  }
@@ -45,7 +45,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/pr0_hackerjob.vsnd"
+                              "value0"        "sounds/pr0/pr0_hackerjob.vsnd"
                         }
                     }
                     "volume"            {   "value"     "15.00000"  }
@@ -76,7 +76,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/pr0_d31ty.vsnd"
+                              "value0"        "sounds/pr0/pr0_d31ty.vsnd"
                         }
                     }
                     "volume"            {   "value"     "40.00000"  }
@@ -107,7 +107,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/pr0_hack.vsnd"
+                              "value0"        "sounds/pr0/pr0_hack.vsnd"
                         }
                     }
                     "volume"            {   "value"     "15.00000"  }
@@ -138,7 +138,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/pr0_ult.vsnd"
+                              "value0"        "sounds/pr0/pr0_ult.vsnd"
                         }
                     }
                     "volume"            {   "value"     "2.00000"  }
@@ -169,7 +169,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/pr0_fire.vsnd"
+                              "value0"        "sounds/pr0/pr0_fire.vsnd"
                         }
                     }
                     "volume"            {   "value"     "30.00000"  }
@@ -200,7 +200,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/pr0_nej.vsnd"
+                              "value0"        "sounds/pr0/pr0_nej.vsnd"
                         }
                     }
                     "volume"            {   "value"     "18.00000"  }

@@ -1,11 +1,12 @@
 LinkLuaModifier("modifier_race", "heroes/hero_nissan/race", LUA_MODIFIER_MOTION_NONE)
 
-race = class({})
--- aldrig kig på det her igen
+race = race or class({})
 
 function race:GetAbilityTextureName()
 	return "nissan_race_icon"
 end
+
+function race:IsRefreshable() return false end
 
 function race:OnSpellStart()
   if not IsServer() then return end
@@ -28,12 +29,6 @@ function race:OnSpellStart()
 
   
 
-  -- Custom message
-  --self.player1 = PlayerResource:GetPlayerName(self.caster:GetPlayerID())
-  --self.player2 = PlayerResource:GetPlayerName(self.target:GetPlayerID())
-  -- local message = '<font color="lime">' .. self.player1 .. '</font>' .. ' JUST CHALLENGED ' .. '<font color="red">' .. self.player2 .. '</font>' .. ' TO AN EPIC RACE!!'
-  -- GameRules:SendCustomMessage(message, self.caster:GetTeamNumber(), -1)
-
   local song = math.random(4)
   local songs = {"nissan_dejavu", 
                  "nissan_gasgasgas", 
@@ -41,28 +36,27 @@ function race:OnSpellStart()
                  "nissan_running"}
 
   self.caster:EmitSound(songs[song])
-
-  -- Maybe has to uncomment.
-
-  -- local units = FindUnitsInRadius(self.caster:GetTeamNumber(), 
-  --                                               self.caster:GetAbsOrigin(), 
-  --                                               nil, 
-  --                                               FIND_UNITS_EVERYWHERE, 
-  --                                               DOTA_UNIT_TARGET_TEAM_ENEMY, 
-  --                                               DOTA_UNIT_TARGET_HERO, 
-  --                                               DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, 
-  --                                               FIND_ANY_ORDER, 
-  --                                               false)
-
-  -- for _, enemy in pairs(units) do 
-  --   GameRules:SendCustomMessage(message, enemy:GetTeamNumber(), -1)
-  -- end
-
 end
 
-modifier_race = class({})
+
+
+modifier_race = modifier_race or class({})
+
+function modifier_race:DeclareFunctions()
+	return {
+        MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT
+	}
+end
+function modifier_race:GetModifierIgnoreMovespeedLimit()
+  return self.limitless
+end
 
 function modifier_race:OnCreated() 
+  self.limitless = 0
+  if self:GetParent() == self:GetCaster() and self:GetCaster():FindAbilityByName("special_bonus_nissan_8"):GetLevel() > 0 then 
+    self.limitless = 1 
+  end
+
   if not IsServer() then return end
   self.ability = self:GetAbility()
   self.parent_last_pos = self:GetParent():GetAbsOrigin()
@@ -130,7 +124,7 @@ function modifier_race:OnRemoved()
       ApplyDamage({
         victim = self.ability.caster,
         attacker = self.ability.target,
-        damage_type = DAMAGE_TYPE_PURE,
+        damage_type = self.ability:GetAbilityDamageType(),
         damage = self.ability.damage,
         ability = self.ability
       }) 

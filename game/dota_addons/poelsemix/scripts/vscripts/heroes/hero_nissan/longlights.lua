@@ -3,10 +3,12 @@
 LinkLuaModifier("modifier_longlights_dummy", "heroes/hero_nissan/longlights", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_longlights_blind", "heroes/hero_nissan/longlights", LUA_MODIFIER_MOTION_NONE)
 
-longlights = class({})
+longlights = longlights or class({})
 
-function longlights:GetAbilityTextureName()
-	return "nissan_longlights_icon"
+function longlights:GetCastRange()
+  local value = self:GetSpecialValueFor("length")
+  if self:GetCaster():FindAbilityByName("special_bonus_nissan_1"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_nissan_1"):GetSpecialValueFor("value") end 
+  return value
 end
 
 function longlights:OnSpellStart()
@@ -15,10 +17,7 @@ function longlights:OnSpellStart()
 
     self.caster:EmitSound("nissan_light")
 
-    -- Initialize particles
-    local particleName = "particles/heroes/nissan/nissan_lights.vpcf"
-    local pfx = ParticleManager:CreateParticle(particleName, PATTACH_WORLDORIGIN, nil)
-    local attach_point = self.caster:ScriptLookupAttachment("attach_origin")
+    
 
     -- Dummy modifier
     local modifier_dummy_name = "modifier_longlights_dummy"
@@ -34,16 +33,26 @@ function longlights:OnSpellStart()
 
     local width = self:GetSpecialValueFor("width")
     local damage_per_tick = self:GetSpecialValueFor("damage_pr_tick")
+    if self.caster:FindAbilityByName("special_bonus_nissan_5"):GetLevel() > 0 then damage_per_tick = damage_per_tick + self.caster:FindAbilityByName("special_bonus_nissan_5"):GetSpecialValueFor("value") end 
     local vision_radius = self:GetSpecialValueFor("width") * 3
     local numVision = math.ceil(lights_length / vision_radius)
 
     local update_time = 0.03
 
+    if self.caster:HasModifier(modifier_dummy_name) then 
+      self.caster:RemoveModifierByName(modifier_dummy_name) 
+      ParticleManager:DestroyParticle(self.pfx, true) --avoids double mod
+    end
+    -- Initialize particles
+    local particleName = "particles/heroes/nissan/nissan_lights.vpcf"
+    self.pfx = ParticleManager:CreateParticle(particleName, PATTACH_WORLDORIGIN, nil)
+    local attach_point = self.caster:ScriptLookupAttachment("attach_origin")
+
     self.caster:AddNewModifier(self.caster, self, modifier_dummy_name, { duration = duration })
 
     self.caster:SetContextThink(DoUniqueString("updateLongLights"), function()
       if not self.caster:HasModifier(modifier_dummy_name) then
-        ParticleManager:DestroyParticle(pfx, false)
+        ParticleManager:DestroyParticle(self.pfx, false)
         return nil
       end
 
@@ -70,9 +79,9 @@ function longlights:OnSpellStart()
         enemy:AddNewModifier(self.caster, self, "modifier_longlights_blind", {duration = 0.2})
       end
 
-      ParticleManager:SetParticleControl(pfx, 0, self.caster:GetAttachmentOrigin(attach_point))
+      ParticleManager:SetParticleControl(self.pfx, 0, self.caster:GetAttachmentOrigin(attach_point))
       
-      ParticleManager:SetParticleControl(pfx, 1, particle_end_pos)
+      ParticleManager:SetParticleControl(self.pfx, 1, particle_end_pos)
 
       for i=1, numVision do
         AddFOWViewer(self.caster:GetTeamNumber(), 
@@ -84,7 +93,7 @@ function longlights:OnSpellStart()
       return update_time
     end, 0.0)
     
-    ParticleManager:SetParticleControl(pfx, 0, self.caster:GetAttachmentOrigin(attach_point))
+    ParticleManager:SetParticleControl(self.pfx, 0, self.caster:GetAttachmentOrigin(attach_point))
 end
 
 modifier_longlights_dummy = modifier_longlights_dummy or class({})
@@ -123,8 +132,3 @@ end
 function modifier_longlights_blind:GetModifierMiss_Percentage()
   return self.miss_rate
 end
-
-
-
-
-

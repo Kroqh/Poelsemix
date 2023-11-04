@@ -29,11 +29,13 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"bonus_movespeed" "30 35 40 45"
+			"LinkedSpecialBonus" "special_bonus_nissan_7"
 		}
 		"02"
 		{
 			"var_type" "FIELD_FLOAT"
 			"duration"	"3 3.5 4 4.5"
+			"LinkedSpecialBonus" "special_bonus_nissan_6"
 		}
 		"03"
 		{

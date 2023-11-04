@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/koldblodet.vsnd"
+                              "value0"        "sounds/marvelous/koldblodet.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -44,7 +44,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/masseappel.vsnd"
+                              "value0"        "sounds/marvelous/masseappel.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -74,7 +74,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/syg.vsnd"
+                              "value0"        "sounds/marvelous/syg.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }

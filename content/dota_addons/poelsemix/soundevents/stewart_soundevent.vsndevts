@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/stewart_god_jul.vsnd"
+                              "value0"        "sounds/stewart/stewart_god_jul.vsnd"
                         }
                     }
                     "volume"            {   "value"     "4.00000"  }
@@ -43,7 +43,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/stewart_sonnyboy.vsnd"
+                              "value0"        "sounds/stewart/stewart_sonnyboy.vsnd"
                         }
                     }
                     "volume"            {   "value"     "4"  }
@@ -72,7 +72,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/stewart_burp.vsnd"
+                              "value0"        "sounds/stewart/stewart_burp.vsnd"
                         }
                     }
                     "volume"            {   "value"     "4"  }
@@ -101,7 +101,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/stewart_sporg_om_hjalp.vsnd"
+                              "value0"        "sounds/stewart/stewart_sporg_om_hjalp.vsnd"
                         }
                     }
                     "volume"            {   "value"     "4"  }

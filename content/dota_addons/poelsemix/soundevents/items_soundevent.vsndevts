@@ -14,7 +14,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/kms_gun.vsnd"
+                              "value0"        "sounds/items/kms_gun.vsnd"
                         }
                     }
                     "volume"            {   "value"     "5.00000"  }
@@ -23,6 +23,37 @@
                     "pitch"             {   "value"     "1.000000"  }
                     "soundlevel"        {   "value"     "100.00000" }
                     "distance_max"      {   "value"     "1200.000"  }
+                    "event_type"        {   "value"     "1.000000"  }
+                }
+            }
+        }
+    }
+}
+"tskjold"
+{
+    "operator_stacks"
+    {
+        "update_stack"
+        {
+            "reference_operator"
+            {
+                "operator"              "sos_reference_stack"
+                "reference_stack"       "dota_src1_3d"
+                "operator_variables"
+                {
+                    "vsnd_files"
+                    {
+                        "value"
+                        {
+                              "value0"        "sounds/items/tskjold.vsnd"
+                        }
+                    }
+                    "volume"            {   "value"     "5.00000"  }
+                    "pitch_rand_min"    {   "value"     "-0.05000"  }
+                    "pitch_rand_max"    {   "value"     "0.050000"  }
+                    "pitch"             {   "value"     "1.000000"  }
+                    "soundlevel"        {   "value"     "100.00000" }
+                    "distance_max"      {   "value"     "1000.000"  }
                     "event_type"        {   "value"     "1.000000"  }
                 }
             }
@@ -45,7 +76,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/blood_splatter_gs.vsnd"
+                              "value0"        "sounds/items/blood_splatter_gs.vsnd"
                         }
                     }
                     "volume"            {   "value"     "5.00000"  }
@@ -76,7 +107,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/hog_rider.vsnd"
+                              "value0"        "sounds/items/hog_rider.vsnd"
                         }
                     }
                     "volume"            {   "value"     "8.00000"  }
@@ -107,7 +138,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/goldenhorns.vsnd"
+                              "value0"        "sounds/items/goldenhorns.vsnd"
                         }
                     }
                     "volume"            {   "value"     "5.00000"  }
@@ -138,7 +169,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/godsword_slash.vsnd"
+                              "value0"        "sounds/items/godsword_slash.vsnd"
                         }
                     }
                     "volume"            {   "value"     "5.00000"  }
@@ -170,7 +201,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/item_cash.vsnd"
+                              "value0"        "sounds/items/item_cash.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }
@@ -201,7 +232,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/tax_evasion.vsnd"
+                              "value0"        "sounds/items/tax_evasion.vsnd"
                         }
                     }
                     "volume"            {   "value"     "7.00000"  }

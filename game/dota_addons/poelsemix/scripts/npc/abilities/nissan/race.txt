@@ -8,9 +8,10 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 
 	"AbilityTextureName"			"nissan_race_icon"
-	"AbilityCooldown"				"100 80 60"
+	"AbilityCooldown"				"80 65 50"
 	"AbilityManaCost"				"100 150 200"
 	"AbilityCastRange"				"700"
 	"AbilityCastPoint"				"0.2"
