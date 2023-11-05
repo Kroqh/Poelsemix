@@ -1,0 +1,52 @@
+"unit_andrea"
+{
+        // General
+		//----------------------------------------------------------------
+		"Model"						"models/courier/skippy_parrot/skippy_parrot_flying.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"Level"						"1"
+		"ModelScale"				"1"
+		"IsSummoned"				"1"
+		"IgnoreAddSummonedToSelection" "0"
+		
+		 "BountyGoldMin"         "100"
+       		 "BountyGoldMax"         "100"
+       		 "BountyXP"              "50"
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"20"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities" "DOTA_UNIT_CAP_NO_ATTACK" // Type of attack - melee, ranged, etc.
+
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"200"
+
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"0"		// Speed.
+
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"400"		// Range of vision during day light.
+		"VisionNighttimeRange"		"300"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    }

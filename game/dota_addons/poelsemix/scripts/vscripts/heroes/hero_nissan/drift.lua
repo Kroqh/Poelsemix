@@ -1,4 +1,4 @@
-LinkLuaModifier("modifier_drift_dummy", "heroes/hero_nissan/drift", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_drift_dummy", "heroes/hero_nissan/drift", LUA_MODIFIER_MOTION_BOTH)
 LinkLuaModifier("modifier_drift_burn", "heroes/hero_nissan/drift", LUA_MODIFIER_MOTION_NONE)
 drift = drift  or class({})
 

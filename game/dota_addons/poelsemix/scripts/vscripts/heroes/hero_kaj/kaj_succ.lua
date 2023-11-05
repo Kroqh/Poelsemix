@@ -1,6 +1,6 @@
 
 LinkLuaModifier("modifier_kaj_succ_thinker", "heroes/hero_kaj/kaj_succ", LUA_MODIFIER_MOTION_NONE)
-LinkLuaModifier("modifier_kaj_succ_stun", "heroes/hero_kaj/kaj_succ", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_kaj_succ_stun", "heroes/hero_kaj/kaj_succ", LUA_MODIFIER_MOTION_HORIZONTAL)
 kaj_succ = kaj_succ or class({})
 
 function kaj_succ:GetCastRange()

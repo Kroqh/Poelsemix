@@ -185,9 +185,9 @@ function modifier_noxious_trap_explosion:OnIntervalThink()
 			unit_pos, 
 			nil, 
 			self.radius, 
-			DOTA_UNIT_TARGET_TEAM_ENEMY, 
-			DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, 
-			DOTA_UNIT_TARGET_FLAG_NONE, 
+			ability:GetAbilityTargetTeam(), 
+			ability:GetAbilityTargetType(), 
+			abilty:GetAbilityTargetFlags(), 
 			FIND_ANY_ORDER, 
 			false)
 

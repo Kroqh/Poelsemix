@@ -8,7 +8,7 @@
 	"Ability3" "kaj_succ"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
-	"Ability6" "KajAndrea"
+	"Ability6" "kaj_andrea"
 
 		// Mastery layout
 		// 19|18
@@ -25,8 +25,8 @@
 		"Ability16" "special_bonus_kaj_5"
 		"Ability17" "special_bonus_kaj_6"
 
-		"Ability18" "special_bonus_attack_damage_100"
-		"Ability19" "special_bonus_cooldown_reduction_20"
+		"Ability18" "special_bonus_kaj_7"
+		"Ability19" "special_bonus_kaj_8"
 
 		"AttackRange"			"500"
 		"AttributeBaseStrength"			"15"

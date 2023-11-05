@@ -54,7 +54,7 @@ function modifier_mink_passive:SpawnMink(scaler, target)
     EmitSoundOn("mette_chirp", parent)
 
     local dmg = math.floor(agi * agi_scaling)
-    local hp = math.floor(str * str_scaling) --minks have 1 hp by defeault as to not insta die
+    local hp = math.floor(str * str_scaling)--minks have 1 hp by defeault as to not insta die
 
     unit = CreateUnitByName("unit_mink",target:GetAbsOrigin(), true, parent, nil, parent:GetTeam())
     unit:AddNewModifier(caster, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
@@ -72,7 +72,7 @@ end
 modifier_mink_stats = modifier_mink_stats  or class({})
 
 
-function modifier_mink_stats:IsPurgeable() return false end
+function modifier_mink_stats:IsPurgable() return false end
 function modifier_mink_stats:IsHidden() return true end
 
 function modifier_mink_stats:OnCreated(kv)
