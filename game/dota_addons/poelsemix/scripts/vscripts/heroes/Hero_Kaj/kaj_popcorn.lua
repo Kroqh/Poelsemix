@@ -41,7 +41,16 @@ function kaj_popcorn:OnProjectileHit(target)
 
 	local caster = self:GetCaster()
 	local duration = self:GetSpecialValueFor("duration")
-
+	if self:GetCaster():FindAbilityByName("special_bonus_kaj_1"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_kaj_1"):GetSpecialValueFor("value") end
+	if self:GetCaster():FindAbilityByName("special_bonus_kaj_5"):GetLevel() > 0 then 
+		local dmg = self:GetCaster():FindAbilityByName("special_bonus_kaj_5"):GetSpecialValueFor("value") 
+		ApplyDamage({victim = target,
+		attacker = caster,
+		damage_type = self:GetAbilityDamageType(),
+		damage = dmg,
+		ability = self
+		})
+	end
 	
 	target:AddNewModifier(caster, self, "modifier_kaj_popcorn", {duration = duration})
 	

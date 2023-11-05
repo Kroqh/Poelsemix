@@ -37,6 +37,7 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"radius"				"450 475 500 525"
+			"LinkedSpecialBonus" "special_bonus_kaj_4"
 		}
 		"02"
 		{
@@ -47,6 +48,7 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"damage"				"100 150 200 250"
+			"LinkedSpecialBonus" "special_kaj_kaj_6"
 		}
 	}
 

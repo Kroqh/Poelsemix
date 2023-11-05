@@ -1,10 +1,10 @@
 "hero_kaj"
 {
 	"override_hero" "npc_dota_hero_rubick"
-    "DisableWearables"				"1"
+    	"DisableWearables"				"1"
 	"Model"				"models/courier/frog/frog.vmdl"
 	"Ability1" "kaj_popcorn"
-	"Ability2" "KajRap"
+	"Ability2" "kaj_rap"
 	"Ability3" "kaj_succ"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
@@ -16,14 +16,14 @@
 		// 15|14
 		// 13|12
 
-		"Ability12" 	"special_bonus_all_stats_20"
-		"Ability13" 	"special_bonus_exp_boost_25"
+		"Ability12" 	"special_bonus_kaj_1"
+		"Ability13" 	"special_bonus_kaj_2"
 
-		"Ability14" "special_bonus_cooldown_reduction_10"
-		"Ability15" "special_bonus_spell_amplify_15"
+		"Ability14" "special_bonus_kaj_3"
+		"Ability15" "special_bonus_kaj_4"
 
-		"Ability16" "special_bonus_movement_speed_40"
-		"Ability17" "special_bonus_armor_10"
+		"Ability16" "special_bonus_kaj_5"
+		"Ability17" "special_bonus_kaj_6"
 
 		"Ability18" "special_bonus_attack_damage_100"
 		"Ability19" "special_bonus_cooldown_reduction_20"

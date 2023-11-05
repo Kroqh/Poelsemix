@@ -5,6 +5,7 @@ kaj_succ = kaj_succ or class({})
 
 function kaj_succ:GetCastRange()
     local value = self:GetSpecialValueFor("radius") 
+    if self:GetCaster():FindAbilityByName("special_bonus_kaj_4"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_kaj_4"):GetSpecialValueFor("value") end
     return value
 end
 
@@ -29,7 +30,9 @@ modifier_kaj_succ_thinker = modifier_kaj_succ_thinker or class({})
 function modifier_kaj_succ_thinker:OnCreated()
 	if IsServer() then
 		self.radius = self:GetAbility():GetSpecialValueFor("radius")
+        if self:GetCaster():FindAbilityByName("special_bonus_kaj_4"):GetLevel() > 0 then self.radius = self.radius + self:GetCaster():FindAbilityByName("special_bonus_kaj_4"):GetSpecialValueFor("value") end
         self.damage = self:GetAbility():GetSpecialValueFor("damage")
+        if self:GetCaster():FindAbilityByName("special_bonus_kaj_6"):GetLevel() > 0 then self.damage = self.damage + self:GetCaster():FindAbilityByName("special_bonus_kaj_6"):GetSpecialValueFor("value") end
         self.duration = self:GetDuration()
         self.location = self:GetCaster():GetAbsOrigin()
         self.vacuum_start_time = GameRules:GetGameTime()
@@ -80,7 +83,7 @@ function modifier_kaj_succ_thinker:OnIntervalThink()
 		    })
                 unit.pull_speed = distance * 1/self.duration * 1/30
             end
-    
+            
             -- Apply the stun and no collision modifier then set the new location
             unit:AddNewModifier(caster, self, "modifier_kaj_succ_stun", {duration = remaining_duration})
             unit:SetAbsOrigin(unit_location + direction * unit.pull_speed)

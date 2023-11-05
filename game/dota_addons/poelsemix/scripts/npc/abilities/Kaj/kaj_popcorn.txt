@@ -19,6 +19,7 @@
          	 {
               		"var_type"          "FIELD_FLOAT"
               		"duration"          "3"
+			"LinkedSpecialBonus" "special_bonus_kaj_1"
          	 }
 		 "02"
 		  {

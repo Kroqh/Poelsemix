@@ -1,0 +1,51 @@
+"kaj_rap"
+    {
+           "BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_kaj/kaj_rap"
+        "AbilityTextureName"        "KajRap"
+        "MaxLevel"                  "4"
+        "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+        "AbilityCooldown"           "25 23 21 19"
+        "AbilityManaCost"           "120 110 100 90"
+
+        "AbilitySpecial"
+        {
+
+		"01"
+		  {
+			"var_type"          "FIELD_INTEGER"
+            		"radius"          "350 375 400 425"
+			"LinkedSpecialBonus" "special_bonus_kaj_3"
+		  }
+          "02"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "knockup_duration"          "1.5 1.75 2 2.25"
+		"LinkedSpecialBonus" "special_bonus_kaj_2"
+          }
+	 "03"
+          {
+              "var_type"          "FIELD_FLOAT"
+              "delay"          "3"
+          }
+		  "04"
+		  {
+			"var_type"          "FIELD_INTEGER"
+            		"damage"          "300 425 650 775"
+		  }
+		 
+        }
+
+			"precache"
+	{
+		"particle"			"particles/units/heroes/hero_kajr/rap.vpcf"
+        	"soundfile"  		"soundevents/kaj_soundevent.vsndevts"
+		"particle"		"particles/econ/items/hoodwink/hoodwink_2022_immortal/hoodwink_2022_immortal_sharpshooter_blossom_caster_music_notes.vpcf"
+	}
+
+      
+    }
