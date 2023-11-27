@@ -32,5 +32,5 @@
 	"Ability15"		"special_bonus_mette_7"
 	
 	"Ability16"		"special_bonus_mette_3"
-	"Ability17"		"special_bonus_hp_500"							
+	"Ability17"		"special_bonus_mette_8"							
 }
