@@ -43,6 +43,7 @@ press_meeting_pull = class ({})
 
 function press_meeting_pull:IsPurgable() return	false end
 function press_meeting_pull:IsHidden() return	false end
+function press_meeting_pull:IsDebuff() return true end
 function press_meeting_pull:IgnoreTenacity() return true end
 function press_meeting_pull:IsMotionController() return true end
 function press_meeting_pull:GetMotionControllerPriority() return DOTA_MOTION_CONTROLLER_PRIORITY_MEDIUM end
