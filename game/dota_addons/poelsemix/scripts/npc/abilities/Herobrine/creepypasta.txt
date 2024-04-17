@@ -49,7 +49,7 @@
 	{
 		"RunScript"
 		{
-			"ScriptFile"	"scripts/vscripts/heroes/herobrine/creepypasta.lua"
+			"ScriptFile"	"scripts/vscripts/heroes/hero_herobrine/creepypasta.lua"
 			"Function"		"Blink"
 			"Target"		"POINT"
 		}

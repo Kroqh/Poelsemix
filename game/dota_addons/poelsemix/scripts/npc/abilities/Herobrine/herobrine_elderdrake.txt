@@ -1,16 +1,17 @@
-"hb_elder"
+"herobrine_enderdrake"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		
-		"BaseClass"             		"ability_datadriven"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/hero_herobrine/herobrine_enderdrake"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityTextureName"			"EnderDragon"
-		"AbilityCooldown"				"20 15 10 5"
-		"AbilityManaCost"				"50"
-		"AbilityCastPoint"				"0.5"
+		"AbilityCooldown"				"20 19 18 17"
+		"AbilityManaCost"				"100 90 80 70"
+		"AbilityCastPoint"				"0.2"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
-		"AbilityCastRange" 				"700"
+		"AbilityCastRange" 				"600"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		
 
@@ -22,30 +23,19 @@
 
 			"01"
 			{
-				"var_type" "FIELD_FLOAT"
-				"duration" "15 20 25 30"
+				"var_type" "FIELD_INTEGER"
+				"lifetime" "20 21 22 23"
 			}
-		}
-		
-		"OnSpellStart"
-		{
-		
-
-			
-
-					
-			"SpawnUnit"
+			"02"
 			{
-				"UnitName"		"npc_elderdrake"
-				"Target" 		"POINT"
-				"Duration"		"%duration"
-				"UnitCount"		"1"
-				"UnitLimit"		"99"
-				"GrantsGold"	"50"
-				"GrantsXP"		"50"
-				"SpawnRadius"	"1"
-
+				"var_type" "FIELD_FLOAT"
+				"dmg_int_scaling" "2 2.5 3 3.5"
+			}
+			"03"
+			{
+				"var_type" "FIELD_FLOAT"
+				"hp_int_scaling" "14 18 22 26"
 			}
 			
-}
+		}
 }

@@ -246,7 +246,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"heroes/herobrine/hb_diamonds.lua"
+					"ScriptFile"	"heroes/hero_herobrine/hb_diamonds.lua"
 					"Function"		"StoneGazeFacing"
 					"modifier_stone"	"modifier_stone_gaze_stone_datadriven"
 				}

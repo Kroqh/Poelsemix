@@ -20,7 +20,6 @@ end
 
 
 
-
 function press_meeting:OnSpellStart()
     if not IsServer() then return end
     caster = self:GetCaster()
