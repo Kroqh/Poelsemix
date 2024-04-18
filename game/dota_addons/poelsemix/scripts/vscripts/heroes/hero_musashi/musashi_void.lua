@@ -68,6 +68,8 @@ function modifier_musashi_void:OnIntervalThink()
         EmitSoundOnLocationWithCaster(caster_loc, "musashi_void_slash", caster) --has to be on location or wont work for enemies while invisible
         caster:StartGesture(ACT_DOTA_CAST_ABILITY_6)
 
+		self:Destroy()
+
 	end
 end
 

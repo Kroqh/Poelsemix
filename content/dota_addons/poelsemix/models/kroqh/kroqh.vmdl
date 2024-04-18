@@ -1,847 +1,484 @@
-<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc33:version{bed0390a-a564-41a6-9dc3-c9a293c8eea3} -->
 {
-	m_meshList = 
+	rootNode = 
 	{
-		m_meshList = 
+		_class = "RootNode"
+		children = 
 		[
 			{
-				m_meshName = "kroqh"
-				m_meshFile = "models/kroqh/kroqh.fbx"
-				m_materialSearchPath = ""
-				m_bSkinParentedObjects = true
-				m_bLegacySkinParentedTransforms = false
-				m_bExpensiveTangents = false
-				m_bHighPrecisionTexCoords = false
-				m_bPerVertexCurvature = false
-				m_bBentNormals = false
-				m_bIgnoreCloth = false
-				m_bGetSkinningFromLod0 = false
-				m_bPreferHighDensityTrianglesInUvDensityCalculation = false
-				m_pMorphInfo = null
-			},
-		]
-	}
-	m_clothProxyMeshList = 
-	{
-		_class = "CVClothProxyMeshList"
-		m_flClothEnableThreshold = 0.05
-		m_bCreateStaticBone = false
-		m_nMaxBonesPerVertex = 4
-		m_bRemoveUnusedBonesEnabled = false
-		m_bDriveMeshesWithBacksolvedJointsOnly = true
-		m_flMatchProxiesToMeshes = 1.0
-		m_flFallbackEnvelope = 1.0
-		m_nReservedInt = 0
-		m_bSoftSkinAnimation = false
-		m_bReservedBool2 = false
-		m_bReservedBool3 = false
-		m_bReservedBool4 = false
-		m_clothProxyMeshList = [  ]
-	}
-	m_physicsMeshList = 
-	{
-		m_meshList = [  ]
-	}
-	m_pModelInfo = null
-	m_pBoneFlagList = 
-	{
-		m_pObject = null
-	}
-	m_pHitBoxSetLists = 
-	[
-		{
-			m_pObject = 
-			{
-				m_HitBoxSets = 
+				_class = "MaterialGroupList"
+				children = 
 				[
 					{
-						m_name = "default"
-						m_HitBoxes = 
+						_class = "DefaultMaterialGroup"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/kroqh/kroqh.vmat"
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "bone_chest"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_origin"
+						parent_bone = "Kirito_CM_Ren_Root"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "bone_lhand"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "follow_overhead"
+						parent_bone = "bone_head"
+						relative_origin = [ 0.0, 0.0, 14.672241 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
 						[
 							{
-								m_name = "Kirito CM Ren Root"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "Kirito CM Ren Root"
-								m_vMinBounds = [ -13.624866, -0.814117, 0.9758 ]
-								m_vMaxBounds = [ 14.171113, 6.323204, 2.344048 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "Kirito_CM_Ren_Root"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.624866, -0.814117, 0.9758 ]
+								hitbox_maxs = [ 14.171113, 6.323204, 2.344048 ]
 							},
 							{
-								m_name = "bone_chest"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_chest"
-								m_vMinBounds = [ -11.672208, -10.705617, -21.343155 ]
-								m_vMaxBounds = [ 20.771313, 10.796844, 22.124031 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_chest"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.672208, -10.705617, -21.343155 ]
+								hitbox_maxs = [ 20.771313, 10.796844, 22.124031 ]
 							},
 							{
-								m_name = "bone_rshoulder"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_rshoulder"
-								m_vMinBounds = [ -16.511189, -8.219071, -15.670448 ]
-								m_vMaxBounds = [ 1.057358, 3.951582, 0.916168 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_rshoulder"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -16.511189, -8.219071, -15.670448 ]
+								hitbox_maxs = [ 1.057358, 3.951582, 0.916168 ]
 							},
 							{
-								m_name = "bone_lshoulder"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_lshoulder"
-								m_vMinBounds = [ 0.302277, -8.219071, -14.255127 ]
-								m_vMaxBounds = [ 21.259899, 4.57826, 1.689545 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_lshoulder"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.302277, -8.219071, -14.255127 ]
+								hitbox_maxs = [ 21.259899, 4.57826, 1.689545 ]
 							},
 							{
-								m_name = "bone_lower"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_lower"
-								m_vMinBounds = [ -11.134235, -8.583513, 5.606133 ]
-								m_vMaxBounds = [ 11.558764, -1.342916, 6.879349 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_lower"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.134235, -8.583513, 5.606133 ]
+								hitbox_maxs = [ 11.558764, -1.342916, 6.879349 ]
 							},
 							{
-								m_name = "bone_rarm"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_rarm"
-								m_vMinBounds = [ -21.510933, -5.686198, -16.1185 ]
-								m_vMaxBounds = [ 2.489557, 5.369594, 2.137466 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_rarm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -21.510933, -5.686198, -16.1185 ]
+								hitbox_maxs = [ 2.489557, 5.369594, 2.137466 ]
 							},
 							{
-								m_name = "bone_larm"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_larm"
-								m_vMinBounds = [ 3.785646, -5.686198, -16.569008 ]
-								m_vMaxBounds = [ 26.286814, 5.369595, 0.704063 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_larm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 3.785646, -5.686198, -16.569008 ]
+								hitbox_maxs = [ 26.286814, 5.369595, 0.704063 ]
 							},
 							{
-								m_name = "bone_robe"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_robe"
-								m_vMinBounds = [ -2.0, -2.0, -2.0 ]
-								m_vMaxBounds = [ 2.0, 2.0, 2.0 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_robe"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
 							},
 							{
-								m_name = "bone_rthigh"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_rthigh"
-								m_vMinBounds = [ -9.250154, -8.651693, -31.1656 ]
-								m_vMaxBounds = [ 5.45999, 7.664614, 9.283417 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_rthigh"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.250154, -8.651693, -31.1656 ]
+								hitbox_maxs = [ 5.45999, 7.664614, 9.283417 ]
 							},
 							{
-								m_name = "bone_lthigh"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_lthigh"
-								m_vMinBounds = [ -6.87888, -8.665176, -30.714897 ]
-								m_vMaxBounds = [ 8.721033, 9.304546, 9.85791 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_lthigh"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.87888, -8.665176, -30.714897 ]
+								hitbox_maxs = [ 8.721033, 9.304546, 9.85791 ]
 							},
 							{
-								m_name = "bone_neck"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_neck"
-								m_vMinBounds = [ -3.252639, -4.875903, -0.143188 ]
-								m_vMaxBounds = [ 4.290595, 0.910717, 1.838394 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_neck"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.252639, -4.875903, -0.143188 ]
+								hitbox_maxs = [ 4.290595, 0.910717, 1.838394 ]
 							},
 							{
-								m_name = "bone_rhand"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_rhand"
-								m_vMinBounds = [ -4.34343, -4.174361, -3.144058 ]
-								m_vMaxBounds = [ 4.346909, 5.747856, 4.339348 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_rhand"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.34343, -4.174361, -3.144058 ]
+								hitbox_maxs = [ 4.346909, 5.747856, 4.339348 ]
 							},
 							{
-								m_name = "bone_lhand"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_lhand"
-								m_vMinBounds = [ 2.106152, -4.174361, -9.132347 ]
-								m_vMaxBounds = [ 11.034534, 5.747855, -1.544472 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_lhand"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 2.106152, -4.174361, -9.132347 ]
+								hitbox_maxs = [ 11.034534, 5.747855, -1.544472 ]
 							},
 							{
-								m_name = "bone_rrobe1"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_rrobe1"
-								m_vMinBounds = [ -9.005792, -16.220501, -18.606293 ]
-								m_vMaxBounds = [ 6.332066, 10.424812, -2.803291 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_rrobe1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.005792, -16.220501, -18.606293 ]
+								hitbox_maxs = [ 6.332066, 10.424812, -2.803291 ]
 							},
 							{
-								m_name = "bone_lrobe1"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_lrobe1"
-								m_vMinBounds = [ -10.045063, -16.220501, -18.606293 ]
-								m_vMaxBounds = [ 9.851669, 15.365143, -2.803291 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_lrobe1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -10.045063, -16.220501, -18.606293 ]
+								hitbox_maxs = [ 9.851669, 15.365143, -2.803291 ]
 							},
 							{
-								m_name = "bone_rleg"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_rleg"
-								m_vMinBounds = [ -9.743753, -1.232983, -38.419655 ]
-								m_vMaxBounds = [ 5.281123, 15.298155, -1.357559 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_rleg"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.743753, -1.232983, -38.419655 ]
+								hitbox_maxs = [ 5.281123, 15.298155, -1.357559 ]
 							},
 							{
-								m_name = "bone_lleg"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_lleg"
-								m_vMinBounds = [ -6.743261, 0.064716, -38.629341 ]
-								m_vMaxBounds = [ 8.290849, 16.615515, -1.766258 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_lleg"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.743261, 0.064716, -38.629341 ]
+								hitbox_maxs = [ 8.290849, 16.615515, -1.766258 ]
 							},
 							{
-								m_name = "bone_head"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_head"
-								m_vMinBounds = [ -13.169958, -12.783683, -11.28331 ]
-								m_vMaxBounds = [ 14.036871, 14.216491, 15.738571 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.169958, -12.783683, -11.28331 ]
+								hitbox_maxs = [ 14.036871, 14.216491, 15.738571 ]
 							},
 							{
-								m_name = "bone_zan"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_zan"
-								m_vMinBounds = [ -5.646751, -2.184378, -2.348 ]
-								m_vMaxBounds = [ 10.199188, 2.522445, 94.252274 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_zan"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.646751, -2.184378, -2.348 ]
+								hitbox_maxs = [ 10.199188, 2.522445, 94.252274 ]
 							},
 							{
-								m_name = "bone_ren"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_ren"
-								m_vMinBounds = [ -20.530209, 1.450214, -9.164711 ]
-								m_vMaxBounds = [ 0.485703, 5.694028, 87.0242 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_ren"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -20.530209, 1.450214, -9.164711 ]
+								hitbox_maxs = [ 0.485703, 5.694028, 87.0242 ]
 							},
 							{
-								m_name = "bone_rrobe2 zan"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_rrobe2 zan"
-								m_vMinBounds = [ -20.010183, -23.540382, -23.790966 ]
-								m_vMaxBounds = [ 2.868885, 15.516791, 6.441013 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_rrobe2_zan"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -20.010183, -23.540382, -23.790966 ]
+								hitbox_maxs = [ 2.868885, 15.516791, 6.441013 ]
 							},
 							{
-								m_name = "bone_lrobe2 ren"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_lrobe2 ren"
-								m_vMinBounds = [ -1.638954, -23.540482, -23.5989 ]
-								m_vMaxBounds = [ 21.240206, 15.516791, 6.63308 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_lrobe2_ren"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.638954, -23.540482, -23.5989 ]
+								hitbox_maxs = [ 21.240206, 15.516791, 6.63308 ]
 							},
 							{
-								m_name = "bone_robe2"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_robe2"
-								m_vMinBounds = [ -13.367781, 5.042759, -19.204994 ]
-								m_vMaxBounds = [ 14.405737, 16.364048, 15.205189 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_robe2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.367781, 5.042759, -19.204994 ]
+								hitbox_maxs = [ 14.405737, 16.364048, 15.205189 ]
 							},
 							{
-								m_name = "bone_rfoot"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_rfoot"
-								m_vMinBounds = [ -10.166447, -15.29744, -4.576818 ]
-								m_vMaxBounds = [ 2.600609, 11.585289, 5.622127 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_rfoot"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -10.166447, -15.29744, -4.576818 ]
+								hitbox_maxs = [ 2.600609, 11.585289, 5.622127 ]
 							},
 							{
-								m_name = "bone_lfoot"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "bone_lfoot"
-								m_vMinBounds = [ -5.028697, -15.045435, -4.547677 ]
-								m_vMaxBounds = [ 7.753922, 11.855986, 5.542233 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "bone_lfoot"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.028697, -15.045435, -4.547677 ]
+								hitbox_maxs = [ 7.753922, 11.855986, 5.542233 ]
 							},
 						]
 					},
 				]
-				m_AutoCreateSetName = ""
-			}
-		},
-	]
-	m_pAttachmentLists = 
-	[
-		{
-			m_pObject = 
+			},
 			{
-				m_name = ""
-				m_attachments = 
+				_class = "RenderMeshList"
+				children = 
 				[
 					{
-						m_name = "attach_hitloc"
-						m_influences = 
-						[
-							{
-								m_influenceName = "bone_chest"
-								m_vTranslationOffset = [ 0.0, 0.0, 0.0 ]
-								m_vRotationOffset = [ 0.0, 0.0, 0.0 ]
-								m_flWeight = 1.0
-								m_bRoot = false
-							},
-						]
-					},
-					{
-						m_name = "attach_origin"
-						m_influences = 
-						[
-							{
-								m_influenceName = "Kirito CM Ren Root"
-								m_vTranslationOffset = [ 0.0, 0.0, 0.0 ]
-								m_vRotationOffset = [ 0.0, 0.0, 0.0 ]
-								m_flWeight = 1.0
-								m_bRoot = false
-							},
-						]
-					},
-					{
-						m_name = "attach_attack2"
-						m_influences = 
-						[
-							{
-								m_influenceName = "bone_lhand"
-								m_vTranslationOffset = [ 0.0, 0.0, 0.0 ]
-								m_vRotationOffset = [ 0.0, 0.0, 0.0 ]
-								m_flWeight = 1.0
-								m_bRoot = false
-							},
-						]
-					},
-					{
-						m_name = "attach_attack2"
-						m_influences = 
-						[
-							{
-								m_influenceName = "bone_rhand"
-								m_vTranslationOffset = [ 0.0, 0.0, 0.0 ]
-								m_vRotationOffset = [ 0.0, 0.0, 0.0 ]
-								m_flWeight = 1.0
-								m_bRoot = false
-							},
-						]
-					},
-					{
-						m_name = "follow_overhead"
-						m_influences = 
-						[
-							{
-								m_influenceName = "bone_head"
-								m_vTranslationOffset = [ 0.0, 0.0, 14.672241 ]
-								m_vRotationOffset = [ 0.0, -0.0, 0.0 ]
-								m_flWeight = 1.0
-								m_bRoot = false
-							},
-						]
+						_class = "RenderMeshFile"
+						name = "kroqh"
+						filename = "models/kroqh/kroqh.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
 					},
 				]
-			}
-		},
-	]
-	m_pAnimGroup = 
-	{
-		m_pObject = 
-		{
-			m_Name = ""
-			m_pBoneFlagList = 
+			},
 			{
-				m_pObject = null
-			}
-			m_pSeqGroup = 
-			{
-				m_pObject = null
-			}
-			m_pAnimGroups = [  ]
-			m_Vanim = 
-			[
-				{
-					m_Animationname = "kroqh_walk"
-					m_Filepath = "models/kroqh/kroqh_animation.fbx"
-					m_nStartframe = 437
-					m_nEndframe = 462
-					m_flFps = 30.0
-					m_Loop = 
+				_class = "AnimationList"
+				children = 
+				[
 					{
-						m_bLoop = true
-						m_bSmoothLoop = false
-						m_nSmoothLoopStart = 0
-						m_nSmoothLoopEnd = 0
-						m_StartLoop = 
-						{
-							_class = "CVAnimCmdStartLoop"
-							m_bEnabled = false
-							m_nLoopRestart = 0
-						}
-					}
-					m_bHidden = false
-					m_bDisable = false
-					m_Activities = 
-					[
-						{
-							m_Name = "ACT_DOTA_RUN"
-							m_nWeight = 1
-						},
-					]
-					m_AnimationEvents = [  ]
-					m_MotionFrames = [  ]
-					m_pIkRules = [  ]
-					m_pAlignAnimation = null
-					m_adjustAnimation = 
+						_class = "AnimFile"
+						name = "kroqh_walk"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/kroqh/kroqh_animation.fbx"
+						import_bone_scales = false
+						start_frame = 437
+						end_frame = 462
+						framerate = 30.0
+						reverse = false
+					},
 					{
-						m_translation = [ 0.0, 0.0, 0.0 ]
-						m_rotation = [ 0.0, 0.0, 0.0 ]
-					}
-					m_Keywords = [  ]
-					m_sequenceParams = 
+						_class = "AnimFile"
+						name = "kroqh_stand"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/kroqh/kroqh_animation.fbx"
+						import_bone_scales = false
+						start_frame = 125
+						end_frame = 156
+						framerate = 30.0
+						reverse = false
+					},
 					{
-						m_flFadeInTime = 0.2
-						m_flFadeOutTime = 0.2
-					}
-					m_folderName = ""
-					m_MotionFramesRootBone = ""
-				},
-				{
-					m_Animationname = "kroqh_stand"
-					m_Filepath = "models/kroqh/kroqh_animation.fbx"
-					m_nStartframe = 125
-					m_nEndframe = 156
-					m_flFps = 30.0
-					m_Loop = 
+						_class = "AnimFile"
+						name = "kroqh_attack1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/kroqh/kroqh_animation.fbx"
+						import_bone_scales = false
+						start_frame = 186
+						end_frame = 220
+						framerate = 30.0
+						reverse = false
+					},
 					{
-						m_bLoop = true
-						m_bSmoothLoop = false
-						m_nSmoothLoopStart = 0
-						m_nSmoothLoopEnd = 0
-						m_StartLoop = 
-						{
-							_class = "CVAnimCmdStartLoop"
-							m_bEnabled = false
-							m_nLoopRestart = 0
-						}
-					}
-					m_bHidden = false
-					m_bDisable = false
-					m_Activities = 
-					[
-						{
-							m_Name = "ACT_DOTA_IDLE"
-							m_nWeight = 1
-						},
-					]
-					m_AnimationEvents = [  ]
-					m_MotionFrames = [  ]
-					m_pIkRules = [  ]
-					m_pAlignAnimation = null
-					m_adjustAnimation = 
+						_class = "AnimFile"
+						name = "kroqh_attack2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/kroqh/kroqh_animation.fbx"
+						import_bone_scales = false
+						start_frame = 375
+						end_frame = 414
+						framerate = 30.0
+						reverse = false
+					},
 					{
-						m_translation = [ 0.0, 0.0, 0.0 ]
-						m_rotation = [ 0.0, 0.0, 0.0 ]
-					}
-					m_Keywords = [  ]
-					m_sequenceParams = 
+						_class = "AnimFile"
+						name = "kroqh_spell1"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/kroqh/kroqh_animation.fbx"
+						import_bone_scales = false
+						start_frame = 375
+						end_frame = 414
+						framerate = 30.0
+						reverse = false
+					},
 					{
-						m_flFadeInTime = 0.2
-						m_flFadeOutTime = 0.2
-					}
-					m_folderName = ""
-					m_MotionFramesRootBone = ""
-				},
-				{
-					m_Animationname = "kroqh_attack1"
-					m_Filepath = "models/kroqh/kroqh_animation.fbx"
-					m_nStartframe = 186
-					m_nEndframe = 220
-					m_flFps = 30.0
-					m_Loop = 
+						_class = "AnimFile"
+						name = "kroqh_die"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/kroqh/kroqh_animation.fbx"
+						import_bone_scales = false
+						start_frame = 813
+						end_frame = 860
+						framerate = 30.0
+						reverse = false
+					},
 					{
-						m_bLoop = false
-						m_bSmoothLoop = false
-						m_nSmoothLoopStart = 0
-						m_nSmoothLoopEnd = 0
-						m_StartLoop = 
-						{
-							_class = "CVAnimCmdStartLoop"
-							m_bEnabled = false
-							m_nLoopRestart = 0
-						}
-					}
-					m_bHidden = false
-					m_bDisable = false
-					m_Activities = 
-					[
-						{
-							m_Name = "ACT_DOTA_ATTACK"
-							m_nWeight = 1
-						},
-					]
-					m_AnimationEvents = [  ]
-					m_MotionFrames = [  ]
-					m_pIkRules = [  ]
-					m_pAlignAnimation = null
-					m_adjustAnimation = 
-					{
-						m_translation = [ 0.0, 0.0, 0.0 ]
-						m_rotation = [ 0.0, 0.0, 0.0 ]
-					}
-					m_Keywords = [  ]
-					m_sequenceParams = 
-					{
-						m_flFadeInTime = 0.2
-						m_flFadeOutTime = 0.2
-					}
-					m_folderName = ""
-					m_MotionFramesRootBone = ""
-				},
-				{
-					m_Animationname = "kroqh_attack2"
-					m_Filepath = "models/kroqh/kroqh_animation.fbx"
-					m_nStartframe = 375
-					m_nEndframe = 414
-					m_flFps = 30.0
-					m_Loop = 
-					{
-						m_bLoop = false
-						m_bSmoothLoop = false
-						m_nSmoothLoopStart = 0
-						m_nSmoothLoopEnd = 0
-						m_StartLoop = 
-						{
-							_class = "CVAnimCmdStartLoop"
-							m_bEnabled = false
-							m_nLoopRestart = 0
-						}
-					}
-					m_bHidden = false
-					m_bDisable = false
-					m_Activities = 
-					[
-						{
-							m_Name = "ACT_DOTA_ATTACK2"
-							m_nWeight = 1
-						},
-					]
-					m_AnimationEvents = [  ]
-					m_MotionFrames = [  ]
-					m_pIkRules = [  ]
-					m_pAlignAnimation = null
-					m_adjustAnimation = 
-					{
-						m_translation = [ 0.0, 0.0, 0.0 ]
-						m_rotation = [ 0.0, 0.0, 0.0 ]
-					}
-					m_Keywords = [  ]
-					m_sequenceParams = 
-					{
-						m_flFadeInTime = 0.2
-						m_flFadeOutTime = 0.2
-					}
-					m_folderName = ""
-					m_MotionFramesRootBone = ""
-				},
-				{
-					m_Animationname = "kroqh_spell1"
-					m_Filepath = "models/kroqh/kroqh_animation.fbx"
-					m_nStartframe = 375
-					m_nEndframe = 414
-					m_flFps = 30.0
-					m_Loop = 
-					{
-						m_bLoop = true
-						m_bSmoothLoop = false
-						m_nSmoothLoopStart = 0
-						m_nSmoothLoopEnd = 0
-						m_StartLoop = 
-						{
-							_class = "CVAnimCmdStartLoop"
-							m_bEnabled = false
-							m_nLoopRestart = 0
-						}
-					}
-					m_bHidden = false
-					m_bDisable = false
-					m_Activities = 
-					[
-						{
-							m_Name = "ACT_DOTA_CAST_ABILITY_1"
-							m_nWeight = 1
-						},
-					]
-					m_AnimationEvents = [  ]
-					m_MotionFrames = [  ]
-					m_pIkRules = [  ]
-					m_pAlignAnimation = null
-					m_adjustAnimation = 
-					{
-						m_translation = [ 0.0, 0.0, 0.0 ]
-						m_rotation = [ 0.0, 0.0, 0.0 ]
-					}
-					m_Keywords = [  ]
-					m_sequenceParams = 
-					{
-						m_flFadeInTime = 0.2
-						m_flFadeOutTime = 0.2
-					}
-					m_folderName = ""
-					m_MotionFramesRootBone = ""
-				},
-				{
-					m_Animationname = "kroqh_die"
-					m_Filepath = "models/kroqh/kroqh_animation.fbx"
-					m_nStartframe = 813
-					m_nEndframe = 860
-					m_flFps = 30.0
-					m_Loop = 
-					{
-						m_bLoop = false
-						m_bSmoothLoop = false
-						m_nSmoothLoopStart = 0
-						m_nSmoothLoopEnd = 0
-						m_StartLoop = 
-						{
-							_class = "CVAnimCmdStartLoop"
-							m_bEnabled = false
-							m_nLoopRestart = 0
-						}
-					}
-					m_bHidden = false
-					m_bDisable = false
-					m_Activities = 
-					[
-						{
-							m_Name = "ACT_DOTA_DIE"
-							m_nWeight = 1
-						},
-					]
-					m_AnimationEvents = [  ]
-					m_MotionFrames = [  ]
-					m_pIkRules = [  ]
-					m_pAlignAnimation = null
-					m_adjustAnimation = 
-					{
-						m_translation = [ 0.0, 0.0, 0.0 ]
-						m_rotation = [ 0.0, 0.0, 0.0 ]
-					}
-					m_Keywords = [  ]
-					m_sequenceParams = 
-					{
-						m_flFadeInTime = 0.2
-						m_flFadeOutTime = 0.2
-					}
-					m_folderName = ""
-					m_MotionFramesRootBone = ""
-				},
-				{
-					m_Animationname = "kroqh_spawn"
-					m_Filepath = "models/kroqh/kroqh_animation.fbx"
-					m_nStartframe = 719
-					m_nEndframe = 781
-					m_flFps = 30.0
-					m_Loop = 
-					{
-						m_bLoop = false
-						m_bSmoothLoop = false
-						m_nSmoothLoopStart = 0
-						m_nSmoothLoopEnd = 0
-						m_StartLoop = 
-						{
-							_class = "CVAnimCmdStartLoop"
-							m_bEnabled = false
-							m_nLoopRestart = 0
-						}
-					}
-					m_bHidden = false
-					m_bDisable = false
-					m_Activities = 
-					[
-						{
-							m_Name = "ACT_DOTA_SPAWN"
-							m_nWeight = 1
-						},
-					]
-					m_AnimationEvents = [  ]
-					m_MotionFrames = [  ]
-					m_pIkRules = [  ]
-					m_pAlignAnimation = null
-					m_adjustAnimation = 
-					{
-						m_translation = [ 0.0, 0.0, 0.0 ]
-						m_rotation = [ 0.0, 0.0, 0.0 ]
-					}
-					m_Keywords = [  ]
-					m_sequenceParams = 
-					{
-						m_flFadeInTime = 0.2
-						m_flFadeOutTime = 0.2
-					}
-					m_folderName = ""
-					m_MotionFramesRootBone = ""
-				},
-			]
-			m_sScripts = [  ]
-			m_folderNames = [  ]
-			m_sCompileScripts = [  ]
-			m_pActivityWhiteList = 
-			{
-				m_pObject = null
-			}
-		}
-	}
-	m_pMaterialGroupList = 
-	{
-		m_pObject = null
-	}
-	m_pMeshGroupList = 
-	{
-		m_pObject = null
-	}
-	m_pLodGroupList = 
-	{
-		m_pObject = null
-	}
-	m_pPropBreakableList = 
-	{
-		m_pObject = null
-	}
-	m_pPropDataList = 
-	{
-		m_pObject = null
-	}
-	m_pConstraintLists = [  ]
-	m_collision = ""
-	m_softbody = ""
-	m_sMDLFilename = ""
-	m_sOffsetHitboxSets = [  ]
-	m_vHitboxSetOffset = [ 0.0, 0.0, 0.0 ]
-	m_scriptFiles = [  ]
-	m_pMaterialRemapList = 
-	{
-		m_vMaterialRemapList = 
-		[
-			{
-				m_sSearchMaterial = "*"
-				m_sReplaceMaterial = "materials/kroqh/kroqh.vmat"
+						_class = "AnimFile"
+						name = "kroqh_spawn"
+						activity_name = "ACT_DOTA_SPAWN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/kroqh/kroqh_animation.fbx"
+						import_bone_scales = false
+						start_frame = 719
+						end_frame = 781
+						framerate = 30.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
 			},
 		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = "Imported from VMDL\n==Warnings==\nChanged incompatible hitbox parent bone name 'Kirito CM Ren Root' to 'Kirito_CM_Ren_Root'\nChanged incompatible hitbox parent bone name 'bone_rrobe2 zan' to 'bone_rrobe2_zan'\nChanged incompatible hitbox parent bone name 'bone_lrobe2 ren' to 'bone_lrobe2_ren'\nChanged incompatible bone name 'Kirito CM Ren Root' to 'Kirito_CM_Ren_Root'\nImportAttachmentList - Failed to create node: attach_attack2 (Likely skipping duplicate)\n"
 	}
-	m_flFbxScale = 1.0
-	m_flQCScale = 1.0
-	m_vOrigin = [ 0.0, 0.0, 0.0 ]
-	m_bEmbedAnimsInAnimGroup = false
-	m_pPsfList = null
-	m_keyValueText = ""
-	m_bStaticProp = false
-	m_bEnableClothProcessing = true
-	m_flClothEnableThreshold = 0.05
-	m_nMaxClothVertsPerMesh = 2048
-	m_bBuildClothBoneHierarchy = false
-	m_nNavType = "AUTH_NAV_MESH"
-	m_bMakeUniqueVMeshes = false
-	m_bMakeImplicitBindPoseSequence = false
-	m_bAdjustSkeletonFromBoneFlags = false
-	m_bHiddenAssetFlag = false
-	m_pAnimGroups = [  ]
 }

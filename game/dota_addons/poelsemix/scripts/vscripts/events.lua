@@ -316,6 +316,10 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("bloodseeker_thirst")
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
+	if hero:GetUnitName() == "npc_dota_hero_dark_seer" then
+		local ability = hero:FindAbilityByName("herobrine_grief")
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
+	end
 	if hero:GetUnitName() == "npc_dota_hero_bounty_hunter" then
 		local ability = hero:FindAbilityByName("pr0_incognito")
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end

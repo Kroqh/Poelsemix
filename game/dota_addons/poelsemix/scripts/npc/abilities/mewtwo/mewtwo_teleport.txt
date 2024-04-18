@@ -1,0 +1,45 @@
+"mewtwo_teleport"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"             		"ability_lua"
+	"ScriptFile"					"heroes/hero_mewtwo/mewtwo_teleport"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityTextureName"			"mewtwo_teleport"
+	"MaxLevel" "1"
+	"IsGrantedByScepter"            "1"
+	"HasScepterUpgrade"             "1"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_newtwo/mewtwo_teleport.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"%blink_range"
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"12"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"50"
+	
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"blink_range"			"1250"
+		}
+	}
+
+	
+}

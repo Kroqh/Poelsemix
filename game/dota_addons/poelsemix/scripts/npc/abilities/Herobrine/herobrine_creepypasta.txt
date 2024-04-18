@@ -2,7 +2,8 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"             		"ability_lua"
+	"ScriptFile"					"heroes/hero_herobrine/herobrine_creepypasta"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 	"AbilityTextureName"			"creepypasta"
 
@@ -11,18 +12,18 @@
 	"precache"
 	{
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
-		"particle"			"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/pa_arcana_attack_blink_modelb_2.vpcf"
+		"particle"			"particles/econ/heroes/herobrine/herobrine_creepypasta.vpcf"
 		"particle"			"particles/econ/items/doom/doom_ti8_immortal_arms/doom_ti8_immortal_devour_smoke_b.vpcf"
 	}
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"0"
-	"AbilityCastPoint"				"0.1 0.1 0.1 0.1"
+	"AbilityCastRange"				"%blink_range"
+	"AbilityCastPoint"				"0.05"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"2.5 2.0 1.5 1.0"
+	"AbilityCooldown"				"1.9 1.6 1.3 1"
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -35,49 +36,9 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"1000"
-		}
-		
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"min_blink_range"		"100"
+			"blink_range"			"780 860 920 1000"
 		}
 	}
 
-	"OnSpellStart"
-	{
-		"RunScript"
-		{
-			"ScriptFile"	"scripts/vscripts/heroes/hero_herobrine/creepypasta.lua"
-			"Function"		"Blink"
-			"Target"		"POINT"
-		}
-
-		"FireSound"
-		{
-			"EffectName"	"Hero_QueenOfPain.Blink_out"
-			"Target"		"CASTER"
-		}
-
-		"AttachEffect"
-		{
-			"EffectName"	"particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/pa_arcana_attack_blink_modelb_2.vpcf"
-			"Target"		"CASTER"
-			"EffectAttachType"	"attach_hitloc"
-		}
-
-		"FireSound"
-		{
-			"EffectName"	"Hero_QueenOfPain.Blink_in"
-			"Target"		"CASTER"
-		}
-
-		"AttachEffect"
-		{
-			"EffectName"	"particles/econ/items/doom/doom_ti8_immortal_arms/doom_ti8_immortal_devour_smoke_b.vpcf"
-			"Target"		"CASTER"
-			"EffectAttachType"	"follow_origin"
-		}
-	}
+	
 }

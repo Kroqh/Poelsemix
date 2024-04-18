@@ -1,163 +1,89 @@
-<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc33:version{bed0390a-a564-41a6-9dc3-c9a293c8eea3} -->
 {
-	m_meshList = 
+	rootNode = 
 	{
-		m_meshList = 
+		_class = "RootNode"
+		children = 
 		[
 			{
-				m_meshName = "runesten"
-				m_meshFile = "models/props_gameplay/runesten.fbx"
-				m_materialSearchPath = ""
-				m_bSkinParentedObjects = true
-				m_bLegacySkinParentedTransforms = false
-				m_bExpensiveTangents = false
-				m_bHighPrecisionTexCoords = false
-				m_bPerVertexCurvature = false
-				m_bBentNormals = false
-				m_bIgnoreCloth = false
-				m_bGetSkinningFromLod0 = false
-				m_bPreferHighDensityTrianglesInUvDensityCalculation = false
-				m_pMorphInfo = null
-			},
-		]
-	}
-	m_clothProxyMeshList = 
-	{
-		_class = "CVClothProxyMeshList"
-		m_flClothEnableThreshold = 0.05
-		m_bCreateStaticBone = false
-		m_nMaxBonesPerVertex = 4
-		m_bRemoveUnusedBonesEnabled = false
-		m_bDriveMeshesWithBacksolvedJointsOnly = true
-		m_flMatchProxiesToMeshes = 1.0
-		m_flFallbackEnvelope = 1.0
-		m_nReservedInt = 0
-		m_bSoftSkinAnimation = false
-		m_bReservedBool2 = false
-		m_bReservedBool3 = false
-		m_bReservedBool4 = false
-		m_clothProxyMeshList = [  ]
-	}
-	m_physicsMeshList = 
-	{
-		m_meshList = [  ]
-	}
-	m_pModelInfo = null
-	m_pBoneFlagList = 
-	{
-		m_pObject = null
-	}
-	m_pHitBoxSetLists = 
-	[
-		{
-			m_pObject = 
-			{
-				m_HitBoxSets = 
+				_class = "MaterialGroupList"
+				children = 
 				[
 					{
-						m_name = "default"
-						m_HitBoxes = 
+						_class = "DefaultMaterialGroup"
+						remaps = 
 						[
 							{
-								m_name = "Chest"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "Chest"
-								m_vMinBounds = [ -73.739563, -23.311598, -54.949162 ]
-								m_vMaxBounds = [ 73.739563, 23.3116, 28.941162 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								from = "materials/models/props/ruins/spring_ruins.vmat"
+								to = "materials/props_gameplay/runesten.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = "Chest"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -73.739563, -23.311598, -54.949162 ]
+								hitbox_maxs = [ 73.739563, 23.3116, 28.941162 ]
 							},
 							{
-								m_name = "R2"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "R2"
-								m_vMinBounds = [ -31.077063, -13.860262, -74.023064 ]
-								m_vMaxBounds = [ 34.596958, 31.07658, 16.779341 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "R2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -31.077063, -13.860262, -74.023064 ]
+								hitbox_maxs = [ 34.596958, 31.07658, 16.779341 ]
 							},
 							{
-								m_name = "L2"
-								m_sSurfaceProperty = ""
-								m_nGroupId = 0
-								m_sBoneName = "L2"
-								m_vMinBounds = [ -28.570709, -38.014111, -90.243469 ]
-								m_vMaxBounds = [ 42.304585, 16.201529, 20.971483 ]
-								m_flShapeRadius = 0.0
-								m_nShapeType = "VHITBOX_SHAPE_BOX"
-								m_bTranslationOnly = false
-								m_cRenderColor = [ 0, 0, 0, 0 ]
+								_class = "Hitbox"
+								parent_bone = "L2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -28.570709, -38.014111, -90.243469 ]
+								hitbox_maxs = [ 42.304585, 16.201529, 20.971483 ]
 							},
 						]
 					},
 				]
-				m_AutoCreateSetName = ""
-			}
-		},
-	]
-	m_pAttachmentLists = [  ]
-	m_pAnimGroup = 
-	{
-		m_pObject = null
-	}
-	m_pMaterialGroupList = 
-	{
-		m_pObject = null
-	}
-	m_pMeshGroupList = 
-	{
-		m_pObject = null
-	}
-	m_pLodGroupList = 
-	{
-		m_pObject = null
-	}
-	m_pPropBreakableList = 
-	{
-		m_pObject = null
-	}
-	m_pPropDataList = 
-	{
-		m_pObject = null
-	}
-	m_pConstraintLists = [  ]
-	m_collision = ""
-	m_softbody = ""
-	m_sMDLFilename = ""
-	m_sOffsetHitboxSets = [  ]
-	m_vHitboxSetOffset = [ 0.0, 0.0, 0.0 ]
-	m_scriptFiles = [  ]
-	m_pMaterialRemapList = 
-	{
-		m_vMaterialRemapList = 
-		[
+			},
 			{
-				m_sSearchMaterial = "materials/models/props/ruins/spring_ruins.vmat"
-				m_sReplaceMaterial = "materials/props_gameplay/runesten.vmat"
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "runesten"
+						filename = "models/props_gameplay/runesten.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
 			},
 		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = "Imported from VMDL"
 	}
-	m_flFbxScale = 1.0
-	m_flQCScale = 1.0
-	m_vOrigin = [ 0.0, 0.0, 0.0 ]
-	m_bEmbedAnimsInAnimGroup = false
-	m_pPsfList = null
-	m_keyValueText = ""
-	m_bStaticProp = false
-	m_bEnableClothProcessing = true
-	m_flClothEnableThreshold = 0.05
-	m_nMaxClothVertsPerMesh = 2048
-	m_bBuildClothBoneHierarchy = false
-	m_nNavType = "AUTH_NAV_MESH"
-	m_bMakeUniqueVMeshes = false
-	m_bMakeImplicitBindPoseSequence = false
-	m_bAdjustSkeletonFromBoneFlags = false
-	m_bHiddenAssetFlag = false
-	m_pAnimGroups = [  ]
 }

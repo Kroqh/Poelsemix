@@ -25,7 +25,6 @@ function modifier_flyby_attack:DeclareFunctions()
 		MODIFIER_EVENT_ON_ATTACK_START,
 		MODIFIER_EVENT_ON_ATTACK_LANDED,
 		MODIFIER_EVENT_ON_DEAL_DAMAGE,
-		MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE,
 		MODIFIER_PROPERTY_ATTACK_RANGE_BONUS
 	}
 
@@ -40,11 +39,6 @@ function modifier_flyby_attack:GetModifierAttackRangeBonus()
 end
 --------------------------------------------------------------------------------
 
---function modifier_flyby_attack:OnDealDamage( params )
-	--if (params.attacker ~= self:GetParent()) then return end
--- %attack_damage is set to the damage value after mitigation
---params.damageoutgoing_percentage = damage_bonus
---end 
 
 --------------------------------------------------------------------------------
 

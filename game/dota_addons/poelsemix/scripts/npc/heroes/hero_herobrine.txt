@@ -11,10 +11,14 @@
 	"AttributeBaseAgility"		"0"
 	"AttributeAgilityGain"		"0"
 	"AttributeIntelligenceGain"	"3"
-	
+	"AttackRange"			"125"
+	"AttackDamageMin"			"0"
+	"AttackDamageMax"			"0"
+	"AttackRate"                 "5" 
+
 	"Ability1" "herobrine_creepypasta"
 	"Ability2" "herobrine_enderdrake"
-	"Ability3" "hb_grief"
+	"Ability3" "herobrine_grief"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "hb_diamonds"
