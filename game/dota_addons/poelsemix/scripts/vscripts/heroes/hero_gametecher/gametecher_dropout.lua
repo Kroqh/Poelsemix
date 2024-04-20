@@ -7,21 +7,18 @@ function gametecher_dropout:GetChannelTime()
 end
 
 function gametecher_dropout:OnAbilityPhaseStart()
-	self:GetCaster():StartGesture(ACT_DOTA_CHANNEL_ABILITY_2)
+	self:GetCaster():StartGesture(ACT_DOTA_CHANNEL_ABILITY_3)
 end
 
 function gametecher_dropout:OnSpellStart()
 	if not IsServer() then return end
     local caster = self:GetCaster()
     caster:EmitSound("dropout")
-    self.caster_particle = ParticleManager:CreateParticle( "particles/units/heroes/hero_brewmaster/brewmaster_drunken_haze_debuff_drips_b.vpcf", PATTACH_OVERHEAD_FOLLOW, caster)
-    ParticleManager:SetParticleControlEnt(self.caster_particle, 0, caster, PATTACH_OVERHEAD_FOLLOW, "follow_overhead", caster:GetAbsOrigin(), true)
-
 end
 
 function gametecher_dropout:OnChannelFinish(interrupt)
 	if not IsServer() then return end
-    self:GetCaster():FadeGesture(ACT_DOTA_CHANNEL_ABILITY_2)
+    self:GetCaster():FadeGesture(ACT_DOTA_CHANNEL_ABILITY_3)
     if interrupt then return end
 
     local caster = self:GetCaster()

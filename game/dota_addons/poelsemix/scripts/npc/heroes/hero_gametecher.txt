@@ -11,7 +11,7 @@
 	"AbilityLayout" "5"
 	
 	"Ability1" "lion_finger_of_death"
-	"Ability2" "matematik_A_datadriven"
+	"Ability2" "gametecher_matematik_a"
 	"Ability3" "gametecher_dropout"
 	"Ability4" "bloodseeker_thirst"
 	"Ability5" "generic_hidden"

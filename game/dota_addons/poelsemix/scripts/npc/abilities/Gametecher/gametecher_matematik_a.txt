@@ -1,0 +1,55 @@
+"gametecher_matematik_a"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"              "ability_lua"
+	"ScriptFile"			"heroes/hero_gametecher/gametecher_matematik_a.lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "matematikA"
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.3"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"50 47 44 41"
+	
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"150 135 120 105"
+
+	"precache"
+	{
+
+		//techies
+		"particle" "particles/units/heroes/hero_gametecher/mat_a.vpcf"
+    }
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"bonus_int_percent" "15 16 17 18"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"bonus_int_percent_per_dropout" "0.8 1 1.2 1.4"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"speed_loss" "-125"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"bonus_duration" "20"
+		}
+	}
+	
+	
+}
