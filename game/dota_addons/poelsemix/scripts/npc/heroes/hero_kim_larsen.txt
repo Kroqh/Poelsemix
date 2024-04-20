@@ -14,25 +14,27 @@
 
 	"AttributeBaseStrength"			"26"									// Base strength
 	"AttributeStrengthGain"			"2.2"										// Strength bonus per level.
-	"AttributeBaseIntelligence"		"21"									// Base intelligence
-	"AttributeIntelligenceGain"		"1.7"									// Intelligence bonus per level.
+
 	"AttributeBaseAgility"		    "24"
 	"AttributeAgilityGain"		    "1.9"
+
+	"AttributeBaseIntelligence"		"21"									// Base intelligence
+	"AttributeIntelligenceGain"		"1.7"									// Intelligence bonus per level.
 
 	"StatusHealthRegen"		"3.8"
 
 	"MovementSpeed"		"275"
 	
-	"Ability10"		"special_bonus_attack_damage_50"
-	"Ability11"		"special_bonus_strength_20"
+	"Ability10"		"special_bonus_kim_6"
+	"Ability11"		"special_bonus_kim_7"
 	
-	"Ability12"		"special_bonus_hp_400"
+	"Ability12"		"special_bonus_kim_5"
 	"Ability13"		"special_bonus_kim_1"
 	
-	"Ability14"		"special_bonus_evasion_20"
+	"Ability14"		"special_bonus_kim_4"
 	"Ability15"		"special_bonus_kim_3"
 	
-	"Ability16"		"special_bonus_truestrike"
+	"Ability16"		"special_bonus_kim_8"
 	"Ability17"		"special_bonus_kim_2"
 
 	

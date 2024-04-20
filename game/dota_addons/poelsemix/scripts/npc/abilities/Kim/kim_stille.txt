@@ -6,6 +6,9 @@
 	"ScriptFile"			"heroes/hero_kim/kim_stille"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 	"AbilityTextureName"			"kim_stille"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
 	
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityCooldown"				"20 18 16 14"
@@ -38,11 +41,13 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"radius" "500" //aoe firing range at end of dash
+			"LinkedSpecialBonus" "special_bonus_kim_8"	
 		}
-                "05"
-                {
+            "05"
+    	{
 			"var_type" "FIELD_FLOAT"
-                        "duration" "1 2 3 4" //silence duration
+            "duration" "1 2 3 4" //silence duration
+			"LinkedSpecialBonus" "special_bonus_kim_7"	
 		}
 
 		"06"

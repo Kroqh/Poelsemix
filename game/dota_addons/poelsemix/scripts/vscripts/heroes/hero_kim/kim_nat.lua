@@ -54,18 +54,19 @@ function kim_nat_aura_debuff:IsDebuff() return true end
 
 
 function kim_nat_aura_debuff:OnCreated()
-    if not IsServer() then end
+    if not IsServer() then return end
     local target = self:GetParent()
 	local ability = self:GetAbility()
-    print(target:GetName())
-	local blind_percentage = ability:GetSpecialValueFor("blind_percentage") / -100
+    local blind_before = ability:GetSpecialValueFor("blind_percentage")
+    if self:GetCaster():FindAbilityByName("special_bonus_kim_5"):GetLevel() > 0 then blind_before = blind_before + self:GetCaster():FindAbilityByName("special_bonus_kim_5"):GetSpecialValueFor("value") end 
+	local blind_percentage = blind_before / -100
 	target.original_vision = target:GetBaseNightTimeVisionRange()
 	target:SetNightTimeVisionRange(target.original_vision * (1 - blind_percentage))
 end
 
 
 function kim_nat_aura_debuff:OnDestroy()
-    if not IsServer() then end
+    if not IsServer() then return end
     local target = self:GetParent()
 	target:SetNightTimeVisionRange(target.original_vision)
 end

@@ -75,10 +75,11 @@ function modifier_stille_cast:HorizontalMotion(me, dt)
         else
 			
     		local ability = self:GetAbility()
-			local target_teams = DOTA_UNIT_TARGET_TEAM_ENEMY 
-			local target_types = DOTA_UNIT_TARGET_ALL 
-			local target_flags = DOTA_UNIT_TARGET_FLAG_NONE 
+			local target_teams = ability:GetAbilityTargetTeam()
+			local target_types = ability:GetAbilityTargetType()
+			local target_flags = ability:GetAbilityTargetFlags() 
 			local radius = ability:GetSpecialValueFor("radius")
+			if caster:HasTalent("special_bonus_kim_8") then radius = radius + caster:FindAbilityByName("special_bonus_kim_8"):GetSpecialValueFor("value") end
 			local projectile_speed = ability:GetSpecialValueFor("velocity_projectile")
 
 
@@ -113,6 +114,7 @@ function kim_stille:OnProjectileHit(target, location)
 	if not IsServer() then return end
 		local caster = self:GetCaster()
 		local duration = self:GetSpecialValueFor("duration")
+		if caster:HasTalent("special_bonus_kim_7") then duration = duration + caster:FindAbilityByName("special_bonus_kim_7"):GetSpecialValueFor("value") end
 		ApplyDamage({victim = target, attacker = caster, damage = self:GetSpecialValueFor("dmg"), damage_type = self:GetAbilityDamageType()})
 		target:AddNewModifier(caster, self, "modifier_stille_silence", {duration = duration})
 end

@@ -8,6 +8,7 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityTextureName"			"banana"
 	"HasScepterUpgrade" "1"
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_2"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -38,6 +39,7 @@
 		{
 			"var_type"					"FIELD_INTEGER"
 			"gold_stolen"			"40 55 70 85"
+			"LinkedSpecialBonus" "special_bonus_kim_6"	
 		}
 		"02"
 		{

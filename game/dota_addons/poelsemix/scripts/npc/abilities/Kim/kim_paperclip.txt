@@ -10,6 +10,7 @@
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityTextureName"			"papercut"
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_4"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
@@ -18,7 +19,7 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"1000"
-	"AbilityCastPoint"				"0.5"
+	"AbilityCastPoint"				"0.25"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------

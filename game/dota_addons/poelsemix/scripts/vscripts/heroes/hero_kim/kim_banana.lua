@@ -50,6 +50,7 @@ function kim_banana:OnProjectileHit(target, location)
         return true
     elseif target:IsRealHero() then
         local gold = self:GetSpecialValueFor("gold_stolen")
+		if caster:FindAbilityByName("special_bonus_kim_6"):GetLevel() > 0 then gold = gold + caster:FindAbilityByName("special_bonus_kim_6"):GetSpecialValueFor("value") end
 		if target:GetTeamNumber() ~= caster:GetTeamNumber() then
         	caster:ModifyGold(gold, true, 0)
     		target:ModifyGold(-gold, true, 0)

@@ -38,7 +38,6 @@ function kim_paperclip:OnSpellStart()
     
     for _, illusion in pairs(illusions) do
 		illusion:SetControllableByPlayer(-1, true) -- uncontrollable
-        illusion:AddNewModifier(self:GetCaster(), self, "modifier_imba_terrorblade_reflection_unit", {enemy_entindex = target:entindex()})
         illusion:AddNewModifier(self:GetCaster(), self, "modifier_terrorblade_reflection_invulnerability", {})
         illusion:SetForceAttackTarget(target)
 	end

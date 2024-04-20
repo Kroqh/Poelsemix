@@ -2,17 +2,18 @@
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_kim/kim_gasolin"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"gasolin"
 	"MaxLevel"              "6"
-"RequiredLevel"        "1"
-"LevelsBetweenUpgrades" "4"
+	"RequiredLevel"        "1"
+	"LevelsBetweenUpgrades" "4"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
 	{
-		"particle"			"particles/units/heroes/hero_night_stalker/nightstalker_night_buff.vpcf"
+		"particle"			"particles/units/heroes/hero_kimr/kim_gasolin_nat.vpcf"
 		"particle"			"particles/units/heroes/hero_night_stalker/nightstalker_change.vpcf"
 	}
 		
@@ -24,66 +25,7 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"statboost"			"25 50 75 100 125 150"
-		}
-	}
-
-	"Modifiers"
-	{
-		"modifier_hunter_in_the_night_datadriven"
-		{
-			"Passive"	"1"
-			"IsHidden"	"1"
-
-			"AllowIllusionDuplicate"	"1"
-
-			"ThinkInterval"	"0.1"
-			"OnIntervalThink"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"scripts/vscripts/heroes/hero_kim/gasolin.lua"
-					"Function"		"HunterInTheNight"
-					"modifier"		"modifier_hunter_in_the_night_buff_datadriven"
-				}
-			}
-		}
-
-		"modifier_hunter_in_the_night_buff_datadriven"
-		{
-			
-
-			"AllowIllusionDuplicate"	"1"
-
-			"EffectName"	"particles/units/heroes/hero_night_stalker/nightstalker_night_buff.vpcf"
-			"EffectAttachType"	"follow_origin"
-
-			"OnCreated"
-			{
-				"FireEffect"
-				{
-					"EffectName"	"particles/units/heroes/hero_night_stalker/nightstalker_change.vpcf"
-					"EffectAttachType"	"follow_origin"
-					"Target"		"CASTER"
-				}
-			}
-
-			"OnDestroy"
-			{
-				"FireEffect"
-				{
-					"EffectName"	"particles/units/heroes/hero_night_stalker/nightstalker_change.vpcf"
-					"EffectAttachType"	"follow_origin"
-					"Target"		"CASTER"
-				}
-			}
-
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%statboost"
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%statboost"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%statboost"
-			}
+			"statboost"			"25 45 65 85 105 125"
 		}
 	}
 }
