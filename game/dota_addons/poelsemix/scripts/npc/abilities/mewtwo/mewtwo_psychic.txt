@@ -1,0 +1,71 @@
+"mewtwo_psychic"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                   	"heroes/hero_mewtwo/mewtwo_psychic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityTextureName"			"mewtwo_psychic"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"%range"
+		"AbilityCastPoint"				"0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12 11 10 9"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 95 90 85"
+
+
+			"precache"
+	{	
+		"particle"  "particles/econ/heroes/mewtwo/psychic/mewtwo_psychic.vpcf"
+		"particle"  "particles/units/heroes/hero_mewtwo/mewtwo_psychic_hit.vpcf"
+	}
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"700"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"		"250 300 350 400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"particle_radius"			"100"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"knockback_dist"						"300"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"knockback_time"						"0.3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"		"800 825 850 875"
+			}
+			
+		}
+		
+	}

@@ -4,7 +4,7 @@
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 30
 	m_flConstantRadius = 64.0
-	m_ConstantColor = [ 255, 0, 255, 255 ]
+	m_ConstantColor = [ 153, 50, 204, 255 ]
 	m_nConstantSequenceNumber = 5
 	m_nBehaviorVersion = 5
 	m_nFirstMultipleOverride_BackwardCompat = 4
@@ -43,7 +43,7 @@
 	[
 		{
 			_class = "C_OP_HSVShiftToCP"
-			m_DefaultHSVColor = [ 20, 232, 122, 255 ]
+			m_DefaultHSVColor = [ 20, 232, 122 ]
 		},
 	]
 	m_Emitters = 
@@ -184,11 +184,6 @@
 			m_nOutputField = 4
 		},
 		{
-			_class = "C_INIT_RandomColor"
-			m_ColorMax = [ 255, 0, 255 ]
-			m_ColorMin = [ 255, 0, 255 ]
-		},
-		{
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -228,7 +223,7 @@
 		},
 		{
 			_class = "C_OP_ColorInterpolate"
-			m_ColorFade = [ 139, 0, 139 ]
+			m_ColorFade = [ 186, 85, 211 ]
 		},
 		{
 			_class = "C_OP_InterpolateRadius"

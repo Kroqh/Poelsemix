@@ -4,5 +4,6 @@
 	[
 		"game_state",
 		"player_table",
+		"vector_targeting",
 	]
 }

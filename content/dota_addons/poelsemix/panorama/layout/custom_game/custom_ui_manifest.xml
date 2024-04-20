@@ -1,4 +1,9 @@
 <root>
+
+		<scripts>
+        <include src="file://{resources}/panorama/scripts/custom_game/vector_targeting.js" />
+    	</scripts>
+
 	<script>
 		GameUI.CustomUIConfig().multiteam_top_scoreboard =
 		{
@@ -48,6 +53,8 @@
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_7] = "file://{images}/custom_game/team_icons/team_icon_snake_01.png";
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_8] = "file://{images}/custom_game/team_icons/team_icon_horse_01.png";
 	</script>
+
+
 		
 	<Panel>
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/precache.xml" />
@@ -59,14 +66,10 @@
 		<CustomUIElement type="PregameStrategy" 	layoutfile="file://{resources}/layout/custom_game/multiteam_hero_select_overlay.xml" />
 		<CustomUIElement type="EndScreen" 			layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
 		<CustomUIElement type="GameInfo" 			layoutfile="file://{resources}/layout/custom_game/overthrow_game_info.xml" />
-	
-	<!-- 
-	Custom hero icon test
-	-->
-		
-	
-	
 	</Panel>
+
+	  
+
 </root>
 
 

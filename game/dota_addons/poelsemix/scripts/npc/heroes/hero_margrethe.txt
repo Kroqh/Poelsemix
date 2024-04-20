@@ -1,0 +1,44 @@
+"hero_margrethe"
+{
+	"override_hero"	"npc_dota_hero_queenofpain"			// Hero to override
+	//"model"	""
+	//"ModelScale"	"1.3"
+	//"DisableWearables" "1"
+
+	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+	"AttackRange"			"200"
+	"AttackAcquisitionRange"	"200"
+
+
+	"AttributeBaseStrength"		"20"
+	"AttributeStrengthGain"		"2.4"
+	"AttributeBaseIntelligence"		"20"
+	"AttributeIntelligenceGain"		"2.5"
+	"AttributeBaseAgility"		"25"
+	"AttributeAgilityGain"		"3.4"	
+	"StatusHealth"                "140"
+	"MovementSpeed"               "295"
+
+
+	//"Ability1" "urgot_acid_hunter"				
+	//"Ability2" "urgot_capacitor"
+	//"Ability3" "urgot_corrosive"
+	//"Ability4" "urgot_augmenter"
+	//"Ability5" "generic_hidden"
+	//"Ability6" "urgot_reverser"
+
+	//"Ability10"		"special_bonus_urgot_1"
+	//"Ability11"		"special_bonus_urgot_2"
+	
+	//"Ability12"		"special_bonus_urgot_3"
+	//"Ability13"		"special_bonus_urgot_4"
+	
+	//"Ability14"		"special_bonus_urgot_5"
+	//"Ability15"		"special_bonus_urgot_6"
+	
+	//"Ability16"		"special_bonus_urgot_7"
+	//"Ability17"		"special_bonus_urgot_8"
+                 
+
+
+}

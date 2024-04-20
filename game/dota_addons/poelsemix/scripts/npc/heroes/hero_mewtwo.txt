@@ -1,12 +1,11 @@
 "hero_mewtwo"
 {
-	 HERO: Tusk
 	"override_hero"	"npc_dota_hero_ancient_apparition"			// Hero to override
 	"model"	"models/mewtwo/mewtwo.vmdl"
 	"ModelScale"	"1.8"
 	"DisableWearables" "1"
 	
-	//"Ability1" "mewtwo_psychic"
+	"Ability1" "mewtwo_psychic"
 	"Ability2" "mewtwo_shadow_ball"		
 	"Ability3" "mewtwo_barrier"
 	"Ability4" "mewtwo_teleport"

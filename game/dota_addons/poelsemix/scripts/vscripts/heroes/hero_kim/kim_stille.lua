@@ -1,4 +1,4 @@
-LinkLuaModifier("modifier_stille_cast", "heroes/hero_kim/kim_stille", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_stille_cast", "heroes/hero_kim/kim_stille", LUA_MODIFIER_MOTION_HORIZONTAL)
 kim_stille = kim_stille or class({})
 
 
@@ -18,7 +18,7 @@ function kim_stille:GetCastRange()
 	return range
 end
 
-modifier_stille_cast = class ({})
+modifier_stille_cast = modifier_stille_cast or class ({})
 
 function modifier_stille_cast:IsPurgable() return	false end
 function modifier_stille_cast:IsHidden() return	true end

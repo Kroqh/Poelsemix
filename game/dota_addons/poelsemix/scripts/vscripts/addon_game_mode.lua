@@ -22,11 +22,18 @@ require( "items" )
 require( "utility_functions" )
 require("timers")
 require( "poelse_funcs" )
+require('libs/vector_targeting')
 
 ---------------------------------------------------------------------------
 -- Precache
 ---------------------------------------------------------------------------
 function Precache( context )
+
+	--for vector
+	PrecacheResource( "particle", "particles/ui_mouseactions/custom_range_finder_cone.vpcf", context )
+	PrecacheResource( "particle", "particles/ui_mouseactions/custom_range_finder_cone_dual.vpcf", context )
+
+
 	--Cache the gold bags
 		PrecacheItemByNameSync( "item_bag_of_gold", context )
 		PrecacheResource( "particle", "particles/items2_fx/veil_of_discord.vpcf", context )	
