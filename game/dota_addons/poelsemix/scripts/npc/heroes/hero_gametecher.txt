@@ -6,7 +6,7 @@
 	"MovementSpeed"	"260"
 	"ProjectileModel" "particles/units/heroes/hero_gametecher/gametecher_base_attack.vpcf"
 	
-	"Model" "models/courier/imp/imp.vmdl"
+	"Model" "models/gametecher/gametecher.vmdl"
 	
 	"AbilityLayout" "5"
 	

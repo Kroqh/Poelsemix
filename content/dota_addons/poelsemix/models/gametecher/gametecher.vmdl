@@ -1,0 +1,647 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc35:version{b00eeed0-971d-4307-a91e-31e46956e894} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "imp1.vmat"
+								to = "materials/gametecher/gametecher.vmat"
+							},
+							{
+								from = "imp2.vmat"
+								to = "materials/gametecher/gametecher.vmat"
+							},
+							{
+								from = "imp3.vmat"
+								to = "materials/gametecher/gametecher.vmat"
+							},
+							{
+								from = "imp4.vmat"
+								to = "materials/gametecher/gametecher.vmat"
+							},
+						]
+						use_global_default = true
+						global_default_material = "materials/gametecher/gametecher.vmat"
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_origin"
+						parent_bone = "bone_b6"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "bone_b6"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "bone_b20"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "bone_b21"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "bone_b24"
+						relative_origin = [ 0.346871, -5.992597, 0.254684 ]
+						relative_angles = [ 0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "follow_overhead"
+						parent_bone = "bone_b24"
+						relative_origin = [ -0.234187, -2.16029, 20.746099 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_eyes"
+						parent_bone = "bone_b24"
+						relative_origin = [ -0.34226, -9.764362, 4.452744 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_belly"
+						parent_bone = "bone_b1"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "atttach_ti8_foot_r"
+						parent_bone = "bone_b14"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hand1"
+						parent_bone = "bone_b21"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_eye_r"
+						parent_bone = "bone_b24"
+						relative_origin = [ -0.892888, -10.472762, 5.104767 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_eye_l"
+						parent_bone = "bone_b24"
+						relative_origin = [ 3.59429, -9.80524, 5.137436 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_neck"
+						parent_bone = "bone_b18"
+						relative_origin = [ -0.119373, 3.527034, -2.199432 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								name = "bone_b2"
+								parent_bone = "bone_b2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.821865, -7.547964, -0.5 ]
+								hitbox_maxs = [ 4.821671, 5.510496, 7.353783 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b6"
+								parent_bone = "bone_b6"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.603489, -9.607265, -5.23584 ]
+								hitbox_maxs = [ 9.591553, 3.867579, 14.010296 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b10"
+								parent_bone = "bone_b10"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.520989, -2.721478, -18.965698 ]
+								hitbox_maxs = [ 8.290648, 4.187445, 2.195217 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b16"
+								parent_bone = "bone_b16"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.390594, -4.89306, -20.594532 ]
+								hitbox_maxs = [ 8.15476, 3.544729, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b20"
+								parent_bone = "bone_b20"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.15214, -5.686618, -14.416017 ]
+								hitbox_maxs = [ 4.297651, 4.223138, 1.011238 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b11"
+								parent_bone = "bone_b11"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -8.290562, -2.721478, -18.965698 ]
+								hitbox_maxs = [ 0.535431, 4.187446, 2.195217 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b17"
+								parent_bone = "bone_b17"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -8.148809, -4.917868, -20.599293 ]
+								hitbox_maxs = [ 1.396547, 3.519911, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b21"
+								parent_bone = "bone_b21"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.318384, -5.686611, -14.416947 ]
+								hitbox_maxs = [ 4.131403, 4.223135, 1.010307 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b12"
+								parent_bone = "bone_b12"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.872553, -8.972204, -0.546818 ]
+								hitbox_maxs = [ 3.872406, 1.642967, 5.735825 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b18"
+								parent_bone = "bone_b18"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -10.762339, -15.159428, -2.555801 ]
+								hitbox_maxs = [ 10.7412, 3.53294, 10.8787 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b24"
+								parent_bone = "bone_b24"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -10.12583, -3.138908, -9.399464 ]
+								hitbox_maxs = [ 10.12615, 8.761959, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b5"
+								parent_bone = "bone_b5"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.839944, -0.5, -4.255924 ]
+								hitbox_maxs = [ 1.829218, 9.398607, 1.59972 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b9"
+								parent_bone = "bone_b9"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.64249, -0.5, -1.443119 ]
+								hitbox_maxs = [ 1.642524, 11.142385, 2.041363 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b15"
+								parent_bone = "bone_b15"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.438467, -0.605839, -1.231113 ]
+								hitbox_maxs = [ 1.43853, 9.879166, 5.085274 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b3"
+								parent_bone = "bone_b3"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.771528, -7.403762, -18.925537 ]
+								hitbox_maxs = [ 6.963159, 5.633796, 0.885033 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b7"
+								parent_bone = "bone_b7"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.899143, -2.582386, -12.269919 ]
+								hitbox_maxs = [ 4.487219, 14.033403, 1.417227 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b4"
+								parent_bone = "bone_b4"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.963133, -7.403748, -18.925629 ]
+								hitbox_maxs = [ 3.771554, 5.633806, 0.884941 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_b8"
+								parent_bone = "bone_b8"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.489033, -2.582165, -12.26941 ]
+								hitbox_maxs = [ 3.897329, 14.033623, 1.417736 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "gametecher"
+						filename = "models/gametecher/gametecherv2.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "run"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 105
+						end_frame = 125
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.1
+						fade_out_time = 0.1
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 208
+						end_frame = 234
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 830
+						end_frame = 865
+						framerate = 40.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 422
+						end_frame = 452
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "die"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 1457
+						end_frame = 1480
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast_ult"
+						activity_name = "ACT_DOTA_CAST_ABILITY_6"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 1481
+						end_frame = 1555
+						framerate = 120.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast2"
+						activity_name = "ACT_DOTA_CAST_ABILITY_2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.1
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 936
+						end_frame = 956
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast3"
+						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 1042
+						end_frame = 1080
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "run_thirst"
+						activity_name = "ACT_DOTA_CAST_ABILITY_4"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 313
+						end_frame = 342
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast1"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.1
+						fade_out_time = 0.1
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 521
+						end_frame = 552
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle_rare"
+						activity_name = "ACT_DOTA_IDLE_RARE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.1
+						fade_out_time = 0.1
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 1355
+						end_frame = 1405
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast_ult1"
+						activity_name = "ACT_DOTA_CAST_ABILITY_6"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/gametecher/gametecherv2.fbx"
+						import_bone_scales = false
+						start_frame = 1563
+						end_frame = 1595
+						framerate = 30.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+	}
+}
