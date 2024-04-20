@@ -276,6 +276,7 @@ function COverthrowGameMode:InitGameMode()
 	Convars:SetInt( "dota_server_side_animation_heroesonly", 0 )
 	COverthrowGameMode:SetUpFountains()
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
+	GameRules:GetGameModeEntity():SetDaynightCycleAdvanceRate(5)
 
 
 

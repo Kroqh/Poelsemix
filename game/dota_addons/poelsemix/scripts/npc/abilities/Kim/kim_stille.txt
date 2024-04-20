@@ -10,7 +10,7 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityCooldown"				"20 18 16 14"
 	"AbilityManaCost"				"120"
-	"AbilityCastPoint"				"0.0"
+	"AbilityCastPoint"				"0.2"
 
 	"precache"
 	{
