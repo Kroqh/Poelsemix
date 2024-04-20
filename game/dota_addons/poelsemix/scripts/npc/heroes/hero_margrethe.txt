@@ -17,7 +17,7 @@
 	"AttributeBaseAgility"		"25"
 	"AttributeAgilityGain"		"3.4"	
 	"StatusHealth"                "140"
-	"MovementSpeed"               "295"
+	"MovementSpeed"               "300"
 
 
 	//"Ability1" "urgot_acid_hunter"				

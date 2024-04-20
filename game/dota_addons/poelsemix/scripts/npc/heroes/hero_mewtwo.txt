@@ -4,7 +4,7 @@
 	"model"	"models/mewtwo/mewtwo.vmdl"
 	"ModelScale"	"1.8"
 	"DisableWearables" "1"
-
+	"MovementSpeed"		"295"
 
 	"MovementTurnRate"		"50" //Needed high or he cant fully turn for ult
 	

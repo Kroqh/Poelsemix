@@ -1,0 +1,52 @@
+"gametecher_dropout"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"              "ability_lua"
+	"ScriptFile"			"heroes/hero_gametecher/gametecher_dropout.lua"
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityTextureName"     "dropout"
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+	"HasScepterUpgrade"			"1"
+	
+	//precache
+	"precache"
+	{
+
+		//techies
+		"particle" "particles/econ/items/techies/techies_arcana/techies_suicide_dud_arcana.vpcf"
+		"particle" "particles/econ/courier/courier_drodo/courier_drodo_ambient_death.vpcf"
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"		
+    }
+	
+    // Stats    
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"         "50"
+    "AbilityChannelTime"	"%channel_time"
+
+    "AbilitySpecial"
+    {
+		 "01"
+        {
+            "var_type"                    "FIELD_INTEGER"
+            "xp_gain"             "10 16 22 28" //per level
+        }
+		 "02"
+        {
+            "var_type"                    "FIELD_INTEGER"
+            "xp_gain_minimum"             "125 175 225 275" //to make it better on early levels
+        }
+        "03"
+        {
+            "var_type"                    "FIELD_INTEGER"
+            "penalty_intellect"             "-5"
+        }
+		"03"
+        {
+            "var_type"                    "FIELD_FLOAT"
+            "channel_time"             "1.25"
+        }
+    }
+	
+	
+}
