@@ -41,7 +41,6 @@ function modifier_herobrine_enderdrake_unit_information:OnCreated(kv)
     self.dmg = kv.dmg
 end
 
-
 function modifier_herobrine_enderdrake_unit_information:DeclareFunctions()
 	local decFuncs = {
     MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE,

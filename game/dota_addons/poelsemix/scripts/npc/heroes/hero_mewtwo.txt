@@ -4,6 +4,9 @@
 	"model"	"models/mewtwo/mewtwo.vmdl"
 	"ModelScale"	"1.8"
 	"DisableWearables" "1"
+
+
+	"MovementTurnRate"		"50" //Needed high or he cant fully turn for ult
 	
 	"Ability1" "mewtwo_psychic"
 	"Ability2" "mewtwo_shadow_ball"		
@@ -13,16 +16,16 @@
 	"Ability6" "mewtwo_hyper_beam"
 
 
-	//"Ability10"		"special_bonus_kazuya_5"
-	//"Ability11"		"special_bonus_kazuya_6"
+	"Ability10"		"special_bonus_mewtwo_1"
+	"Ability11"		"special_bonus_mewtwo_2"
 	
-	//"Ability12"		"special_bonus_kazuya_3"
-	//"Ability13"		"special_bonus_kazuya_8"
+	"Ability12"		"special_bonus_mewtwo_3"
+	"Ability13"		"special_bonus_mewtwo_4"
 	
-	//"Ability14"		"special_bonus_kazuya_4"
-	//"Ability15"		"special_bonus_kazuya_7"
+	"Ability14"		"special_bonus_mewtwo_5"
+	"Ability15"		"special_bonus_mewtwo_6"
 	
-	//"Ability16"		"special_bonus_kazuya_1"
-	//"Ability17"		"special_bonus_kazuya_2"
+	"Ability16"		"special_bonus_mewtwo_7"
+	"Ability17"		"special_bonus_mewtwo_8"
 
 }

@@ -1,6 +1,14 @@
 LinkLuaModifier("modifier_mewtwo_shadow_ball_debuff", "heroes/hero_mewtwo/mewtwo_shadow_ball", LUA_MODIFIER_MOTION_NONE)
 mewtwo_shadow_ball = mewtwo_shadow_ball or class({});
 
+
+function mewtwo_shadow_ball:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_2"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_2"):GetSpecialValueFor("value") end
+    return cd
+end
+
+
 function mewtwo_shadow_ball:OnAbilityPhaseStart()
     if IsServer() then
         self:GetCaster():EmitSound("mewtwo_shadow_ball_cast");
@@ -133,6 +141,7 @@ end
 function modifier_mewtwo_shadow_ball_debuff:OnCreated(keys)
 
     self.magic_reduction = self:GetAbility():GetSpecialValueFor("magic_resist_reduction")
+	if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_3"):GetLevel() > 0 then self.magic_reduction = self.magic_reduction + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_3"):GetSpecialValueFor("value") end
 	if IsServer() then 
 		self.hit_particle 	= ParticleManager:CreateParticle("particles/units/heroes/hero_mewtwo/shadow_ball_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetParent());
 		ParticleManager:SetParticleControl(self.hit_particle, 0, self:GetParent():GetAbsOrigin());

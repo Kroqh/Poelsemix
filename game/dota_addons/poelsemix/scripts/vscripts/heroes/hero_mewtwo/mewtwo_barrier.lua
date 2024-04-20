@@ -23,6 +23,7 @@ function modifier_mewtwo_barrier_thinker:OnCreated()
 	if not self:GetAbility() then self:Destroy() return end
 	
 	self.radius	= self:GetAbility():GetSpecialValueFor("radius")
+	if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_6"):GetLevel() > 0 then self.radius = self.radius + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_6"):GetSpecialValueFor("value") end
 	
 	
 	if not IsServer() then return end
@@ -58,6 +59,7 @@ function modifier_mewtwo_barrier_buff:OnCreated()
         
 		self.armor_bonus	= self:GetAbility():GetSpecialValueFor("armor")
         self.magic_bonus	= self:GetAbility():GetSpecialValueFor("magic_resist")
+		if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_4"):GetLevel() > 0 then self.magic_bonus = self.magic_bonus + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_4"):GetSpecialValueFor("value") end
 	else
 		self:Destroy()
 	end

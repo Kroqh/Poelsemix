@@ -1,7 +1,9 @@
 mewtwo_hyper_beam = mewtwo_hyper_beam or class({})
 
 function mewtwo_hyper_beam:GetCastRange()
-    return self:GetSpecialValueFor("range")
+    local range = self:GetSpecialValueFor("range")
+    if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_7"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_7"):GetSpecialValueFor("value") end
+    return range
 end
 
 function mewtwo_hyper_beam:GetChannelTime()
@@ -17,6 +19,7 @@ function mewtwo_hyper_beam:OnSpellStart()
     local caster	= self:GetCaster()
     caster:EmitSound("mewtwo_hyper_beam");
     self.range					=  self:GetSpecialValueFor("range")
+    if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_7"):GetLevel() > 0 then self.range = self.range + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_7"):GetSpecialValueFor("value") end
 	self.vision_radius					= self:GetSpecialValueFor("radius") / 2
 	self.numVision						= math.ceil( self.range / self.vision_radius )
 
@@ -27,8 +30,9 @@ function mewtwo_hyper_beam:OnSpellStart()
 
     self.dmgdealt = 0
 	self.elapsedTime = self.interval
-    
-    self.tickdmg = (self:GetSpecialValueFor("damage") * (self.interval / self:GetSpecialValueFor("channel_duration")))
+    local damage = self:GetSpecialValueFor("damage")
+    if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_8"):GetLevel() > 0 then damage = damage + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_8"):GetSpecialValueFor("value") end
+    self.tickdmg = (damage * (self.interval / self:GetSpecialValueFor("channel_duration")))
 
 
     -- Current position & direction

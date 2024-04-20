@@ -38,7 +38,8 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"		"150 175 200 225"
+				"radius"		"175 200 225 250"
+				"LinkedSpecialBonus" "special_bonus_mewtwo_6"
 			}
 			"02"
 			{
@@ -49,6 +50,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"magic_resist"			"10 15 20 25"
+				"LinkedSpecialBonus" "special_bonus_mewtwo_4"
 			}
 			"04"
 			{

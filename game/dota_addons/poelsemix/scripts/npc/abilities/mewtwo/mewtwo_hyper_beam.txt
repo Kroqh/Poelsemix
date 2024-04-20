@@ -16,7 +16,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.1"
+		"AbilityCastPoint"				"0.25" //Cant get lower or he wont fully turn if cast behind him, invis ult after blink may also be related to low cast point here, DONT LOWER
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -41,6 +41,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"damage"		"1000 1500 2000"
+				"LinkedSpecialBonus" "special_bonus_mewtwo_8"
 			}
 			"02"
 			{
@@ -56,6 +57,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"range"		"600 700 800"
+				"LinkedSpecialBonus" "special_bonus_mewtwo_7"
 			}
 			"04"
 			{

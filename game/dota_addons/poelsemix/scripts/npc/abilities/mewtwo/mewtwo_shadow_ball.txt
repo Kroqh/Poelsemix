@@ -46,7 +46,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"		"100 150 200 250"
+				"damage"		"125 175 225 275"
 			}
 			"03"
 			{
@@ -62,6 +62,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"magic_resist_reduction"		"-20 -25 -30 -35"
+				"LinkedSpecialBonus" "special_bonus_mewtwo_3"
 			}
 			
 		}

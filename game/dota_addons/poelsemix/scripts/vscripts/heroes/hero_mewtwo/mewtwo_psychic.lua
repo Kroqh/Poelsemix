@@ -9,6 +9,11 @@ function mewtwo_psychic:GetCastRange()
 	return range
 end
 
+function mewtwo_psychic:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_1"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_1"):GetSpecialValueFor("value") end
+    return cd
+end
 
 
 
@@ -33,7 +38,12 @@ function mewtwo_psychic:OnVectorCastStart(vStartLocation, vDirection)
 		local range							= self:GetSpecialValueFor("range")
 		local knockback_dist				= self:GetSpecialValueFor("knockback_dist")
 		local knockback_time				= self:GetSpecialValueFor("knockback_time")
-		
+		local pierce_talent = self:GetCaster():FindAbilityByName("special_bonus_mewtwo_5"):GetLevel() > 0
+		local target_type = ability:GetAbilityTargetType()
+
+		if pierce_talent then
+			target_type = target_type + DOTA_UNIT_TARGET_BASIC
+		end
 
 		ProjectileManager:CreateLinearProjectile(
 		{
@@ -45,7 +55,7 @@ function mewtwo_psychic:OnVectorCastStart(vStartLocation, vDirection)
 			fStartRadius = particle_radius,
 			fEndRadius = particle_radius,
 			iUnitTargetTeam = ability:GetAbilityTargetTeam(),
-			iUnitTargetType = ability:GetAbilityTargetType(),
+			iUnitTargetType = target_type,
 			iUnitTargetFlags = ability:GetAbilityTargetFlags(),
 			bDeleteOnHit = true,
 			Source = caster,
@@ -58,7 +68,8 @@ function mewtwo_psychic:OnVectorCastStart(vStartLocation, vDirection)
 				point_1_y = self:GetCursorPosition().y,
 				point_2_x = point.x + vDirection.x,
 				point_2_y = point.y + vDirection.y, --bruh why the fuck cant i just pass the vector instead of this shitty patchwork hack
-				knockback_time = knockback_time
+				knockback_time = knockback_time,
+				pierce_talent = pierce_talent
 			}
 			
 		});	
@@ -87,8 +98,11 @@ function mewtwo_psychic:OnProjectileHit_ExtraData(target, location, extra_data)
 	ApplyDamage(damageTable)
 	EmitSoundOn("mewtwo_psychic_hit", target)
 	target:AddNewModifier(caster, self, "modifier_mewtwo_psychic_kb", {point_1_x = extra_data.point_1_x,point_2_x = extra_data.point_2_x,point_1_y = extra_data.point_1_y,point_2_y = extra_data.point_2_y} )
-
-	return true
+	if  extra_data.pierce_talent ~= 1 then --booleans gets converted to int when passed through extra data for some reason
+		return true
+	else
+		return false
+	end
 end
 
 modifier_mewtwo_psychic_kb = modifier_mewtwo_psychic_kb or class ({})
