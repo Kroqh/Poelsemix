@@ -1,0 +1,459 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc35:version{b00eeed0-971d-4307-a91e-31e46956e894} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "goblinbookworm4.vmat"
+								to = "materials/baseboys/baseboys_1.vmat"
+							},
+							{
+								from = "goblinbookworm3.vmat"
+								to = "materials/baseboys/baseboys_1.vmat"
+							},
+							{
+								from = "goblinbookworm2.vmat"
+								to = "materials/models/development/invisibletexture.vmat"
+							},
+							{
+								from = "goblinbookworm1.vmat"
+								to = "materials/baseboys/baseboys_1.vmat"
+							},
+							{
+								from = "goblinbookworm5.vmat"
+								to = "materials/baseboys/baseboys_1.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/baseboys/baseboys_1.vmat"
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_origin"
+						parent_bone = "Bone_Root01"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Bone_Root01"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "Sword"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "Bone_Hand_L01"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "Jaw"
+						relative_origin = [ 0.0, 0.0, 5.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "follow_overhead"
+						parent_bone = "Jaw"
+						relative_origin = [ 0.0, 0.0, 15.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_eyes"
+						parent_bone = "Jaw"
+						relative_origin = [ 0.0, -5.46523, 4.390747 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								name = "Bone_Chest01"
+								parent_bone = "Bone_Chest01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -21.831678, -23.746479, -10.748539 ]
+								hitbox_maxs = [ 22.330053, 16.900257, 35.213276 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Head01"
+								parent_bone = "Bone_Head01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.882573, -18.433229, -3.308212 ]
+								hitbox_maxs = [ 13.949239, 15.084063, 30.843048 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm1_L01"
+								parent_bone = "Bone_Arm1_L01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.5, -15.781934, -20.539471 ]
+								hitbox_maxs = [ 23.566923, 10.844213, 7.876892 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm2_L01"
+								parent_bone = "Bone_Arm2_L01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.364574, -11.098579, -13.796253 ]
+								hitbox_maxs = [ 8.752209, 9.546402, 2.196808 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm1_R01"
+								parent_bone = "Bone_Arm1_R01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -23.840841, -15.781935, -20.492962 ]
+								hitbox_maxs = [ 0.5, 10.84421, 7.924446 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm2_R01"
+								parent_bone = "Bone_Arm2_R01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.660435, -11.073855, -13.837025 ]
+								hitbox_maxs = [ 8.456341, 9.571126, 2.151314 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Hand_R01"
+								parent_bone = "Bone_Hand_R01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -8.521095, -12.055517, -14.846104 ]
+								hitbox_maxs = [ 9.947941, 11.892836, 2.159729 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Cape_1"
+								parent_bone = "Cape_1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -27.282566, -0.5, -41.902466 ]
+								hitbox_maxs = [ 27.282566, 10.389265, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Pelvis01"
+								parent_bone = "Bone_Pelvis01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -21.835644, -20.683762, -21.763908 ]
+								hitbox_maxs = [ 22.326088, 18.313675, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg1_R01"
+								parent_bone = "Bone_Leg1_R01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -17.240942, -12.737437, -15.169624 ]
+								hitbox_maxs = [ 6.876169, 1.31196, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg2_R01"
+								parent_bone = "Bone_Leg2_R01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.666258, -11.760109, -19.176811 ]
+								hitbox_maxs = [ 1.945147, 14.609268, 0.867908 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg1_L01"
+								parent_bone = "Bone_Leg1_L01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.5, -0.967817, -12.796215 ]
+								hitbox_maxs = [ 5.21239, 0.5, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg2_L01"
+								parent_bone = "Bone_Leg2_L01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.265735, -11.769541, -19.270042 ]
+								hitbox_maxs = [ 12.361749, 14.599834, 0.774677 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "baseboys_model"
+						filename = "models/baseboys/baseboys_model.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "run"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/baseboys/baseboys_model.fbx"
+						import_bone_scales = false
+						start_frame = 104
+						end_frame = 135
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/baseboys/baseboys_model.fbx"
+						import_bone_scales = false
+						start_frame = 177
+						end_frame = 217
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/baseboys/baseboys_model.fbx"
+						import_bone_scales = false
+						start_frame = 5563
+						end_frame = 5593
+						framerate = 40.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/baseboys/baseboys_model.fbx"
+						import_bone_scales = false
+						start_frame = 5625
+						end_frame = 5655
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "die"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/baseboys/baseboys_model.fbx"
+						import_bone_scales = false
+						start_frame = 1145
+						end_frame = 1200
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast_ult"
+						activity_name = "ACT_DOTA_CAST_ABILITY_6"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/baseboys/baseboys_model.fbx"
+						import_bone_scales = false
+						start_frame = 5688
+						end_frame = 5715
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast1"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.1
+						fade_out_time = 0.1
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/baseboys/baseboys_model.fbx"
+						import_bone_scales = false
+						start_frame = 5970
+						end_frame = 6000
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle_rare"
+						activity_name = "ACT_DOTA_IDLE_RARE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.1
+						fade_out_time = 0.1
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/baseboys/baseboys_model.fbx"
+						import_bone_scales = false
+						start_frame = 313
+						end_frame = 415
+						framerate = 30.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+	}
+}

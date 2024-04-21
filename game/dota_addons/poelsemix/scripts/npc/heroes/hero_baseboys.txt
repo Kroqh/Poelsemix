@@ -1,6 +1,10 @@
 "npc_dota_hero_baseboys_datadriven"
 {
 	"override_hero" "npc_dota_hero_meepo"
+
+	"DisableWearables" "1"
+	"ModelScale" "1"
+	"model" "models/baseboys/baseboys_1.vmdl"
 	
 	"AbilityLayout" "4"
 	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"
