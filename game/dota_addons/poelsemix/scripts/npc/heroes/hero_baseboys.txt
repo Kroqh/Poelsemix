@@ -1,4 +1,4 @@
-"npc_dota_hero_baseboys_datadriven"
+"npc_dota_hero_baseboys"
 {
 	"override_hero" "npc_dota_hero_meepo"
 
@@ -8,12 +8,13 @@
 	
 	"AbilityLayout" "4"
 	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"
-	"Ability1" "gunpowder_datadriven"
-	"Ability2" "bomb_b"
-	"Ability3" "choke_datadriven"
+	"Ability1" "baseboys_gunpowder"
+	"Ability2" "baseboys_bomb_b"
+	"Ability3" "baseboys_choke"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
-	"Ability6" "naga_siren_mirror_image"
+	"Ability6" "baseboys_concert"
+	"Ability7" "generic_hidden"
 
 	"Ability10"  "special_bonus_attack_speed_15"
 	"Ability11"  "special_bonus_strength_10"
@@ -22,7 +23,7 @@
 	"Ability14" "special_bonus_all_stats_12"
 	"Ability15" "special_bonus_armor_20"
 	"Ability16" "special_bonus_attack_speed_100"
-	"Ability17" "special_bonus_unique_naga_siren"
+	"Ability17" "special_bonus_baseboys_8"
 
 
 	"MovementSpeed"               "305"

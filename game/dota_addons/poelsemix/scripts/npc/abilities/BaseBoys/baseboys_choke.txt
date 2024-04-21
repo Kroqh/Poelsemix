@@ -1,10 +1,10 @@
-"choke_datadriven"
+"baseboys_choke"
 {
 	//General
 	//--------------------------
 	"BaseClass" "ability_datadriven"
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_baseboys/hero_baseboys"
+	"ScriptFile"			"heroes/hero_baseboys/baseboys_choke"
 	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "hej_mathilde"

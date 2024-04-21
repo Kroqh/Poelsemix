@@ -1,9 +1,9 @@
-"bomb_b"
+"baseboys_bomb_b"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile" "heroes/hero_baseboys/hero_baseboys"
+	"ScriptFile" "heroes/hero_baseboys/baseboys_bomb_b"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"

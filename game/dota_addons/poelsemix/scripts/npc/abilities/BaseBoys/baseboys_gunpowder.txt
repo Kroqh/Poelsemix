@@ -1,0 +1,72 @@
+"baseboys_gunpowder"
+{
+	//General
+	//--------------------------
+	"BaseClass" "ability_lua"
+	"ScriptFile" "heroes/hero_baseboys/baseboys_gunpowder"
+	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName" "gunpowder"
+	"HasScepterUpgrade"	 "1"
+	
+	//Precache
+	//--------------------------
+	"precache"
+	{
+		"soundfile" "soundevents/baseboys_sounds.vsndevts"
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		"particle"	"particles/units/heroes/hero_baseboys/gunpower_red.vpcf"
+		"particle"	"particles/units/heroes/hero_baseboys/gunpower_green.vpcf"
+		"particle"	"particles/units/heroes/hero_baseboys/gunpower_blue.vpcf"
+		"particle"	"particles/units/heroes/hero_baseboys/gunpower_rainbow.vpcf"
+		"particle"	"particles/status_fx/status_effect_gods_strength.vpcf"
+	}
+	
+	//Casting
+	//--------------------------
+	"AbilityCastPoint" "0.2"
+	
+	//Time
+	//--------------------------
+	"AbilityCooldown" "30 28 26 24"
+
+	//Cost
+	//--------------------------
+	"AbilityManaCost" "100 95 90 85"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"model_scale" "1.5"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "5 6 7 8"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_main_stat" "50 75 100 125" 
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"aghs_red_armor" "30" 
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"aghs_green_as" "30" 
+		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"aghs_blue_mr" "20" 
+		}
+	}
+}
+
+

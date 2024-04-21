@@ -81,7 +81,7 @@ end
 
 function modifier_damian_fadedthanaho_stack:GetModifierBaseAttackTimeConstant()
     if not IsServer() then return end
-    return_value = baseattacktimehero + (self:GetAbility():GetSpecialValueFor("base_attack_time_buff_per_stack") * self:GetStackCount())
+    local return_value = baseattacktimehero + (self:GetAbility():GetSpecialValueFor("base_attack_time_buff_per_stack") * self:GetStackCount())
 	return  return_value
 end 
 
