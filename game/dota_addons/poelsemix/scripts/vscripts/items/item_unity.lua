@@ -28,8 +28,8 @@ function modifier_item_unity:GetModifierPreAttack_BonusDamage()
 		local agi = self:GetParent():GetAgility()
 		local damage = self:GetAbility():GetSpecialValueFor("damage")
 		
-		damage = damage - abs(min(int,agi,str) - max(int,agi,str)) --gets gap between best and worst attribute
-		print(abs(min(int,agi,str) - max(int,agi,str)) )
+		damage = damage - math.abs(math.min(int,agi,str) - math.max(int,agi,str)) --gets gap between best and worst attribute
+		
         return damage
     end
 end
