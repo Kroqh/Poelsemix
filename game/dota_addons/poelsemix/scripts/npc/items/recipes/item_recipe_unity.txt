@@ -1,14 +1,14 @@
-"item_recipe_htx"
+"item_recipe_unity"
   	{
   		"BaseClass"                 "item_datadriven"
   		"AbilityTextureName"        "recipe"
   		"Model"						"models/props_gameplay/recipe.mdl"
-  		"ItemCost"					"0"
+  		"ItemCost"					"1100"
 		"ItemShopTags"				""
 		"ItemRecipe"				"1"
-		"ItemResult"				"item_htx"
+		"ItemResult"				"item_unity"
 		"ItemRequirements"
 		{
-			"01" "item_octarine_core;item_staff_of_wizardry;item_staff_of_wizardry"
+			"01" "item_reaver;item_eagle;item_mystic_staff"
 		}
   	}

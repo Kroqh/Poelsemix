@@ -65,6 +65,7 @@
 		//"item"		"item_claymore"				
 		//"item"		"item_javelin"
 		//"item"		"item_mithril_hammer"
+
 		"item"		"item_sange_yasha_lator"
 		
 		"item"		"item_hjemmevaernet"
@@ -77,6 +78,7 @@
 		"item"          "item_pocket_gametecher"
 		"item"		"item_abaddon_lichcap"
 		"item"		"item_trump_card"
+		"item"		"item_unity"
 		
 		
 		

@@ -23,32 +23,32 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"int" "80"
+			"int" "70"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"mana" "1000"
+			"mana" "800"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"mana_regen" "6"
+			"mana_regen" "10"
 		}
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"dmg" "40"
+			"dmg" "30" //spell amp
 		}
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
-			"cdr" "35"
+			"cdr" "30"
 		}
 		"06"
 		{
 			"var_type" "FIELD_INTEGER"
-			"health" "575"
+			"health" "650"
 		}
 	}
 	

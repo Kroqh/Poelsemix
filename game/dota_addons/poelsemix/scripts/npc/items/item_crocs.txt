@@ -19,7 +19,7 @@
 		"01"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"stat_gain" "25"
+			"stat_gain" "20"
 		}
 		"02"
 		{

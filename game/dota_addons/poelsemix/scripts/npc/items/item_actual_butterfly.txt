@@ -26,22 +26,22 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"agility"					"140"
+			"agility"					"125"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"as" "160"
+			"as" "145"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage" "100"
+			"damage" "80"
 		}
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"evasion" "50"
+			"evasion" "45"
 		}
 		"05"
 		{

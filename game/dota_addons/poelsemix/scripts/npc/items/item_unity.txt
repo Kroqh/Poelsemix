@@ -1,0 +1,45 @@
+"item_unity"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_lua"
+  	"AbilityTextureName"        "unity"
+	"ScriptFile"					"items/item_unity.lua"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"9500"
+  	"ID"						"3053"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;str;int;agi"
+	"ItemQuality"					"epic"
+	"ItemAliases"					""
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage"					"65"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"all_attributes"					"35"
+		}
+		"01"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"damage_loss_per_stat_diff"					"1"
+		}
+
+	}	
+}

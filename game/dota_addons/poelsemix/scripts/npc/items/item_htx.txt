@@ -23,27 +23,32 @@
 		"01"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"health" "575"
+			"health" "625"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"mana" "575"
+			"mana" "625"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"int" "45"
+			"int" "35"
 		}
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"cdr" "35"
+			"cdr" "30"
 		}
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
 			"dmg" "15"
+		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"mana_regen" "6"
 		}
 	}
 	
@@ -60,7 +65,7 @@
 				"MODIFIER_PROPERTY_HEALTH_BONUS" "%health"
 				"MODIFIER_PROPERTY_MANA_BONUS" "%mana"
 				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%int"
-				
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_regen"
 				"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%dmg"
 		        "MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%cdr"		        
 			}
