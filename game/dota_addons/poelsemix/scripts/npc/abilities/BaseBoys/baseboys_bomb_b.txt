@@ -4,16 +4,18 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
 	"ScriptFile" "heroes/hero_baseboys/baseboys_bomb_b"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "bombe_b"
 	
 	"precache"
 	{
 		"soundfile"		"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
-		"particle"		"particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
+		"particle"		"particles/units/heroes/hero_baseboys/baseboys_bomb_b.vpcf"
 	}
 
 	// Casting
@@ -38,22 +40,24 @@
 		"02"
 		{
 			"var_type" "FIELD_FLOAT"			
-			"duration" "5"
+			"duration" "3"
+			"LinkedSpecialBonus" "special_bonus_baseboys_3"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
 			"damage" "60 90 120 150"
+			"LinkedSpecialBonus" "special_bonus_baseboys_5"
 		}
 		"04"
 		{
 			"var_type" "FIELD_FLOAT"
-			"stun_duration" "4"
+			"stun_duration" "1.5"
 		}
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
-			"radius" "300"
+			"radius" "225"
 		}
 		"06"
 		{

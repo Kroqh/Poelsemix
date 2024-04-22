@@ -385,7 +385,7 @@
 					{
 						_class = "AnimFile"
 						name = "cast_ult"
-						activity_name = "ACT_DOTA_CAST_ABILITY_6"
+						activity_name = "ACT_DOTA_CAST_ABILITY_2"
 						activity_weight = 1
 						weight_list_name = ""
 						fade_in_time = 0.2

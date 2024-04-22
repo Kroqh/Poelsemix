@@ -11,7 +11,14 @@ function baseboys_gunpowder:OnSpellStart()
 		caster:EmitSound("Hero_Sven.GodsStrength")
 		self:ApplyDrink(caster)
 
-        --TODO: Make concert members also drink
+        local illusions = caster:FindAbilityByName("baseboys_concert"):GetIllusions()
+        if illusions then
+            for _, illusion in pairs(illusions) do
+                if IsValidEntity(illusion) and illusion:IsAlive() then
+                    self:ApplyDrink(illusion)
+                end
+            end
+        end
 	end
 end
 
@@ -19,6 +26,8 @@ function baseboys_gunpowder:ApplyDrink(drinker)
     
     local caster = self:GetCaster()
 	local duration = self:GetSpecialValueFor("duration")
+    if self:GetCaster():FindAbilityByName("special_bonus_baseboys_2"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_baseboys_2"):GetSpecialValueFor("value") end
+    drinker:StartGesture(ACT_DOTA_CAST_ABILITY_1)
    
 	drinker:EmitSound("gratisgunpowder")
     local roll = 4
@@ -33,20 +42,20 @@ function baseboys_gunpowder:ApplyDrink(drinker)
 
     
     if roll == 1 then 
-        caster:AddNewModifier(caster, self, "modifier_gunpowder", {duration = duration, type = 1}) 
-        local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_baseboys/gunpower_red.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+        drinker:AddNewModifier(caster, self, "modifier_gunpowder", {duration = duration, type = 1}) 
+        local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_baseboys/gunpower_red.vpcf", PATTACH_ABSORIGIN_FOLLOW, drinker)
 	    ParticleManager:SetParticleControl(pfx, 0, drinker:GetAbsOrigin())
     elseif roll == 2 then 
-        caster:AddNewModifier(caster, self, "modifier_gunpowder", {duration = duration, type = 2}) 
-        local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_baseboys/gunpower_green.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+        drinker:AddNewModifier(caster, self, "modifier_gunpowder", {duration = duration, type = 2}) 
+        local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_baseboys/gunpower_green.vpcf", PATTACH_ABSORIGIN_FOLLOW, drinker)
 	    ParticleManager:SetParticleControl(pfx, 0, drinker:GetAbsOrigin())
     elseif roll == 3 then 
-        caster:AddNewModifier(caster, self, "modifier_gunpowder", {duration = duration, type = 3}) 
-        local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_baseboys/gunpower_blue.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+        drinker:AddNewModifier(caster, self, "modifier_gunpowder", {duration = duration, type = 3}) 
+        local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_baseboys/gunpower_blue.vpcf", PATTACH_ABSORIGIN_FOLLOW, drinker)
 	    ParticleManager:SetParticleControl(pfx, 0, drinker:GetAbsOrigin())
     elseif roll == 4 then 
-        caster:AddNewModifier(caster, self, "modifier_gunpowder", {duration = duration, type = 4}) 
-        local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_baseboys/gunpower_rainbow.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+        drinker:AddNewModifier(caster, self, "modifier_gunpowder", {duration = duration, type = 4}) 
+        local pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_baseboys/gunpower_rainbow.vpcf", PATTACH_ABSORIGIN_FOLLOW, drinker)
 	    ParticleManager:SetParticleControl(pfx, 0, drinker:GetAbsOrigin())
 
     end
@@ -59,6 +68,7 @@ function modifier_gunpowder:OnCreated(keys)
         
         local ability = self:GetAbility()
         local caster = self:GetCaster()
+        local parent = self:GetParent()
         local scale = ability:GetSpecialValueFor("model_scale")
         local main_stat = ability:GetSpecialValueFor("bonus_main_stat")
         self.bonus_strength = 0
@@ -90,8 +100,8 @@ function modifier_gunpowder:OnCreated(keys)
         
         self:SetHasCustomTransmitterData(true)
         
-        if self.orig_size == nil then self.orig_size = caster:GetModelScale() end
-        caster:SetModelScale(scale)
+        if self.orig_size == nil then self.orig_size = parent:GetModelScale() end
+        parent:SetModelScale(scale)
 	end
 end
 
@@ -179,7 +189,7 @@ end
 
 function modifier_gunpowder:OnRemoved()
 	if IsServer() then
-		local caster = self:GetCaster()
-		caster:SetModelScale(self.orig_size)
+		local parent = self:GetParent()
+		parent:SetModelScale(self.orig_size)
 	end
 end

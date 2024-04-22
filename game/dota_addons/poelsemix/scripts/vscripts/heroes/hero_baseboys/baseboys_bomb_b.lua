@@ -10,13 +10,26 @@ function baseboys_bomb_b:OnSpellStart()
 	if IsServer() then
 		local caster = self:GetCaster()
 		local duration = self:GetSpecialValueFor("duration")
+		if self:GetCaster():FindAbilityByName("special_bonus_baseboys_4"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_baseboys_4"):GetSpecialValueFor("value") end
 
 		caster:AddNewModifier(caster, self, "modifier_bomb_b", {duration = duration})
 		self:EmitSound("bombe_paa_b")
+
+		local illusions = caster:FindAbilityByName("baseboys_concert"):GetIllusions()
+        if illusions then
+            for _, illusion in pairs(illusions) do
+                if IsValidEntity(illusion) and illusion:IsAlive() then
+                    illusion:AddNewModifier(caster, self, "modifier_bomb_b", {duration = duration})
+					illusion:EmitSound("bombe_paa_b")
+                end
+            end
+        end
+
+
 	end
 end
 
-modifier_bomb_b = class({})
+modifier_bomb_b = modifier_bomb_b or class({})
 
 function modifier_bomb_b:OnCreated()
 	if IsServer() then
@@ -25,10 +38,11 @@ function modifier_bomb_b:OnCreated()
 
 		self.radius = ability:GetSpecialValueFor("radius")
 		self.damage = ability:GetSpecialValueFor("damage")
+		if self:GetCaster():FindAbilityByName("special_bonus_baseboys_5"):GetLevel() > 0 then self.damage = self.damage + self:GetCaster():FindAbilityByName("special_bonus_baseboys_5"):GetSpecialValueFor("value") end
 		self.stun_duration = ability:GetSpecialValueFor("stun_duration")
 		self.mini_stun_duration = ability:GetSpecialValueFor("mini_stun_duration")
 
-		self.particle = "particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
+		self.particle = "particles/units/heroes/hero_baseboys/baseboys_bomb_b.vpcf"
 
 		self.bombCounter = 0
 		self.bombsHit = 0
@@ -40,25 +54,25 @@ end
 function modifier_bomb_b:OnIntervalThink()
 	if IsServer() then
 		self.bombCounter = self.bombCounter + 1
-		local caster = self:GetParent()
-		local caster_pos = caster:GetAbsOrigin()
+		local parent = self:GetParent()
+		local parent_pos = parent:GetAbsOrigin()
 		local ability = self:GetAbility()
 
-		local heroes = FindUnitsInRadius(caster:GetTeamNumber(), caster_pos, nil, self.radius, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+		local heroes = FindUnitsInRadius(parent:GetTeamNumber(), parent_pos, nil, self.radius, ability:GetAbilityTargetTeam(), ability:GetAbilityTargetType(), ability:GetAbilityTargetFlags(), FIND_ANY_ORDER, false)
 		
 		ability:EmitSound("Hero_Techies.Suicide")
 
-		local pfx = ParticleManager:CreateParticle(self.particle, PATTACH_ABSORIGIN_FOLLOW, caster)
-		ParticleManager:SetParticleControl(pfx, 0, caster_pos)
-		ParticleManager:SetParticleControl(pfx, 2, Vector(1.5,1.5,1.5))
+		local pfx = ParticleManager:CreateParticle(self.particle, PATTACH_ABSORIGIN_FOLLOW, parent)
+		ParticleManager:SetParticleControl(pfx, 0, parent_pos)
+		ParticleManager:SetParticleControl(pfx, 2, Vector(0.2,0.2,0.2))
 
 		if #heroes == 0 then
 			return nil
 		end
 
 		for _, enemy in pairs(heroes) do
-			ApplyDamage({victim = enemy, attacker = caster, damage_type = DAMAGE_TYPE_MAGICAL, damage = self.damage, ability = ability})
-			enemy:AddNewModifier(caster, ability, "modifier_bomb_b_stun", {duration = self.mini_stun_duration})
+			ApplyDamage({victim = enemy, attacker = parent, damage_type = ability:GetAbilityDamageType(), damage = self.damage, ability = ability})
+			enemy:AddNewModifier(parent, ability, "modifier_bomb_b_stun", {duration = self.mini_stun_duration})
 		end
 
 		self.bombsHit = self.bombsHit + 1
@@ -67,19 +81,17 @@ end
 
 function modifier_bomb_b:OnRemoved()
 	if IsServer() then
-		if self.bombsHit < self.bombCounter then
-			print("bomb missed once. caster stunned.")
-			local caster = self:GetParent()
-			local ability = self:GetAbility()
-			caster:AddNewModifier(caster, ability, "modifier_bomb_b_stun", {duration = self.stun_duration})
-			ability:EmitSound("FUCKDIG")
-		end
+		local parent = self:GetParent()
+		local ability = self:GetAbility()
+		parent:AddNewModifier(parent, ability, "modifier_bomb_b_stun", {duration = self.stun_duration})
+		ability:EmitSound("FUCKDIG")
 	end
 end
 
-modifier_bomb_b_stun = class({})
+modifier_bomb_b_stun = modifier_bomb_b_stun or class({})
 
-function modifier_bomb_b_stun:IsPurgeable() return false end
+function modifier_bomb_b_stun:IsPurgable() return true end
+function modifier_bomb_b_stun:IsDebuff() return true end
 function modifier_bomb_b_stun:IsHidden() return false end
 
 function modifier_bomb_b_stun:GetEffectName()

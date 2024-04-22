@@ -1,5 +1,5 @@
 LinkLuaModifier("modifier_choke", "heroes/hero_baseboys/baseboys_choke", LUA_MODIFIER_MOTION_NONE)
-LinkLuaModifier("modifier_choke_stun", "heroes/hero_baseboys/baseboy_choke", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_choke_stun", "heroes/hero_baseboys/baseboys_choke", LUA_MODIFIER_MOTION_NONE)
 baseboys_choke = baseboys_choke or class({})
 
 function baseboys_choke:GetAbilityTextureName()
@@ -16,7 +16,7 @@ function modifier_choke:IsHidden() return true end
 
 function modifier_choke:DeclareFunctions()
 	local decFuncs = 
-	{MODIFIER_EVENT_ON_ATTACKED, MODIFIER_EVENT_ON_ABILITY_EXECUTED}
+	{MODIFIER_EVENT_ON_ATTACKED}
 	return decFuncs
 end
 
@@ -26,8 +26,8 @@ function modifier_choke:OnAttacked(keys)
 		if keys.target == self:GetParent() then
 
 			local ability = self:GetAbility()
-			local chance = ability:GetSpecialValueFor("chance") 
-			local duration = ability:GetSpecialValueFor("duration")
+			local chance = ability:GetSpecialValueFor("chance")
+			if self:GetCaster():FindAbilityByName("special_bonus_baseboys_3"):GetLevel() > 0 then chance = chance + self:GetCaster():FindAbilityByName("special_bonus_baseboys_3"):GetSpecialValueFor("value") end 
 			local caster = self:GetParent()
 
 			if caster:PassivesDisabled() or caster:IsHexed() then
@@ -35,27 +35,15 @@ function modifier_choke:OnAttacked(keys)
 			end
 
 			if RollPseudoRandom(chance, self) then
-
+				local duration = ability:GetSpecialValueFor("duration")
+				if self:GetCaster():FindAbilityByName("special_bonus_baseboys_1"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_baseboys_1"):GetSpecialValueFor("value") end
 				keys.attacker:AddNewModifier(caster, ability, "modifier_choke_stun", {duration = duration})
-				ability:EmitSound("hej_mathilde")
+				caster:EmitSound("hej_mathilde")
 			end
 		end
 	end
 end
 
-function modifier_choke:OnAbilityExecuted(keys) --move to the actual ability lol?
-	if IsServer() then
-		local parent = self:GetParent()
-		if keys.unit == parent and keys.ability:GetAbilityName() == "naga_siren_mirror_image" then
-			
-			if parent:HasItemInInventory("item_norwegian_eul") then
-				parent:EmitSound("baseboys_1000_norsk")
-			else
-				parent:EmitSound("baseboys_1000_dansk")
-			end
-		end
-	end
-end
 
 modifier_choke_stun = class({})
 

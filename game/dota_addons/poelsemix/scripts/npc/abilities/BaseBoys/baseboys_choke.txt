@@ -9,7 +9,7 @@
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "hej_mathilde"
 
-	"MaxLevel" "5"
+	"MaxLevel" "4"
 	
 	//Casting
 	//--------------------------
@@ -21,12 +21,14 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"chance" "10 15 20 25 30"
+			"chance" "10 15 20 25"
+			"LinkedSpecialBonus" "special_bonus_baseboys_3"
 		}
 		"02"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration" "0.4"
+			"duration" "0.25"
+			"LinkedSpecialBonus" "special_bonus_baseboys_1"
 		}
 	}
 }

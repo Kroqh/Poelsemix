@@ -16,13 +16,13 @@
 	"Ability6" "baseboys_concert"
 	"Ability7" "generic_hidden"
 
-	"Ability10"  "special_bonus_attack_speed_15"
-	"Ability11"  "special_bonus_strength_10"
-	"Ability12"  "special_bonus_evasion_15"
-	"Ability13"  "special_bonus_hp_500"
-	"Ability14" "special_bonus_all_stats_12"
-	"Ability15" "special_bonus_armor_20"
-	"Ability16" "special_bonus_attack_speed_100"
+	"Ability10"  "special_bonus_baseboys_1"
+	"Ability11"  "special_bonus_baseboys_2"
+	"Ability12"  "special_bonus_baseboys_3"
+	"Ability13"  "special_bonus_baseboys_4"
+	"Ability14" "special_bonus_baseboys_5"
+	"Ability15" "special_bonus_baseboys_6"
+	"Ability16" "special_bonus_baseboys_7"
 	"Ability17" "special_bonus_baseboys_8"
 
 

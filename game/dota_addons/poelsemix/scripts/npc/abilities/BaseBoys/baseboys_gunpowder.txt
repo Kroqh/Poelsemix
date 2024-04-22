@@ -4,7 +4,7 @@
 	//--------------------------
 	"BaseClass" "ability_lua"
 	"ScriptFile" "heroes/hero_baseboys/baseboys_gunpowder"
-	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING  | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "gunpowder"
 	"HasScepterUpgrade"	 "1"
@@ -24,7 +24,7 @@
 	
 	//Casting
 	//--------------------------
-	"AbilityCastPoint" "0.2"
+	"AbilityCastPoint" "0"
 	
 	//Time
 	//--------------------------
@@ -45,6 +45,7 @@
 		{
 			"var_type" "FIELD_FLOAT"
 			"duration" "5 6 7 8"
+			"LinkedSpecialBonus" "special_bonus_baseboys_2"
 		}
 		"03"
 		{
