@@ -1,4 +1,4 @@
-<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc32:version{c5dcef98-b629-46ab-88e3-a17c005c935e} -->
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc35:version{b00eeed0-971d-4307-a91e-31e46956e894} -->
 {
 	rootNode = 
 	{
@@ -152,8 +152,8 @@
 						source_filename = "models/slapper/slapperv3.fbx"
 						import_bone_scales = false
 						start_frame = 422
-						end_frame = 435
-						framerate = 30.0
+						end_frame = 434
+						framerate = 25.0
 						reverse = false
 					},
 					{
@@ -174,8 +174,8 @@
 						source_filename = "models/slapper/slapperv3.fbx"
 						import_bone_scales = false
 						start_frame = 373
-						end_frame = 390
-						framerate = 30.0
+						end_frame = 389
+						framerate = 25.0
 						reverse = false
 					},
 					{

@@ -340,6 +340,10 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("urgot_augmenter")
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
+	if hero:GetUnitName() == "npc_dota_hero_magnataur" then
+		local ability = hero:FindAbilityByName("slapper_bum_hunter")
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
+	end
 
 
 	if hero:GetUnitName() == "npc_dota_hero_crystal_maiden" then

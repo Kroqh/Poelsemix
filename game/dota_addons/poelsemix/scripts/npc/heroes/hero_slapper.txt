@@ -8,7 +8,7 @@
 	"Ability1" "musashi_earth"				
 	"Ability2" "musashi_fire"
 	"Ability3" "musashi_wind"
-	"Ability4" "musashi_water"
+	"Ability4" "slapper_bum_hunter"
 	"Ability5" "generic_hidden"
 	"Ability6" "slapper_rammusteinu"
 
