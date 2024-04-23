@@ -1,0 +1,138 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf59:version{6cf97bfa-52a0-441a-87f0-856fb7aaa129} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 32
+	m_flConstantRadius = 100.0
+	m_ConstantColor = [ 188, 37, 2, 255 ]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_ash.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_ember.vpcf"
+		},
+		{
+			m_flDelay = 0.15
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_target.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_sparks.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_arc.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_core.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_a_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_a_c.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_a_fire.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_source.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_prnt.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_glowb.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_glowc.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_flare.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_gametecher/gametecher_finger_a_glow.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 4
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 60
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 143.0, 247.0, 229.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 61
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 62
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.418167, -0.384241, -0.023715 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		{
+			_class = "C_OP_HSVShiftToCP"
+			m_DefaultHSVColor = [ 253, 135, 80, 255 ]
+		},
+	]
+	m_nBehaviorVersion = 12
+}

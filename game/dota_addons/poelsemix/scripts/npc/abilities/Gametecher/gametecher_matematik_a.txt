@@ -23,7 +23,6 @@
 	"precache"
 	{
 
-		//techies
 		"particle" "particles/units/heroes/hero_gametecher/mat_a.vpcf"
     }
 	
@@ -47,7 +46,7 @@
 		"04"
 		{
 			"var_type" "FIELD_FLOAT"
-			"bonus_duration" "20"
+			"bonus_duration" "20" //To cover a full ult
 		}
 	}
 	
