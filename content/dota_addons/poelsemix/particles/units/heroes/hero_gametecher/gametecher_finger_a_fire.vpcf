@@ -93,8 +93,8 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin = [ 46, 17, 3 ]
-			m_ColorMax = [ 22, 12, 5 ]
+			m_ColorMin = [ 2, 35, 2 ]
+			m_ColorMax = [ 0, 67, 0 ]
 		},
 		{
 			_class = "C_INIT_RingWave"

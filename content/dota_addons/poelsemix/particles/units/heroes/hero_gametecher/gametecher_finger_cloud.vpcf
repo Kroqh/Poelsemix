@@ -4,23 +4,166 @@
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 32
 	m_flConstantRadius = 100.0
-	m_ConstantColor = [ 106, 20, 0, 255 ]
+	m_ConstantColor = [ 0, 128, 128, 255 ]
 	m_nConstantSequenceNumber1 = 3
-	m_Renderers = 
+	m_nBehaviorVersion = 5
+	m_controlPointConfigurations = 
 	[
 		{
-			_class = "C_OP_RenderSprites"
-			m_flOverbrightFactor = 3.0
-			m_flAnimationRate = 1.0
-			m_nHSVShiftControlPoint = 62
-			m_vecTexturesInput = 
+			m_name = "preview"
+			m_drivers = 
 			[
 				{
-					m_hTexture = resource:"materials/particle/electrical_arc_white/electrical_arc_white.vtex"
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 62
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
 				},
 			]
-			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
-			m_nFogType = "PARTICLE_FOG_GAME_DEFAULT"
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmissionDuration = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.2
+			}
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 120.0
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.2
+				m_flRandomMax = 0.6
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.0
+				m_flRandomMax = 360.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMax = [ 60, 179, 113 ]
+			m_ColorMin = [ 0, 100, 0 ]
+		},
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 3
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 0.0
+				m_NamedValue = ""
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 40.0
+				m_flRandomMax = 50.0
+				m_bHasRandomSignFlip = false
+				m_nRandomSeed = -1
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flLOD0 = 0.0
+				m_flLOD1 = 0.0
+				m_flLOD2 = 0.0
+				m_flLOD3 = 0.0
+				m_nNoiseInputVectorAttribute = 0
+				m_flNoiseOutputMin = 0.0
+				m_flNoiseOutputMax = 1.0
+				m_flNoiseScale = 0.1
+				m_vecNoiseOffsetRate = [ 0.0, 0.0, 0.0 ]
+				m_flNoiseOffset = 0.0
+				m_nNoiseOctaves = 1
+				m_nNoiseTurbulence = "PF_NOISE_TURB_NONE"
+				m_nNoiseType = "PF_NOISE_TYPE_PERLIN"
+				m_nNoiseModifier = "PF_NOISE_MODIFIER_NONE"
+				m_flNoiseTurbulenceScale = 1.0
+				m_flNoiseTurbulenceMix = 0.5
+				m_flNoiseImgPreviewScale = 1.0
+				m_bNoiseImgPreviewLive = true
+				m_flNoCameraFallback = 0.0
+				m_bUseBoundsCenter = false
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.0
+				m_flInput0 = 0.0
+				m_flInput1 = 1.0
+				m_flOutput0 = 0.0
+				m_flOutput1 = 1.0
+				m_flNotchedRangeMin = 0.0
+				m_flNotchedRangeMax = 1.0
+				m_flNotchedOutputOutside = 0.0
+				m_flNotchedOutputInside = 1.0
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.0
+				m_Curve = 
+				{
+					m_spline = [  ]
+					m_tangents = [  ]
+					m_vDomainMins = [ 0.0, 0.0 ]
+					m_vDomainMaxs = [ 0.0, 0.0 ]
+				}
+			}
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.0
+				m_flRandomMax = 360.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = -30.0
+				m_flRandomMax = 30.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 5
+		},
+		{
+			_class = "C_INIT_CreateFromParentParticles"
 		},
 	]
 	m_Operators = 
@@ -58,7 +201,7 @@
 		},
 		{
 			_class = "C_OP_ColorInterpolate"
-			m_ColorFade = [ 76, 28, 16, 255 ]
+			m_ColorFade = [ 85, 107, 47 ]
 		},
 		{
 			_class = "C_OP_VectorNoise"
@@ -77,170 +220,20 @@
 			_class = "C_OP_SpinUpdate"
 		},
 	]
-	m_Initializers = 
+	m_Renderers = 
 	[
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
-			_class = "C_INIT_InitFloat"
-			m_InputValue = 
-			{
-				m_nType = "PF_TYPE_RANDOM_UNIFORM"
-				m_flRandomMin = 0.2
-				m_flRandomMax = 0.6
-				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
-			}
-			m_nOutputField = 1
-		},
-		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
-			_class = "C_INIT_InitFloat"
-			m_InputValue = 
-			{
-				m_nType = "PF_TYPE_RANDOM_UNIFORM"
-				m_flRandomMin = 0.0
-				m_flRandomMax = 360.0
-				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
-				m_bHasRandomSignFlip = true
-			}
-			m_nOutputField = 4
-		},
-		{
-			_class = "C_INIT_RandomColor"
-			m_ColorMax = [ 255, 144, 0, 255 ]
-			m_ColorMin = [ 255, 218, 174, 255 ]
-		},
-		{
-			_class = "C_INIT_RandomSequence"
-			m_nSequenceMax = 3
-		},
-		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
-			_class = "C_INIT_InitFloat"
-			m_InputValue = 
-			{
-				m_nType = "PF_TYPE_RANDOM_UNIFORM"
-				m_flRandomMin = 40.0
-				m_flRandomMax = 70.0
-				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
-			}
-			m_nOutputField = 3
-		},
-		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
-			_class = "C_INIT_InitFloat"
-			m_InputValue = 
-			{
-				m_nType = "PF_TYPE_RANDOM_UNIFORM"
-				m_flRandomMin = 0.0
-				m_flRandomMax = 360.0
-				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
-				m_bHasRandomSignFlip = true
-			}
-			m_nOutputField = 4
-		},
-		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
-			_class = "C_INIT_InitFloat"
-			m_InputValue = 
-			{
-				m_nType = "PF_TYPE_RANDOM_UNIFORM"
-				m_flRandomMin = -30.0
-				m_flRandomMax = 30.0
-				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
-				m_bHasRandomSignFlip = true
-			}
-			m_nOutputField = 5
-		},
-		{
-			_class = "C_INIT_CreateFromParentParticles"
+			_class = "C_OP_RenderSprites"
+			m_flOverbrightFactor = 3.0
+			m_flAnimationRate = 1.0
+			m_nHSVShiftControlPoint = 62
+			m_vecTexturesInput = 
+			[
+				{
+					m_hTexture = resource:"materials/particle/electrical_arc_white/electrical_arc_white.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
 		},
 	]
-	m_Emitters = 
-	[
-		{
-			_class = "C_OP_ContinuousEmitter"
-			m_flEmissionDuration = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.2
-			}
-			m_flStartTime = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.0
-			}
-			m_flEmitRate = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 120.0
-			}
-		},
-	]
-	m_PreEmissionOperators = [  ]
-	m_nBehaviorVersion = 5
 }
