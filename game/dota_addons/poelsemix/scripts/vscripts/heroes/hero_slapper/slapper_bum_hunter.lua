@@ -36,7 +36,6 @@ function modifier_slapper_bum_passive:OnTakeDamage( keys )
 
 		if (difference <= (back_angle / 2)) or (difference >= (360 - (back_angle / 2))) then --tak imba
 			local damage = keys.damage * (self:GetAbility():GetSpecialValueFor("bonus_damage_from_behind")/100)
-			print(damage)
 			ApplyDamage({victim = keys.unit,
 				attacker = parent,
 				damage_type = DAMAGE_TYPE_PURE, --BONUS DAMAGE POST MIGITATIONS
@@ -52,15 +51,14 @@ end
 function modifier_slapper_bum_passive:GetAttackSound()
 	local parent = self:GetParent()
 	local ramm = parent:HasModifier("modifier_slapper_rammusteinu")
-	--local slap_city = parent:HasModifier("modifier_slapper_slap_city")
-	local slap_city = false --uncomment other line and remove this
+	local slap_city = parent:HasModifier("modifier_slapper_slap_city")
 
 	if ramm then
-		if slap_city then return "slapper_slap_city_slap_rammusteinu"
-		else return "slapper_slap_city_slap_rammusteinu" end
+		if slap_city then return "slapper_slap_rammusteinu"
+		else return "slapper_slap_city_slap_rammusteinu" end --switched these by accident but like it better this way lol, keeping it
 	else
 		if slap_city then return "slapper_slap_normal"
-		else return "slapper_slap_city_slap_normal" end
+		else return "slapper_slap_city_slap_normal" end --switched these by accident but like it better this way lol, keeping it
 	end
 end
 

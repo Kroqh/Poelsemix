@@ -247,7 +247,7 @@
 						_class = "Attachment"
 						name = "attach_head"
 						parent_bone = "b_C_Head"
-						relative_origin = [ 0.0, 0.0, 52.13797 ]
+						relative_origin = [ 0.0, 0.0, 10.0 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
@@ -256,7 +256,7 @@
 						_class = "Attachment"
 						name = "attach_eyes"
 						parent_bone = "b_C_Head"
-						relative_origin = [ -0.001175, -38.707142, 23.775421 ]
+						relative_origin = [ 0.0, -12.1853, 6.85227 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
@@ -265,7 +265,25 @@
 						_class = "Attachment"
 						name = "attach_overhead"
 						parent_bone = "b_C_Head"
-						relative_origin = [ 0.0, 0.0, 79.593414 ]
+						relative_origin = [ 0.0, 0.0, 30.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "eye_r"
+						parent_bone = "b_C_Head"
+						relative_origin = [ -3.598033, -10.689695, 6.935387 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "eye_l"
+						parent_bone = "b_C_Head"
+						relative_origin = [ 3.59803, -10.6897, 6.93539 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false

@@ -7,13 +7,13 @@
 
 	"Ability1" "musashi_earth"				
 	"Ability2" "musashi_fire"
-	"Ability3" "musashi_wind"
+	"Ability3" "slapper_slap_city"
 	"Ability4" "slapper_bum_hunter"
 	"Ability5" "generic_hidden"
 	"Ability6" "slapper_rammusteinu"
 
 
-	"MovementSpeed"		"300"
+	"MovementSpeed"		"295"
 	"AttackRange"			"125"
 
 	//Lav nye talents
