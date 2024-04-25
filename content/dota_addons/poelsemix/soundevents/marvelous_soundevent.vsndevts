@@ -58,7 +58,7 @@
     }
 }
 
-"syg"
+"marvelous_sky"
 {
     "operator_stacks"
     {
@@ -74,7 +74,7 @@
                     {
                         "value"
                         {
-                              "value0"        "sounds/marvelous/syg.vsnd"
+                              "value0"        "sounds/marvelous/marvelous_sky.vsnd"
                         }
                     }
                     "volume"            {   "value"     "3.00000"  }

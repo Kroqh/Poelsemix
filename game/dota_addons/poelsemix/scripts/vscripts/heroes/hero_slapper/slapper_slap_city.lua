@@ -18,6 +18,11 @@ end
 
 modifier_slapper_slap_city = modifier_slapper_slap_city or class({})
 
+function modifier_slapper_slap_city:IsPurgable() return true end
+function modifier_slapper_slap_city:IsHidden() return false end
+function modifier_slapper_slap_city:RemoveOnDeath()	return true end
+
+
 function modifier_slapper_slap_city:OnCreated(keys)
     if not IsServer() then return end
 	local ability = self:GetAbility()

@@ -46,7 +46,7 @@
 		"03"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"smoke_radius" "280"
+			"smoke_radius" "280" //Currently hard coded into particle, can be changed to dynamic, look at marvelous pink sky for reference
 		}
 		"04"
 		{
