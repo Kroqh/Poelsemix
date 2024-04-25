@@ -16,6 +16,8 @@ function musashi_void:OnSpellStart()
     caster:AddNewModifier(caster, self, "modifier_musashi_void", {duration = duration})
 end
 
+
+
 function musashi_void:OnProjectileHit_ExtraData(target, location, ExtraData)
 	if target then
 		ApplyDamage({attacker = self:GetCaster(), victim = target, ability = self, damage = ExtraData.damage, damage_type = self:GetAbilityDamageType()})
@@ -39,9 +41,9 @@ function modifier_musashi_void:OnIntervalThink()
 		-- Parameters
 		local damage = ability:GetSpecialValueFor("damage")
 		local start_radius = ability:GetSpecialValueFor("start_radius")
-		local end_radius = 200 --ability:GetSpecialValueFor("end_radius")
-		local travel_distance =  400--ability:GetSpecialValueFor("travel_distance")
-		local projectile_speed = 1800 --ability:GetSpecialValueFor("projectile_speed")
+		local end_radius = ability:GetSpecialValueFor("end_radius")
+		local travel_distance =  ability:GetSpecialValueFor("travel_distance")
+		local projectile_speed = ability:GetSpecialValueFor("projectile_speed")
 		local direction = caster:GetForwardVector()
 
         local projectile =

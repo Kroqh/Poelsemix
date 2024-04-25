@@ -17,7 +17,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 	"ItemShopTags"					"damage"
-	"ItemQuality"					"epic"
+	"ItemQuality"					"artifact"
 	"ItemAliases"					"deathcap"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 

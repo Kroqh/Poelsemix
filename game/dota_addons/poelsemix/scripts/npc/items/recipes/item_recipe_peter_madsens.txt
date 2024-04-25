@@ -1,0 +1,14 @@
+"item_recipe_peter_madsens"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"800"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_peter_madsens"
+		"ItemRequirements"
+		{
+			"01" "item_heavens_halberd;item_platemail"
+		}
+  	}

@@ -1,0 +1,79 @@
+"item_peter_madsens"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+	"BaseClass"                 "item_lua"
+	"ScriptFile"					"items/item_peter_madsens.lua"
+  	"AbilityTextureName"        "peter_madsens"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+  	"ItemCost"					"5300"
+  	"ID"						"3054"
+
+	"AbilityCastRange"        "700"
+	"AbilityCastPoint"        "0.0"
+	"AbilityCooldown"       "18"
+	"FightRecapLevel"				"2"
+	"AbilityManaCost"				"100"
+  	
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"armor;evasion;str"
+	"ItemQuality"					"artifact"
+	"ItemAliases"					"pmu;submarine"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+
+	"precache"
+	{
+		"particle"			"particles/units/heroes/hero_demonartist/demonartist_engulf_disarm/items2_fx/heavens_halberd.vpcf"
+
+	}
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"strength"					"25"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"evasion"						"25"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"armor"				"15"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"tenacity"				"20"
+		}
+		"05"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"heal_amp"					"25"
+		}
+		"06"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"active_duration"				"5"
+		}
+		"07"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"evasion_debuff"				"999"
+		}
+	}
+}

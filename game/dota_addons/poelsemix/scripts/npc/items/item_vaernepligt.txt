@@ -15,7 +15,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 	"ItemShopTags"					"damage"
-	"ItemQuality"					"component"
+	"ItemQuality"					"rare"
 	"ItemAliases"					"pligt;vaernepligt"
 
 	// Special	

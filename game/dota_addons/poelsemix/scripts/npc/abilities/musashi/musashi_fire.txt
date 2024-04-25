@@ -41,7 +41,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_slash_physical"			"15 20 25 30"
+				"damage_per_slash_physical"			"20 25 30 35"
 			}
 			"04"
 			{
@@ -75,7 +75,7 @@
 				"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_burn_magical"		"7 11 15 19"				
+				"damage_per_burn_magical"		"8 12 16 20"				
 			}
 		}
 	}

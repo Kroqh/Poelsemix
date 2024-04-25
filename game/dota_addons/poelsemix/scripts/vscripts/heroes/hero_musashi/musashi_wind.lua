@@ -4,6 +4,11 @@ musashi_wind = musashi_wind or class({})
 
 
 
+function musashi_wind:GetCastRange()
+	local range = self:GetSpecialValueFor("range")
+	if self:GetCaster():FindAbilityByName("special_bonus_musashi_2"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_musashi_2"):GetSpecialValueFor("value") end
+    return range
+end
 
 function musashi_wind:OnSpellStart()
 	local caster = self:GetCaster()

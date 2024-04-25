@@ -20,7 +20,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 	"ItemShopTags"          "int;damage;attack_speed;hard_to_tag"
-	"ItemQuality"         "rare"
+	"ItemQuality"         "artifact"
 	"ItemAliases"         "fs;force staff;kalmar force staff"
 	"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 

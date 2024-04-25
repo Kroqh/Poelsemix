@@ -15,7 +15,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 	"ItemShopTags"					"agi;regen_health;attack_speed;move_speed;evasion;damage"
-	"ItemQuality"					"epic"
+	"ItemQuality"					"artifact"
 	"ItemAliases"					"ab;actual butterfly"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 

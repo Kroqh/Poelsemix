@@ -10,7 +10,7 @@
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
 	"ItemShopTags"					"armor;health_pool;damage;hard_to_tag"
-	"ItemQuality"					"epic"
+	"ItemQuality"					"artifact"
 	"ItemAliases"					"hummel;shirt;hummel shirt"
 
 	// Special	

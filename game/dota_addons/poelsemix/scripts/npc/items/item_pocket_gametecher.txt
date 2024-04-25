@@ -11,8 +11,8 @@
 		
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-		"ItemShopTags"				"damage"
-		"ItemQuality"				"magicks"
+		"ItemShopTags"				"damage;int;mana"
+		"ItemQuality"				"artifact"
 		"ItemAliases" 				"game;pocket gametecher"
 		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
