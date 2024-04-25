@@ -23,9 +23,9 @@ function COverthrowGameMode:OnGameRulesStateChange()
 			--self.TEAM_KILLS_TO_WIN = 15
 			nCOUNTDOWNTIMER = 1200
 		end
-		if GetMapName() == "forest_solo" then
+		if GetMapName() == "poelsemix" then
 			self.TEAM_KILLS_TO_WIN = 35
-		elseif GetMapName() == "desert_duo" then
+		elseif GetMapName() == "poelsemix_3v3v3v3" then
 			self.TEAM_KILLS_TO_WIN = 35
 		elseif GetMapName() == "desert_quintet" then
 			self.TEAM_KILLS_TO_WIN = 35

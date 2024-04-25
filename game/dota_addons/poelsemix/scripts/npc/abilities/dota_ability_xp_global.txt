@@ -12,7 +12,7 @@
 				"Passive"				"1"
 				
 				"Aura"					"modifier_get_xp_global"
-				"Aura_Radius"			"8000"
+				"Aura_Radius"			"99999"
 				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 				"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
 				"Aura_ApplyToCaster"	"0"
@@ -35,7 +35,7 @@
 						"Target"
 						{
 							"Center"		"CASTER"
-							"radius"		"3400"
+							"radius"		"99999"
 							"Types"			"DOTA_UNIT_TARGET_HERO"
 							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 						}

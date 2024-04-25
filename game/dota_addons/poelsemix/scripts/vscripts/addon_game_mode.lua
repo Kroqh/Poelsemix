@@ -192,16 +192,25 @@ function COverthrowGameMode:InitGameMode()
 	self.runnerupTeamScore = 0
 	self.isGameTied = true
 	self.countdownEnabled = false
-	self.itemSpawnIndex = 1
-	self.itemSpawnLocation = Entities:FindByName( nil, "greevil" )
+
+
+
+	--deathmatch stuff
 	self.tier1ItemBucket = {}
 	self.tier2ItemBucket = {}
 	self.tier3ItemBucket = {}
 	self.tier4ItemBucket = {}
+	--
+
 	self.hogriderAlreadyHappened = false
 
 	self.TEAM_KILLS_TO_WIN = 25
 	self.CLOSE_TO_VICTORY_THRESHOLD = 5
+
+
+	--deathmatch only??
+	self.itemSpawnIndex = 1
+	self.itemSpawnLocation = Entities:FindByName( nil, "greevil" )
 
 	---------------------------------------------------------------------------
 
@@ -210,18 +219,11 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity().COverthrowGameMode = self
 
 	-- Adding Many Players
-	if GetMapName() == "desert_quintet" then
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 5 )
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 5 )
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 5 )
-		self.m_GoldRadiusMin = 300
-		self.m_GoldRadiusMax = 1400
-		self.m_GoldDropPercent = 8
-	elseif GetMapName() == "temple_quartet" then
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 4 )
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 4 )
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 4 )
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_2, 4 )
+	if GetMapName() == "poelsemix_3v3v3v3" then
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 3 )
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 3 )
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 3 )
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_2, 3 )
 		self.m_GoldRadiusMin = 300
 		self.m_GoldRadiusMax = 1400
 		self.m_GoldDropPercent = 10
@@ -510,7 +512,11 @@ function COverthrowGameMode:OnThink()
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		--Spawn Gold Bags
 		COverthrowGameMode:ThinkGoldDrop()
-		COverthrowGameMode:ThinkSpecialItemDrop()
+		if GetMapName() == "poelsemix_3v3v3v3" then
+			--nothing? save space for events later?
+		else
+			COverthrowGameMode:ThinkSpecialItemDrop()
+		end
 	end
 
 	return 1

@@ -3,8 +3,15 @@
 	"HeroGuidesSupported"		"0"
 	"PenaltiesEnabled"		"0"
 	"EnablePickRules"               "0" //ÆNDRE TIL 0 for dev, 1 for release
+	
+	"maps"	
+	"poelsemix_3v3v3v3"
+	{
+		"MaxPlayers"		"12"
+	}						"poelsemix_3v3v3v3 poelsemix"
 	"poelsemix"
 	{
 		"MaxPlayers"		"10"
 	}
+	
 }
