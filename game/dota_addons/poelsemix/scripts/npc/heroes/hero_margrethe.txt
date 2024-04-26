@@ -10,14 +10,14 @@
 	"AttackAcquisitionRange"	"200"
 
 
-	"AttributeBaseStrength"		"20"
-	"AttributeStrengthGain"		"2.4"
-	"AttributeBaseIntelligence"		"20"
-	"AttributeIntelligenceGain"		"2.5"
-	"AttributeBaseAgility"		"25"
-	"AttributeAgilityGain"		"3.4"	
-	"StatusHealth"                "140"
-	"MovementSpeed"               "300"
+	"AttributeBaseStrength"		"16"
+	"AttributeStrengthGain"		"1.9"
+	"AttributeBaseIntelligence"		"17"
+	"AttributeIntelligenceGain"		"3"
+	"AttributeBaseAgility"		"23"
+	"AttributeAgilityGain"		"2.2"	
+	"StatusHealth"                "100"
+	"MovementSpeed"               "295"
 
 
 	//"Ability1" "urgot_acid_hunter"				

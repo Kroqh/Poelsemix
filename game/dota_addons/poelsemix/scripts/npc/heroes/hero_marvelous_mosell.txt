@@ -5,8 +5,8 @@
 
     
     "Ability1"        "marvelous_sky" 
-    "Ability2"        "antikommerciel_masseappel_datadriven" 
-    "Ability3"        "faceless_void_backtrack" 
+    "Ability2"        "marvelous_danser"
+    "Ability3"        "antikommerciel_masseappel_datadriven" 
     "Ability4"        "generic_hidden"
     "Ability5"        "generic_hidden"
     "Ability6"        "koldblodet_reptil_datadriven"
@@ -15,6 +15,13 @@
     "Ability8"        ""
     "Ability9"        ""
 
+    "AttributeBaseStrength"			"14"		
+	"AttributeStrengthGain"			"1.1"
+    "AttributeBaseAgility"		"26"
+	"AttributeAgilityGain"		"3.2"
+	"AttributeBaseIntelligence"	"23"
+	"AttributeIntelligenceGain"	"1.9"
+	
 
 	"Ability10"			"special_bonus_cooldown_reduction_15"
 	"Ability11"			"special_bonus_movement_speed_30"

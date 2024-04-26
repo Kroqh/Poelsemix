@@ -28,8 +28,8 @@ end
 
 function modifier_musashi_water:OnAttackLanded( params )
 	if IsServer() then
-		if params.target~=self:GetCaster() then return end
-		if self:GetCaster():PassivesDisabled() then return end
+		if params.target~=self:GetParent() then return end
+		if self:GetParent():PassivesDisabled() then return end
 		if params.attacker:GetTeamNumber()==params.target:GetTeamNumber() then return end
 		if params.attacker:IsOther() or params.attacker:IsBuilding() then return end
         local range = self:GetAbility():GetSpecialValueFor("range")
@@ -53,7 +53,7 @@ function modifier_musashi_water:OnAttackLanded( params )
         
         local damageTable = {
 			victim = params.attacker,
-			attacker = self:GetCaster(),
+			attacker = self:GetParent(),
 			damage = damage,
 			damage_type = self:GetAbility():GetAbilityDamageType(),
 			ability = self:GetAbility(), --Optional.

@@ -1,0 +1,42 @@
+"marvelous_danser"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_marvelous/marvelous_danser"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"bedste_danser"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+
+
+		"precache"
+	{	
+		"particle"  "particles/units/heroes/hero_faceless_void/faceless_void_backtrack.vpcf"
+	}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dodge_chance_pct"		"12 15 18 21"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dodge_chance_per_stack"		"3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_stacks"		"6 7 8 9"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"time_for_fall_off"		"3"
+			}
+		}
+	}
