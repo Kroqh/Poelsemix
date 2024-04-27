@@ -57,7 +57,7 @@ end
 
 function modifier_marvelous_danser:GetModifierIncomingDamage_Percentage()
 	if not IsServer() then return end
-	local caster = self:GetCaster()
+	local parent = self:GetParent()
 	local chance = self:GetAbility():GetSpecialValueFor("dodge_chance_pct")
 	local chance_per_stack = self:GetAbility():GetSpecialValueFor("dodge_chance_per_stack")
 	
@@ -66,8 +66,8 @@ function modifier_marvelous_danser:GetModifierIncomingDamage_Percentage()
 	print(chance)
 
 	if RollPercentage(chance) then
-		local backtrack_fx = ParticleManager:CreateParticle("particles/units/heroes/hero_faceless_void/faceless_void_backtrack.vpcf", PATTACH_ABSORIGIN, caster)
-		ParticleManager:SetParticleControl(backtrack_fx, 0, caster:GetAbsOrigin())
+		local backtrack_fx = ParticleManager:CreateParticle("particles/units/heroes/hero_faceless_void/faceless_void_backtrack.vpcf", PATTACH_ABSORIGIN, parent)
+		ParticleManager:SetParticleControl(backtrack_fx, 0, parent:GetAbsOrigin())
 		ParticleManager:ReleaseParticleIndex(backtrack_fx)
 		return -100
 	end

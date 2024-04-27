@@ -1,11 +1,15 @@
-"marvelous_danser"
+"marvelous_golden_touch"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"				"ability_lua"
-		"ScriptFile"			"heroes/hero_marvelous/marvelous_danser"
+		"ScriptFile"			"heroes/hero_marvelous/marvelous_golden_touch"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"bedste_danser"
+		"AbilityTextureName"			"marvelous_golden"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"MaxLevel" "1"
+		"IsGrantedByScepter"            "1"
+		"HasScepterUpgrade"             "1"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -13,8 +17,7 @@
 
 		"precache"
 	{	
-		"particle"  "particles/units/heroes/hero_faceless_void/faceless_void_backtrack.vpcf"
-		"particle"	"particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf"
+		"particle"  "particles/econ/courier/courier_devourling_gold/courier_devourling_gold_ambient.vpcf"
 	}
 
 		"AbilitySpecial"
@@ -22,22 +25,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dodge_chance_pct"		"12 15 18 21"
+				"trigger_chance"		"20"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dodge_chance_per_stack"		"3"
+				"gold_on_trigger"		"15"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_stacks"		"6 7 8 9"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"time_for_fall_off"		"3"
+				"gold_to_damage_ratio"		"10"
 			}
 		}
 	}
