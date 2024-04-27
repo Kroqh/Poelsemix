@@ -35,7 +35,8 @@
 			"02"
 			{
 				"var_type" "FIELD_FLOAT"
-				"agi_to_damage" "3 4 5"
+				"agi_to_damage" "3 3.5 4"
+				"LinkedSpecialBonus" "special_bonus_marvelous_3"
 			}
 			"03"
 			{

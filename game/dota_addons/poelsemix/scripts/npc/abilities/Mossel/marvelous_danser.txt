@@ -33,11 +33,12 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"max_stacks"		"6 7 8 9"
+				"LinkedSpecialBonus" "special_bonus_marvelous_2"
 			}
 			"04"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"time_for_fall_off"		"3"
+				"var_type"				"FIELD_FLOAT"
+				"time_for_fall_off"		"2.5"
 			}
 		}
 	}

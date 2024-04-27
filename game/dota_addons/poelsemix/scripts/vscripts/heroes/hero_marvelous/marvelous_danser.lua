@@ -39,6 +39,9 @@ function modifier_marvelous_danser:OnAttackLanded( params )
 		if self:GetParent():PassivesDisabled() then return end
 
 		local stack_count = self:GetAbility():GetSpecialValueFor("max_stacks")
+		if self:GetCaster():FindAbilityByName("special_bonus_marvelous_2"):GetLevel() > 0 then stack_count = stack_count + self:GetCaster():FindAbilityByName("special_bonus_marvelous_2"):GetSpecialValueFor("value") end 
+
+
 		if (self:GetStackCount() < stack_count) then
 			self:IncrementStackCount()
 		end
@@ -64,9 +67,11 @@ function modifier_marvelous_danser:GetModifierIncomingDamage_Percentage()
 	chance = chance + (chance_per_stack * self:GetStackCount())
 
 	if parent:HasModifier("modifier_marvelous_antikommerciel_masseappel") then
-		chance = chance * parent:FindModifierByName("modifier_marvelous_antikommerciel_masseappel"):GetAbility():GetSpecialValueFor("danser_multiplier")
+
+		local scaler = parent:FindModifierByName("modifier_marvelous_antikommerciel_masseappel"):GetAbility():GetSpecialValueFor("danser_multiplier")
+		if self:GetCaster():FindAbilityByName("special_bonus_marvelous_7"):GetLevel() > 0 then scaler = scaler + self:GetCaster():FindAbilityByName("special_bonus_marvelous_7"):GetSpecialValueFor("value") end 
+		chance = chance * scaler
 	end
-	print(chance)
 
 	if RollPercentage(chance) then
 		local backtrack_fx = ParticleManager:CreateParticle("particles/units/heroes/hero_faceless_void/faceless_void_backtrack.vpcf", PATTACH_ABSORIGIN, parent)

@@ -14,11 +14,21 @@ function marvelous_sky:OnSpellStart()
 	}, GetGroundPosition(cast_point, nil), caster:GetTeamNumber(), false)
 end
 
+function marvelous_sky:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_marvelous_6"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_marvelous_6"):GetSpecialValueFor("value") end
+    return cd
+end
+
+
 function marvelous_sky:GetAOERadius()
-    return self:GetSpecialValueFor("radius")
+    local radius = self:GetSpecialValueFor("radius")
+    if self:GetCaster():FindAbilityByName("special_bonus_marvelous_1"):GetLevel() > 0 then radius = radius + self:GetCaster():FindAbilityByName("special_bonus_marvelous_1"):GetSpecialValueFor("value") end 
+    return radius
 end
 function marvelous_sky:GetCastRange()
-    return self:GetSpecialValueFor("cast_range")
+    local range = self:GetSpecialValueFor("cast_range")
+    return range
 end
 
 
@@ -27,9 +37,11 @@ end
 marvelous_sky_aura = marvelous_sky_aura or class({})
 
 
-function marvelous_sky_aura :OnCreated(keys)
+function marvelous_sky_aura:OnCreated(keys)
 	if not self:GetAbility() then self:Destroy() return end
 	self.radius	= self:GetAbility():GetSpecialValueFor("radius")
+    if self:GetCaster():FindAbilityByName("special_bonus_marvelous_1"):GetLevel() > 0 then self.radius = self.radius + self:GetCaster():FindAbilityByName("special_bonus_marvelous_1"):GetSpecialValueFor("value") end 
+    
     if not IsServer() then return end
 
     local sky_fx = "particles/units/heroes/hero_marvelous/pink_sky.vpcf"
@@ -74,7 +86,9 @@ function marvelous_sky_buff:DeclareFunctions()
 end
 
 function marvelous_sky_buff:GetModifierAttackSpeedPercentage()
-    return self:GetAbility():GetSpecialValueFor("attack_speed_percent")
+    as = self:GetAbility():GetSpecialValueFor("attack_speed_percent")
+    if self:GetCaster():FindAbilityByName("special_bonus_marvelous_4"):GetLevel() > 0 then as = as + self:GetCaster():FindAbilityByName("special_bonus_marvelous_4"):GetSpecialValueFor("value") end 
+    return as
 end
 
 function marvelous_sky_buff:GetModifierMoveSpeedBonus_Percentage()

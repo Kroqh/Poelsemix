@@ -47,7 +47,11 @@ function modifier_marvelous_antikommerciel_masseappel:RemoveOnDeath() 		return t
 function modifier_marvelous_antikommerciel_masseappel:OnCreated()
 	if not IsServer() then return end
 	local ability = self:GetAbility()
-	self.dmg =  self:GetParent():GetAttackDamage() * (ability:GetSpecialValueFor("attack_damage_percent")/100) 
+
+	local dmg_scaling = ability:GetSpecialValueFor("attack_damage_percent")
+	if self:GetCaster():FindAbilityByName("special_bonus_marvelous_5"):GetLevel() > 0 then dmg_scaling = dmg_scaling + self:GetCaster():FindAbilityByName("special_bonus_marvelous_5"):GetSpecialValueFor("value") end 
+
+	self.dmg =  self:GetParent():GetAttackDamage() * (dmg_scaling/100) 
 	self:SetHasCustomTransmitterData(true)
 end
 

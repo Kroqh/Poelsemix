@@ -44,6 +44,7 @@
 			{
 				"var_type" "FIELD_INTEGER"
 				"attack_speed_percent" "15 20 20 25"
+				"LinkedSpecialBonus" "special_bonus_marvelous_4"
 			}
 			"03"
 			{
@@ -53,7 +54,8 @@
 			"04"
 			{
 				"var_type" "FIELD_INTEGER"
-				"radius" "375 400 425 450" //revert efter particle test
+				"radius" "375 400 425 450"
+				"LinkedSpecialBonus" "special_bonus_marvelous_1"
 			}
 			"05"
 			{

@@ -41,16 +41,26 @@ function marvelous_koldblodet_reptil:OnProjectileHit(target, location)
     local dmg_scaling = ability:GetSpecialValueFor("agi_to_damage")
     local hp_scaling = ability:GetSpecialValueFor("agi_to_hp")
 
+	if self:GetCaster():FindAbilityByName("special_bonus_marvelous_3"):GetLevel() > 0 then dmg_scaling = dmg_scaling + self:GetCaster():FindAbilityByName("special_bonus_marvelous_3"):GetSpecialValueFor("value") end 
+
 
 	local dmg = math.floor(agi * dmg_scaling)
     local hp = math.floor(agi * hp_scaling)--minks have 1 hp by defeault as to not insta die
-    unit = CreateUnitByName("npc_koldblodet_reptil",location, true, caster, nil, caster:GetTeam())
+	count = 0
+	total_units = 1
+	if self:GetCaster():FindAbilityByName("special_bonus_marvelous_8"):GetLevel() > 0 then total_units = total_units + self:GetCaster():FindAbilityByName("special_bonus_marvelous_8"):GetSpecialValueFor("value") end 
 
-    unit:AddNewModifier(caster, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
-    unit:AddNewModifier(caster, ability, "modifier_marvelous_reptil_unit_information", {dmg = dmg} )
-    unit:SetBaseMaxHealth(hp)
-    unit:SetMaxHealth(hp)
-    unit:SetHealth(hp) --has to have this ugly trio for it to work lol
+	while(count < total_units) do
+
+		unit = CreateUnitByName("npc_koldblodet_reptil",location, true, caster, nil, caster:GetTeam())
+		unit:AddNewModifier(caster, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
+		unit:AddNewModifier(caster, ability, "modifier_marvelous_reptil_unit_information", {dmg = dmg} )
+		unit:SetBaseMaxHealth(hp)
+		unit:SetMaxHealth(hp)
+		unit:SetHealth(hp) --has to have this ugly trio for it to work lol
+		unit:AddNewModifier(target, self, "modifier_generic_taunt", {})
+		count = count + 1
+	end
 
 
 	local damage = self:GetSpecialValueFor("proj_damage")
@@ -61,7 +71,7 @@ function marvelous_koldblodet_reptil:OnProjectileHit(target, location)
 	damage = damage,
 	ability = self})
 	
-	unit:AddNewModifier(target, self, "modifier_generic_taunt", {})
+	
 end
 
 modifier_marvelous_reptil_unit_information = modifier_marvelous_reptil_unit_information  or class({})
