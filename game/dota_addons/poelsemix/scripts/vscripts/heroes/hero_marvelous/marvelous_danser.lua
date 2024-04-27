@@ -63,6 +63,9 @@ function modifier_marvelous_danser:GetModifierIncomingDamage_Percentage()
 	
 	chance = chance + (chance_per_stack * self:GetStackCount())
 
+	if parent:HasModifier("modifier_marvelous_antikommerciel_masseappel") then
+		chance = chance * parent:FindModifierByName("modifier_marvelous_antikommerciel_masseappel"):GetAbility():GetSpecialValueFor("danser_multiplier")
+	end
 	print(chance)
 
 	if RollPercentage(chance) then

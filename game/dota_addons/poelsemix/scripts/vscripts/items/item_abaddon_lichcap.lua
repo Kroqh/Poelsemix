@@ -62,7 +62,7 @@ end
 function modifier_item_abaddon_lichcap_unique:GetModifierPreAttack_BonusDamage()
     if self:GetAbility() then
         local npc = self:GetParent()
-        local calc = (math.ceil(npc:GetDamageMax() + npc:GetDamageMin()) / 2) * (1 + (self:GetAbility():GetSpecialValueFor("damage_multi_percentage")/100))
+        local calc = (math.ceil(npc:GetDamageMax() + npc:GetDamageMin()) / 2) * ((self:GetAbility():GetSpecialValueFor("damage_multi_percentage")/100))
         return calc
     end
 end

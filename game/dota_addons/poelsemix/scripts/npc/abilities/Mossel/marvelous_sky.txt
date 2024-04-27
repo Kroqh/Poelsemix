@@ -12,6 +12,9 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+
+
+		"AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -45,7 +48,7 @@
 			"03"
 			{
 				"var_type" "FIELD_FLOAT"
-				"movement_speed_perc" "15 20 20 25"
+				"movement_speed_perc" "20 25 30 35"
 			}
 			"04"
 			{

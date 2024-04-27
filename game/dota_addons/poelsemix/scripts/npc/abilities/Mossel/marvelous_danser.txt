@@ -26,8 +26,8 @@
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"dodge_chance_per_stack"		"3"
+				"var_type"				"FIELD_FLOAT"
+				"dodge_chance_per_stack"		"2.5"
 			}
 			"03"
 			{
