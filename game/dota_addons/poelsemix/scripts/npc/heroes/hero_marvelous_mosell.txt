@@ -6,7 +6,7 @@
     
     "Ability1"        "marvelous_sky" 
     "Ability2"        "marvelous_danser"
-    "Ability3"        "koldblodet_reptil_datadriven" 
+    "Ability3"        "marvelous_koldblodet_reptil" 
     "Ability4"        "marvelous_golden_touch"
     "Ability5"        "generic_hidden"
     "Ability6"        "marvelous_antikommerciel_masseappel"

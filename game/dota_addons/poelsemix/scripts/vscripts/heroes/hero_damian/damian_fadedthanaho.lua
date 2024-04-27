@@ -25,7 +25,7 @@ end
 
 function modifier_damian_fadedthanaho_passive:OnCreated()
     if not IsServer() then return end
-    local baseattacktimehero = self:GetParent():GetBaseAttackTime()
+    baseattacktimehero = self:GetParent():GetBaseAttackTime()
 end
 function modifier_damian_fadedthanaho_passive:OnAttackLanded(params)
     if not IsServer() then return end

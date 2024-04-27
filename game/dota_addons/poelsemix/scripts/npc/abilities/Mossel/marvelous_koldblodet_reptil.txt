@@ -1,0 +1,58 @@
+"marvelous_koldblodet_reptil"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_marvelous/marvelous_koldblodet_reptil"
+  		"AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  		"AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
+ 		 "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityTextureName"			"koldblodet"
+		"AbilityCooldown"				"20 19 18 17"
+		"AbilityManaCost"				"80"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastRange" 				"700"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		
+		"precache"
+		{
+			"particle" "particles/heroes/hero_marvelous/marvelous_reptil.vpcf"
+		}
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"proj_damage" "150 225 300"
+			}
+			"02"
+			{
+				"var_type" "FIELD_FLOAT"
+				"agi_to_damage" "3 4 5"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"agi_to_hp" "7 10 14"
+			}
+			"04"
+			{
+				"var_type" "FIELD_FLOAT"
+				"lifetime" "5"
+			}
+			"05"
+			{
+				"var_type" "FIELD_INTEGER"
+				"proj_speed" "600"
+			}
+		}
+		
+	
+	}
