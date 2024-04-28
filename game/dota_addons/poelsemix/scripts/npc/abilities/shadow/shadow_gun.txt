@@ -1,0 +1,57 @@
+
+	"shadow_gun"
+	{
+        "BaseClass"					"ability_lua"
+        "ScriptFile"				"heroes/hero_shadow/shadow_gun.lua"
+        "AbilityTextureName"		"shadow_gun"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
+		"AbilityUnitDamageType"				"DAMAGE_TYPE_PHYSICAL"
+
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"40"
+
+		"precache"
+		{
+			"particle"					"particles/econ/heroes/shadow/shadow_gun.vpcf"
+			"particle" "particles/econ/items/void_spirit/void_spirit_immortal_2021/void_spirit_immortal_2021_astral_step_dmg_blood.vpcf"
+		}
+	
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"proj_speed"					"1000"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage"					"125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"range"					"650 700 750 800"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"max_ammo"					"6"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"distance_per_ammo"					"800 725 650 575"
+			}
+
+		}
+	}

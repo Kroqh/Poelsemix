@@ -68,8 +68,11 @@ function noxious_trap:GetCustomCastErrorLocation()
 	return "No traps available"
 end
 
-modifier_noxious_trap_stack_handler = class({})
+modifier_noxious_trap_stack_handler = modifier_noxious_trap_stack_handler or class({})
 
+function modifier_noxious_trap_stack_handler:IsDebuff() 	return false end
+function modifier_noxious_trap_stack_handler:IsHidden() 	return false end
+function modifier_noxious_trap_stack_handler:IsPassive() 	return true end
 function modifier_noxious_trap_stack_handler:IsPurgeable() return false end
 
 function modifier_noxious_trap_stack_handler:OnCreated()
@@ -77,6 +80,7 @@ function modifier_noxious_trap_stack_handler:OnCreated()
 		local ability = self:GetAbility()
 		--Give one trap on first level up
 		--so no have to wait 30 secs for first shroom
+		--Krogh comment: Tror ikke det virker sådan her men ok, not broke
 		local lol = 0
 
 		if lol == 0 then
