@@ -16,6 +16,10 @@
 	"AttributeBaseStrength"		"25"
 	"MovementSpeed"               "280"
 	"StatusHealth"                "700"
+
+	"AttackDamageMin"			"52"
+	"AttackDamageMax"			"54"
+	
 	
 	
 	"Ability10"		"special_bonus_brian_5"

@@ -25,7 +25,7 @@
 	"Ability16" "special_bonus_nissan_4"
 	"Ability17" "special_bonus_nissan_8"
 
-	"ArmorPhysical"		"5"
+	"ArmorPhysical"		"7"
 
 	"AttributeBaseStrength"			"27"									
 	"AttributeStrengthGain"			"2.1"									
@@ -37,4 +37,7 @@
 	"StatusHealthRegen"		"2.1"
 
 	"MovementSpeed"		"305"
+
+	"AttackDamageMin"			"69"
+	"AttackDamageMax"			"71"
 }

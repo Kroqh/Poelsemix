@@ -353,7 +353,7 @@
 						import_bone_scales = false
 						start_frame = 143
 						end_frame = 170
-						framerate = -1.0
+						framerate = 40.0
 						reverse = false
 					},
 					{
