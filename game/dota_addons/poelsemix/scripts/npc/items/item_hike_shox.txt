@@ -25,7 +25,7 @@
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"move_speed" "65"
+			"move_speed" "55"
 		}
 		"03"
 		{

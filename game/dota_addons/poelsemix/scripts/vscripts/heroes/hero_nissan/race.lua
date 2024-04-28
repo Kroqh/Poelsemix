@@ -44,17 +44,17 @@ modifier_race = modifier_race or class({})
 
 function modifier_race:DeclareFunctions()
 	return {
-        MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT
+    MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT
 	}
 end
-function modifier_race:GetModifierIgnoreMovespeedLimit()
-  return self.limitless
+function modifier_race:GetModifierMoveSpeedBonus_Constant()
+  return self.speed
 end
 
 function modifier_race:OnCreated() 
-  self.limitless = 0
+  self.speed = 0
   if self:GetParent() == self:GetCaster() and self:GetCaster():FindAbilityByName("special_bonus_nissan_8"):GetLevel() > 0 then 
-    self.limitless = 1 
+    self.speed = self:GetCaster():FindAbilityByName("special_bonus_nissan_8"):GetSpecialValueFor("value")
   end
 
   if not IsServer() then return end

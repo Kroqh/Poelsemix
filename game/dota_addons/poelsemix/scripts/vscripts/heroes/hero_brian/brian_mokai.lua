@@ -1,5 +1,5 @@
 LinkLuaModifier("modifier_mokai","heroes/hero_brian/brian_mokai.lua",LUA_MODIFIER_MOTION_NONE)
-LinkLuaModifier("modifier_generic_taunt","generic_mods/modifier_generic_taunt.lua",LUA_MODIFIER_MOTION_NONE)
+
 
 
 mokai = mokai or class({})

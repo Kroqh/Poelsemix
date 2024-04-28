@@ -1,5 +1,4 @@
---[[ events.lua ]]
-require("timers")
+
 ---------------------------------------------------------------------------
 -- Event: Game state change handler
 ---------------------------------------------------------------------------
@@ -49,31 +48,7 @@ function COverthrowGameMode:OnGameRulesStateChange()
 	end
 end
 
---------------------------------------------------------------------------------
--- Event: OnNPCSpawned
---------------------------------------------------------------------------------
-function COverthrowGameMode:OnNPCSpawned( event )
-	local spawnedUnit = EntIndexToHScript( event.entindex )
-	if spawnedUnit:IsRealHero() then
-		-- Destroys the last hit effects
-		local deathEffects = spawnedUnit:Attribute_GetIntValue( "effectsID", -1 )
-		if deathEffects ~= -1 then
-			ParticleManager:DestroyParticle( deathEffects, true )
-			spawnedUnit:DeleteAttribute( "effectsID" )
-		end
-		if self.allSpawned == false then
-			if GetMapName() == "mines_trio" then
-				--print("mines_trio is the map")
-				--print("self.allSpawned is " .. tostring(self.allSpawned) )
-				local unitTeam = spawnedUnit:GetTeam()
-				local particleSpawn = ParticleManager:CreateParticleForTeam( "particles/addons_gameplay/player_deferred_light.vpcf", PATTACH_ABSORIGIN, spawnedUnit, unitTeam )
-				ParticleManager:SetParticleControlEnt( particleSpawn, PATTACH_ABSORIGIN, spawnedUnit, PATTACH_ABSORIGIN, "attach_origin", spawnedUnit:GetAbsOrigin(), true )
-			end
-		end
-	end
 
-	
-end
 
 --------------------------------------------------------------------------------
 -- Event: BountyRunePickupFilter
@@ -271,8 +246,11 @@ end
 -- Event: On NPC Spawn
 --------------------------------------------------------------------------------
 function COverthrowGameMode:OnNPCSpawned( event )
-	local hero = EntIndexToHScript( event.entindex )
+	local hero = EntIndexToHScript( event.entindex ) --is all units not just heroes
 	local npcName = hero:GetUnitName()
+	
+	hero:AddNewModifier(hero, nil, "modifier_remove_speed_cap", {})
+
 
 
 	if npcName == "npc_dota_hero_sniper" then
@@ -306,7 +284,6 @@ function COverthrowGameMode:OnNPCSpawned( event )
 	-- only hero stuff afterswards, also called on illusions before they are turned into actual illusions (thanks valve), create a timer like at the bottom if it should not happen on illusions
 	if not hero:IsRealHero() then return end
 
-	
 
 	if hero:GetUnitName() == "unit_hog_rider" then
 		local ability = hero:FindAbilityByName("hog_bash")

@@ -49,12 +49,10 @@ function shimakaze_modifier_destroyer_speed_active:OnCreated()
 end
 
 function shimakaze_modifier_destroyer_speed_active:DeclareFunctions()
-	local decFuncs = {MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE, MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT}
+	local decFuncs = {MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE}
 	return decFuncs
 end
-function shimakaze_modifier_destroyer_speed_active:GetModifierIgnoreMovespeedLimit()
-    return 1
-end
+
 
 function shimakaze_modifier_destroyer_speed_active:GetModifierMoveSpeedBonus_Percentage()
 	return self.movespeed

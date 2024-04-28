@@ -30,12 +30,12 @@
 			"01"
 			{
 				"var_type" "FIELD_INTEGER"
-				"proj_damage" "150 225 300"
+				"proj_damage" "125 200 275"
 			}
 			"02"
 			{
 				"var_type" "FIELD_FLOAT"
-				"agi_to_damage" "3 3.5 4"
+				"agi_to_damage" "2.5 3 3.5"
 				"LinkedSpecialBonus" "special_bonus_marvelous_3"
 			}
 			"03"

@@ -144,6 +144,8 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetUseCustomHeroLevels(true)
 	GameRules:GetGameModeEntity():SetCustomHeroMaxLevel(35)
 	GameRules:GetGameModeEntity():SetCustomXPRequiredToReachNextLevel(XP_LEVEL_TABLE)
+	
+	COverthrowGameMode:LinkMods()
 
 --	CustomNetTables:SetTableValue( "test", "value 1", {} );
 --	CustomNetTables:SetTableValue( "test", "value 2", { a = 1, b = 2 } );
@@ -276,6 +278,7 @@ function COverthrowGameMode:InitGameMode()
 	Convars:RegisterCommand( "poelse_populate_max", function(...) return self:PopulateEnemies(2) end, "Spawn 9 heroes", FCVAR_CHEAT )
 	Convars:RegisterCommand( "poelse_healthy_enemies", function(...) return self:HealthyEnemies() end, "Give enemies 25 levels and flæskesteg + kartofler", FCVAR_CHEAT )
 	Convars:SetInt( "dota_server_side_animation_heroesonly", 0 )
+	
 	COverthrowGameMode:SetUpFountains()
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
 	GameRules:GetGameModeEntity():SetDaynightCycleAdvanceRate(5)
@@ -346,8 +349,7 @@ end
 ---------------------------------------------------------------------------
 function COverthrowGameMode:SetUpFountains()
 
-	LinkLuaModifier( "modifier_fountain_aura_lua", LUA_MODIFIER_MOTION_NONE )
-	LinkLuaModifier( "modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
+	
 
 	--PRINTS A LIST OF ALL WEARABLES AND THEIR IDS IN THE CONSOLE
 	--local items = LoadKeyValues("scripts/items/items_game.txt")['items']
@@ -362,6 +364,14 @@ function COverthrowGameMode:SetUpFountains()
 		--print("fountain unit " .. tostring( fountainEnt ) )
 		fountainEnt:AddNewModifier( fountainEnt, fountainEnt, "modifier_fountain_aura_lua", {} )
 	end
+end
+
+function COverthrowGameMode:LinkMods()
+	LinkLuaModifier( "modifier_fountain_aura_lua", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier("modifier_generic_taunt","generic_mods/modifier_generic_taunt.lua",LUA_MODIFIER_MOTION_NONE)
+	LinkLuaModifier("modifier_generic_arc","generic_mods/modifier_generic_arc.lua",LUA_MODIFIER_MOTION_NONE)
+	LinkLuaModifier("modifier_remove_speed_cap","generic_mods/modifier_remove_speed_cap.lua",LUA_MODIFIER_MOTION_NONE)
 end
 
 ---------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc35:version{b00eeed0-971d-4307-a91e-31e46956e894} -->
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc36:version{972dada4-b828-45a4-bb93-7795cf0585da} -->
 {
 	rootNode = 
 	{
@@ -185,7 +185,7 @@
 								translation_only = false
 								group_id = 0
 								hitbox_mins = [ -9.603489, -9.607265, -5.23584 ]
-								hitbox_maxs = [ 9.591553, 3.867579, 14.010296 ]
+								hitbox_maxs = [ 9.591553, 12.714584, 22.186117 ]
 							},
 							{
 								_class = "Hitbox"
@@ -265,7 +265,7 @@
 								translation_only = false
 								group_id = 0
 								hitbox_mins = [ -10.762339, -15.159428, -2.555801 ]
-								hitbox_maxs = [ 10.7412, 3.53294, 10.8787 ]
+								hitbox_maxs = [ 10.7412, 9.929567, 10.8787 ]
 							},
 							{
 								_class = "Hitbox"
@@ -324,7 +324,7 @@
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -3.899143, -2.582386, -12.269919 ]
+								hitbox_mins = [ -3.899143, -2.582386, -25.238607 ]
 								hitbox_maxs = [ 4.487219, 14.033403, 1.417227 ]
 							},
 							{
@@ -344,7 +344,7 @@
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -4.489033, -2.582165, -12.26941 ]
+								hitbox_mins = [ -4.489033, -2.582165, -18.968998 ]
 								hitbox_maxs = [ 3.897329, 14.033623, 1.417736 ]
 							},
 						]

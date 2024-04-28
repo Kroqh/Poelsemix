@@ -36,5 +36,5 @@
 
 	"StatusHealthRegen"		"2.1"
 
-	"MovementSpeed"		"310"
+	"MovementSpeed"		"305"
 }

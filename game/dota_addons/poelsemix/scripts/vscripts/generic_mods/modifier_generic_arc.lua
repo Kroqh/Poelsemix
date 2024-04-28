@@ -1,4 +1,4 @@
-modifier_generic_arc = class({})
+modifier_generic_arc = modifier_generic_arc or class({})
 
 --[[
 	Generic Jump Arc
