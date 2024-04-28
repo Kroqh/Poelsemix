@@ -1,0 +1,30 @@
+
+	"shadow_stealthy"
+	{
+        "BaseClass"					"ability_lua"
+        "ScriptFile"				"heroes/hero_shadow/shadow_stealthy.lua"
+        "AbilityTextureName"		"shadow_fade"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+		"IsGrantedByScepter"            "1"
+		"HasScepterUpgrade"             "1"
+
+		"AbilityCooldown"				"20"
+	
+		"AbilityManaCost"				"60"
+	
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"8"
+			}
+		}
+	}

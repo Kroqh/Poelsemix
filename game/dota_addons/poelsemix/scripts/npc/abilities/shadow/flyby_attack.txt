@@ -4,15 +4,14 @@
     "flyby_attack"
 	{
         "BaseClass"					"ability_lua"
-        "ScriptFile"				"heroes/hero_shadow/flyby_attack/flyby_attack.lua"
+        "ScriptFile"				"heroes/hero_shadow/flyby_attack.lua"
         "AbilityTextureName"		"shadow_teleport"
-	"HasScepterUpgrade"		"1"
 
 		// General
 		//-------------------------------------------------------------------------------------------------------------
         "MaxLevel"                      "5"
-
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
 
 	"precache"
 	{
@@ -25,29 +24,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"min_damage_bonus"			"0.1 0.15 0.2 0.25 0.3"
-				"LinkedSpecialBonus"		"special_bonus_shadow_3"
+				"range_per_ms"			"0.8 0.9 1 1.1 1.2"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"max_damage_bonus"			"0.4 0.6 0.8 1 1.2"
-				"LinkedSpecialBonus"		"special_bonus_shadow_4"
+				"damage_per_distance"			"0.4 0.5 0.6 0.7 0.8"
 			}
 			"03"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"attack_range_for_max"		"300"
-			}
-			"04"
-			{
 				"var_type"					"FIELD_FLOAT"
-				"teleport_cooldown"			"2.5 2.25 2 1.75 1.5"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"aghs_multi"			"2"
+				"teleport_cooldown"			"3 2.75 2.5 2.25 2"
 			}
 		}
 

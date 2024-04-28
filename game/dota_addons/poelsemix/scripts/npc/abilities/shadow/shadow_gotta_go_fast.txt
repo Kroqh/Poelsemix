@@ -6,6 +6,7 @@
         "ScriptFile"				"heroes/hero_shadow/shadow_gotta_go_fast.lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"		"shadow_blur"
+		
 	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------

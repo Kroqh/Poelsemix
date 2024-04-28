@@ -6,10 +6,10 @@
 		"ModelScale" "1.0"
 		"model" "models/shadow/shadow.vmdl"
 		
-		"Ability1" "stealthy"				
+		"Ability1" ""				
 		"Ability2" "shadow_gotta_go_fast"
 		"Ability3" "flyby_attack"
-		"Ability4" "generic_hidden"
+		"Ability4" "shadow_stealthy"
 		"Ability5" "generic_hidden"
 		"Ability6" "aerial_assault"
 		
@@ -33,6 +33,7 @@
 		"AttributeAgilityGain"		    "3.9"
 
 		"StatusHealthRegen"		"2.1"
+		"AttackRange"			"90"
 
 		"MovementSpeed"		"300"
 	}

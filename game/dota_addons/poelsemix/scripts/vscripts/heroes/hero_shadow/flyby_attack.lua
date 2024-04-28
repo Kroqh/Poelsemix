@@ -1,20 +1,58 @@
-modifier_flyby_attack = class({})
+flyby_attack = flyby_attack or class({})
+LinkLuaModifier( "modifier_flyby_passive", "heroes/hero_shadow/flyby_attack", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier( "modifier_flyby_attack", "heroes/hero_shadow/flyby_attack", LUA_MODIFIER_MOTION_NONE )
 
-ori_damage_min = 0
-ori_damage_max = 0
-damage_bonus = 0
+function flyby_attack:GetIntrinsicModifierName()
+	return "modifier_flyby_passive"
+end
 
---------------------------------------------------------------------------------
+modifier_flyby_passive = modifier_flyby_passive or class({})
+
+
+function modifier_flyby_passive :IsPurgable() return false end
+function modifier_flyby_passive :IsPassive() return true end
+function modifier_flyby_passive :IsHidden() return true end
+
+function modifier_flyby_passive:OnCreated()
+	if IsServer() then
+		self.wait = self:GetAbility():GetSpecialValueFor("teleport_cooldown")
+		self.count = 0
+		self:StartIntervalThink(0.1)
+	end
+end
+
+function modifier_flyby_passive :OnRefresh()
+	if IsServer() then
+		self.wait = self:GetAbility():GetSpecialValueFor("teleport_cooldown")
+	end
+end
+
+
+function modifier_flyby_passive :OnIntervalThink()
+	if IsServer() then
+		local parent = self:GetParent()
+		if self.count >= self.wait then
+			
+			parent:AddNewModifier(parent, self:GetAbility(), "modifier_flyby_attack", {})
+            self.count = 0
+        end
+		if (not parent:HasModifier("modifier_flyby_attack")) then
+			self.count = self.count + 0.1
+		end
+	end
+end
+
+
+modifier_flyby_attack = modifier_flyby_attack or class({})
+
 
 function modifier_flyby_attack:IsHidden()
 	return false
 end
---------------------------------------------------------------------------------
 
-function modifier_flyby_attack:IsPurgeable()
+function modifier_flyby_attack:IsPurgable()
 	return false
 end
---------------------------------------------------------------------------------
 
 function modifier_flyby_attack:IsDebuff()
 	return false
@@ -24,18 +62,13 @@ function modifier_flyby_attack:DeclareFunctions()
 	local funcs = {
 		MODIFIER_EVENT_ON_ATTACK_START,
 		MODIFIER_EVENT_ON_ATTACK_LANDED,
-		MODIFIER_EVENT_ON_DEAL_DAMAGE,
 		MODIFIER_PROPERTY_ATTACK_RANGE_BONUS
 	}
 
 	return funcs
 end
 function modifier_flyby_attack:GetModifierAttackRangeBonus()
-	if self:GetParent():HasScepter() then
-		return self:GetAbility():GetSpecialValueFor("attack_range_for_max") * self:GetAbility():GetSpecialValueFor("aghs_multi")
-	else 
-		return self:GetAbility():GetSpecialValueFor("attack_range_for_max")
-	end
+	return self:GetCaster():GetIdealSpeed() * self:GetAbility():GetSpecialValueFor("range_per_ms")
 end
 --------------------------------------------------------------------------------
 
@@ -61,28 +94,12 @@ function modifier_flyby_attack:OnAttackStart( params )
 	----------------------------------------------------
 	--    Determines damage bonus based on distance    --
 	----------------------------------------------------
-	min_damage = self:GetAbility():GetSpecialValueFor( "min_damage_bonus" )
-	max_damage = self:GetAbility():GetSpecialValueFor( "max_damage_bonus" )
-	attackRange = self:GetAbility():GetSpecialValueFor("attack_range_for_max")
+	damage_scaling = self:GetAbility():GetSpecialValueFor( "damage_per_distance" )
 
-	if self:GetParent():HasScepter() then
-		min_damage = min_damage * self:GetAbility():GetSpecialValueFor("aghs_multi")
-		max_damage = max_damage * self:GetAbility():GetSpecialValueFor("aghs_multi")
-		attackRange = attackRange * self:GetAbility():GetSpecialValueFor("aghs_multi")
-	end
-
-	attackRange = attackRange + params.attacker:GetBaseAttackRange()
-	dist_bonus = 0
-	if dis < attackRange / 3 then
-		dist_bonus = min_damage
-	elseif dis < (attackRange / 3) * 2 then
-		dist_bonus = (min_damage + max_damage) / 2
-	else 
-		dist_bonus = max_damage
-	end
-
-	damage_bonus = dist_bonus
+	self.damage = damage_scaling * dis 
+	
 	FindClearSpaceForUnit(params.attacker, target_pos, true)
+	self:GetParent():RemoveModifierByName("modifier_flyby_attack") --Removed beforehand so you dont get free teleport by cancelling attack (can still tp and cancel dmg)
 end
 
 --------------------------------------------------------------------------------
@@ -95,18 +112,19 @@ function modifier_flyby_attack:OnAttackLanded( params )
 		local particle_blood_fx = ParticleManager:CreateParticle(particle_blood, PATTACH_ABSORIGIN_FOLLOW, params.target)
 		ParticleManager:SetParticleControl(particle_blood_fx, 0, params.target:GetAbsOrigin())
 		ParticleManager:ReleaseParticleIndex(particle_blood_fx)
-		local damage = params.damage * damage_bonus
+		print(self.damage)
 		
 		local damageTable = {
 				victim = params.target,
-				damage = damage,
-				damage_type = DAMAGE_TYPE_PURE,
+				damage = self.damage,
+				damage_type = self:GetAbility():GetAbilityDamageType(),
 				attacker = params.attacker,
 				ability = self:GetAbility()
 			}
-			ApplyDamage(damageTable)
 
-		self:GetParent():RemoveModifierByName("modifier_flyby_attack")
+		ApplyDamage(damageTable)
+
+		
 	end
 	
 end
