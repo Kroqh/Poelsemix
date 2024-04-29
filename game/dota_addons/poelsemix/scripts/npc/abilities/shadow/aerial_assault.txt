@@ -14,7 +14,7 @@
 	"AbilityCastPoint"				"0.2"
 
 	
-		"AbilityCooldown"               "45 40 35"
+		"AbilityCooldown"               "50 45 40"
 		"AbilityManaCost"               "200"
 		
 		"precache"
@@ -31,18 +31,20 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_per_slash"			"75 100 125"
+				"damage_per_slash"			"85 110 135"
+				"LinkedSpecialBonus" "special_bonus_shadow_5"
 	 		}
 
 			"02"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"slash_speed"			"2500 3000 3500"
+				"var_type"					"FIELD_FLOAT"
+				"duration"			"2"
 	 		}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bounces"			"10 14 18"
+				"speed_to_dashes"			"75 65 55"
+				"LinkedSpecialBonus" "special_bonus_shadow_8"
 			}
 			"04"
 			{
@@ -52,7 +54,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"circle_radius"			"200"
+				"circle_radius"			"300"
 			}
 
 		}

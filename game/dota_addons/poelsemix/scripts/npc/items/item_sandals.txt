@@ -9,7 +9,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemShopTags"					"damage;move_speed;hard_to_tag"
+	"ItemShopTags"					"damage;move_speed"
 	"ItemQuality"					"epic"
 	"ItemAliases"					"h2o;sandals"
 
@@ -17,6 +17,12 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCooldown"				"6.0"
 	"AbilitySharedCooldown" 		"phase"
+
+	"precache"
+	{
+		"particle"			"particles/econ/events/ti7/phase_boots_ti7.vpcf"
+
+	}
 
 
 	// Special	

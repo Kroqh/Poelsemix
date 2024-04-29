@@ -1,6 +1,4 @@
-//=================================================================================================================
-	// Shadow talent 5 (level 25): Fade into the shadows faster (lowers the fade delay on +30 to stealth)
-	//=================================================================================================================
+
 	"special_bonus_shadow_5"
 	{
 		"BaseClass"						"special_bonus_undefined"
@@ -9,7 +7,7 @@
 		
 		"LinkedAbility"
 		{
-				"01"	"bonus_to_stealth"
+				"01"	"aerial_assault"
 		}
 
 		// Special
@@ -18,8 +16,8 @@
 		{
 			"01"
 			{
-				"var_type" 	"FIELD_FLOAT"
-				"value" 	"-0.50"
+				"var_type" 	"FIELD_INTEGER"
+				"value" 	"30" //damage per dash
 			}
 		}
 	}

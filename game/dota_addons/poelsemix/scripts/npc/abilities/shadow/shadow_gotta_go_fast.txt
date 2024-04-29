@@ -16,11 +16,13 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"distance_per_stack"				"70 62 54 46"
+				"LinkedSpecialBonus" "special_bonus_shadow_4"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"ms_per_stack"			"1"
+				"LinkedSpecialBonus" "special_bonus_shadow_7"
 			}
 			"03"
 			{

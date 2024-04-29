@@ -1,4 +1,5 @@
-	"special_bonus_shadow_3"
+
+	"special_bonus_shadow_7"
 	{
 		"BaseClass"						"special_bonus_undefined"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
@@ -6,7 +7,7 @@
 		
 		"LinkedAbility"
 		{
-				"01"	"flyby_attack"
+				"01"	"shadow_gotta_go_fast"
 		}
 
 		// Special
@@ -16,7 +17,7 @@
 			"01"
 			{
 				"var_type" 	"FIELD_FLOAT"
-				"value" 	"0.2" //Range scale
+				"value" 	"0.3" //ms per stack
 			}
 		}
 	}

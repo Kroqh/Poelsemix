@@ -8,7 +8,7 @@
 	"AbilityTextureName"			"kazuya_spinning_demon"
 	
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-	"AbilityCooldown"				"0.25"
+	"AbilityCooldown"				"0.3"
 	"AbilityManaCost"				"0"
 	"AbilityCastRange"				"0"
 	"AbilityCastPoint"				"0.0"
@@ -43,7 +43,7 @@
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
-			"fury_cost" "25 23 21 19"
+			"fury_cost" "27 25 23 21"
 			"LinkedSpecialBonus" "special_bonus_kazuya_4"
 		}
 		"06"

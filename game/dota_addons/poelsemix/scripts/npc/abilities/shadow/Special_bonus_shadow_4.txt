@@ -1,6 +1,4 @@
-//=================================================================================================================
-	// Shadow talent 4 (level 20): Increase maximum damage modifier on flyby attack
-	//=================================================================================================================
+
 	"special_bonus_shadow_4"
 	{
 		"BaseClass"						"special_bonus_undefined"
@@ -9,7 +7,7 @@
 		
 		"LinkedAbility"
 		{
-				"01"	"flyby_attack"
+				"01"	"shadow_gotta_go_fast"
 		}
 
 		// Special
@@ -18,8 +16,8 @@
 		{
 			"01"
 			{
-				"var_type" 	"FIELD_FLOAT"
-				"value" 	"0.25"
+				"var_type" 	"FIELD_INTEGER"
+				"value" 	"-8" //ms per stack
 			}
 		}
 	}

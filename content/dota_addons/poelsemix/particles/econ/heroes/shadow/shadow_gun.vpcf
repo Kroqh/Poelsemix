@@ -3,7 +3,7 @@
 	_class = "CParticleSystemDefinition"
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 1
-	m_flConstantRadius = 1.0
+	m_flConstantRadius = 2.0
 	m_ConstantColor = [ 248, 249, 255, 255 ]
 	m_bShouldSort = false
 	m_nBehaviorVersion = 12

@@ -17,7 +17,10 @@ function modifier_shadow_gotta_go_fast:DeclareFunctions()
 end
 
 function modifier_shadow_gotta_go_fast:GetModifierMoveSpeedBonus_Constant()
-    return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("ms_per_stack")
+    local ms_per_stack = self:GetAbility():GetSpecialValueFor("ms_per_stack")
+    if self:GetCaster():FindAbilityByName("special_bonus_shadow_7"):GetLevel() > 0 then ms_per_stack = ms_per_stack + self:GetCaster():FindAbilityByName("special_bonus_shadow_7"):GetSpecialValueFor("value") end 
+
+    return self:GetStackCount() * ms_per_stack
 end
 
 function modifier_shadow_gotta_go_fast:OnTakeDamage(keys)
@@ -42,6 +45,7 @@ function modifier_shadow_gotta_go_fast:OnIntervalThink()
     if (not self.damage_taken) then
         self.distance_diff = self.distance_diff + FindDistance(self:GetParent():GetAbsOrigin(), self.parent_last_pos)
         local distance_per_stack = self:GetAbility():GetSpecialValueFor("distance_per_stack")
+        if self:GetCaster():FindAbilityByName("special_bonus_shadow_4"):GetLevel() > 0 then distance_per_stack = distance_per_stack + self:GetCaster():FindAbilityByName("special_bonus_shadow_4"):GetSpecialValueFor("value") end 
         if self.distance_diff > distance_per_stack then
             local stacks_to_add = math.floor(self.distance_diff / distance_per_stack)
             self.distance_diff = self.distance_diff % distance_per_stack

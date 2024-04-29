@@ -1,4 +1,5 @@
-	"special_bonus_shadow_3"
+
+	"special_bonus_shadow_8"
 	{
 		"BaseClass"						"special_bonus_undefined"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
@@ -6,7 +7,7 @@
 		
 		"LinkedAbility"
 		{
-				"01"	"flyby_attack"
+				"01"	"aerial_assault"
 		}
 
 		// Special
@@ -15,8 +16,8 @@
 		{
 			"01"
 			{
-				"var_type" 	"FIELD_FLOAT"
-				"value" 	"0.2" //Range scale
+				"var_type" 	"FIELD_INTEGER"
+				"value" 	"-15" //damage per dash
 			}
 		}
 	}

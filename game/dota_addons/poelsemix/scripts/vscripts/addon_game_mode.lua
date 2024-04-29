@@ -370,7 +370,7 @@ function COverthrowGameMode:LinkMods()
 	LinkLuaModifier( "modifier_fountain_aura_lua", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier( "modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
 	LinkLuaModifier("modifier_generic_taunt","generic_mods/modifier_generic_taunt.lua",LUA_MODIFIER_MOTION_NONE)
-	LinkLuaModifier("modifier_generic_arc","generic_mods/modifier_generic_arc.lua",LUA_MODIFIER_MOTION_NONE)
+	LinkLuaModifier("modifier_generic_arc","generic_mods/modifier_generic_arc.lua",LUA_MODIFIER_MOTION_BOTH)
 	LinkLuaModifier("modifier_remove_speed_cap","generic_mods/modifier_remove_speed_cap.lua",LUA_MODIFIER_MOTION_NONE)
 end
 

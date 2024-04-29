@@ -87,6 +87,7 @@ function shadow_gun:OnProjectileHit(target, location)
 
 	-- Ability specials
 	local damage = self:GetSpecialValueFor("damage")
+	if self:GetCaster():FindAbilityByName("special_bonus_shadow_2"):GetLevel() > 0 then damage = damage + self:GetCaster():FindAbilityByName("special_bonus_shadow_2"):GetSpecialValueFor("value") end 
 
 	-- Apply damage
 	local damageTable = {victim = target,
@@ -143,6 +144,7 @@ function modifier_shadow_gun_stack_handler:OnIntervalThink()
             self:SetStackCount(self:GetStackCount()+stacks_to_add)
 
 			local max_ammo = self:GetAbility():GetSpecialValueFor("max_ammo")
+			if self:GetCaster():FindAbilityByName("special_bonus_shadow_1"):GetLevel() > 0 then max_ammo = max_ammo + self:GetCaster():FindAbilityByName("special_bonus_shadow_1"):GetSpecialValueFor("value") end 
 			if self:GetStackCount() > max_ammo then self:SetStackCount(max_ammo) else EmitSoundOnClient("shadow_gun_ammo", self:GetParent():GetPlayerOwner()) end
         end
     self.parent_last_pos = self:GetParent():GetAbsOrigin()

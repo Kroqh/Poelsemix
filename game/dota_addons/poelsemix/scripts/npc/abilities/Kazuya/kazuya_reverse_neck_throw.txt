@@ -37,7 +37,7 @@
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"fury_cost" "26 24 22 20"
+			"fury_cost" "28 26 24 22"
 			"LinkedSpecialBonus" "special_bonus_kazuya_4"
 		}
 		"04"

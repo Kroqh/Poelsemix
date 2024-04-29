@@ -68,7 +68,9 @@ function modifier_flyby_attack:DeclareFunctions()
 	return funcs
 end
 function modifier_flyby_attack:GetModifierAttackRangeBonus()
-	return self:GetCaster():GetIdealSpeed() * self:GetAbility():GetSpecialValueFor("range_per_ms")
+	local range_multi = self:GetAbility():GetSpecialValueFor("range_per_ms")
+	if self:GetCaster():FindAbilityByName("special_bonus_shadow_3"):GetLevel() > 0 then range_multi = range_multi + self:GetCaster():FindAbilityByName("special_bonus_shadow_3"):GetSpecialValueFor("value") end 
+	return self:GetCaster():GetIdealSpeed() * range_multi
 end
 --------------------------------------------------------------------------------
 
@@ -95,11 +97,12 @@ function modifier_flyby_attack:OnAttackStart( params )
 	--    Determines damage bonus based on distance    --
 	----------------------------------------------------
 	damage_scaling = self:GetAbility():GetSpecialValueFor( "damage_per_distance" )
+	if self:GetCaster():FindAbilityByName("special_bonus_shadow_6"):GetLevel() > 0 then damage_scaling = damage_scaling + self:GetCaster():FindAbilityByName("special_bonus_shadow_6"):GetSpecialValueFor("value") end 
 
 	self.damage = damage_scaling * dis 
 	
 	FindClearSpaceForUnit(params.attacker, target_pos, true)
-	self:GetParent():RemoveModifierByName("modifier_flyby_attack") --Removed beforehand so you dont get free teleport by cancelling attack (can still tp and cancel dmg)
+	
 end
 
 --------------------------------------------------------------------------------
@@ -112,7 +115,6 @@ function modifier_flyby_attack:OnAttackLanded( params )
 		local particle_blood_fx = ParticleManager:CreateParticle(particle_blood, PATTACH_ABSORIGIN_FOLLOW, params.target)
 		ParticleManager:SetParticleControl(particle_blood_fx, 0, params.target:GetAbsOrigin())
 		ParticleManager:ReleaseParticleIndex(particle_blood_fx)
-		print(self.damage)
 		
 		local damageTable = {
 				victim = params.target,
@@ -123,7 +125,7 @@ function modifier_flyby_attack:OnAttackLanded( params )
 			}
 
 		ApplyDamage(damageTable)
-
+		self:GetParent():RemoveModifierByName("modifier_flyby_attack")
 		
 	end
 	

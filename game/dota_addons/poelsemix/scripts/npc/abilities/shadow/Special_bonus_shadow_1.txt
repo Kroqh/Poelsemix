@@ -6,7 +6,7 @@
 		
 		"LinkedAbility"
 		{
-				"01"	"slippery_motherfucker"
+				"01"	"shadow_gun"
 		}
 
 		// Special
@@ -16,7 +16,7 @@
 			"01"
 			{
 				"var_type" 	"FIELD_INTEGER"
-				"value" 	"10"
+				"value" 	"2" //max ammo
 			}
 		}
 	}

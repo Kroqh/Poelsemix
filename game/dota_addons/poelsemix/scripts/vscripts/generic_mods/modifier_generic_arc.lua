@@ -261,6 +261,7 @@ function modifier_generic_arc:SetJumpParameters( kv )
 end
 
 function modifier_generic_arc:Jump()
+	if not IsServer() then return end
 	-- apply horizontal motion
 	if self.distance>0 then
 		if not self:ApplyHorizontalMotionController() then

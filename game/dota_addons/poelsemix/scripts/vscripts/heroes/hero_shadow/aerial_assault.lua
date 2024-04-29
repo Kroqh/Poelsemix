@@ -14,13 +14,25 @@ function aerial_assault:OnSpellStart()
         local caster = self:GetCaster()
 		self.start_loc = caster:GetAbsOrigin()
         self.bounces = 0
-		self.speed 			=	self:GetSpecialValueFor("slash_speed")
+		
 		self.damage 			= 	self:GetSpecialValueFor("damage_per_slash")
+        if self:GetCaster():FindAbilityByName("special_bonus_shadow_5"):GetLevel() > 0 then self.damage = self.damage + self:GetCaster():FindAbilityByName("special_bonus_shadow_5"):GetSpecialValueFor("value") end 
         local damage_radius 	= 	self:GetSpecialValueFor("hitbox")
-        self.max_bounces          = self:GetSpecialValueFor("bounces")
+        local ms = caster:GetIdealSpeed()
+
+
+        
+
+
+        local duration 	= 	self:GetSpecialValueFor("duration")
+        
         self.radius          =      self:GetSpecialValueFor("circle_radius")
         self.angle = RandomAngle()
 
+        local speed_to_dashes = self:GetSpecialValueFor("speed_to_dashes")
+        if self:GetCaster():FindAbilityByName("special_bonus_shadow_8"):GetLevel() > 0 then speed_to_dashes = speed_to_dashes + self:GetCaster():FindAbilityByName("special_bonus_shadow_8"):GetSpecialValueFor("value") end 
+        self.max_bounces          = math.floor(ms / speed_to_dashes)
+        self.speed 			=	((self.max_bounces/duration) *  self.radius) * 2 
 
         -- Play the cast sound
         EmitSoundOn("shadow_ult", caster)
@@ -60,7 +72,7 @@ function aerial_assault:OnSpellStart()
     end
 end
 
-function aerial_assault:GetAOERadius()
+function aerial_assault:GetCastRange()
     return self:GetSpecialValueFor("circle_radius")
 end
 
@@ -116,6 +128,14 @@ function aerial_assault:OnProjectileHit_ExtraData(target, location, ExtraData)
             else
                 if caster:FindModifierByName("modifier_mid_aerial") then
                     caster:FindModifierByName("modifier_mid_aerial"):Destroy()
+                    local damageTable = {
+                        victim = caster,
+                        damage = 1,
+                        damage_type = DAMAGE_TYPE_PURE,
+                        attacker = caster,
+                        ability = self,
+                    }
+                    ApplyDamage(damageTable) --ensures gotta go fast stacks gets removed on use
                 end
             end
         end
@@ -170,9 +190,9 @@ function RandomAngleOpposite(angle)
    return angle - math.random(-20, 20)
 end
 
-function CalcNextLocation(startpos, radius, angle)
-    x = math.cos(angle)*radius;
-    y = math.sin(angle)*radius;
+function CalcNextLocation(startpos, range, angle)
+    x = math.cos(angle)*(range);
+    y = math.sin(angle)*(range);
     return Vector(startpos.x + x, startpos.y + y, startpos.z)
 end
 
