@@ -103,7 +103,7 @@ function modifier_stewart_guldring_active:OnAttackLanded( params )
 
         params.target:AddNewModifier(self:GetParent(), self, "modifier_stunned", {duration = stun_duration})
 		-- cooldown
-		if not self:GetParent():HasModifier("modifier_stewart_jul_invis") then self:GetAbility():UseResources(false, false, false, true ) end
+		if not self:GetParent():HasModifier("modifier_stewart_jul_invis") or not self:GetParent():HasScepter() then self:GetAbility():UseResources(false, false, false, true ) end
         self:Destroy()
 
 	end
