@@ -1,24 +1,25 @@
-"sonny_boy"
+"stewart_sonny_boy"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"ScriptFile"			"heroes/hero_stewart/hero_stewart"
+	"ScriptFile"			"heroes/hero_stewart/stewart_sonny_boy"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	//"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	//"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 
 	"AbilityTextureName"			"sonny"
-	"AbilityCooldown"				"17 15 13 11"
+	"AbilityCooldown"				"20 18 16 14"
 	"AbilityManaCost"				"80 90 100 110"
 	//"AbilityCastRange"				"750"
-	"AbilityCastPoint"				"0.6"
+	"AbilityCastPoint"				"0.25"
 
-	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_5"
 
 	"precache"
 	{
 		"soundfile"		"soundevents/stewart_soundevent.vsndevts"
+		"particle"		"particles/units/heroes/hero_stewart/sonny_boy.vpcf"
 	}
 
 
@@ -27,22 +28,19 @@
 	    "01"
 		{
 			"var_type" "FIELD_FLOAT"
-			"duration" "5 6 7 8"
+			"duration" "3"
+			"LinkedSpecialBonus" "special_bonus_stewart_1"
 		}
 		"02"
 		{	
 			"var_type" "FIELD_INTEGER"
-			"speed" "50 75 100 125"
+			"speed" "100 125 150 175"
+			"LinkedSpecialBonus" "special_bonus_stewart_6"
 		}
         "03"
         {
-            "var_type" "FIELD_INTEGER"
-            "bashchance" "10 15 20 25"
-        }
-        "04"
-        {
-            "var_type" "FIELD_INTEGER"
-            "bashduration" "0.75 1.0 1.25 1.5"
+            "var_type" "FIELD_FLOAT"
+            "str_to_hp_regen" "2 2.5 3 3.5"
         }
 	}
 }

@@ -1,0 +1,35 @@
+"stewart_en_med_guldringen"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_stewart/stewart_en_med_guldringen"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+
+	"AbilityTextureName"			"burp"
+	"AbilityCooldown"				"7 6.5 6 5.5"
+	"AbilityManaCost"				"0"
+
+	//"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
+
+"precache"
+	{	
+		"particle"  "particles/units/heroes/hero_primal_beast/primal_beast_uproar_hands_power_up_energy.vpcf"
+	}
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"stun_duration" "1"
+			"LinkedSpecialBonus" "special_bonus_stewart_2"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"str_to_damage" "3 3.25 3.5 3.75"
+			"LinkedSpecialBonus" "special_bonus_stewart_5"
+		}
+	}
+}

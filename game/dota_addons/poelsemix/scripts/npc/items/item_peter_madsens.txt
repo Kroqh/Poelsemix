@@ -73,7 +73,7 @@
 		"07"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"evasion_debuff"				"999"
+			"evasion_debuff"				"-999"
 		}
 	}
 }

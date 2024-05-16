@@ -29,6 +29,7 @@ end
 function modifier_musashi_water:OnAttackLanded( params )
 	if IsServer() then
 		if params.target~=self:GetParent() then return end
+		if not self:GetAbility():IsCooldownReady() then return end
 		if self:GetParent():PassivesDisabled() then return end
 		if params.attacker:GetTeamNumber()==params.target:GetTeamNumber() then return end
 		if params.attacker:IsOther() or params.attacker:IsBuilding() then return end

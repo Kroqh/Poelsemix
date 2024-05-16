@@ -5,6 +5,24 @@ function caro_side_swap:GetCastRange()
     return self:GetSpecialValueFor("cast_range")
 end
 
+
+function caro_side_swap:GetCustomCastErrorTarget(target)
+	return "CAN'T CAST ON SELF"
+end
+
+function caro_side_swap:CastFilterResultTarget(target)
+	if IsServer() then
+		local caster = self:GetCaster()
+
+		if caster ~= target then
+			return UF_SUCCESS
+		else
+			return UF_FAIL_CUSTOM
+		end
+	end
+end
+
+
 function caro_side_swap:OnSpellStart()
     if not IsServer() or interrupt then return end
 

@@ -60,7 +60,7 @@ function modifier_bomb_b:OnIntervalThink()
 
 		local heroes = FindUnitsInRadius(parent:GetTeamNumber(), parent_pos, nil, self.radius, ability:GetAbilityTargetTeam(), ability:GetAbilityTargetType(), ability:GetAbilityTargetFlags(), FIND_ANY_ORDER, false)
 		
-		ability:EmitSound("Hero_Techies.Suicide")
+		parent:EmitSound("Hero_Techies.Suicide")
 
 		local pfx = ParticleManager:CreateParticle(self.particle, PATTACH_ABSORIGIN_FOLLOW, parent)
 		ParticleManager:SetParticleControl(pfx, 0, parent_pos)

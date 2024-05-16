@@ -33,6 +33,7 @@ end
 
 
 function shadow_gun:OnSpellStart()
+	if not IsServer() then return end
 	-- Ability properties
 	local caster = self:GetCaster()
 	local ability = self

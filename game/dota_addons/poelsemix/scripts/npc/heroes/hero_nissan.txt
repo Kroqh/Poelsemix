@@ -14,7 +14,7 @@
 	"Ability6" "race"
 	"Ability7" "generic_hidden"
 	
-	"AttackRange"			"125"
+	
 
 	"Ability10" "special_bonus_nissan_5"
 	"Ability11" "special_bonus_nissan_6"
@@ -25,6 +25,8 @@
 	"Ability16" "special_bonus_nissan_4"
 	"Ability17" "special_bonus_nissan_8"
 
+
+	"AttackRange"			"125"
 	"ArmorPhysical"		"7"
 
 	"AttributeBaseStrength"			"27"									

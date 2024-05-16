@@ -2,37 +2,42 @@
 {
 	"override_hero"				"npc_dota_hero_beastmaster"			// Hero to override
 	"DisableWearables" "1"
-	"ModelScale" "0.6"
-	"Ability1" "sonny_boy"				
-	"Ability2" "en_med_guldringen"
-	"Ability3" "ask_for_help"
-	"Ability4" "generic_hidden"
+	"ModelScale" "0.75"
+	"Ability1" "stewart_en_med_guldringen"
+	"Ability2" "stewart_sonny_boy"	
+	"Ability3" "stewart_ask_for_help"
+	"Ability4" "stewart_jul_pa_vesterbro"
 	"Ability5" "generic_hidden"
-	"Ability6" "jul_pa_vesterbro"
+	"Ability6" "stewart_poelsevogn"
+	
 	"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 	
-	"Ability10"		"special_bonus_cooldown_reduction_15"
-	"Ability11"		"special_bonus_movement_speed_40"
+	"Ability10"		"special_bonus_stewart_1"
+	"Ability11"		"special_bonus_stewart_2"
 	
-	"Ability12"		"special_bonus_attack_damage_50"
-	"Ability13"		"special_bonus_hp_500"
+	"Ability12"		"special_bonus_stewart_3"
+	"Ability13"		"special_bonus_stewart_4"
 	
-	"Ability14"		"special_bonus_strength_25"
-	"Ability15"		"special_bonus_evasion_20"
+	"Ability14"		"special_bonus_stewart_5"
+	"Ability15"		"special_bonus_stewart_6"
 	
-	"Ability16"		"special_bonus_armor_20"
-	"Ability17"		"special_bonus_magic_resistance_20"
+	"Ability16"		"special_bonus_stewart_7"
+	"Ability17"		"special_bonus_stewart_8"
 
-	"ArmorPhysical"		"3" 
+	"ArmorPhysical"		"4" 
 
-	"AttributeBaseStrength"			"25"									// Base strength
-	"AttributeStrengthGain"			"3.2"									// Strength bonus per level.
-	"AttributeBaseIntelligence"		"16"									// Base intelligence
-	"AttributeIntelligenceGain"		"1.9"									// Intelligence bonus per level.
+	"AttributeBaseStrength"			"23"									// Base strength
+	"AttributeStrengthGain"			"3.3"									// Strength bonus per level.
+	"AttributeBaseIntelligence"		"14"									// Base intelligence
+	"AttributeIntelligenceGain"		"1.7"									// Intelligence bonus per level.
 	"AttributeBaseAgility"		"20"
-	"AttributeAgilityGain"		"1.6"
+	"AttributeAgilityGain"		"1.5"
+	"AttackDamageMin"			"55"
+	"AttackDamageMax"			"57"
+	"AttackRate"			"1.8"
 
-	"StatusHealthRegen"		"5"
+	"StatusHealthRegen"		"4"
 
-	"MovementSpeed"		"300"
+	"MovementSpeed"		"290"
+	"AttackRange"			"130"
 }
