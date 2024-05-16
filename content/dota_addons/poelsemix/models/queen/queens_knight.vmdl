@@ -14,44 +14,113 @@
 						remaps = 
 						[
 							{
-								from = "herobloodmage210.vmat"
-								to = "materials/models/items/ember_spirit/desert_warrior_off_hand/desert_warrior_off_hand.vmat"
+								from = "runner1.vmat"
+								to = "materials/queen/queens_knight.vmat"
 							},
 							{
-								from = "herobloodmage211.vmat"
-								to = "materials/queen/queen_metal.vmat"
+								from = "runner10.vmat"
+								to = "materials/queen/queens_knight.vmat"
 							},
 							{
-								from = "herobloodmage29.vmat"
-								to = "materials/queen/queen_m.vmat"
+								from = "runner11.vmat"
+								to = "materials/dev/journey_gold.vmat"
 							},
 							{
-								from = "herobloodmage28.vmat"
-								to = "materials/queen/queen_hair.vmat"
+								from = "runner12.vmat"
+								to = "materials/models/development/invisibletexture.vmat"
 							},
 							{
-								from = "herobloodmage27.vmat"
-								to = "materials/queen/queen_m.vmat"
+								from = "runner13.vmat"
+								to = "materials/models/development/invisibletexture.vmat"
 							},
 							{
-								from = "herobloodmage26.vmat"
-								to = "materials/queen/queen_m.vmat"
+								from = "runner14.vmat"
+								to = "materials/queen/queens_knight.vmat"
 							},
 							{
-								from = "herobloodmage25.vmat"
-								to = "materials/queen/queen_m.vmat"
+								from = "runner15.vmat"
+								to = "materials/queen/queens_knight.vmat"
 							},
 							{
-								from = "herobloodmage24.vmat"
-								to = "materials/queen/queen_m.vmat"
+								from = "runner9.vmat"
+								to = "materials/queen/queens_knight.vmat"
 							},
 							{
-								from = "herobloodmage23.vmat"
-								to = "materials/queen/queen_m.vmat"
+								from = "runner8.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner7.vmat"
+								to = "materials/models/development/invisibletexture.vmat"
+							},
+							{
+								from = "runner6.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner5.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner4.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner3.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner21.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner20.vmat"
+								to = "materials/models/development/invisibletexture.vmat"
+							},
+							{
+								from = "runner2.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner19.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner18.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner17.vmat"
+								to = "materials/queen/queens_knight.vmat"
+							},
+							{
+								from = "runner16.vmat"
+								to = "materials/models/development/invisibletexture.vmat"
 							},
 						]
 						use_global_default = false
 						global_default_material = "materials/queen/queen_m.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "queens_knight"
+						filename = "models/queen/knight.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Runner21",
+								"Runner7",
+							]
+						}
 					},
 				]
 			},
@@ -99,7 +168,7 @@
 						_class = "Attachment"
 						name = "attach_head"
 						parent_bone = "Bone_Head"
-						relative_origin = [ 0.346872, -1.124148, 7.679428 ]
+						relative_origin = [ 0.346872, -1.124148, 11.750603 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
@@ -117,7 +186,7 @@
 						_class = "Attachment"
 						name = "attach_eyes"
 						parent_bone = "Bone_Head"
-						relative_origin = [ 0.0, -8.668715, 7.756615 ]
+						relative_origin = [ 0.0, -7.163238, 9.850388 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
@@ -135,63 +204,13 @@
 						[
 							{
 								_class = "Hitbox"
-								name = "Bone_Head"
-								parent_bone = "Bone_Head"
+								name = "Bone_Chest"
+								parent_bone = "Bone_Chest"
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -7.158984, -10.06798, -1.999931 ]
-								hitbox_maxs = [ 8.109982, 8.056982, 15.836029 ]
-							},
-							{
-								_class = "Hitbox"
-								name = "Bone004"
-								parent_bone = "Bone004"
-								surface_property = ""
-								translation_only = false
-								group_id = 0
-								hitbox_mins = [ -0.808947, -1.636813, -3.218681 ]
-								hitbox_maxs = [ 0.710989, 0.793956, 0.5 ]
-							},
-							{
-								_class = "Hitbox"
-								name = "Bone005"
-								parent_bone = "Bone005"
-								surface_property = ""
-								translation_only = false
-								group_id = 0
-								hitbox_mins = [ -0.5, -0.5, -0.521957 ]
-								hitbox_maxs = [ 0.5, 0.5, 0.5 ]
-							},
-							{
-								_class = "Hitbox"
-								name = "Portrait_Jaw"
-								parent_bone = "Portrait_Jaw"
-								surface_property = ""
-								translation_only = false
-								group_id = 0
-								hitbox_mins = [ -4.999978, -1.501024, -1.977936 ]
-								hitbox_maxs = [ 4.999979, 5.999945, 2.500038 ]
-							},
-							{
-								_class = "Hitbox"
-								name = "Bone_Arm1_R"
-								parent_bone = "Bone_Arm1_R"
-								surface_property = ""
-								translation_only = false
-								group_id = 0
-								hitbox_mins = [ -9.769994, -5.499988, -17.594902 ]
-								hitbox_maxs = [ 0.5, 5.499988, 2.500046 ]
-							},
-							{
-								_class = "Hitbox"
-								name = "Bone_Arm2_R"
-								parent_bone = "Bone_Arm2_R"
-								surface_property = ""
-								translation_only = false
-								group_id = 0
-								hitbox_mins = [ -7.000003, -4.999976, -16.291954 ]
-								hitbox_maxs = [ 1.900958, 4.999981, 0.5 ]
+								hitbox_mins = [ -14.039987, -10.76899, -8.778969 ]
+								hitbox_maxs = [ 14.269986, 16.275982, 17.700005 ]
 							},
 							{
 								_class = "Hitbox"
@@ -200,8 +219,8 @@
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -0.5, -5.499989, -17.594902 ]
-								hitbox_maxs = [ 9.769994, 5.499988, 2.500046 ]
+								hitbox_mins = [ -4.629969, -9.42997, -18.496506 ]
+								hitbox_maxs = [ 11.372995, 8.364992, 4.566048 ]
 							},
 							{
 								_class = "Hitbox"
@@ -210,38 +229,28 @@
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -1.900956, -4.999979, -16.291954 ]
-								hitbox_maxs = [ 7.000005, 4.999978, 0.5 ]
+								hitbox_mins = [ -1.696964, -5.652965, -8.826996 ]
+								hitbox_maxs = [ 9.005992, 4.68799, 2.629951 ]
 							},
 							{
 								_class = "Hitbox"
-								name = "Bone002"
-								parent_bone = "Bone002"
+								name = "Bone_Arm1_R"
+								parent_bone = "Bone_Arm1_R"
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -12.915972, -0.977975, -11.345093 ]
-								hitbox_maxs = [ 13.245974, 0.748021, 19.78373 ]
+								hitbox_mins = [ -11.902998, -9.42997, -18.321518 ]
+								hitbox_maxs = [ 3.09197, 8.364992, 4.623039 ]
 							},
 							{
 								_class = "Hitbox"
-								name = "Bone_Leg1_L"
-								parent_bone = "Bone_Leg1_L"
+								name = "Bone_Arm2_R"
+								parent_bone = "Bone_Arm2_R"
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -5.499975, -6.999986, -29.000114 ]
-								hitbox_maxs = [ 8.499994, 9.99998, 1.0 ]
-							},
-							{
-								_class = "Hitbox"
-								name = "Bone_Leg2_L"
-								parent_bone = "Bone_Leg2_L"
-								surface_property = ""
-								translation_only = false
-								group_id = 0
-								hitbox_mins = [ -6.499959, -5.999973, -27.000008 ]
-								hitbox_maxs = [ 6.499986, 7.999968, 0.5 ]
+								hitbox_mins = [ -9.735987, -5.652966, -10.677986 ]
+								hitbox_maxs = [ 1.079967, 4.676989, 0.5 ]
 							},
 							{
 								_class = "Hitbox"
@@ -250,8 +259,8 @@
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -8.499994, -6.999986, -29.000114 ]
-								hitbox_maxs = [ 5.499976, 9.99998, 1.0 ]
+								hitbox_mins = [ -9.186991, -5.021992, -31.097927 ]
+								hitbox_maxs = [ 3.931981, 8.078982, 0.5 ]
 							},
 							{
 								_class = "Hitbox"
@@ -260,27 +269,30 @@
 								surface_property = ""
 								translation_only = false
 								group_id = 0
-								hitbox_mins = [ -6.499987, -5.999973, -27.000008 ]
-								hitbox_maxs = [ 6.499958, 7.999966, 0.5 ]
+								hitbox_mins = [ -7.416984, -0.5, -20.612196 ]
+								hitbox_maxs = [ 3.918967, 10.811956, 9.517122 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg1_L"
+								parent_bone = "Bone_Leg1_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.967978, -4.971992, -30.940929 ]
+								hitbox_maxs = [ 10.268991, 9.356977, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg2_L"
+								parent_bone = "Bone_Leg2_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.572967, -0.5, -22.919952 ]
+								hitbox_maxs = [ 8.458985, 10.670956, 10.156887 ]
 							},
 						]
-					},
-				]
-			},
-			{
-				_class = "RenderMeshList"
-				children = 
-				[
-					{
-						_class = "RenderMeshFile"
-						name = "queen"
-						filename = "models/queen/queen.fbx"
-						import_scale = 1.0
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = [  ]
-						}
 					},
 				]
 			},
@@ -303,11 +315,11 @@
 						anim_markup_ordered = false
 						disable_compression = false
 						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
+						source_filename = "models/queen/knight.fbx"
 						import_bone_scales = false
-						start_frame = 4205
-						end_frame = 4236
-						framerate = 40.0
+						start_frame = 6124
+						end_frame = 6155
+						framerate = 30.0
 						reverse = false
 					},
 					{
@@ -325,11 +337,11 @@
 						anim_markup_ordered = false
 						disable_compression = false
 						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
+						source_filename = "models/queen/knight.fbx"
 						import_bone_scales = false
-						start_frame = 10
-						end_frame = 55
-						framerate = -1.0
+						start_frame = 210
+						end_frame = 360
+						framerate = 60.0
 						reverse = false
 					},
 					{
@@ -347,10 +359,10 @@
 						anim_markup_ordered = false
 						disable_compression = false
 						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
+						source_filename = "models/queen/knight.fbx"
 						import_bone_scales = false
-						start_frame = 1648
-						end_frame = 1700
+						start_frame = 1366
+						end_frame = 1410
 						framerate = 30.0
 						reverse = false
 					},
@@ -369,10 +381,10 @@
 						anim_markup_ordered = false
 						disable_compression = false
 						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
+						source_filename = "models/queen/knight.fbx"
 						import_bone_scales = false
-						start_frame = 3010
-						end_frame = 3030
+						start_frame = 700
+						end_frame = 753
 						framerate = 30.0
 						reverse = false
 					},
@@ -391,83 +403,17 @@
 						anim_markup_ordered = false
 						disable_compression = false
 						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
+						source_filename = "models/queen/knight.fbx"
 						import_bone_scales = false
-						start_frame = 2500
-						end_frame = 2578
-						framerate = -1.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "cast_ult"
-						activity_name = "CAST_ABILITY_6"
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = true
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
-						import_bone_scales = false
-						start_frame = 160
-						end_frame = 190
-						framerate = -1.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "cast1"
-						activity_name = "ACT_DOTA_CAST_ABILITY_1"
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
-						import_bone_scales = false
-						start_frame = 3755
-						end_frame = 3800
+						start_frame = 6343
+						end_frame = 6420
 						framerate = 45.0
 						reverse = false
 					},
 					{
 						_class = "AnimFile"
-						name = "cast2"
-						activity_name = "ACT_DOTA_CAST_ABILITY_2"
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.1
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
-						import_bone_scales = false
-						start_frame = 2610
-						end_frame = 2630
-						framerate = 30.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "cast3"
-						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						name = "charge"
+						activity_name = "ACT_DOTA_CHANNEL_ABILITY_1"
 						activity_weight = 1
 						weight_list_name = ""
 						fade_in_time = 0.2
@@ -479,33 +425,11 @@
 						anim_markup_ordered = false
 						disable_compression = false
 						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
+						source_filename = "models/queen/knight.fbx"
 						import_bone_scales = false
-						start_frame = 2460
-						end_frame = 2481
-						framerate = -1.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
-						name = "cast4"
-						activity_name = "ACT_DOTA_CAST_ABILITY_4"
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = true
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
-						import_bone_scales = false
-						start_frame = 4105
-						end_frame = 4154
-						framerate = 60.0
+						start_frame = 5966
+						end_frame = 5986
+						framerate = 50.0
 						reverse = false
 					},
 				]

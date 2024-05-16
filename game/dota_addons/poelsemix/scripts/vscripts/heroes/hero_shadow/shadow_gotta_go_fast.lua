@@ -6,6 +6,8 @@ function shadow_gotta_go_fast:GetIntrinsicModifierName()
     return "modifier_shadow_gotta_go_fast"
 end
 
+
+
 modifier_shadow_gotta_go_fast = modifier_shadow_gotta_go_fast or class({})
 
 function modifier_shadow_gotta_go_fast:DeclareFunctions()

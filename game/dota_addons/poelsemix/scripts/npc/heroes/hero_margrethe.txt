@@ -21,7 +21,7 @@
 
 
 	//"Ability1" "urgot_acid_hunter"				
-	//"Ability2" "urgot_capacitor"
+	"Ability2" "margrethe_livgarde"
 	//"Ability3" "urgot_corrosive"
 	//"Ability4" "urgot_augmenter"
 	//"Ability5" "generic_hidden"

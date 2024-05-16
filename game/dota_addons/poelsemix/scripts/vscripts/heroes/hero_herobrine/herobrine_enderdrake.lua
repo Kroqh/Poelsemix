@@ -14,7 +14,7 @@ function herobrine_enderdrake:OnSpellStart()
     
 
     local dmg = math.floor(int * dmg_scaling)
-    local hp = math.floor(int * hp_scaling)--minks have 1 hp by defeault as to not insta die
+    local hp = math.floor(int * hp_scaling)
     unit = CreateUnitByName("npc_enderdrake",target_point, true, caster, nil, caster:GetTeam())
 
     unit:AddNewModifier(caster, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
