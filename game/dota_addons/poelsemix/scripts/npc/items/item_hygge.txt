@@ -1,74 +1,62 @@
-"item_htx"
+"item_hygge"
 {
-	"BaseClass"             		"item_datadriven"
-	"AbilityTextureName"			"htx"
+	"BaseClass"             		"item_lua"
+	"AbilityTextureName"			"hygge_book"
+	"ScriptFile"					"items/item_hygge.lua"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"7850"
-  	"ID"						"2008"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+  	"ItemCost"					"4500"
+  	"ID"						"3055"
 	
 	// Stats		
 	//-------------------------------------------------------------------------------------------------------------
 		
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-		"ItemShopTags"				"damage;mana;health;int"
+		"ItemShopTags"				"support;attack_speed;mana_regen;int"
 		"ItemQuality"				"epic"
-		"ItemAliases" 				"oct"
+		"ItemAliases" 				"cozy;book"
 		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
+
+	"precache"
+	{
+		"particle" "particles/units/heroes/hero_treant/treant_leech_seed_projectile.vpcf"
+	}
 	"AbilitySpecial"
 	{
 		"01"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"health" "625"
+			"int" "15"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"mana" "625"
+			"mana_regen" "8"
 		}
 		"03"
 		{
-			"var_type" "FIELD_INTEGER"
-			"int" "35"
+			"var_type" "FIELD_FLOAT"
+			"int_healing_ratio" "50" //Percent of int
 		}
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"cdr" "30"
+			"attack_speed" "40"
 		}
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
-			"dmg" "15"
+			"heaL_range" "500"
 		}
 		"06"
 		{
 			"var_type" "FIELD_INTEGER"
-			"mana_regen" "6"
-		}
-	}
-	
-	"Modifiers"
-	{
-		"modifier_htx"
-		{
-			"Passive"			"1"
-			"IsHidden"			"1"
-			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
-
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_HEALTH_BONUS" "%health"
-				"MODIFIER_PROPERTY_MANA_BONUS" "%mana"
-				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%int"
-				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%mana_regen"
-				"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE" "%dmg"
-		        "MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%cdr"		        
-			}
+			"proj_speed" "800"
 		}
 	}
 }

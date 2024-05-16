@@ -1,0 +1,14 @@
+"item_recipe_hygge"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"700"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_hygge"
+		"ItemRequirements"
+		{
+			"01" "item_staff_of_wizardry;item_tiara_of_selemene;item_blitz_knuckles"
+		}
+  	}

@@ -79,6 +79,7 @@
 		"item"		"item_abaddon_lichcap"
 		"item"		"item_trump_card"
 		"item"		"item_unity"
+		"item"		"item_hygge"
 		
 		
 		

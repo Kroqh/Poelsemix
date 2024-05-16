@@ -85,7 +85,6 @@ function modifier_stewart_guldring_active:OnAttackLanded( params )
         local str_scale = self:GetAbility():GetSpecialValueFor("str_to_damage")
         if self:GetCaster():FindAbilityByName("special_bonus_stewart_5"):GetLevel() > 0 then str_scale = str_scale + self:GetCaster():FindAbilityByName("special_bonus_stewart_5"):GetSpecialValueFor("value") end 
 		
-        local damage = self:GetParent():GetAttackDamage()
         local damage = self:GetParent():GetStrength() * str_scale
         
         local damageTable = {

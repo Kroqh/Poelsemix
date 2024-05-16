@@ -11,7 +11,7 @@
 		
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-		"ItemShopTags"				"damage"
+		"ItemShopTags"				"damage;int;mana"
 		"ItemQuality"				"rare"
 		"ItemAliases" 				"iq;mensa iq"
 		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
