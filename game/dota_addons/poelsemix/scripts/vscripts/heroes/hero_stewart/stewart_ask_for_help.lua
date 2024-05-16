@@ -22,10 +22,6 @@ modifier_stewart_ask_for_help = modifier_stewart_ask_for_help or class({})
 
 function modifier_stewart_ask_for_help:IsPurgable() return false end
 
-function modifier_stewart_ask_for_help:GetIntrinsicModifierName() 
-    return "modifier_stewart_ask_for_help"
-end
-
 function modifier_stewart_ask_for_help:OnCreated()
     self.stats_per_hero = self:GetAbility():GetSpecialValueFor("str_per_hero")
     if self:GetCaster():FindAbilityByName("special_bonus_stewart_4"):GetLevel() > 0 then self.stats_per_hero = self.stats_per_hero + self:GetCaster():FindAbilityByName("special_bonus_stewart_4"):GetSpecialValueFor("value") end 

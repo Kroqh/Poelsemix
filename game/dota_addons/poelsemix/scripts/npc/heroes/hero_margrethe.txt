@@ -23,7 +23,7 @@
 	//"Ability1" "urgot_acid_hunter"				
 	"Ability2" "margrethe_livgarde"
 	//"Ability3" "urgot_corrosive"
-	//"Ability4" "urgot_augmenter"
+	"Ability4" "margrethe_regal_presence"
 	//"Ability5" "generic_hidden"
 	//"Ability6" "urgot_reverser"
 
