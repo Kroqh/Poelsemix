@@ -78,5 +78,5 @@ end
 
 
 function modifier_rune_buff:GetEffectName()
-    return "particles/econ/items/omniknight/omni_crimson_witness_2021/omniknight_crimson_witness_2021_degen_aura_debuff_runes.vpcf"
+    return "particles/econ/harald/runesten.vpcf"
 end

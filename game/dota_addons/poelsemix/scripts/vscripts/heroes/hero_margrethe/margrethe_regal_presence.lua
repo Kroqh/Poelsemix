@@ -31,7 +31,7 @@ function modifier_margrethe_regal_presence:OnIntervalThink()
     local caster = self:GetParent()
     local radius = self:GetAbility():GetSpecialValueFor("radius")
     self.count = 1 
-    local units = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, radius, self:GetAbility():GetAbilityTargetTeam(), DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_PLAYER_CONTROLLED , FIND_ANY_ORDER, false)
+    local units = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, radius, self:GetAbility():GetAbilityTargetTeam(), DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_PLAYER_CONTROLLED , FIND_ANY_ORDER, false)
     for i, unit in pairs(units) do
         if unit:GetUnitName() == "npc_queens_knight" then self.count = self.count + 1 end
     end
@@ -78,4 +78,8 @@ function modifier_margrethe_regal_presence_buff:GetModifierAttackSpeedBonus_Cons
 end
 function modifier_margrethe_regal_presence_buff:GetModifierMagicalResistanceBonus()
     return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("magic_resist_per_stack")
+end
+
+function modifier_margrethe_regal_presence_buff:GetEffectName()
+    return "particles/econ/items/margrethe/regal_presence.vpcf"
 end

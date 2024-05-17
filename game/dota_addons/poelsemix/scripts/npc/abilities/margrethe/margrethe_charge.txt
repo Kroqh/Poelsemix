@@ -1,0 +1,69 @@
+"margrethe_charge"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_margrethe/margrethe_charge"
+
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityTextureName"			"margrethe_charge"
+	"RequiredLevel"        "2"
+	
+	"precache"
+	{
+		"particle"		"particles/units/heroes/hero_margrethe/margrethe_charge.vpcf"
+		"particle"		"particles/econ/items/void_spirit/void_spirit_immortal_2021/void_spirit_immortal_2021_astral_step_dmg_blood.vpcf"
+	
+	}
+	
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.20"
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"14 13 12 11"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"80 75 70 65"
+
+	
+
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"damage"		"200 275 350 425"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"charge_bonus_speed"	"400 450 500 550"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"charge_max_dur"	"5"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"charge_damage_range"	"200"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"range"	"700 725 750 775"
+		}
+	}
+	
+	
+}

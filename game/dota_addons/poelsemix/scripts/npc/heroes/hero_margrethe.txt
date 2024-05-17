@@ -20,7 +20,7 @@
 	"MovementSpeed"               "295"
 
 
-	//"Ability1" "urgot_acid_hunter"				
+	"Ability1" "margrethe_charge"				
 	"Ability2" "margrethe_livgarde"
 	//"Ability3" "urgot_corrosive"
 	"Ability4" "margrethe_regal_presence"

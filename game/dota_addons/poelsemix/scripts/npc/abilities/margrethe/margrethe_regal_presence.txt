@@ -11,6 +11,13 @@
 
 	"AbilityTextureName"			"margrethe_regal_presence"
 
+
+	"precache"
+	{
+		
+		"particle"			"particles/econ/items/margrethe/regal_presence.vpcf"
+	}
+
 	"AbilitySpecial"
 	{
 	    "01"

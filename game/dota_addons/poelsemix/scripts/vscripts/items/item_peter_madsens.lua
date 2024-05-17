@@ -42,19 +42,6 @@ function modifier_item_peter_madsens:DeclareFunctions()
 	}
 end
 
-function modifier_item_peter_madsens:GetModifierPreAttack_BonusDamage()
-    if self:GetAbility() then
-		local int = self:GetParent():GetIntellect()
-		local str = self:GetParent():GetStrength()
-		local agi = self:GetParent():GetAgility()
-		local damage = self:GetAbility():GetSpecialValueFor("damage")
-		
-		damage = damage - math.abs(math.min(int,agi,str) - math.max(int,agi,str)) --gets gap between best and worst attribute
-		
-        return damage
-    end
-end
-
 function modifier_item_peter_madsens:GetModifierStatusResistance()
     if self:GetAbility() then
         return self:GetAbility():GetSpecialValueFor("tenacity")
