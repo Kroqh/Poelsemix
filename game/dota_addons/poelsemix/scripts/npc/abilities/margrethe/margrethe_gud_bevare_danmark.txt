@@ -1,0 +1,55 @@
+"margrethe_gud_bevare_danmark"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/hero_margrethe/margrethe_gud_bevare_danmark"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"			"margrethe_gud_bevare_danmark"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY "
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC "
+		"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_NONE"
+
+		"AbilityCooldown"				"26 24 22 20"
+		"AbilityManaCost"				"125 120 115 110"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"HasScepterUpgrade" 		"1"
+
+		"precache"
+	{
+        	"particle"  		"particles/units/heroes/hero_margrethe/gud_bevare_cast.vpcf"
+	}
+		
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"radius" "600 650 700 750"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"base_heal" "200 240 280 320"
+			}
+			"03"
+			{
+				"var_type" "FIELD_FLOAT"
+				"int_to_heal_scaling" "1.2 1.5 1.8 2.1"
+			}
+			"04"
+			{
+				"var_type" "FIELD_FLOAT"
+				"scepter_heal_multi" "3"
+			}
+			
+		}
+}

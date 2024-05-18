@@ -22,7 +22,7 @@
 
 	"Ability1" "margrethe_charge"				
 	"Ability2" "margrethe_livgarde"
-	//"Ability3" "urgot_corrosive"
+	"Ability3" "margrethe_gud_bevare_danmark"
 	"Ability4" "margrethe_regal_presence"
 	//"Ability5" "generic_hidden"
 	//"Ability6" "urgot_reverser"
