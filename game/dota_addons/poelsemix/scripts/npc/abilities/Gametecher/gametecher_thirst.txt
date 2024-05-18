@@ -1,0 +1,44 @@
+
+"gametecher_thirst"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------								
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	"MaxLevel"						"1"
+	"AbilityTextureName"     "puss_hunter"
+
+	"BaseClass"              "ability_lua"
+	"ScriptFile"			"heroes/hero_gametecher/gametecher_thirst.lua"
+
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+
+
+	"precache"
+	{
+		"particle"	"particles/units/heroes/hero_gametecher/thirst.vpcf"
+		
+	}
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"				"2000"
+		}							
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"ms_pct_per_missing_hp"				"0.5"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"as_pct_per_missing_hp"				"1"
+		}	
+	}
+}

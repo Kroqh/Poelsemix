@@ -13,7 +13,7 @@
 	"Ability1" "gametecher_finger"
 	"Ability2" "gametecher_matematik_a"
 	"Ability3" "gametecher_dropout"
-	"Ability4" "bloodseeker_thirst"
+	"Ability4" "gametecher_thirst"
 	"Ability5" "generic_hidden"
 	"Ability6" "gametecher_anime_power"
 	
