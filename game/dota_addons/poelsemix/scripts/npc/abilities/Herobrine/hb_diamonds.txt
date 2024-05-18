@@ -106,7 +106,7 @@
 
 		"RunScript"
 		{
-			"ScriptFile"	"heroes/herobrine/hb_diamonds.lua"
+			"ScriptFile"	"heroes/hero_herobrine/hb_diamonds.lua"
 			"Function"		"StoneGazeStart"
 		}
 	}
@@ -149,7 +149,7 @@
 					{
 						"RunScript"
 						{
-							"ScriptFile"		"heroes/herobrine/hb_diamonds.lua"
+							"ScriptFile"		"heroes/hero_herobrine/hb_diamonds.lua"
 							"Function"			"StoneGaze"
 							"modifier_slow"		"modifier_stone_gaze_slow_datadriven"
 							"modifier_facing"	"modifier_stone_gaze_facing_datadriven"
@@ -168,7 +168,7 @@
 			{
 				"RunScript"
 				{
-					"ScriptFile"	"heroes/herobrine/hb_diamonds.lua"
+					"ScriptFile"	"heroes/hero_herobrine/hb_diamonds.lua"
 					"Function"		"StoneGazeSlow"
 					"modifier_caster"	"modifier_stone_gaze_datadriven"
 					"modifier_target"	"modifier_stone_gaze_slow_datadriven"
@@ -276,7 +276,7 @@
 			{
 							"RunScript"
 				{
-					"ScriptFile"	"heroes/herobrine/hb_diamonds.lua"
+					"ScriptFile"	"heroes/hero_herobrine/hb_diamonds.lua"
 					"Function"		"DiamondMining"
 					
 				}

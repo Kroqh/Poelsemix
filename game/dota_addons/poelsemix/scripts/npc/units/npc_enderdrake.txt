@@ -15,12 +15,12 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"20"			// Physical protection.
+		"ArmorPhysical"				"10"			// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageType" "DAMAGE_TYPE_Magical"
+		"AttackDamageType" "DAMAGE_TYPE_ArmorPhysical"
 		"AttackDamageMin"			"0"		// Damage range min.
 		"AttackDamageMax"			"0"		// Damage range max.	
 		"AttackRate"				"1.8"		// Speed of attack.
@@ -28,7 +28,7 @@
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
 		"AttackRange"				"650"		// Range within a target can be attacked.
 		"ProjectileModel" "particles/units/heroes/hero_bane/bane_projectile.vpcf" // Particle system model for projectile.
-		"ProjectileSpeed" "100" // Speed of projectile.
+		"ProjectileSpeed" "1000" // Speed of projectile.
 
 
 		"BountyXP"					"20"		// Experience earn.

@@ -24,10 +24,6 @@ function modifier_herobrine_grief_passive:DeclareFunctions()
 end
 
 function modifier_herobrine_grief_passive:GetModifierAttackSpeedBonus_Constant()
-    return MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE
-end
-
-function modifier_herobrine_grief_passive:GetModifierAttackSpeedBonus_Constant()
     return self:GetAbility():GetSpecialValueFor("as_bonus")
 end
 function modifier_herobrine_grief_passive:GetModifierDamageOutgoing_Percentage()

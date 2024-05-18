@@ -62,7 +62,6 @@ function aerial_assault:OnSpellStart()
 			iVisionTeamNumber 	= caster:GetTeamNumber(),
 			ExtraData			= {
                 damage = self.damage
-				--self.speed = self.speed * FrameTime()
 			}
 		}
         self.projectileID = ProjectileManager:CreateLinearProjectile(self.projectile)

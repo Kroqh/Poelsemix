@@ -14,7 +14,7 @@
 "precache"
 	{
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
-		"particle"			"particles/units/heroes/hero_techies/techies_blast_off_fire.vpcf"
+		"particle"			"particles/units/heroes/hero_techies/techies_blast_off.vpcf"
 		"particle"			"particles/units/heroes/hero_herobrine/herobrine_explosion_mark.vpcf"
 	}
 "AbilitySpecial"
