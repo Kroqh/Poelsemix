@@ -15,7 +15,7 @@
 	"Ability3" "gametecher_dropout"
 	"Ability4" "bloodseeker_thirst"
 	"Ability5" "generic_hidden"
-	"Ability6" "anime_power_datadriven"
+	"Ability6" "gametecher_anime_power"
 	
 	"Ability10"		"special_bonus_movement_speed_40"
 

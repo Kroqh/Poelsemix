@@ -1,0 +1,104 @@
+"gametecher_anime_power"
+{
+	//General
+	//--------------------------
+	"BaseClass"              "ability_lua"
+	"ScriptFile"			"heroes/hero_gametecher/gametecher_anime_power.lua"
+
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName" "anime_power"
+	
+	//Precache
+	//--------------------------
+	"precache"
+	{
+		"soundfile" "soundevents/gametecher_soundevent.vsndevts"
+		"soundfile"	"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+		"particle"	"particles/units/heroes/hero_gametecher/anime_zone.vpcf"
+		"particle"	"particles/units/heroes/gametecher/ki_blast.vpcf"
+		"particle"	"particles/units/heroes/hero_stormspirit/stormspirit_static_remnant.vpcf"
+		
+	}
+	
+	//Casting
+	//--------------------------
+	"AbilityCastPoint" "2.4"
+	
+	//Time
+	//--------------------------
+	"AbilityCooldown" "90 80 70"
+
+	//Cost
+	//--------------------------
+	"AbilityManaCost" "200"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"blast_damage" "30 40 50"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"blast_int_damage_scaling" "0.6 0.7 0.8"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "800 900 1000"
+		}
+		"04"
+		{
+			"var_type" "FIELD_FLOAT"
+			"projectile_speed" "600 650 700"
+		}
+		"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"total_duration" "13.8" //burst dur + delay + normal dur 
+		}
+		"06"
+		{
+			"var_type" "FIELD_INTEGER"
+			"reduction_while_casting" "60 70 80" //damage reduction
+		}
+		"07"
+		{
+			"var_type" "FIELD_FLOAT"
+			"burst_fire_duration" "1.5"
+		}
+		"08"
+		{
+			"var_type" "FIELD_FLOAT"
+			"burst_fire_rate" "0.2 0.16 0.12"
+		}
+		"09"
+		{
+			"var_type" "FIELD_FLOAT"
+			"normal_fire_rate" "0.3 0.26 0.22"
+		}
+		"10"
+		{
+			"var_type" "FIELD_FLOAT"
+			"delay" "5.6"
+		}
+		"11"
+		{
+			"var_type" "FIELD_FLOAT"
+			"normal_fire_duration" "6.7"
+		}
+
+	}
+	
+	
+}
+
+
+
