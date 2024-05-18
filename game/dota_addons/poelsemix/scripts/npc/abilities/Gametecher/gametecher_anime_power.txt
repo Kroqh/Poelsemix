@@ -48,6 +48,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"blast_int_damage_scaling" "0.6 0.7 0.8"
+			"LinkedSpecialBonus" "special_bonus_gametecher_6"
 		}
 		"03"
 		{

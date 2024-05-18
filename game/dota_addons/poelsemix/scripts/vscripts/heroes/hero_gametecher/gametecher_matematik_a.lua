@@ -30,12 +30,18 @@ function modifier_gametecher_matematik_a_buff:IsDebuff() return false end
 
 function modifier_gametecher_matematik_a_buff:OnCreated()
     self.msloss = self:GetAbility():GetSpecialValueFor("speed_loss")
+    if self:GetParent():FindAbilityByName("special_bonus_gametecher_2"):GetLevel() > 0 then self.msloss = self.msloss + self:GetCaster():FindAbilityByName("special_bonus_gametecher_2"):GetSpecialValueFor("value") end 
+
     if not IsServer() then return end
     local int_percent = self:GetAbility():GetSpecialValueFor("bonus_int_percent")
     local caster = self:GetCaster()
     if caster:HasModifier("modifier_gametecher_dropout_stacks") then 
         local mod = caster:FindModifierByName("modifier_gametecher_dropout_stacks")
-        int_percent = int_percent + (mod:GetStackCount() * self:GetAbility():GetSpecialValueFor("bonus_int_percent_per_dropout"))
+
+        local int_per_stack = self:GetAbility():GetSpecialValueFor("bonus_int_percent_per_dropout")
+
+        if self:GetCaster():FindAbilityByName("special_bonus_gametecher_4"):GetLevel() > 0 then int_per_stack = int_per_stack + self:GetCaster():FindAbilityByName("special_bonus_gametecher_4"):GetSpecialValueFor("value") end 
+        int_percent = int_percent + (mod:GetStackCount() * int_per_stack)
     end
     self.int = (int_percent/100) * caster:GetIntellect()
     

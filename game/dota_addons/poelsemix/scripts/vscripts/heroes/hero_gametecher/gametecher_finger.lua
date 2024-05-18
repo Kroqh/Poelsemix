@@ -19,15 +19,23 @@ function gametecher_finger:OnSpellStart()
 	-- Ability specials    
 	local damage = ability:GetSpecialValueFor("damage")
     local scaling = ability:GetSpecialValueFor("int_scaling_damage")
+	if self:GetCaster():FindAbilityByName("special_bonus_gametecher_5"):GetLevel() > 0 then scaling = scaling + self:GetCaster():FindAbilityByName("special_bonus_gametecher_5"):GetSpecialValueFor("value") end 
     damage = damage + (caster:GetIntellect() * scaling)
 	-- Cast sound
 	EmitSoundOn("gametecher_kapow", caster)    
 	
 	-- Finger main enemy
-	FingerOfDeath(caster, ability, target, damage, enemies_frog_radius)    
+	FingerOfDeath(caster, caster, self, target, damage)
+	
+	if self:GetCaster():FindAbilityByName("special_bonus_gametecher_7"):GetLevel() > 0 then
+		local enemies = FindUnitsInRadius(caster:GetTeamNumber(), target:GetAbsOrigin(), nil, self:GetSpecialValueFor("range"), self:GetAbilityTargetTeam(), self:GetAbilityTargetType(), self:GetAbilityTargetFlags(), FIND_CLOSEST, false)
+		if #enemies >= 2 then --1 is the target itself
+			FingerOfDeath(caster, target, self, enemies[2], damage)
+        end
+	end
 end
 
-function FingerOfDeath(caster, ability, target, damage)
+function FingerOfDeath(caster, particle_source, ability, target, damage)
 	-- Ability properties
 	local particle_finger = "particles/units/heroes/hero_gametecher/gametecher_finger.vpcf"
 
@@ -37,8 +45,10 @@ function FingerOfDeath(caster, ability, target, damage)
 	-- Add particle effects
 	local particle_finger_fx = ParticleManager:CreateParticle(particle_finger, PATTACH_CENTER_FOLLOW, caster)
 
-	--ParticleManager:SetParticleControl(particle_finger_fx, 0, caster:GetAbsOrigin())
-	ParticleManager:SetParticleControlEnt(particle_finger_fx, 0, caster, PATTACH_POINT_FOLLOW, "attach_attack2", caster:GetAbsOrigin(), true)
+	local source = "attach_attack2"
+	if particle_source ~= caster then source = "attach_hitloc" end
+
+	ParticleManager:SetParticleControlEnt(particle_finger_fx, 0, particle_source, PATTACH_POINT_FOLLOW, source, particle_source:GetAbsOrigin(), true)
 	ParticleManager:SetParticleControl(particle_finger_fx, 1, target:GetCenter())
 	ParticleManager:SetParticleControl(particle_finger_fx, 2, target:GetCenter())
 	ParticleManager:ReleaseParticleIndex(particle_finger_fx)           

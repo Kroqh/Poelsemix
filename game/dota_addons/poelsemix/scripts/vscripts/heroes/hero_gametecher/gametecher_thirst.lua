@@ -54,7 +54,9 @@ function modifier_gametecher_thirst_passive:GetModifierAttackSpeedPercentage()
 end
 
 function modifier_gametecher_thirst_passive:GetModifierMoveSpeedBonus_Percentage()
-	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("ms_pct_per_missing_hp")
+    local ms = self:GetAbility():GetSpecialValueFor("ms_pct_per_missing_hp")
+    if self:GetCaster():FindAbilityByName("special_bonus_gametecher_3"):GetLevel() > 0 then ms = ms + self:GetCaster():FindAbilityByName("special_bonus_gametecher_3"):GetSpecialValueFor("value") end 
+	return self:GetStackCount() * ms
 end
 
 function modifier_gametecher_thirst_passive:GetEffectName()

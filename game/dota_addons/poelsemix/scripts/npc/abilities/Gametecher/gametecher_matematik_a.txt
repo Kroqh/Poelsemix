@@ -37,11 +37,13 @@
 		{
 			"var_type" "FIELD_FLOAT"
 			"bonus_int_percent_per_dropout" "0.8 1 1.2 1.4"
+			"LinkedSpecialBonus" "special_bonus_gametecher_4"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
 			"speed_loss" "-125"
+			"LinkedSpecialBonus" "special_bonus_gametecher_2"
 		}
 		"04"
 		{

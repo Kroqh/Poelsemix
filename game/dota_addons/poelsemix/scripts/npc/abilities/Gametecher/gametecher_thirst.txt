@@ -34,6 +34,7 @@
 		{
 			"var_type"					"FIELD_FLOAT"
 			"ms_pct_per_missing_hp"				"0.5"
+			"LinkedSpecialBonus" "special_bonus_gametecher_3"
 		}
 		"03"
 		{

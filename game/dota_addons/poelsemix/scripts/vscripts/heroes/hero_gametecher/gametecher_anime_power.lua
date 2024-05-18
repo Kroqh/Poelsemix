@@ -102,6 +102,9 @@ function modifier_gametecher_anime_power:OnCreated()
     self.radius = self:GetAbility():GetSpecialValueFor("radius")
     self.blast_damage = self:GetAbility():GetSpecialValueFor("blast_damage")
     self.blast_int_scaling = self:GetAbility():GetSpecialValueFor("blast_int_damage_scaling")
+
+    if self:GetCaster():FindAbilityByName("special_bonus_gametecher_6"):GetLevel() > 0 then self.blast_int_scaling = self.blast_int_scaling + self:GetCaster():FindAbilityByName("special_bonus_gametecher_6"):GetSpecialValueFor("value") end 
+
     self.proj_speed = self:GetAbility():GetSpecialValueFor("projectile_speed")
     
     self.dmg_reducion = self:GetAbility():GetSpecialValueFor("reduction_while_casting")
@@ -126,8 +129,6 @@ function modifier_gametecher_anime_power:OnIntervalThink()
     self.last_interval = self:GetElapsedTime()
     local parent = self:GetParent()
     local ability = self:GetAbility()
-    print(self.delay + self.burst_dur)
-
     if self:GetElapsedTime() >= self.delay + self.burst_dur then --normal fire
         if self.time_since_last_blast >= self.normal_fire_rate then
             ability:DoBlast(self.radius, self.blast_damage, self.blast_int_scaling, self.proj_speed)

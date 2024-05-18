@@ -39,7 +39,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"250 300 350 400"
+				"damage"					"200 250 300 350"
 
 			}
 			"02"
@@ -50,7 +50,8 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"int_scaling_damage"					"1 1.1 1.2 1.3"
+				"int_scaling_damage"					"1 1.2 1.4 1.6"
+				"LinkedSpecialBonus" "special_bonus_gametecher_5"
 			}
 		}
 	}

@@ -22,8 +22,10 @@ function gametecher_dropout:OnChannelFinish(interrupt)
     if interrupt then return end
 
     local caster = self:GetCaster()
+    local xp_per_level =self:GetSpecialValueFor("xp_gain")
+    if self:GetCaster():FindAbilityByName("special_bonus_gametecher_1"):GetLevel() > 0 then xp_per_level = xp_per_level + self:GetCaster():FindAbilityByName("special_bonus_gametecher_1"):GetSpecialValueFor("value") end 
 
-    local xp = self:GetSpecialValueFor("xp_gain") * caster:GetLevel()
+    local xp =  xp_per_level * caster:GetLevel()
     local min_xp = self:GetSpecialValueFor("xp_gain_minimum")
     if xp < min_xp then xp = min_xp end
 
