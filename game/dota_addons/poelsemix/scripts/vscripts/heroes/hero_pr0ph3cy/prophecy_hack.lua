@@ -19,6 +19,7 @@ function pr0_hack:OnSpellStart()
 				EffectName = particle,
 				iMoveSpeed = speed,
 				bDodgeable = true,
+				iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_2,
 				bVisibleToEnemies = true,
 				bReplaceExisting = false,
 				bProvidesVision = false,
@@ -112,6 +113,10 @@ end
 
 function modifier_pro_hack_damage:CheckState()
 	return {[MODIFIER_STATE_SILENCED] = true}
+end
+
+function modifier_pro_hack_damage:GetEffectName()
+    return "particles/units/heroes/hero_prophecy/hack.vpcf"
 end
 
 function modifier_pro_hack_damage:GetStatusEffectName()

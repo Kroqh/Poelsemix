@@ -3,7 +3,6 @@
 	_class = "CParticleSystemDefinition"
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 90
-	m_ConstantColor = [ 255, 255, 255, 180 ]
 	m_nBehaviorVersion = 5
 	m_nFirstMultipleOverride_BackwardCompat = 4
 	m_controlPointConfigurations = 
@@ -50,7 +49,7 @@
 		{
 			_class = "C_INIT_RandomColor"
 			m_ColorMin = [ 0, 100, 0 ]
-			m_ColorMax = [ 47, 79, 79 ]
+			m_ColorMax = [ 0, 131, 0 ]
 		},
 		{
 			_class = "C_INIT_InitFloat"

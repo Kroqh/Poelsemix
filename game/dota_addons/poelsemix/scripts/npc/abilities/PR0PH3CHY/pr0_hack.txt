@@ -9,14 +9,16 @@
 		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
 		"AbilityCooldown"               "18 17 16 15"
-		"AbilityManaCost"               "90 110 130 150"
+		"AbilityManaCost"               "120 115 110 105"
 		"AbilityCastRange" "700"
+		"AbilityCastPoint"              "0.2"
 		"HasScepterUpgrade"				"1"
 
 	    "precache"
         {
             "particle"          "particles/units/heroes/hero_phantom_lancer/phantomlancer_spiritlance_projectile.vpcf"
-	    "particle"			"particles/status_fx/status_effect_electrical.vpcf"
+	    	"particle"			"particles/status_fx/status_effect_electrical.vpcf"
+			"particle" 			"particles/units/heroes/hero_prophecy/hack.vpcf"
         }
 		
 	"AbilitySpecial"
@@ -30,12 +32,12 @@
 		    "02"
 		    {
 		        "var_type"          "FIELD_INTEGER"
-		        "damage_tick"             "50 65 80 95"	
+		        "damage_tick"             "50 60 70 80"	
 		    }
 		    "03"
 		    {
 		        "var_type"          "FIELD_INTEGER"
-		        "stat_steal"             "20"	//both int, str and agi, IS AGI EFFECT
+		        "stat_steal"             "20"	//both int, str and agi, IS AGH EFFECT
 		    }
 		   "04"
 		    {

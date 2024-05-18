@@ -1,0 +1,53 @@
+"pr0_deity"
+	    {
+	        // General
+	        //-------------------------------------------------------------------------------------------------------------
+	       
+	        "BaseClass"                 "ability_lua"
+			"ScriptFile"			"heroes/hero_pr0ph3cy/prophecy_deity"
+	        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	        "AbilityTextureName"            "d31ty"
+			"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+			"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+			"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+	       
+	        "AbilityCooldown"               "105 95 85"
+	       
+	        "AbilityManaCost"               "150"
+	       
+	        "AbilityCastPoint"              "0.3"
+	       
+	        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_6"
+	       
+	        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+	       
+	        "precache"
+	        {
+	           "particle"			"particles/pro/deity_hack.vpcf"
+			   "particle"			"particles/units/heroes/hero_prophecy/deity_hack_effect.vpcf"
+			   
+	        }
+	       
+	        // Special
+	        //-------------------------------------------------------------------------------------------------------------
+	        "AbilitySpecial"
+	        {
+	            "01"
+	            {
+	                "var_type" "FIELD_INTEGER"
+	                "stat_loss" "-25 -50 -75"
+	            }
+	            "02"
+	            {
+	                "var_type" "FIELD_FLOAT"
+	                "duration" "6"
+	            }
+	            "03"
+	            {
+	                "var_type" "FIELD_INTEGER"
+	                "int_gain" "50 80 110"
+	            }
+	        }
+	       
+	       
+	    }

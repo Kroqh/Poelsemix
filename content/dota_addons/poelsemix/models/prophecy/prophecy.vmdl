@@ -1,0 +1,611 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc36:version{972dada4-b828-45a4-bb93-7795cf0585da} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "flaming raven1.vmat"
+								to = "materials/prophecy/prophecy.vmat"
+							},
+							{
+								from = "flaming raven10.vmat"
+								to = "materials/prophecy/prophecy.vmat"
+							},
+							{
+								from = "flaming raven11.vmat"
+								to = "materials/prophecy/prophecy.vmat"
+							},
+							{
+								from = "flaming raven3.vmat"
+								to = "materials/prophecy/prophecy.vmat"
+							},
+							{
+								from = "flaming raven5.vmat"
+								to = "materials/prophecy/pro_blade.vmat"
+							},
+							{
+								from = "flaming raven6.vmat"
+								to = "materials/prophecy/prophecy.vmat"
+							},
+							{
+								from = "flaming raven7.vmat"
+								to = "materials/models/heroes/invoker/invoker_head_color.vmat"
+							},
+							{
+								from = "flaming raven8.vmat"
+								to = "materials/prophecy/pro_blade.vmat"
+							},
+							{
+								from = "flaming raven9.vmat"
+								to = "materials/models/creeps/neutral_creeps/neutral_black_drake.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/queen/queen_m.vmat"
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_origin"
+						parent_bone = "Bone_Chest"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Bone_Chest"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "Bone006"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "Bone007"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "Bone_Head"
+						relative_origin = [ 0.346872, -1.124148, 12.512146 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "follow_overhead"
+						parent_bone = "Bone_Head"
+						relative_origin = [ -0.234187, -2.160295, 24.141418 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_eyes"
+						parent_bone = "Bone_Head"
+						relative_origin = [ 0.0, -13.64685, 11.181648 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm1_R"
+								parent_bone = "Bone_Arm1_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -15.48389, -8.996384, -18.802795 ]
+								hitbox_maxs = [ 0.5, 3.776211, 1.24926 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm2_R"
+								parent_bone = "Bone_Arm2_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.728624, -11.476568, -17.311375 ]
+								hitbox_maxs = [ 6.446409, 2.979443, 2.240036 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Hand_R"
+								parent_bone = "Bone_Hand_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.507713, -14.028688, -13.817326 ]
+								hitbox_maxs = [ 4.624178, 2.720177, 2.323143 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm1_L"
+								parent_bone = "Bone_Arm1_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.501662, -8.996383, -18.861099 ]
+								hitbox_maxs = [ 14.429499, 3.776211, 0.699089 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm2_L"
+								parent_bone = "Bone_Arm2_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.189209, -11.453072, -17.438557 ]
+								hitbox_maxs = [ 9.985722, 3.002939, 2.112854 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Hand_L"
+								parent_bone = "Bone_Hand_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.823156, -14.068293, -12.968845 ]
+								hitbox_maxs = [ 8.308628, 2.680578, 3.171623 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Head"
+								parent_bone = "Bone_Head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.066944, -20.538202, -3.2799 ]
+								hitbox_maxs = [ 12.472107, 9.514181, 21.354683 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Mesh13"
+								parent_bone = "Mesh13"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.022409, -11.073419, -23.941261 ]
+								hitbox_maxs = [ 6.39765, 8.099916, 3.258179 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Mesh14"
+								parent_bone = "Mesh14"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.799976, -12.004188, -22.93185 ]
+								hitbox_maxs = [ 9.916822, 8.760322, 3.686638 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Mesh16"
+								parent_bone = "Mesh16"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.518644, -4.996071, -26.074265 ]
+								hitbox_maxs = [ 8.083269, 9.271496, 2.289169 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Mesh17"
+								parent_bone = "Mesh17"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.30451, -10.717123, -26.774757 ]
+								hitbox_maxs = [ 6.305233, 7.611997, 4.913811 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Mesh19"
+								parent_bone = "Mesh19"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.708695, -4.748158, -24.227478 ]
+								hitbox_maxs = [ 11.710002, 7.639818, 2.698151 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Mesh20"
+								parent_bone = "Mesh20"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.194258, -3.87166, -27.593235 ]
+								hitbox_maxs = [ 12.191393, 7.691494, 2.983025 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Cape"
+								parent_bone = "Cape"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.570889, -4.045355, -27.41404 ]
+								hitbox_maxs = [ 11.573997, 7.184521, 1.329071 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Mesh12"
+								parent_bone = "Mesh12"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.191371, -4.782255, -28.048641 ]
+								hitbox_maxs = [ 12.194362, 6.780901, 2.527618 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Front_Cape"
+								parent_bone = "Front_Cape"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -18.507988, -4.372453, -12.528511 ]
+								hitbox_maxs = [ 20.220863, 6.655309, 1.868599 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg1_L"
+								parent_bone = "Bone_Leg1_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.651661, -14.18087, -31.773926 ]
+								hitbox_maxs = [ 13.295067, 7.944584, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg2_L"
+								parent_bone = "Bone_Leg2_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.295199, -10.037322, -33.613197 ]
+								hitbox_maxs = [ 9.354994, 15.040435, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg1_R"
+								parent_bone = "Bone_Leg1_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.162934, -14.18087, -32.123318 ]
+								hitbox_maxs = [ 15.698274, 7.944584, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg2_R"
+								parent_bone = "Bone_Leg2_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.312692, -10.116332, -33.060417 ]
+								hitbox_maxs = [ 6.852038, 15.085984, 0.5 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "pro"
+						filename = "models/prophecy/prophecy.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "walk_invis"
+						activity_name = "ACT_DOTA_CHANNEL_ABILITY_4"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 2459
+						end_frame = 2490
+						framerate = 40.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "run"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 2329
+						end_frame = 2373
+						framerate = 20.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle_invis"
+						activity_name = "ACT_DOTA_CAST_ABILITY_4"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 1114
+						end_frame = 1156
+						framerate = 25.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 48
+						end_frame = 93
+						framerate = 25.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 2215
+						end_frame = 2255
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.4
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 760
+						end_frame = 800
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "die"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 440
+						end_frame = 519
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast_ult"
+						activity_name = "ACT_DOTA_CAST_ABILITY_6"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 1533
+						end_frame = 1580
+						framerate = 75.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast1"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 672
+						end_frame = 705
+						framerate = 70.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast2"
+						activity_name = "ACT_DOTA_CAST_ABILITY_2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 2108
+						end_frame = 2145
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast3"
+						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/prophecy/prophecy.fbx"
+						import_bone_scales = false
+						start_frame = 901
+						end_frame = 980
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+	}
+}
