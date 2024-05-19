@@ -1,0 +1,60 @@
+"npc_super_minion"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/minions/pink_super_minion.vmdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"IsSummoned"				"0"
+		"Level"						"1"
+		"IsAncient"					"1"
+		"ModelScale" 				"0.6"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"10"		// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"130"		// Damage range min.
+		"AttackDamageMax"			"160"		// Damage range max.	
+		"AttackRate"				"1.8"		// Speed of attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"130"		// Range within a target can be attacked.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"140"
+		"HealthBarOffset"			"200"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"250"		// Experience earn.
+		"BountyGoldMin"				"350"		// Gold earned min.
+		"BountyGoldMax"				"350"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"250"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1200"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"0"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.		 
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"200"		// Range of vision during day light.
+		"VisionNighttimeRange"		"150"		// Range of vision at night time.
+		"RingRadius"            "15"
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+	}	

@@ -79,16 +79,7 @@ end
 function Activate()
 	-- Create our game mode and initialize it
 	COverthrowGameMode:InitGameMode()
-	-- Custom Spawn
-	COverthrowGameMode:CustomSpawnCamps()
 end
-
-function COverthrowGameMode:CustomSpawnCamps()
-	for name,_ in pairs(spawncamps) do
-	spawnunits(name)
-	end
-end
-
 ---------------------------------------------------------------------------
 -- Initializer
 ---------------------------------------------------------------------------
@@ -182,7 +173,6 @@ function COverthrowGameMode:InitGameMode()
 	self.m_VictoryMessages[DOTA_TEAM_CUSTOM_8] = "#VictoryMessage_Custom8"
 
 	self.m_GatheredShuffledTeams = {}
-	self.numSpawnCamps = 5
 	self.specialItem = ""
 	self.spawnTime = 120
 	self.nNextSpawnItemNumber = 1
@@ -283,18 +273,9 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
 	GameRules:GetGameModeEntity():SetDaynightCycleAdvanceRate(5)
 
+	
 
 
-	-- Spawning monsters
-	spawncamps = {}
-	for i = 1, self.numSpawnCamps do
-		local campname = "camp"..i.."_path_customspawn"
-		spawncamps[campname] =
-		{
-			NumberToSpawn = RandomInt(3,5),
-			WaypointName = "camp"..i.."_path_wp1"
-		}
-	end
 end
 
 function COverthrowGameMode:PopulateEnemies(i)
@@ -578,34 +559,7 @@ function COverthrowGameMode:GatherAndRegisterValidTeams()
 	end
 end
 
--- Spawning individual camps
-function COverthrowGameMode:spawncamp(campname)
-	spawnunits(campname)
-end
 
--- Simple Custom Spawn
-function spawnunits(campname)
-	local spawndata = spawncamps[campname]
-	local NumberToSpawn = spawndata.NumberToSpawn --How many to spawn
-    local SpawnLocation = Entities:FindByName( nil, campname )
-    local waypointlocation = Entities:FindByName ( nil, spawndata.WaypointName )
-	if SpawnLocation == nil then
-		return
-	end
-
-    local randomCreature = 
-    	{
-			"basic_zombie",
-			"berserk_zombie"
-	    }
-	local r = randomCreature[RandomInt(1,#randomCreature)]
-	--print(r)
-    for i = 1, NumberToSpawn do
-        local creature = CreateUnitByName( "npc_dota_creature_" ..r , SpawnLocation:GetAbsOrigin() + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_NEUTRALS )
-        --print ("Spawning Camps")
-        creature:SetInitialGoalEntity( waypointlocation )
-    end
-end
 
 --------------------------------------------------------------------------------
 -- Event: Filter for inventory full

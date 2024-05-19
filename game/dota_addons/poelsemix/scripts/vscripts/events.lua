@@ -45,6 +45,9 @@ function COverthrowGameMode:OnGameRulesStateChange()
 		self.countdownEnabled = true
 		CustomGameEventManager:Send_ServerToAllClients( "show_timer", {} )
 		DoEntFire( "center_experience_ring_particles", "Start", "0", 0, self, self  )
+		if GetMapName() == "poelsemix_3v3v3v3" then
+			self:DoMapObjectivesSetUp()
+		end
 	end
 end
 
@@ -110,25 +113,22 @@ function COverthrowGameMode:OnEntityKilled( event )
 		self.allSpawned = true
 		--print("Hero has been killed")
 		--Add extra time if killed by Necro Ult
-		
-		if hero:IsRealHero() == true then
-			if event.entindex_inflictor ~= nil then
-				local inflictor_index = event.entindex_inflictor
-				if inflictor_index ~= nil then
-					local ability = EntIndexToHScript( event.entindex_inflictor )
-					if ability ~= nil then
-						if ability:GetAbilityName() ~= nil then
-							if ability:GetAbilityName() == "necrolyte_reapers_scythe" then
-								print("Killed by Necro Ult")
-								extraTime = 20
-							end
-						end
-					end
-					
-				end
-				
-			end
-		end
+		--if hero:IsRealHero() == true then
+			--if event.entindex_inflictor ~= nil then
+				--local inflictor_index = event.entindex_inflictor
+				--if inflictor_index ~= nil then
+					--local ability = EntIndexToHScript( event.entindex_inflictor )
+					--if ability ~= nil then
+						--if ability:GetAbilityName() ~= nil then
+							--if ability:GetAbilityName() == "necrolyte_reapers_scythe" then
+							--	print("Killed by Necro Ult")
+							--	extraTime = 20
+							--end
+						--end
+					--end
+				--end				
+			--end
+		--end
 		if hero:IsRealHero() and heroTeam ~= killedTeam then
 			--print("Granting killer xp")
 			if killedUnit:GetTeam() == self.leadingTeam and self.isGameTied == false then
@@ -362,3 +362,31 @@ end
 
 
 
+-- Spawning individual camps
+function COverthrowGameMode:DoMapObjectivesSetUp(campname)
+	for i = 1, 4, 1 do
+		self:SpawnMinionCamp(self:GetIslands()[i], 6)
+	end
+end
+
+function COverthrowGameMode:GetIslands()
+	return {"islandmarker1","islandmarker2","islandmarker3","islandmarker4",}
+end
+
+function COverthrowGameMode:SpawnMinionCamp(island, count)
+    local SpawnLocation = Entities:FindByName(nil, island)
+	
+	
+	if SpawnLocation == nil then
+		return
+	end
+
+    for i = 1, count do
+		local r = "npc_melee_minion"
+		if i == 1 then r = "npc_super_minion" end
+        local creature = CreateUnitByName(r , SpawnLocation:GetAbsOrigin() + RandomVector( RandomFloat( 0, 250 ) ), true, nil, nil, DOTA_TEAM_NEUTRALS )
+        creature:AddNewModifier(nil, nil, "modifier_kill", { duration = 300 } )
+		creature:SetFollowRange(300)
+		creature:SetInitialGoalPosition(creature:GetAbsOrigin())
+    end
+end
