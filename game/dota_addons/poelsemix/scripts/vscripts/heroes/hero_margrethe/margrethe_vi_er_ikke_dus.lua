@@ -20,7 +20,9 @@ function margrethe_vi_er_ikke_dus:OnSpellStart()
     self.range	=  self:GetSpecialValueFor("range")
     self.dmg = self:GetSpecialValueFor("damage")
     self.buff_duration =self:GetSpecialValueFor("buff_duration")
-    local number_of_slashes = self:GetSpecialValueFor("base_slashes") + (math.floor(caster:GetIntellect() * self:GetSpecialValueFor("slash_scaling")))
+    local base_slashes = self:GetSpecialValueFor("base_slashes")
+    if self:GetCaster():FindAbilityByName("special_bonus_margrethe_7"):GetLevel() > 0 then base_slashes = base_slashes + self:GetCaster():FindAbilityByName("special_bonus_margrethe_7"):GetSpecialValueFor("value") end 
+    local number_of_slashes =  base_slashes + (math.floor(caster:GetIntellect() * self:GetSpecialValueFor("slash_scaling")))
     self.interval = self:GetChannelTime() / number_of_slashes
 	self.elapsedTime = 0
     caster:StartGestureWithPlaybackRate(ACT_DOTA_CAST_ABILITY_6,number_of_slashes)
@@ -118,6 +120,7 @@ function modifier_margrethe_vi_er_ikke_dus_buff:IsPurgable() return false end
 function modifier_margrethe_vi_er_ikke_dus_buff:OnCreated()
     self.as_per_stack = self:GetAbility():GetSpecialValueFor("as_stack")
     self.dmg_per_stack = self:GetAbility():GetSpecialValueFor("dmg_stack")
+    if self:GetCaster():FindAbilityByName("special_bonus_margrethe_8"):GetLevel() > 0 then self.dmg_per_stack = self.dmg_per_stack + self:GetCaster():FindAbilityByName("special_bonus_margrethe_8"):GetSpecialValueFor("value") end 
 end
 
 function modifier_margrethe_vi_er_ikke_dus_buff:DeclareFunctions() 

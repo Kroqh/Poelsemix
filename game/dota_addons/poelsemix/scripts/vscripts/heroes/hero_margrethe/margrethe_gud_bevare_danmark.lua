@@ -26,6 +26,7 @@ function margrethe_gud_bevare_danmark:OnSpellStart()
     
     local base_heal = self:GetSpecialValueFor("base_heal")
     local scaling = self:GetSpecialValueFor("int_to_heal_scaling")
+    if self:GetCaster():FindAbilityByName("special_bonus_margrethe_3"):GetLevel() > 0 then scaling = scaling + self:GetCaster():FindAbilityByName("special_bonus_margrethe_3"):GetSpecialValueFor("value") end 
 
     local heal = base_heal + (scaling*caster:GetIntellect())
 

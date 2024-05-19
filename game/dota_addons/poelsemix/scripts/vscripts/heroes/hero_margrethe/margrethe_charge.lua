@@ -3,6 +3,7 @@ LinkLuaModifier( "modifier_margrethe_charge", "heroes/hero_margrethe/margrethe_c
 
 function margrethe_charge:GetCastRange()
     local range = self:GetSpecialValueFor("range")
+	if self:GetCaster():FindAbilityByName("special_bonus_margrethe_1"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_margrethe_1"):GetSpecialValueFor("value") end 
     return range
 end
 
@@ -87,6 +88,11 @@ function modifier_margrethe_charge:OnIntervalThink()
 		local particle_blood_fx = ParticleManager:CreateParticle(particle_blood, PATTACH_ABSORIGIN_FOLLOW, self.target)
 		ParticleManager:SetParticleControl(particle_blood_fx, 0, self.target:GetAbsOrigin())
 		ParticleManager:ReleaseParticleIndex(particle_blood_fx)
+
+		if self:GetCaster():FindAbilityByName("special_bonus_margrethe_4"):GetLevel() > 0 then 
+			self.target:AddNewModifier(self:GetCaster(), self:GetAbility(), "modifier_disarmed", {duration = self:GetCaster():FindAbilityByName("special_bonus_margrethe_4"):GetSpecialValueFor("value")})
+		end
+
 		self:Destroy()
 	end
 

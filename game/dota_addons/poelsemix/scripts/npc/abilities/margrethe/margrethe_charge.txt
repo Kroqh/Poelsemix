@@ -62,6 +62,7 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"range"	"700 725 750 775"
+			"LinkedSpecialBonus" "special_bonus_margrethe_1"
 		}
 	}
 	

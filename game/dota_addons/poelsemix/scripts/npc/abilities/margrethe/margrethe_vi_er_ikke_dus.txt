@@ -46,6 +46,7 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"base_slashes"			"8 10 12"
+				"LinkedSpecialBonus" "special_bonus_margrethe_7"
 			}
 			"03"
 			{
@@ -91,6 +92,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"dmg_stack"		"3 4 5"
+				"LinkedSpecialBonus" "special_bonus_margrethe_8"
 			}
 			"11"
 			{

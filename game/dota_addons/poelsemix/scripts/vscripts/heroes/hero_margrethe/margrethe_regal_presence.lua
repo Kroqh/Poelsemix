@@ -9,6 +9,7 @@ end
 
 function margrethe_regal_presence:GetCastRange()
     local value = self:GetSpecialValueFor("radius")
+    if self:GetCaster():FindAbilityByName("special_bonus_margrethe_2"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_margrethe_2"):GetSpecialValueFor("value") end 
     return value
 end
 
@@ -30,6 +31,7 @@ end
 function modifier_margrethe_regal_presence:OnIntervalThink()
     local caster = self:GetParent()
     local radius = self:GetAbility():GetSpecialValueFor("radius")
+    if self:GetCaster():FindAbilityByName("special_bonus_margrethe_2"):GetLevel() > 0 then radius = radius + self:GetCaster():FindAbilityByName("special_bonus_margrethe_2"):GetSpecialValueFor("value") end 
     self.count = 1 
     local units = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, radius, self:GetAbility():GetAbilityTargetTeam(), DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_PLAYER_CONTROLLED , FIND_ANY_ORDER, false)
     for i, unit in pairs(units) do

@@ -128,13 +128,15 @@ function modifier_margrethe_livgarde_stack_handler:OnIntervalThink()
 		local ability = self:GetAbility()
 
 		local max_stacks = ability:GetSpecialValueFor("max_charges")
-		self.charge_time = ability:GetSpecialValueFor("charge_time")
+		if self:GetCaster():FindAbilityByName("special_bonus_margrethe_5"):GetLevel() > 0 then max_stacks = max_stacks + self:GetCaster():FindAbilityByName("special_bonus_margrethe_5"):GetSpecialValueFor("value") end 
+		local charge_time = ability:GetSpecialValueFor("charge_time")
+		if self:GetCaster():FindAbilityByName("special_bonus_margrethe_6"):GetLevel() > 0 then charge_time = charge_time + self:GetCaster():FindAbilityByName("special_bonus_margrethe_6"):GetSpecialValueFor("value") end 
 
 		if self:GetStackCount() == max_stacks then
 			self.count = 0
 		end
 
-		if self.count >= self.charge_time then
+		if self.count >= charge_time then
 			self.count = 0
 			if self:GetStackCount() < max_stacks then
 				self:SetStackCount(self:GetStackCount() + 1)
