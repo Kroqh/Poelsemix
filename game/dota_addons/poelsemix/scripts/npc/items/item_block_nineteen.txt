@@ -1,0 +1,51 @@
+"item_block_nineteen"
+{
+	"BaseClass"             		"item_lua"
+	"AbilityTextureName"			"block_nineteen"
+	"ScriptFile"					"items/item_block_nineteen.lua"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"5850"
+  	"ID"						"3056"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;crit;attack_speed;agi"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"lego gun;glock;nineteen"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"damage" "36"
+		}
+		"09"
+		{
+			"var_type" "FIELD_INTEGER"
+			"agi" "30"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"attack_speed" "25"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"crit_chance" "30"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"crit_damage" "180"
+		}
+		"06"
+		{
+			"var_type" "FIELD_FLOAT"
+			"max_hp_dmg_pct" "1"
+		}
+	}
+	
+	
+}

@@ -15,7 +15,7 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemShopTags"					"armor;health_pool;damage;hard_to_tag"
+	"ItemShopTags"					"armor;health_pool;damage;hard_to_tag;attack_speed"
 	"ItemQuality"					"artifact"
 	"ItemAliases"					"hummel;shirt;hummel shirt"
 

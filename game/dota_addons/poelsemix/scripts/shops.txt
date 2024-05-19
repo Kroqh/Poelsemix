@@ -67,11 +67,9 @@
 		//"item"		"item_mithril_hammer"
 
 		"item"		"item_sange_yasha_lator"
-		
 		"item"		"item_hjemmevaernet"
-		
 		"item"		"item_twisted_bow"
-		
+		"item"		"item_block_nineteen"
 		"item"		"item_ultimate_scepter"
 		
 		"item"		"item_flaeskesteg_sovs_kartofler"
