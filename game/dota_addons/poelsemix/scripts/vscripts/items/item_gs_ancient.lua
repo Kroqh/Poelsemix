@@ -9,7 +9,6 @@ end
 
 function item_gs_ancient:OnSpellStart()
     if IsServer() then
-        local caster = self:GetCaster()
         local ability = self
         local target = self:GetCursorTarget()
         local sound_cast = "godsword_slash"    
