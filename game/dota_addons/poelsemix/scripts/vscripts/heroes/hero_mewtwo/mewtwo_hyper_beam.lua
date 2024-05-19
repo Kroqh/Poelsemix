@@ -12,8 +12,6 @@ end
 
 
 
-
-
 function mewtwo_hyper_beam:OnSpellStart()
     if  not IsServer() then return end
     local caster	= self:GetCaster()
@@ -86,7 +84,7 @@ function mewtwo_hyper_beam:OnChannelThink(think)
                 end
 
                 self.dmgdealt = self.dmgdealt + self.tickdmg
-                self.elapsedTime = 0.001
+                self.elapsedTime = 0
     end
 
 

@@ -11,7 +11,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"0"		// Physical protection.
+		"ArmorPhysical"				"3"		// Physical protection.
 
 		// Attack
 		//----------------------------------------------------------------

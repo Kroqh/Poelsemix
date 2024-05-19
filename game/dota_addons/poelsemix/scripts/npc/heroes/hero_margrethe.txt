@@ -25,7 +25,7 @@
 	"Ability3" "margrethe_gud_bevare_danmark"
 	"Ability4" "margrethe_regal_presence"
 	//"Ability5" "generic_hidden"
-	//"Ability6" "urgot_reverser"
+	"Ability6" "margrethe_vi_er_ikke_dus"
 
 	//"Ability10"		"special_bonus_urgot_1"
 	//"Ability11"		"special_bonus_urgot_2"

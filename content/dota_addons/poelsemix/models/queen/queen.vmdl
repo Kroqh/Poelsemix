@@ -400,28 +400,6 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "cast_ult"
-						activity_name = "CAST_ABILITY_6"
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = true
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						animgraph_additive = false
-						source_filename = "models/queen/queen.fbx"
-						import_bone_scales = false
-						start_frame = 160
-						end_frame = 190
-						framerate = -1.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
 						name = "cast1"
 						activity_name = "ACT_DOTA_CAST_ABILITY_1"
 						activity_weight = 1
@@ -488,8 +466,8 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "cast4"
-						activity_name = "ACT_DOTA_CAST_ABILITY_4"
+						name = "ult"
+						activity_name = "ACT_DOTA_CAST_ABILITY_6"
 						activity_weight = 1
 						weight_list_name = ""
 						fade_in_time = 0.2
@@ -505,7 +483,7 @@
 						import_bone_scales = false
 						start_frame = 4105
 						end_frame = 4154
-						framerate = 60.0
+						framerate = 8.0
 						reverse = false
 					},
 				]
