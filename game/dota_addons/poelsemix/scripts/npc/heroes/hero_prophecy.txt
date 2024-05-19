@@ -13,7 +13,7 @@
 	"MovementSpeed"               "285"
 	
 	"Ability1" "pr0_hack"				
-	"Ability2" "firestakit_datadriven"
+	"Ability2" "pr0_firestakit"
 	"Ability3" "pr0_blockchain"
 	"Ability4" "pr0_incognito"
 	"Ability5" "generic_hidden"

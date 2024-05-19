@@ -10,7 +10,7 @@
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
-	 {-
+	 {
 	  "particle"	"particles/generic_hero_status/status_invisibility_start.vpcf"
 	  "particle" 	"particles/units/heroes/hero_winter_wyvern/wyvern_winters_curse_ring_fast.vpcf"
 	 

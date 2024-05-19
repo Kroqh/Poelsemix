@@ -1,27 +1,31 @@
-"firestakit_datadriven"
+"pr0_firestakit"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_pr0ph3cy/prophecy_firestakit"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityTextureName"			"firestakit"
+
+	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
 	
 	// Unit Targeting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
 
 	// Stats
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"625 700 775 850"
-	"AbilityCastPoint"				"0.35 0.35 0.35 0.35"
-	"AbilityCooldown"				"20 18 16 14"
-	"AbilityManaCost"				"70 90 110 130"
+	"AbilityCastPoint"				"0.35"
+	"AbilityCooldown"				"26 24 22 20"
+	"AbilityManaCost"				"130 120 110 100"
 	
 	"precache"
 	{
-		"particle" "particles/dire_fx/bad_ancient002_destroy_fire.vpcf"
+		"particle" "particles/units/heroes/hero_prophecy/firestakit_aura.vpcf"
+		"particle"	"particles/units/heroes/hero_prophecy/firestakit_fence.vpcf"
+		"particle"	"particles/pro/firestakit_fire.vpcf"
 	}
 	
 	// Special
@@ -31,7 +35,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"vision_range"			"1000"
+			"range"			"625 675 725 775"
 		}
 		"02"
 		{
@@ -40,91 +44,24 @@
 		}
 		"03"
 		{
-			"var_type" "FIELD_INTEGER"
-			"radius" "500"
+			"var_type"				"FIELD_FLOAT"
+			"delay"				"0.5"
 		}
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage" "20 40 60 80"
+			"radius" "250 265 280 295"
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage_tick" "35 50 65 80"
+		}
+		"06"
+		{
+			"var_type" "FIELD_FLOAT"
+			"tick" "1"
 		}
 	}
-	
-	"OnSpellStart"
-	{
-		"RunScript"
-		{
-			"ScriptFile"	"heroes/hero_pr0ph3cy/firestakit.lua"
-			"Function"		"CreateSprout"
-		}
-		
-		"CreateThinker"
-		{
-			"ModifierName" "modifier_firestakit"
-			"Target" "POINT"
-		}
-		
-		"FireSound"
-		{
-			"EffectName" "pr0_fire"
-			"Target" "POINT"
-		}
-	}
-	
-	"Modifiers"
-	{
-		"modifier_firestakit"
-		{
-			"IsHidden"	"1"
-			"Duration" "%duration"
-			"Aura" "modifier_damage"
-			"Aura_Radius" "%radius"
-			"Aura_Teams" "DOTA_UNIT_TARGET_TEAM_ENEMY"
-			"Aura_Types" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-			
-			"OnCreated"
-			{
-				"AttachEffect"
-				{
-					"EffectName" "particles/dire_fx/bad_ancient002_destroy_fire.vpcf"
-					"EffectAttachType" "follow_origin"
-					"Target" "TARGET"
-				}
-			}
-			
-			"ThinkInterval" "0.5"
-			"OnIntervalThink"
-			{
-				"AttachEffect"
-				{
-					"EffectName" "particles/dire_fx/bad_ancient002_destroy_fire.vpcf"
-					"EffectAttachType" "follow_origin"
-					"Target" "TARGET"
-				}
-			}
-		}
-		
-		"modifier_damage"
-		{
-			"IsPurgeable" "0"
-			"IsHidden"	"1"
-			"ThinkInterval" "0.5"
-			"OnIntervalThink"
-			{
-				"Damage"
-				{
-					"Target" "TARGET"
-					"Type" "DAMAGE_TYPE_MAGICAL"
-					"Damage" "%damage"
-				}
-				
-				"AttachEffect"
-				{
-					"EffectName" "particles/dire_fx/bad_ancient002_destroy_fire.vpcf"
-					"EffectAttachType" "follow_origin"
-					"Target" "TARGET"
-				}
-			}
-		}
-	}
+
 }
