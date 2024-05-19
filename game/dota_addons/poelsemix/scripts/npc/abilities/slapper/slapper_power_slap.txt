@@ -1,0 +1,65 @@
+"slapper_power_slap"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_slapper/slapper_power_slap"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityTextureName"			"slapper_power_slap"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_NONE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+
+
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"               "15 14 13 12"
+	"AbilityManaCost"               "80 75 70 65"
+
+
+	"precache"
+        {
+	"particle"	"particles/units/heroes/hero_slapper/power_slap_normal.vpcf"
+	"particle"	"particles/units/heroes/hero_slapper/power_slap_rammusteinu.vpcf"
+        }
+	
+	    "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"150 200 250 300"
+			}
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"str_damage_scaling"					"1.5 1.7 1.9 2.1"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"			"150"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"knockup_height"						"150 170 190 210"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"knockup_duration"						"0.5 0.6 0.7 0.8"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"range"						"500 525 550 575"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"rammusteinu_range_multi"						"2"
+			}
+		}
+	
+}

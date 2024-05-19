@@ -5,7 +5,7 @@
 	"DisableWearables" "1"
 	"model" "models/slapper/slapper.vmdl"
 
-	"Ability1" "musashi_earth"				
+	"Ability1" "slapper_power_slap"				
 	"Ability2" "musashi_fire"
 	"Ability3" "slapper_slap_city"
 	"Ability4" "slapper_bum_hunter"
