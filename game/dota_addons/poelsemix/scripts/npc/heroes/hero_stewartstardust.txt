@@ -24,20 +24,24 @@
 	"Ability16"		"special_bonus_stewart_7"
 	"Ability17"		"special_bonus_stewart_8"
 
-	"ArmorPhysical"		"4" 
+	
 
-	"AttributeBaseStrength"			"23"									// Base strength
-	"AttributeStrengthGain"			"3.3"									// Strength bonus per level.
-	"AttributeBaseIntelligence"		"14"									// Base intelligence
-	"AttributeIntelligenceGain"		"1.7"									// Intelligence bonus per level.
+	"AttributeBaseStrength"			"23"								
+	"AttributeStrengthGain"			"3.3"
 	"AttributeBaseAgility"		"20"
-	"AttributeAgilityGain"		"1.5"
+	"AttributeAgilityGain"		"1.5"						
+	"AttributeBaseIntelligence"		"14"								
+	"AttributeIntelligenceGain"		"1.7"	
+
+	"ArmorPhysical"		"5" 								
+	"MovementSpeed"		"275"
+
 	"AttackDamageMin"			"55"
 	"AttackDamageMax"			"57"
 	"AttackRate"			"1.8"
 
 	"StatusHealthRegen"		"4"
 
-	"MovementSpeed"		"290"
+	
 	"AttackRange"			"130"
 }

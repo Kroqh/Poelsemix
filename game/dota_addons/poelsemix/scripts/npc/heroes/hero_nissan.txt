@@ -27,18 +27,19 @@
 
 
 	"AttackRange"			"125"
-	"ArmorPhysical"		"7"
+	
 
 	"AttributeBaseStrength"			"27"									
-	"AttributeStrengthGain"			"2.1"									
+	"AttributeStrengthGain"			"2.1"
+	"AttributeBaseAgility"		"24"
+	"AttributeAgilityGain"		"2.7"									
 	"AttributeBaseIntelligence"		"21"									
 	"AttributeIntelligenceGain"		"1.6"									
-	"AttributeBaseAgility"		"24"
-	"AttributeAgilityGain"		"2.7"
 
 	"StatusHealthRegen"		"2.1"
 
-	"MovementSpeed"		"305"
+	"MovementSpeed"		"295"
+	"ArmorPhysical"		"7"
 
 	"AttackDamageMin"			"69"
 	"AttackDamageMax"			"71"

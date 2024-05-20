@@ -20,13 +20,15 @@
   "Ability17" "special_bonus_yahya_8"
 
 
-  	"ArmorPhysical"		"5"
-	"AttributeBaseStrength"			"26"									// Base strength
-	"AttributeStrengthGain"			"3.9"									// Strength bonus per level.
-	"AttributeBaseIntelligence"		"13"									// Base intelligence
-	"AttributeIntelligenceGain"		"1.3"									// Intelligence bonus per level.
-	"AttributeBaseAgility"		"17"
+  	
+	"AttributeBaseStrength"			"26"			
+	"AttributeStrengthGain"			"3.9"							
+  "AttributeBaseAgility"		"17"
 	"AttributeAgilityGain"		"1.6"
-	"MovementSpeed"		"300"
+	"AttributeBaseIntelligence"		"13"							
+	"AttributeIntelligenceGain"		"1.3"								
+	
+	"MovementSpeed"		"275"
+  "ArmorPhysical"		"4"
 	"StatusHealth"                "300"
 }

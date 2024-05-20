@@ -9,7 +9,7 @@
 	"Ability6" "kim_nat"
 	
 	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"
-	"ArmorPhysical"		"3"
+	
 
 
 	"AttributeBaseStrength"			"26"									// Base strength
@@ -24,6 +24,7 @@
 	"StatusHealthRegen"		"3.8"
 
 	"MovementSpeed"		"275"
+	"ArmorPhysical"		"4"
 	
 	"Ability10"		"special_bonus_kim_6"
 	"Ability11"		"special_bonus_kim_7"

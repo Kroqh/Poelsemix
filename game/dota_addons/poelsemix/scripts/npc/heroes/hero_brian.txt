@@ -13,13 +13,20 @@
 	"Ability6" "brian_dak"
 	
 	"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-	"AttributeBaseStrength"		"25"
-	"MovementSpeed"               "280"
-	"StatusHealth"                "700"
+	"AttributeBaseStrength"			"25"									
+	"AttributeStrengthGain"			"3.7"													
+	"AttributeBaseAgility"		"19"
+	"AttributeAgilityGain"		"2"
+	"AttributeBaseIntelligence"		"15"									
+	"AttributeIntelligenceGain"		"1.6"	
+
+	"StatusHealth"                "550"
 
 	"AttackDamageMin"			"52"
 	"AttackDamageMax"			"54"
-	
+
+	"MovementSpeed"               "275"
+	"ArmorPhysical"		"8" 
 	
 	
 	"Ability10"		"special_bonus_brian_5"

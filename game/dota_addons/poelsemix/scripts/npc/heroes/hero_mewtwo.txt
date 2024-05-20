@@ -4,10 +4,20 @@
 	"model"	"models/mewtwo/mewtwo.vmdl"
 	"ModelScale"	"1.8"
 	"DisableWearables" "1"
-	"MovementSpeed"		"295"
 
 	"MovementTurnRate"		"50" //Needed high or he cant fully turn for ult
 	
+	"AttributeBaseStrength"			"16"		
+	"AttributeStrengthGain"			"1.8"
+	"AttributeBaseAgility"		"19"
+	"AttributeAgilityGain"		"2.1"
+	"AttributeBaseIntelligence"	"24"
+	"AttributeIntelligenceGain"	"3.2"
+
+	"MovementSpeed"               "270"
+	"ArmorPhysical"		"-1" 
+
+
 	"Ability1" "mewtwo_psychic"
 	"Ability2" "mewtwo_shadow_ball"		
 	"Ability3" "mewtwo_barrier"

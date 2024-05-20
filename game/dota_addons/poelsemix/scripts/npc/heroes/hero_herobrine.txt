@@ -7,14 +7,21 @@
 	"Model" "models/herobrine/herobrine.vmdl"
 
 	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
-	"MovementSpeed"	"0"
-	"AttributeBaseAgility"		"0"
-	"AttributeAgilityGain"		"0"
-	"AttributeIntelligenceGain"	"3"
 	"AttackRange"			"125"
 	"AttackDamageMin"			"0"
 	"AttackDamageMax"			"0"
 	"AttackRate"                 "5" 
+
+	"AttributeBaseStrength"			"22"									
+	"AttributeStrengthGain"			"2.6"
+	"AttributeBaseAgility"		"0"
+	"AttributeAgilityGain"		"0"													
+	"AttributeBaseIntelligence"	"21"
+	"AttributeIntelligenceGain"	"3"
+
+	"MovementSpeed"               "0"
+	"ArmorPhysical"		"1" 
+
 
 	"Ability1" "herobrine_creepypasta"
 	"Ability2" "herobrine_enderdrake"
@@ -31,4 +38,7 @@
 	"Ability15"		"special_bonus_evasion_20"
 	"Ability16"		"special_bonus_spell_amplify_25"
 	"Ability17"		"special_bonus_cooldown_reduction_20"
+
+
+	
 }

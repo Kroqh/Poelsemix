@@ -13,8 +13,17 @@
 	"Ability6" "slapper_rammusteinu"
 
 
-	"MovementSpeed"		"295"
 	"AttackRange"			"125"
+
+	"AttributeBaseStrength"			"22"									
+	"AttributeStrengthGain"			"2.1"
+	"AttributeBaseAgility"		"17"
+	"AttributeAgilityGain"		"1.9"								
+	"AttributeBaseIntelligence"		"16"									
+	"AttributeIntelligenceGain"		"1.7"									
+
+	"MovementSpeed"		"275"
+	"ArmorPhysical"		"4"	
 
 	//Lav nye talents
 	

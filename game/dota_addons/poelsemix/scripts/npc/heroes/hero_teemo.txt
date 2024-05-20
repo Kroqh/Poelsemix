@@ -23,16 +23,17 @@
 	"Ability16" "special_bonus_teemo_4"
 	"Ability17" "special_bonus_teemo_7"
 
-	"ArmorPhysical"		"1"
+	"ArmorPhysical"		"-1"
 
-	"AttributeBaseStrength"			"17"									// Base strength
-	"AttributeStrengthGain"			"1.9"									// Strength bonus per level.
-	"AttributeBaseIntelligence"		"20"									// Base intelligence
-	"AttributeIntelligenceGain"		"2.3"									// Intelligence bonus per level.
+	"AttributeBaseStrength"			"17"									
+	"AttributeStrengthGain"			"1.9"
 	"AttributeBaseAgility"		"20"
-	"AttributeAgilityGain"		"2"
+	"AttributeAgilityGain"		"2"							
+	"AttributeBaseIntelligence"		"20"									
+	"AttributeIntelligenceGain"		"2.3"									
+
 
 	"StatusHealthRegen"		"2"
 
-	"MovementSpeed"		"295"
+	"MovementSpeed"		"280"
 }

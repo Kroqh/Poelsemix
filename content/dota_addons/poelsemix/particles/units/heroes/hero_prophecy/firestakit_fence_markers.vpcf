@@ -3,55 +3,45 @@
 	_class = "CParticleSystemDefinition"
 	m_bShouldHitboxesFallbackToRenderBounds = false
 	m_nMaxParticles = 16
-	m_Renderers = 
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 2
+	m_controlPointConfigurations = 
 	[
 		{
-			_class = "C_OP_RenderSprites"
-			m_vecTexturesInput = 
+			m_name = "preview"
+			m_drivers = 
 			[
 				{
-					m_hTexture = resource:"materials/particle/particle_flares/aircraft_blue.vtex"
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 4
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
 				},
 			]
-			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
-			m_nFogType = "PARTICLE_FOG_GAME_DEFAULT"
-		},
-		{
-			_class = "C_OP_RenderDeferredLight"
-			m_flRadiusScale = 4.0
-			m_flAlphaScale = 2.0
-			m_flStartFalloff = 0.2
-			m_hTexture = resource:"materials/particle/particle_flares/aircraft_blue.vtex"
-			m_vecColorScale = 
-			{
-				m_nType = "PVEC_TYPE_LITERAL_COLOR"
-				m_LiteralColor = [ 255, 255, 255 ]
-			}
 		},
 	]
-	m_Operators = 
+	m_Emitters = 
 	[
 		{
-			_class = "C_OP_BasicMovement"
-			m_fDrag = 0.1
-		},
-		{
-			_class = "C_OP_Decay"
-		},
-		{
-			_class = "C_OP_FadeAndKill"
-			m_flEndFadeInTime = 0.2
-			m_flStartFadeOutTime = 0.9
-		},
-		{
-			_class = "C_OP_SetPerChildControlPoint"
-			m_nFirstControlPoint = 4
-			m_nNumControlPoints = 12
-		},
-		{
-			_class = "C_OP_InterpolateRadius"
-			m_flStartTime = 0.9
-			m_flEndScale = 0.0
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 12.0
+			}
 		},
 	]
 	m_Initializers = 
@@ -91,65 +81,16 @@
 				m_nMapType = "PF_MAP_TYPE_MULT"
 				m_flMultFactor = 500.0
 			}
-			m_flRoll = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.0
-			}
-			m_flPitch = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.0
-			}
-			m_flYaw = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.0
-			}
-			m_TransformInput = 
-			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
-				m_nControlPoint = 0
-			}
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
 				m_nType = "PF_TYPE_LITERAL"
 				m_flLiteralValue = 35.0
 			}
-			m_nOutputField = 3
 		},
 		{
-			m_bDisableOperator = false
-			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
-			m_flOpStartFadeInTime = 0.0
-			m_flOpEndFadeInTime = 0.0
-			m_flOpStartFadeOutTime = 0.0
-			m_flOpEndFadeOutTime = 0.0
-			m_flOpFadeOscillatePeriod = 0.0
-			m_bNormalizeToStopTime = false
-			m_flOpTimeOffsetMin = 0.0
-			m_flOpTimeOffsetMax = 0.0
-			m_nOpTimeOffsetSeed = 0
-			m_nOpTimeScaleSeed = 0
-			m_flOpTimeScaleMin = 1.0
-			m_flOpTimeScaleMax = 1.0
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -163,7 +104,6 @@
 				m_nVectorComponent = 0
 			}
 			m_nOutputField = 1
-			m_nSetMethod = "PARTICLE_SET_REPLACE_VALUE"
 		},
 		{
 			_class = "C_INIT_VelocityRandom"
@@ -174,32 +114,57 @@
 			_class = "C_INIT_PositionOffset"
 			m_OffsetMin = [ 0.0, 0.0, 256.0 ]
 			m_OffsetMax = [ 0.0, 0.0, 256.0 ]
-			m_TransformInput = 
-			{
-				m_nType = "PT_TYPE_CONTROL_POINT"
-				m_nControlPoint = 0
-			}
 		},
 		{
 			_class = "C_INIT_PositionPlaceOnGround"
 			m_flMaxTraceLength = 512.0
-			m_nTraceMissBehavior = "PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END"
 		},
 	]
-	m_Emitters = 
+	m_Operators = 
 	[
 		{
-			_class = "C_OP_InstantaneousEmitter"
-			m_flStartTime = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 0.0
-			}
-			m_nParticlesToEmit = 
-			{
-				m_nType = "PF_TYPE_LITERAL"
-				m_flLiteralValue = 12.0
-			}
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.1
+		},
+		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_FadeAndKill"
+			m_flEndFadeInTime = 0.2
+			m_flStartFadeOutTime = 0.9
+		},
+		{
+			_class = "C_OP_SetPerChildControlPoint"
+			m_nFirstControlPoint = 4
+			m_nNumControlPoints = 12
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartTime = 0.9
+			m_flEndScale = 0.0
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderSprites"
+			m_vecTexturesInput = 
+			[
+				{
+					m_hTexture = resource:"materials/particle/particle_flares/aircraft_blue.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+			m_bDisableOperator = true
+		},
+		{
+			_class = "C_OP_RenderDeferredLight"
+			m_flRadiusScale = 4.0
+			m_flAlphaScale = 2.0
+			m_flStartFalloff = 0.2
+			m_hTexture = resource:"materials/particle/particle_flares/aircraft_blue.vtex"
+			m_bDisableOperator = true
 		},
 	]
 	m_Children = 
@@ -244,7 +209,4 @@
 			m_ChildRef = resource:"particles/units/heroes/hero_prophecy/firestakit_fence_flareup.vpcf"
 		},
 	]
-	m_PreEmissionOperators = [  ]
-	m_nBehaviorVersion = 5
-	m_nFirstMultipleOverride_BackwardCompat = 2
 }

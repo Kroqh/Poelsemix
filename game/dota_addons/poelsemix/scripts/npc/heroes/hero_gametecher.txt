@@ -3,7 +3,6 @@
 	"override_hero" "npc_dota_hero_pugna"
 	"DisableWearables" "1"
 	"ModelScale" "1.5"
-	"MovementSpeed"	"260"
 	"ProjectileModel" "particles/units/heroes/hero_gametecher/gametecher_base_attack.vpcf"
 	
 	"Model" "models/gametecher/gametecher.vmdl"
@@ -27,4 +26,15 @@
 	
 	"Ability16"		"special_bonus_gametecher_7"
 	"Ability17"		"special_bonus_gametecher_8"
+
+
+	"AttributeBaseStrength"			"19"									
+	"AttributeStrengthGain"			"1.7"
+	"AttributeBaseAgility"		"21"
+	"AttributeAgilityGain"		"1.5"													
+	"AttributeBaseIntelligence"	"22"
+	"AttributeIntelligenceGain"	"3.9"
+
+	"MovementSpeed"               "265"
+	"ArmorPhysical"		"-2" 
 }

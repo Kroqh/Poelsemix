@@ -15,10 +15,14 @@
 
 	"AttributeBaseStrength"			"17"		
 	"AttributeStrengthGain"			"1.9"
-	"AttributeBaseIntelligence"	"19"
-	"AttributeIntelligenceGain"	"2.5"
 	"AttributeBaseAgility"		"18"
 	"AttributeAgilityGain"		"2.3"
+	"AttributeBaseIntelligence"	"19"
+	"AttributeIntelligenceGain"	"2.5"
+
+	"MovementSpeed"               "270"
+	"ArmorPhysical"		"-1" 
+
 	"AttackAcquisitionRange"	"600"
 	"AttackRange"			"450"
 

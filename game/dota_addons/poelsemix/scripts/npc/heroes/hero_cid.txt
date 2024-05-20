@@ -21,16 +21,15 @@
 	"Ability17" "special_bonus_cid_8"
 
 	"AttributeBaseStrength"			"16"									
-	"AttributeStrengthGain"			"1.9"									
+	"AttributeStrengthGain"			"1.9"
+	"AttributeBaseAgility"		"1.5"
+	"AttributeAgilityGain"		"3.9"									
 	"AttributeBaseIntelligence"		"14"									
 	"AttributeIntelligenceGain"		"1.4"									
-	"AttributeBaseAgility"		"1.5"
-	"AttributeAgilityGain"		"3.9"
+	
 
-	"ArmorPhysical"		"1"
-
+	"ArmorPhysical"		"3"
 	"StatusHealthRegen"		"5"
-
-	"MovementSpeed"		"305"
+	"MovementSpeed"		"285"
 
 }

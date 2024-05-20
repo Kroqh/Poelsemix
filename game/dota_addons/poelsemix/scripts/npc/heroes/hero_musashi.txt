@@ -13,9 +13,15 @@
 	"Ability6" "musashi_void"
 
 
-	"MovementSpeed"		"305"
+	"AttributeBaseStrength"			"20"		
+	"AttributeStrengthGain"			"2.2"
+	"AttributeBaseAgility"		"28"
+	"AttributeAgilityGain"		"2.9"
+	"AttributeBaseIntelligence"	"14"
+	"AttributeIntelligenceGain"	"1.6"
 
-	//Lav nye talents
+	"MovementSpeed"               "285"
+	"ArmorPhysical"		"3" 
 	
 	"Ability10"		"special_bonus_musashi_1"
 	"Ability11"		"special_bonus_musashi_2"

@@ -20,16 +20,19 @@
 	"Ability16" "special_bonus_shimakaze_3"
 	"Ability17" "special_bonus_shimakaze_4"
 
-	"ArmorPhysical"		"3"
 
-	"AttributeBaseStrength"			"20"									// Base strength
-	"AttributeStrengthGain"			"2"									// Strength bonus per level.
-	"AttributeBaseIntelligence"		"28"									// Base intelligence
-	"AttributeIntelligenceGain"		"3"									// Intelligence bonus per level.
+	"AttributeBaseStrength"			"20"									
+	"AttributeStrengthGain"			"2"
 	"AttributeBaseAgility"		"14"
-	"AttributeAgilityGain"		"2"
+	"AttributeAgilityGain"		"2"								
+	"AttributeBaseIntelligence"		"28"									
+	"AttributeIntelligenceGain"		"3"									
+	
 
-	"StatusHealthRegen"		"2.5"
+	
 
 	"MovementSpeed"		"260"
+	"ArmorPhysical"		"7"	
+
+	"StatusHealthRegen"		"2.5"
 }

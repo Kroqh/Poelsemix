@@ -3,11 +3,9 @@
 	"override_hero"				"npc_dota_hero_windrunner"			// Hero to override
 	"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
 	
-	"AttributeBaseIntelligence"	"21"
-	"AttributeIntelligenceGain"	"2"
+	
 
-	"AttributeBaseAgility"		"25"
-	"AttributeAgilityGain"		"3.4"
+
 	"Ability1" "caro_side_swap"				
 	"Ability2" "caro_smash"
 	"Ability3" "caro_crossfit"
@@ -29,5 +27,15 @@
 	"Ability16"		"special_bonus_caro_5"
 	"Ability17"		"special_bonus_caro_7"
 	
-	"MovementSpeed"               "310"
+	
+	"AttributeBaseStrength"			"15"									
+	"AttributeStrengthGain"			"1.5"
+	"AttributeBaseAgility"		"25"
+	"AttributeAgilityGain"		"3.4"													
+	"AttributeBaseIntelligence"	"21"
+	"AttributeIntelligenceGain"	"2"
+
+	"MovementSpeed"               "285"
+	"ArmorPhysical"		"0" 
+
 }

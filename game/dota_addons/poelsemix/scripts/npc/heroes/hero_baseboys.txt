@@ -26,18 +26,18 @@
 	"Ability17" "special_bonus_baseboys_8"
 
 
-	"MovementSpeed"               "305"
+	"MovementSpeed"               "285"
+	"ArmorPhysical"		"4" 
 	"AttackRange"			"150"
 	"AttackRate"                 "1.7" 
-	"ArmorPhysical"		"3" 
-
-	"AttributeBaseAgility"		"23"
-	"AttributeAgilityGain"		"2.4"
-
-	"AttributeBaseIntelligence"	"16"
-	"AttributeIntelligenceGain"	"1.7"
+	
 	"AttributeBaseStrength"			"21"
 	"AttributeStrengthGain"			"2.1"	
-	"StatusHealth"                "500"
+	"AttributeBaseAgility"		"23"
+	"AttributeAgilityGain"		"2.4"
+	"AttributeBaseIntelligence"	"16"
+	"AttributeIntelligenceGain"	"1.7"
+	
+	"StatusHealth"                "330"
 	
 }

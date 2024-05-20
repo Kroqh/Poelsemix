@@ -29,7 +29,17 @@
 		"Ability19" "special_bonus_kaj_8"
 
 		"AttackRange"			"500"
+		
+		"StatusHealth"                "90"
+
+
 		"AttributeBaseStrength"			"15"
 		"AttributeStrengthGain"			"1.5"	
-		"StatusHealth"                "90"
+		"AttributeBaseAgility"		"23"
+		"AttributeAgilityGain"		"2.5"												
+		"AttributeBaseIntelligence"	"2.5"
+		"AttributeIntelligenceGain"	"3.7"
+
+		"MovementSpeed"               "270"
+		"ArmorPhysical"		"-1" 
 }

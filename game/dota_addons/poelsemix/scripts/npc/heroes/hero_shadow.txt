@@ -22,18 +22,20 @@
 		"Ability16" "special_bonus_shadow_7"
 		"Ability17" "special_bonus_shadow_8"
 
-		"ArmorPhysical"		"2"
+		
 
 		"AttributePrimary"				"DOTA_ATTRIBUTE_AGILITY"
-		"AttributeBaseStrength"			"21"									// Base strength
-		"AttributeStrengthGain"			"2"										// Strength bonus per level.
-		"AttributeBaseIntelligence"		"23"									// Base intelligence
-		"AttributeIntelligenceGain"		"1.5"									// Intelligence bonus per level.
+		"AttributeBaseStrength"			"21"									
+		"AttributeStrengthGain"			"2"			
 		"AttributeBaseAgility"		    "22"
-		"AttributeAgilityGain"		    "3.9"
+		"AttributeAgilityGain"		    "3.9"							
+		"AttributeBaseIntelligence"		"23"									
+		"AttributeIntelligenceGain"		"1.5"									
+		"MovementSpeed"		"300"
+		"ArmorPhysical"		"-3"	
 
 		"StatusHealthRegen"		"2.1"
 		"AttackRange"			"90"
 
-		"MovementSpeed"		"300"
+		
 	}

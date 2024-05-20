@@ -12,13 +12,13 @@
 
 
 	"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
-	"AttributeBaseIntelligence"	"13"
-	"AttributeIntelligenceGain"	"1.2"
-	"AttributeBaseAgility"		"23"
-	"AttributeAgilityGain"		"2.4"
 	"AttributeBaseStrength"		"15"
 	"AttributeStrengthGain"		"1.4"
-	"MovementSpeed"		"295"
+	"AttributeBaseAgility"		"23"
+	"AttributeAgilityGain"		"2.4"
+	"AttributeBaseIntelligence"	"13"
+	"AttributeIntelligenceGain"	"1.2"
+	"MovementSpeed"		"280"
 	"ArmorPhysical"		"0"
 	"StatusHealth"                "420"
 	"StatusHealthRegen"		"0.2"

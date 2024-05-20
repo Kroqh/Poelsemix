@@ -7,8 +7,7 @@
 	"DisableWearables" "1"
 
 	"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-	"AttackAcquisitionRange"	"400"
-
+	
 	"ProjectileModel"		"particles/units/heroes/hero_pugna/pugna_base_attack.vpcf"
 
 
@@ -18,14 +17,21 @@
 	"MovementTurnRate"		"100"
 
 	"AttackRange"			"400"
+	"AttackAcquisitionRange"	"400"
+
+	"StatusHealth"                "300"
+
+
 	"AttributeBaseStrength"		"21"
 	"AttributeStrengthGain"		"2.3"
-	"AttributeBaseIntelligence"		"14"
-	"AttributeIntelligenceGain"		"1.75"
 	"AttributeBaseAgility"		"24"
 	"AttributeAgilityGain"		"2.5"	
-	"StatusHealth"                "300"
-	"MovementSpeed"               "285"
+	"AttributeBaseIntelligence"		"14"
+	"AttributeIntelligenceGain"		"1.75"
+
+	
+	"MovementSpeed"               "265"
+	"ArmorPhysical"		"3"
 
 
 	"Ability1" "urgot_acid_hunter"				

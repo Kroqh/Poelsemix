@@ -5,12 +5,18 @@
 	"Model"				"models/prophecy/prophecy.vmdl"
 	"ModelScale"		"1.1"
 	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
-	"AttributeBaseIntelligence"	"32"
-	"AttributeIntelligenceGain"	"3.6"
+	
+	"AttackRate"			"1.6"
+
+	"AttributeBaseStrength"			"19"		
+	"AttributeStrengthGain"			"2.5"
 	"AttributeBaseAgility"		"20"
 	"AttributeAgilityGain"		"2.2"
-	"AttackRate"			"1.6"
-	"MovementSpeed"               "285"
+	"AttributeBaseIntelligence"	"32"
+	"AttributeIntelligenceGain"	"3.6"
+
+	"MovementSpeed"               "275"
+	"ArmorPhysical"		"1" 
 	
 	"Ability1" "pr0_hack"				
 	"Ability2" "pr0_firestakit"

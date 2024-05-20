@@ -23,6 +23,18 @@
 	
 	"Ability16"		"special_bonus_harald_3"
 	"Ability17"		"special_bonus_harald_4"
+
+
+	"AttributeBaseStrength"			"21"									
+	"AttributeStrengthGain"			"3.6"
+	"AttributeBaseAgility"		"16"
+	"AttributeAgilityGain"		"2"													
+	"AttributeBaseIntelligence"	"18"
+	"AttributeIntelligenceGain"	"1.7"
+
+	"MovementSpeed"               "275"
+	"ArmorPhysical"		"6" 
+
 	
 								"precache"
 		{

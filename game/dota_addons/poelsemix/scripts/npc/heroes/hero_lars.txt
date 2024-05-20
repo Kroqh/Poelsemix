@@ -19,5 +19,13 @@
 	"Ability16" "special_bonus_lars_7"
 	"Ability17" "special_bonus_lars_8"
 
-	"MovementSpeed"               "290"
+	"AttributeBaseStrength"		"26"
+	"AttributeStrengthGain"			"3"	
+	"AttributeBaseAgility"		"18"
+	"AttributeAgilityGain"		"1.8"												
+	"AttributeBaseIntelligence"	"23"
+	"AttributeIntelligenceGain"	"1.2"
+
+	"MovementSpeed"               "275"
+	"ArmorPhysical"		"4" 
 }
