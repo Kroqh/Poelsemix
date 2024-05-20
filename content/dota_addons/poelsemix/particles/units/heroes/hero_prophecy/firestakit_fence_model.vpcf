@@ -89,10 +89,6 @@
 		{
 			_class = "C_INIT_RandomNamedModelSequence"
 			m_bModelFromRenderer = true
-			m_names = 
-			[
-				"end",
-			]
 			m_nFieldOutput = 13
 		},
 		{
@@ -128,16 +124,6 @@
 			_class = "C_OP_RemapNamedModelSequenceOnceTimed"
 			m_flRemapTime = 0.4
 			m_bModelFromRenderer = true
-			m_inNames = 
-			[
-				"bindPose",
-				"disruptor_groundspike_anim",
-			]
-			m_outNames = 
-			[
-				"end",
-				"end",
-			]
 			m_nFieldInput = 13
 			m_nFieldOutput = 13
 		},
@@ -230,12 +216,6 @@
 					m_vDomainMaxs = [ 0.0, 0.0 ]
 				}
 			}
-		},
-	]
-	m_Children = 
-	[
-		{
-			m_ChildRef = resource:"particles/units/heroes/hero_prophecy/firestakit_fence_modgrnd.vpcf"
 		},
 	]
 }

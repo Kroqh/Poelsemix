@@ -36,6 +36,7 @@
 	            {
 	                "var_type" "FIELD_INTEGER"
 	                "stat_loss" "-25 -50 -75"
+					"LinkedSpecialBonus" "special_bonus_prophecy_8"
 	            }
 	            "02"
 	            {

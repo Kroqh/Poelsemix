@@ -1,100 +1,63 @@
 "pr0_blockchain"
 {
-"precache"
-{
-	"particle" "particles/treasure_courier_death_coins.vpcf"
-	"soundfile" "soundevents/pr0_soundevent.vsndevts"	
-	"particle" "particles/units/heroes/hero_dark_willow/dark_willow_bramble_precast.vpcf"
-	"particle" "particles/units/heroes/hero_dark_willow/dark_willow_wisp_spell_type.vpcf"
-}
+
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass" "ability_datadriven"
+		"BaseClass"                 "ability_lua"
+			"ScriptFile"			"heroes/hero_pr0ph3cy/prophecy_blockchain"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
 		"AbilityTextureName" "blockchain"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityChannelTime" "4"
+		"AbilityChannelTime" "%tick_rate"
         
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"85 90 95 100"
+		"AbilityCooldown"				"20"
+		"AbilityManaCost"				"30"
 
+
+		"precache"
+		{
+		"particle" "particles/treasure_courier_death_coins.vpcf"
+		"soundfile" "soundevents/pr0_soundevent.vsndevts"	
+		"particle" "particles/units/heroes/hero_dark_willow/dark_willow_bramble_precast.vpcf"
+		}
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150"
+		
 		"AbilitySpecial"
        		 {
-            	            "12"
+            	"01"
 	            {
 	                "var_type" "FIELD_INTEGER"
-	                "chance" "50 65 80 95"
+	                "gold_percent" "10"
 	            }
-
-
+				"02"
+	            {
+	                "var_type" "FIELD_FLOAT"
+	                "payout_self" "1.5 1.6 1.7 1.8"
+					"LinkedSpecialBonus" "special_bonus_prophecy_5"
+	            }
+				"03"
+	            {
+	                "var_type" "FIELD_FLOAT"
+	                "payout_enemy" "0.4 0.35 0.3 0.25"
+	            }
+				"04"
+	            {
+	                "var_type" "FIELD_FLOAT"
+	                "tick_rate" "1"
+	            }
+				"05"
+	            {
+	                "var_type" "FIELD_FLOAT"
+	                "channel_duration" "5"
+	            }
        		 }
- "OnSpellStart"
- {
-     "FireSound"
-     {
-        "EffectName" "pr0_hackerjob"
-        "Target" "CASTER"
-   }
-		                "AttachEffect"
-                {
-                "EffectName" "particles/units/heroes/hero_dark_willow/dark_willow_bramble_precast.vpcf"
-                "EffectAttachType" "follow_origin"
-                "Target" "CASTER"            
-					}
-}
-	"OnChannelSucceeded"
-     {
-	   
-
-	"Random"
-		    {
-		        "Chance"            "%chance"
-		        "OnSuccess"
-		        {
-		            
-		                
-		                
-		              	  
-		             "FireSound"
-     					{
-        					"EffectName" "pr0_ching"
-     					   "Target" "CASTER"
- 						  }
-  					 	"GrantXPGold"
-							{
-							"Target"  "CASTER"
-							"GoldAmount" "583"
-							}
-					                "AttachEffect"
-                {
-                "EffectName" "particles/treasure_courier_death_coins.vpcf"
-                "EffectAttachType" "follow_origin"
-                "Target" "CASTER"
-                }
-		        }
-		                "OnFailure"
-		                {
-		                    "FireSound"
-     					{
-        					"EffectName" "pr0_nej"
-     					   "Target" "CASTER"
- 						  }
-						   "AttachEffect"
-              		  {
-               			 "EffectName" "particles/units/heroes/hero_dark_willow/dark_willow_wisp_spell_type.vpcf"
-               			 "EffectAttachType" "follow_origin"
-               				 "Target" "CASTER"            
-					}
-		                }
-		            }
-		        }
+ 
 
 
  }

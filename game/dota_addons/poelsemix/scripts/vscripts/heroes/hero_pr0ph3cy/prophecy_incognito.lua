@@ -16,7 +16,10 @@ function modifier_pr0_incognito:IsPurgable() return false end
 
 function modifier_pr0_incognito:OnCreated()
 	if not IsServer() then return end
-    self:StartIntervalThink(self:GetAbility():GetSpecialValueFor("fade_time"))
+
+	local fade = self:GetAbility():GetSpecialValueFor("fade_time")
+	if self:GetCaster():FindAbilityByName("special_bonus_prophecy_2"):GetLevel() > 0 then fade = fade + self:GetCaster():FindAbilityByName("special_bonus_prophecy_2"):GetSpecialValueFor("value") end      
+    self:StartIntervalThink(fade)
 
 end
 
@@ -33,7 +36,9 @@ function modifier_pr0_incognito:ModCheck()
 		local particle = ParticleManager:CreateParticle("particles/generic_hero_status/status_invisibility_start.vpcf", PATTACH_ABSORIGIN_FOLLOW, parent)
 		ParticleManager:ReleaseParticleIndex(particle)
 	end
-	self:StartIntervalThink(self:GetAbility():GetSpecialValueFor("fade_time"))
+	local fade = self:GetAbility():GetSpecialValueFor("fade_time")
+	if self:GetCaster():FindAbilityByName("special_bonus_prophecy_2"):GetLevel() > 0 then fade = fade + self:GetCaster():FindAbilityByName("special_bonus_prophecy_2"):GetSpecialValueFor("value") end      
+    self:StartIntervalThink(fade)
 end
 
 function modifier_pr0_incognito:DeclareFunctions()

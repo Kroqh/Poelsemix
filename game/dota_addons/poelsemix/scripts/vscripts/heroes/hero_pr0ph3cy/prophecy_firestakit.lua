@@ -23,7 +23,8 @@ function pr0_firestakit:OnSpellStart()
 		local particle = "particles/units/heroes/hero_prophecy/firestakit_fence.vpcf"
 		self.radius = self:GetSpecialValueFor("radius")  
 		local delay = self:GetSpecialValueFor("delay")       
-		self.duration = self:GetSpecialValueFor("duration")      
+		self.duration = self:GetSpecialValueFor("duration")
+		if self:GetCaster():FindAbilityByName("special_bonus_prophecy_7"):GetLevel() > 0 then self.duration = self.duration + self:GetCaster():FindAbilityByName("special_bonus_prophecy_7"):GetSpecialValueFor("value") end      
         EmitSoundOn("pr0_fire", caster)
 
 		local formation_particle_fx = ParticleManager:CreateParticle(particle, PATTACH_WORLDORIGIN, nil)
@@ -70,6 +71,7 @@ function modifier_pr0_firestakit:OnCreated(keys)
 		ParticleManager:SetParticleControl(self.field_particle, 2, Vector(self.duration, 0, 0))
 
 		self.damage = self:GetAbility():GetSpecialValueFor("damage_tick")
+		if self:GetCaster():FindAbilityByName("special_bonus_prophecy_6"):GetLevel() > 0 then self.damage = self.damage + self:GetCaster():FindAbilityByName("special_bonus_prophecy_6"):GetSpecialValueFor("value") end      
 
 		self.tick_rate = self:GetAbility():GetSpecialValueFor("tick")
 		self.time_since_last_tick = self.tick_rate

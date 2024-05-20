@@ -2,6 +2,12 @@ LinkLuaModifier("modifier_pro_deity_stat_remove", "heroes/hero_pr0ph3cy/prophecy
 LinkLuaModifier("modifier_pro_deity_stat_gain", "heroes/hero_pr0ph3cy/prophecy_deity", LUA_MODIFIER_MOTION_NONE)
 pr0_deity = pr0_deity or class({})
 
+function pr0_deity:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_prophecy_3"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_prophecy_3"):GetSpecialValueFor("value") end
+    return cd
+end
+
 function pr0_deity:OnSpellStart()
     if IsServer() then
 		local caster = self:GetCaster()
@@ -51,9 +57,11 @@ function modifier_pro_deity_stat_remove:IsDebuff()		return true end
 
 function modifier_pro_deity_stat_remove:OnCreated()
 	self.stat_loss = self:GetAbility():GetSpecialValueFor("stat_loss")
+	if self:GetCaster():FindAbilityByName("special_bonus_prophecy_8"):GetLevel() > 0 then self.stat_loss = self.stat_loss + self:GetCaster():FindAbilityByName("special_bonus_prophecy_8"):GetSpecialValueFor("value") end
 end
 function modifier_pro_deity_stat_remove:OnRefresh()
 	self.stat_loss = self:GetAbility():GetSpecialValueFor("stat_loss")
+	if self:GetCaster():FindAbilityByName("special_bonus_prophecy_8"):GetLevel() > 0 then self.stat_loss = self.stat_loss + self:GetCaster():FindAbilityByName("special_bonus_prophecy_8"):GetSpecialValueFor("value") end
 end
 
 function modifier_pro_deity_stat_remove:DeclareFunctions()

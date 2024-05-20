@@ -41,6 +41,7 @@
 		{
 			"var_type"				"FIELD_FLOAT"
 			"duration"				"4"
+			"LinkedSpecialBonus" "special_bonus_prophecy_7"
 		}
 		"03"
 		{
@@ -56,6 +57,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"damage_tick" "35 50 65 80"
+			"LinkedSpecialBonus" "special_bonus_prophecy_6"
 		}
 		"06"
 		{
