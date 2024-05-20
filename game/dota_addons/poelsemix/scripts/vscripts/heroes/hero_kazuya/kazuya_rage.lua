@@ -74,8 +74,9 @@ function modifier_kazuya_rage_fury_handler:DeclareFunctions()
 	local decFuncs = {
         MODIFIER_EVENT_ON_ATTACK_LANDED,
         MODIFIER_EVENT_ON_TAKEDAMAGE,
-        MODIFIER_EVENT_ON_RESPAWN
-}
+        MODIFIER_EVENT_ON_RESPAWN,
+        MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND
+    }
     return decFuncs
 end
 function modifier_kazuya_rage_fury_handler:OnTakeDamage(keys)
@@ -94,6 +95,10 @@ function modifier_kazuya_rage_fury_handler:OnAttackLanded(keys)
     self:ChangeFury(self.ability:GetSpecialValueFor("fury_on_hit"), true)
 end
 
+
+function modifier_kazuya_rage_fury_handler:GetAttackSound()
+	return "kazuya_punch"
+end
 
 modifier_kazuya_rage = modifier_kazuya_rage or class({})
 

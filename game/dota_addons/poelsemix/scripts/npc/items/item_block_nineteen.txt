@@ -20,7 +20,7 @@
 			"var_type"	"FIELD_INTEGER"
 			"damage" "36"
 		}
-		"09"
+		"02"
 		{
 			"var_type" "FIELD_INTEGER"
 			"agi" "30"

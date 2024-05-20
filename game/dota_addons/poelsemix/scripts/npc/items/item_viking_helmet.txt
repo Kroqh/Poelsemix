@@ -1,0 +1,37 @@
+"item_viking_helmet"
+{
+	"BaseClass"             		"item_lua"
+	"AbilityTextureName"			"viking_helmet"
+	"ScriptFile"					"items/item_viking_helmet.lua"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"5500"
+  	"ID"						"3057"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"str;attack_speed"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"olaf"
+	
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"str" "40"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"attack_speed" "40"
+		}
+		"03"
+		{
+			"var_type" "FIELD_FLOAT"
+			"as_pct_per_missing_hp" "0.4"
+		}
+
+	}
+	
+	
+}

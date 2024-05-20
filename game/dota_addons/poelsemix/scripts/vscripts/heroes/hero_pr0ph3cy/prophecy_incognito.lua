@@ -86,12 +86,14 @@ end
 
 function modifier_pr0_incognito_stealth:OnIntervalThink()
 	if not IsServer() then return end
-	if self:GetParent():IsMoving() then --holy ugly
-		self:GetParent():FadeGesture(ACT_DOTA_CAST_ABILITY_4)
-		self:GetParent():StartGesture(ACT_DOTA_CHANNEL_ABILITY_4)
-	else
-		self:GetParent():FadeGesture(ACT_DOTA_CHANNEL_ABILITY_4)
-		self:GetParent():StartGesture(ACT_DOTA_CAST_ABILITY_4)
+	if not self:GetParent():IsChanneling() then --should not interrupt blockchain channel
+		if self:GetParent():IsMoving() then --holy ugly
+			self:GetParent():FadeGesture(ACT_DOTA_CAST_ABILITY_4)
+			self:GetParent():StartGesture(ACT_DOTA_CHANNEL_ABILITY_4)
+		else
+			self:GetParent():FadeGesture(ACT_DOTA_CHANNEL_ABILITY_4)
+			self:GetParent():StartGesture(ACT_DOTA_CAST_ABILITY_4)
+		end
 	end
 end
 

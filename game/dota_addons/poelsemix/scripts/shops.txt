@@ -72,6 +72,7 @@
 		"item"		"item_block_nineteen"
 		"item"		"item_ultimate_scepter"
 		
+		"item"		"item_viking_helmet"
 		"item"		"item_flaeskesteg_sovs_kartofler"
 		"item"          "item_pocket_gametecher"
 		"item"		"item_abaddon_lichcap"

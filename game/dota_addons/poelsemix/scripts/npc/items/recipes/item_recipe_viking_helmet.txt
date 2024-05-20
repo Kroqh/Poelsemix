@@ -1,0 +1,14 @@
+"item_recipe_viking_helmet"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"700"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_viking_helmet"
+		"ItemRequirements"
+		{
+			"01" "item_ogre_axe;item_blitz_knuckles;item_reaver"
+		}
+  	}
