@@ -6,7 +6,7 @@
 	"model" "models/slapper/slapper.vmdl"
 
 	"Ability1" "slapper_power_slap"				
-	"Ability2" "musashi_fire"
+	"Ability2" "slapper_deflect"
 	"Ability3" "slapper_slap_city"
 	"Ability4" "slapper_bum_hunter"
 	"Ability5" "generic_hidden"
@@ -20,7 +20,7 @@
 	"AttributeBaseAgility"		"17"
 	"AttributeAgilityGain"		"1.9"								
 	"AttributeBaseIntelligence"		"16"									
-	"AttributeIntelligenceGain"		"1.7"									
+	"AttributeIntelligenceGain"		"1.9"									
 
 	"MovementSpeed"		"275"
 	"ArmorPhysical"		"4"	
