@@ -26,12 +26,12 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"agility"					"125"
+			"agility"					"115"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"as" "145"
+			"as" "125"
 		}
 		"03"
 		{
@@ -56,7 +56,7 @@
 		"07"
 		{
 			"var_type" "FIELD_FLOAT"
-			"speed_percentage" "15"
+			"speed_percentage" "13"
 		}
 		"08"
 		{
@@ -89,7 +89,7 @@
 				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
 				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
 				"MODIFIER_PROPERTY_EVASION_CONSTANT" "%evasion"
-				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE"	"%speed_percentage"
+				"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%speed_percentage"
 				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT" "%regen_health"
 			}
 		}

@@ -5,7 +5,7 @@
 	m_nMaxParticles = 1
 	m_BoundingBoxMin = [ -10.0, -10.0, 0.0 ]
 	m_flConstantRadius = 20.0
-	m_ConstantColor = [ 187, 0, 0, 255 ]
+	m_ConstantColor = [ 236, 236, 236, 255 ]
 	m_nGroupID = 1
 	m_nBehaviorVersion = 12
 	m_nFirstMultipleOverride_BackwardCompat = 5
@@ -156,11 +156,6 @@
 			}
 		},
 		{
-			_class = "C_INIT_RandomColor"
-			m_ColorMin = [ 255, 144, 62, 255 ]
-			m_ColorMax = [ 205, 0, 0, 255 ]
-		},
-		{
 			_class = "C_INIT_InitFloat"
 			m_InputValue = 
 			{
@@ -233,7 +228,7 @@
 			m_Gravity = 
 			{
 				m_nType = "PVEC_TYPE_LITERAL"
-				m_vLiteralValue = [ 0.0, 0.0, 3250.0 ]
+				m_vLiteralValue = [ 0.0, 0.0, 3300.0 ]
 				m_LiteralColor = [ 0, 0, 0 ]
 				m_NamedValue = ""
 				m_bFollowNamedValue = false

@@ -53,7 +53,7 @@ function modifier_slapper_rammusteinu:DeclareFunctions()
 end
 
 function modifier_slapper_rammusteinu:GetModifierAttackRangeBonus()
-    return self:GetAbility():GetSpecialValueFor("bonus_range")
+    return self:GetAbility():GetSpecialValueFor("bonus_range") + (self:GetAbility():GetSpecialValueFor("agi_range_ratio") * self:GetParent():GetAgility())
 end
 function modifier_slapper_rammusteinu:GetModifierProjectileSpeed()
     return 700
@@ -65,9 +65,10 @@ end
 function modifier_slapper_rammusteinu:OnAttackLanded(params)
 	if (params.attacker ~= self:GetParent()) then return end 
     if not IsServer() then return end
-    caster = self:GetCaster()
+    caster = self:GetParent()
 
     local damage = self:GetAbility():GetSpecialValueFor("int_magic_damage_ratio") * caster:GetIntellect()
+    local heal = self:GetAbility():GetSpecialValueFor("str_healing_ratio") * self:GetParent():GetStrength()
 
 		ApplyDamage({victim = params.target,
 		attacker = caster,
@@ -75,6 +76,7 @@ function modifier_slapper_rammusteinu:OnAttackLanded(params)
 		damage = damage,
 		ability = self:GetAbility()
 		})
+        caster:Heal(heal, self:GetAbility())
 
 end
 

@@ -38,7 +38,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"			"150"
+				"radius"			"125"
 			}
 			"03"
 			{
@@ -53,7 +53,7 @@
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"range"						"500 525 550 575"
+				"range"						"300 325 350 375"
 			}
 			"06"
 			{

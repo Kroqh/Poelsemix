@@ -31,13 +31,24 @@
 		"02"
 	    {
 	        "var_type"          "FIELD_INTEGER"
-	        "bonus_range"      "350 400 450"
+	        "bonus_range"      "250 300 350"
 	    }
 		"03"
 	    {
 	        "var_type"          "FIELD_FLOAT"
-	        "int_magic_damage_ratio"      "1 1.5 2"
+	        "str_healing_ratio"      "1 1.2 1.4"
 	    }
+		"04"
+	    {
+	        "var_type"          "FIELD_FLOAT"
+	        "agi_range_ratio"      "0.8 1 1.2"
+	    }
+		"05"
+	    {
+	        "var_type"          "FIELD_FLOAT"
+	        "int_magic_damage_ratio"      "1 1.2 1.4"
+	    }
+		
 
 	}
 }
