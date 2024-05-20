@@ -8,7 +8,7 @@
 	"Ability5" "generic_hidden"
 	"Ability6" "ha_army"
 	"DisableWearables" "1"
-		"ModelScale" "1.5"
+		"ModelScale" "1.25"
 		"model" "models/harald/harald.vmdl"
 	
 	
