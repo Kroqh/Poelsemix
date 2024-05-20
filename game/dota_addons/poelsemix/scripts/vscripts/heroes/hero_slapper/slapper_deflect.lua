@@ -39,7 +39,9 @@ function modifier_slapper_deflect_passive:OnCreated()
 			lol = 1
 		end
 
-		self:StartIntervalThink(ability:GetSpecialValueFor("interval"))
+		local interval =ability:GetSpecialValueFor("interval")
+		if self:GetCaster():FindAbilityByName("special_bonus_slapper_8"):GetLevel() > 0 then interval = interval + self:GetCaster():FindAbilityByName("special_bonus_slapper_8"):GetSpecialValueFor("value") end 
+		self:StartIntervalThink(interval)
 	end
 end
 
@@ -48,12 +50,14 @@ function modifier_slapper_deflect_passive:OnIntervalThink()
 		local ability = self:GetAbility()
 
 		local max_stacks = ability:GetSpecialValueFor("max_charges")
+		if self:GetCaster():FindAbilityByName("special_bonus_slapper_2"):GetLevel() > 0 then max_stacks = max_stacks + self:GetCaster():FindAbilityByName("special_bonus_slapper_2"):GetSpecialValueFor("value") end 
 
 		if self:GetStackCount() < max_stacks then
 			self:SetStackCount(self:GetStackCount() + 1)
 		end
-
-		self:StartIntervalThink(ability:GetSpecialValueFor("interval"))
+		local interval =ability:GetSpecialValueFor("interval")
+		if self:GetCaster():FindAbilityByName("special_bonus_slapper_8"):GetLevel() > 0 then interval = interval + self:GetCaster():FindAbilityByName("special_bonus_slapper_8"):GetSpecialValueFor("value") end 
+		self:StartIntervalThink(interval)
 	end
 end
 
@@ -71,6 +75,7 @@ function modifier_slapper_deflect_passive:OnAttackLanded( keys )
 		if stacks == 0 then return end
 		self:SetStackCount(stacks-1)
 		parent:StartGesture(ACT_DOTA_CAST_ABILITY_2)
+		parent:EmitSound("slapper_deflect")
 		local shot = 
 			{
 				Target = keys.attacker,

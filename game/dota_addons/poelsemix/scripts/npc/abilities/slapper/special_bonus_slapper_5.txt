@@ -1,0 +1,24 @@
+"special_bonus_slapper_5"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"slapper_bum_hunter"
+	}	
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"value" "10" //damage %
+		}
+	}	
+}

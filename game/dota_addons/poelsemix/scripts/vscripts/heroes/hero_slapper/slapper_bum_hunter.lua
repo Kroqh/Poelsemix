@@ -32,10 +32,13 @@ function modifier_slapper_bum_passive:OnTakeDamage( keys )
 
 		local difference = math.abs(forwardAngle - reverseEnemyAngle)
 
+		local amp = self:GetAbility():GetSpecialValueFor("bonus_damage_from_behind")
+
+		if self:GetCaster():FindAbilityByName("special_bonus_slapper_5"):GetLevel() > 0 then amp = amp + self:GetCaster():FindAbilityByName("special_bonus_slapper_5"):GetSpecialValueFor("value") end 
 		
 
 		if (difference <= (back_angle / 2)) or (difference >= (360 - (back_angle / 2))) then --tak imba
-			local damage = keys.damage * (self:GetAbility():GetSpecialValueFor("bonus_damage_from_behind")/100)
+			local damage = keys.damage * (amp/100)
 			ApplyDamage({victim = keys.unit,
 				attacker = parent,
 				damage_type = DAMAGE_TYPE_PURE, --BONUS DAMAGE POST MIGITATIONS

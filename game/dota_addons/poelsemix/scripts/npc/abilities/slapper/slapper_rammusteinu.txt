@@ -9,6 +9,8 @@
 	"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
 	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
 	"AbilityCastPoint"				"0.3"
+
+	"HasScepterUpgrade"				"1"
 	
 
 		"precache"
@@ -26,7 +28,8 @@
 	    "01"
 	    {
 	        "var_type"          "FIELD_INTEGER"
-	        "duration"      "8 10 12"	
+	        "duration"      "8 10 12"
+			"LinkedSpecialBonus" "special_bonus_slapper_7"	
 	    }
 		"02"
 	    {

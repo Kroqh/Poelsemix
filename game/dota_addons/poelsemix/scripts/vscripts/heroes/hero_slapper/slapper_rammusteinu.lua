@@ -8,12 +8,38 @@ function slapper_rammusteinu:OnAbilityPhaseStart()
 	return true
 end
 
+function slapper_rammusteinu:GetCastRange()
+    local range = self:GetCaster():Script_GetAttackRange()
+    if not self:GetCaster():HasModifier("modifier_slapper_rammusteinu") then range = range +self:GetSpecialValueFor("bonus_range") + (self:GetSpecialValueFor("agi_range_ratio") * self:GetCaster():GetAgility()) end
+	return range
+end
+
 function slapper_rammusteinu:OnSpellStart() 
 	if not IsServer() then return end
 	local caster = self:GetCaster();
     local duration = self:GetSpecialValueFor("duration");
+    if self:GetCaster():FindAbilityByName("special_bonus_slapper_7"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_slapper_7"):GetSpecialValueFor("value") end
 
     caster:AddNewModifier(caster, self, "modifier_slapper_rammusteinu", {duration = duration});
+
+    if caster:HasScepter() and caster:FindAbilityByName("slapper_power_slap"):GetLevel() > 0 then
+
+        Timers:CreateTimer({
+		endTime = 0.1, --Just waiting to be sure modifier is setup before cast 
+		callback = function()
+			local enemies = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), nil, caster:Script_GetAttackRange(), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
+            local q = caster:FindAbilityByName("slapper_power_slap")
+            for _, target in pairs(enemies) do
+                q:DoSpell(target:GetAbsOrigin(), caster)
+
+            end
+            end
+            })
+
+    end
+
+    
+
 end
 
 

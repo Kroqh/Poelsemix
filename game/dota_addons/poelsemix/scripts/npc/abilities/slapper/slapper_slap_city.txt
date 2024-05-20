@@ -26,12 +26,14 @@
 		"02"
 		{
 			"var_type"			"FIELD_FLOAT"
-			"agi_to_damage_scaling"			"0.6 0.9 1.2 1.5"
+			"agi_to_damage_scaling"			"0.5 0.8 1.1 1.4"
+			"LinkedSpecialBonus" "special_bonus_slapper_4"
 		}
 	    "03"
 	    {
 	        "var_type"          "FIELD_FLOAT"
 	        "duration"        "1.5"
+			"LinkedSpecialBonus" "special_bonus_slapper_1"
 	    }
 		
 	}

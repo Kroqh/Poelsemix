@@ -20,7 +20,7 @@
 	"AttributeBaseIntelligence"		"15"									
 	"AttributeIntelligenceGain"		"1.6"	
 
-	"StatusHealth"                "550"
+	"StatusHealth"                "500"
 
 	"AttackDamageMin"			"52"
 	"AttackDamageMax"			"54"

@@ -13,19 +13,29 @@ function slapper_power_slap:GetAOERadius()
 	local value = self:GetSpecialValueFor("radius")
 	return value
 end
+function slapper_power_slap:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_slapper_6"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_slapper_6"):GetSpecialValueFor("value") end
+    return cd
+end
+
 
 
 function slapper_power_slap:OnSpellStart()
 	if IsServer() then
-		local caster = self:GetCaster()
-        local point = self:GetCursorPosition()
+		self:DoSpell(self:GetCursorPosition(), self:GetCaster())
+	end
+end
+
+function slapper_power_slap:DoSpell(point, caster)
 		local radius = self:GetSpecialValueFor("radius")
 		local duration = self:GetSpecialValueFor("knockup_duration")
 		local height = self:GetSpecialValueFor("knockup_height")
 		local str_scale = self:GetSpecialValueFor("str_damage_scaling")
+		if self:GetCaster():FindAbilityByName("special_bonus_slapper_3"):GetLevel() > 0 then str_scale = str_scale + self:GetCaster():FindAbilityByName("special_bonus_slapper_3"):GetSpecialValueFor("value") end
 		local damage = self:GetSpecialValueFor("damage") + (caster:GetStrength() * str_scale)
 		local particle = ""
-		if self:GetCaster():HasModifier("modifier_slapper_rammusteinu") then
+		if caster:HasModifier("modifier_slapper_rammusteinu") then
 			EmitSoundOn("slapper_power_slap_rammusteinu", caster)
 			particle = "particles/units/heroes/hero_slapper/power_slap_rammusteinu.vpcf"
 		else
@@ -50,8 +60,9 @@ function slapper_power_slap:OnSpellStart()
 			ability = self})
 
 		end
-	end
+	
 end
+
 
 
 

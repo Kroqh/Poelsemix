@@ -12,8 +12,9 @@
 	{
 	    "01"
 		{
-			"var_type" "FIELD_FLOAT"
+			"var_type" "FIELD_INTEGER"
 			"bonus_damage_from_behind" "25"
+			"LinkedSpecialBonus" "special_bonus_slapper_5"
 		}
 		"02"
 		{

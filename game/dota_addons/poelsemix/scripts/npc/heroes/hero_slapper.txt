@@ -24,18 +24,16 @@
 
 	"MovementSpeed"		"275"
 	"ArmorPhysical"		"4"	
-
-	//Lav nye talents
 	
-	"Ability10"		"special_bonus_musashi_1"
-	"Ability11"		"special_bonus_musashi_2"
+	"Ability10"		"special_bonus_slapper_1"
+	"Ability11"		"special_bonus_slapper_2"
 	
-	"Ability12"		"special_bonus_musashi_3"
-	"Ability13"		"special_bonus_musashi_4"
+	"Ability12"		"special_bonus_slapper_3"
+	"Ability13"		"special_bonus_slapper_4"
 	
-	"Ability14"		"special_bonus_musashi_6"
-	"Ability15"		"special_bonus_musashi_5"
+	"Ability14"		"special_bonus_slapper_5"
+	"Ability15"		"special_bonus_slapper_6"
 	
-	"Ability16"		"special_bonus_musashi_7"
-	"Ability17"		"special_bonus_musashi_8"							
+	"Ability16"		"special_bonus_slapper_7"
+	"Ability17"		"special_bonus_slapper_8"							
 }

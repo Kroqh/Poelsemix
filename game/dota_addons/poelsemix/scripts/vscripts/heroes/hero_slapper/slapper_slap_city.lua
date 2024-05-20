@@ -5,6 +5,8 @@ function slapper_slap_city:OnSpellStart()
 	if IsServer() then
 		local caster = self:GetCaster()
 		local duration = self:GetSpecialValueFor("duration")
+		if self:GetCaster():FindAbilityByName("special_bonus_slapper_1"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_slapper_1"):GetSpecialValueFor("value") end
+
 
 		if self.bat == nil then
 			self.bat = caster:GetBaseAttackTime()
@@ -49,8 +51,9 @@ function modifier_slapper_slap_city:DeclareFunctions()
 end
 
 function modifier_slapper_slap_city:GetModifierPreAttack_BonusDamage()
-	local multiplier = self:GetAbility():GetSpecialValueFor("agi_to_damage_scaling")
-	local damage =   self:GetParent():GetAgility() * multiplier
+	local scaler = self:GetAbility():GetSpecialValueFor("agi_to_damage_scaling")
+	if self:GetCaster():FindAbilityByName("special_bonus_slapper_4"):GetLevel() > 0 then scaler = scaler + self:GetCaster():FindAbilityByName("special_bonus_slapper_4"):GetSpecialValueFor("value") end
+	local damage =   self:GetParent():GetAgility() * scaler
 	return damage
 end
 
