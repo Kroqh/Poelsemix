@@ -17,7 +17,7 @@
                               "value0"        "sounds/herobrine/diamondcling.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "8.00000"  }
+                    "volume"            {   "value"     "4.00000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }
@@ -48,7 +48,7 @@
                               "value0"        "sounds/herobrine/DIAMONDS.vsnd"
                         }
                     }
-                    "volume"            {   "value"     "3.00000"  }
+                    "volume"            {   "value"     "2.50000"  }
                     "pitch_rand_min"    {   "value"     "-0.05000"  }
                     "pitch_rand_max"    {   "value"     "0.050000"  }
                     "pitch"             {   "value"     "1.000000"  }

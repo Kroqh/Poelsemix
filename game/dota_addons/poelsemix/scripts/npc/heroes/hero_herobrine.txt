@@ -28,7 +28,7 @@
 	"Ability3" "herobrine_grief"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
-	"Ability6" "hb_diamonds"
+	"Ability6" "herobrine_diamonds"
 	
 	"Ability10"		"special_bonus_mp_200"
 	"Ability11"		"special_bonus_mp_regen_10"

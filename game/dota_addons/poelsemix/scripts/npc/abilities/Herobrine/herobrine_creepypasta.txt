@@ -4,7 +4,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"             		"ability_lua"
 	"ScriptFile"					"heroes/hero_herobrine/herobrine_creepypasta"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityTextureName"			"creepypasta"
 
 	// Precache
@@ -14,7 +14,10 @@
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts"
 		"particle"			"particles/econ/heroes/herobrine/herobrine_creepypasta.vpcf"
 		"particle"			"particles/econ/items/doom/doom_ti8_immortal_arms/doom_ti8_immortal_devour_smoke_b.vpcf"
+		"particle"			"particles/econ/items/faceless_void/faceless_void_bracers_of_aeons/fv_bracers_of_aeons_dialatedebuf_red_pulse.vpcf"
 	}
+
+	"HasScepterUpgrade"			"1"
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -27,7 +30,7 @@
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"15 10 5 0"
+	"AbilityManaCost"				"20 15 10 5"
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
@@ -37,6 +40,16 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"blink_range"			"780 860 920 1000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"scepter_fear_aoe"			"250"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"scepter_fear_duration"			"0.4"
 		}
 	}
 

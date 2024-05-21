@@ -1,0 +1,72 @@
+"herobrine_diamonds"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"             		"ability_lua"
+	"ScriptFile"					"heroes/hero_herobrine/herobrine_diamonds"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"	
+	"AbilityTextureName"			"diamonds"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+	"precache"
+	{
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+		"soundfile"			"soundevents/herobrine_soundevent.vsndevts"
+		"particle"			"particles/econ/events/ti5/teleport_start_c_ti5.vpcf"
+		"particle"			"particles/econ/items/effigies/status_fx_effigies/status_effect_effigy_frosty_l2_dire.vpcf"
+		"particle"			"particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf"
+	}
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastPoint"				"0.4"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"95"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"250 200 150"
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"600 650 700"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"duration"					"15"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"stone_duration"			"0.3"
+		}
+		"06"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"vision_cone"				"50"		// 85 degree cone //huh?
+		}
+		"07"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_resist"		"98"
+		}
+		"08"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"bonus_gold"		"30 35 40"
+		}
+	}
+}

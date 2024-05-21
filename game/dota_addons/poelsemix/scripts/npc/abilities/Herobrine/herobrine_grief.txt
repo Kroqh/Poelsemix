@@ -40,7 +40,7 @@
 		"04"
 		{
 			"var_type"  "FIELD_FLOAT"
-			"explosion_int_scaling" "1 1.05 1.1 1.15 1.2 1.25 1.3 1.35"
+			"explosion_int_damage_scaling" "1 1.05 1.1 1.15 1.2 1.25 1.3 1.35"
 		}
 		"05"
 		{

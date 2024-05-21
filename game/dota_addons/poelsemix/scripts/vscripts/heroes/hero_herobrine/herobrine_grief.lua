@@ -33,7 +33,7 @@ end
 function modifier_herobrine_grief_passive:OnAttackLanded( params )
 	if not IsServer() then return end
 	if (params.attacker ~= self:GetParent()) then return end 
-    local dmg = self:GetAbility():GetSpecialValueFor("explosion_damage") + (self:GetAbility():GetSpecialValueFor("explosion_int_scaling") * self:GetParent():GetIntellect())
+    local dmg = self:GetAbility():GetSpecialValueFor("explosion_damage") + (self:GetAbility():GetSpecialValueFor("explosion_int_damage_scaling") * self:GetParent():GetIntellect())
     if (params.target:HasModifier("modifier_herobrine_grief_bomb")) then
         params.target:FindModifierByName("modifier_herobrine_grief_bomb"):TriggerExplosion()
     else
