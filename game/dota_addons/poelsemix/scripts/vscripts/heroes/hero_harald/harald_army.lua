@@ -27,6 +27,8 @@ function ha_army:OnSpellStart()
         unit = CreateUnitByName("viking_norm",target, true, caster, nil,caster:GetTeam())
         unit:AddNewModifier(caster, self, "modifier_kill", { duration = self:GetSpecialValueFor("duration") } )
         unit:AddNewModifier(caster, self, "modifier_phased", { duration = 0.1 } )
+        unit:SetTeam(caster:GetTeamNumber())
+	    unit:SetOwner(caster)
         unit:SetControllableByPlayer(caster:GetPlayerOwnerID(), true)
         count = count + 1
     end
@@ -36,6 +38,8 @@ function ha_army:OnSpellStart()
         unit = CreateUnitByName("viking_ranged",target, true, caster, nil,caster:GetTeam())
         unit:AddNewModifier(caster, self, "modifier_kill", { duration = self:GetSpecialValueFor("duration") } )
         unit:AddNewModifier(caster, self, "modifier_phased", { duration = 0.1 } )
+        unit:SetTeam(caster:GetTeamNumber())
+	    unit:SetOwner(caster)
         unit:SetControllableByPlayer(caster:GetPlayerOwnerID(), true)
         count = count + 1
     end
@@ -47,6 +51,8 @@ function ha_army:OnSpellStart()
             unit = CreateUnitByName("viking_mage", target, true, caster, nil,caster:GetTeam())
             unit:AddNewModifier(caster, self, "modifier_kill", { duration = self:GetSpecialValueFor("duration") } )
             unit:AddNewModifier(caster, self, "modifier_phased", { duration = 0.1 } )
+            unit:SetTeam(caster:GetTeamNumber())
+	        unit:SetOwner(caster)
             unit:SetControllableByPlayer(caster:GetPlayerOwnerID(), true)
             count = count + 1
         end

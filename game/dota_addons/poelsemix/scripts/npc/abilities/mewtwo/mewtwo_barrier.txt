@@ -38,7 +38,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"		"175 200 225 250"
+				"radius"		"225 250 275 300"
 				"LinkedSpecialBonus" "special_bonus_mewtwo_6"
 			}
 			"02"

@@ -25,11 +25,7 @@ function COverthrowGameMode:OnGameRulesStateChange()
 		if GetMapName() == "poelsemix" then
 			self.TEAM_KILLS_TO_WIN = 35
 		elseif GetMapName() == "poelsemix_3v3v3v3" then
-			self.TEAM_KILLS_TO_WIN = 35
-		elseif GetMapName() == "desert_quintet" then
-			self.TEAM_KILLS_TO_WIN = 35
-		elseif GetMapName() == "temple_quartet" then
-			self.TEAM_KILLS_TO_WIN = 35
+			self.TEAM_KILLS_TO_WIN = 50
 		else
 			self.TEAM_KILLS_TO_WIN = 35
 		end

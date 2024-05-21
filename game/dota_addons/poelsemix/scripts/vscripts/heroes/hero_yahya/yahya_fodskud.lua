@@ -57,15 +57,14 @@ modifier_yahya_fodskud_debuff = modifier_yahya_fodskud_debuff or class({})
 function modifier_yahya_fodskud_debuff:IsDebuff() return true end
 
 function modifier_yahya_fodskud_debuff:OnCreated()
-	if IsServer() then
-	end
+	self.slow = self:GetAbility():GetSpecialValueFor("movespeed_debuff_percent")
 end
 
 function modifier_yahya_fodskud_debuff:DeclareFunctions()
-	local decFuncs = {MODIFIER_PROPERTY_MOVESPEED_REDUCTION_PERCENTAGE }
+	local decFuncs = {MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE}
 	return decFuncs
 end
 
-function modifier_yahya_fodskud_debuff:GetModifierMoveSpeedReductionPercentage()
-	return self:GetAbility():GetSpecialValueFor("movespeed_debuff_percent")
+function modifier_yahya_fodskud_debuff:GetModifierMoveSpeedBonus_Percentage()
+	return -self.slow
 end

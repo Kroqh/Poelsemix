@@ -59,6 +59,8 @@ function modifier_mink_passive:SpawnMink(scaler, target)
     unit = CreateUnitByName("unit_mink",target:GetAbsOrigin(), true, parent, nil, parent:GetTeam())
     unit:AddNewModifier(caster, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
     unit:AddNewModifier(caster, ability, "modifier_mink_stats", {dmg = dmg, size_multi = size_multi} )
+    unit:SetTeam(caster:GetTeamNumber())
+	unit:SetOwner(caster)
     unit:SetBaseMaxHealth(hp)
     unit:SetMaxHealth(hp)
     unit:SetHealth(hp) --has to have this ugly trio for it to work lol

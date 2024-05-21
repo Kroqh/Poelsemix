@@ -9,7 +9,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
-        "AbilityCooldown"           "25 23 21 19"
+        "AbilityCooldown"           "21 19 17 15"
         "AbilityManaCost"           "120 110 100 90"
 
         "AbilitySpecial"
@@ -18,7 +18,7 @@
 		"01"
 		  {
 			"var_type"          "FIELD_INTEGER"
-            		"radius"          "350 375 400 425"
+            		"radius"          "375 400 425 450"
 			"LinkedSpecialBonus" "special_bonus_kaj_3"
 		  }
           "02"
@@ -35,7 +35,7 @@
 		  "04"
 		  {
 			"var_type"          "FIELD_INTEGER"
-            		"damage"          "300 425 650 775"
+            		"damage"          "400 550 700 950" 
 		  }
 		 
         }

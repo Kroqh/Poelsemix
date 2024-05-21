@@ -16,6 +16,8 @@ function ha_rune:OnAbilityPhaseStart()
     local duration = self:GetSpecialValueFor("duration")
     if caster:HasTalent("special_bonus_harald_6") then duration = duration + caster:FindAbilityByName("special_bonus_harald_6"):GetSpecialValueFor("value") end
 
+    self:StartCooldown(self:GetCooldown(self:GetLevel())) --avoid fuckery with castpoints not trigger cd if stunned or something while placing
+
     Timers:CreateTimer({
         endTime = 0.3,
         callback = function() 
@@ -25,9 +27,6 @@ function ha_rune:OnAbilityPhaseStart()
            
         end
         }) --Giving it some leverage
-
-       
-    
 end
 
 modifier_harald_rune_aura_emitter = modifier_harald_rune_aura_emitter or class({})

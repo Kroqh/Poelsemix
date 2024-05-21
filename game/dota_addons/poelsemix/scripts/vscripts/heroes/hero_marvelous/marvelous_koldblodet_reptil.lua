@@ -55,6 +55,8 @@ function marvelous_koldblodet_reptil:OnProjectileHit(target, location)
 		unit = CreateUnitByName("npc_koldblodet_reptil",location, true, caster, nil, caster:GetTeam())
 		unit:AddNewModifier(caster, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
 		unit:AddNewModifier(caster, ability, "modifier_marvelous_reptil_unit_information", {dmg = dmg} )
+		unit:SetTeam(caster:GetTeamNumber())
+		unit:SetOwner(caster)
 		unit:SetBaseMaxHealth(hp)
 		unit:SetMaxHealth(hp)
 		unit:SetHealth(hp) --has to have this ugly trio for it to work lol

@@ -28,4 +28,6 @@
 
 	"MovementSpeed"               "275"
 	"ArmorPhysical"		"4" 
+	"AttackDamageMin"			"52"
+	"AttackDamageMax"			"54"
 }

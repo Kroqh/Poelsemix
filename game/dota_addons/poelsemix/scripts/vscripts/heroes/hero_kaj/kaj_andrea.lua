@@ -38,6 +38,8 @@ function kaj_andrea:OnSpellStart()
         unit:SetControllableByPlayer(caster:GetPlayerID(), true)
         unit:AddNewModifier(caster, self, "modifier_kill", { duration = duration } )
         unit:AddNewModifier(caster, self, "modifier_kaj_andrea_stats", {duration = duration} )
+        unit:SetTeam(caster:GetTeamNumber())
+	    unit:SetOwner(caster)
         unit:SetBaseMaxHealth(hp)
         unit:SetMaxHealth(hp)
         unit:SetHealth(hp) --has to have this ugly trio for it to work lol

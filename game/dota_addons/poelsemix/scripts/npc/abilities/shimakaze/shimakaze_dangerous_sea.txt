@@ -37,7 +37,7 @@
 	    "05"
 	    {
 	    	"var_type"	"FIELD_INTEGER"
-	    	"move_slow" "-25"
+	    	"move_slow" "-20"
 		"LinkedSpecialBonus" "special_bonus_shimakaze_8"
 	    }
 	    "06"

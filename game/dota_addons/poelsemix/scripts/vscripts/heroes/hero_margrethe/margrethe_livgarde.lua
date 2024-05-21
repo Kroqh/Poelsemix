@@ -26,6 +26,8 @@ function margrethe_livgarde:OnSpellStart()
 
     unit:AddNewModifier(caster, ability, "modifier_kill", { duration = ability:GetSpecialValueFor("lifetime") } )
     unit:AddNewModifier(caster, ability, "modifier_margrethe_livgarde_unit_information", {dmg = dmg, ms = ms} )
+	unit:SetTeam(caster:GetTeamNumber())
+	unit:SetOwner(caster)
     unit:SetBaseMaxHealth(hp)
     unit:SetMaxHealth(hp)
     unit:SetHealth(hp) --has to have this ugly trio for it to work lol

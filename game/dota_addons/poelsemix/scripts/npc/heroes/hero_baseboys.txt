@@ -29,7 +29,7 @@
 	"MovementSpeed"               "285"
 	"ArmorPhysical"		"4" 
 	"AttackRange"			"150"
-	"AttackRate"                 "1.7" 
+	"AttackRate"                 "1.7"
 	
 	"AttributeBaseStrength"			"21"
 	"AttributeStrengthGain"			"2.1"	

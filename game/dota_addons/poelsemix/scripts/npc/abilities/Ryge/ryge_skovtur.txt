@@ -8,7 +8,7 @@
 	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
 	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
 	"AbilityCooldown"           "20 18 16 14"
-	"AbilityManaCost"           "100"
+	"AbilityManaCost"           "100 95 90 85"
 	"AbilityCastRange"			"650"
 
 	"AbilitySpecial"

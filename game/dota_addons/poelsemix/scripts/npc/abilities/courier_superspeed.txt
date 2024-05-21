@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"abilities/courier.lua"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	//"AbilityTextureName"			""
+	"AbilityTextureName"			"courier_super_speed"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
 	
 	"AbilitySpecial"

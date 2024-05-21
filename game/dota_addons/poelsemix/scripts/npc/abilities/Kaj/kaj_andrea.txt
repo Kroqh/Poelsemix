@@ -55,8 +55,8 @@
 		}
 		"04"
 		{
-			"var_type"					"FIELD_FLOAT"
-			"andrea_damage"					"22 26 30"
+			"var_type"					"FIELD_INTEGER"
+			"andrea_damage"					"25 32 39"
 		}
 		"05"
 		{

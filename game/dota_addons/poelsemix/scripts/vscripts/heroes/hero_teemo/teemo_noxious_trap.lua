@@ -191,7 +191,7 @@ function modifier_noxious_trap_explosion:OnIntervalThink()
 			self.radius, 
 			ability:GetAbilityTargetTeam(), 
 			ability:GetAbilityTargetType(), 
-			abilty:GetAbilityTargetFlags(), 
+			ability:GetAbilityTargetFlags(), 
 			FIND_ANY_ORDER, 
 			false)
 

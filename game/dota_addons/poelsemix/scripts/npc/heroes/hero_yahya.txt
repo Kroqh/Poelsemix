@@ -30,5 +30,5 @@
 	
 	"MovementSpeed"		"275"
   "ArmorPhysical"		"4"
-	"StatusHealth"                "300"
+	"StatusHealth"                "425"
 }

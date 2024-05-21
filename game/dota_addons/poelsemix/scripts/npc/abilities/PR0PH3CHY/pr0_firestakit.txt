@@ -56,7 +56,7 @@
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage_tick" "35 50 65 80"
+			"damage_tick" "50 65 80 95"
 			"LinkedSpecialBonus" "special_bonus_prophecy_6"
 		}
 		"06"

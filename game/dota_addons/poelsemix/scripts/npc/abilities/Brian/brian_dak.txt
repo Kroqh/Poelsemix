@@ -10,7 +10,7 @@
 		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"SpellImmunityType"                "SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"     "DAMAGE_TYPE_PURE"
-		"AbilityCooldown"           "120"
+		"AbilityCooldown"           "100"
 		"AbilityManaCost"           "200"
 "precache"
 {
@@ -41,7 +41,7 @@
 			"04"
 		    {
 		        "var_type"          "FIELD_INTEGER"
-		        "damage_tick"          "25 50 75"
+		        "damage_tick"          "20 35 50"
 		    }
 		}
 	}	

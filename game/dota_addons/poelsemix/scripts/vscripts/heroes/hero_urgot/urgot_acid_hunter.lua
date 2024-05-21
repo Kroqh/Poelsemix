@@ -56,7 +56,7 @@ function FireProjectile(caster, ability, spawn_point, direction, targethero)
 	local particle_arrow = "particles/units/heroes/urgot/acid_hunter.vpcf"
 	local arrow_speed = ability:GetSpecialValueFor("proj_speed")
 	local arrow_distance = ability:GetSpecialValueFor("range")
-	if self:GetCaster():FindAbilityByName("special_bonus_urgot_4"):GetLevel() > 0 then arrow_distance = arrow_distance + self:GetCaster():FindAbilityByName("special_bonus_urgot_4"):GetSpecialValueFor("value") end 
+	if caster:FindAbilityByName("special_bonus_urgot_4"):GetLevel() > 0 then arrow_distance = arrow_distance + caster:FindAbilityByName("special_bonus_urgot_4"):GetSpecialValueFor("value") end 
 	if targethero == nil or targethero:HasModifier("modifier_urgot_corrosive") == false then
 		EmitSoundOn("urgotQNonTargeted", caster)
 		local arrow_projectile = {  Ability = ability,

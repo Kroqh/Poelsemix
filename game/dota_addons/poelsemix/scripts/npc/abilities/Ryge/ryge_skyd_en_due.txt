@@ -16,7 +16,7 @@
 
 "AbilityCastPoint"				"0.0"
 "AbilityCooldown"				"40 35 30"
-"AbilityManaCost"				"150"
+"AbilityManaCost"				"150 125 100"
 
 "precache"
 {
@@ -36,8 +36,8 @@
 	}
 	"02"
 	{
-		"var_type"			"FIELD_FLOAT"
-		"base_damage"		"800 1100 1400"
+		"var_type"			"FIELD_INTEGER"
+		"base_damage"		"1000 1500 2000"
 	}
 
 	"03"

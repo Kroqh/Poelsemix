@@ -3,7 +3,7 @@
   		"BaseClass"                 "item_datadriven"
   		"AbilityTextureName"        "recipe"
   		"Model"						"models/props_gameplay/recipe.mdl"
-  		"ItemCost"					"600"
+  		"ItemCost"					"1600"
 		"ItemShopTags"				""
 		"ItemRecipe"				"1"
 		"ItemResult"				"item_flaeskesteg_sovs_kartofler"
