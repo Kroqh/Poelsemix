@@ -1,0 +1,35 @@
+
+//Lingering dragons breath
+"special_bonus_herobrine_6"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"herobrine_elderdrake"
+	}	
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration" "1.5"
+		}
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"tick_interval" "0.25"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"radius" "100"
+		}
+	}	
+	
+}

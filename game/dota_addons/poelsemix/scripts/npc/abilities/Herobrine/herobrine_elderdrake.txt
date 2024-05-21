@@ -15,6 +15,13 @@
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		
 
+
+	"precache"
+	{
+		"particle"			"particles/econ/items/herobrine/dragon_breath.vpcf"
+
+
+	}
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -24,12 +31,13 @@
 			"01"
 			{
 				"var_type" "FIELD_INTEGER"
-				"lifetime" "20 21 22 23"
+				"lifetime" "14 15 16 17"
 			}
 			"02"
 			{
 				"var_type" "FIELD_FLOAT"
 				"dmg_int_scaling" "2 2.5 3 3.5"
+				"LinkedSpecialBonus" "special_bonus_herobrine_3"
 			}
 			"03"
 			{

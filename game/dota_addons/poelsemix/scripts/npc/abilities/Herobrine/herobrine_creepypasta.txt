@@ -18,6 +18,7 @@
 	}
 
 	"HasScepterUpgrade"			"1"
+	
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -40,6 +41,7 @@
 		{
 			"var_type"				"FIELD_INTEGER"
 			"blink_range"			"780 860 920 1000"
+			"LinkedSpecialBonus" "special_bonus_herobrine_8"
 		}
 		"02"
 		{

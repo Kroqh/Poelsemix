@@ -80,7 +80,11 @@ function modifier_herobrine_diamonds_diamond:OnAttackLanded( params )
 	if not IsServer() then return end
 	if params.target ~= self:GetParent() then return end 
 	ParticleManager:CreateParticle("particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf", PATTACH_ABSORIGIN, self:GetCaster())
-    self:GetCaster():ModifyGold(self:GetAbility():GetSpecialValueFor("bonus_gold"), false, 0)
+
+	local bonus_gold = self:GetAbility():GetSpecialValueFor("bonus_gold")
+
+	if self:GetCaster():FindAbilityByName("special_bonus_herobrine_2"):GetLevel() > 0 then bonus_gold = bonus_gold + self:GetCaster():FindAbilityByName("special_bonus_herobrine_2"):GetSpecialValueFor("value") end
+    self:GetCaster():ModifyGold(bonus_gold, false, 0)
 	params.target:EmitSound("diamondcling")
 end
 
@@ -96,7 +100,9 @@ end
 
 function modifier_herobrine_diamonds_diamond:GetModifierIncomingDamage_Percentage( params )
     if params.target == self:GetParent() then  
-       return -self:GetAbility():GetSpecialValueFor("damage_resist")
+		local resist = self:GetAbility():GetSpecialValueFor("damage_resist")
+		if self:GetCaster():FindAbilityByName("special_bonus_herobrine_7"):GetLevel() > 0 then resist = resist + self:GetCaster():FindAbilityByName("special_bonus_herobrine_7"):GetSpecialValueFor("value") end
+       return -resist
     end
     return
 end

@@ -6,6 +6,19 @@ function herobrine_grief:GetIntrinsicModifierName()
 	return "modifier_herobrine_grief_passive"
 end
 
+
+function herobrine_grief:PlantTNT(enemy, planted_directly)
+
+    local scaling = self:GetSpecialValueFor("explosion_int_damage_scaling")
+    if self:GetCaster():FindAbilityByName("special_bonus_herobrine_4"):GetLevel() > 0 then scaling = scaling + self:GetCaster():FindAbilityByName("special_bonus_herobrine_4"):GetSpecialValueFor("value") end
+    local dmg = self:GetSpecialValueFor("explosion_damage") + (scaling * self:GetCaster():GetIntellect())
+    if (enemy:HasModifier("modifier_herobrine_grief_bomb")) then
+        enemy:FindModifierByName("modifier_herobrine_grief_bomb"):TriggerExplosion()
+    else
+        enemy:AddNewModifier(self:GetCaster(), self, "modifier_herobrine_grief_bomb", {dmg = dmg, planted_directly = planted_directly} )
+    end
+end
+
 modifier_herobrine_grief_passive = modifier_herobrine_grief_passive  or class({})
 
 
@@ -33,16 +46,7 @@ end
 function modifier_herobrine_grief_passive:OnAttackLanded( params )
 	if not IsServer() then return end
 	if (params.attacker ~= self:GetParent()) then return end 
-    local dmg = self:GetAbility():GetSpecialValueFor("explosion_damage") + (self:GetAbility():GetSpecialValueFor("explosion_int_damage_scaling") * self:GetParent():GetIntellect())
-    if (params.target:HasModifier("modifier_herobrine_grief_bomb")) then
-        params.target:FindModifierByName("modifier_herobrine_grief_bomb"):TriggerExplosion()
-    else
-        params.target:AddNewModifier(self:GetParent(), self:GetAbility(), "modifier_herobrine_grief_bomb", {dmg = dmg} )
-    end
-
-    
-    
-	
+    self:GetAbility():PlantTNT(params.target, true)
 end
 
 
@@ -56,6 +60,10 @@ function modifier_herobrine_grief_bomb:IsPurgable() return true end
 
 function modifier_herobrine_grief_bomb:OnCreated(keys)
     if not IsServer() then return end
+    self.chain = false 
+    if keys.planted_directly == 1 and self:GetCaster():FindAbilityByName("special_bonus_herobrine_5"):GetLevel() > 0 then
+        self.chain = true
+    end
     self:StartIntervalThink(self:GetAbility():GetSpecialValueFor("explosion_delay"))
     self.dmg = keys.dmg
     self:GetParent():EmitSound("herobrine_tnt_click")
@@ -75,6 +83,7 @@ function modifier_herobrine_grief_bomb:TriggerExplosion()
     local caster_loc = caster:GetAbsOrigin()
     local parent = self:GetParent()
 	local explosion_radius = ability:GetSpecialValueFor("explosion_size")
+    
 
     self:GetParent():StopSound("herobrine_tnt_click")
  
@@ -85,8 +94,13 @@ function modifier_herobrine_grief_bomb:TriggerExplosion()
     ability:GetAbilityTargetType(), ability:GetAbilityTargetFlags(), FIND_ANY_ORDER, false)
     parent:EmitSound("Hero_Techies.Suicide")
          
+
+    
     for _, enemy in pairs(units) do
         ApplyDamage({victim = enemy, attacker = caster, damage_type = ability:GetAbilityDamageType(), damage = self.dmg, ability = ability})
+        if self.chain == true and enemy ~= parent then
+            self:GetAbility():PlantTNT(enemy, false)
+        end
     end
 
     parent:StopSound("herobrine_tnt_click")

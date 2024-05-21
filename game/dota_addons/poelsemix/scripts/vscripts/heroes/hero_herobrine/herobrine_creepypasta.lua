@@ -50,8 +50,14 @@ function herobrine_creepypasta:OnSpellStart()
 
 end
 
+function herobrine_creepypasta:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_herobrine_1"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_herobrine_1"):GetSpecialValueFor("value") end
+    return cd
+end
 function herobrine_creepypasta:GetCastRange()
 	local range = self:GetSpecialValueFor("blink_range")
+	if self:GetCaster():FindAbilityByName("special_bonus_herobrine_8"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_herobrine_8"):GetSpecialValueFor("value") end
 	return range
 end
 function herobrine_creepypasta:GetAOERadius()
