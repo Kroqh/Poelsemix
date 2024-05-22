@@ -51,7 +51,7 @@
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
-			"heaL_range" "500"
+			"heaL_range" "900"
 		}
 		"06"
 		{

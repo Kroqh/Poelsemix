@@ -14,9 +14,8 @@ function herobrine_grief:PlantTNT(enemy, planted_directly)
     local dmg = self:GetSpecialValueFor("explosion_damage") + (scaling * self:GetCaster():GetIntellect())
     if (enemy:HasModifier("modifier_herobrine_grief_bomb")) then
         enemy:FindModifierByName("modifier_herobrine_grief_bomb"):TriggerExplosion()
-    else
-        enemy:AddNewModifier(self:GetCaster(), self, "modifier_herobrine_grief_bomb", {dmg = dmg, planted_directly = planted_directly} )
     end
+    enemy:AddNewModifier(self:GetCaster(), self, "modifier_herobrine_grief_bomb", {dmg = dmg, planted_directly = planted_directly} )
 end
 
 modifier_herobrine_grief_passive = modifier_herobrine_grief_passive  or class({})

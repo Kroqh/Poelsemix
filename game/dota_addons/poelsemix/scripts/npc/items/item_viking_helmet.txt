@@ -28,7 +28,7 @@
 		"03"
 		{
 			"var_type" "FIELD_FLOAT"
-			"as_pct_per_missing_hp" "0.4"
+			"as_pct_per_missing_hp" "0.5"
 		}
 
 	}

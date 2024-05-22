@@ -37,6 +37,11 @@
 			"var_type"          "FIELD_INTEGER"
             		"damage"          "400 550 700 950" 
 		  }
+		   "05"
+		  {
+			"var_type"          "FIELD_INTEGER"
+            		"speed_percent"          "16 19 22 25" 
+		  }
 		 
         }
 

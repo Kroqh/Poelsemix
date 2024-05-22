@@ -18,7 +18,7 @@
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 110 120 130"
+	"AbilityManaCost"				"100 95 90 85"
 	
 	"AbilitySpecial"
 	{
@@ -36,7 +36,7 @@
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"stacks"	"5"
+			"stacks"	"6"
 			"LinkedSpecialBonus" "special_bonus_cid_2"
 		}
 		"04"

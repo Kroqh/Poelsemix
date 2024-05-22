@@ -161,6 +161,7 @@ function modifier_mewtwo_psychic_kb:HorizontalMotion(me, dt)
 		end
 	end
 end
+
 function modifier_mewtwo_psychic_kb:GetEffectAttachType()
     return PATTACH_CENTER_FOLLOW
 end

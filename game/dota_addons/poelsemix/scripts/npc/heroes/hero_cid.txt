@@ -30,6 +30,8 @@
 
 	"ArmorPhysical"		"3"
 	"StatusHealthRegen"		"5"
-	"MovementSpeed"		"285"
+	"MovementSpeed"		"290"
+
+	"StatusHealth"                "150"
 
 }

@@ -17,6 +17,7 @@ function ha_rune:OnAbilityPhaseStart()
     if caster:HasTalent("special_bonus_harald_6") then duration = duration + caster:FindAbilityByName("special_bonus_harald_6"):GetSpecialValueFor("value") end
 
     self:StartCooldown(self:GetCooldown(self:GetLevel())) --avoid fuckery with castpoints not trigger cd if stunned or something while placing
+    self:PayManaCost()
 
     Timers:CreateTimer({
         endTime = 0.3,

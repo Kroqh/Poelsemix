@@ -37,7 +37,7 @@
 		"AttributeStrengthGain"			"1.5"	
 		"AttributeBaseAgility"		"23"
 		"AttributeAgilityGain"		"2.5"												
-		"AttributeBaseIntelligence"	"2.5"
+		"AttributeBaseIntelligence"	"25"
 		"AttributeIntelligenceGain"	"3.7"
 
 		"MovementSpeed"               "270"

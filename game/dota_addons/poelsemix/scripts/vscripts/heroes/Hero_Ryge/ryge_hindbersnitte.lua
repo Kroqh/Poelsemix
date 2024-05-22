@@ -21,7 +21,7 @@ end
 
 function modifier_hindbersnitte:DeclareFunctions()
 	local funcs = {
-		MODIFIER_PROPERTY_STATS_AGILITY_BONUS, MODIFIER_EVENT_ON_ATTACK_START
+		MODIFIER_PROPERTY_STATS_AGILITY_BONUS, MODIFIER_EVENT_ON_ATTACK_START, MODIFIER_PROPERTY_ATTACK_RANGE_BONUS
 	}
 
 	return funcs
@@ -51,5 +51,9 @@ function modifier_hindbersnitte:OnAttackStart(keys)
     
 end
 function modifier_hindbersnitte:GetModifierBonusStats_Agility()
-	return self:GetStackCount()
+	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("agi_ratio")
+end
+
+function modifier_hindbersnitte:GetModifierAttackRangeBonus()
+	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("range_ratio")
 end

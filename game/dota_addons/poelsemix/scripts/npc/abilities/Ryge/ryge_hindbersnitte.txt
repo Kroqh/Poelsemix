@@ -20,10 +20,20 @@
 	    }
 		"02"
 		{
-			"var_type"          "FIELD_INTEGER"
-	        	"chance"             "8 12 16 20"
+			"var_type"          "FIELD_FLOAT"
+	        	"chance"             "12.5 15 17.5 20"
 			"LinkedSpecialBonus" "special_bonus_ryge_5"
 
+		}
+		"03"
+		{
+			"var_type"          "FIELD_FLOAT"
+	        "range_ratio"             "1"
+		}
+		"03"
+		{
+			"var_type"          "FIELD_FLOAT"
+	        "agi_ratio"             "1"
 		}
 
 	}

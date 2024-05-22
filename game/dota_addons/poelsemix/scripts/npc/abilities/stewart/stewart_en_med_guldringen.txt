@@ -28,7 +28,7 @@
 		"02"
 		{
 			"var_type" "FIELD_FLOAT"
-			"str_to_damage" "3 3.25 3.5 3.75"
+			"str_to_damage" "2.5 2.75 3 3.25"
 			"LinkedSpecialBonus" "special_bonus_stewart_5"
 		}
 	}

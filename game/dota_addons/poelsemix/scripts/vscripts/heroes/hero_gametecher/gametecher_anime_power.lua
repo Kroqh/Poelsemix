@@ -170,6 +170,7 @@ function modifier_gametecher_anime_power:CheckState()
 	local state = {
         [MODIFIER_STATE_STUNNED] = true,
         [MODIFIER_STATE_FLYING] = true,
+        [MODIFIER_STATE_CANNOT_BE_MOTION_CONTROLLED] = true
     }
 	return state
 end

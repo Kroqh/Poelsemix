@@ -33,7 +33,7 @@
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage" "700 900 1100"
+			"damage" "1400 2100 2800"
 			"LinkedSpecialBonus" "special_bonus_nissan_4"
 		}
 		"03"

@@ -33,6 +33,18 @@ function modifier_kaj_rap:OnCreated()
         if self:GetCaster():FindAbilityByName("special_bonus_kaj_2"):GetLevel() > 0 then self.duration = self.duration + self:GetCaster():FindAbilityByName("special_bonus_kaj_2"):GetSpecialValueFor("value") end
 
 end
+
+function modifier_kaj_rap:DeclareFunctions()
+	local decFuncs = {
+        MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE
+	}
+	return decFuncs
+end
+
+function modifier_kaj_rap:GetModifierMoveSpeedBonus_Percentage()
+    return self:GetAbility():GetSpecialValueFor("speed_percent")
+end
+
 function modifier_kaj_rap:OnRemoved(death)
 	if not IsServer() then return end
 	if death then return end
