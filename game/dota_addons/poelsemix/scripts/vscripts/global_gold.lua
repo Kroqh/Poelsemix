@@ -8,7 +8,7 @@ function GiveGoldBig(keys)
 	local units = HeroList:GetAllHeroes()
 	for i,unit in ipairs(units) do
 		if unit:IsRealHero() then 
-			unit:ModifyGold(6, true, 0)
+			unit:ModifyGold(5, true, 0)
 		end
 	end
 
@@ -21,7 +21,7 @@ function GiveGoldSmall(keys)
 	local units = FindUnitsInRadius(caster:GetTeamNumber(), target_location, nil, 1000, DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS, 0, false)
 	for i,unit in ipairs(units) do
 		if unit:IsRealHero() then
-			unit:ModifyGold(12, true, 0)
+			unit:ModifyGold(5, true, 0)
 		end
 	end
 end
@@ -33,7 +33,7 @@ function GiveGoldSmall2(keys)
 	local units = FindUnitsInRadius(caster:GetTeamNumber(), target_location, nil, 1400, DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS, 0, false)
 	for i,unit in ipairs(units) do
 		if unit:IsRealHero() then
-			unit:ModifyGold(6, true, 0)
+			unit:ModifyGold(5, true, 0)
 		end
 	end
 end

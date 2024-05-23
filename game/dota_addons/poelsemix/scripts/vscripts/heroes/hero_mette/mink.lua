@@ -25,9 +25,9 @@ function modifier_mink_passive:OnIntervalThink()
         local parent = self:GetParent()
 
         if (parent:HasTalent("special_bonus_mette_3")) then
-            self:StartIntervalThink(CalcInterval(self:GetParent():GetIntellect(), (ability:GetSpecialValueFor("base_interval") + parent:FindAbilityByName("special_bonus_mette_3"):GetSpecialValueFor("value"))))
+            self:StartIntervalThink(CalcInterval(self:GetParent():GetIntellect(true), (ability:GetSpecialValueFor("base_interval") + parent:FindAbilityByName("special_bonus_mette_3"):GetSpecialValueFor("value"))))
         else
-            self:StartIntervalThink(CalcInterval(self:GetParent():GetIntellect(), ability:GetSpecialValueFor("base_interval")))
+            self:StartIntervalThink(CalcInterval(self:GetParent():GetIntellect(true), ability:GetSpecialValueFor("base_interval")))
         end
         if parent:IsAlive() == false then return end --no spawn on death
         local roll = math.random(100)

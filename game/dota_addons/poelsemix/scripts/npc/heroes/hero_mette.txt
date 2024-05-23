@@ -8,6 +8,8 @@
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "press_meeting"
+	"Ability7" "generic_hidden"
+
 	"ProjectileModel"		"particles/heroes/mette/rose_projectile.vpcf"
 
 
@@ -21,7 +23,10 @@
 	"AttributeIntelligenceGain"	"2.5"
 
 	"MovementSpeed"               "270"
-	"ArmorPhysical"		"-1" 
+	"ArmorPhysical"		"-1"
+	
+	"AttackDamageMin"			"38"
+	"AttackDamageMax"			"38"	 
 
 	"AttackAcquisitionRange"	"600"
 	"AttackRange"			"450"
@@ -36,5 +41,8 @@
 	"Ability15"		"special_bonus_mette_7"
 	
 	"Ability16"		"special_bonus_mette_3"
-	"Ability17"		"special_bonus_mette_8"							
+	"Ability17"		"special_bonus_mette_8"	
+
+
+	"Facets" {}						
 }

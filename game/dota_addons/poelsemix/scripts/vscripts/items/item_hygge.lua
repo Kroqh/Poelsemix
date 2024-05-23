@@ -14,7 +14,7 @@ function item_hygge:OnProjectileHit(target)
 	local caster = self:GetCaster()
 	local int_scale = self:GetSpecialValueFor("int_healing_ratio") / 100
 		
-    local heal = caster:GetIntellect() * int_scale
+    local heal = caster:GetIntellect(true) * int_scale
 	target:Heal(heal,self)
 end
 

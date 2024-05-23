@@ -20,7 +20,7 @@ function gametecher_finger:OnSpellStart()
 	local damage = ability:GetSpecialValueFor("damage")
     local scaling = ability:GetSpecialValueFor("int_scaling_damage")
 	if self:GetCaster():FindAbilityByName("special_bonus_gametecher_5"):GetLevel() > 0 then scaling = scaling + self:GetCaster():FindAbilityByName("special_bonus_gametecher_5"):GetSpecialValueFor("value") end 
-    damage = damage + (caster:GetIntellect() * scaling)
+    damage = damage + (caster:GetIntellect(true) * scaling)
 	-- Cast sound
 	EmitSoundOn("gametecher_kapow", caster)    
 	

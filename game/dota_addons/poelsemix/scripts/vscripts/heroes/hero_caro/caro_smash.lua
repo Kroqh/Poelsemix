@@ -32,10 +32,9 @@ end
 
 
 function modifier_caro_smash:GetModifierAttackRangeBonus()
-    if not IsServer() then return end
     local caster = self:GetCaster()
     local range = self:GetAbility():GetSpecialValueFor("bonus_range")
-    if caster:HasTalent("special_bonus_caro_1") then range = range + caster:FindAbilityByName("special_bonus_caro_1"):GetSpecialValueFor("value") end
+    if caster:FindAbilityByName("special_bonus_caro_1"):GetLevel() > 0 then range = range + caster:FindAbilityByName("special_bonus_caro_1"):GetSpecialValueFor("value") end
 	return range
 end
 

@@ -14,7 +14,7 @@ function slapper_deflect:OnProjectileHit(target)
 	local caster = self:GetCaster()
 	local int_scaling = self:GetSpecialValueFor("int_damage")
 	local base_damage = self:GetSpecialValueFor("damage")
-	local damage = base_damage + (int_scaling * caster:GetIntellect())
+	local damage = base_damage + (int_scaling * caster:GetIntellect(true))
 	ApplyDamage({victim = target,
 	attacker = caster,
 	damage_type = self:GetAbilityDamageType(),

@@ -15,6 +15,9 @@
 	"AttributeBaseIntelligence"	"32"
 	"AttributeIntelligenceGain"	"3.6"
 
+	"AttackDamageMin"			"42"
+	"AttackDamageMax"			"42"	
+
 	"MovementSpeed"               "275"
 	"ArmorPhysical"		"1" 
 	
@@ -33,5 +36,8 @@
 	"Ability15"		"special_bonus_prophecy_6"
 	"Ability16"		"special_bonus_prophecy_7"
 	"Ability17"		"special_bonus_prophecy_8"
+
+
+	"Facets" {}
 	
 }

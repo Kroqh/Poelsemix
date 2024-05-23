@@ -45,7 +45,7 @@ function modifier_lars_skat:OnCreated()
 		local ability = self:GetAbility()
 		local caster = self:GetCaster()
 		local tick = ability:GetSpecialValueFor("tick_rate")
-		self:StartIntervalThink(tick-0.1)
+		self:StartIntervalThink(FrameTime())
 end
 
 
@@ -120,5 +120,6 @@ function modifier_lars_skat:OnIntervalThink()
 		end
         if enemies[1] ~= nil then caster:EmitSound("LarsSkat2") end
 		self:StartIntervalThink(ability:GetSpecialValueFor("tick_rate"))
+		print("tick")
     
 end

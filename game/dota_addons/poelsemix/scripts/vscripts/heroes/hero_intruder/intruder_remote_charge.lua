@@ -5,6 +5,10 @@ LinkLuaModifier("modifier_remote_charge_explosion", "heroes/hero_intruder/intrud
 
 intruder_remote_charge = intruder_remote_charge or class({})
 
+function intruder_remote_charge:GetAOERadius()
+	return self:GetSpecialValueFor("explosion_radius")
+end
+
 
 
 function intruder_remote_charge:OnSpellStart()

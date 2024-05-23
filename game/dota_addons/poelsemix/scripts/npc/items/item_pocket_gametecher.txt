@@ -3,7 +3,7 @@
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"pocket_gametecher"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"11600"
+  	"ItemCost"					"10300"
   	"ID"						"2013"
 	
 	// Stats		

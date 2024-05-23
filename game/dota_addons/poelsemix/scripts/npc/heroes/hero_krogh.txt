@@ -9,9 +9,11 @@
 	"Ability1" "ha_gay"				
 	"Ability2" "social_presence"
 	"Ability3" "sick_dodge"
+	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "awaken"
-
+	"Ability7" "generic_hidden"
+	"Ability8" "generic_hidden"
 	
 	
 	
@@ -39,7 +41,13 @@
 	"AttributeIntelligenceGain"	"0.6"
 
 	"MovementSpeed"               "280"
-	"ArmorPhysical"		"4" 
+	"ArmorPhysical"		"4"
+
+	"AttackDamageMin"			"53"
+	"AttackDamageMax"			"53"
+
+
+	"Facets" {}
 
 
 }

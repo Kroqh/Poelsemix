@@ -2,6 +2,16 @@ LinkLuaModifier("modifier_drift_dummy", "heroes/hero_nissan/drift", LUA_MODIFIER
 LinkLuaModifier("modifier_drift_burn", "heroes/hero_nissan/drift", LUA_MODIFIER_MOTION_NONE)
 drift = drift  or class({})
 
+function drift:GetCastRange()
+	local value = self:GetSpecialValueFor("dash_length")
+	return value
+  end
+function drift:OnSpellStart()
+	if IsServer() ~= true then return end
+	self.do_8 = false
+	self:DoDrift(self:GetCursorPosition())
+
+end
 
 modifier_drift_dummy = modifier_drift_dummy or class({})
 
@@ -93,11 +103,13 @@ function drift:DoDrift(target_pos)
 			ParticleManager:ReleaseParticleIndex(pfx)
 			caster:SetAbsOrigin(caster_pos)
 			caster:SetAngles(0, caster_angles.y, caster_angles.z)
-			if caster:HasScepter() and not self.done_8 then
+			if caster:HasScepter() and not self.do_8 then
 				self:DoDrift(caster_pos - (target_pos-caster_pos))
-				self.done_8 = true
+				self.do_8 = true
 			end
-	    return nil 
+
+			FindClearSpaceForUnit(caster, caster_pos, true)
+	    	return nil 
 		end
 		-- ellipse calculations
 		local elapsed_time = GameRules:GetGameTime() - start_time
@@ -133,13 +145,3 @@ function drift:DoDrift(target_pos)
 	end, 0)
 end
 
-function drift:GetCastRange()
-	local value = self:GetSpecialValueFor("dash_length")
-	return value
-  end
-function drift:OnSpellStart()
-	if IsServer() ~= true then return end
-	self.done_8 = false
-	self:DoDrift(self:GetCursorPosition())
-
-end

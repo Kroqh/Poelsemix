@@ -7,9 +7,12 @@
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "ha_army"
+	"Ability7" "generic_hidden"
+
+
 	"DisableWearables" "1"
-		"ModelScale" "1.25"
-		"model" "models/harald/harald.vmdl"
+	"ModelScale" "1.25"
+	"model" "models/harald/harald.vmdl"
 	
 	
 	"Ability10"		"special_bonus_harald_5"
@@ -32,6 +35,9 @@
 	"AttributeBaseIntelligence"	"18"
 	"AttributeIntelligenceGain"	"1.7"
 
+	"AttackDamageMin"			"48"
+	"AttackDamageMax"			"48"
+
 	"MovementSpeed"               "275"
 	"ArmorPhysical"		"6" 
 
@@ -46,4 +52,6 @@
 			"model" 	"models/items/dragon_knight/aurora_warrior_set_weapon/aurora_warrior_set_weapon.vmdl"
 
 		}
+
+		"Facets" {}
 }

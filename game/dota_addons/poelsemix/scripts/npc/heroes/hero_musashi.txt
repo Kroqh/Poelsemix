@@ -20,6 +20,9 @@
 	"AttributeBaseIntelligence"	"14"
 	"AttributeIntelligenceGain"	"1.6"
 
+	"AttackDamageMin"			"57"
+	"AttackDamageMax"			"57"	
+
 	"MovementSpeed"               "285"
 	"ArmorPhysical"		"3" 
 	
@@ -33,5 +36,7 @@
 	"Ability15"		"special_bonus_musashi_5"
 	
 	"Ability16"		"special_bonus_musashi_7"
-	"Ability17"		"special_bonus_musashi_8"							
+	"Ability17"		"special_bonus_musashi_8"
+
+	"Facets" {}							
 }

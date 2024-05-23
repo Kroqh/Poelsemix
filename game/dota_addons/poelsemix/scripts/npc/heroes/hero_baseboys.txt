@@ -15,6 +15,7 @@
 	"Ability5" "generic_hidden"
 	"Ability6" "baseboys_concert"
 	"Ability7" "generic_hidden"
+	"Ability8" "generic_hidden"
 
 	"Ability10"  "special_bonus_baseboys_1"
 	"Ability11"  "special_bonus_baseboys_2"
@@ -37,7 +38,12 @@
 	"AttributeAgilityGain"		"2.4"
 	"AttributeBaseIntelligence"	"16"
 	"AttributeIntelligenceGain"	"1.7"
+
+	"AttackDamageMin"			"40"
+	"AttackDamageMax"			"40"
 	
-	"StatusHealth"                "330"
+	"StatusHealth"                "270"
+
+	"Facets" {}
 	
 }

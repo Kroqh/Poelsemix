@@ -93,7 +93,7 @@ function modifier_slapper_rammusteinu:OnAttackLanded(params)
     if not IsServer() then return end
     caster = self:GetParent()
 
-    local damage = self:GetAbility():GetSpecialValueFor("int_magic_damage_ratio") * caster:GetIntellect()
+    local damage = self:GetAbility():GetSpecialValueFor("int_magic_damage_ratio") * caster:GetIntellect(true)
     local heal = self:GetAbility():GetSpecialValueFor("str_healing_ratio") * self:GetParent():GetStrength()
 
 		ApplyDamage({victim = params.target,

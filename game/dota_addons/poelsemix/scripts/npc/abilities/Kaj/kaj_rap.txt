@@ -24,7 +24,7 @@
           "02"
           {
               "var_type"          "FIELD_FLOAT"
-              "knockup_duration"          "1.5 1.75 2 2.25"
+              "knockup_duration"          "1.25 1.5 1.75 2"
 		"LinkedSpecialBonus" "special_bonus_kaj_2"
           }
 	 "03"

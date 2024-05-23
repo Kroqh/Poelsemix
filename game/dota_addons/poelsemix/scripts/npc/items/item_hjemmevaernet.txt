@@ -3,7 +3,7 @@
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"hjemmevaernet"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"4400"
+  	"ItemCost"					"3600"
   	"ID"						"2007"
 	
 	// Stats		
@@ -22,7 +22,7 @@
 		"01"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"as" "110"
+			"as" "70"
 		}
 		"02"
 		{

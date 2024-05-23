@@ -21,7 +21,7 @@
 		"02"
 		{
 			"var_type"          "FIELD_FLOAT"
-	        	"chance"             "12.5 15 17.5 20"
+	        	"chance"             "17.5 20 22.5 25"
 			"LinkedSpecialBonus" "special_bonus_ryge_5"
 
 		}

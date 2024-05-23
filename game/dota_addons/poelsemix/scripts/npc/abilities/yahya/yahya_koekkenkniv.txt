@@ -4,15 +4,8 @@
    	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_yahya/yahya_koekkenkniv"
   "AbilityBehavior"            "DOTA_ABILITY_BEHAVIOR_TOGGLE"
-  "AbilityUnitTargetTeam"      "DOTA_UNIT_TARGET_TEAM_ENEMY"
-  "AbilityUnitTargetType"      "DOTA_UNIT_TARGET_HERO"
   "AbilityUnitDamageType"      "DAMAGE_TYPE_PHYSICAL"
   "AbilityTextureName"         "koekkenkniv"
-  
-"precache"
-	{
-		"particle"	"particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
-	}
 	
 
   "AbilitySpecial"
@@ -25,30 +18,16 @@
    "02"
     {
       "var_type"      "FIELD_INTEGER"
-      "bonus_damage"      "40 60 800 100"
+      "bonus_damage"      "50 75 100 125"
     }
 	"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"cleave_starting_width"		"100"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"cleave_ending_width"		"120 140 160 180"
-				"LinkedSpecialBonus" "special_bonus_yahya_2"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"cleave_distance"			"220 260 300 340"
-				"LinkedSpecialBonus" "special_bonus_yahya_2"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"cleave_damage_percent"			"50 55 60 65"
-			}
+    {
+      "var_type"      "FIELD_FLOAT"
+      "bonus_max_hp_damage_perc"      "2"
+	  "LinkedSpecialBonus" "special_bonus_yahya_2"
+    }
+
+
   }
 
 

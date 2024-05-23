@@ -7,7 +7,7 @@
   	"AbilityTextureName"        "double_butterfly"
   	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityCooldown"			"20"
-  	"ItemCost"					"11050"
+  	"ItemCost"					"10900"
   	"ID"						"2003"
 	
 	// Stats		

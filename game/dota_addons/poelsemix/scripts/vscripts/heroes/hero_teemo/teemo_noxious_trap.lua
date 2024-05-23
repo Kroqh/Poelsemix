@@ -226,7 +226,7 @@ function modifier_noxious_trap_explosion_damage:OnCreated()
 		local caster = ability:GetCaster()
 		self.speed = CustomNetTables:GetTableValue("player_table", "modifier_noxious_trap_explosion_damage").speed
 		--print(self.speed)
-		local intellect = caster:GetIntellect()
+		local intellect = caster:GetIntellect(true)
 
 		self.int_scaling = ability:GetSpecialValueFor("int_scaling")
 		self.damage = ability:GetSpecialValueFor("damage") + intellect * self.int_scaling

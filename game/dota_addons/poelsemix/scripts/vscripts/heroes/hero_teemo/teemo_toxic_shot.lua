@@ -30,7 +30,7 @@ function modifier_toxic_shot_passive:OnAttackLanded(keys)
 		if keys.attacker == self:GetParent() then
 			local ability = self:GetAbility()
 			local caster = self:GetCaster()
-			local intellect = caster:GetIntellect()
+			local intellect = caster:GetIntellect(true)
 
 			local duration = ability:GetSpecialValueFor("duration")
 			local int_scaling = ability:GetSpecialValueFor("int_scaling_onhit")
@@ -60,7 +60,7 @@ function modifier_toxic_shot_dot:OnCreated()
 	if IsServer() then
 		local ability = self:GetAbility()
 		local caster = self:GetCaster()
-		local intellect = caster:GetIntellect()
+		local intellect = caster:GetIntellect(true)
 
 		local int_scaling_prsec = ability:GetSpecialValueFor("int_scaling_prsec")
         if caster:HasTalent("special_bonus_teemo_6") then int_scaling_prsec = int_scaling_prsec + caster:FindAbilityByName("special_bonus_teemo_6"):GetSpecialValueFor("value") end

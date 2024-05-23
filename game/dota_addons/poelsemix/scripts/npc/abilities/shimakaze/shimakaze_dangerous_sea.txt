@@ -48,12 +48,12 @@
 	    "07"
 	    {
 	    	"var_type" "FIELD_FLOAT"
-	    	"int_scaling"	"0.2"
+	    	"int_scaling"	"0.3"
 	    }
 	    "08"
 	    {
 	    	"var_type" "FIELD_FLOAT"
-	    	"int_scaling_aghs" "0.4"
+	    	"int_scaling_aghs" "0.6"
 	    }
 	    "09"
 	    {

@@ -30,11 +30,10 @@ end
 modifier_move_quick_active = modifier_move_quick_active or class({})
 
 function modifier_move_quick_active:OnCreated()
-    if not IsServer() then return end
 	local ability = self:GetAbility()
     local caster = self:GetCaster()
     local multiplier = ability:GetSpecialValueFor("multiplier")
-    if caster:HasTalent("special_bonus_teemo_8") then multiplier = multiplier + caster:FindAbilityByName("special_bonus_teemo_8"):GetSpecialValueFor("value") end
+    if caster:FindAbilityByName("special_bonus_teemo_8"):GetLevel() then multiplier = multiplier + caster:FindAbilityByName("special_bonus_teemo_8"):GetSpecialValueFor("value") end
 	self.movespeed = ability:GetSpecialValueFor("movement_speed") * multiplier
 end
 
@@ -44,7 +43,6 @@ function modifier_move_quick_active:DeclareFunctions()
 end
 
 function modifier_move_quick_active:GetModifierMoveSpeedBonus_Percentage()
-    if not IsServer() then return end
 	return self.movespeed
 end
 

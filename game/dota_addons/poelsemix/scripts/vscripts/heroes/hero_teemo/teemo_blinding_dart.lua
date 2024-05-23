@@ -38,7 +38,7 @@ function blinding_dart:OnProjectileHit(target)
 	end
 
 	local caster = self:GetCaster()
-	local intellect = caster:GetIntellect()
+	local intellect = caster:GetIntellect(true)
 	local int_scaling = self:GetSpecialValueFor("int_scaling")
 	if caster:HasTalent("special_bonus_teemo_3") then
 		local int_talent = CustomNetTables:GetTableValue("player_table", "blinding_dart").int_scaling_talent

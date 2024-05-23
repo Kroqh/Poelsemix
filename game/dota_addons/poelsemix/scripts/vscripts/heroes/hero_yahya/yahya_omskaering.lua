@@ -2,12 +2,12 @@ LinkLuaModifier("modifier_yahya_omskaering", "heroes/hero_yahya/yahya_omskaering
 yahya_omskaering= yahya_omskaering or class({})
 
 function yahya_omskaering:OnSpellStart()
-    
-    local caster = self:GetCaster()
-    self.duration = self:GetSpecialValueFor("duration")
-    
-	if IsServer() then  
-		EmitSoundOn("min_er_flot", caster)
+    if IsServer() then  
+        local caster = self:GetCaster()
+        self.duration = self:GetSpecialValueFor("duration")
+        if caster:HasModifier("modifier_yahya_omskaering") then caster:RemoveModifierByName("modifier_yahya_omskaering") end
+        self.str = self:GetCaster():GetStrength()
+	    EmitSoundOn("min_er_flot", caster)
         caster:AddNewModifier(caster, self, "modifier_yahya_omskaering", {duration = self.duration})
 	end
 end
@@ -17,8 +17,9 @@ function modifier_yahya_omskaering:IsBuff() return true end
 
 
 function modifier_yahya_omskaering:OnCreated()
-    self.str = self:GetCaster():GetStrength()
-    self.multiplier = self:GetSpecialValueFor("str_to_agi_ratio")
+    self.multiplier = self:GetAbility():GetSpecialValueFor("str_to_agi_ratio")
+    self.keep_str_ratio = self:GetAbility():GetSpecialValueFor("keep_str_ratio")
+    if self:GetCaster():FindAbilityByName("special_bonus_yahya_8"):GetLevel() > 0 then self.keep_str_ratio = self.keep_str_ratio + self:GetCaster():FindAbilityByName("special_bonus_yahya_8"):GetSpecialValueFor("value") end
     if not IsServer() then return end
     self:GetCaster():SetPrimaryAttribute(DOTA_ATTRIBUTE_AGILITY)
 end
@@ -32,12 +33,11 @@ function modifier_yahya_omskaering:DeclareFunctions()
 	return decFuncs
 end
 function modifier_yahya_omskaering:GetModifierBonusStats_Agility()
-    return self.str * self.multiplier
+    return self:GetAbility().str * self.multiplier
 end
 
 function modifier_yahya_omskaering:GetModifierBonusStats_Strength()
-    if self:GetCaster():FindAbilityByName("special_bonus_yahya_8"):GetLevel() > 0 then return (-self.str + (self.str * (self:GetCaster():FindAbilityByName("special_bonus_yahya_8"):GetSpecialValueFor("value") / 100))) end
-    return -self.str
+    return (-self:GetAbility().str + (self:GetAbility().str * self.keep_str_ratio / 100))
 end
 function modifier_yahya_omskaering:GetModifierBaseAttackTimeConstant()
     if self:GetCaster():FindAbilityByName("special_bonus_yahya_4"):GetLevel() > 0 then return self:GetAbility():GetSpecialValueFor("base_attack_time") + self:GetCaster():FindAbilityByName("special_bonus_yahya_4"):GetSpecialValueFor("value") end

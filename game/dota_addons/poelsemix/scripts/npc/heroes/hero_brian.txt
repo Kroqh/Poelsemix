@@ -22,8 +22,8 @@
 
 	"StatusHealth"                "500"
 
-	"AttackDamageMin"			"52"
-	"AttackDamageMax"			"54"
+	"AttackDamageMin"			"53"
+	"AttackDamageMax"			"53"
 
 	"MovementSpeed"               "275"
 	"ArmorPhysical"		"8" 
@@ -40,6 +40,8 @@
 	
 	"Ability16"		"special_bonus_brian_2"
 	"Ability17"		"special_bonus_brian_3"
+
+	"Facets" {}
 	
 									
 }

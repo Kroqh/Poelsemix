@@ -43,7 +43,7 @@ function modifier_gametecher_matematik_a_buff:OnCreated()
         if self:GetCaster():FindAbilityByName("special_bonus_gametecher_4"):GetLevel() > 0 then int_per_stack = int_per_stack + self:GetCaster():FindAbilityByName("special_bonus_gametecher_4"):GetSpecialValueFor("value") end 
         int_percent = int_percent + (mod:GetStackCount() * int_per_stack)
     end
-    self.int = (int_percent/100) * caster:GetIntellect()
+    self.int = (int_percent/100) * caster:GetIntellect(true)
     
 end
 

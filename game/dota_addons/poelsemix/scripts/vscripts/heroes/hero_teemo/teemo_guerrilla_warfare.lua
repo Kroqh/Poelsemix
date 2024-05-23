@@ -23,7 +23,7 @@ function modifier_guerrilla_warfare_passive:OnCreated()
 end
 
 function modifier_guerrilla_warfare_passive:DeclareFunctions()
-	local decFuncs = {MODIFIER_EVENT_ON_ABILITY_EXECUTED, MODIFIER_EVENT_ON_ATTACK_START}
+	local decFuncs = {MODIFIER_EVENT_ON_ABILITY_EXECUTED, MODIFIER_EVENT_ON_ATTACK_START, MODIFIER_EVENT_ON_TAKEDAMAGE}
 	return decFuncs
 end
 
@@ -32,7 +32,16 @@ function modifier_guerrilla_warfare_passive:OnAttackStart(keys)
 		local parent = self:GetParent()
 
 		if keys.attacker == parent then
-			--print("attack")
+			self.count = 0
+		end
+	end
+end
+
+function modifier_guerrilla_warfare_passive:OnTakeDamage(keys)
+	if IsServer() then
+		local parent = self:GetParent()
+
+		if keys.unit == parent then
 			self.count = 0
 		end
 	end
@@ -43,7 +52,6 @@ function modifier_guerrilla_warfare_passive:OnAbilityExecuted(keys)
 		local parent = self:GetParent()
 
 		if keys.unit == parent then
-			--print("spell")
 			self.count = 0
 		end
 	end

@@ -61,7 +61,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_resist_reduction"		"-20 -25 -30 -35"
+				"magic_resist_reduction"		"-30 -35 -40 -45"
 				"LinkedSpecialBonus" "special_bonus_mewtwo_3"
 			}
 			

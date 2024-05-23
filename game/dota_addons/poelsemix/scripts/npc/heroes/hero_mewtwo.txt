@@ -22,8 +22,11 @@
 	"Ability2" "mewtwo_shadow_ball"		
 	"Ability3" "mewtwo_barrier"
 	"Ability4" "mewtwo_teleport"
-	//"Ability5" "generic_hidden"
+	"Ability5" "generic_hidden"
 	"Ability6" "mewtwo_hyper_beam"
+
+	"AttackDamageMin"			"36"
+	"AttackDamageMax"			"36"	
 
 
 	"Ability10"		"special_bonus_mewtwo_1"
@@ -37,5 +40,8 @@
 	
 	"Ability16"		"special_bonus_mewtwo_7"
 	"Ability17"		"special_bonus_mewtwo_8"
+
+
+	"Facets" {}
 
 }

@@ -47,9 +47,13 @@ end
 
 function modifier_kaj_rap:OnRemoved(death)
 	if not IsServer() then return end
-	if death then return end
-    local ability = self:GetAbility()
     local caster = self:GetCaster()
+	if death then
+        caster:StopSound("KajRap1")
+        return 
+    end
+    local ability = self:GetAbility()
+    
     local particle = ParticleManager:CreateParticle("particles/units/heroes/hero_kajr/rap.vpcf", PATTACH_POINT, self:GetCaster())
     caster:EmitSound("KajRap2")
 	ParticleManager:SetParticleControl(particle, 0, caster:GetAbsOrigin())

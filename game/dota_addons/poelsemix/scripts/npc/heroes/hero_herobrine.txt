@@ -7,7 +7,7 @@
 	"Model" "models/herobrine/herobrine.vmdl"
 
 	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
-	"AttackRange"			"125"
+	"AttackRange"			"175"
 	"AttackDamageMin"			"0"
 	"AttackDamageMax"			"0"
 	"AttackRate"                 "4" 
@@ -20,7 +20,9 @@
 	"AttributeIntelligenceGain"	"3"
 
 	"MovementSpeed"               "0"
-	"ArmorPhysical"		"1" 
+	"ArmorPhysical"		"1"
+
+	"BaseAttackSpeed"      "110" 
 
 
 	"Ability1" "herobrine_creepypasta"
@@ -39,6 +41,6 @@
 	"Ability16"		"special_bonus_herobrine_7"
 	"Ability17"		"special_bonus_herobrine_8"
 
-
+	"Facets" {}
 	
 }

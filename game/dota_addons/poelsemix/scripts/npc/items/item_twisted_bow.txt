@@ -35,7 +35,7 @@
 		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"bonus_range"						"150"
+			"bonus_range"						"125"
 		}
 		"03"
 		{

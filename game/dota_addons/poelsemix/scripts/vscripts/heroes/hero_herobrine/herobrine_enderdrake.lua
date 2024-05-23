@@ -7,7 +7,7 @@ function herobrine_enderdrake:OnSpellStart()
     local target_point = self:GetCursorPosition()
     local caster = self:GetCaster()
     local ability = self
-    local int = caster:GetIntellect()
+    local int = caster:GetIntellect(true)
     local dmg_scaling = ability:GetSpecialValueFor("dmg_int_scaling")
     if self:GetCaster():FindAbilityByName("special_bonus_herobrine_3"):GetLevel() > 0 then dmg_scaling = dmg_scaling + self:GetCaster():FindAbilityByName("special_bonus_herobrine_3"):GetSpecialValueFor("value") end
     local hp_scaling = ability:GetSpecialValueFor("hp_int_scaling")

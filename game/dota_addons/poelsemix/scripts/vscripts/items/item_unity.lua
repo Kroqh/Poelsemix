@@ -23,7 +23,7 @@ end
 
 function modifier_item_unity:GetModifierPreAttack_BonusDamage()
     if self:GetAbility() then
-		local int = self:GetParent():GetIntellect()
+		local int = self:GetParent():GetIntellect(true)
 		local str = self:GetParent():GetStrength()
 		local agi = self:GetParent():GetAgility()
 		local damage = self:GetAbility():GetSpecialValueFor("damage")

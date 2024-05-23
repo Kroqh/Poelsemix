@@ -32,10 +32,15 @@
 		"AttributeBaseIntelligence"		"23"									
 		"AttributeIntelligenceGain"		"1.5"									
 		"MovementSpeed"		"300"
-		"ArmorPhysical"		"-3"	
+		"ArmorPhysical"		"-3"
+		"AttackDamageMin"			"29"
+		"AttackDamageMax"			"29"		
 
 		"StatusHealthRegen"		"2.1"
 		"AttackRange"			"90"
+
+
+		"Facets" {}
 
 		
 	}

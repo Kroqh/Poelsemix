@@ -28,7 +28,7 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"str"					"85"
+			"str"					"80"
 		}
 		"02"
 		{
@@ -58,7 +58,7 @@
 		"07"
 		{
 			"var_type" "FIELD_INTEGER"
-			"magic_resist" "18"
+			"magic_resist" "16"
 		}
 		"08"
 		{

@@ -16,19 +16,19 @@
 		"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"hp_str_scaling"		"3 4 5 6"
+				"hp_str_scaling"		"3 3.25 3.5 3.75"
 				"LinkedSpecialBonus" "special_bonus_mette_6"
 			}
 		"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"dmg_agi_scaling"		"0.5 0.75 1 1.25"
+				"dmg_agi_scaling"		"0.5 0.65 0.8 0.95"
 				"LinkedSpecialBonus" "special_bonus_mette_5"
 			}
 		"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"base_interval"		"15"
+				"base_interval"		"14"
 				"LinkedSpecialBonus" "special_bonus_mette_3"
 			}
 		"04"

@@ -3,7 +3,7 @@
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"mensa_iq"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"3750"
+  	"ItemCost"					"3500"
   	"ID"						"2010"
 	
 	// Stats		

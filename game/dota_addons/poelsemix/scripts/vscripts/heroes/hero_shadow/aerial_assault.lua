@@ -143,16 +143,6 @@ end
 
 modifier_mid_aerial = modifier_mid_aerial or class({})
 
-
-
-function modifier_mid_aerial:DeclareFunctions()
-	local funcs	=	{
-		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL,
-		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL,
-		MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE,
-	}
-	return funcs
-end
 --particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_v2_trigger_elec.vpcf
 function modifier_mid_aerial:OnCreated()
     self.partfire = "particles/econ/items/bloodseeker/bloodseeker_ti7/bloodseeker_ti7_ambient_trail.vpcf"
@@ -163,17 +153,6 @@ end
 function modifier_mid_aerial:OnDestroy()
     ParticleManager:DestroyParticle(self.pfx, false)
     ParticleManager:DestroyParticle(self.pfx2, false)
-end
-function modifier_mid_aerial:GetAbsoluteNoDamagePhysical()
-	return 1
-end
-
-function modifier_mid_aerial:GetAbsoluteNoDamageMagical()
-	return 1
-end
-
-function modifier_mid_aerial:GetAbsoluteNoDamagePure()
-	return 1
 end
 
 -- Modifier properties

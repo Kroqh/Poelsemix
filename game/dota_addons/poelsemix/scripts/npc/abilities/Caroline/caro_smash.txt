@@ -27,7 +27,7 @@
 		"03"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"mana_cost"	"90 75 60 45"
+			"mana_cost"	"60 55 50 45"
 			"LinkedSpecialBonus" "special_bonus_caro_5"
 		}
 		"04"

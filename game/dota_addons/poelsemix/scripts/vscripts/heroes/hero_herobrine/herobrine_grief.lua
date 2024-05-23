@@ -11,7 +11,7 @@ function herobrine_grief:PlantTNT(enemy, planted_directly)
 
     local scaling = self:GetSpecialValueFor("explosion_int_damage_scaling")
     if self:GetCaster():FindAbilityByName("special_bonus_herobrine_4"):GetLevel() > 0 then scaling = scaling + self:GetCaster():FindAbilityByName("special_bonus_herobrine_4"):GetSpecialValueFor("value") end
-    local dmg = self:GetSpecialValueFor("explosion_damage") + (scaling * self:GetCaster():GetIntellect())
+    local dmg = self:GetSpecialValueFor("explosion_damage") + (scaling * self:GetCaster():GetIntellect(true))
     if (enemy:HasModifier("modifier_herobrine_grief_bomb")) then
         enemy:FindModifierByName("modifier_herobrine_grief_bomb"):TriggerExplosion()
     end

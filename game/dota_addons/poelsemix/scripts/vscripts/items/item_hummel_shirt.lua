@@ -93,7 +93,7 @@ function modifier_item_hummel_shirt_aura:GetModifierPhysicalArmorBonus()
     end
 end
 function modifier_item_hummel_shirt_aura:GetTexture()
-    return "hummel_shirt"
+    return "hummel_shirt" 
 end
 
 
@@ -107,15 +107,19 @@ function modifier_item_hummel_shirt_active:DeclareFunctions()
 	}
 end
 
-function modifier_item_hummel_shirt_active:OnTakeDamage(event)
+function modifier_item_hummel_shirt_active:OnTakeDamage(keys)
 	if not IsServer() then return end
-    if event.unit ~= self:GetParent() then return end
+    if keys.unit == parent and not keys.attacker:IsBuilding() and keys.attacker:GetTeamNumber() ~= parent:GetTeamNumber() and bit.band(keys.damage_flags, DOTA_DAMAGE_FLAG_HPLOSS) ~= DOTA_DAMAGE_FLAG_HPLOSS and bit.band(keys.damage_flags, DOTA_DAMAGE_FLAG_REFLECTION) ~= DOTA_DAMAGE_FLAG_REFLECTION then
 
-    ApplyDamage({victim = event.attacker,
-    attacker = self:GetCaster(),
-    damage_type = DAMAGE_TYPE_PURE,
-    damage = event.damage * (self:GetAbility():GetSpecialValueFor("damage_reflect_percent")/100),
-    ability = self:GetAbility()})
+        ApplyDamage({victim = keys.attacker,
+        attacker = self:GetCaster(),
+        damage_type = DAMAGE_TYPE_PURE,
+        damage = keys.damage * (self:GetAbility():GetSpecialValueFor("damage_reflect_percent")/100),
+        ability = self:GetAbility(),
+        damage_flags = DOTA_DAMAGE_FLAG_REFLECTION + DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL + DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION
+        })
+    end
+    
 end
 
 function modifier_item_hummel_shirt_active:GetEffectName()

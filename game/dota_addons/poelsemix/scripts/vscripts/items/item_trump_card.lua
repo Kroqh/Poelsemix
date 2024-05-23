@@ -68,7 +68,7 @@ end
 function modifier_item_trump_card_unique:GetModifierSpellAmplify_Percentage()
     if self:GetAbility() then
         local npc = self:GetParent()
-        local calc = npc:GetIntellect() * (self:GetAbility():GetSpecialValueFor("spell_amp_ratio")/100)
+        local calc = npc:GetIntellect(true) * (self:GetAbility():GetSpecialValueFor("spell_amp_ratio")/100)
         return calc
     end
 end

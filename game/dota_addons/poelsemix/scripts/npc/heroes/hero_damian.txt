@@ -23,8 +23,8 @@
 	"StatusHealth"                "420"
 	"StatusHealthRegen"		"0.2"
 	"AttackRate"				"1.5"
-	"AttackDamageMin"			"50"
-	"AttackDamageMax"			"60"
+	"AttackDamageMin"			"55"
+	"AttackDamageMax"			"55"
 	"StatusMana"				"360"
 
 	//Lav nye talents
@@ -39,5 +39,8 @@
 	"Ability15"		"special_bonus_damian_2"
 	
 	"Ability16"		"special_bonus_damian_3"
-	"Ability17"		"special_bonus_movement_speed_30"							
+	"Ability17"		"special_bonus_movement_speed_30"	
+
+
+	"Facets" {}						
 }

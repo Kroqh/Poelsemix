@@ -30,10 +30,15 @@
 	"AttributeBaseAgility"		"20"
 	"AttributeAgilityGain"		"2"							
 	"AttributeBaseIntelligence"		"20"									
-	"AttributeIntelligenceGain"		"2.3"									
+	"AttributeIntelligenceGain"		"2.3"
+
+	"AttackDamageMin"			"23"
+	"AttackDamageMax"			"23"									
 
 
 	"StatusHealthRegen"		"2"
 
 	"MovementSpeed"		"280"
+
+	"Facets" {}
 }

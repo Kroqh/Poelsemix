@@ -8,14 +8,14 @@
 	"AbilityTextureName"			"move_quick"
 	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
 	"AbilityCooldown"				"10"
-	"AbilityManaCost"				"40"
+	"AbilityManaCost"				"50"
 
 	"AbilitySpecial"
 	{
 	    "01"
 	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "movement_speed"    "14 18 22 26"
+	        "var_type"          "FIELD_FLOAT"
+	        "movement_speed"    "15 17.5 20 22.5" //percent
 	    }
 	    "02"
 	    {

@@ -8,7 +8,7 @@
 	"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 	"AttackRange"			"200"
 	"AttackAcquisitionRange"	"200"
-	"StatusHealth"                "100"
+	"StatusHealth"                "170"
 
 	"AttributeBaseStrength"		"16"
 	"AttributeStrengthGain"		"1.9"
@@ -16,7 +16,11 @@
 	"AttributeAgilityGain"		"2.2"	
 	"AttributeBaseIntelligence"		"22"
 	"AttributeIntelligenceGain"		"3"
-	
+
+	"AttackDamageMin"			"56"
+	"AttackDamageMax"			"56"
+
+
 	"MovementSpeed"               "280"
 	"ArmorPhysical"		"3" 
 
@@ -40,6 +44,6 @@
 	"Ability16"		"special_bonus_margrethe_7"
 	"Ability17"		"special_bonus_margrethe_8"
                  
-
+	"Facets" {}
 
 }

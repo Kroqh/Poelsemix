@@ -35,7 +35,15 @@
 	"AttributeBaseIntelligence"	"21"
 	"AttributeIntelligenceGain"	"2"
 
+	"AttackDamageMin"			"41"
+	"AttackDamageMax"			"41"
+
 	"MovementSpeed"               "285"
-	"ArmorPhysical"		"0" 
+	"ArmorPhysical"		"0"
+
+	"AttackRange"			"550"
+
+
+	"Facets" {} 
 
 }

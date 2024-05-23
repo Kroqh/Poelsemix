@@ -6,7 +6,7 @@
   	"BaseClass"                 "item_datadriven"
   	"AbilityTextureName"        "vaernepligt"
   	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"2200"
+  	"ItemCost"					"1800"
   	"ID"						"2012"
 	
 	// Stats		

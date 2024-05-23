@@ -16,15 +16,15 @@
 	"AttackRate"                 "1.7" 
 	
 	"StatusHealth"                "100"
-	"AttackDamageMin"			"46"
-	"AttackDamageMax"			"48"
+	"AttackDamageMin"			"47"
+	"AttackDamageMax"			"47"
 
 
 	"AttributeBaseStrength"			"18"
 	"AttributeStrengthGain"			"1.8"
 	"AttributeBaseAgility"		"26"
 	"AttributeAgilityGain"		"3.4"												
-	"AttributeBaseIntelligence"	"15"
+	"AttributeBaseIntelligence"	"21"
 	"AttributeIntelligenceGain"	"2.6"
 
 	"MovementSpeed"               "270"
@@ -55,4 +55,6 @@
 			"model" 	"models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"
 			"model" 	"models/items/sniper/hare_hunt_rifle/hare_hunt_rifle.vmdl"
 		}
+
+		"Facets" {}
 }

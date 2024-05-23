@@ -270,6 +270,7 @@ function COverthrowGameMode:InitGameMode()
 	Convars:SetInt( "dota_server_side_animation_heroesonly", 0 )
 	
 	COverthrowGameMode:SetUpFountains()
+
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, 1 ) 
 	GameRules:GetGameModeEntity():SetDaynightCycleAdvanceRate(5)
 
@@ -433,7 +434,6 @@ function COverthrowGameMode:UpdateScoreboard()
 	if sortedTeams[1].teamScore == sortedTeams[2].teamScore then
 		self.isGameTied = true
 	else
-		if self.leadingTeamScore >= self.runnerupTeamScore + 10  and self.hogriderAlreadyHappened == false then self:HogRiders(hero) end
 		self.isGameTied = false
 	end
 	local allHeroes = HeroList:GetAllHeroes()

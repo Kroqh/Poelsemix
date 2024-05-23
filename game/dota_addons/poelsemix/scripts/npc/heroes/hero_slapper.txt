@@ -20,7 +20,11 @@
 	"AttributeBaseAgility"		"17"
 	"AttributeAgilityGain"		"1.9"								
 	"AttributeBaseIntelligence"		"16"									
-	"AttributeIntelligenceGain"		"1.9"									
+	"AttributeIntelligenceGain"		"1.9"
+
+	"AttackDamageMin"			"54"
+	"AttackDamageMax"			"54"	
+
 
 	"MovementSpeed"		"275"
 	"ArmorPhysical"		"4"	
@@ -35,5 +39,8 @@
 	"Ability15"		"special_bonus_slapper_6"
 	
 	"Ability16"		"special_bonus_slapper_7"
-	"Ability17"		"special_bonus_slapper_8"							
+	"Ability17"		"special_bonus_slapper_8"
+
+
+	"Facets" {}							
 }

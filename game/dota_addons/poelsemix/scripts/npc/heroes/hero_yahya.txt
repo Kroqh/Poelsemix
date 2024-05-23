@@ -26,9 +26,14 @@
   "AttributeBaseAgility"		"17"
 	"AttributeAgilityGain"		"1.6"
 	"AttributeBaseIntelligence"		"13"							
-	"AttributeIntelligenceGain"		"1.3"								
+	"AttributeIntelligenceGain"		"1.3"
+
+  "AttackDamageMin"			"31"
+	"AttackDamageMax"			"31"								
 	
 	"MovementSpeed"		"275"
   "ArmorPhysical"		"4"
 	"StatusHealth"                "425"
+
+  "Facets" {}
 }

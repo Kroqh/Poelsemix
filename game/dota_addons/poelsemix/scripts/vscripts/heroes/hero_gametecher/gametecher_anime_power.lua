@@ -65,7 +65,7 @@ function gametecher_anime_power:OnProjectileHit_ExtraData(target, location, extr
 		return nil 
 	end
 	local caster = self:GetCaster()
-	local int = caster:GetIntellect()
+	local int = caster:GetIntellect(true)
 	local damage = extra.base_damage + (int * extra.int_scaling)
 	ApplyDamage({victim = target,
 	attacker = caster,

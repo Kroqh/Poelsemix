@@ -56,12 +56,12 @@
 		"04"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"andrea_damage"					"25 32 39"
+			"andrea_damage"					"40 46 52"
 		}
 		"05"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"andrea_fire_range"		"450 475 500"
+			"andrea_fire_range"		"500"
 		}
 		"06"
 		{
@@ -81,7 +81,7 @@
 		"09"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"scepter_nuke_damage"				"500"
+			"scepter_nuke_damage"				"800"
 		}
 		"10"
 		{

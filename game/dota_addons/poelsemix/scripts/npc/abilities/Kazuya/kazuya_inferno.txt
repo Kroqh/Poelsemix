@@ -62,7 +62,7 @@
 		"07"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"fury_cost"			"80 75 70"
+			"fury_cost"			"65 60 55"
 			"LinkedSpecialBonus" "special_bonus_kazuya_7"
 		}
 	}

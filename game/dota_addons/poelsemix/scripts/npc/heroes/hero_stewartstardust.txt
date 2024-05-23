@@ -36,12 +36,15 @@
 	"ArmorPhysical"		"5" 								
 	"MovementSpeed"		"275"
 
-	"AttackDamageMin"			"55"
-	"AttackDamageMax"			"57"
+	"AttackDamageMin"			"56"
+	"AttackDamageMax"			"56"
 	"AttackRate"			"1.8"
 
 	"StatusHealthRegen"		"4"
 
 	
 	"AttackRange"			"130"
+
+
+	"Facets" {}
 }

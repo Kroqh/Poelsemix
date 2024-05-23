@@ -24,13 +24,16 @@ function modifier_yahya_koekkenkniv:IsPurgeException() return false end
 function modifier_yahya_koekkenkniv:DeclareFunctions()
 	return {
 		MODIFIER_EVENT_ON_ATTACK_LANDED,
-        MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE
+        MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE,
+		MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND
 	}
 end
 
 function modifier_yahya_koekkenkniv:OnAttackLanded( params )
 	if IsServer() then
 		local caster = self:GetCaster()
+		if params.attacker == caster and not caster:PassivesDisabled() then
+		
 		local ability = self:GetAbility()
 		if not caster:HasTalent("special_bonus_yahya_7") then
 			local mana_after = caster:GetMana() - ability:GetSpecialValueFor("manacost")
@@ -44,26 +47,25 @@ function modifier_yahya_koekkenkniv:OnAttackLanded( params )
 			caster:SetMana(mana_after)
 			end
 		end
-        EmitSoundOn("koekkenkniv", caster)
 
-		if params.attacker == caster and caster:IsRealHero() and (params.target:GetTeamNumber() ~= caster:GetTeamNumber()) and not caster:PassivesDisabled() then
-			local cleave_particle = "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
-			local cleave_damage_pct = ability:GetSpecialValueFor("cleave_damage_percent") / 100
-			local cleave_radius_start = ability:GetSpecialValueFor("cleave_starting_width")
-			local cleave_radius_end = ability:GetSpecialValueFor("cleave_ending_width")
-			local cleave_distance = ability:GetSpecialValueFor("cleave_distance")
+		local max_hp_dmg = self:GetAbility():GetSpecialValueFor("bonus_max_hp_damage_perc")
+		if self:GetCaster():FindAbilityByName("special_bonus_yahya_2"):GetLevel() > 0 then max_hp_dmg = max_hp_dmg + self:GetCaster():FindAbilityByName("special_bonus_yahya_2"):GetSpecialValueFor("value") end
 
-			if caster:HasTalent("special_bonus_yahya_2") then
-				local bonus = caster:FindAbilityByName("special_bonus_yahya_2"):GetSpecialValueFor("value") 
-				cleave_radius_end= cleave_radius_end + bonus
-				cleave_distance  = cleave_distance + bonus
-			end
-			
-
-			DoCleaveAttack( params.attacker, params.target, ability, (params.damage * cleave_damage_pct), cleave_radius_start, cleave_radius_end, cleave_distance, cleave_particle )
+		local dmg = params.target:GetMaxHealth() * (max_hp_dmg/100)
+		ApplyDamage({victim = params.target,
+    	attacker = params.attacker,
+    	damage_type = self:GetAbility():GetAbilityDamageType(),
+    	damage =  dmg,
+    	ability = self:GetAbility()})
 		end
 	end
 end
 function  modifier_yahya_koekkenkniv:GetModifierBaseAttack_BonusDamage()
-    return self:GetAbility():GetSpecialValueFor("bonus_damage")
+	local value = self:GetAbility():GetSpecialValueFor("bonus_damage")
+	
+    return value
+end
+
+function modifier_yahya_koekkenkniv:GetAttackSound()
+	return "koekkenkniv"
 end

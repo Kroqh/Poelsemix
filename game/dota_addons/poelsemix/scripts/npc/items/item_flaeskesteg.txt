@@ -28,7 +28,7 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"str"					"85"
+			"str"					"80"
 		}
 		"02"
 		{

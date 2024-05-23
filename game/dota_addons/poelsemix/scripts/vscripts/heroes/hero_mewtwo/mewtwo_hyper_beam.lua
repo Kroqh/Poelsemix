@@ -18,9 +18,8 @@ function mewtwo_hyper_beam:OnSpellStart()
     caster:EmitSound("mewtwo_hyper_beam");
     self.range					=  self:GetSpecialValueFor("range")
     if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_7"):GetLevel() > 0 then self.range = self.range + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_7"):GetSpecialValueFor("value") end
-	self.vision_radius					= self:GetSpecialValueFor("radius") / 2
-	self.numVision						= math.ceil( self.range / self.vision_radius )
 
+    self.radius = self:GetSpecialValueFor("radius")
     local particleName = "particles/heroes/mewtwo/hyper_beam.vpcf"
 	self.pfx = ParticleManager:CreateParticle( particleName, PATTACH_WORLDORIGIN, caster )
 	self.attach_point = caster:ScriptLookupAttachment( "attach_attack2" )
@@ -32,13 +31,10 @@ function mewtwo_hyper_beam:OnSpellStart()
     if self:GetCaster():FindAbilityByName("special_bonus_mewtwo_8"):GetLevel() > 0 then damage = damage + self:GetCaster():FindAbilityByName("special_bonus_mewtwo_8"):GetSpecialValueFor("value") end
     self.tickdmg = (damage * (self.interval / self:GetSpecialValueFor("channel_duration")))
 
-
-    -- Current position & direction
-    self.casterOrigin	= caster:GetAbsOrigin()
-    self.casterForward	= caster:GetForwardVector()
+    self.dir = (self:GetCursorPosition() - caster:GetAbsOrigin()):Normalized()
     
     -- Update thinker positions
-    self.endcapPos = self.casterOrigin + self.casterForward * self.range
+    self.endcapPos = caster:GetAbsOrigin() + self.dir * self.range
     self.endcapPos = GetGroundPosition( self.endcapPos, nil )
     self.endcapPos.z = self.endcapPos.z + 92
 
@@ -53,16 +49,24 @@ function mewtwo_hyper_beam:OnChannelThink(think)
     ParticleManager:SetParticleControl(self.pfx, 0, caster:GetAttachmentOrigin(self.attach_point))
     self.elapsedTime = self.elapsedTime + think
     if self.elapsedTime >= self.interval then
+
+        local count = math.floor(self.range / 15)
+        local counter = 0
         
+        while counter < count do
+            AddFOWViewer(caster:GetTeamNumber(),caster:GetAbsOrigin() + self.dir * (count*10), self.radius * 8 ,0.5,false)
+            counter = counter + 1
+        end
         
+            
 
             
                 -- Dmg
                 local units = FindUnitsInLine(caster:GetTeamNumber(),
-                    caster:GetAbsOrigin() + caster:GetForwardVector() * 32 ,
+                    caster:GetAbsOrigin() + self.dir * 32 ,
                     self.endcapPos,
                     nil,
-                    self:GetSpecialValueFor("radius"),
+                    self.radius,
                     self:GetAbilityTargetTeam(),
                     self:GetAbilityTargetType(),
                     self:GetAbilityTargetFlags())
@@ -76,11 +80,6 @@ function mewtwo_hyper_beam:OnChannelThink(think)
 		            damage_table.damage	 		= self.tickdmg;
 		            damage_table.victim  		= unit;
 		            ApplyDamage(damage_table)
-                end
-
-                -- Give vision
-                for i=1, self.numVision do
-                    AddFOWViewer(caster:GetTeamNumber(), ( self.casterOrigin + self.casterForward * ( self.vision_radius * 2 * (i-1) ) ), self.vision_radius, 0.2, false)
                 end
 
                 self.dmgdealt = self.dmgdealt + self.tickdmg

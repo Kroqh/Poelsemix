@@ -17,7 +17,7 @@ function margrethe_charge:OnSpellStart()
     
     for i, unit in pairs(self:GetKnights()) do
         EmitSoundOn("margrethe_charge", unit)
-		if unit:HasModifier("modifier_margrethe_charge") then unit:RemoveModifierByName("modifier_margrethe_charge") end
+		if unit:HasModifier("modifier_margrethe-_charge") then unit:RemoveModifierByName("modifier_margrethe_charge") end
 		unit:AddNewModifier(caster, ability, "modifier_margrethe_charge", {duration = duration, target = target:GetEntityIndex()})
     end
 end

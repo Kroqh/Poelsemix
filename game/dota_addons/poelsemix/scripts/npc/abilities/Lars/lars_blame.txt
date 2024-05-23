@@ -18,8 +18,8 @@
         {
           "01"
           {
-              "var_type"          "FIELD_INTEGER"
-              "duration"          "6 8 10"
+              "var_type"          "FIELD_FLOAT"
+              "duration"          "5 6 7"
           }
 	   "02"
           {

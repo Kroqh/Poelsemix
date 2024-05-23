@@ -12,7 +12,7 @@
 	"AbilityTextureName"			"blinding_dart"
 	
 	"AbilityCooldown"				"15 14 13 12"
-	"AbilityManaCost"				"105 115 125 135"
+	"AbilityManaCost"				"100 95 90 85"
 	"AbilityCastRange"				"750"
 
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
@@ -46,7 +46,7 @@
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"int_scaling" "3.6"
+			"int_scaling" "2.2 2.4 2.6 2.8"
 			"LinkedSpecialBonus" "special_bonus_teemo_3"
 		}
 	}

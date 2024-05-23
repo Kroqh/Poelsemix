@@ -8,6 +8,10 @@ function mewtwo_shadow_ball:GetCooldown(level)
     return cd
 end
 
+function mewtwo_shadow_ball:GetAOERadius()
+    return self:GetSpecialValueFor("aoe_radius")
+end
+
 
 function mewtwo_shadow_ball:OnAbilityPhaseStart()
     if IsServer() then

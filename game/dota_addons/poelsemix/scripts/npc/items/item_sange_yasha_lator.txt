@@ -3,7 +3,7 @@
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"sange_yasha_lator"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"1"
+  	"ItemCost"					"7700"
   	"ID"						"2014"
 	
 	// Stats		

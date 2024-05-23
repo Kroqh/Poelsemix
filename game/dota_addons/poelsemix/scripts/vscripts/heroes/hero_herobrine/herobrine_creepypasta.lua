@@ -7,7 +7,7 @@ function herobrine_creepypasta:OnSpellStart()
     local target_point = self:GetCursorPosition()
     local caster = self:GetCaster()
     local ability = self
-    local int = caster:GetIntellect()
+    local int = caster:GetIntellect(true)
 	local casterPos = caster:GetAbsOrigin()
 
 	local blink_pfx_1 = ParticleManager:CreateParticle("particles/econ/heroes/herobrine/herobrine_creepypasta.vpcf", PATTACH_ABSORIGIN, caster)

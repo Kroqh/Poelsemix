@@ -44,8 +44,15 @@
     }
     "03"
     {
+      "var_type"        "FIELD_FLOAT"
+      "str_to_agi_ratio"      "1 1.25 1.5"
+    }
+    "04"
+    {
       "var_type"        "FIELD_INTEGER"
-      "str_to_agi_ratio"      "1.5 1.75 2"
+      "keep_str_ratio"      "20"
+      "LinkedSpecialBonus" "special_bonus_yahya_8"
+      
     }
   }
 

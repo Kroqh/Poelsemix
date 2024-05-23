@@ -6,7 +6,7 @@
   	"BaseClass"                 "item_datadriven"
   	"AbilityTextureName"        "fake_butterfly"
   	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"3950"
+  	"ItemCost"					"4725"
   	"ID"						"2004"
 	
 	// Stats		

@@ -17,10 +17,15 @@
 
     "AttributeBaseStrength"			"14"		
 	"AttributeStrengthGain"			"1.1"
-    "AttributeBaseAgility"		"26"
+    "AttributeBaseAgility"		"28"
 	"AttributeAgilityGain"		"3.2"
 	"AttributeBaseIntelligence"	"23"
 	"AttributeIntelligenceGain"	"1.9"
+
+    "AttackDamageMin"			"51"
+	"AttackDamageMax"			"51"
+
+    "AttackRate"                 "1.6" 	
 	
     "MovementSpeed"               "285"
 	"ArmorPhysical"		"3" 
@@ -33,4 +38,7 @@
 	"Ability15"			"special_bonus_marvelous_6"
     "Ability16"       "special_bonus_marvelous_7"
 	"Ability17"	      "special_bonus_marvelous_8"
+
+
+    "Facets" {}
 }	

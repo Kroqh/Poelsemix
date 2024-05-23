@@ -28,7 +28,7 @@
 	
 	//Time
 	//--------------------------
-	"AbilityCooldown" "30 28 26 24"
+	"AbilityCooldown" "20 18 16 14"
 
 	//Cost
 	//--------------------------
@@ -50,7 +50,7 @@
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"bonus_main_stat" "50 75 100 125" 
+			"bonus_main_stat" "30 50 70 90" 
 		}
 		"04"
 		{

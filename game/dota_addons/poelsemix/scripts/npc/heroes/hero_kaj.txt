@@ -9,12 +9,12 @@
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "kaj_andrea"
-
-		// Mastery layout
-		// 19|18
-		// 17|16
-		// 15|14
-		// 13|12
+	"Ability7" "generic_hidden"
+	"Ability8" "generic_hidden"
+	"Ability9" "generic_hidden"
+	"Ability10" "generic_hidden"
+	"Ability11" "generic_hidden"
+	"Ability12" "generic_hidden"
 
 		"Ability12" 	"special_bonus_kaj_1"
 		"Ability13" 	"special_bonus_kaj_2"
@@ -40,6 +40,12 @@
 		"AttributeBaseIntelligence"	"25"
 		"AttributeIntelligenceGain"	"3.7"
 
+		"AttackDamageMin"			"30"
+		"AttackDamageMax"			"30"
+
 		"MovementSpeed"               "270"
 		"ArmorPhysical"		"-1" 
+
+
+		"Facets" {}
 }

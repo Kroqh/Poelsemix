@@ -19,7 +19,10 @@
 	"AttackRange"			"400"
 	"AttackAcquisitionRange"	"400"
 
-	"StatusHealth"                "300"
+	"StatusHealth"                "200"
+
+	"AttackDamageMin"			"29"
+	"AttackDamageMax"			"29"
 
 
 	"AttributeBaseStrength"		"21"
@@ -53,6 +56,6 @@
 	"Ability16"		"special_bonus_urgot_7"
 	"Ability17"		"special_bonus_urgot_8"
                  
-
+	"Facets" {}
 
 }

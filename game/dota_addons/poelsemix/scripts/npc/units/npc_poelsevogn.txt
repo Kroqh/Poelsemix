@@ -2,13 +2,12 @@
 	{										
 		// General
 		//----------------------------------------------------------------
-		//"Model"						"models/items/gyrocopter/skyhigh_bomb_missle_alt/skyhigh_bomb_alt.vmdl"	// Model.
-		"Model"	"models/items/techies/rehisetoric_hunting_squad_set_sticky_bomb/rehisetoric_hunting_squad_set_sticky_bomb.vmdl"
+		"Model"	"models/items/techies/techies_mad_tex_mount/techies_mad_tex_mount.vmdl"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"1"
 		"IsSummoned"				"0"
 		"IsAncient"					"0"
-		"ModelScale" 				"1.5"
+		"ModelScale" 				"1"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -22,7 +21,7 @@
 
 		// Bounds
 		//----------------------------------------------------------------
-		"RingRadius"				"140"
+		"RingRadius"				"150"
 		"HealthBarOffset"			"270"
 		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
 

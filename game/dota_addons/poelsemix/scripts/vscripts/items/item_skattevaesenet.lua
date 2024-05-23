@@ -12,25 +12,24 @@ function item_skattevaesenet:OnSpellStart()
         local ability = self
         local target = self:GetCursorTarget()
         local sound_cast = "item_cash"    
-        local particle_slash = "particles/econ/courier/courier_flopjaw_gold/flopjaw_death_gold.vpcf"
 
         -- Ability specials
 
         if (target:HasItemInInventory("item_talisman_of_tax_evasion")) then
-            particle_slash = "particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_msg_deny_symbol.vpcf"
             sound_cast = "tax_evasion"
+            local particle_slash_fx = ParticleManager:CreateParticle("particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_msg_deny_symbol.vpcf", PATTACH_ABSORIGIN_FOLLOW, target)
+            ParticleManager:SetParticleControl(particle_slash_fx, 0, target:GetAbsOrigin())
         else
             
             local gold = target:GetGold() * (self:GetSpecialValueFor("tax_percent")/100)
             if gold < self:GetSpecialValueFor("min_gold") then gold_amount = self:GetSpecialValueFor("min_gold") end
             caster:ModifyGold(gold, true, 0)
             target:ModifyGold(-gold, true, 0)
+            ParticleManager:CreateParticle("particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf", PATTACH_ABSORIGIN, target)
         end
 
         EmitSoundOn(sound_cast, target)
-        local particle_slash_fx = ParticleManager:CreateParticle(particle_slash, PATTACH_ABSORIGIN_FOLLOW, target)
-        ParticleManager:SetParticleControl(particle_slash_fx, 0, target:GetAbsOrigin())
-        ParticleManager:ReleaseParticleIndex(particle_slash_fx)
+        
     end
 
 end

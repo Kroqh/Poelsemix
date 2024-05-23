@@ -35,7 +35,6 @@ function kaj_andrea:OnSpellStart()
         local hp = math.floor((hp_scaling/100) * caster:GetMaxHealth()) --andrea has 1 hp by defeault as to not insta die
     
         unit = CreateUnitByName("unit_andrea",target_pos, true, caster, caster, caster:GetTeam())
-        unit:SetControllableByPlayer(caster:GetPlayerID(), true)
         unit:AddNewModifier(caster, self, "modifier_kill", { duration = duration } )
         unit:AddNewModifier(caster, self, "modifier_kaj_andrea_stats", {duration = duration} )
         unit:SetTeam(caster:GetTeamNumber())
@@ -43,6 +42,7 @@ function kaj_andrea:OnSpellStart()
         unit:SetBaseMaxHealth(hp)
         unit:SetMaxHealth(hp)
         unit:SetHealth(hp) --has to have this ugly trio for it to work lol
+        unit:SetControllableByPlayer(caster:GetPlayerID(), true)
     end
 end
 

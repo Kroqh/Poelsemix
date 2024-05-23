@@ -22,7 +22,7 @@ function margrethe_vi_er_ikke_dus:OnSpellStart()
     self.buff_duration =self:GetSpecialValueFor("buff_duration")
     local base_slashes = self:GetSpecialValueFor("base_slashes")
     if self:GetCaster():FindAbilityByName("special_bonus_margrethe_7"):GetLevel() > 0 then base_slashes = base_slashes + self:GetCaster():FindAbilityByName("special_bonus_margrethe_7"):GetSpecialValueFor("value") end 
-    local number_of_slashes =  base_slashes + (math.floor(caster:GetIntellect() * self:GetSpecialValueFor("slash_scaling")))
+    local number_of_slashes =  base_slashes + (math.floor(caster:GetIntellect(true) * self:GetSpecialValueFor("slash_scaling")))
     self.interval = self:GetChannelTime() / number_of_slashes
 	self.elapsedTime = 0
     caster:StartGestureWithPlaybackRate(ACT_DOTA_CAST_ABILITY_6,number_of_slashes)

@@ -30,13 +30,13 @@
 		"04"
 		{
 			"var_type" "FIELD_FLOAT"
-			"int_scaling_onhit" "1.1"
+			"int_scaling_onhit" "0.4 0.5 0.7 0.8"
 			"LinkedSpecialBonus" "special_bonus_teemo_5"
 		}
 		"05"
 		{
 			"var_type" "FIELD_FLOAT"
-			"int_scaling_prsec" "0.35"
+			"int_scaling_prsec" "0.2 0.25 0.3 0.35"
 			"LinkedSpecialBonus" "special_bonus_teemo_6"
 		}
 		"06"

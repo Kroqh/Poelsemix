@@ -7,6 +7,7 @@
 	"Ability4" "kim_gasolin"
 	"Ability5" "generic_hidden"
 	"Ability6" "kim_nat"
+	"Ability7" "generic_hidden"
 	
 	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"
 	
@@ -23,6 +24,9 @@
 
 	"StatusHealthRegen"		"3.8"
 
+	"AttackDamageMin"			"42"
+	"AttackDamageMax"			"42"
+
 	"MovementSpeed"		"275"
 	"ArmorPhysical"		"4"
 	
@@ -37,6 +41,9 @@
 	
 	"Ability16"		"special_bonus_kim_8"
 	"Ability17"		"special_bonus_kim_2"
+
+
+	"Facets" {}
 
 	
 }

@@ -56,7 +56,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"range"		"600 700 800"
+				"range"		"1000 1150 1300"
 				"LinkedSpecialBonus" "special_bonus_mewtwo_7"
 			}
 			"04"

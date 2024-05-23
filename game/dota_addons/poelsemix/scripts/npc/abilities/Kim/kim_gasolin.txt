@@ -25,7 +25,7 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"statboost"			"25 45 65 85 105 125"
+			"statboost"			"20 35 50 65 80 95"
 		}
 	}
 }
