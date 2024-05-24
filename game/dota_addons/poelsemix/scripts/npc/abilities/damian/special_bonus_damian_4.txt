@@ -1,5 +1,5 @@
 
-"special_bonus_damian_3"
+"special_bonus_damian_4"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@
 		"01"
 		{
 			"var_type" "FIELD_FLOAT"
-			"value" "0.25" //agi stack
+			"value" "0.4" //ms stack
 		}
 	}	
 }

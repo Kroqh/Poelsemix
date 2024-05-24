@@ -22,7 +22,7 @@ end
 function modifier_item_flaeskesteg_healing:OnIntervalThink(kv)
 	if not IsServer() then return end
 	local parent = self:GetParent()
-	local particle_self = "particles/items/flaeskesteg.vpcf"
+	local particle_self = "particles/items/fleskesteg/fleskesteg.vpcf"
     local pfx_fire = ParticleManager:CreateParticle(particle_self, PATTACH_ABSORIGIN_FOLLOW, parent)
     ParticleManager:SetParticleControl(pfx_fire, 0,  parent:GetAbsOrigin())
 	self:StartIntervalThink(1)

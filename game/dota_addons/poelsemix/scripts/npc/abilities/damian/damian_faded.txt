@@ -4,6 +4,7 @@
         "ScriptFile"				"heroes/hero_damian/damian_faded.lua"
         "AbilityTextureName"		"damian_faded"
 	"HasScepterUpgrade"		"1"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 	"MaxLevel" 		"1"
 	"precache"
@@ -21,29 +22,31 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"base_max_stacks"	"100" //skal være 100, 20 for testing
+				"base_max_stacks"	"60"
 			}
 			"02"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"ms_per_stack"	"1"	
+				"var_type"					"FIELD_FLOAT"
+				"ms_per_stack"	"1"
+				"LinkedSpecialBonus" "special_bonus_damian_4"	
 			}
 			"03"
 			{
-				"var_type"					"FIELD_INTEGER"
+				"var_type"					"FIELD_FLOAT"
 				"agi_per_stack"	"1"	
+				"LinkedSpecialBonus" "special_bonus_damian_3"
 			}
 
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
 				"poop_duration"	"6"
-				"LinkedSpecialBonus" "special_bonus_damian_2"	
+				"LinkedSpecialBonus" "special_bonus_damian_6"	
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"aghs_interval"					"10"	//1 cap gained every interval
+				"aghs_interval"					"8"	//1 cap gained every interval
 			}
 		}
     }

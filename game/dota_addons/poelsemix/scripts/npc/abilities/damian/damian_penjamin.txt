@@ -37,7 +37,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"faded_stack_per_tick"			"6"
+				"faded_stack_per_tick"			"8"
 			}
 			"04"
 			{

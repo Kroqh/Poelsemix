@@ -130,7 +130,7 @@ end
 
 modifier_pr0_firestakit_pos = modifier_pr0_firestakit_pos or class({})
 
-function modifier_pr0_firestakit_pos:IsHidden()	return false end
+function modifier_pr0_firestakit_pos:IsHidden()	return true end
 function modifier_pr0_firestakit_pos:OnCreated(keys)
 	if not IsServer() then return end
 	self.radius = keys.radius

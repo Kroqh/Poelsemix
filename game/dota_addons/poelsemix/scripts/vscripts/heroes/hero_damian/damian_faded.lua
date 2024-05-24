@@ -10,7 +10,7 @@ end
 
 modifier_damian_faded = modifier_damian_faded or class({})
 
-function modifier_damian_faded:IsPurgeable() return false end
+function modifier_damian_faded:IsPurgable() return false end
 function modifier_damian_faded:IsHidden() return false end
 function modifier_damian_faded:IsPassive() return true end
 function modifier_damian_faded:RemoveOnDeath()	return false end
@@ -28,10 +28,14 @@ function modifier_damian_faded:DeclareFunctions()
 	return funcs
 end
 function modifier_damian_faded:GetModifierMoveSpeedBonus_Constant()
-    return self:GetAbility():GetSpecialValueFor("ms_per_stack") * self:GetStackCount()
+    local value = self:GetAbility():GetSpecialValueFor("ms_per_stack")
+    if self:GetCaster():FindAbilityByName("special_bonus_damian_4"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_damian_4"):GetSpecialValueFor("value") end
+    return value * self:GetStackCount()
 end
 function modifier_damian_faded:GetModifierBonusStats_Agility()
-    return self:GetAbility():GetSpecialValueFor("agi_per_stack") * self:GetStackCount()
+    local value = self:GetAbility():GetSpecialValueFor("agi_per_stack")
+    if self:GetCaster():FindAbilityByName("special_bonus_damian_3"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_damian_3"):GetSpecialValueFor("value") end
+    return value * self:GetStackCount()
 end
 
 function modifier_damian_faded:OnCreated()
@@ -47,7 +51,7 @@ function modifier_damian_faded:OnIntervalThink()
 
     if self:GetParent():HasScepter() then
         self:GetParent():EmitSound("damian_yup") 
-        self.mod:SetStackCount(self.mod:GetStackCount()+1)
+        self.mod:SetStackCount(self.mod:GetStackCount()+1) --aghs
     end
 
 end
@@ -64,14 +68,14 @@ function modifier_damian_faded:OnStackCountChanged(old)
             if (parent:FindAbilityByName("damian_penjamin"):GetToggleState()) then parent:FindAbilityByName("damian_penjamin"):ToggleAbility() end
 
             duration = self:GetAbility():GetSpecialValueFor("poop_duration")
-            if parent:HasTalent("special_bonus_damian_2") then duration = duration + parent:FindAbilityByName("special_bonus_damian_2"):GetSpecialValueFor("value") end 
+            if parent:HasTalent("special_bonus_damian_6") then duration = duration + parent:FindAbilityByName("special_bonus_damian_6"):GetSpecialValueFor("value") end 
             parent:AddNewModifier(parent,self:GetAbility(),"modifier_damian_faded_pooped", {duration = duration})
     end
 end
 
 modifier_damian_faded_max_stack_tracker = modifier_damian_faded_max_stack_tracker or class({})
 
-function modifier_damian_faded_max_stack_tracker:IsPurgeable() return false end
+function modifier_damian_faded_max_stack_tracker:IsPurgable() return false end
 function modifier_damian_faded_max_stack_tracker:IsHidden() return false end
 function modifier_damian_faded_max_stack_tracker:IsPassive() return true end
 function modifier_damian_faded_max_stack_tracker:RemoveOnDeath() return false end

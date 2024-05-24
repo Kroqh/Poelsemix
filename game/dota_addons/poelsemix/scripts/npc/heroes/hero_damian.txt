@@ -8,38 +8,48 @@
 	"Ability3" "damian_faded"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
-	"Ability6" "press_meeting"
+	"Ability6" "damian_dabbington_city"
+	"Ability7" "generic_hidden"
 
 
 	"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
 	"AttributeBaseStrength"		"15"
 	"AttributeStrengthGain"		"1.4"
-	"AttributeBaseAgility"		"23"
+	"AttributeBaseAgility"		"21"
 	"AttributeAgilityGain"		"2.4"
 	"AttributeBaseIntelligence"	"13"
 	"AttributeIntelligenceGain"	"1.2"
-	"MovementSpeed"		"280"
+	"MovementSpeed"		"275"
 	"ArmorPhysical"		"0"
-	"StatusHealth"                "420"
-	"StatusHealthRegen"		"0.2"
-	"AttackRate"				"1.5"
-	"AttackDamageMin"			"55"
-	"AttackDamageMax"			"55"
-	"StatusMana"				"360"
+	
+	"AttackRate"				"1.6"
+	"AttackDamageMin"			"54"
+	"AttackDamageMax"			"54"
+	"StatusHealth"                "320"
+	"StatusMana"				"100"
+
+	"AttackRange"			"150"
+
+	"MovementTurnRate"		"0.6"
+
+	"BaseAttackSpeed"      "105"
+
+	"StatusHealthRegen"		"0.25"
+	"StatusManaRegen"    "0.25"
 
 	//Lav nye talents
 	
-	"Ability10"		"special_bonus_attack_speed_30"
-	"Ability11"		"special_bonus_movement_speed_30"
+	"Ability10"		"special_bonus_damian_1"
+	"Ability11"		"special_bonus_damian_2"
 	
-	"Ability12"		"special_bonus_movement_speed_30"
-	"Ability13"		"special_bonus_movement_speed_30"
+	"Ability12"		"special_bonus_damian_3"
+	"Ability13"		"special_bonus_damian_4"
 	
-	"Ability14"		"special_bonus_damian_1"
-	"Ability15"		"special_bonus_damian_2"
+	"Ability14"		"special_bonus_damian_5"
+	"Ability15"		"special_bonus_damian_6"
 	
-	"Ability16"		"special_bonus_damian_3"
-	"Ability17"		"special_bonus_movement_speed_30"	
+	"Ability16"		"special_bonus_damian_7"
+	"Ability17"		"special_bonus_damian_8"	
 
 
 	"Facets" {}						

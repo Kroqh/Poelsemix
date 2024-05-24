@@ -34,14 +34,20 @@ function modifier_damian_fadedthanaho_passive:OnAttackLanded(params)
 	if (params.attacker ~= parent) then return end 
     if parent:HasModifier("modifier_damian_faded_pooped") then return end
 
-    local rand = RandomInt(1, 100)
+    local rand = RandomFloat(1, 100)
     local chance = ability:GetSpecialValueFor("base_chance")
-    chance = chance + (parent:FindModifierByName("modifier_damian_faded"):GetStackCount() * ability:GetSpecialValueFor("faded_chance_multi"))
+    if self:GetCaster():FindAbilityByName("special_bonus_damian_1"):GetLevel() > 0 then chance = chance + self:GetCaster():FindAbilityByName("special_bonus_damian_1"):GetSpecialValueFor("value") end
+    
+    local multi = ability:GetSpecialValueFor("faded_chance_multi")
+    
+    if self:GetCaster():FindAbilityByName("special_bonus_damian_2"):GetLevel() > 0 then multi = multi + self:GetCaster():FindAbilityByName("special_bonus_damian_2"):GetSpecialValueFor("value") end
+    chance = chance + (parent:FindModifierByName("modifier_damian_faded"):GetStackCount() * multi)
+    
     if rand <= chance then
         mod = parent:FindModifierByName("modifier_damian_fadedthanaho_stack")
         if mod ~= nil then
             stackcap = ability:GetSpecialValueFor("max_stacks")
-            if parent:HasTalent("special_bonus_damian_1") then stackcap = stackcap + parent:FindAbilityByName("special_bonus_damian_1"):GetSpecialValueFor("value") end
+            if self:GetCaster():HasTalent("special_bonus_damian_5") then stackcap = stackcap + self:GetCaster():FindAbilityByName("special_bonus_damian_5"):GetSpecialValueFor("value") end
             if mod:GetStackCount() < stackcap then
                 mod:SetStackCount(mod:GetStackCount()+1)
                 parent:EmitSound("damian_fadedthanaho")

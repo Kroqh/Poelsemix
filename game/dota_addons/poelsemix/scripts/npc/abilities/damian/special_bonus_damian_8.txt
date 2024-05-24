@@ -1,5 +1,5 @@
 
-"special_bonus_damian_3"
+"special_bonus_damian_8"
 {
 	// General
 	//-------------------------------------------------------------------------------------------------------------
@@ -9,7 +9,7 @@
 
 	"LinkedAbility"
 	{
-			"01"	"damian_faded"
+			"01"	"damian_dabbington_city"
 	}	
 	
 	// Special
@@ -18,8 +18,8 @@
 	{
 		"01"
 		{
-			"var_type" "FIELD_FLOAT"
-			"value" "0.25" //agi stack
+			"var_type" "FIELD_INTEGER"
+			"value" "7" //stacks for win
 		}
 	}	
 }

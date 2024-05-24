@@ -24,7 +24,7 @@ function modifier_damian_penjamin:OnCreated()
     local ability = self:GetAbility()
     local tick_rate = ability:GetSpecialValueFor("tick_rate")
     local caster = self:GetCaster()
-    if caster:HasTalent("special_bonus_damian_3") then tick_rate = tick_rate + caster:FindAbilityByName("special_bonus_damian_3"):GetSpecialValueFor("value") end
+    if caster:FindAbilityByName("special_bonus_damian_3"):GetLevel() > 0 then tick_rate = tick_rate + caster:FindAbilityByName("special_bonus_damian_3"):GetSpecialValueFor("value") end
     self.mana_cost = ability:GetSpecialValueFor("mana_per_sec") * tick_rate
     self:StartIntervalThink(tick_rate)
 end
@@ -35,7 +35,7 @@ function modifier_damian_penjamin:OnIntervalThink()
 
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
-	local mana_after == caster:GetMana() - self.mana_cost
+	local mana_after = caster:GetMana() - self.mana_cost
 	if mana_after == 0 then
 		caster:SetMana(0)
         ability:ToggleAbility()
@@ -56,8 +56,8 @@ function modifier_damian_penjamin:OnIntervalThink()
     mod= caster:FindModifierByName("modifier_damian_faded")
     mod:SetStackCount(mod:GetStackCount()+ability:GetSpecialValueFor("faded_stack_per_tick"))
 
-    if caster:HasTalent("special_bonus_damian_3") then
-        local tick_rate = ability:GetSpecialValueFor("tick_rate") + caster:FindAbilityByName("special_bonus_damian_3"):GetSpecialValueFor("value")
+    if caster:HasTalent("special_bonus_damian_7") then
+        local tick_rate = ability:GetSpecialValueFor("tick_rate") + caster:FindAbilityByName("special_bonus_damian_7"):GetSpecialValueFor("value")
         self:StartIntervalThink(tick_rate)
         self.mana_cost = ability:GetSpecialValueFor("mana_per_sec")  * tick_rate 
     end
