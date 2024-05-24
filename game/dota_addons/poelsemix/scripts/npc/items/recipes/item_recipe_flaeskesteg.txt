@@ -3,12 +3,12 @@
   		"BaseClass"                 "item_datadriven"
   		"AbilityTextureName"        "recipe"
   		"Model"						"models/props_gameplay/recipe.mdl"
-  		"ItemCost"					"0"
+  		"ItemCost"					"1100"
 		"ItemShopTags"				""
 		"ItemRecipe"				"1"
 		"ItemResult"				"item_flaeskesteg"
 		"ItemRequirements"
 		{
-			"01" "item_heart;item_heart"
+			"01" "item_heart;item_vitality_booster"
 		}
   	}

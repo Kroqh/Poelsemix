@@ -6,7 +6,7 @@
   	"BaseClass"                 "item_datadriven"
   	"AbilityTextureName"        "tren"
   	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"3075"
+  	"ItemCost"					"3050"
   	"ID"						"3047"
 	"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	
@@ -32,7 +32,7 @@
 		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"health_regen_percent_per_second"	"-10"
+			"health_regen_percent_per_second"	"-20"
 		}
 	}
 	

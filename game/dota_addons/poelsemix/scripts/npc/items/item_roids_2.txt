@@ -6,7 +6,7 @@
   	"BaseClass"                 "item_datadriven"
   	"AbilityTextureName"        "chinese_roids"
   	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"6594"
+  	"ItemCost"					"7044"
   	"ID"						"3048"
 	"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 	
@@ -27,12 +27,12 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"str"					"125"
+			"str"					"100"
 		}
 		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"health_regen_percent_per_second"	"-50"
+			"health_regen_percent_per_second"	"-100"
 		}
 	}
 	

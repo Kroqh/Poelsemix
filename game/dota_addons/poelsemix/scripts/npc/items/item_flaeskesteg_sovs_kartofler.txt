@@ -3,16 +3,13 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	
-  	"BaseClass"                 "item_datadriven"
+  	"BaseClass"                 "item_lua"
+	"ScriptFile"					"items/item_flaeskesteg_sovs_kartofler.lua"
   	"AbilityTextureName"        "flaeskesteg_sovs_kartofler"
   	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"14150"
+  	"ItemCost"					"10050"
   	"ID"						"2006"
 	"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-	
-	// Stats		
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"5.0"
 		
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
@@ -28,27 +25,22 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"str"					"80"
+			"str"					"55"
 		}
 		"02"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"hp"						"400"
+			"hp"						"350"
 		}
 		"03"
 		{
-			"var_type"							"FIELD_INTEGER"
-			"health_regen_percent_per_second"	"10"
+			"var_type"							"FIELD_FLOAT"
+			"health_regen_percent_per_second"	"7.5"
 		}
 		"04"
 		{
 			"var_type"							"FIELD_FLOAT"
-			"cooldown_melee"					"5.0"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"heal_interval"						"0.03"
+			"cooldown"					"5.0"
 		}
 		"06"
 		{
@@ -58,72 +50,9 @@
 		"07"
 		{
 			"var_type" "FIELD_INTEGER"
-			"magic_resist" "16"
-		}
-		"08"
-		{
-			"var_type" "FIELD_FLOAT"
-			"cooldown_tooltip" "5.0"
+			"magic_resist" "15"
 		}
 	}
 	
-	"Modifiers"
-	{
-		"modifier_item_heart_datadriven"
-		{
-			"Passive"			"1"
-			"IsHidden"			"1"
-			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
-			
-			"Properties"
-			{
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%str"
-				"MODIFIER_PROPERTY_HEALTH_BONUS"				"%hp"
-				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%armor"
-				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magic_resist"
-			}
-		}
 
-		"modifier_item_heart_datadriven_regen"
-		{
-			"Passive"			"1"
-			"IsHidden"			"1"
-			
-			"ThinkInterval" 		"%heal_interval"
-			"OnIntervalThink"
-			{
-				"RunScript"
-				{
-					"ScriptFile"					"items/item_heart.lua"
-					"Function"						"modifier_item_heart_datadriven_regen_on_interval_think"
-					"HealthRegenPercentPerSecond"	"%health_regen_percent_per_second"
-					"HealInterval"					"%heal_interval"
-				}
-			}
-			
-			"OnTakeDamage"
-			{
-				"RunScript"
-				{
-					"ScriptFile"		"items/item_heart.lua"
-					"Function"			"modifier_item_heart_datadriven_regen_on_take_damage"
-					"CooldownMelee"		"%cooldown_melee"
-				}
-			}
-			
-			"OnDestroy"
-			{
-				"RunScript"
-				{
-					"ScriptFile"		"items/item_heart.lua"
-					"Function"			"modifier_item_heart_datadriven_regen_on_destroy"
-				}
-			}
-		}
-		"modifier_item_heart_datadriven_regen_visible"  //A modifier that will appear on the unit's modifier bar while they are being healed.
-		{
-			"Passive"			"0"
-			"IsHidden"			"0"
-		}
-	}
 }
