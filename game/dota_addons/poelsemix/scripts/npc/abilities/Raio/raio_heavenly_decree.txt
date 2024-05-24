@@ -1,0 +1,63 @@
+"raio_heavenly_decree"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_raio/raio_heavenly_decree"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityTextureName"			"raio_heavenly_decree"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_NONE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"	
+
+
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"               "60 55 50"
+	"AbilityManaCost"               "200"
+
+
+	"precache"
+        {
+	"particle"	"particles/econ/items/zeus/lightning_weapon_fx/zuus_lightning_bolt_immortal_lightning.vpcf" //wanted to copy and make it bigger, but the naming scheme fucks it up on copy
+	"soundfile"       "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+	"particle"		"particles/heroes/raio/mark.vpcf"
+	"soundfile" 				"soundevents/raio_soundevent.vsndevts"
+        }
+	
+	    "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"700 1050 1400"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"range"					"99999"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"			"120"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"delay"						"1.25"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"vision_radius"						"500"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"vision_duration"						"1"
+			}
+		}
+	
+}

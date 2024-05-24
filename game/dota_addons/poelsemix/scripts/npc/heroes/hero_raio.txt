@@ -9,7 +9,7 @@
 	//"Ability3" "damian_faded"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
-	//"Ability6" "damian_dabbington_city"
+	"Ability6" "raio_heavenly_decree"
 	"Ability7" "generic_hidden"
 
 
@@ -23,7 +23,7 @@
 	"AttributeIntelligenceGain"	"2.9"
 
 	"MovementSpeed"		"280"
-	"ArmorPhysical"		"0"
+	"ArmorPhysical"		"3"
 	
 	"AttackRate"				"1.7"
 	"AttackDamageMin"			"46"

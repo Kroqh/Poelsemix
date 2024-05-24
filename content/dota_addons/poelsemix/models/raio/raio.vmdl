@@ -492,8 +492,8 @@
 						source_filename = "models/raio/raio_model.fbx"
 						import_bone_scales = false
 						start_frame = 997
-						end_frame = 1059
-						framerate = 30.0
+						end_frame = 1020
+						framerate = 60.0
 						reverse = false
 					},
 				]
