@@ -1,0 +1,508 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc36:version{972dada4-b828-45a4-bb93-7795cf0585da} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "milkshapeexported7.vmat"
+								to = "materials/raio/raio_boots.vmat"
+							},
+							{
+								from = "milkshapeexported6.vmat"
+								to = "materials/raio/raio_pants.vmat"
+							},
+							{
+								from = "milkshapeexported5.vmat"
+								to = "materials/raio/raio_belt.vmat"
+							},
+							{
+								from = "milkshapeexported1.vmat"
+								to = "materials/raio/raio_head.vmat"
+							},
+							{
+								from = "milkshapeexported2.vmat"
+								to = "materials/raio/raio_hair.vmat"
+							},
+							{
+								from = "milkshapeexported3.vmat"
+								to = "materials/raio/raio_body.vmat"
+							},
+							{
+								from = "milkshapeexported4.vmat"
+								to = "materials/raio/raio_arms.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/queen/queen_m.vmat"
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_origin"
+						parent_bone = "chest"
+						relative_origin = [ 0.0, 0.0, 23.254333 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "chest"
+						relative_origin = [ 0.0, 0.0, 23.254299 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "wrist_R"
+						relative_origin = [ -8.441677, 5.142303, 2.561771 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "wrist_L"
+						relative_origin = [ 7.845818, -0.435009, 2.905373 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "neck"
+						relative_origin = [ 0.346873, -7.143234, 15.16597 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "follow_overhead"
+						parent_bone = "neck"
+						relative_origin = [ -0.234186, -2.160297, 44.878372 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_eyes"
+						parent_bone = "neck"
+						relative_origin = [ 0.0, -18.94953, 11.095215 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								name = "chest"
+								parent_bone = "chest"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -34.243813, -25.176388, -0.5 ]
+								hitbox_maxs = [ 34.235573, 25.090504, 53.954483 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "shoulder2_L"
+								parent_bone = "shoulder2_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.863661, -16.608828, -8.660461 ]
+								hitbox_maxs = [ 5.36797, 19.141996, 14.009445 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "shoulder1_L"
+								parent_bone = "shoulder1_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.5, -16.135933, -12.606506 ]
+								hitbox_maxs = [ 42.288521, 22.250473, 25.483444 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "elbow_L"
+								parent_bone = "elbow_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.978157, -12.620587, -8.776871 ]
+								hitbox_maxs = [ 31.364128, 15.335114, 15.692596 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "wrist_L"
+								parent_bone = "wrist_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.5, -10.086468, -7.741226 ]
+								hitbox_maxs = [ 16.781273, 8.276117, 10.249329 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "shoulder2_R"
+								parent_bone = "shoulder2_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.36797, -16.608831, -8.660461 ]
+								hitbox_maxs = [ 3.85541, 19.141985, 14.009445 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "shoulder1_R"
+								parent_bone = "shoulder1_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -42.288521, -16.135948, -12.606506 ]
+								hitbox_maxs = [ 6.682816, 22.25045, 25.483444 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "elbow_R"
+								parent_bone = "elbow_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -31.372414, -12.620612, -8.776871 ]
+								hitbox_maxs = [ 0.969894, 15.335093, 15.692596 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "wrist_R"
+								parent_bone = "wrist_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -16.789566, -12.523882, -7.741226 ]
+								hitbox_maxs = [ 0.5, 8.276182, 10.249329 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "neck"
+								parent_bone = "neck"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -28.972435, -18.891066, -1.895905 ]
+								hitbox_maxs = [ 19.535515, 26.206171, 40.230835 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "hb"
+								parent_bone = "hb"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -34.821587, -8.478626, -27.454712 ]
+								hitbox_maxs = [ 33.76931, 30.655975, 9.009949 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "pelvis"
+								parent_bone = "pelvis"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -32.391739, -23.662056, -37.254105 ]
+								hitbox_maxs = [ 31.285538, 28.039032, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "hip_R"
+								parent_bone = "hip_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -20.100042, -17.88203, -35.760719 ]
+								hitbox_maxs = [ 15.365713, 20.178715, 0.93026 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "knee_R"
+								parent_bone = "knee_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -20.898952, -19.181511, -82.002792 ]
+								hitbox_maxs = [ 18.99136, 21.076115, 10.783398 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "hip_L"
+								parent_bone = "hip_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -15.373964, -17.882023, -33.788391 ]
+								hitbox_maxs = [ 20.091795, 20.178722, 0.93026 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "knee_L"
+								parent_bone = "knee_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -18.999607, -23.446749, -82.751015 ]
+								hitbox_maxs = [ 20.89072, 21.076124, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "bone_new0"
+								parent_bone = "bone_new0"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.141171, -16.322186, -25.623116 ]
+								hitbox_maxs = [ 17.963655, 15.894936, 0.5 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "raio"
+						filename = "models/raio/raio_model.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "run"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 563
+						end_frame = 593
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 31
+						end_frame = 99
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 1094
+						end_frame = 1108
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 1062
+						end_frame = 1078
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "die"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 1119
+						end_frame = 1165
+						framerate = -1.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast1"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 937
+						end_frame = 996
+						framerate = 45.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast2"
+						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 874
+						end_frame = 907
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "ult"
+						activity_name = "ACT_DOTA_CAST_ABILITY_6"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 997
+						end_frame = 1059
+						framerate = 30.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		document_sub_type = "ModelDocSubType_None"
+	}
+}

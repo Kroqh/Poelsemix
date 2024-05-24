@@ -1,0 +1,59 @@
+"hero_raio"
+{
+	"override_hero"				"npc_dota_hero_zuus"			// Hero to override
+	"model" "models/raio/raio.vmdl"
+	"ModelScale"	"0.7"
+	"DisableWearables"				"1"
+	//"Ability1" "damian_penjamin"				
+	//"Ability2" "damian_fadedthanaho"
+	//"Ability3" "damian_faded"
+	"Ability4" "generic_hidden"
+	"Ability5" "generic_hidden"
+	//"Ability6" "damian_dabbington_city"
+	"Ability7" "generic_hidden"
+
+
+	"ProjectileSpeed"		"1600"
+	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
+	"AttributeBaseStrength"		"28"
+	"AttributeStrengthGain"		"1.7"
+	"AttributeBaseAgility"		"18"
+	"AttributeAgilityGain"		"2.6"
+	"AttributeBaseIntelligence"	"24"
+	"AttributeIntelligenceGain"	"2.9"
+
+	"MovementSpeed"		"280"
+	"ArmorPhysical"		"0"
+	
+	"AttackRate"				"1.7"
+	"AttackDamageMin"			"46"
+	"AttackDamageMax"			"46"
+	"StatusHealth"                "40"
+	"StatusMana"				"120"
+
+	"AttackRange"			"475"
+
+	"MovementTurnRate"		"0.6"
+
+	"BaseAttackSpeed"      "100"
+
+	"StatusHealthRegen"		"0.15"
+	"StatusManaRegen"    "0.5"
+
+	//Lav nye talents
+	
+	//"Ability10"		"special_bonus_damian_1"
+	//"Ability11"		"special_bonus_damian_2"
+	
+	//"Ability12"		"special_bonus_damian_3"
+	//"Ability13"		"special_bonus_damian_4"
+	
+	//"Ability14"		"special_bonus_damian_5"
+	//"Ability15"		"special_bonus_damian_6"
+	
+	//"Ability16"		"special_bonus_damian_7"
+	//"Ability17"		"special_bonus_damian_8"	
+
+
+	"Facets" {}						
+}
