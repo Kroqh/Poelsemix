@@ -8,8 +8,9 @@ end
 
 modifier_slapper_bum_passive = modifier_slapper_bum_passive or class({})
 
-function modifier_slapper_bum_passive:IsPurgeable() return false end
+function modifier_slapper_bum_passive:IsPurgable() return false end
 function modifier_slapper_bum_passive:IsHidden() return true end
+function modifier_slapper_bum_passive:IsPassive() return true end
 
 function modifier_slapper_bum_passive:DeclareFunctions()
 	local decFuncs = {MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND, MODIFIER_EVENT_ON_TAKEDAMAGE}

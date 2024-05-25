@@ -291,6 +291,10 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		local ability = hero:FindAbilityByName("guerrilla_warfare")
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
+	if hero:GetUnitName() == "npc_dota_hero_zuus" then
+		local ability = hero:FindAbilityByName("raio_unstable")
+		if ability:GetLevel() == 0 then ability:SetLevel(1) end
+	end
 	if hero:GetUnitName() == "npc_dota_hero_tusk" then
 		local ability = hero:FindAbilityByName("kazuya_rage")
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end

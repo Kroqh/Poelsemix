@@ -1,0 +1,54 @@
+"raio_unstable"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_raio/raio_unstable"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"raio_unstable"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"	
+	
+
+
+	"precache"
+        {
+	"particle"	"particles/units/heroes/hero_zuus/zuus_arc_lightning_.vpcf"
+	"soundfile"       "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+	"particle"		"particles/heroes/raio/mark.vpcf"
+	"soundfile" 				"soundevents/raio_soundevent.vsndevts"
+        }
+	
+	    "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"rate"					"2 1.85 1.7 1.65"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"base_damage"					"60 70 80 90"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"int_damage_scaling"			"0.9 0.95 1 1.05"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"500 525 550 575"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"targets_to_hit"						"1"
+			}
+		}
+	
+}

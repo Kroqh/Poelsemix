@@ -148,7 +148,7 @@ function modifier_raio_heavenly_decree_scepter:OnIntervalThink()
 			FIND_UNITS_EVERYWHERE, 
 			ability:GetAbilityTargetTeam(), 
 			DOTA_UNIT_TARGET_HERO, 
-			DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE, 
+			DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE + DOTA_UNIT_TARGET_FLAG_NO_INVIS, 
 			FIND_ANY_ORDER, 
 			false
 			)
