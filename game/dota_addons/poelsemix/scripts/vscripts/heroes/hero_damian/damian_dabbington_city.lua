@@ -200,7 +200,13 @@ function modifier_damian_dabbington_city_pos:kineticize(caster, target, ability)
 	
 		target:InterruptMotionControllers(true)
 		target:AddNewModifier(caster, ability, "modifier_damian_dabbington_city_knockback", {duration = 0.2 * (1 - target:GetStatusResistance()), target_point_x = self.target_point.x, target_point_y = self.target_point.y, target_point_z = self.target_point.z})
+	elseif distance_from_border > 0 then
+		local dir = (target:GetAbsOrigin() - center_of_field):Normalized()
+
+		FindClearSpaceForUnit(target, center_of_field + (dir * self.radius), false)
+
 	else
+
 		-- Removes debuffs, so the unit can move freely
 		if target:HasModifier(modifier_barrier) then
 			target:RemoveModifierByName(modifier_barrier)

@@ -58,7 +58,7 @@ end
 
 function modifier_damian_faded:OnStackCountChanged(old)
     if not IsServer() then return end
-    if self:GetStackCount() >= self.mod:GetStackCount() then
+    if self:GetStackCount() > self.mod:GetStackCount() then
             local parent = self:GetParent()
             print("poopy time")
             parent:EmitSound("damian_poop")
