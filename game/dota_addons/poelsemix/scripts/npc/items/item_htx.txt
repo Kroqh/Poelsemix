@@ -23,12 +23,12 @@
 		"01"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"health" "625"
+			"health" "575"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"mana" "625"
+			"mana" "575"
 		}
 		"03"
 		{
@@ -38,7 +38,7 @@
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"cdr" "30"
+			"cdr" "25"
 		}
 		"05"
 		{

@@ -38,7 +38,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"time_for_fall_off"		"2.5"
+				"time_for_fall_off"		"3.5"
 			}
 		}
 	}

@@ -31,7 +31,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_per_slash"			"85 110 135"
+				"damage_per_slash"			"100 130 160"
 				"LinkedSpecialBonus" "special_bonus_shadow_5"
 	 		}
 
@@ -43,7 +43,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"speed_to_dashes"			"75 65 55"
+				"speed_to_dashes"			"65 60 55"
 				"LinkedSpecialBonus" "special_bonus_shadow_8"
 			}
 			"04"

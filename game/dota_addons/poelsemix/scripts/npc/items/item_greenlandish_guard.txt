@@ -30,64 +30,74 @@
 		"01"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"bonus_intellect"				"75"
+			"bonus_intellect"				"55"
 		}
 		"02"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"bonus_agi"					"15"
+			"bonus_agi"					"10"
 		}
 		"03"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"bonus_str"					"30"
+			"bonus_str"					"10"
 		}
 		"04"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"bonus_armor"				"18"
+			"bonus_health"					"650"
 		}
-		"05"
+		"04"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"blast_final_radius"			"900"
+			"bonus_regen"					"6" //health regen
 		}
 		"06"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"blast_speed_per_second"		"350"
+			"bonus_armor"				"18"
 		}
 		"07"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"blast_damage"					"30"
+			"blast_final_radius"			"900"
 		}
 		"08"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"aura_ms"						"-20"
-		}
-		"09"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"blast_debuff_duration"			"0.2"
+			"blast_speed_per_second"		"350" //alledgely only triggers 86 times, make it better with full lua rewrite
 		}
 		"10"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"blast_vision_radius"			"800"
+			"blast_damage"					"30"
 		}
 		"11"
 		{
 			"var_type"						"FIELD_INTEGER"
+			"aura_ms"						"-30"
+		}
+		"12"
+		{
+			"var_type"						"FIELD_FLOAT"
+			"blast_debuff_duration"			"0.2"
+		}
+		"13"
+		{
+			"var_type"						"FIELD_INTEGER"
+			"blast_vision_radius"			"800"
+		}
+		"14"
+		{
+			"var_type"						"FIELD_INTEGER"
 			"blast_vision_duration"			"2"
 		}
-				"12"
+			"15"
 		{
 			"var_type"						"FIELD_INTEGER"
 			"aura_radius"					"900"
 		}
-				"13"
+			"16"
 		{
 			"var_type"						"FIELD_INTEGER"
 			"aura_attack_speed"				"-40"
@@ -122,6 +132,8 @@
 				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_str"
 				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_agi"
 				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+				"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"		"%bonus_regen"
+				"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
 			}
 		}
 		"modifier_item_shivas_guard_datadriven_enemy_aura_emitter"

@@ -4,11 +4,18 @@ LinkLuaModifier( "modifier_herobrine_fear", "heroes/hero_herobrine/herobrine_cre
 
 function herobrine_creepypasta:OnSpellStart()
     if not IsServer() then return end
-    local target_point = self:GetCursorPosition()
     local caster = self:GetCaster()
     local ability = self
     local int = caster:GetIntellect(true)
 	local casterPos = caster:GetAbsOrigin()
+
+
+	local max_distance = ability:GetSpecialValueFor("blink_range") + caster:GetCastRangeBonus()
+	if self:GetCaster():FindAbilityByName("special_bonus_herobrine_8"):GetLevel() > 0 then max_distance = max_distance + self:GetCaster():FindAbilityByName("special_bonus_herobrine_8"):GetSpecialValueFor("value") end
+	local distance = (self:GetCursorPosition() - casterPos):Length2D()
+	if distance > max_distance then distance = max_distance end
+
+	local target_point = caster:GetAbsOrigin() + ((self:GetCursorPosition() - casterPos):Normalized() * distance)
 
 	local blink_pfx_1 = ParticleManager:CreateParticle("particles/econ/heroes/herobrine/herobrine_creepypasta.vpcf", PATTACH_ABSORIGIN, caster)
 	
@@ -18,11 +25,11 @@ function herobrine_creepypasta:OnSpellStart()
 	local blink_pfx_2 = ParticleManager:CreateParticle("particles/econ/items/doom/doom_ti8_immortal_arms/doom_ti8_immortal_devour_smoke_b.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
 	ParticleManager:ReleaseParticleIndex(blink_pfx_2)
 
-	EmitSoundOnLocationWithCaster(casterPos, "Hero_QueenOfPain.Blink_out", caster)
+	
     
 
 	FindClearSpaceForUnit(caster, target_point, false)	
-
+	EmitSoundOnLocationWithCaster(casterPos, "Hero_QueenOfPain.Blink_out", caster)
 	EmitSoundOnLocationWithCaster(target_point, "Hero_QueenOfPain.Blink_in", caster)
 
 
@@ -56,9 +63,11 @@ function herobrine_creepypasta:GetCooldown(level)
     return cd
 end
 function herobrine_creepypasta:GetCastRange()
-	local range = self:GetSpecialValueFor("blink_range")
-	if self:GetCaster():FindAbilityByName("special_bonus_herobrine_8"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_herobrine_8"):GetSpecialValueFor("value") end
-	return range
+	if IsClient() then --global range for server, but range visible for player
+		local range = self:GetSpecialValueFor("blink_range")
+		if self:GetCaster():FindAbilityByName("special_bonus_herobrine_8"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_herobrine_8"):GetSpecialValueFor("value") end
+		return range
+	end
 end
 function herobrine_creepypasta:GetAOERadius()
 	local range = 0

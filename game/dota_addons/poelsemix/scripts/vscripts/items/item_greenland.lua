@@ -12,7 +12,6 @@ function item_shivas_guard_datadriven_on_spell_start(keys)
 		endTime = .03, -- when this timer should first execute, you can omit this if you want it to run first on the next frame
 		callback = function()
 			keys.ability:CreateVisibilityNode(keys.caster:GetAbsOrigin(), keys.BlastVisionRadius, keys.BlastVisionDuration)  --Shiva's Guard's active provides 800 flying vision around the caster, which persists for 2 seconds.
-		
 			keys.caster.shivas_guard_current_blast_radius = keys.caster.shivas_guard_current_blast_radius + (keys.BlastSpeedPerSecond * .03)
 			local nearby_enemy_units = FindUnitsInRadius(keys.caster:GetTeam(), keys.caster:GetAbsOrigin(), nil, keys.caster.shivas_guard_current_blast_radius, DOTA_UNIT_TARGET_TEAM_ENEMY,
 			DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)

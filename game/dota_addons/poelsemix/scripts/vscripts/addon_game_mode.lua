@@ -33,6 +33,22 @@ function Precache( context )
 	PrecacheResource( "particle", "particles/ui_mouseactions/custom_range_finder_cone.vpcf", context )
 	PrecacheResource( "particle", "particles/ui_mouseactions/custom_range_finder_cone_dual.vpcf", context )
 
+	--item precache
+	PrecacheResource( "soundfile", "soundevents/items_soundevent.vsndevts", context )
+	PrecacheResource( "particle", "particles/generic_gameplay/generic_frozen.vpcf", context )
+	PrecacheResource( "particle", "particles/items/flaeskesteg_new/flaeskesteg_new.vpcf", context )
+	PrecacheResource( "particle", "particles/units/heroes/hero_troll_warlord/troll_warlord_bersekers_net_main.vpcf", context )
+	PrecacheResource( "particle", "particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_counter_slash.vpcf", context )
+	PrecacheResource( "particle", "particles/econ/items/spectre/spectre_arcana/spectre_arcana_blademail.vpcf", context )
+	PrecacheResource( "particle", "particles/units/heroes/hero_treant/treant_leech_seed_projectile.vpcf", context )
+	PrecacheResource( "particle", "particles/items/protectmagic.vpcf", context )
+	PrecacheResource( "particle", "particles/items/protectmelee.vpcf", context )
+	PrecacheResource( "particle", "particles/units/heroes/hero_demonartist/demonartist_engulf_disarm/items2_fx/heavens_halberd.vpcf", context )
+	PrecacheResource( "particle", "particles/econ/events/ti7/phase_boots_ti7.vpcf", context )
+	PrecacheResource( "particle", "particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf", context )
+	PrecacheResource( "particle", "particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_msg_deny_symbol.vpcf", context )
+	PrecacheResource( "particle", "particles/units/heroes/hero_jakiro/jakiro_macropyre_firehit.vpcf", context )
+	
 
 	--Cache the gold bags
 		PrecacheItemByNameSync( "item_bag_of_gold", context )
@@ -74,6 +90,9 @@ function Precache( context )
 	--Cache sounds for traps
 		PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts", context )
 		PrecacheResource( "soundfile", "soundevents/soundevents_conquest.vsndevts", context )
+
+
+		PrecacheResource( "particle", "particles/status_fx/status_effect_beserkers_call.vpcf", context )
 end
 
 function Activate()

@@ -14,7 +14,7 @@
 	"AbilityCooldown"       "25.0"
   	
 
-  	"ItemCost"					"8800"
+  	"ItemCost"					"8650"
   	"ID"						"3021"
 	
 	// Item Info
@@ -31,7 +31,7 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"bonus_intellect" "40"
+			"bonus_intellect" "45"
 		}
 		"02"
 		{
@@ -61,7 +61,7 @@
 		"07"
 		{
 			"var_type" "FIELD_INTEGER"
-			"bonus_attack_speed" "20"
+			"bonus_attack_speed" "30"
 		}
 		"08"
 		{

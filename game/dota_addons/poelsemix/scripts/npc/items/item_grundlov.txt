@@ -20,11 +20,6 @@
 	"ItemAliases"         "gl;loven;grunde;1849"
 	"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 
-
-	"precache"
-	{
-	"particle" "particles/units/heroes/hero_troll_warlord/troll_warlord_bersekers_net_main.vpcf"
-	}
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
@@ -39,6 +34,11 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"resistance_dur" "4"
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"bonus_health" "100"
 		}
 		
 	}
@@ -67,6 +67,7 @@
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
+				"MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_health"
 			}
 		}
 	

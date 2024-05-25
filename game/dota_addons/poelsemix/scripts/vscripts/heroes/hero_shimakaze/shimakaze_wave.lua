@@ -3,9 +3,11 @@ shimakaze_wave = shimakaze_wave or class({})
 
 
 function shimakaze_wave:GetCastRange()
-	local range = self:GetSpecialValueFor("range")
-    if self:GetCaster():FindAbilityByName("special_bonus_shimakaze_1"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_shimakaze_1"):GetSpecialValueFor("value") end
-	return range
+	if IsClient() then --global range for server, but range visible for player
+		local range = self:GetSpecialValueFor("range")
+		if self:GetCaster():FindAbilityByName("special_bonus_shimakaze_1"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_shimakaze_1"):GetSpecialValueFor("value") end
+		return range
+	end
 end
 function shimakaze_wave:OnSpellStart()
 	local caster = self:GetCaster()
@@ -41,7 +43,7 @@ function shimakaze_modifier_wave_cast:OnCreated()
 		local caster = self:GetCaster()
 		local ability = self:GetAbility()
 
-		local max_distance = ability:GetSpecialValueFor("range") + GetCastRangeIncrease(caster)
+		local max_distance = ability:GetSpecialValueFor("range") + caster:GetCastRangeBonus()
 		if caster:HasTalent("special_bonus_shimakaze_1") then
 			local bonus_range = caster:FindAbilityByName("special_bonus_shimakaze_1"):GetSpecialValueFor("value")
 			max_distance = max_distance + bonus_range

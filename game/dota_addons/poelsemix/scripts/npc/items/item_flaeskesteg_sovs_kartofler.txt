@@ -18,11 +18,6 @@
 	"ItemAliases"					"svin;flaeskesteg med hele svineriet"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
-
-	"precache"
-        {
-			"particle" "particles/items/flaeskesteg_new/flaeskesteg_new.vpcf"
-        }
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"

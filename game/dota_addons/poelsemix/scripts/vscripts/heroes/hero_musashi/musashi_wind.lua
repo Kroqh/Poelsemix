@@ -5,9 +5,11 @@ musashi_wind = musashi_wind or class({})
 
 
 function musashi_wind:GetCastRange()
-	local range = self:GetSpecialValueFor("range")
-	if self:GetCaster():FindAbilityByName("special_bonus_musashi_2"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_musashi_2"):GetSpecialValueFor("value") end
-    return range
+	if IsClient() then --global range for server, but range visible for player
+		local range = self:GetSpecialValueFor("range")
+		if self:GetCaster():FindAbilityByName("special_bonus_musashi_2"):GetLevel() > 0 then range = range + self:GetCaster():FindAbilityByName("special_bonus_musashi_2"):GetSpecialValueFor("value") end
+		return range
+	end
 end
 
 function musashi_wind:OnSpellStart()
@@ -47,7 +49,7 @@ function modifier_musashi_wind_dash:OnCreated()
 		local caster = self:GetCaster()
 		local ability = self:GetAbility()
 		caster:EmitSound("musashi_wind")
-		local max_distance = ability:GetSpecialValueFor("range") + GetCastRangeIncrease(caster)
+		local max_distance = ability:GetSpecialValueFor("range") + caster:GetCastRangeBonus()
 
 		if caster:HasTalent("special_bonus_musashi_2") then
 			local bonus_range = caster:FindAbilityByName("special_bonus_musashi_2"):GetSpecialValueFor("value")

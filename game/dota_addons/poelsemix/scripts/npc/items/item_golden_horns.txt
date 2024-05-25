@@ -24,39 +24,35 @@
 	
 	// Item Info
 	//-------------------------------------------------------------------------------------------------------------
-	"ItemCost"						"1875"
+	"ItemCost"						"5375"
 	"ItemShopTags"					"str;agi;int;damage;move_speed;attack_speed;hard_to_tag"
 	"ItemQuality"					"epic"
 	"ItemAliases"					"drum;horns;golden;guld hornene;pipe"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-			"precache"
-	{
-		"soundfile" "soundevents/items_soundevent.vsndevts"
-		"particle" "particles/status_fx/status_effect_beserkers_call.vpcf" //Just precaching this on a random item so its always loaded for generic taunt
-	}		
+
 	"AbilitySpecial"
 	{
 		
 		"01"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_int"							"8"
+			"bonus_int"							"9"
 		}
 		"02"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_agi"							"8"
+			"bonus_agi"							"9"
 		}
 		"03"
 		{
 			
 			"var_type"								"FIELD_INTEGER"
-			"bonus_str"							"8"
+			"bonus_str"							"9"
 		}
 		"04"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"aura_bonus_movement_speed"			"20"
+			"aura_bonus_movement_speed"			"25" //passive aura ms
 		}
 		"05"
 		{
@@ -66,7 +62,7 @@
 		"06"
 		{
 			"var_type"								"FIELD_INTEGER"	
-			"endurance_bonus_movement_speed_pct"	"15"
+			"endurance_bonus_movement_speed_pct"	"15" //active ms
 		}
 		"07"
 		{
@@ -87,12 +83,12 @@
 		"10"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"mresistaura"							"10"
+			"mresistaura"							"15"//passive aura ms
 		}
 		"11"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"mresist"								"30"
+			"mresist"								"15" //passive ms
 		}
 		"12"
 		{
@@ -102,7 +98,7 @@
 		"13"
 		{
 			"var_type"								"FIELD_FLOAT"
-			"hpregenaura"								"2.0"
+			"hpregenaura"								"4.0"
 		}
 		"14"
 		{
@@ -112,7 +108,7 @@
 		"15"
 		{
 		"var_type"								"FIELD_INTEGER"
-			"aura_bonus_attack_speed"				"40"	
+			"aura_bonus_attack_speed"				"40" //active
 		}
 
 		

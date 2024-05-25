@@ -3,7 +3,7 @@
   		"BaseClass"                 "item_datadriven"
   		"AbilityTextureName"        "recipe"
   		"Model"						"models/props_gameplay/recipe.mdl"
-  		"ItemCost"					"0"
+  		"ItemCost"					"700"
 		"ItemShopTags"				""
 		"ItemRecipe"				"1"
 		"ItemResult"				"item_pocket_gametecher"

@@ -3,7 +3,7 @@
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"hike_shox"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-  	"ItemCost"					"3900"
+  	"ItemCost"					"3875"
   	"ID"						"2018"
   	"AbilityCooldown"				"30.0"
 	
@@ -40,7 +40,7 @@
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
-			"bonus_armor" "8"
+			"bonus_armor" "16"
 		}
 		"06"
 		{

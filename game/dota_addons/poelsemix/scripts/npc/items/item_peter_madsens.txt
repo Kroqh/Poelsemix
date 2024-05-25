@@ -30,12 +30,6 @@
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
 
-	"precache"
-	{
-		"particle"			"particles/units/heroes/hero_demonartist/demonartist_engulf_disarm/items2_fx/heavens_halberd.vpcf"
-
-	}
-
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"

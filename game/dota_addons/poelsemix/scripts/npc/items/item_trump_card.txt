@@ -28,7 +28,7 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"int"					"50"
+			"int"					"40"
 		}
 		"02"
 		{
@@ -37,8 +37,8 @@
 		}
 		"02"
 		{
-			"var_type"							"FIELD_INTEGER"
-			"spell_amp_ratio"						"5"
+			"var_type"							"FIELD_FLOAT"
+			"spell_amp_ratio"						"7.5"
 		}
 
 	}	

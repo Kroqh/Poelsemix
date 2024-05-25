@@ -16,6 +16,7 @@
 	"AbilityCastPoint"        "0.0"
 	"AbilityCooldown"       "30.0"
 	"FightRecapLevel"				"2"
+	"AbilitySharedCooldown"			"godsword"
   	
 	
 	// Stats		
@@ -35,7 +36,7 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"damage"					"40"
+			"damage"					"55"
 		}
 		"02"
 		{

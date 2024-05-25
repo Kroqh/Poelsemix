@@ -30,12 +30,7 @@
 		"ItemContributesToNetWorthWhenDropped"	"0"
 		"IsTempestDoubleClonable"		"0"
 		"AbilityTextureName"        "melee_bag"
-		
-	"precache"
-	{
-		"particle"			"particles/items/protectmelee.vpcf"
 
-	}
 	"AbilitySpecial"
 	{
 		"02"

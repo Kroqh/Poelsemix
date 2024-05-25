@@ -8,7 +8,9 @@ function marvelous_antikommerciel_masseappel:OnSpellStart()
 		local caster = self:GetCaster()
 		EmitSoundOn("masseappel", caster)
 		caster:StartGesture(ACT_DOTA_GENERIC_CHANNEL_1)
-
+		if self.pfx ~= nil then
+			ParticleManager:DestroyParticle(self.pfx, false)
+		end
 		local partfire = "particles/units/heroes/hero_marvelous/antikommerciel.vpcf"
 		self.pfx = ParticleManager:CreateParticle(partfire, PATTACH_ABSORIGIN_FOLLOW, caster)
 		ParticleManager:SetParticleControl(self.pfx,0, Vector(0,0,200))

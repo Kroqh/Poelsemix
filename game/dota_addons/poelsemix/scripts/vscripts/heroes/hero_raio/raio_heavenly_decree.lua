@@ -1,4 +1,5 @@
 LinkLuaModifier("modifier_raio_heavenly_decree_mark", "heroes/hero_raio/raio_heavenly_decree", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_raio_heavenly_decree_scepter", "heroes/hero_raio/raio_heavenly_decree", LUA_MODIFIER_MOTION_NONE)
 
 raio_heavenly_decree = raio_heavenly_decree or class({})
 
@@ -7,6 +8,36 @@ function raio_heavenly_decree:OnAbilityPhaseStart()
 	self:GetCaster():EmitSound("raio_heavenly_cast")
 	
 	return true
+end
+
+
+function raio_heavenly_decree:GetCooldown(level)
+
+	if self:GetCaster():HasScepter() then
+		return self:GetSpecialValueFor("scepter_cd")
+	else
+		return self.BaseClass.GetCooldown(self,level)
+	end
+end
+
+function raio_heavenly_decree:GetManaCost( level )
+	if self:GetCaster():HasScepter() then
+		return 0
+	end
+
+	return self.BaseClass.GetManaCost(self, level)
+end
+
+function raio_heavenly_decree:GetBehavior()
+	if self:GetCaster():HasScepter() then
+		return DOTA_ABILITY_BEHAVIOR_PASSIVE
+	end
+
+	return DOTA_ABILITY_BEHAVIOR_POINT + DOTA_ABILITY_BEHAVIOR_AOE --Have to hard code, cant use getbehaviour as it will cause stack overflow
+end
+
+function raio_heavenly_decree:GetIntrinsicModifierName()
+	return "modifier_raio_heavenly_decree_scepter"
 end
 
 function raio_heavenly_decree:GetAOERadius()
@@ -90,4 +121,43 @@ end
 
 function modifier_raio_heavenly_decree_mark:GetEffectAttachType()
 	return PATTACH_ABSORIGIN
+end
+
+modifier_raio_heavenly_decree_scepter = modifier_raio_heavenly_decree_scepter or class({})
+
+function modifier_raio_heavenly_decree_scepter:OnCreated()
+	if IsServer() then
+		self:StartIntervalThink(0.1)
+	end
+end
+
+function modifier_raio_heavenly_decree_scepter:IsHidden() return true end
+function modifier_raio_heavenly_decree_scepter:IsPurgable() return false end
+function modifier_raio_heavenly_decree_scepter:IsPassive() return false end
+
+function modifier_raio_heavenly_decree_scepter:OnIntervalThink()
+	if IsServer() then
+		local caster = self:GetCaster() 
+		local ability = self:GetAbility()
+
+		if caster:HasScepter() and ability:IsCooldownReady() then
+			local enemies = FindUnitsInRadius(
+			caster:GetTeamNumber(), 
+			caster:GetAbsOrigin(), 
+			nil, 
+			FIND_UNITS_EVERYWHERE, 
+			ability:GetAbilityTargetTeam(), 
+			DOTA_UNIT_TARGET_HERO, 
+			DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE, 
+			FIND_ANY_ORDER, 
+			false
+			)
+			if #enemies > 0 then
+				local delay = self:GetAbility():GetSpecialValueFor("delay")
+				local target_point = enemies[1]:GetAbsOrigin()
+				CreateModifierThinker(caster, self:GetAbility(), "modifier_raio_heavenly_decree_mark", {duration = delay, target_point_x = target_point.x, target_point_y = target_point.y, target_point_z = target_point.z, first_strike = true}, target_point, caster:GetTeamNumber(), false)
+				ability:StartCooldown(ability:GetCooldown() * caster:GetCooldownReduction())
+			end
+		end
+	end
 end

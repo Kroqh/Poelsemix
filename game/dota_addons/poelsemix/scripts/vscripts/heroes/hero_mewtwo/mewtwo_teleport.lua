@@ -12,14 +12,17 @@ end
 
 function mewtwo_teleport:OnSpellStart()
     if not IsServer() then return end
-    local target_point = self:GetCursorPosition()
     local caster = self:GetCaster()
     local ability = self
-    local int = caster:GetIntellect()
-	local casterPos = caster:GetAbsOrigin()
 
-	
-	FindClearSpaceForUnit(caster, target_point, false)	
+
+	local max_distance = ability:GetSpecialValueFor("blink_range") + caster:GetCastRangeBonus()
+	local distance = (self:GetCursorPosition() - caster:GetAbsOrigin()):Length2D()
+	if distance > max_distance then distance = max_distance end
+
+	local point = caster:GetAbsOrigin() + ((self:GetCursorPosition() - caster:GetAbsOrigin()):Normalized() * distance)
+
+	FindClearSpaceForUnit(caster, point, false)	
 
 	Timers:CreateTimer(0.01, function() --ensures position change before particles fire
 		local blink_pfx2 = ParticleManager:CreateParticle("particles/units/heroes/hero_newtwo/mewtwo_teleport.vpcf", PATTACH_ABSORIGIN, caster)
@@ -30,6 +33,8 @@ function mewtwo_teleport:OnSpellStart()
 end
 
 function mewtwo_teleport:GetCastRange()
-	local range = self:GetSpecialValueFor("blink_range")
-	return range
+	if IsClient() then --global range for server, but range visible for player
+		local range = self:GetSpecialValueFor("blink_range")
+		return range
+	end
 end

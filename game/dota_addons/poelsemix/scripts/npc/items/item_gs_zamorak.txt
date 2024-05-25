@@ -15,6 +15,7 @@
 	"AbilityCastPoint"        "0.0"
 	"AbilityCooldown"       "30.0"
 	"FightRecapLevel"				"2"
+	"AbilitySharedCooldown"			"godsword"
   	
 	
 	// Stats		
@@ -34,11 +35,11 @@
 		"01"
 		{
 			"var_type"							"FIELD_INTEGER"
-			"damage"					"80"
+			"damage"					"95"
 		}
 		"02"
 		{
-			"var_type"							"FIELD_INTEGER"
+			"var_type"							"FIELD_FLOAT"
 			"freeze_dur"						"3"
 		}
 		"03"
@@ -46,11 +47,6 @@
 			"var_type"							"FIELD_INTEGER"
 			"active_damage"						"500"
 		}
-	}
-
-	"precache"
-	{
-		"particle" "particles/generic_gameplay/generic_frozen.vpcf"
 	}
 	
 	"Modifiers"

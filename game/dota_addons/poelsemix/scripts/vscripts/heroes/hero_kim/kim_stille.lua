@@ -14,8 +14,10 @@ function kim_stille:OnAbilityPhaseStart()
 	return true
 end
 function kim_stille:GetCastRange()
-	local range = self:GetSpecialValueFor("range")
-	return range
+	if IsClient() then --global range for server, but range visible for player
+		local range = self:GetSpecialValueFor("range")
+		return range
+	end
 end
 
 modifier_stille_cast = modifier_stille_cast or class ({})
@@ -39,7 +41,7 @@ function modifier_stille_cast:OnCreated()
 		local caster = self:GetCaster()
 		local ability = self:GetAbility()
 		caster:EmitSound("kim_stille")
-		local max_distance = ability:GetSpecialValueFor("range") + GetCastRangeIncrease(caster)
+		local max_distance = ability:GetSpecialValueFor("range") + caster:GetCastRangeBonus()
 	
 		
 		local distance = (caster:GetAbsOrigin() - caster:GetCursorPosition() ):Length2D()

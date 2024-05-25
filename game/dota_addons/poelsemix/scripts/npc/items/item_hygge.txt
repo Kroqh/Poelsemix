@@ -22,16 +22,12 @@
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
 
-	"precache"
-	{
-		"particle" "particles/units/heroes/hero_treant/treant_leech_seed_projectile.vpcf"
-	}
 	"AbilitySpecial"
 	{
 		"01"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"int" "15"
+			"int" "18"
 		}
 		"02"
 		{

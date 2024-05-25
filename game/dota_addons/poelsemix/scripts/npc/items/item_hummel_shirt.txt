@@ -19,12 +19,6 @@
 	"ItemQuality"					"artifact"
 	"ItemAliases"					"hummel;shirt;hummel shirt"
 
-	// Special	
-	//-------------------------------------------------------------------------------------------------------------
-	"precache"
-	{
-		"particle" "particles/econ/items/spectre/spectre_arcana/spectre_arcana_blademail.vpcf"
-	}
 	
 	"AbilitySpecial"
 	{

@@ -47,7 +47,7 @@
 		"02"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"attack_damage_percent"		"70 90 110"
+			"attack_damage_percent"		"90 110 130"
 			"LinkedSpecialBonus" "special_bonus_marvelous_5"
 		}
 		"03"

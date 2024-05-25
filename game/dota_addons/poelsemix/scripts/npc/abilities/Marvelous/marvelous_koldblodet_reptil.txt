@@ -35,18 +35,18 @@
 			"02"
 			{
 				"var_type" "FIELD_FLOAT"
-				"agi_to_damage" "2 2.1 2.2"
+				"agi_to_damage" "1.4 1.5 1.6"
 				"LinkedSpecialBonus" "special_bonus_marvelous_3"
 			}
 			"03"
 			{
 				"var_type" "FIELD_INTEGER"
-				"agi_to_hp" "7 9 11"
+				"agi_to_hp" "7 8 9"
 			}
 			"04"
 			{
 				"var_type" "FIELD_FLOAT"
-				"lifetime" "5"
+				"lifetime" "4"
 			}
 			"05"
 			{

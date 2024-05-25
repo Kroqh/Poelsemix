@@ -3,7 +3,7 @@
 	"BaseClass"             		"item_datadriven"
 	"AbilityTextureName"			"pocket_gametecher"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"10300"
+  	"ItemCost"					"11000"
   	"ID"						"2013"
 	
 	// Stats		
@@ -23,12 +23,12 @@
 		"01"
 		{
 			"var_type" "FIELD_INTEGER"
-			"int" "70"
+			"int" "65"
 		}
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"mana" "800"
+			"mana" "900"
 		}
 		"03"
 		{
@@ -39,7 +39,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"dmg" "30" //spell amp
-		}
+		} 
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"

@@ -323,28 +323,6 @@
 					},
 					{
 						_class = "AnimFile"
-						name = "shadow_unused"
-						activity_name = ""
-						activity_weight = 1
-						weight_list_name = ""
-						fade_in_time = 0.2
-						fade_out_time = 0.2
-						looping = false
-						delta = false
-						worldSpace = false
-						hidden = false
-						anim_markup_ordered = false
-						disable_compression = false
-						animgraph_additive = false
-						source_filename = "models/shadow/shadow_anim.fbx"
-						import_bone_scales = false
-						start_frame = 280
-						end_frame = 324
-						framerate = -1.0
-						reverse = false
-					},
-					{
-						_class = "AnimFile"
 						name = "shadow_walk"
 						activity_name = "ACT_DOTA_RUN"
 						activity_weight = 1
@@ -409,6 +387,28 @@
 						framerate = -1.0
 						reverse = false
 					},
+					{
+						_class = "AnimFile"
+						name = "shadow_gun"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/shadow/shadow_anim.fbx"
+						import_bone_scales = false
+						start_frame = 67
+						end_frame = 78
+						framerate = -1.0
+						reverse = false
+					},
 				]
 				default_root_bone_name = ""
 			},
@@ -417,5 +417,6 @@
 		primary_associated_entity = ""
 		anim_graph_name = ""
 		importer_notes = "Imported from VMDL"
+		document_sub_type = "ModelDocSubType_None"
 	}
 }

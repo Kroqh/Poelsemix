@@ -110,7 +110,7 @@ function modifier_multiclick_passive:IsHidden()
 	return true
 end
 
-function modifier_multiclick_passive:IsPurgeable() return false end
+function modifier_multiclick_passive:IsPurgable() return false end
 
 function modifier_multiclick_passive:DeclareFunctions()
 	local decFuncs = {MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT}
@@ -140,7 +140,8 @@ function modifier_multiclick_thinker:OnCreated()
 end
 
 function modifier_multiclick_thinker:IsHidden() return true end
-function modifier_multiclick_thinker:IsPurgeable() return false end
+function modifier_multiclick_thinker:IsPurgable() return false end
+function modifier_multiclick_thinker:IsPassive() return false end
 
 function modifier_multiclick_thinker:OnIntervalThink()
 	if IsServer() then

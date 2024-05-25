@@ -45,6 +45,8 @@
 		"AttackDamageMin"			"61"
 		"AttackDamageMax"			"61"
 
+		"BaseAttackSpeed"      "105"
+
 
 		"Facets" {}
 }

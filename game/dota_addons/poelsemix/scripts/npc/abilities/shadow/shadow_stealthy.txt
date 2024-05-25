@@ -12,6 +12,8 @@
 		"IsGrantedByScepter"            "1"
 		"HasScepterUpgrade"             "1"
 
+		"MaxLevel" "1"
+
 		"AbilityCooldown"				"20"
 	
 		"AbilityManaCost"				"60"
@@ -24,7 +26,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"8"
+				"duration"					"5"
 			}
 		}
 	}

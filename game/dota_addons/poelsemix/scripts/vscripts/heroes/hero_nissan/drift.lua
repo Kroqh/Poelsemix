@@ -3,9 +3,11 @@ LinkLuaModifier("modifier_drift_burn", "heroes/hero_nissan/drift", LUA_MODIFIER_
 drift = drift  or class({})
 
 function drift:GetCastRange()
-	local value = self:GetSpecialValueFor("dash_length")
-	return value
-  end
+	if IsClient() then --global range for server, but range visible for player
+		local value = self:GetSpecialValueFor("dash_length")
+		return value
+	end
+end
 function drift:OnSpellStart()
 	if IsServer() ~= true then return end
 	self.do_8 = false
@@ -68,7 +70,7 @@ function drift:DoDrift(target_pos)
 	local target_pos = target_pos
 	local caster_pos = caster:GetAbsOrigin()
 
-	local dash_length = self:GetSpecialValueFor("dash_length")
+	local dash_length = self:GetSpecialValueFor("dash_length") + caster:GetCastRangeBonus()
 	local dash_width = self:GetSpecialValueFor("dash_width")
 
 	local dash_duration = self:GetSpecialValueFor("dash_duration")

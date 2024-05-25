@@ -38,10 +38,10 @@ function shadow_gun:OnSpellStart()
 	local caster = self:GetCaster()
 	local ability = self
 	local target_point = self:GetCursorPosition()
-
+	caster:StartGesture(ACT_DOTA_CAST_ABILITY_1)
     if target_point == caster:GetAbsOrigin() then target_point = caster:GetForwardVector() end
 	local direction = (target_point - caster:GetAbsOrigin()):Normalized()
-	local spawn_point = caster:GetAttachmentOrigin(caster:ScriptLookupAttachment("attach_attack1")) --For at det ligner det kommer fra håndet i suppose
+	local spawn_point = caster:GetAttachmentOrigin(caster:ScriptLookupAttachment("attach_attack2")) --For at det ligner det kommer fra håndet i suppose
 
 	local modifier_stacks = caster:FindModifierByName("modifier_shadow_gun_stack_handler"):GetStackCount()
 	caster:FindModifierByName("modifier_shadow_gun_stack_handler"):SetStackCount(modifier_stacks - 1)
