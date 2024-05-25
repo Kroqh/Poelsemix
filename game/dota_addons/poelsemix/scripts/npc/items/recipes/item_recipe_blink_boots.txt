@@ -1,0 +1,14 @@
+"item_recipe_blink_boots"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"250"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_blink_boots"
+		"ItemRequirements"
+		{
+			"01" "item_boots;item_blink"
+		}
+  	}

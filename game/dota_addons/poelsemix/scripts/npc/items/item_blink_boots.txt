@@ -1,0 +1,39 @@
+"item_blink_boots"
+{
+	"BaseClass"						"item_lua"
+	"AbilityTextureName"			"blink_boots"
+	"ScriptFile"					"items/item_blink_boots.lua"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+  	"ItemCost"					"3000"
+  	"ID"						"3058"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"move_speed;blink"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"dagger"
+
+	"AbilitySharedCooldown"			"blink"
+	"AbilityCooldown"				"9"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"movement_speed" "60"
+		}
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"cooldown" "3" //aka delay when taking damage
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"max_blink_range" "1250"
+		}
+	}
+}
