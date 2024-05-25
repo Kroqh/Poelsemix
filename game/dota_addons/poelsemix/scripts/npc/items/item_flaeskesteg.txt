@@ -21,7 +21,7 @@
 
 	"precache"
         {
-			"particle" "particles/items/fleskesteg/fleskesteg.vpcf"
+			"particle" "particles/items/flaeskesteg_new/flaeskesteg_new.vpcf"
         }
 
 	// Special	

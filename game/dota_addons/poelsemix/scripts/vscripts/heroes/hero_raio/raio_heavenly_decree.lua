@@ -23,11 +23,11 @@ function raio_heavenly_decree:OnSpellStart()
 		local target_point 	= self:GetCursorPosition()
 		self:GetCaster():EmitSound("Hero_Zuus.LightningBolt.Cast")
 		local delay = self:GetSpecialValueFor("delay") 
-		CreateModifierThinker(caster, self, "modifier_raio_heavenly_decree_mark", {duration = delay, target_point_x = target_point.x, target_point_y = target_point.y, target_point_z = target_point.z}, target_point, caster:GetTeamNumber(), false)
+		CreateModifierThinker(caster, self, "modifier_raio_heavenly_decree_mark", {duration = delay, target_point_x = target_point.x, target_point_y = target_point.y, target_point_z = target_point.z, first_strike = true}, target_point, caster:GetTeamNumber(), false)
 	end
 end
 
-function raio_heavenly_decree:CastLightningBolt(caster, ability, target_point)
+function raio_heavenly_decree:CastLightningBolt(caster, ability, target_point, first_strike)
 	if IsServer() then
 		local radius			= ability:GetSpecialValueFor("radius")
 		EmitSoundOnLocationWithCaster(target_point, "raio_heavenly_decree", caster)
@@ -60,6 +60,12 @@ function raio_heavenly_decree:CastLightningBolt(caster, ability, target_point)
 			ApplyDamage(damage_table)
 		end
 	end
+
+	if first_strike and caster:FindAbilityByName("special_bonus_raio_8"):GetLevel() > 0 then
+		 local delay_second = caster:FindAbilityByName("special_bonus_raio_8"):GetSpecialValueFor("value") 
+		 CreateModifierThinker(caster, ability, "modifier_raio_heavenly_decree_mark", {duration = delay_second, target_point_x = target_point.x, target_point_y = target_point.y, target_point_z = target_point.z, first_strike = false}, target_point, caster:GetTeamNumber(), false)
+		end
+
 end
 
 modifier_raio_heavenly_decree_mark = modifier_raio_heavenly_decree_mark or class({})
@@ -69,12 +75,13 @@ function modifier_raio_heavenly_decree_mark:IsPurgable() return false end
 function modifier_raio_heavenly_decree_mark:OnCreated(keys)
 	if IsServer() then
 		self.target_point = Vector(keys.target_point_x, keys.target_point_y, keys.target_point_z)
+		self.first_strike = (keys.first_strike == 1)
 		AddFOWViewer(self:GetCaster():GetTeam(), self.target_point, self:GetAbility():GetSpecialValueFor("radius"), self:GetAbility():GetSpecialValueFor("delay"), false)
 	end
 end
 function modifier_raio_heavenly_decree_mark:OnRemoved()
 	if not IsServer() then return end
-	self:GetAbility():CastLightningBolt(self:GetCaster(), self:GetAbility(), self.target_point)
+	self:GetAbility():CastLightningBolt(self:GetCaster(), self:GetAbility(), self.target_point, self.first_strike)
 end
 
 function modifier_raio_heavenly_decree_mark:GetEffectName()

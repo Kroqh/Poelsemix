@@ -51,7 +51,9 @@ function modifier_item_flaeskesteg:OnDestroy()
 		if not parent:HasModifier("modifier_item_flaeskesteg") then
 			parent:RemoveModifierByName("modifier_item_flaeskesteg_handler_unique")
 		end
-		if parent:HasModifier("modifier_item_flaeskesteg_healing") and (not parent:HasItemInInventory("item_flaeskesteg") or parent:HasItemInInventory("item_flaeskesteg_sovs_kartofler"))then parent:RemoveModifierByName("modifier_item_flaeskesteg_healing") end
+		if parent:HasModifier("modifier_item_flaeskesteg_healing") and (not parent:HasItemInInventory("item_flaeskesteg") or parent:HasItemInInventory("item_flaeskesteg_sovs_kartofler")) then 
+			parent:RemoveModifierByName("modifier_item_flaeskesteg_healing") 
+		end
 	end
 end
 
@@ -64,7 +66,7 @@ function modifier_item_flaeskesteg_handler_unique:RemoveOnDeath()	return false e
 function modifier_item_flaeskesteg_handler_unique:OnCreated()
 	if not IsServer() then return end
 
-	self:StartIntervalThink(FrameTime())
+	self:StartIntervalThink(0.1)
 end
 
 function modifier_item_flaeskesteg_handler_unique:DeclareFunctions()

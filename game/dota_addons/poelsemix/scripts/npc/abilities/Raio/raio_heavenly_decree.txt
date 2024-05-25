@@ -17,6 +17,8 @@
 	"AbilityCooldown"               "60 55 50"
 	"AbilityManaCost"               "200"
 
+	
+
 
 	"precache"
         {

@@ -16,18 +16,13 @@ function modifier_item_flaeskesteg_healing:OnCreated(kv)
 	self.icon = kv.icon
 	self.healing = kv.healing
 	self:SetHasCustomTransmitterData(true)
-	self:StartIntervalThink(FrameTime())
 end
 
-function modifier_item_flaeskesteg_healing:OnIntervalThink(kv)
-	if not IsServer() then return end
-	local parent = self:GetParent()
-	local particle_self = "particles/items/fleskesteg/fleskesteg.vpcf"
-    local pfx_fire = ParticleManager:CreateParticle(particle_self, PATTACH_ABSORIGIN_FOLLOW, parent)
-    ParticleManager:SetParticleControl(pfx_fire, 0,  parent:GetAbsOrigin())
-	self:StartIntervalThink(1)
 
+function modifier_item_flaeskesteg_healing:GetEffectName()
+	return "particles/items/flaeskesteg_new/flaeskesteg_new.vpcf"
 end
+
 
 function modifier_item_flaeskesteg_healing:OnRefresh(kv)
 	if not IsServer() then return end

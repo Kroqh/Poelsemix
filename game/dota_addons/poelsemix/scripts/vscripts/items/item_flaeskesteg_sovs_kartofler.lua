@@ -77,7 +77,7 @@ function modifier_item_flaeskesteg_sovs_kartofler_handler_unique:RemoveOnDeath()
 function modifier_item_flaeskesteg_sovs_kartofler_handler_unique:OnCreated()
 	if not IsServer() then return end
 
-	self:StartIntervalThink(FrameTime())
+	self:StartIntervalThink(0.1)
 end
 
 function modifier_item_flaeskesteg_sovs_kartofler_handler_unique:DeclareFunctions()

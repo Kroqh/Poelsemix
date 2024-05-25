@@ -52,7 +52,7 @@
 	//"Ability15"		"special_bonus_damian_6"
 	
 	//"Ability16"		"special_bonus_damian_7"
-	//"Ability17"		"special_bonus_damian_8"	
+	"Ability17"		"special_bonus_raio_8"	
 
 
 	"Facets" {}						

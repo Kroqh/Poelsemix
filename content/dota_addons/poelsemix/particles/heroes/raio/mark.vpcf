@@ -103,6 +103,7 @@
 		},
 		{
 			_class = "C_OP_FadeInSimple"
+			m_flFadeInTime = 1.0
 		},
 	]
 	m_Renderers = 
