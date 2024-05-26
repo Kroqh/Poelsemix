@@ -70,7 +70,7 @@
 			"08"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"voltage_marks"					"4 6 8"
+				"voltage_marks"					"6 8 10"
 			}
 		}
 	

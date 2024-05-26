@@ -131,13 +131,15 @@ modifier_raio_heavenly_decree_scepter = modifier_raio_heavenly_decree_scepter or
 
 function modifier_raio_heavenly_decree_scepter:OnCreated()
 	if IsServer() then
-		self:StartIntervalThink(0.1)
+		if not self:GetCaster():IsIllusion() then --or afterimage will spam it
+			self:StartIntervalThink(0.1)
+		end
 	end
 end
 
 function modifier_raio_heavenly_decree_scepter:IsHidden() return true end
 function modifier_raio_heavenly_decree_scepter:IsPurgable() return false end
-function modifier_raio_heavenly_decree_scepter:IsPassive() return false end
+function modifier_raio_heavenly_decree_scepter:IsPassive() return true end
 
 function modifier_raio_heavenly_decree_scepter:OnIntervalThink()
 	if IsServer() then
