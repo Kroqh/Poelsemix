@@ -455,7 +455,7 @@
 					{
 						_class = "AnimFile"
 						name = "cast2"
-						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						activity_name = "ACT_DOTA_CAST_ABILITY_2"
 						activity_weight = 1
 						weight_list_name = ""
 						fade_in_time = 0.2
@@ -494,6 +494,28 @@
 						start_frame = 997
 						end_frame = 1020
 						framerate = 60.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "cast3"
+						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/raio/raio_model.fbx"
+						import_bone_scales = false
+						start_frame = 625
+						end_frame = 650
+						framerate = 30.0
 						reverse = false
 					},
 				]

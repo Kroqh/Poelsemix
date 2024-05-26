@@ -28,7 +28,7 @@ function shadow_gun:CastFilterResultLocation()
 end
 
 function shadow_gun:GetCustomCastErrorLocation()
-	return "No ammo available"
+	return "NO AMMO"
 end
 
 

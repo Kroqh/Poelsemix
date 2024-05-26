@@ -13,6 +13,7 @@ function musashi_wind:GetCastRange()
 end
 
 function musashi_wind:OnSpellStart()
+	if not IsServer() then return end
 	local caster = self:GetCaster()
     caster:AddNewModifier(caster, self, "modifier_musashi_wind_dash", {})
     

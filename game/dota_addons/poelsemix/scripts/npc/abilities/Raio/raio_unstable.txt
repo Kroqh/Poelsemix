@@ -17,9 +17,7 @@
 	"precache"
         {
 	"particle"	"particles/units/heroes/hero_zuus/zuus_arc_lightning_.vpcf"
-	"soundfile"       "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
-	"particle"		"particles/heroes/raio/mark.vpcf"
-	"soundfile" 				"soundevents/raio_soundevent.vsndevts"
+	"particle"		"particles/units/heroes/hero_zuus/zuus_shard_slow.vpcf"
         }
 	
 	    "AbilitySpecial"
@@ -28,6 +26,7 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"rate"					"2 1.85 1.7 1.65"
+				"LinkedSpecialBonus" "special_bonus_raio_3"
 			}
 			"02"
 			{
@@ -48,6 +47,11 @@
 			{
 				"var_type"						"FIELD_INTEGER"
 				"targets_to_hit"						"1"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"voltage_falloff"						"3"
 			}
 		}
 	

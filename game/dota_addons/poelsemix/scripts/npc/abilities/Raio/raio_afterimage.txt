@@ -1,0 +1,46 @@
+"raio_afterimage"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_raio/raio_afterimage"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityTextureName"			"raio_afterimage"
+	"AbilityCooldown"				"17 16 16 14"
+	"AbilityManaCost"				"110 105 100 95"
+	"AbilityCastPoint"				"0.0"
+	"precache"
+	{	
+		"particle" "particles/units/heroes/hero_stormspirit/stormspirit_ball_lightning.vpcf"
+		"soundfile"       "soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
+	}
+	"AbilitySpecial"
+	{
+	    "01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"velocity" "2500"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"range" "600 635 670 705" //dash range
+		}
+		"03"
+		{
+			"var_type" "FIELD_INTEGER"
+			"afterimage_dmg_percent" "-70"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"afterimage_taken_percent" "259" //0 is 100% 
+		}
+		"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"afterimage_duration" "3.5 4 4.5 5"
+			"LinkedSpecialBonus" "special_bonus_raio_1"
+		}
+	}
+}

@@ -1,0 +1,24 @@
+"special_bonus_raio_4"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"raio_amp_it_up"
+	}	
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_FLOAT"
+			"value" "0.1" //int scaling per voltage
+		}
+	}	
+}

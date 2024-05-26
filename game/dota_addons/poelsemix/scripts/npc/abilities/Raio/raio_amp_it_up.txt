@@ -1,0 +1,47 @@
+"raio_amp_it_up"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+
+
+	//Note the base code for voltage marks is on unstable
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_raio/raio_amp_it_up"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityTextureName"			"raio_amp"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_NONE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"	
+	
+	"AbilityCastPoint"				"0.2"
+	"AbilityCooldown"               "6"
+	"AbilityManaCost"               "130 120 110 100"
+
+	"precache"
+        {
+		"particle"	"particles/econ/items/storm_spirit/strom_spirit_ti8/storm_sprit_ti8_overload_discharge.vpcf"
+        }
+	
+	    "AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"base_damage_per_volt"					"16 20 24 28"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"int_damage_scaling_per_volt"			"0.2 0.25 0.3 0.35"
+				"LinkedSpecialBonus" "special_bonus_raio_4"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"range"						"1000"
+			}
+		}
+	
+}

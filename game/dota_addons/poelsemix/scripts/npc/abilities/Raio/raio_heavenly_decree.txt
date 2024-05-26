@@ -35,7 +35,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"600 950 1300"
+				"damage"					"600 900 1200"
 			}
 			"02"
 			{
@@ -66,6 +66,11 @@
 			{
 				"var_type"						"FIELD_FLOAT"
 				"scepter_cd"						"20 16 12"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"voltage_marks"					"4 6 8"
 			}
 		}
 	

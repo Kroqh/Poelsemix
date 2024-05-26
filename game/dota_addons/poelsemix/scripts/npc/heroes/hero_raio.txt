@@ -4,9 +4,9 @@
 	"model" "models/raio/raio.vmdl"
 	"ModelScale"	"0.7"
 	"DisableWearables"				"1"
-	//"Ability1" "damian_penjamin"				
+	"Ability1" "raio_amp_it_up"				
 	"Ability2" "raio_unstable"
-	//"Ability3" "damian_faded"
+	"Ability3" "raio_afterimage"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "raio_heavenly_decree"
@@ -42,16 +42,16 @@
 
 	//Lav nye talents
 	
-	//"Ability10"		"special_bonus_damian_1"
-	//"Ability11"		"special_bonus_damian_2"
+	"Ability10"		"special_bonus_raio_1"
+	"Ability11"		"special_bonus_raio_2"
 	
-	//"Ability12"		"special_bonus_damian_3"
-	//"Ability13"		"special_bonus_damian_4"
+	"Ability12"		"special_bonus_raio_3"
+	"Ability13"		"special_bonus_raio_4"
 	
 	"Ability14"		"special_bonus_raio_5"
-	//"Ability15"		"special_bonus_damian_6"
+	"Ability15"		"special_bonus_raio_6"
 	
-	//"Ability16"		"special_bonus_damian_7"
+	"Ability16"		"special_bonus_raio_7"
 	"Ability17"		"special_bonus_raio_8"	
 
 
