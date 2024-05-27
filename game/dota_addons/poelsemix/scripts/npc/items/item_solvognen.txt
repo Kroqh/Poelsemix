@@ -1,0 +1,75 @@
+"item_solvognen"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_lua"
+	"ScriptFile"					"items/item_solvognen.lua"
+  	"AbilityTextureName"        "solvognen"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_NONE"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+  	"ItemCost"					"7400"
+  	"ID"						"2005"
+	"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"damage;regen_health;aura"
+	"ItemQuality"					"artifact"
+	"ItemAliases"					"solvognen"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"damage"					"55"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"health_regen"						"5"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"evasion"	"20"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"aura_regen_sec"					"10"
+		}
+		"05"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"aura_damage_sec"					"70"
+		}
+		"06"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"aura_radius"					"700"
+		}
+		"07"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"aura_tick_rate"					"0.1"
+		}
+		"08"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"aura_missrate"					"15"
+		}
+		"09"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"aura_illusion_reduced_effectiveness"					"-40"
+		}
+	}
+}

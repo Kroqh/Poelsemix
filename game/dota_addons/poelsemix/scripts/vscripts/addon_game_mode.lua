@@ -48,6 +48,7 @@ function Precache( context )
 	PrecacheResource( "particle", "particles/econ/courier/courier_flopjaw_gold/flopjaw_death_coins_gold.vpcf", context )
 	PrecacheResource( "particle", "particles/econ/items/queen_of_pain/qop_arcana/qop_arcana_msg_deny_symbol.vpcf", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_jakiro/jakiro_macropyre_firehit.vpcf", context )
+	PrecacheResource( "particle", "particles/econ/items/ogre_magi/ogre_2022_cc/ogre_2022_cc_trail_fire.vpcf", context )
 	
 
 	--Cache the gold bags

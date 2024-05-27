@@ -77,6 +77,7 @@
 		"item"		"item_flaeskesteg_sovs_kartofler"
 		"item"          "item_pocket_gametecher"
 		"item"		"item_abaddon_lichcap"
+		"item"		"item_solvognen"
 		"item"		"item_trump_card"
 		"item"		"item_unity"
 		"item"		"item_hygge"

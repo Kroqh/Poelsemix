@@ -179,11 +179,6 @@
 			m_fRadiusMin = 10.0
 		},
 		{
-			_class = "C_INIT_RandomColor"
-			m_ColorMin = [ 30, 144, 255 ]
-			m_ColorMax = [ 0, 0, 205 ]
-		},
-		{
 			_class = "C_INIT_RandomSequence"
 			m_bDisableOperator = true
 		},
@@ -204,6 +199,11 @@
 			_class = "C_INIT_PositionOffset"
 			m_OffsetMin = [ 0.0, 0.0, 1.0 ]
 			m_OffsetMax = [ 0.0, 0.0, 1.0 ]
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = [ 0, 0, 255 ]
+			m_ColorMax = [ 0, 0, 226 ]
 		},
 	]
 	m_Operators = 

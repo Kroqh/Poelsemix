@@ -137,8 +137,8 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin = [ 100, 149, 237 ]
-			m_ColorMax = [ 0, 0, 255 ]
+			m_ColorMin = [ 0, 0, 255 ]
+			m_ColorMax = [ 0, 0, 226 ]
 		},
 		{
 			_class = "C_INIT_RandomSequence"

@@ -3,6 +3,8 @@ LinkLuaModifier("modifier_harald_convert_bonus","heroes/hero_harald/harald_conve
 
 ha_convert = ha_convert or class({})
 
+
+
 function ha_convert:OnSpellStart()
 	if not IsServer() then return end
     local caster = self:GetCaster()
@@ -13,6 +15,16 @@ function ha_convert:OnSpellStart()
     target:AddNewModifier(caster, self, "modifier_harald_convert", {duration = duration})
 end
 
+function ha_convert:GetAOERadius()
+    local caster = self:GetCaster()
+    radius = 0
+    if caster:FindAbilityByName("special_bonus_harald_8"):GetLevel() > 0 then 
+        radius= radius + caster:FindAbilityByName("special_bonus_harald_8"):GetSpecialValueFor("value")
+    end
+    return radius
+end
+
+
 
 modifier_harald_convert = modifier_harald_convert or class({})
 
@@ -20,7 +32,7 @@ function modifier_harald_convert:IsPurgable() return true end
 function modifier_harald_convert:GetTexture() return "ha_convert" end
 function modifier_harald_convert:GetAbsoluteNoDamagePhysical() return 1 end
 function modifier_harald_convert:GetAuraSearchTeam()	return self:GetAbility():GetAbilityTargetTeam() end
-function modifier_harald_convert:GetAuraSearchType()	return DOTA_UNIT_TARGET_BASIC end
+function modifier_harald_convert:GetAuraSearchType()	return DOTA_UNIT_TARGET_BASIC + DOTA_UNIT_TARGET_HERO end
 function modifier_harald_convert:GetModifierAura()			return  "modifier_harald_convert_bonus" end
 function modifier_harald_convert:IsAura()
     if not IsServer() then return end
@@ -43,6 +55,8 @@ function modifier_harald_convert:GetStatusEffectName() return "particles/status_
 function modifier_harald_convert:StatusEffectPriority() return 2 end
 
 modifier_harald_convert_bonus = modifier_harald_convert_bonus or class({})
+
+function modifier_harald_convert_bonus:IsHidden() return self:GetParent():HasModifier("modifier_harald_convert") end
 
 function modifier_harald_convert_bonus:GetTexture() return "ha_convert" end
 function modifier_harald_convert_bonus:GetAbsoluteNoDamagePhysical() return 1 end

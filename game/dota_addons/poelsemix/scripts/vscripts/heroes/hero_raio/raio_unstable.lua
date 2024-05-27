@@ -62,6 +62,7 @@ end
 function modifier_raio_unstable_passive:OnIntervalThink()
 	if not IsServer() then return end
 	local parent = self:GetParent()
+	if not parent:IsAlive() then return end
 	local ability = self:GetAbility()
 	local radius = self:GetAbility():GetSpecialValueFor("radius") + self:GetCaster():GetCastRangeBonus()
 	
