@@ -13,35 +13,31 @@ shimakaze_modifier_dangerous_sea = shimakaze_modifier_dangerous_sea or class({})
 
 function shimakaze_modifier_dangerous_sea:OnCreated()
 	if IsServer() then
-		local caster = self:GetCaster()
-
-		self.pos = caster:GetAbsOrigin()
-        self.prevPos = caster:GetAbsOrigin()--moved from shimakaze_water
-		self:StartIntervalThink(0.2)
+		local parent= self:GetParent()
+        self.prevPos = parent:GetAbsOrigin()
+		self.distance = 0
+		self:StartIntervalThink(FrameTime())
 	end
 end
 
 function shimakaze_modifier_dangerous_sea:OnIntervalThink()
 	if IsServer() then
-		local caster = self:GetCaster()
-		local distanceDifference = FindDistance(self.pos, caster:GetAbsOrigin())
+		local parent = self:GetParent()
+		self.distance = self.distance + FindDistance(self.prevPos, parent:GetAbsOrigin())
 		local duration = self:GetAbility():GetSpecialValueFor("duration")
-        if caster:FindAbilityByName("special_bonus_shimakaze_7"):GetLevel() > 0 then duration = duration + caster:FindAbilityByName("special_bonus_shimakaze_7"):GetSpecialValueFor("value") end
+        if self:GetCaster():FindAbilityByName("special_bonus_shimakaze_7"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_shimakaze_7"):GetSpecialValueFor("value") end
 		local distance_req = self:GetAbility():GetSpecialValueFor("distance_req")
 
-		if distanceDifference >= distance_req then
-			local thinker = CreateModifierThinker(caster, self:GetAbility(), "shimakaze_modifier_dangerous_sea_pool", {duration = duration}, caster:GetAbsOrigin(), caster:GetTeamNumber(), false)
-			self.pos = caster:GetAbsOrigin()
-		end
-
-        --moved from shimakaze_water
-		if self.prevPos ~= caster:GetAbsOrigin() then
+		if self.distance >= distance_req then
+			local thinker = CreateModifierThinker(parent, self:GetAbility(), "shimakaze_modifier_dangerous_sea_pool", {duration = duration}, parent:GetAbsOrigin(), parent:GetTeamNumber(), false)
 			self.particle = "particles/heroes/shimakaze/shimakaze_run_water.vpcf"
-			self.pfx = ParticleManager:CreateParticle(self.particle, PATTACH_ABSORIGIN_FOLLOW, caster)
-			ParticleManager:SetParticleControlEnt(self.pfx, 2, caster, PATTACH_POINT_FOLLOW, "attach_origin", caster:GetAbsOrigin(), true)
+			self.pfx = ParticleManager:CreateParticle(self.particle, PATTACH_ABSORIGIN_FOLLOW, parent)
+			ParticleManager:SetParticleControlEnt(self.pfx, 2, parent, PATTACH_POINT_FOLLOW, "attach_origin", parent:GetAbsOrigin(), true)
+			self.pos = parent:GetAbsOrigin()
+			self.distance = self.distance % distance_req --ensure blinking doesnt spam on arrival
 		end
 
-		self.prevPos = caster:GetAbsOrigin()
+		self.prevPos = parent:GetAbsOrigin()
 	end
 end
 

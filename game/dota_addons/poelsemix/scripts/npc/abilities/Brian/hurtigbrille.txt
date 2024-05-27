@@ -14,10 +14,8 @@
 		"precache"
         {
         "particle" "particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_ambient_esl_fire.vpcf"
-		 "particle" "particles/econ/items/ogre_magi/ogre_2022_cc/ogre_2022_cc_trail_fire.vpcf"
+		 "particle" "particles/heroes/brian/hurtig_brille_fire_trail.vpcf"
         }
-	
-	
 	"AbilitySpecial"
 	{
 	    "01"
@@ -28,7 +26,7 @@
 		"02"
 	    {
 	        "var_type"          "FIELD_INTEGER"
-	        "aspeed"      "10 20 30 40"
+	        "aspeed"      "10 20 30 40" //This is actually agility, not attackspeed lol
 	    }
 		"03"
 	    {
@@ -39,17 +37,22 @@
 		"04"
 	    {
 	        "var_type"          "FIELD_INTEGER"
-	        "scepter_damage_tick"      "25"
+	        "scepter_damage_per_fire"      "250"
 	    }
 		"05"
 		{
 	        "var_type"          "FIELD_INTEGER"
-	        "scepter_radius"      "250"
+	        "scepter_radius"      "100"
 	    }
 		"06"
 		{
 	        "var_type"          "FIELD_FLOAT"
 	        "scepter_tick_rate"      "0.2"
+	    }
+		"07"
+		{
+	        "var_type"          "FIELD_FLOAT"
+	        "scepter_duration"      "2"
 	    }
 
 	}
