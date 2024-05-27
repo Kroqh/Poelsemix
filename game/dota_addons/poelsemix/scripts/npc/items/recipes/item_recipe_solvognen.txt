@@ -1,14 +1,14 @@
-"item_recipe_sandals"
+"item_recipe_solvognen"
 {
   	"BaseClass"                 "item_datadriven"
   	"AbilityTextureName"        "recipe"
   	"Model"						"models/props_gameplay/recipe.mdl"
-  	"ItemCost"					"0"
+  	"ItemCost"					"375"
 	"ItemShopTags"				""
 	"ItemRecipe"				"1"
-	"ItemResult"				"item_sandals"
+	"ItemResult"				"item_solvognen"
 	"ItemRequirements"
 	{
-		"01" "item_broadsword;item_phase_boots;item_claymore"
+		"01" "item_radiance;item_ring_of_tarrasque;item_headdress"
 	}
 }
