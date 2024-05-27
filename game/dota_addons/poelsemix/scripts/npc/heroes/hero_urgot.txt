@@ -14,7 +14,7 @@
 	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"
 
 
-	"MovementTurnRate"		"100"
+	"MovementTurnRate"		"1"
 
 	"AttackRange"			"400"
 	"AttackAcquisitionRange"	"400"

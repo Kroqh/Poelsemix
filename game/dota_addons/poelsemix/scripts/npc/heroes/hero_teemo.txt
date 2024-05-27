@@ -25,6 +25,8 @@
 
 	"ArmorPhysical"		"-1"
 
+	"MovementTurnRate"		"1"
+
 	"AttributeBaseStrength"			"17"									
 	"AttributeStrengthGain"			"1.9"
 	"AttributeBaseAgility"		"20"

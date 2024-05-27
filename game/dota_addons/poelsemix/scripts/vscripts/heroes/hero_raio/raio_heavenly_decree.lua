@@ -97,7 +97,7 @@ function raio_heavenly_decree:CastLightningBolt(caster, ability, target_point, f
 
 	if first_strike and caster:FindAbilityByName("special_bonus_raio_8"):GetLevel() > 0 then
 		 local delay_second = caster:FindAbilityByName("special_bonus_raio_8"):GetSpecialValueFor("value") 
-		 CreateModifierThinker(caster, ability, "modifier_raio_heavenly_decree_mark", {duration = delay_second, target_point_x = target_point.x, target_point_y = target_point.y, target_point_z = target_point.z, first_strike = false}, target_point, caster:GetTeamNumber(), false)
+		 CreateModifierThinker(caster, ability, "modifier_raio_heavenly_decree_mark", {duration = delay_second, target_point_x = target_point.x, target_point_y = target_point.y, target_point_z = target_point.z, first_strike = false, marks = marks}, target_point, caster:GetTeamNumber(), false)
 		end
 
 end
