@@ -25,6 +25,7 @@ function modifier_kaj_rap:IsHidden() return false end
 function modifier_kaj_rap:IsPurgable() return false end
 function modifier_kaj_rap:OnCreated()
 	if not IsServer() then return end
+    self:GetCaster():StartGesture(ACT_DOTA_CHANNEL_ABILITY_2)
         self.radius = self:GetAbility():GetSpecialValueFor("radius")
         if self:GetCaster():FindAbilityByName("special_bonus_kaj_3"):GetLevel() > 0 then self.radius = self.radius + self:GetCaster():FindAbilityByName("special_bonus_kaj_3"):GetSpecialValueFor("value") end
         self.damage = self:GetAbility():GetSpecialValueFor("damage")
@@ -52,6 +53,9 @@ function modifier_kaj_rap:OnRemoved(death)
         caster:StopSound("KajRap1")
         return 
     end
+
+    caster:FadeGesture(ACT_DOTA_CHANNEL_ABILITY_2)
+    caster:StartGesture(ACT_DOTA_CAST_ABILITY_2)
     local ability = self:GetAbility()
     
     local particle = ParticleManager:CreateParticle("particles/units/heroes/hero_kajr/rap.vpcf", PATTACH_POINT, self:GetCaster())

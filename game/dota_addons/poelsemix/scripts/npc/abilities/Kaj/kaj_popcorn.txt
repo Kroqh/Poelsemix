@@ -10,7 +10,7 @@
         "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
         "AbilityCooldown"           "20 18 16 14"
         "AbilityManaCost"           "100 90 80 70"
-	"AbilityCastPoint"				"0.2"
+	"AbilityCastPoint"				"0.3"
 
 
         "AbilitySpecial"

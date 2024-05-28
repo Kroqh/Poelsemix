@@ -27,6 +27,7 @@ function kaj_popcorn:OnSpellStart()
 				bVisibleToEnemies = true,
 				bReplaceExisting = false,
 				bProvidesVision = false,
+				iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1
 			}
 		ProjectileManager:CreateTrackingProjectile(projectile)
         caster:EmitSound("KajPop2")

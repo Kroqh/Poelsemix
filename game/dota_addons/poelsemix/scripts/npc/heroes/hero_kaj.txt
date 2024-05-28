@@ -2,7 +2,7 @@
 {
 	"override_hero" "npc_dota_hero_rubick"
     	"DisableWearables"				"1"
-	"Model"				"models/courier/frog/frog.vmdl"
+	"Model"				"models/kaj/kaj_model.vmdl"
 	"Ability1" "kaj_popcorn"
 	"Ability2" "kaj_rap"
 	"Ability3" "kaj_succ"
