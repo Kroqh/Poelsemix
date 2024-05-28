@@ -73,7 +73,7 @@ modifier_noxious_trap_stack_handler = modifier_noxious_trap_stack_handler or cla
 function modifier_noxious_trap_stack_handler:IsDebuff() 	return false end
 function modifier_noxious_trap_stack_handler:IsHidden() 	return false end
 function modifier_noxious_trap_stack_handler:IsPassive() 	return true end
-function modifier_noxious_trap_stack_handler:IsPurgeable() return false end
+function modifier_noxious_trap_stack_handler:IsPurgable() return false end
 
 function modifier_noxious_trap_stack_handler:OnCreated()
 	if IsServer() then
@@ -144,7 +144,7 @@ modifier_noxious_trap_invis = class({})
 
 function modifier_noxious_trap_invis:IsHidden() return true end
 
-function modifier_noxious_trap_invis:IsPurgeable() return false end
+function modifier_noxious_trap_invis:IsPurgable() return false end
 function modifier_noxious_trap_invis:IsDebuff() return false end
 
 function modifier_noxious_trap_invis:DeclareFunctions()

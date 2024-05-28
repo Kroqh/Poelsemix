@@ -8,7 +8,7 @@ end
 
 modifier_mette_rose = modifier_mette_rose or class({})
 
-function modifier_mette_rose:IsPurgeable() return false end
+function modifier_mette_rose:IsPurgable() return false end
 function modifier_mette_rose:IsHidden() return false end
 function modifier_mette_rose:IsPassive() return true end
 function modifier_mette_rose:RemoveOnDeath()	return false end

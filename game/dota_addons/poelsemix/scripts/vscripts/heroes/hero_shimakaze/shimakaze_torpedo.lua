@@ -163,7 +163,7 @@ end
 
 shimakaze_modifier_torpedo_stun = shimakaze_modifier_torpedo_stun or class({})
 
-function shimakaze_modifier_torpedo_stun:IsPurgeable() return true end
+function shimakaze_modifier_torpedo_stun:IsPurgable() return true end
 function shimakaze_modifier_torpedo_stun:IsHidden() return false end
 
 function shimakaze_modifier_torpedo_stun:GetEffectName()

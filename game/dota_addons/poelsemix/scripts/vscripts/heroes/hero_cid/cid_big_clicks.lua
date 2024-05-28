@@ -61,7 +61,7 @@ end
 modifier_big_clicks = modifier_big_clicks or class({})
 
 function modifier_big_clicks:IsBuff() return true end
-function modifier_big_clicks:IsPurgeable() return true end
+function modifier_big_clicks:IsPurgable() return true end
 function modifier_big_clicks:IsHidden() return false end
 
 function modifier_big_clicks:DeclareFunctions()
@@ -140,7 +140,7 @@ function modifier_big_clicks_passive:IsHidden()
 	return true
 end
 
-function modifier_big_clicks_passive:IsPurgeable() return false end
+function modifier_big_clicks_passive:IsPurgable() return false end
 
 function modifier_big_clicks_passive:DeclareFunctions()
     local decFuncs =
@@ -211,7 +211,8 @@ function modifier_big_clicks_thinker:OnCreated()
 end
 
 function modifier_big_clicks_thinker:IsHidden() return true end
-function modifier_big_clicks_thinker:IsPurgeable() return false end
+function modifier_big_clicks_thinker:IsPassive() return true end
+function modifier_big_clicks_thinker:IsPurgable() return false end
 
 function modifier_big_clicks_thinker:OnIntervalThink()
 	if IsServer() then

@@ -103,7 +103,8 @@ end
 
 modifier_move_quick_passive = class({})
 
-function modifier_move_quick_passive:IsPurgeable() return false end
+function modifier_move_quick_passive:IsPurgable() return false end
+function modifier_move_quick_passive:IsPassive() return true end
 function modifier_move_quick_passive:IsBuff() return true end
 
 function modifier_move_quick_passive:OnCreated()

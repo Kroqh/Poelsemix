@@ -10,7 +10,7 @@ modifier_kazuya_rage_fury_handler = modifier_kazuya_rage_fury_handler or class({
 
 
 
-function modifier_kazuya_rage_fury_handler:IsPurgeable() return false end
+function modifier_kazuya_rage_fury_handler:IsPurgable() return false end
 function modifier_kazuya_rage_fury_handler:IsHidden() return false end
 function modifier_kazuya_rage_fury_handler:IsPassive() return true end
 function modifier_kazuya_rage_fury_handler:RemoveOnDeath()	return false end
@@ -102,7 +102,7 @@ end
 
 modifier_kazuya_rage = modifier_kazuya_rage or class({})
 
-function modifier_kazuya_rage:IsPurgeable() return false end
+function modifier_kazuya_rage:IsPurgable() return false end
 function modifier_kazuya_rage:IsHidden() return false end
 
 function modifier_kazuya_rage:GetStatusEffectName()

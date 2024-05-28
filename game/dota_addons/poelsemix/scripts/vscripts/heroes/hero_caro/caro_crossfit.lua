@@ -7,7 +7,7 @@ end
 
 modifier_caro_crossfit = modifier_caro_crossfit or class({})
 
-function modifier_caro_crossfit:IsPurgeable() return false end
+function modifier_caro_crossfit:IsPurgable() return false end
 function modifier_caro_crossfit:IsHidden() return true end
 function modifier_caro_crossfit:IsPassive() return true end
 function modifier_caro_crossfit:RemoveOnDeath()	return false end

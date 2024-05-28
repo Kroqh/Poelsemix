@@ -60,7 +60,8 @@ end
 
 shimakaze_modifier_destroyer_speed_passive = shimakaze_modifier_destroyer_speed_passive or class({})
 
-function shimakaze_modifier_destroyer_speed_passive:IsPurgeable() return false end
+function shimakaze_modifier_destroyer_speed_passive:IsPureable() return false end
+function shimakaze_modifier_destroyer_speed_passive:IsPassive() return true end
 
 function shimakaze_modifier_destroyer_speed_passive:OnCreated()
 	if IsServer() then

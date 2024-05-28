@@ -47,7 +47,7 @@ end
 
 modifier_choke_stun = class({})
 
-function modifier_choke_stun:IsPurgeable() return false end
+function modifier_choke_stun:IsPurgable() return false end
 function modifier_choke_stun:IsHidden() return false end
 
 function modifier_choke_stun:GetEffectName()

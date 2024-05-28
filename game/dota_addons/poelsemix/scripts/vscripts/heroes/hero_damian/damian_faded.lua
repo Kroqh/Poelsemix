@@ -83,7 +83,7 @@ function modifier_damian_faded_max_stack_tracker:RemoveOnDeath() return false en
 
 modifier_damian_faded_pooped= modifier_damian_faded_pooped or class({})
 
-function modifier_damian_faded_pooped:IsPurgeable() return true end
+function modifier_damian_faded_pooped:IsPurgable() return true end
 function modifier_damian_faded_pooped:IsHidden() return false end
 function modifier_damian_faded_pooped:RemoveOnDeath() return true end
 function modifier_damian_faded_pooped:IsDebuff() return true end

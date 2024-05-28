@@ -107,7 +107,7 @@ function modifier_urgot_capacitor_slow:OnCreated()
     self.slow = -self:GetAbility():GetSpecialValueFor("slow_percent")
 end
 
-function modifier_urgot_capacitor_slow:IsPurgeable() return true end
+function modifier_urgot_capacitor_slow:IsPurgable() return true end
 function modifier_urgot_capacitor_slow:IsHidden() return false end
 function modifier_urgot_capacitor_slow:IsDebuff() return true end
 

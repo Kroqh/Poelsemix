@@ -8,7 +8,7 @@ end
 
 modifier_mink_passive = modifier_mink_passive  or class({})
 
-function modifier_mink_passive:IsPurgeable() return false end
+function modifier_mink_passive:IsPurgable() return false end
 function modifier_mink_passive:IsHidden() return true end
 function modifier_mink_passive:IsPassive() return true end
 

@@ -1,6 +1,6 @@
 modifier_intruder_stealth = modifier_intruder_stealth or class({})
 
-function modifier_intruder_stealth:IsPurgeable() return false end
+function modifier_intruder_stealth:IsPurgable() return false end
 function modifier_intruder_stealth:IsDebuff() return false end
 function modifier_intruder_stealth:IsHidden() return false end
 

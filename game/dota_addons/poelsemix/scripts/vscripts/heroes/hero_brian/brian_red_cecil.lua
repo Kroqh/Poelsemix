@@ -61,7 +61,7 @@ end
 modifier_smokerlungs = modifier_smokerlungs or class({})
 
 
-function modifier_smokerlungs:IsPurgeable() return false end
+function modifier_smokerlungs:IsPurgable() return true end
 function modifier_smokerlungs:IsDebuff() return true end
 function modifier_smokerlungs:IsHidden() return false end
 

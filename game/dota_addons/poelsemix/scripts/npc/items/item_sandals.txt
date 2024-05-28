@@ -79,7 +79,7 @@
 		{
 			"IsHidden"			"0"
 			"IsBuff"			"1"
-			"IsPurgeable"		"0"
+			"IsPurgable"		"0"
 
 			"Duration" 			"%phase_duration"
 		

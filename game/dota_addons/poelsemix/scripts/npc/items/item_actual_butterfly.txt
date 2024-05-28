@@ -97,7 +97,7 @@
 		"modifier_actual_butterfly_speed"
 		{
 			"IsBuff" "1"
-			"IsPurgeable" "1"
+			"IsPurgable" "1"
 			"Passive" "0"
 			"Duration" "%duration_lol"
 			

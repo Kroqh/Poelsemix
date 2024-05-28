@@ -13,7 +13,7 @@ end
 
 modifier_awaken = modifier_awaken or class({})
 
-function modifier_awaken:IsPurgeable() return false end
+function modifier_awaken:IsPurgable() return false end
 function modifier_awaken:IsHidden() return true end
 function modifier_awaken:IsPassive() return true end
 function modifier_awaken:RemoveOnDeath()	return false end

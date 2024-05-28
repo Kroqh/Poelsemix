@@ -53,7 +53,7 @@ end
 modifier_multiclick = modifier_multiclick or class({})
 
 function modifier_multiclick:IsBuff() return true end
-function modifier_multiclick:IsPurgeable() return true end
+function modifier_multiclick:IsPurgable() return true end
 function modifier_multiclick:IsHidden() return false end
 
 function modifier_multiclick:DeclareFunctions()

@@ -64,9 +64,8 @@ end
 modifier_mink_massacre_mod = modifier_mink_massacre_mod  or class({})
 LinkLuaModifier("modifier_mink_massacre_mod", "heroes/hero_mette/mink_massacre", LUA_MODIFIER_MOTION_NONE)
 
-function modifier_mink_massacre_mod:IsPurgeable() return false end
+function modifier_mink_massacre_mod:IsPurgable() return false end
 function modifier_mink_massacre_mod:IsHidden() return false end
-function modifier_mink_massacre_mod:IsPassive() return true end
 function modifier_mink_massacre_mod:IsPassive() return true end
 function modifier_mink_massacre_mod:RemoveOnDeath()	return false end
 function modifier_mink_massacre_mod:IsDebuff()	return false end

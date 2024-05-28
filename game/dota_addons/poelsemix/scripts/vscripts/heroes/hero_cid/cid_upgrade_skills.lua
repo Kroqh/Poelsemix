@@ -32,7 +32,7 @@ end
 
 modifier_upgrade_skills = modifier_upgrade_skills or class({})
 
-function modifier_upgrade_skills:IsPurgeable() return false end
+function modifier_upgrade_skills:IsPurgable() return false end
 
 function modifier_upgrade_skills:OnCreated()
 	if IsServer() then

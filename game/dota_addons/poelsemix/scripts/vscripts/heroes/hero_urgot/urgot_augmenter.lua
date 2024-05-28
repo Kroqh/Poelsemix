@@ -13,7 +13,8 @@ function urgot_augmenter:ApplyDebuff(target)
 end
 modifier_urgot_augmenter = modifier_urgot_augmenter or class({})
 
-function modifier_urgot_augmenter:IsPurgeable() return false end
+function modifier_urgot_augmenter:IsPurgable() return false end
+function modifier_urgot_augmenter:IsPassive() return false end
 function modifier_urgot_augmenter:IsHidden() return true end
 
 function modifier_urgot_augmenter:DeclareFunctions()
@@ -34,7 +35,7 @@ end
 
 modifier_urgot_augmenter_debuff = modifier_urgot_augmenter_debuff or class({})
 
-function modifier_urgot_augmenter_debuff:IsPurgeable() return true end
+function modifier_urgot_augmenter_debuff:IsPurgable() return true end
 function modifier_urgot_augmenter_debuff:IsHidden() return false end
 function modifier_urgot_augmenter_debuff:IsDebuff() return true end
 

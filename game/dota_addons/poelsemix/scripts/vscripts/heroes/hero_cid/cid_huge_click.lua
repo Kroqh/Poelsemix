@@ -31,7 +31,7 @@ end
 function modifier_huge_click_attack:GetAttackSound()
 	return "click"
 end
-function modifier_huge_click_attack:IsPurgeable() return false end
+function modifier_huge_click_attack:IsPurgable() return false end
 function modifier_huge_click_attack:IsHidden() return true end
 
 function modifier_huge_click_attack:OnCreated()

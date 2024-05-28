@@ -24,7 +24,7 @@ end
 modifier_intruder_sniper = modifier_intruder_sniper or class({})
 
 function modifier_intruder_sniper:IsBuff() return true end
-function modifier_intruder_sniper:IsPurgeable() return false end
+function modifier_intruder_sniper:IsPurgable() return true end
 function modifier_intruder_sniper:IsHidden() return false end
 
 

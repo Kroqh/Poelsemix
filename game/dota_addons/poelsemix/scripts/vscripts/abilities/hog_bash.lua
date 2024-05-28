@@ -8,7 +8,7 @@ function hog_bash:GetIntrinsicModifierName()
 	return "modifier_hog_bash"
 end
 
-function modifier_hog_bash:IsPurgeable() return false end
+function modifier_hog_bash:IsPurgable() return true end
 function modifier_hog_bash:IsHidden() return true end
 function modifier_hog_bash:IsPassive() return true end
 

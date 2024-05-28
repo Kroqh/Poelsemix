@@ -10,7 +10,8 @@ end
 
 modifier_guerrilla_warfare_passive = modifier_guerrilla_warfare_passive or class({})
 
-function modifier_guerrilla_warfare_passive:IsPurgeable() return false end
+function modifier_guerrilla_warfare_passive:IsPurgable() return false end
+function modifier_guerrilla_warfare_passive:IsPassive() return true end
 function modifier_guerrilla_warfare_passive:IsHidden() return true end
 
 function modifier_guerrilla_warfare_passive:OnCreated()
@@ -81,7 +82,7 @@ end
 
 modifier_guerrilla_warfare_invis = modifier_guerrilla_warfare_invis or class({})
 
-function modifier_guerrilla_warfare_invis:IsPurgeable() return false end
+function modifier_guerrilla_warfare_invis:IsPurgable() return false end
 function modifier_guerrilla_warfare_invis:IsDebuff() return false end
 
 function modifier_guerrilla_warfare_invis:DeclareFunctions()
@@ -158,7 +159,7 @@ end
 
 modifier_guerrilla_warfare_attackspeed = class({})
 
-function modifier_guerrilla_warfare_attackspeed:IsPurgeable() return false end
+function modifier_guerrilla_warfare_attackspeed:IsPurgable() return false end
 function modifier_guerrilla_warfare_attackspeed:IsBuff() return true end
 
 function modifier_guerrilla_warfare_attackspeed:OnCreated()

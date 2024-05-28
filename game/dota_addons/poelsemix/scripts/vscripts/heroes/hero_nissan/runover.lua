@@ -94,7 +94,7 @@ end
 modifier_runover_stun = class({})
 
 function modifier_runover_stun:IgnoreTenacity() return true end
-function modifier_runover_stun:IsPurgeable() return false end
+function modifier_runover_stun:IsPurgable() return false end
 function modifier_runover_stun:IsHidden() return false end
 
 function modifier_runover_stun:GetEffectName()

@@ -9,7 +9,7 @@ end
 
 modifier_damian_fadedthanaho_passive = modifier_damian_fadedthanaho_passive or class({})
 
-function modifier_damian_fadedthanaho_passive:IsPurgeable() return false end
+function modifier_damian_fadedthanaho_passive:IsPurgable() return false end
 function modifier_damian_fadedthanaho_passive:IsHidden() return true end
 function modifier_damian_fadedthanaho_passive:IsPassive() return true end
 function modifier_damian_fadedthanaho_passive:RemoveOnDeath()	return false end
@@ -67,7 +67,7 @@ end
 
 modifier_damian_fadedthanaho_stack = modifier_damian_fadedthanaho_stack or class({})
 
-function modifier_damian_fadedthanaho_stack:IsPurgeable() return false end
+function modifier_damian_fadedthanaho_stack:IsPurgable() return false end
 function modifier_damian_fadedthanaho_stack:IsHidden() return false end
 function modifier_damian_fadedthanaho_stack:RemoveOnDeath()	return true end
 

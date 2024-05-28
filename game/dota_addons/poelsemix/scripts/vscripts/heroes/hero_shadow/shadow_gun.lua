@@ -113,7 +113,7 @@ modifier_shadow_gun_stack_handler = modifier_shadow_gun_stack_handler or class({
 function modifier_shadow_gun_stack_handler:IsDebuff() 	return false end
 function modifier_shadow_gun_stack_handler:IsHidden() 	return false end
 function modifier_shadow_gun_stack_handler:IsPassive() 	return true end
-function modifier_shadow_gun_stack_handler:IsPurgeable() return false end
+function modifier_shadow_gun_stack_handler:IsPurgable() return false end
 
 function modifier_shadow_gun_stack_handler:IsPurgable() return false end
 

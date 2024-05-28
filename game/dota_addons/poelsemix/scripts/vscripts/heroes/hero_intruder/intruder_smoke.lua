@@ -113,7 +113,7 @@ function intruder_smoke_cloud_modifier_hostile:GetModifierAura()				return "intr
 intruder_smoke_cloud_modifier_debuff = intruder_smoke_cloud_modifier_debuff or class({})
 
 
-function  intruder_smoke_cloud_modifier_debuff:IsPurgeable() return false end
+function  intruder_smoke_cloud_modifier_debuff:IsPurgable() return false end
 function  intruder_smoke_cloud_modifier_debuff:IsDebuff() return true end
 function  intruder_smoke_cloud_modifier_debuff:IsHidden() return false end
 

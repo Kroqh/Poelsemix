@@ -24,7 +24,7 @@ end
 
 modifier_slapper_deflect_passive = modifier_slapper_deflect_passive or class({})
 
-function modifier_slapper_deflect_passive:IsPurgeable() return false end
+function modifier_slapper_deflect_passive:IsPurgable() return false end
 function modifier_slapper_deflect_passive:IsHidden() return false end
 function modifier_slapper_deflect_passive:IsPassive() return true end
 

@@ -53,7 +53,7 @@ modifier_remote_charge_invis = modifier_remote_charge_invis or  class({})
 
 function modifier_remote_charge_invis:IsHidden() return true end
 
-function modifier_remote_charge_invis:IsPurgeable() return false end
+function modifier_remote_charge_invis:IsPurgable() return false end
 function modifier_remote_charge_invis:IsDebuff() return false end
 
 function modifier_remote_charge_invis:DeclareFunctions()

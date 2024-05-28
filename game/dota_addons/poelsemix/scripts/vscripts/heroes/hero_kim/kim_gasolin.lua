@@ -10,7 +10,7 @@ end
 
 kim_gasolin_thinker = kim_gasolin_thinker or class({});
 
-function kim_gasolin_thinker:IsPurgeable() return false end
+function kim_gasolin_thinker:IsPurgable() return false end
 function kim_gasolin_thinker:IsHidden() return true end
 function kim_gasolin_thinker:IsPassive() return true end
 function kim_gasolin_thinker:RemoveOnDeath()	return false end

@@ -71,7 +71,7 @@ end
 modifier_banana_handler = modifier_banana_handler or class({})
 LinkLuaModifier("modifier_banana_handler", "heroes/hero_kim/kim_banana", LUA_MODIFIER_MOTION_NONE)
 function modifier_banana_handler:IsHidden() return true end
-function modifier_banana_handler:IsPurgeable() return false end
+function modifier_banana_handler:IsPurgable() return false end
 
 function modifier_banana_handler:OnCreated()
 	if IsServer() then
