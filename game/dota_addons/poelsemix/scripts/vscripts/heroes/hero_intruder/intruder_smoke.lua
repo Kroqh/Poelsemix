@@ -17,7 +17,7 @@ function intruder_smoke:OnSpellStart()
     -- Launch the smoke grenade projectile
     local smoke_projectile = {
         Target = GetGroundPosition(target_point,nil),
-        vSpawnOrigin = caster:GetAbsOrigin(),
+        vSpawnOrigin = caster:GetAttachmentOrigin( caster:ScriptLookupAttachment( "attach_attack3")) - Vector(0,0,50),
         Source = caster,
         Ability = self,
         fDistance = distance,
@@ -31,7 +31,7 @@ function intruder_smoke:OnSpellStart()
         bIgnoreSource = true,
         bProvidesVision = false,
         --iMoveSpeed = self:GetSpecialValueFor("proj_speed"),
-        iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1,
+        iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_3,
         vVelocity 	= direction * self:GetSpecialValueFor("proj_speed") * Vector(1, 1, 0)
     }
     ProjectileManager:CreateLinearProjectile(smoke_projectile)

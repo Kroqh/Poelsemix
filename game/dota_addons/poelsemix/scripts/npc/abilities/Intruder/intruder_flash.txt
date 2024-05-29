@@ -11,10 +11,11 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.0"
+	"AbilityCastPoint"				"0.3"
 	"AbilityCastRange"				"600 650 700 750"
 
 	// Time		

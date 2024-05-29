@@ -71,7 +71,7 @@ function modifier_intruder_sniper:GetModifierBaseAttackTimeConstant()
 end 
 
 function modifier_intruder_sniper:GetModifierAttackRangeBonus()
-	if self:GetCaster():HasTalent("special_bonus_intruder_3") then return self:GetCaster():FindAbilityByName("special_bonus_intruder_3"):GetSpecialValueFor("value") + self:GetAbility():GetSpecialValueFor("range") end
+	if self:GetCaster():FindAbilityByName("special_bonus_intruder_3"):GetLevel() > 0 then return self:GetCaster():FindAbilityByName("special_bonus_intruder_3"):GetSpecialValueFor("value") + self:GetAbility():GetSpecialValueFor("range") end
     return self:GetAbility():GetSpecialValueFor("range")
 end
 

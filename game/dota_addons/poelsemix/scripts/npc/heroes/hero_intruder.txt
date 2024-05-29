@@ -2,6 +2,9 @@
 {
 	"override_hero"				"npc_dota_hero_sniper"			// Hero to override
 
+	"model"	"models/kaj/intruder_model.vmdl"
+	"ModelScale"	"0.7"
+
 	"Ability1" "intruder_remote_charge"				
 	"Ability2" "intruder_flash"
 	"Ability3" "intruder_smoke"
@@ -45,16 +48,7 @@
 	"Ability16"		"special_bonus_intruder_3"
 	"Ability17"		"special_bonus_intruder_4"
 	
-	
-	"ModelScale"				"1.2"
 	"DisableWearables" "1"
-
-	"precache"
-		{
-			"model" 	"models/items/sniper/sharpshooter_cloak/sharpshooter_cloak.vmdl"
-			"model" 	"models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"
-			"model" 	"models/items/sniper/hare_hunt_rifle/hare_hunt_rifle.vmdl"
-		}
 
 		"Facets" {}
 }

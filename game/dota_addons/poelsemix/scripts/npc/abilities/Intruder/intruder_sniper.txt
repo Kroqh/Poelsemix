@@ -4,14 +4,15 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_intruder/intruder_sniper"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
 	"AbilityTextureName" "intruder_sniper"
 	"HasScepterUpgrade"				"1"
+	"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.0"
+	"AbilityCastPoint"				"0.35"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------

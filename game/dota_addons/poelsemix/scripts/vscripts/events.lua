@@ -216,18 +216,7 @@ function COverthrowGameMode:OnNPCSpawned( event )
 
 
 
-	if npcName == "npc_dota_hero_sniper" then
-		
-		local sniper_cloak = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_cloak/sharpshooter_cloak.vmdl"})
-		sniper_cloak:FollowEntity(hero, true)
-		
-		local sniper_weapon = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/hare_hunt_rifle/hare_hunt_rifle.vmdl"})
-		sniper_weapon:FollowEntity(hero, true)
-		
-		local sniper_mask = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/sniper/sharpshooter_stache/sharpshooter_stache.vmdl"})
-		sniper_mask:FollowEntity(hero, true)
-
-	elseif npcName == "npc_dota_hero_kunkka" then
+	if npcName == "npc_dota_hero_kunkka" then
 		
 		local yahya_sword = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/kunkka/gunsword/kunkka_gunsword.vmdl"})
 		yahya_sword:FollowEntity(hero, true)
