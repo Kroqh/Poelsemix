@@ -37,7 +37,7 @@
 			"02"
 			{
 				"var_type" "FIELD_INTEGER"
-				"base_dmg" "50 55 60 65 70 75"
+				"base_dmg" "56 62 68 74 80 86"
 			}
 			"03"
 			{

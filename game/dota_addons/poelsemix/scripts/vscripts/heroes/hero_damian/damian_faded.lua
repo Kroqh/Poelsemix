@@ -43,16 +43,14 @@ function modifier_damian_faded:OnCreated()
     parent = self:GetParent()
     self.mod = parent:AddNewModifier(parent,self:GetAbility(),"modifier_damian_faded_max_stack_tracker", {})
     self.mod:SetStackCount(self:GetAbility():GetSpecialValueFor("base_max_stacks"))
-    self:StartIntervalThink(self:GetAbility():GetSpecialValueFor("aghs_interval"))
+    self:StartIntervalThink(self:GetAbility():GetSpecialValueFor("free_stack_interval"))
 end
 
 function modifier_damian_faded:OnIntervalThink()
     if not IsServer() then return end
 
-    if self:GetParent():HasScepter() then
-        self:GetParent():EmitSound("damian_yup") 
-        self.mod:SetStackCount(self.mod:GetStackCount()+1) --aghs
-    end
+    self:GetParent():EmitSound("damian_yup") 
+    self.mod:SetStackCount(self.mod:GetStackCount()+1)
 
 end
 
@@ -70,6 +68,8 @@ function modifier_damian_faded:OnStackCountChanged(old)
             duration = self:GetAbility():GetSpecialValueFor("poop_duration")
             if parent:HasTalent("special_bonus_damian_6") then duration = duration + parent:FindAbilityByName("special_bonus_damian_6"):GetSpecialValueFor("value") end 
             parent:AddNewModifier(parent,self:GetAbility(),"modifier_damian_faded_pooped", {duration = duration})
+
+            self.mod:SetStackCount(self.mod:GetStackCount()+self:GetAbility():GetSpecialValueFor("stacks_on_poop"))
     end
 end
 

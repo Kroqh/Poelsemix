@@ -11,7 +11,7 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	
 	"AbilityCooldown"				"22 20 18 16"
-	"AbilityManaCost"       "110 120 130 140"
+	"AbilityManaCost"       "130 125 120 115"
   	"AbilityCastPoint"      "0.5"
 
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"

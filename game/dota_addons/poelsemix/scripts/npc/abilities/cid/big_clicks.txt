@@ -43,7 +43,7 @@
 		"04"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"upgraded_damage" "100 120 140 160"
+			"upgraded_damage" "100 115 130 145"
 			"LinkedSpecialBonus" "special_bonus_cid_4"
 		}
 		"05"

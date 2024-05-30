@@ -22,8 +22,8 @@
 	"AttributeBaseIntelligence"	"23"
 	"AttributeIntelligenceGain"	"1.9"
 
-    "AttackDamageMin"			"51"
-	"AttackDamageMax"			"51"
+    "AttackDamageMin"			"56"
+	"AttackDamageMax"			"56"
 
     "AttackRate"                 "1.6" 	
 	

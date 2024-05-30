@@ -13,7 +13,7 @@ end
 function urgot_reverser:OnSpellStart()
 	if IsServer() then
 		local caster = self:GetCaster()
-		local target = self:GetCursorTarget()
+		self.target = self:GetCursorTarget()
 		if caster:HasScepter() then
 			
 			self.allEnemies = FindUnitsInRadius(caster:GetTeamNumber(),
@@ -33,7 +33,7 @@ function urgot_reverser:OnSpellStart()
 		end
 
 		EmitSoundOn("urgotRStart", caster)
-		EmitSoundOn("urgotRStart", target)
+		EmitSoundOn("urgotRStart", self.target)
 
 		--dmg reduction til urgot del
 		local dmgReducDur = self:GetSpecialValueFor("dmg_red_duration")
@@ -45,7 +45,6 @@ end
 function urgot_reverser:OnChannelThink(flInterval)
 	if IsServer() then
 		local caster = self:GetCaster()
-		local target = self:GetCursorTarget()
 		
 		if caster:HasScepter() then
 			for _,unit in pairs(self.allEnemies) do
@@ -54,8 +53,8 @@ function urgot_reverser:OnChannelThink(flInterval)
 				end
 			end
 		else
-			if not target:HasModifier("modifier_stunned") then
-				target:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.1})
+			if not self.target:HasModifier("modifier_stunned") then
+				self.target:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.1})
 			end
 		end
 	end
@@ -66,12 +65,11 @@ function urgot_reverser:OnChannelFinish(bInterrupted)
 	if bInterrupted then self:GetCaster():RemoveModifierByName("modifier_urgot_reverser") return end
 
 		local caster = self:GetCaster()
-		local target = self:GetCursorTarget()
 
 
 		-- Ministun the target if it's an enemy
-		if target:GetTeamNumber() ~= caster:GetTeamNumber() then
-			target:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.1})
+		if self.target:GetTeamNumber() ~= caster:GetTeamNumber() then
+			self.target:AddNewModifier(caster, self, "modifier_stunned", {duration = 0.1})
 		end
 
 		if caster:HasScepter() then
@@ -82,25 +80,25 @@ function urgot_reverser:OnChannelFinish(bInterrupted)
 
 		-- Play sounds
 		caster:EmitSound("urgotREnd")
-		target:EmitSound("urgotREnd")
+		self.target:EmitSound("urgotREnd")
 
 		-- Disjoint projectiles
 		ProjectileManager:ProjectileDodge(caster)
-		if target:GetTeamNumber() == caster:GetTeamNumber() then
+		if self.target:GetTeamNumber() == caster:GetTeamNumber() then
 			ProjectileManager:ProjectileDodge(target)
 		end
 
 		-- Play caster particle
 		local caster_pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_vengeful/vengeful_nether_swap.vpcf", PATTACH_ABSORIGIN, caster)
 		ParticleManager:SetParticleControlEnt(caster_pfx, 0, caster, PATTACH_POINT_FOLLOW, "attach_hitloc", caster:GetAbsOrigin(), true)
-		ParticleManager:SetParticleControlEnt(caster_pfx, 1, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target:GetAbsOrigin(), true)
+		ParticleManager:SetParticleControlEnt(caster_pfx, 1, self.target, PATTACH_POINT_FOLLOW, "attach_hitloc", self.target:GetAbsOrigin(), true)
 
 		-- Play target particle
-		local target_pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_vengeful/vengeful_nether_swap_target.vpcf", PATTACH_ABSORIGIN, target)
-		ParticleManager:SetParticleControlEnt(target_pfx, 0, target, PATTACH_POINT_FOLLOW, "attach_hitloc", target:GetAbsOrigin(), true)
+		local target_pfx = ParticleManager:CreateParticle("particles/units/heroes/hero_vengeful/vengeful_nether_swap_target.vpcf", PATTACH_ABSORIGIN, self.target)
+		ParticleManager:SetParticleControlEnt(target_pfx, 0, self.target, PATTACH_POINT_FOLLOW, "attach_hitloc", self.target:GetAbsOrigin(), true)
 		ParticleManager:SetParticleControlEnt(target_pfx, 1, caster, PATTACH_POINT_FOLLOW, "attach_hitloc", caster:GetAbsOrigin(), true)
 
-		local target_loc = target:GetAbsOrigin()
+		local target_loc = self.target:GetAbsOrigin()
 		local caster_loc = caster:GetAbsOrigin()
 		
 
@@ -140,7 +138,7 @@ function urgot_reverser:OnChannelFinish(bInterrupted)
 			else
 				Timers:CreateTimer(FrameTime(), function()
 					FindClearSpaceForUnit(caster, target_loc, true)
-					FindClearSpaceForUnit(target, caster_loc, true)
+					FindClearSpaceForUnit(self.target, caster_loc, true)
 				end)
 			end
 			

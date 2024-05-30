@@ -19,7 +19,6 @@
 		"item"		"item_melee_bag"
 		"Item"		"item_laser_surgery"
 		
-		
 
 
 
@@ -71,16 +70,20 @@
 		"item"		"item_hjemmevaernet"
 		"item"		"item_twisted_bow"
 		"item"		"item_block_nineteen"
-		"item"		"item_ultimate_scepter"
+		"item"		"item_solvognen"
+		"item"		"item_abaddon_lichcap"
 		
 		"item"		"item_viking_helmet"
 		"item"		"item_flaeskesteg_sovs_kartofler"
-		"item"          "item_pocket_gametecher"
-		"item"		"item_abaddon_lichcap"
-		"item"		"item_solvognen"
+		"item"       "item_pocket_gametecher"
+		
 		"item"		"item_trump_card"
-		"item"		"item_unity"
+		
 		"item"		"item_hygge"
+		"item"		"item_brunsviger"
+
+		"item"		"item_unity"
+		"item"		"item_ultimate_scepter"
 		
 		
 		

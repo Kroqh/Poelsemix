@@ -39,7 +39,7 @@
 						"Types"			"DOTA_UNIT_TARGET_HERO"
 						"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 					}
-					"XPAmount"		"10"
+					"XPAmount"		"9"
 					"SplitEvenly"	"0"
 					"GoldAmount"	"0"
 					"ReliableGold"	"0"

@@ -13,19 +13,19 @@
 
 
 	"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
-	"AttributeBaseStrength"		"15"
-	"AttributeStrengthGain"		"1.4"
+	"AttributeBaseStrength"		"18"
+	"AttributeStrengthGain"		"1.9"
 	"AttributeBaseAgility"		"21"
 	"AttributeAgilityGain"		"2.4"
 	"AttributeBaseIntelligence"	"13"
 	"AttributeIntelligenceGain"	"1.2"
 	"MovementSpeed"		"275"
-	"ArmorPhysical"		"0"
+	"ArmorPhysical"		"2"
 	
 	"AttackRate"				"1.6"
 	"AttackDamageMin"			"54"
 	"AttackDamageMax"			"54"
-	"StatusHealth"                "320"
+	"StatusHealth"                "350"
 	"StatusMana"				"100"
 
 	"AttackRange"			"150"

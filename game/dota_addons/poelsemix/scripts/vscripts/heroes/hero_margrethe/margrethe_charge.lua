@@ -93,6 +93,7 @@ function modifier_margrethe_charge:OnIntervalThink()
 			self.target:AddNewModifier(self:GetCaster(), self:GetAbility(), "modifier_disarmed", {duration = self:GetCaster():FindAbilityByName("special_bonus_margrethe_4"):GetSpecialValueFor("value")})
 		end
 
+		FindClearSpaceForUnit(parent, parent:GetAbsOrigin(), false)
 		self:Destroy()
 	end
 
@@ -104,6 +105,14 @@ function modifier_margrethe_charge:DeclareFunctions()
 }
     return decFuncs
 end
+
+function modifier_margrethe_charge:CheckState()
+	if IsServer() then
+		local state = {[MODIFIER_STATE_NO_UNIT_COLLISION] = true, }
+		return state
+	end
+end
+
 
 function modifier_margrethe_charge:OnRemoved()
 	if not IsServer() then return end

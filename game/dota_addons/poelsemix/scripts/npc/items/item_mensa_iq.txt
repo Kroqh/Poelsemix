@@ -38,7 +38,7 @@
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"dmg" "15"
+			"dmg" "15" //spell amp
 		}
 	}
 	

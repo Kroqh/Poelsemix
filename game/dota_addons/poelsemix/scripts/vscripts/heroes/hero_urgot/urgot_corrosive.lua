@@ -117,6 +117,7 @@ function modifier_urgot_corrosive:OnCreated()
 	end
 	
 	local tick = ability:GetSpecialValueFor("tick_interval")
+	self.dmg = ability:GetSpecialValueFor("damage_per_second")
 	self:StartIntervalThink( tick )
 end
 
@@ -131,7 +132,7 @@ function modifier_urgot_corrosive:OnIntervalThink()
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
 	local tick = ability:GetSpecialValueFor("tick_interval")
-	local dmg = ability:GetSpecialValueFor("damage_per_second") / tick
+	local dmg = self.dmg * tick
 	local damageTable = {
 		victim = self:GetParent(),
 		attacker = caster,

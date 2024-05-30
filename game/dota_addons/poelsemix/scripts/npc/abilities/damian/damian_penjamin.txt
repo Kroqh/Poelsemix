@@ -27,12 +27,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_per_sec"			"25 22 19 16"	 //Specifically per sec since it shouldnt be doubled when tick rate talent is applied			
+				"mana_per_sec"			"20 18 16 14"	 //Specifically per sec since it shouldnt be doubled when tick rate talent is applied			
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_restore_per_tick"		"30 45 60 75"
+				"hp_restore_per_tick"		"45 65 85 105"
 			}
 			"03"
 			{
@@ -42,7 +42,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"tick_rate"				"1"
+				"tick_rate"				"0.8"
 				"LinkedSpecialBonus" "special_bonus_damian_3"
 			}
 		}

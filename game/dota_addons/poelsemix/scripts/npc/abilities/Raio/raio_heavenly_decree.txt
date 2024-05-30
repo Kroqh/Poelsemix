@@ -50,7 +50,7 @@
 			"04"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"delay"						"1.25"
+				"delay"						"1.5"
 			}
 			"05"
 			{

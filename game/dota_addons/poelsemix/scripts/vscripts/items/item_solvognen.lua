@@ -111,7 +111,7 @@ function modifier_item_solvognen_unique:OnIntervalThink()
 			if unit:GetTeamNumber() == parent:GetTeamNumber() then
 				unit:Heal(self.regen, parent)
 			else
-				ApplyDamage({victim = unit, attacker = parent, damage_type = self:GetAbility():GetAbilityDamageType(), damage = self.damage, ability = self})
+				ApplyDamage({victim = unit, attacker = parent, damage_type = self:GetAbility():GetAbilityDamageType(), damage = self.damage, ability = self:GetAbility()})
 			end
 		end
 end

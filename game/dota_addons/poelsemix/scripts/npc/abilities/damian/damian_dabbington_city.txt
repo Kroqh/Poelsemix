@@ -11,8 +11,9 @@
 		"AbilityTextureName"			"damian_dabbington"
 		"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
 
-		"AbilityCooldown" "60 55 50"
+		"AbilityCooldown" "55 50 45"
 
+		"HasScepterUpgrade"		"1"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

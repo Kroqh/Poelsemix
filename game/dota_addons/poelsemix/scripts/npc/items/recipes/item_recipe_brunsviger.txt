@@ -1,0 +1,14 @@
+"item_recipe_brunsviger"
+{
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "recipe"
+  	"Model"						"models/props_gameplay/recipe.mdl"
+  	"ItemCost"					"600"
+	"ItemShopTags"				""
+	"ItemRecipe"				"1"
+	"ItemResult"				"item_brunsviger"
+	"ItemRequirements"
+	{
+		"01" "item_staff_of_wizardry;item_mensa_iq;item_point_booster"
+	}
+}

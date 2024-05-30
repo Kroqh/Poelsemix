@@ -12,7 +12,7 @@
 
 	"AbilityTextureName"			"nissan_race_icon"
 	"AbilityCooldown"				"80 65 50"
-	"AbilityManaCost"				"100 150 200"
+	"AbilityManaCost"				"150"
 	"AbilityCastRange"				"700"
 	"AbilityCastPoint"				"0.2"
 

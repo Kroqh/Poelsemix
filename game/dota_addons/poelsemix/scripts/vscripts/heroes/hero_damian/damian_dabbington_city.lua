@@ -24,6 +24,13 @@ function damian_dabbington_city:OnSpellStart()
         EmitSoundOn("damian_dabbington", caster)
 		caster:AddNewModifier(caster, self, "modifier_damian_dabbington_city", {duration = self.duration, target_point_x = target_point.x, target_point_y = target_point.y, target_point_z = target_point.z, formation_particle_fx = formation_particle_fx, target = target:GetEntityIndex() })
 		target:AddNewModifier(caster, self, "modifier_damian_dabbington_city_enemy", {duration = self.duration, target =  caster:GetEntityIndex()})
+
+		if caster:HasScepter() then
+			caster:SetForceAttackTarget(target)
+			target:SetForceAttackTarget(caster)
+			caster:MoveToTargetToAttack(target)
+			target:MoveToTargetToAttack(caster)
+		end
     end
 end
 
@@ -39,6 +46,11 @@ function modifier_damian_dabbington_city_enemy:OnCreated(keys)
 	if IsServer() then
 		self.target = EntIndexToHScript( keys.target)
 	end
+end
+
+function modifier_damian_dabbington_city_enemy:OnRemoved()
+	if not IsServer() then return end
+	self:GetParent():SetForceAttackTarget( nil )
 end
 
 
@@ -73,6 +85,10 @@ modifier_damian_dabbington_city = modifier_damian_dabbington_city or class({})
 
 function modifier_damian_dabbington_city:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
 
+function modifier_damian_dabbington_city:OnRemoved()
+	if not IsServer() then return end
+	self:GetParent():SetForceAttackTarget( nil )
+end
 
 function modifier_damian_dabbington_city:OnHeroKilled(event)
 	if IsServer() then
@@ -116,6 +132,9 @@ function modifier_damian_dabbington_city:OnCreated(keys)
 		self.ability = self:GetAbility()
 		self.radius = 350
 		self.target = EntIndexToHScript( keys.target)
+
+		
+
 		--fuck you vectors --Lmao
 		self.target_point = Vector(keys.target_point_x, keys.target_point_y, keys.target_point_z)
 		self.duration = self.ability.duration

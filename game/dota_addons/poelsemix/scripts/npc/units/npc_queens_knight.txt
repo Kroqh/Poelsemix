@@ -54,12 +54,12 @@
 		//----------------------------------------------------------------
 		"VisionDaytimeRange"		"500"		// Range of vision during day light.
 		"VisionNighttimeRange"		"500"		// Range of vision at night time.
-		"RingRadius"            "500"
+		"RingRadius"            "75"
 		// Team
 		//----------------------------------------------------------------
 		"TeamName"					"DOTA_TEAM_GOODGUYS"							// Team name.
 		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
-		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_HERO"
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 		
 		

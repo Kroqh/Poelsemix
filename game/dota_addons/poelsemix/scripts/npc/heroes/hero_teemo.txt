@@ -27,9 +27,9 @@
 
 	"MovementTurnRate"		"1"
 
-	"AttributeBaseStrength"			"17"									
+	"AttributeBaseStrength"			"16"									
 	"AttributeStrengthGain"			"1.9"
-	"AttributeBaseAgility"		"20"
+	"AttributeBaseAgility"		"18"
 	"AttributeAgilityGain"		"2"							
 	"AttributeBaseIntelligence"		"20"									
 	"AttributeIntelligenceGain"		"2.3"

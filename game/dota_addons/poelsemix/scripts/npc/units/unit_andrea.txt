@@ -9,9 +9,9 @@
 		"IsSummoned"				"1"
 		"IgnoreAddSummonedToSelection" "0"
 		
-		 "BountyGoldMin"         "100"
-       		 "BountyGoldMax"         "100"
-       		 "BountyXP"              "50"
+		 "BountyGoldMin"         "0"
+       		 "BountyGoldMax"         "0"
+       		 "BountyXP"              "0"
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"			// Physical protection.

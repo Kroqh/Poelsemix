@@ -3,7 +3,6 @@
         "BaseClass"					"ability_lua"
         "ScriptFile"				"heroes/hero_damian/damian_faded.lua"
         "AbilityTextureName"		"damian_faded"
-	"HasScepterUpgrade"		"1"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 	"MaxLevel" 		"1"
@@ -22,7 +21,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"base_max_stacks"	"60"
+				"base_max_stacks"	"80"
 			}
 			"02"
 			{
@@ -46,7 +45,12 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"aghs_interval"					"8"	//1 cap gained every interval
+				"free_stack_interval"					"15"	//1 cap gained every interval
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"stacks_on_poop"					"4" //cap on poop
 			}
 		}
     }

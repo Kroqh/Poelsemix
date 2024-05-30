@@ -58,7 +58,7 @@
 		"03"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage_modifier_upgraded" "250 275 300 325 350"
+			"damage_modifier_upgraded" "200 225 250 275 300"
 			"LinkedSpecialBonus" "special_bonus_cid_1"
 		}
 	}
