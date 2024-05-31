@@ -52,5 +52,10 @@
 				"var_type"					"FIELD_INTEGER"
 				"stacks_on_poop"					"4" //cap on poop
 			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"per_attack"					"1" //Faded gain on attack, probably just leave at 1 always
+			}
 		}
     }

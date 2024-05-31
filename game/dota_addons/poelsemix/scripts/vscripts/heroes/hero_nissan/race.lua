@@ -6,14 +6,13 @@ function race:GetAbilityTextureName()
 	return "nissan_race_icon"
 end
 
-function race:IsRefreshable() return false end
-
 function race:OnSpellStart()
   if not IsServer() then return end
   self.caster = self:GetCaster()
   self.target = self:GetCursorTarget()
   self.duration = self:GetSpecialValueFor("duration")
   self.damage = self:GetSpecialValueFor("damage")
+  self.minimum_damage = self:GetSpecialValueFor("minimum_damage")
 
   if self.caster:HasTalent("special_bonus_nissan_4") then
     self.damage = self.damage + self.caster:FindAbilityByName("special_bonus_nissan_4"):GetSpecialValueFor("value")
@@ -38,18 +37,43 @@ function race:OnSpellStart()
   self.caster:EmitSound(songs[song])
 end
 
+function race:CastFilterResultTarget()
+	if IsServer() then
+		if not self:GetCaster():HasModifier("modifier_race") then
+			return UF_SUCCESS
+		else
+			return UF_FAIL_CUSTOM
+		end
+	end
+end
+
+function race:GetCustomCastErrorTarget()
+	return "YOU ARE ALREADY RACING SOMEONE"
+end
+
 
 
 modifier_race = modifier_race or class({})
 
 function modifier_race:DeclareFunctions()
 	return {
-    MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT
+    MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
+    MODIFIER_EVENT_ON_HERO_KILLED
 	}
 end
+
 function modifier_race:GetModifierMoveSpeedBonus_Constant()
   return self.speed
 end
+
+function modifier_race:OnHeroKilled(event)
+    if not IsServer() then return end
+    if event.target == self.ability.target or event.target == self.ability.caster then
+      self.ability.caster:RemoveModifierByName("modifier_race")
+      self.ability.target:RemoveModifierByName("modifier_race")
+    end
+end
+
 
 function modifier_race:OnCreated() 
   self.speed = 0
@@ -102,30 +126,33 @@ function modifier_race:OnRemoved()
   local pfx = "particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
   -- Race ends if someone dies.
   if self.ability.caster:GetHealth() <= 0 then
-    self.ability.caster:EmitSound("Hero_LegionCommander.Duel.Victory")
-		ParticleManager:CreateParticle(pfx, PATTACH_ABSORIGIN_FOLLOW, self.ability.caster)
+    self.ability.target:EmitSound("Hero_LegionCommander.Duel.Victory")
+		ParticleManager:CreateParticle(pfx, PATTACH_ABSORIGIN_FOLLOW, self.ability.target)
     return
   else
     if self.ability.target:GetHealth() <= 0 then
-      self.ability.target:EmitSound("Hero_LegionCommander.Duel.Victory")
-		  ParticleManager:CreateParticle(pfx, PATTACH_ABSORIGIN_FOLLOW, self.ability.target)
+      self.ability.caster:EmitSound("Hero_LegionCommander.Duel.Victory")
+		  ParticleManager:CreateParticle(pfx, PATTACH_ABSORIGIN_FOLLOW, self.ability.caster)
       return
     end
   end
 
   local stack_difference = (self.ability.caster_stacks - self.ability.target_stacks)
 
+  local damage = (math.abs(stack_difference) * 10) * self.ability.damage
+  if damage < self.ability.minimum_damage then damage = self.ability.minimum_damage end
   -- only apply one damage instance
   if self.are_you_caster then    
     -- caster lost
     if stack_difference > 0 then
+      
       self.ability.target:EmitSound("Hero_LegionCommander.Duel.Victory")
 		  ParticleManager:CreateParticle(pfx, PATTACH_ABSORIGIN_FOLLOW, self.ability.target)
       ApplyDamage({
         victim = self.ability.caster,
         attacker = self.ability.target,
         damage_type = self.ability:GetAbilityDamageType(),
-        damage = self.ability.damage,
+        damage = damage,
         ability = self.ability
       }) 
     else        
@@ -135,8 +162,8 @@ function modifier_race:OnRemoved()
       ApplyDamage({
         victim = self.ability.target,
         attacker = self.ability.caster,
-        damage_type = DAMAGE_TYPE_PURE,
-        damage = self.ability.damage,
+        damage_type = self.ability:GetAbilityDamageType(),
+        damage = damage,
         ability = self.ability
       })
     end

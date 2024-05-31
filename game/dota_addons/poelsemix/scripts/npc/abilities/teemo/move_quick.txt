@@ -20,7 +20,7 @@
 	    "02"
 	    {
 	        "var_type"          "FIELD_FLOAT"
-	        "multiplier"        "2"
+	        "multiplier"        "1.5"
 		"LinkedSpecialBonus" "special_bonus_teemo_8"
 	    }
 		"03"

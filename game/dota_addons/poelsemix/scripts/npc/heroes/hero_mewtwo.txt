@@ -5,7 +5,7 @@
 	"ModelScale"	"1.8"
 	"DisableWearables" "1"
 
-	"MovementTurnRate"		"50" //Needed high or he cant fully turn for ult
+	"MovementTurnRate"		"1" //Needed high or he cant fully turn for ult
 	
 	"AttributeBaseStrength"			"16"		
 	"AttributeStrengthGain"			"1.8"
@@ -16,6 +16,7 @@
 
 	"MovementSpeed"               "270"
 	"ArmorPhysical"		"-1" 
+	"StatusHealth"                "65"
 
 
 	"Ability1" "mewtwo_psychic"

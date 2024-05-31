@@ -18,31 +18,31 @@
 		}
 		"02"
 		{
-			"var_type" "FIELD_INTEGER"
-			"attackspeed" "60"
-			"LinkedSpecialBonus" "special_bonus_teemo_7"
+			"var_type" "FIELD_FLOAT"
+			"duration" "2.5"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"duration" "3"
+			"attackspeed" "50"
+			"LinkedSpecialBonus" "special_bonus_teemo_7"
 		}
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"attackspeed6" "85"
+			"attackspeed6" "75"
 			"LinkedSpecialBonus" "special_bonus_teemo_7"
 		}
 		"05"
 		{
 			"var_type" "FIELD_INTEGER"
-			"attackspeed12" "110"
+			"attackspeed12" "100"
 			"LinkedSpecialBonus" "special_bonus_teemo_7"
 		}
 		"06"
 		{
 			"var_type" "FIELD_INTEGER"
-			"attackspeed18" "135"
+			"attackspeed18" "125"
 			"LinkedSpecialBonus" "special_bonus_teemo_7"
 		}
 	}

@@ -33,13 +33,18 @@
 		"02"
 		{
 			"var_type" "FIELD_INTEGER"
-			"damage" "1400 2100 2800"
+			"damage" "0.4 0.5 0.6"
 			"LinkedSpecialBonus" "special_bonus_nissan_4"
 		}
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"stacks" "2000"
+			"minimum_damage" "500"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"stacks" "2000" //Is equal to distance divided 10
 		}
 	}
 }

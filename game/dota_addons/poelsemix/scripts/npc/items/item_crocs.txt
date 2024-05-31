@@ -29,7 +29,7 @@
 		"03"
 		{
 			"var_type" "FIELD_INTEGER"
-			"as" "50"
+			"as" "30"
 		}
 	}
 	

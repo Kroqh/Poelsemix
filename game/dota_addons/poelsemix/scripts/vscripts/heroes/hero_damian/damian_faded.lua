@@ -22,11 +22,24 @@ end
 function modifier_damian_faded:DeclareFunctions()
 	local funcs = {
 		MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
-        MODIFIER_PROPERTY_STATS_AGILITY_BONUS
+        MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
+        MODIFIER_EVENT_ON_ATTACK_LANDED
 	}
 
 	return funcs
 end
+
+
+function modifier_damian_faded:OnAttackLanded(params)
+    if not IsServer() then return end
+    local parent = self:GetParent()
+    local ability = self:GetAbility()
+	if (params.attacker ~= parent) then return end 
+    if parent:HasModifier("modifier_damian_faded_pooped") then return end
+    self:SetStackCount(self:GetStackCount()+ability:GetSpecialValueFor("per_attack"))
+end
+
+
 function modifier_damian_faded:GetModifierMoveSpeedBonus_Constant()
     local value = self:GetAbility():GetSpecialValueFor("ms_per_stack")
     if self:GetCaster():FindAbilityByName("special_bonus_damian_4"):GetLevel() > 0 then value = value + self:GetCaster():FindAbilityByName("special_bonus_damian_4"):GetSpecialValueFor("value") end
