@@ -1,0 +1,27 @@
+//=================================================================================================================
+// Leap Slam Reduced Cooldown
+//=================================================================================================================
+"leap_slam_reduced_cooldown_bonus"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"leap_slam"
+	}	
+	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"				"FIELD_INTEGER"
+            "cooldown_reduction_seconds"		"3"
+        }
+    }
+}
