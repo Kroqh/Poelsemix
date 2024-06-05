@@ -1,0 +1,418 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc36:version{972dada4-b828-45a4-bb93-7795cf0585da} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/marauder/marauder.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "marauder"
+						filename = "models/marauder/marauder_model.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_origin"
+						parent_bone = "Bone_Chest"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Bone_Chest"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "Bone_Hand_L"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "Bone_Hand_R"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "Bone_Head"
+						relative_origin = [ 0.346872, 0.942754, 19.35907 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "follow_overhead"
+						parent_bone = "Bone_Head"
+						relative_origin = [ -0.234187, -2.160296, 40.520126 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_eyes"
+						parent_bone = "Bone_Head"
+						relative_origin = [ 0.0, -13.767795, 17.418182 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								name = "Bone_Chest"
+								parent_bone = "Bone_Chest"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -30.937637, -16.629026, -8.002678 ]
+								hitbox_maxs = [ 30.351395, 22.37882, 46.790192 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm1_R"
+								parent_bone = "Bone_Arm1_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -26.816673, -25.138908, -31.276831 ]
+								hitbox_maxs = [ 2.214381, 25.015224, 12.752043 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm2_R"
+								parent_bone = "Bone_Arm2_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -17.614918, -13.710077, -31.270775 ]
+								hitbox_maxs = [ 10.691158, 12.609514, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm1_L"
+								parent_bone = "Bone_Arm1_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.939137, -18.833313, -37.959801 ]
+								hitbox_maxs = [ 30.623714, 14.420808, 1.514252 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Arm2_L"
+								parent_bone = "Bone_Arm2_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -10.816397, -13.209682, -30.248016 ]
+								hitbox_maxs = [ 18.035561, 13.10991, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Head"
+								parent_bone = "Bone_Head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -27.19796, -13.512209, -4.779022 ]
+								hitbox_maxs = [ 26.435112, 19.284124, 46.731216 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Pelvis"
+								parent_bone = "Bone_Pelvis"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -26.129959, -15.280679, -52.242119 ]
+								hitbox_maxs = [ 26.067688, 25.653938, 37.027748 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg1_L"
+								parent_bone = "Bone_Leg1_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -17.078985, -11.191387, -35.027744 ]
+								hitbox_maxs = [ 13.137482, 20.98201, 3.978416 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg2_L"
+								parent_bone = "Bone_Leg2_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -15.182509, -5.299679, -51.23064 ]
+								hitbox_maxs = [ 17.534218, 31.674767, 4.111546 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg1_R"
+								parent_bone = "Bone_Leg1_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -15.514257, -11.382015, -35.15007 ]
+								hitbox_maxs = [ 14.108435, 19.771946, 3.97731 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "Bone_Leg2_R"
+								parent_bone = "Bone_Leg2_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -18.676781, -4.906261, -51.072506 ]
+								hitbox_maxs = [ 12.712852, 32.068188, 4.268372 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "run"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/marauder/marauder_model.fbx"
+						import_bone_scales = false
+						start_frame = 21
+						end_frame = 52
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/marauder/marauder_model.fbx"
+						import_bone_scales = false
+						start_frame = 208
+						end_frame = 300
+						framerate = 20.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/marauder/marauder_model.fbx"
+						import_bone_scales = false
+						start_frame = 416
+						end_frame = 447
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "attack2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/marauder/marauder_model.fbx"
+						import_bone_scales = false
+						start_frame = 573
+						end_frame = 603
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "die"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/marauder/marauder_model.fbx"
+						import_bone_scales = false
+						start_frame = 750
+						end_frame = 864
+						framerate = 40.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "spin"
+						activity_name = "ACT_DOTA_CHANNEL_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.0
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/marauder/marauder_model.fbx"
+						import_bone_scales = false
+						start_frame = 1094
+						end_frame = 1105
+						framerate = 11.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "leap"
+						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/marauder/marauder_model.fbx"
+						import_bone_scales = false
+						start_frame = 318
+						end_frame = 370
+						framerate = 20.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "spin_reverse"
+						activity_name = "ACT_DOTA_CHANNEL_ABILITY_2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.0
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/marauder/marauder_model.fbx"
+						import_bone_scales = false
+						start_frame = 1094
+						end_frame = 1105
+						framerate = 11.0
+						reverse = true
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		document_sub_type = "ModelDocSubType_None"
+	}
+}

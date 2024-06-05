@@ -1,0 +1,60 @@
+"marauder_leap_slam"
+{
+	// General 
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_marauder/marauder_leap_slam"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE| DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+	"AbilityTextureName"			"marauder_leap_slam"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+
+
+	"AbilityCooldown"				"18 17 16 15"
+	"AbilityManaCost"				"80 75 70 65"
+	"AbilityCastPoint"				"0.2"
+
+
+	"precache"
+	{
+		"particle"			"particles/econ/items/earthshaker/earthshaker_totem_ti6/earthshaker_totem_ti6_leap_v2_impact_dust.vpcf"
+		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+		"soundfile" "soundevents/marauder_soundevent.vsndevts"
+	}
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"impact_radius"	"200"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"range"	"525 550 575 600"
+		}
+		"03"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"damage"	"130 180 230 280"
+		}
+        "04"
+        {
+            "var_type"	"FIELD_INTEGER"
+            "fortify_armor"	"10 12 14 16"
+        }
+		"05"
+		{
+			"var_type"	"FIELD_FLOAT"
+			"fortify_duration"	"4"
+		}
+		"06"
+        {
+            "var_type"	"FIELD_INTEGER"
+            "velocity"	"850"
+        }
+	}
+}

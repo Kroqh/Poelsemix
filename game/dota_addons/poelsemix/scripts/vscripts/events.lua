@@ -315,8 +315,8 @@ function SpawnCourier(hero)
 		ability:SetLevel(1)
 	end
 
-	if hero:GetUnitName() == "npc_dota_hero_slardar" then
-		local ability = hero:FindAbilityByName("move_only")
+	if hero:GetUnitName() == "npc_dota_hero_spirit_breaker" then
+		local ability = hero:FindAbilityByName("marauder_cyclone")
 		ability:SetLevel(1)
 	end
 end

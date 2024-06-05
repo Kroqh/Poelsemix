@@ -1,0 +1,54 @@
+"hero_marauder"
+{
+	"override_hero"				"npc_dota_hero_spirit_breaker"			// Hero to override
+	"model"	"models/marauder/marauder_model.vmdl"
+	"DisableWearables" "1"
+	
+	"ModelScale" "1.0"
+	
+	"MovementTurnRate"		"1"
+
+
+	"Ability1" "marauder_cyclone"				
+	"Ability2" "vaal_cyclone"
+	"Ability3" "marauder_leap_slam"
+	//"Ability4" "move_only"
+	"Ability4" "generic_hidden"
+	"Ability5" "generic_hidden" //reflection
+	"Ability6" "generic_hidden" //blood rage
+	"Ability7" "generic_hidden"
+	
+	"AttackRange"			"10"
+
+	//"Ability10" "leap_slam_fortify_bonus" //rename
+	//"Ability11" "leap_slam_reduced_cooldown_bonus" //rename
+	//"Ability12" "conc_effect" //rename
+	//"Ability13"	"marauder_cyclone_inc_aoe" //rename
+	// "Ability14" "special_bonus_nissan_2"
+	// "Ability15" "special_bonus_nissan_3"
+	// "Ability16" "special_bonus_nissan_4"
+	// "Ability17" "special_bonus_spell_amplify_25"
+
+	"ArmorPhysical"		"5"
+
+	"AttributeBaseStrength"			"26"									
+	"AttributeStrengthGain"			"3.7"									
+	"AttributeBaseAgility"		"15"
+	"AttributeAgilityGain"		"1.8"
+	"AttributeBaseIntelligence"		"12"									
+	"AttributeIntelligenceGain"		"1.2"									
+	
+
+	"StatusHealthRegen"		"1.8"
+
+	"MovementSpeed"		"275"
+
+	"AttackRate"				"1.8"
+	"AttackDamageMin"			"65"
+	"AttackDamageMax"			"65"
+	"StatusHealth"                "190"
+	"StatusMana"				"60"
+
+
+	"Facets" {}
+}

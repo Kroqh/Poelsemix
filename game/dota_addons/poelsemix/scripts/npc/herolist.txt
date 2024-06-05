@@ -89,11 +89,11 @@
 	"npc_dota_hero_shadow_shaman"		"0"
 	"npc_dota_hero_silencer"			"0"
 	"npc_dota_hero_skywrath_mage"		"0"
-	"npc_dota_hero_slardar"				"1"
+	"npc_dota_hero_slardar"				"0" //Slardar model cant be overwritten for some reason, be aware
 	"npc_dota_hero_slark"				"0"
 	"npc_dota_hero_sniper"				"1"
 	"npc_dota_hero_spectre"				"0"
-	"npc_dota_hero_spirit_breaker"		"0"
+	"npc_dota_hero_spirit_breaker"		"1"
 	"npc_dota_hero_storm_spirit"		"0"
 	"npc_dota_hero_sven"				"1"
 	"npc_dota_hero_techies"				"0"

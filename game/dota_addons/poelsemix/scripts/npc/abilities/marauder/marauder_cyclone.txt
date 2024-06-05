@@ -1,0 +1,65 @@
+"marauder_cyclone"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_marauder/marauder_cyclone"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_TOGGLE"
+    "AbilityUnitDamageType"             "DAMAGE_TYPE_PHYSICAL"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+
+	"AbilityTextureName"			"marauder_cyclone"
+	"AbilityManaCost"				"0"
+	"MaxLevel"                  "5"
+
+	"HasScepterUpgrade"			"1"
+
+	"precache"
+	{
+		"particle"			"particles/heroes/marauder/cyclone_particle.vpcf"
+		"soparticle"			"particles/units/heroes/hero_marauder/cyclone_ice_nova.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+	}
+
+	"AbilitySpecial"
+	{
+		"02"
+		{
+			"var_type" "FIELD_FLOAT"
+			"damage_scaling" "55 57.5 60 62.5 65"
+		}
+        "03"
+        {
+            "var_type" "FIELD_FLOAT"
+            "attack_rate" "50 47.5 45 42.5 40"
+        }
+		 "04"
+        {
+            "var_type" "FIELD_INTEGER"
+            "radius" "300 305 310 315 320"
+        }
+		"07"
+		{
+			"var_type" "FIELD_FLOAT"
+			"movement_self_slow" "-30"
+		}
+		"08"
+		{
+			"var_type" "FIELD_FLOAT"
+			"scepter_ice_nova_damage_int_ratio" "2"
+		}
+		"09"
+		{
+			"var_type" "FIELD_FLOAT"
+			"scepter_ice_nova_chance" "10"
+		}
+		"10"
+		{
+			"var_type" "FIELD_INTEGER"
+			"scepter_ice_nova_radius" "125" //for visuel effect only, dont know if it actually does something after particle changes
+		}
+	}
+}
