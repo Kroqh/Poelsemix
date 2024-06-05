@@ -15,7 +15,7 @@
 	//"Ability4" "move_only"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden" //reflection
-	"Ability6" "generic_hidden" //blood rage
+	"Ability6" "marauder_blood_rage" //blood rage
 	"Ability7" "generic_hidden"
 	
 	"AttackRange"			"10"
@@ -42,6 +42,7 @@
 	"StatusHealthRegen"		"1.8"
 
 	"MovementSpeed"		"275"
+	"BaseAttackSpeed"      "100"
 
 	"AttackRate"				"1.8"
 	"AttackDamageMin"			"65"

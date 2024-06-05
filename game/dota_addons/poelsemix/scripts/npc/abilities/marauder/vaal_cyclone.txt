@@ -8,8 +8,9 @@
     "AbilityUnitDamageType"             "DAMAGE_TYPE_PHYSICAL"
 	//"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	//"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
 
-	"AbilityTextureName"			"cyclone"
+	"AbilityTextureName"			"marauder_vaal_cyclone"
 	"AbilityCooldown"				"1"
 	"AbilityManaCost"				"100 120 140 160"
     // "AbilityCastRange"              "200 250 300 350"

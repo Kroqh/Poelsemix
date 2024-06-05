@@ -1,0 +1,41 @@
+"marauder_blood_rage"
+{
+	// General 
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_marauder/marauder_blood_rage"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"			"marauder_blood_rage"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"	
+
+
+	"AbilityCooldown"				"65 60 55"
+	"AbilityManaCost"				"175 165 155"
+	"AbilityCastPoint"				"0"
+
+
+	"precache"
+	{
+		"particle"			"particles/econ/items/bloodseeker/bloodseeker_eztzhok_weapon/bloodseeker_bloodrage_eztzhok.vpcf"
+		"particle"			"particles/econ/items/lifestealer/ls_ti9_immortal/status_effect_ls_ti9_open_wounds.vpcf"
+	}
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"percent_increaser"	"20 25 30" //Increases model size, q/w damage scaling and rate and radius, str and ms by this percentage, also affects clones
+		}
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"self_damage_percent"	"40"
+		}
+		"03"
+		{
+			"var_type" "FIELD_FLOAT"
+			"duration"	"5"
+		}
+	}
+}

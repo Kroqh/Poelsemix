@@ -154,3 +154,6 @@ end
 function modifier_marauder_leap_slam_fortify:GetModifierPhysicalArmorBonus()
 	return self.armor
 end
+function modifier_marauder_leap_slam_fortify:GetEffectName()
+	return "particles/items2_fx/vindicators_axe_armor.vpcf"
+end

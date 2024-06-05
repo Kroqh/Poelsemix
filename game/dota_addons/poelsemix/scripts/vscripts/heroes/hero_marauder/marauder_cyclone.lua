@@ -29,7 +29,15 @@ end
 marauder_cyclone = marauder_cyclone or class({})
 
 function marauder_cyclone:GetCastRange()
-	return self:GetSpecialValueFor("radius")
+	return self:GetActualRadius()
+end
+
+function marauder_cyclone:GetActualRadius()
+	local radius = self:GetSpecialValueFor("radius")
+	local multi = 1
+	if self:GetCaster():HasModifier("modifier_marauder_blood_rage") then multi = multi + (self:GetCaster():FindAbilityByName("marauder_blood_rage"):GetIncreaser()) end
+	radius = radius * multi
+	return radius
 end
 
 function marauder_cyclone:GetIntrinsicModifierName()
@@ -58,8 +66,24 @@ function modifier_marauder_cyclone:DeclareFunctions()
 	}
 end
 
+function modifier_marauder_cyclone:CalcDamageScaling()
+	local damage = self:GetAbility():GetSpecialValueFor("damage_scaling") / 100
+
+	local multi = 1
+	if self:GetParent():HasModifier("modifier_marauder_blood_rage") then multi = multi + (self:GetParent():FindAbilityByName("marauder_blood_rage"):GetIncreaser()) end
+	damage = damage * multi
+
+	return damage
+end
+
+
 function modifier_marauder_cyclone:GetSpinRate()
 	local spinrate = self:GetParent():GetSecondsPerAttack(false) * (self:GetAbility():GetSpecialValueFor("attack_rate") / 100)
+
+	local multi = 1
+	if self:GetParent():HasModifier("modifier_marauder_blood_rage") then multi = multi - (self:GetParent():FindAbilityByName("marauder_blood_rage"):GetIncreaser()) end
+	spinrate = spinrate * multi
+
 	return spinrate
 end
 
@@ -74,7 +98,7 @@ function modifier_marauder_cyclone:OnCreated()
 	
 
 	-- CONC EFFECT
-	local radius = self:GetAbility():GetSpecialValueFor("radius")
+	local radius = self:GetAbility():GetActualRadius()
 	parent:EmitSound("Hero_Juggernaut.BladeFuryStart")
 
 	-- self.current_orientation = caster:GetForwardVector()
@@ -94,11 +118,8 @@ function modifier_marauder_cyclone:OnIntervalThink()
 	if not IsServer() then return end
 	local caster = self:GetCaster()
 	local parent = self:GetCaster()
-	local radius = self:GetAbility():GetSpecialValueFor("radius")
-
-	local damage_scaling = self:GetAbility():GetSpecialValueFor("damage_scaling") / 100
-
-	local damage = damage_scaling * caster:GetAverageTrueAttackDamage(nil)
+	local radius = self:GetAbility():GetActualRadius()
+	local damage = self:CalcDamageScaling() * caster:GetAverageTrueAttackDamage(nil)
 	
 	local enemies = FindUnitsInRadius(caster:GetTeamNumber(), 
 									  parent:GetAbsOrigin(), 

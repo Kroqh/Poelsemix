@@ -9,6 +9,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
 
 	"AbilityTextureName"			"marauder_cyclone"
 	"AbilityManaCost"				"0"
@@ -19,7 +20,7 @@
 	"precache"
 	{
 		"particle"			"particles/heroes/marauder/cyclone_particle.vpcf"
-		"soparticle"			"particles/units/heroes/hero_marauder/cyclone_ice_nova.vpcf"
+		"particle"			"particles/units/heroes/hero_marauder/cyclone_ice_nova.vpcf"
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
 	}
@@ -54,7 +55,7 @@
 		"09"
 		{
 			"var_type" "FIELD_FLOAT"
-			"scepter_ice_nova_chance" "10"
+			"scepter_ice_nova_chance" "12.5"
 		}
 		"10"
 		{

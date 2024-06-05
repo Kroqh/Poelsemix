@@ -10,6 +10,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
 
 
 	"AbilityCooldown"				"18 17 16 15"
@@ -20,6 +21,7 @@
 	"precache"
 	{
 		"particle"			"particles/econ/items/earthshaker/earthshaker_totem_ti6/earthshaker_totem_ti6_leap_v2_impact_dust.vpcf"
+		"particle"			"particles/items2_fx/vindicators_axe_armor.vpcf"
 		"soundfile"			"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
 		"soundfile" "soundevents/marauder_soundevent.vsndevts"
 	}
@@ -44,7 +46,7 @@
         "04"
         {
             "var_type"	"FIELD_INTEGER"
-            "fortify_armor"	"10 12 14 16"
+            "fortify_armor"	"10 12 14 16" //visuel effect til armor?
         }
 		"05"
 		{
