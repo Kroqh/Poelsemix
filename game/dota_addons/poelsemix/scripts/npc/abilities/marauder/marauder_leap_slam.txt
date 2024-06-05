@@ -56,7 +56,7 @@
 		"06"
         {
             "var_type"	"FIELD_INTEGER"
-            "velocity"	"850"
+            "velocity"	"950"
         }
 	}
 }

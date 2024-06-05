@@ -34,7 +34,7 @@
 		"04"
 		{
 			"var_type" "FIELD_INTEGER"
-			"afterimage_taken_percent" "259" //0 is 100% 
+			"afterimage_taken_percent" "260" //0 is 100% 
 		}
 		"05"
 		{

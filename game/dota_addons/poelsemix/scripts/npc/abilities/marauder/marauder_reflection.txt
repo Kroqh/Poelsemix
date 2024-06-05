@@ -1,0 +1,45 @@
+"marauder_reflection"
+{
+	// General 
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_marauder/marauder_reflection"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityTextureName"			"marauder_reflection"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+
+
+	"AbilityCooldown"				"16 15 14 13"
+	"AbilityManaCost"				"110 105 100 95"
+	"AbilityCastPoint"				"0"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"clone_amount"	"2"
+		}
+		"02"
+		{
+			"var_type" "FIELD_float"
+			"clone_duration" "3.25 3.5 3.75 4"
+		}
+		"03"
+		{
+			"var_type" "FIELD_FLOAT"
+			"clone_dmg_percent" "-62.5 -60 -57.5 -55"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"clone_taken_percent" "300" //0 is 100% 
+		}
+		"05"
+		{
+			"var_type" "FIELD_INTEGER"
+			"clone_seekout_range" "450"
+		}
+
+	}
+}

@@ -48,7 +48,7 @@ function marauder_cyclone:OnToggle()
 	if not IsServer() then return end
 	local caster = self:GetCaster()
 	if self:GetToggleState() then
-		caster:AddNewModifier(caster, self, "modifier_marauder_cyclone", {})
+		caster:AddNewModifier(caster, self, "modifier_marauder_cyclone", {outgoing = 1})
 	else
 		caster:FindModifierByName("modifier_marauder_cyclone"):Destroy()
 	end
@@ -70,8 +70,8 @@ function modifier_marauder_cyclone:CalcDamageScaling()
 	local damage = self:GetAbility():GetSpecialValueFor("damage_scaling") / 100
 
 	local multi = 1
-	if self:GetParent():HasModifier("modifier_marauder_blood_rage") then multi = multi + (self:GetParent():FindAbilityByName("marauder_blood_rage"):GetIncreaser()) end
-	damage = damage * multi
+	if self:GetParent():HasModifier("modifier_marauder_blood_rage") then multi = multi + (self:GetCaster():FindAbilityByName("marauder_blood_rage"):GetIncreaser()) end
+	damage = damage * multi * self.outgoing_multi
 
 	return damage
 end
@@ -81,16 +81,16 @@ function modifier_marauder_cyclone:GetSpinRate()
 	local spinrate = self:GetParent():GetSecondsPerAttack(false) * (self:GetAbility():GetSpecialValueFor("attack_rate") / 100)
 
 	local multi = 1
-	if self:GetParent():HasModifier("modifier_marauder_blood_rage") then multi = multi - (self:GetParent():FindAbilityByName("marauder_blood_rage"):GetIncreaser()) end
+	if self:GetParent():HasModifier("modifier_marauder_blood_rage") then multi = multi - (self:GetCaster():FindAbilityByName("marauder_blood_rage"):GetIncreaser()) end
 	spinrate = spinrate * multi
 
 	return spinrate
 end
 
-function modifier_marauder_cyclone:OnCreated()
+function modifier_marauder_cyclone:OnCreated(kv)
 	if not IsServer() then return end
 	local particle = "particles/heroes/marauder/cyclone_particle.vpcf"
-
+	self.outgoing_multi = kv.outgoing
 	local caster = self:GetCaster()
 	local parent = self:GetParent()
 
@@ -117,9 +117,10 @@ end
 function modifier_marauder_cyclone:OnIntervalThink()
 	if not IsServer() then return end
 	local caster = self:GetCaster()
-	local parent = self:GetCaster()
+	local parent = self:GetParent()
 	local radius = self:GetAbility():GetActualRadius()
 	local damage = self:CalcDamageScaling() * caster:GetAverageTrueAttackDamage(nil)
+	print(damage)
 	
 	local enemies = FindUnitsInRadius(caster:GetTeamNumber(), 
 									  parent:GetAbsOrigin(), 
@@ -178,7 +179,7 @@ end
 
 function modifier_marauder_cyclone:OnDestroy()
 	if not IsServer() then return end
-	ParticleManager:DestroyParticle(self.pfx, false)
+	ParticleManager:DestroyParticle(self.pfx, true)
 	ParticleManager:ReleaseParticleIndex(self.pfx)
 	self:GetParent():FadeGesture(ACT_DOTA_CHANNEL_ABILITY_1)
 	self:GetParent():StopSound("Hero_Juggernaut.BladeFuryStart")
@@ -189,26 +190,25 @@ function modifier_marauder_cyclone:IceNova(self, enemies)
 	if not IsServer() then return end
 
 	local particle = "particles/units/heroes/hero_marauder/cyclone_ice_nova.vpcf"
-	local caster = self:GetCaster()
+	local parent = self:GetParent()
 	local scaling = self:GetAbility():GetSpecialValueFor("scepter_ice_nova_damage_int_ratio")
-	local damage = self:GetParent():GetIntellect(true) * scaling
+	local damage = parent:GetIntellect(true) * scaling * self.outgoing_multi
 	local radius = self:GetAbility():GetSpecialValueFor("scepter_ice_nova_radius")
 	local chance = self:GetAbility():GetSpecialValueFor("scepter_ice_nova_chance")
 	local damage_type = DAMAGE_TYPE_MAGICAL
 
 	for _, enemy in pairs(enemies) do
 		if RollPercentage(chance) then
-			print("ice nova proc")
-			caster:EmitSound("Hero_Crystal.CrystalNova")
+			parent:EmitSound("Hero_Crystal.CrystalNova")
 			ApplyDamage({
 				victim = enemy,
-				attacker = caster,
+				attacker = parent,
 				damage = damage,
 				damage_type = damage_type,
 				ability = self:GetAbility()
 			})
 
-			local pfx = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN, self:GetParent())
+			local pfx = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN, parent)
 			ParticleManager:SetParticleControl(pfx, 0, enemy:GetAbsOrigin())
 			ParticleManager:SetParticleControl(pfx, 1, Vector(radius, radius, radius))
 			ParticleManager:SetParticleControl(pfx, 2, enemy:GetAbsOrigin())

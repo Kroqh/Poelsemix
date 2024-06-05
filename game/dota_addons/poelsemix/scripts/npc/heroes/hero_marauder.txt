@@ -12,9 +12,8 @@
 	"Ability1" "marauder_cyclone"				
 	"Ability2" "vaal_cyclone"
 	"Ability3" "marauder_leap_slam"
-	//"Ability4" "move_only"
-	"Ability4" "generic_hidden"
-	"Ability5" "generic_hidden" //reflection
+	"Ability4" "marauder_reflection"
+	"Ability5" "generic_hidden"
 	"Ability6" "marauder_blood_rage" //blood rage
 	"Ability7" "generic_hidden"
 	

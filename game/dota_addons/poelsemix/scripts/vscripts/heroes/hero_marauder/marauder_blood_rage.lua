@@ -5,14 +5,15 @@ marauder_blood_rage = marauder_blood_rage or class({})
 function marauder_blood_rage:OnSpellStart() 
 	local caster = self:GetCaster()
 	local duration = self:GetSpecialValueFor("duration")
-	local damage_percent = self:GetSpecialValueFor("self_damage_percent") / 100
-	self:ApplyRage(caster, duration, damage_percent)
+	caster:EmitSound("marauder_blood_rage")
+	self:ApplyRage(caster, duration)
 end
 
-function marauder_blood_rage:ApplyRage(unit, duration, damage_percent)
+function marauder_blood_rage:ApplyRage(unit, duration)
 	if not IsServer() then return end
 	local caster = self:GetCaster()
-	unit:EmitSound("marauder_blood_rage")
+	local damage_percent = self:GetSpecialValueFor("self_damage_percent") / 100
+	
 	if unit:HasModifier("marauder_blood_rage") then unit:RemoveModifierByName("marauder_blood_rage") end --for proper strength refresh, makes str gain static while everything else is dynamic but w/e
 	unit:AddNewModifier(caster, self, "modifier_marauder_blood_rage", {duration = duration})
 	ApplyDamage({
