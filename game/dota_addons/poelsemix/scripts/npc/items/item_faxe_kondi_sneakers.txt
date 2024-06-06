@@ -1,0 +1,47 @@
+"item_faxe_kondi_sneakers"
+{
+	"BaseClass"             		"item_lua"
+	"AbilityTextureName"			"faxe_kondi_sneakers"
+	"ScriptFile"					"items/item_faxe_kondi_sneakers.lua"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"2200"
+  	"ID"						"3062"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"move_speed;cdr"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"boots"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"	"FIELD_INTEGER"
+			"cdr" "18"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"movement_speed" "50"
+		}
+		"03"
+		{
+			"var_type" "FIELD_FLOAT"
+			"ms_perc_per_stack" "3"
+		}
+		"04"
+		{
+			"var_type" "FIELD_INTEGER"
+			"max_stacks" "5"
+		}
+		"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"stack_falloff" "4"
+		}
+	}
+}

@@ -120,7 +120,6 @@ function modifier_marauder_cyclone:OnIntervalThink()
 	local parent = self:GetParent()
 	local radius = self:GetAbility():GetActualRadius()
 	local damage = self:CalcDamageScaling() * caster:GetAverageTrueAttackDamage(nil)
-	print(damage)
 	
 	local enemies = FindUnitsInRadius(caster:GetTeamNumber(), 
 									  parent:GetAbsOrigin(), 

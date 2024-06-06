@@ -1,0 +1,48 @@
+"item_faxe_kondi"
+{
+// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_datadriven"
+  	"AbilityTextureName"        "faxe_kondi"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"600"
+  	"ID"						"3061"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"health;mana;cdr"
+	"ItemQuality"					"component"
+	"ItemAliases"					"cdr"
+	
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"cdr"					"5"
+		}
+
+	}
+	
+	"Modifiers"
+	{
+		"modifier_faxe_kondi"
+		{
+			"Passive"			"1"
+			"IsHidden"			"1"
+			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+			
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%cdr"		
+			}
+		}
+	}
+}

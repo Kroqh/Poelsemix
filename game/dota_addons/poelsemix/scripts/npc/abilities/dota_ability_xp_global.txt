@@ -26,7 +26,7 @@
 					"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
 				}
 
-				"ThinkInterval"	".5"
+				"ThinkInterval"	"1"
 
 				"OnIntervalThink"
 				{
@@ -39,16 +39,11 @@
 							"Types"			"DOTA_UNIT_TARGET_HERO"
 							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 						}
-						"XPAmount"		"10"
+						"XPAmount"		"12"
 						"SplitEvenly"	"0"
-						"GoldAmount"	"0"
-						"ReliableGold"	"0"
+						"GoldAmount"	"7"
+						"ReliableGold"	"1"
 						"PlayAlert"		"0"
-					}
-					"RunScript"
-					{
-						"ScriptFile"	"global_gold.lua"
-						"Function"		"GiveGoldBig"
 					}
 				}
 			}
@@ -56,7 +51,7 @@
 			"modifier_get_xp_global"
 			{
 				"Passive"       "1"
-				"EffectName"	"particles/econ/courier/courier_greevil_yellow/courier_greevil_yellow_ambient_3_b.vpcf"
+				"EffectName"	""
 				"TextureName"	"alchemist_goblins_greed"
 			}
 		}

@@ -1,0 +1,14 @@
+"item_recipe_faxe_kondi_sneakers"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"500"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_faxe_kondi_sneakers"
+		"ItemRequirements"
+		{
+			"01" "item_faxe_kondi;item_boots_of_speed;item_faxe_kondi"
+		}
+  	}

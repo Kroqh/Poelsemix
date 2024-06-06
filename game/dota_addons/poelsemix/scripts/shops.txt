@@ -47,6 +47,7 @@
 		"item"		"item_hike_shox"
 		"item"		"item_crocs"
 		"item"		"item_blink_boots"
+		"Item"		"item_faxe_kondi_sneakers"
 		
 		"item"		"item_talisman_of_tax_evasion"
 	}
