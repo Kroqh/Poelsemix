@@ -22,6 +22,16 @@ function marauder_leap_slam:OnSpellStart()
 	caster:EmitSound("marauder_leap")
 	local cyclone = caster:FindAbilityByName("marauder_cyclone")
 	if cyclone ~= nil and cyclone:GetToggleState() then cyclone:ToggleAbility() end
+	if caster:HasModifier("modifier_marauder_vaal_cyclone") then
+		caster:RemoveModifierByName("modifier_marauder_vaal_cyclone")
+		caster:RemoveModifierByName("modifier_marauder_vaal_cyclone_suck")
+	end
+
+	local cyclone = caster:FindAbilityByName("marauder_reflection")
+	if self:GetCaster():FindAbilityByName("special_bonus_marauder_6"):GetLevel() > 0 and cyclone ~= nil and cyclone:GetLevel() > 0 then 
+		cyclone:SummonClone(1)
+	end 
+
 	self.click_location = GetGroundPosition(caster:GetCursorPosition(), nil)
 	if self.click_location == caster:GetAbsOrigin() then self.click_location = caster:GetAbsOrigin() + caster:GetForwardVector() * 100 end
 	caster:AddNewModifier(caster, self, "modifier_marauder_leap_slam", {})
@@ -104,6 +114,7 @@ function modifier_marauder_leap_slam:marauder_leap_slam_damage(self, click_locat
 
 	local radius = ability:GetSpecialValueFor("impact_radius")
 	local damage = ability:GetSpecialValueFor("damage")
+	local duration = ability:GetSpecialValueFor("stun_duration")
 	local damage_type = ability:GetAbilityDamageType()
 
 
@@ -124,6 +135,7 @@ function modifier_marauder_leap_slam:marauder_leap_slam_damage(self, click_locat
 				damage_type = damage_type,
 				ability = ability
 			})
+		enemy:AddNewModifier(caster, self:GetAbility(), "modifier_stunned", {duration = duration})
 	end
 	-- particle
 	local particle = "particles/econ/items/earthshaker/earthshaker_totem_ti6/earthshaker_totem_ti6_leap_v2_impact_dust.vpcf"
@@ -142,7 +154,7 @@ function modifier_marauder_leap_slam_fortify:IsHidden() return false end
 function modifier_marauder_leap_slam:IsPurgable() return true end
 
 function modifier_marauder_leap_slam_fortify:DeclareFunctions()
-	local funcs = { MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS }
+	local funcs = { MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS, MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE }
 	return funcs
 end
 
@@ -150,6 +162,11 @@ function modifier_marauder_leap_slam_fortify:OnCreated()
 	self.armor = self:GetAbility():GetSpecialValueFor("fortify_armor")
 end
 
+function modifier_marauder_leap_slam_fortify:GetModifierMoveSpeedBonus_Percentage()
+	local ms = 0
+	if self:GetCaster():FindAbilityByName("special_bonus_marauder_3"):GetLevel() > 0 then ms = ms + self:GetCaster():FindAbilityByName("special_bonus_marauder_3"):GetSpecialValueFor("value") end 
+	return ms
+end
 
 function modifier_marauder_leap_slam_fortify:GetModifierPhysicalArmorBonus()
 	return self.armor

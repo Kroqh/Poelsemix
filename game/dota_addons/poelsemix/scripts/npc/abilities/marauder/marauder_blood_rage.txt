@@ -26,6 +26,7 @@
 		{
 			"var_type" "FIELD_INTEGER"
 			"percent_increaser"	"20 25 30" //Increases model size, q/w damage scaling and rate and radius, str and ms by this percentage, also affects clones
+			"LinkedSpecialBonus" "special_bonus_marauder_8"
 		}
 		"01"
 		{
@@ -36,6 +37,7 @@
 		{
 			"var_type" "FIELD_FLOAT"
 			"duration"	"5"
+			"LinkedSpecialBonus" "special_bonus_marauder_1"
 		}
 	}
 }

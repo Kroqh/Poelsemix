@@ -10,7 +10,7 @@
 
 
 	"Ability1" "marauder_cyclone"				
-	"Ability2" "vaal_cyclone"
+	"Ability2" "marauder_vaal_cyclone"
 	"Ability3" "marauder_leap_slam"
 	"Ability4" "marauder_reflection"
 	"Ability5" "generic_hidden"
@@ -19,14 +19,14 @@
 	
 	"AttackRange"			"10"
 
-	//"Ability10" "leap_slam_fortify_bonus" //rename
-	//"Ability11" "leap_slam_reduced_cooldown_bonus" //rename
-	//"Ability12" "conc_effect" //rename
-	//"Ability13"	"marauder_cyclone_inc_aoe" //rename
-	// "Ability14" "special_bonus_nissan_2"
-	// "Ability15" "special_bonus_nissan_3"
-	// "Ability16" "special_bonus_nissan_4"
-	// "Ability17" "special_bonus_spell_amplify_25"
+	"Ability10" "special_bonus_marauder_1"
+	"Ability11" "special_bonus_marauder_2"
+	"Ability12" "special_bonus_marauder_3"
+	"Ability13"	"special_bonus_marauder_4"
+	"Ability14" "special_bonus_marauder_5"
+	"Ability15" "special_bonus_marauder_6"
+	"Ability16" "special_bonus_marauder_7"
+	"Ability17" "special_bonus_marauder_8"
 
 	"ArmorPhysical"		"5"
 
@@ -35,7 +35,7 @@
 	"AttributeBaseAgility"		"15"
 	"AttributeAgilityGain"		"1.8"
 	"AttributeBaseIntelligence"		"12"									
-	"AttributeIntelligenceGain"		"1.2"									
+	"AttributeIntelligenceGain"		"1.1"									
 	
 
 	"StatusHealthRegen"		"1.8"

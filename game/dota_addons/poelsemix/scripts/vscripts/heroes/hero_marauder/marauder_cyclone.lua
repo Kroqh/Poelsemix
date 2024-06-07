@@ -1,8 +1,5 @@
 
---------------------------------------------------------------------------------
 LinkLuaModifier("modifier_marauder_cyclone", "heroes/hero_marauder/marauder_cyclone", LUA_MODIFIER_MOTION_NONE)
-
-
 LinkLuaModifier("modifier_move_only", "heroes/hero_marauder/marauder_cyclone", LUA_MODIFIER_MOTION_NONE)
 move_only = move_only or class({})
 
@@ -49,6 +46,10 @@ function marauder_cyclone:OnToggle()
 	local caster = self:GetCaster()
 	if self:GetToggleState() then
 		caster:AddNewModifier(caster, self, "modifier_marauder_cyclone", {outgoing = 1})
+		if caster:HasModifier("modifier_marauder_vaal_cyclone") then
+			caster:RemoveModifierByName("modifier_marauder_vaal_cyclone")
+			caster:RemoveModifierByName("modifier_marauder_vaal_cyclone_suck")
+		end
 	else
 		caster:FindModifierByName("modifier_marauder_cyclone"):Destroy()
 	end
@@ -57,7 +58,7 @@ end
 modifier_marauder_cyclone = modifier_marauder_cyclone or class({})
 
 function modifier_marauder_cyclone:IsHidden() return false end
-function modifier_marauder_cyclone:IsPurgeable() return false end
+function modifier_marauder_cyclone:IsPurgable() return false end
 function modifier_marauder_cyclone:ResetToggleOnRespawn()	return true end
 
 function modifier_marauder_cyclone:DeclareFunctions()
@@ -111,7 +112,9 @@ function modifier_marauder_cyclone:OnCreated(kv)
 end
 
 function modifier_marauder_cyclone:GetModifierMoveSpeedBonus_Percentage()
-	return self:GetAbility():GetSpecialValueFor("movement_self_slow")
+	local slow = self:GetAbility():GetSpecialValueFor("movement_self_slow")
+	if self:GetCaster():FindAbilityByName("special_bonus_marauder_7"):GetLevel() > 0 then slow = slow + self:GetCaster():FindAbilityByName("special_bonus_marauder_7"):GetSpecialValueFor("value") end 
+	return slow
 end
 
 function modifier_marauder_cyclone:OnIntervalThink()
@@ -140,8 +143,7 @@ function modifier_marauder_cyclone:OnIntervalThink()
 			ability = self:GetAbility()
 		})
 
-		-- VAAL CYCLONE stacks
-		--vaal_cyclone_add_stack(caster)
+		vaal_cyclone_add_stack(caster)
 	end
 	-- AGHS
 	if caster:HasScepter() then
@@ -163,18 +165,18 @@ function modifier_marauder_cyclone:OnIntervalThink()
 	
 end
 
---function vaal_cyclone_add_stack(caster)
---	local vaal_cyclone_spell = caster:FindAbilityByName("vaal_cyclone")
---	if vaal_cyclone_spell then
---		local vaal_cyclone_modifier = caster:FindModifierByName("modifier_vaal_cyclone_stack")
---		if vaal_cyclone_modifier then
---			local stacks = vaal_cyclone_modifier:GetStackCount()
---			if stacks < vaal_cyclone_spell:GetSpecialValueFor("stacks_needed") then
---				vaal_cyclone_modifier:IncrementStackCount()
---			end
---		end
---	end
---end
+function vaal_cyclone_add_stack(caster)
+	local vaal_cyclone_spell = caster:FindAbilityByName("marauder_vaal_cyclone")
+	if vaal_cyclone_spell then
+		local vaal_cyclone_modifier = caster:FindModifierByName("modifier_vaal_cyclone_stack")
+		if vaal_cyclone_modifier then
+			local stacks = vaal_cyclone_modifier:GetStackCount()
+			if stacks < vaal_cyclone_spell:GetSpecialValueFor("stacks_needed") then
+				vaal_cyclone_modifier:IncrementStackCount()
+			end
+		end
+	end
+end
 
 function modifier_marauder_cyclone:OnDestroy()
 	if not IsServer() then return end

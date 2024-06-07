@@ -24,11 +24,13 @@
 		{
 			"var_type" "FIELD_float"
 			"clone_duration" "3.25 3.5 3.75 4"
+			"LinkedSpecialBonus" "special_bonus_marauder_2"
 		}
 		"03"
 		{
 			"var_type" "FIELD_FLOAT"
 			"clone_dmg_percent" "-62.5 -60 -57.5 -55"
+			"LinkedSpecialBonus" "special_bonus_marauder_4"
 		}
 		"04"
 		{

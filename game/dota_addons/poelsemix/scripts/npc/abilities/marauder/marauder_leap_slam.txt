@@ -41,7 +41,7 @@
 		"03"
 		{
 			"var_type"	"FIELD_INTEGER"
-			"damage"	"130 180 230 280"
+			"damage"	"130 190 250 310"
 		}
         "04"
         {
@@ -57,6 +57,11 @@
         {
             "var_type"	"FIELD_INTEGER"
             "velocity"	"950"
+        }
+		"07"
+        {
+            "var_type"	"FIELD_FLOAT"
+            "stun_duration"	"1"
         }
 	}
 }

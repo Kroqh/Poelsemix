@@ -5,6 +5,7 @@ marauder_blood_rage = marauder_blood_rage or class({})
 function marauder_blood_rage:OnSpellStart() 
 	local caster = self:GetCaster()
 	local duration = self:GetSpecialValueFor("duration")
+	if self:GetCaster():FindAbilityByName("special_bonus_marauder_1"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_marauder_1"):GetSpecialValueFor("value") end 
 	caster:EmitSound("marauder_blood_rage")
 	self:ApplyRage(caster, duration)
 end
@@ -44,6 +45,7 @@ function modifier_marauder_blood_rage:OnCreated()
 	local caster = self:GetCaster()
 	local ability = self:GetAbility()
 	ability.percent_increaser = ability:GetSpecialValueFor("percent_increaser")
+	if self:GetCaster():FindAbilityByName("special_bonus_marauder_8"):GetLevel() > 0 then ability.percent_increaser = ability.percent_increaser + self:GetCaster():FindAbilityByName("special_bonus_marauder_8"):GetSpecialValueFor("value") end 
 	
 	self.str = 0
 	self.str = self:GetParent():GetStrength() * self:GetAbility():GetIncreaser()

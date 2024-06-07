@@ -12,8 +12,10 @@ function marauder_reflection:SummonClone(count)
 	local caster = self:GetCaster()
 
 	local outgoing = self:GetSpecialValueFor("clone_dmg_percent")
+	if self:GetCaster():FindAbilityByName("special_bonus_marauder_4"):GetLevel() > 0 then outgoing = outgoing + self:GetCaster():FindAbilityByName("special_bonus_marauder_4"):GetSpecialValueFor("value") end 
 	local incoming = self:GetSpecialValueFor("clone_taken_percent")
 	local duration = self:GetSpecialValueFor("clone_duration")
+	if self:GetCaster():FindAbilityByName("special_bonus_marauder_2"):GetLevel() > 0 then duration = duration + self:GetCaster():FindAbilityByName("special_bonus_marauder_2"):GetSpecialValueFor("value") end 
     local images = CreateIllusions(self:GetCaster(), self:GetCaster(), {
 		outgoing_damage 			= outgoing,
 		incoming_damage				= incoming,
