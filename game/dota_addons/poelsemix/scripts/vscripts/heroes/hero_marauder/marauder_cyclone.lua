@@ -143,11 +143,11 @@ function modifier_marauder_cyclone:OnIntervalThink()
 			ability = self:GetAbility()
 		})
 
-		vaal_cyclone_add_stack(caster)
+		self:vaal_cyclone_add_stack(caster)
 	end
 	-- AGHS
 	if caster:HasScepter() then
-		self:IceNova(self, enemies)
+		self:IceNova(enemies)
 	end
 
 	local rate = self:GetSpinRate()
@@ -165,7 +165,7 @@ function modifier_marauder_cyclone:OnIntervalThink()
 	
 end
 
-function vaal_cyclone_add_stack(caster)
+function modifier_marauder_cyclone:vaal_cyclone_add_stack(caster)
 	local vaal_cyclone_spell = caster:FindAbilityByName("marauder_vaal_cyclone")
 	if vaal_cyclone_spell then
 		local vaal_cyclone_modifier = caster:FindModifierByName("modifier_vaal_cyclone_stack")
@@ -187,7 +187,7 @@ function modifier_marauder_cyclone:OnDestroy()
 	self:GetParent():EmitSound("Hero_Juggernaut.BladeFuryStop")
 end
 
-function modifier_marauder_cyclone:IceNova(self, enemies) 
+function modifier_marauder_cyclone:IceNova(enemies) 
 	if not IsServer() then return end
 
 	local particle = "particles/units/heroes/hero_marauder/cyclone_ice_nova.vpcf"

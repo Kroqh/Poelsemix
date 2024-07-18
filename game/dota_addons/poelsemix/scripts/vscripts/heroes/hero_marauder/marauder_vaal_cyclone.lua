@@ -150,6 +150,9 @@ function modifier_marauder_vaal_cyclone:OnIntervalThink()
 			ability = self:GetAbility()
 		})
 	end
+	if caster:HasScepter() then
+		self:IceNova(enemies)
+	end
 
 	local rate = self:GetSpinRate()
 	local rate_diff = math.abs(rate-self.rate)
@@ -174,6 +177,43 @@ function modifier_marauder_vaal_cyclone:OnDestroy()
 	self:GetParent():StopSound("Hero_Juggernaut.BladeFuryStart")
 	self:GetParent():EmitSound("Hero_Juggernaut.BladeFuryStop")
 end
+
+
+
+function modifier_marauder_vaal_cyclone:IceNova(enemies) 
+	if not IsServer() then return end
+	local cyclone = self:GetCaster():FindAbilityByName("marauder_cyclone")
+	local particle = "particles/units/heroes/hero_marauder/cyclone_ice_nova.vpcf"
+	local parent = self:GetParent()
+	local scaling = cyclone:GetSpecialValueFor("scepter_ice_nova_damage_int_ratio")
+	local damage = parent:GetIntellect(true) * scaling * self.outgoing_multi
+	local radius = cyclone:GetSpecialValueFor("scepter_ice_nova_radius")
+	local chance = cyclone:GetSpecialValueFor("scepter_ice_nova_chance")
+	
+
+	local damage_type = DAMAGE_TYPE_MAGICAL
+
+	for _, enemy in pairs(enemies) do
+		if RollPercentage(chance) then
+			parent:EmitSound("Hero_Crystal.CrystalNova")
+			ApplyDamage({
+				victim = enemy,
+				attacker = parent,
+				damage = damage,
+				damage_type = damage_type,
+				ability = self:GetAbility()
+			})
+
+			local pfx = ParticleManager:CreateParticle(particle, PATTACH_ABSORIGIN, parent)
+			ParticleManager:SetParticleControl(pfx, 0, enemy:GetAbsOrigin())
+			ParticleManager:SetParticleControl(pfx, 1, Vector(radius, radius, radius))
+			ParticleManager:SetParticleControl(pfx, 2, enemy:GetAbsOrigin())
+			ParticleManager:ReleaseParticleIndex(pfx)
+			
+		end
+	end
+end
+
 
 modifier_vaal_cyclone_stack = modifier_vaal_cyclone_stack or class({})
 
