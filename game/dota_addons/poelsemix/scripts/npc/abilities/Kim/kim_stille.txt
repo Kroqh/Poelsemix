@@ -20,40 +20,21 @@
 		"particle"	"particles/units/heroes/hero_enigma/enigma_base_attack.vpcf"
 	}
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"velocity" "1000"
-		}
-	    "02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"dmg" "125 250 375 500"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"range" "700" //dash range
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"radius" "500" //aoe firing range at end of dash
-			"LinkedSpecialBonus" "special_bonus_kim_8"	
-		}
-            "05"
-    	{
-			"var_type" "FIELD_FLOAT"
-            "duration" "1 2 3 4" //silence duration
-			"LinkedSpecialBonus" "special_bonus_kim_7"	
-		}
-
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"velocity_projectile" "500"
-		}
-	}
+	"AbilityValues"
+        {
+            "velocity" "1000"
+            "dmg" "125 250 375 500"
+            "range" "700"
+            "radius"
+            {
+                "value" "500"
+                "LinkedSpecialBonus" "special_bonus_kim_8"
+            }
+            "duration"
+            {
+                "value" "1 2 3 4"
+                "LinkedSpecialBonus" "special_bonus_kim_7"
+            }
+            "velocity_projectile" "500"
+        }
 }

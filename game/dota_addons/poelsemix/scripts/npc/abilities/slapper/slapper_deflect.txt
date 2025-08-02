@@ -14,34 +14,20 @@
         "particle" "particles/units/heroes/hero_slapperl/slapper_deflect.vpcf"
         }
 	
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"max_charges" "2 3 4 5"
-			"LinkedSpecialBonus" "special_bonus_slapper_2"
-		}
-		"02"
-		{
-				"var_type"						"FIELD_FLOAT"
-				"interval"					"4 3.5 3 2.5"
-				"LinkedSpecialBonus" "special_bonus_slapper_8"
-		}
-		"03"
-		{
-				"var_type"						"FIELD_INTEGER"
-				"proj_speed"					"1500"
-		}
-		"04"
-		{
-				"var_type"						"FIELD_INTEGER"
-				"damage"					"45 50 55 60"
-		}
-		"05"
-		{
-				"var_type"						"FIELD_FLOAT"
-				"int_damage"					"0.9 1 1.1 1.2"
-		}
-	}
+	"AbilityValues"
+        {
+            "max_charges"
+            {
+                "value" "2 3 4 5"
+                "LinkedSpecialBonus" "special_bonus_slapper_2"
+            }
+            "interval"
+            {
+                "value" "4 3.5 3 2.5"
+                "LinkedSpecialBonus" "special_bonus_slapper_8"
+            }
+            "proj_speed" "1500"
+            "damage" "45 50 55 60"
+            "int_damage" "0.9 1 1.1 1.2"
+        }
 }

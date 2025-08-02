@@ -7,7 +7,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityTextureName"			"noxious_trap"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType" 					"ABILITY_TYPE_ULTIMATE"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
@@ -20,58 +20,21 @@
 
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_6"
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "4"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"tick"	"1"
-		}
-		"03"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"damage"	"80 105 130"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"max_stacks" "3"
-			"LinkedSpecialBonus" "special_bonus_teemo_1"
-		}
-		"05"
-		{
-			"var_type" "FIELD_FLOAT"
-			"trap_duration" "300"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"radius" "100"
-		}
-		"07"
-		{
-			"var_type" "FIELD_INTEGER"
-			"movement_slow" "-45 -50 -55"
-		}
-		"08"
-		{
-			"var_type" "FIELD_INTEGER"
-			"charge_time" "25 20 15"
-		}
-		"09"
-		{
-			"var_type" "FIELD_FLOAT"
-			"int_scaling" "0.3 0.4 0.5" //per tick
-		}
-		"10"
-		{
-			"var_type" "FIELD_FLOAT"
-			"delay" "2" //invis and explosion arming time
-		}
-	}
+	"AbilityValues"
+        {
+            "duration" "4"
+            "tick" "1"
+            "damage" "80 105 130"
+            "max_stacks"
+            {
+                "value" "3"
+                "LinkedSpecialBonus" "special_bonus_teemo_1"
+            }
+            "trap_duration" "300"
+            "radius" "100"
+            "movement_slow" "-45 -50 -55"
+            "charge_time" "25 20 15"
+            "int_scaling" "0.3 0.4 0.5"
+            "delay" "2"
+        }
 }

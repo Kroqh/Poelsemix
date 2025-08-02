@@ -12,7 +12,7 @@
 		"AbilityCastPoint"				"0.2"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
 		"AbilityCastRange" 				"600"
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityType"					"ABILITY_TYPE_BASIC"
 		
 
 
@@ -25,25 +25,14 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-
-			"01"
-			{
-				"var_type" "FIELD_INTEGER"
-				"lifetime" "14 15 16 17"
-			}
-			"02"
-			{
-				"var_type" "FIELD_FLOAT"
-				"dmg_int_scaling" "2 2.5 3 3.5"
-				"LinkedSpecialBonus" "special_bonus_herobrine_3"
-			}
-			"03"
-			{
-				"var_type" "FIELD_FLOAT"
-				"hp_int_scaling" "14 18 22 26"
-			}
-			
-		}
+		"AbilityValues"
+        {
+            "lifetime" "14 15 16 17"
+            "dmg_int_scaling"
+            {
+                "value" "2 2.5 3 3.5"
+                "LinkedSpecialBonus" "special_bonus_herobrine_3"
+            }
+            "hp_int_scaling" "14 18 22 26"
+        }
 }

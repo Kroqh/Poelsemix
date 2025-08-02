@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_cid/cid_upgrade_skills"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType" "ABILITY_TYPE_ULTIMATE"
 	"AbilityTextureName" "upgrade_skills"
 	
 	// Casting
@@ -20,17 +20,9 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"125"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_FLOAT"
-			"duration"	"10 12 14"
-		}
-		"02"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"ms"	"100 125 150" 
-		}
-	}
+	"AbilityValues"
+        {
+            "duration" "10 12 14"
+            "ms" "100 125 150"
+        }
 }

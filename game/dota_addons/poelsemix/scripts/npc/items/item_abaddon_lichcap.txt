@@ -23,18 +23,9 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage"					"120"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage_multi_percentage"						"45" //base attack only, because of limitations i guess
-		}
-
-	}	
+	"AbilityValues"
+        {
+            "damage" "120"
+            "damage_multi_percentage" "45"
+        }	
 }

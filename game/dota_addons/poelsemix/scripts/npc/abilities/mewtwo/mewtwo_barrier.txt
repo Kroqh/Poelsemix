@@ -33,31 +33,20 @@
 	}
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"		"250 300 350 400"
-				"LinkedSpecialBonus" "special_bonus_mewtwo_6"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor"		"25 30 35 40"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"magic_resist"			"10 15 20 25"
-				"LinkedSpecialBonus" "special_bonus_mewtwo_4"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"duration"						"5.25 5.5 5.75 6"
-			}
-			
-		}
+		"AbilityValues"
+        {
+            "radius"
+            {
+                "value" "250 300 350 400"
+                "LinkedSpecialBonus" "special_bonus_mewtwo_6"
+            }
+            "armor" "25 30 35 40"
+            "magic_resist"
+            {
+                "value" "10 15 20 25"
+                "LinkedSpecialBonus" "special_bonus_mewtwo_4"
+            }
+            "duration" "5.25 5.5 5.75 6"
+        }
 		
 	}

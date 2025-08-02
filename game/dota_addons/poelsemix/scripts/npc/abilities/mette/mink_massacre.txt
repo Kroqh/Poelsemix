@@ -7,7 +7,7 @@
 		"ScriptFile"			"heroes/hero_mette/mink_massacre.lua"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+	"AbilityType"					"ABILITY_TYPE_BASIC"	
 	"AbilityCastPoint"				"0.1"
 	"AbilityCastRange"				"500"
 
@@ -21,25 +21,18 @@
 
 	}
 
-	"AbilitySpecial"
-	{
-		"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"base_int_mink"				"1"
-				"LinkedSpecialBonus" "special_bonus_mette_1"
-			}
-		"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"base_gold_mink"			"4 8 12 16"
-				"LinkedSpecialBonus" "special_bonus_mette_2"
-			}
-		"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"			"200"
-			}
-
-	}
+	"AbilityValues"
+        {
+            "base_int_mink"
+            {
+                "value" "1"
+                "LinkedSpecialBonus" "special_bonus_mette_1"
+            }
+            "base_gold_mink"
+            {
+                "value" "4 8 12 16"
+                "LinkedSpecialBonus" "special_bonus_mette_2"
+            }
+            "radius" "200"
+        }
 }

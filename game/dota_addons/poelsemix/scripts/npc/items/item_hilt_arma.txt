@@ -21,14 +21,10 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"agility"					"20"
-		}
-	}
+	"AbilityValues"
+        {
+            "agility" "20"
+        }
 	
 	"Modifiers"
 	{

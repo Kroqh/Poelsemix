@@ -3,19 +3,11 @@
 	"BaseClass"          			    "ability_datadriven"
 	"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"speed"			"950"
-		}
-		"02"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"duration"	"99999"
-		}
-	}
+	"AbilityValues"
+        {
+            "speed" "950"
+            "duration" "99999"
+        }
 
 	"Modifiers"
 	{

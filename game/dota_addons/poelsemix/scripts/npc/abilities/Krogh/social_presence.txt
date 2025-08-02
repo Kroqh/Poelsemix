@@ -28,31 +28,21 @@
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_damage"				"50 80 110 140"
-		}
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_range"				"150 175 200 225"
-			"LinkedSpecialBonus" "special_bonus_krogh_7"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"armor_reduction"				"-5 -8 -11 -14"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"armor_reduction_duration"				"2.5 3 3.5 4"
-			"LinkedSpecialBonus" "special_bonus_krogh_6"
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_damage" "50 80 110 140"
+            "bonus_range"
+            {
+                "value" "150 175 200 225"
+                "LinkedSpecialBonus" "special_bonus_krogh_7"
+            }
+            "armor_reduction" "-5 -8 -11 -14"
+            "armor_reduction_duration"
+            {
+                "value" "2.5 3 3.5 4"
+                "LinkedSpecialBonus" "special_bonus_krogh_6"
+            }
+        }
 	
 	
 }

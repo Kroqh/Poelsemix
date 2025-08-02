@@ -5,23 +5,20 @@
 	"ScriptFile"			"heroes/hero_mette/rose"
 	"MaxLevel"                  "4"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType"					"ABILITY_TYPE_BASIC"
 
 
-	"AbilitySpecial"
-	{
-		"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"reflect_percent"		"5 10 15 20"
-				"LinkedSpecialBonus" "special_bonus_mette_4"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"mink_threshold"		"2000 1875 1750 1625 "
-				"LinkedSpecialBonus" "special_bonus_mette_7"
-			}
-
-	}
+	"AbilityValues"
+        {
+            "reflect_percent"
+            {
+                "value" "5 10 15 20"
+                "LinkedSpecialBonus" "special_bonus_mette_4"
+            }
+            "mink_threshold"
+            {
+                "value" "2000 1875 1750 1625 "
+                "LinkedSpecialBonus" "special_bonus_mette_7"
+            }
+        }
 }

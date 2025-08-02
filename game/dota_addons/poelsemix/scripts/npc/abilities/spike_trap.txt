@@ -23,34 +23,12 @@
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"light_strike_array_aoe"	"192"
-		}
-		
-		"02"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"light_strike_array_delay_time"	"0.65"
-		}
-					
-		"03"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"light_strike_array_stun_duration"	"1.6"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"cast_animation"			"12"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"light_strike_array_damage"			"600"
-		}
-	}
+	"AbilityValues"
+        {
+            "light_strike_array_aoe" "192"
+            "light_strike_array_delay_time" "0.65"
+            "light_strike_array_stun_duration" "1.6"
+            "cast_animation" "12"
+            "light_strike_array_damage" "600"
+        }
 }

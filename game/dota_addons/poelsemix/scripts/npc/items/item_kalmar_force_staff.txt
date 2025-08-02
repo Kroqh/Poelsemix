@@ -26,54 +26,18 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_intellect" "45"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_health_regen" "12"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"push_length" "1800"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"push_speed" "3500"
-		}
-		"05"
-		{
-			"var_type" "FIELD_FLOAT"
-			"push_duration" "0.4"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"tree_radius" "100"
-		}
-		"07"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_attack_speed" "30"
-		}
-		"08"
-		{
-			"var_type" "FIELD_FLOAT"
-			"bonus_mana_regen" "3.0"
-		}
-		"09"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_damage" "20"
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_intellect" "45"
+            "bonus_health_regen" "12"
+            "push_length" "1800"
+            "push_speed" "3500"
+            "push_duration" "0.4"
+            "tree_radius" "100"
+            "bonus_attack_speed" "30"
+            "bonus_mana_regen" "3.0"
+            "bonus_damage" "20"
+        }
 	
 	"OnSpellStart"
 	{

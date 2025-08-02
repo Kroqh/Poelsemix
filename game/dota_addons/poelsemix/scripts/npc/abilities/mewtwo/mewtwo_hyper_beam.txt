@@ -12,7 +12,7 @@
 		"AbilityTextureName"			"mewtwo_hyper_beam"
 		"FightRecapLevel"				"1"
 		"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_6"
-		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"				"ABILITY_TYPE_ULTIMATE"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -35,36 +35,21 @@
 	}
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"		"1500 2275 3000"
-				"LinkedSpecialBonus" "special_bonus_mewtwo_8"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"tick_rate"			"0.2"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"channel_duration"						"3"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"range"		"1000 1150 1300"
-				"LinkedSpecialBonus" "special_bonus_mewtwo_7"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"		"75"
-			}
-			
-		}
+		"AbilityValues"
+        {
+            "damage"
+            {
+                "value" "1500 2275 3000"
+                "LinkedSpecialBonus" "special_bonus_mewtwo_8"
+            }
+            "tick_rate" "0.2"
+            "channel_duration" "3"
+            "range"
+            {
+                "value" "1000 1150 1300"
+                "LinkedSpecialBonus" "special_bonus_mewtwo_7"
+            }
+            "radius" "75"
+        }
 		
 	}

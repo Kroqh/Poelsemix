@@ -21,31 +21,20 @@
     "particle"  "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
   }
 
-  "AbilitySpecial"
-  {
-    "01"
-    {
-      "var_type"      "FIELD_FLOAT"
-      "duration"      "3.0"
-    }
-    "02"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "movespeed_debuff_percent"   "30 35 40 45" 
-    }
-    "03"
-    {
-      "var_type"  "FIELD_INTEGER"
-      "damage" "200 275 350 375"
-      "LinkedSpecialBonus" "special_bonus_yahya_1"
-    }
-    "04"
-    {
-      "var_type"  "FIELD_INTEGER"
-      "range" "500 525 550 575"
-      "LinkedSpecialBonus" "special_bonus_yahya_5"
-    }
-	
-  }
+  "AbilityValues"
+        {
+            "duration" "3.0"
+            "movespeed_debuff_percent" "30 35 40 45"
+            "damage"
+            {
+                "value" "200 275 350 375"
+                "LinkedSpecialBonus" "special_bonus_yahya_1"
+            }
+            "range"
+            {
+                "value" "500 525 550 575"
+                "LinkedSpecialBonus" "special_bonus_yahya_5"
+            }
+        }
 
 }

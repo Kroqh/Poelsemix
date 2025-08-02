@@ -4,7 +4,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"special_bonus_undefined"
-	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 	"LinkedAbility"
@@ -14,12 +14,8 @@
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"value" "1" //str ratio
-		}
-	}	
+	"AbilityValues"
+        {
+            "value" "1"
+        }	
 }

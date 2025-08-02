@@ -31,26 +31,20 @@
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"				"450 475 500 525"
-			"LinkedSpecialBonus" "special_bonus_kaj_4"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"0.3"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"200 250 300 350"
-			"LinkedSpecialBonus" "special_kaj_kaj_6"
-		}
-	}
+	"AbilityValues"
+        {
+            "radius"
+            {
+                "value" "450 475 500 525"
+                "LinkedSpecialBonus" "special_bonus_kaj_4"
+            }
+            "duration" "0.3"
+            "damage"
+            {
+                "value" "200 250 300 350"
+                "LinkedSpecialBonus" "special_kaj_kaj_6"
+            }
+        }
 
 	
 }

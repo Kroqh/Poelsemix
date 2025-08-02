@@ -13,25 +13,12 @@
 	"ItemQuality"					"epic"
 	"ItemAliases"					"olaf"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"str" "40"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"attack_speed" "40"
-		}
-		"03"
-		{
-			"var_type" "FIELD_FLOAT"
-			"as_pct_per_missing_hp" "0.5"
-		}
-
-	}
+	"AbilityValues"
+        {
+            "str" "40"
+            "attack_speed" "40"
+            "as_pct_per_missing_hp" "0.5"
+        }
 	
 	
 }

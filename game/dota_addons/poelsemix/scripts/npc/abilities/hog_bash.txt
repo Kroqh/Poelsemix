@@ -6,7 +6,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"abilities/hog_bash"
 	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "hog_rider"
 	"MaxLevel"                      "1"
 	
@@ -15,17 +15,9 @@
 	"AbilityCastPoint" "0.0"
 	"AbilityCastRange" "0"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"chance" "20"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "0.4"
-		}
-	}
+	"AbilityValues"
+        {
+            "chance" "20"
+            "duration" "0.4"
+        }
 }

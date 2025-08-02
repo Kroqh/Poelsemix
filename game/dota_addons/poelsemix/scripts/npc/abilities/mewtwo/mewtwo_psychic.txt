@@ -33,39 +33,14 @@
 	}
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_speed"		"900"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"		"350 400 450 500"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"particle_radius"			"100"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"knockback_dist"						"300"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"knockback_time"						"0.3"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"range"		"800 825 850 875"
-			}
-			
-		}
+		"AbilityValues"
+        {
+            "projectile_speed" "900"
+            "damage" "350 400 450 500"
+            "particle_radius" "100"
+            "knockback_dist" "300"
+            "knockback_time" "0.3"
+            "range" "800 825 850 875"
+        }
 		
 	}

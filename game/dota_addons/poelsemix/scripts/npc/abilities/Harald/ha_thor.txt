@@ -11,7 +11,7 @@
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"FightRecapLevel"				"1"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName"			"ha_thor"
 	
 	"precache"
@@ -38,19 +38,11 @@
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"		"200 300 400 500"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"radius"	"175"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "200 300 400 500"
+            "radius" "175"
+        }
 	
 	
 }

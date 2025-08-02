@@ -30,40 +30,22 @@
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range"			"625 675 725 775"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"4"
-			"LinkedSpecialBonus" "special_bonus_prophecy_7"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"delay"				"0.5"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"radius" "250 265 280 295"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage_tick" "50 65 80 95"
-			"LinkedSpecialBonus" "special_bonus_prophecy_6"
-		}
-		"06"
-		{
-			"var_type" "FIELD_FLOAT"
-			"tick" "1"
-		}
-	}
+	"AbilityValues"
+        {
+            "range" "625 675 725 775"
+            "duration"
+            {
+                "value" "4"
+                "LinkedSpecialBonus" "special_bonus_prophecy_7"
+            }
+            "delay" "0.5"
+            "radius" "250 265 280 295"
+            "damage_tick"
+            {
+                "value" "50 65 80 95"
+                "LinkedSpecialBonus" "special_bonus_prophecy_6"
+            }
+            "tick" "1"
+        }
 
 }

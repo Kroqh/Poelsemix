@@ -6,7 +6,7 @@
 	"ScriptFile"			"heroes/hero_kazuya/kazuya_spinning_demon"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 	"AbilityTextureName"			"kazuya_spinning_demon"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+	"AbilityType"					"ABILITY_TYPE_BASIC"	
 	
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 	"AbilityCooldown"				"0.3"
@@ -19,40 +19,21 @@
 		"particle"	"particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_v2_blade_fury_disk.vpcf"
 	}
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"velocity" "1000"
-		}
-	    "02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "150 200 250 300"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"range" "200" //dash range
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"radius" "300" //damage radius
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"fury_cost" "27 25 23 21"
-			"LinkedSpecialBonus" "special_bonus_kazuya_4"
-		}
-		"06"
-		{
-			"var_type" "FIELD_FLOAT"
-			"strength_scaling" "0.8 0.9 1 1.1"
-			"LinkedSpecialBonus" "special_bonus_kazuya_6"
-		}
- 
-	}
+	"AbilityValues"
+        {
+            "velocity" "1000"
+            "damage" "150 200 250 300"
+            "range" "200"
+            "radius" "300"
+            "fury_cost"
+            {
+                "value" "27 25 23 21"
+                "LinkedSpecialBonus" "special_bonus_kazuya_4"
+            }
+            "strength_scaling"
+            {
+                "value" "0.8 0.9 1 1.1"
+                "LinkedSpecialBonus" "special_bonus_kazuya_6"
+            }
+        }
 }

@@ -22,39 +22,15 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"str"					"52"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"hp"						"350"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"health_regen_percent_per_second"	"7.5"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"cooldown"					"5.0"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"armor" "12"
-		}
-		"07"
-		{
-			"var_type" "FIELD_INTEGER"
-			"magic_resist" "15"
-		}
-	}
+	"AbilityValues"
+        {
+            "str" "52"
+            "hp" "350"
+            "health_regen_percent_per_second" "7.5"
+            "cooldown" "5.0"
+            "armor" "12"
+            "magic_resist" "15"
+        }
 	
 
 }

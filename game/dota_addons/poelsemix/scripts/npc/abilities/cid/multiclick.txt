@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_cid/cid_multiclick"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "multiclick_icon"
 	
 	// Casting
@@ -20,30 +20,23 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"100 95 90 85"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"bat" "1.0 0.95 0.9 0.85"
-			"LinkedSpecialBonus" "special_bonus_cid_8"
-		}
-		"02"
-		{
-			"var_type"	"FIELD_FLOAT"
-			"duration"	"10"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"stacks"	"6"
-			"LinkedSpecialBonus" "special_bonus_cid_2"
-		}
-		"04"
-		{
-			"var_type"	"FIELD_FLOAT"
-			"bat_upgraded" "0.85 0.75 0.65 0.55"
-			"LinkedSpecialBonus" "special_bonus_cid_8"
-		}
-	}
+	"AbilityValues"
+        {
+            "bat"
+            {
+                "value" "1.0 0.95 0.9 0.85"
+                "LinkedSpecialBonus" "special_bonus_cid_8"
+            }
+            "duration" "10"
+            "stacks"
+            {
+                "value" "6"
+                "LinkedSpecialBonus" "special_bonus_cid_2"
+            }
+            "bat_upgraded"
+            {
+                "value" "0.85 0.75 0.65 0.55"
+                "LinkedSpecialBonus" "special_bonus_cid_8"
+            }
+        }
 }

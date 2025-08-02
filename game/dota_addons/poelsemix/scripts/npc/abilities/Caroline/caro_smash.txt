@@ -9,44 +9,27 @@
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-
-		
-		"01"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"bonus_damage"	"45 65 85 105"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"bonus_range"	"25 50 75 100"
-			"LinkedSpecialBonus" "special_bonus_caro_1"
-		}
-		"03"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"mana_cost"	"60 55 50 45"
-			"LinkedSpecialBonus" "special_bonus_caro_5"
-		}
-		"04"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"stun_chance"	" 10 15 20 25"
-			"LinkedSpecialBonus" "special_bonus_caro_6"
-		}
-		"05"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"stun_duration"	"0.1"
-		}
-		"06"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"projectile_speed_bonus"	"100 125 150 175"
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_damage" "45 65 85 105"
+            "bonus_range"
+            {
+                "value" "25 50 75 100"
+                "LinkedSpecialBonus" "special_bonus_caro_1"
+            }
+            "mana_cost"
+            {
+                "value" "60 55 50 45"
+                "LinkedSpecialBonus" "special_bonus_caro_5"
+            }
+            "stun_chance"
+            {
+                "value" " 10 15 20 25"
+                "LinkedSpecialBonus" "special_bonus_caro_6"
+            }
+            "stun_duration" "0.1"
+            "projectile_speed_bonus" "100 125 150 175"
+        }
 	
 
 	"precache"

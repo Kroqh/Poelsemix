@@ -6,7 +6,7 @@
 		"BaseClass"                 "ability_lua"
 			"ScriptFile"			"heroes/hero_pr0ph3cy/prophecy_blockchain"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityType" "ABILITY_TYPE_BASIC"
 		"AbilityTextureName" "blockchain"
 
 		// Casting
@@ -28,35 +28,18 @@
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
 		
-		"AbilitySpecial"
-       		 {
-            	"01"
-	            {
-	                "var_type" "FIELD_INTEGER"
-	                "gold_percent" "10"
-	            }
-				"02"
-	            {
-	                "var_type" "FIELD_FLOAT"
-	                "payout_self" "1.6 1.7 1.8 1.9"
-					"LinkedSpecialBonus" "special_bonus_prophecy_5"
-	            }
-				"03"
-	            {
-	                "var_type" "FIELD_FLOAT"
-	                "payout_enemy" "0.4 0.35 0.3 0.25"
-	            }
-				"04"
-	            {
-	                "var_type" "FIELD_FLOAT"
-	                "tick_rate" "1"
-	            }
-				"05"
-	            {
-	                "var_type" "FIELD_FLOAT"
-	                "channel_duration" "5"
-	            }
-       		 }
+		"AbilityValues"
+        {
+            "gold_percent" "10"
+            "payout_self"
+            {
+                "value" "1.6 1.7 1.8 1.9"
+                "LinkedSpecialBonus" "special_bonus_prophecy_5"
+            }
+            "payout_enemy" "0.4 0.35 0.3 0.25"
+            "tick_rate" "1"
+            "channel_duration" "5"
+        }
  
 
 

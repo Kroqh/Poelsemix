@@ -20,22 +20,10 @@
 		"particle"  "particles/econ/courier/courier_devourling_gold/courier_devourling_gold_ambient.vpcf"
 	}
 
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"trigger_chance"		"20"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_on_trigger"		"15"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"gold_to_damage_ratio"		"10"
-			}
-		}
+		"AbilityValues"
+        {
+            "trigger_chance" "20"
+            "gold_on_trigger" "15"
+            "gold_to_damage_ratio" "10"
+        }
 	}

@@ -7,7 +7,7 @@
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_POINT"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityCooldown"               "15 14 13 12"
 	"AbilityManaCost"               "70 60 50 40"
 	"AbilityCastPoint"               "0.15"
@@ -19,35 +19,21 @@
 		
 		"particle"			"particles/econ/harald/runesten.vpcf"
 	}
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"duration"		"6 7 8 9"
-			"LinkedSpecialBonus" "special_bonus_harald_6"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"aura_radius"	"500 550 600 650"
-			"LinkedSpecialBonus" "special_bonus_harald_5"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"aura_damage"	"20 25 30 35"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"aura_movespeed"	"15 18 21 24"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"aura_attackspeed"	"25 30 35 40"
-		}
-	}
+	"AbilityValues"
+        {
+            "duration"
+            {
+                "value" "6 7 8 9"
+                "LinkedSpecialBonus" "special_bonus_harald_6"
+            }
+            "aura_radius"
+            {
+                "value" "500 550 600 650"
+                "LinkedSpecialBonus" "special_bonus_harald_5"
+            }
+            "aura_damage" "20 25 30 35"
+            "aura_movespeed" "15 18 21 24"
+            "aura_attackspeed" "25 30 35 40"
+        }
 
 }

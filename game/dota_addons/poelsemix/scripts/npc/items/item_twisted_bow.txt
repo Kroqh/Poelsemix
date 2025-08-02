@@ -25,23 +25,11 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"agi"						"25"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"bonus_range"						"125"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"attack_speed"						"100"
-		}
-	}
+	"AbilityValues"
+        {
+            "agi" "25"
+            "bonus_range" "125"
+            "attack_speed" "100"
+        }
 	
 }

@@ -23,23 +23,10 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage"					"75"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"all_attributes"					"35"
-		}
-		"01"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"damage_loss_per_stat_diff"					"1"
-		}
-
-	}	
+	"AbilityValues"
+        {
+            "damage" "75"
+            "all_attributes" "35"
+            "damage_loss_per_stat_diff" "1"
+        }	
 }

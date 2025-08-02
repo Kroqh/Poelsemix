@@ -8,27 +8,16 @@
   "AbilityTextureName"         "koekkenkniv"
 	
 
-  "AbilitySpecial"
-  {
-    "01"
-    {
-      "var_type"      "FIELD_INTEGER"
-      "manacost"      "30 27 24 21"
-    }
-   "02"
-    {
-      "var_type"      "FIELD_INTEGER"
-      "bonus_damage"      "50 75 100 125"
-    }
-	"03"
-    {
-      "var_type"      "FIELD_FLOAT"
-      "bonus_max_hp_damage_perc"      "2"
-	  "LinkedSpecialBonus" "special_bonus_yahya_2"
-    }
-
-
-  }
+  "AbilityValues"
+        {
+            "manacost" "30 27 24 21"
+            "bonus_damage" "50 75 100 125"
+            "bonus_max_hp_damage_perc"
+            {
+                "value" "2"
+                "LinkedSpecialBonus" "special_bonus_yahya_2"
+            }
+        }
 
 
 }

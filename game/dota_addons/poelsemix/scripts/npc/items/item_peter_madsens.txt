@@ -32,42 +32,14 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"strength"					"25"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"evasion"						"25"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"armor"				"15"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"tenacity"				"20"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"heal_amp"					"25"
-		}
-		"06"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"active_duration"				"5"
-		}
-		"07"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"evasion_debuff"				"-999"
-		}
-	}
+	"AbilityValues"
+        {
+            "strength" "25"
+            "evasion" "25"
+            "armor" "15"
+            "tenacity" "20"
+            "heal_amp" "25"
+            "active_duration" "5"
+            "evasion_debuff" "-999"
+        }
 }

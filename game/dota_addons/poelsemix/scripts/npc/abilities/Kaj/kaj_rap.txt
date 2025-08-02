@@ -12,37 +12,21 @@
         "AbilityCooldown"           "21 19 17 15"
         "AbilityManaCost"           "120 110 100 90"
 
-        "AbilitySpecial"
+        "AbilityValues"
         {
-
-		"01"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            		"radius"          "375 400 425 450"
-			"LinkedSpecialBonus" "special_bonus_kaj_3"
-		  }
-          "02"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "knockup_duration"          "1.25 1.5 1.75 2"
-		"LinkedSpecialBonus" "special_bonus_kaj_2"
-          }
-	 "03"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "delay"          "3"
-          }
-		  "04"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            		"damage"          "400 550 700 950" 
-		  }
-		   "05"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            		"speed_percent"          "16 19 22 25" 
-		  }
-		 
+            "radius"
+            {
+                "value" "375 400 425 450"
+                "LinkedSpecialBonus" "special_bonus_kaj_3"
+            }
+            "knockup_duration"
+            {
+                "value" "1.25 1.5 1.75 2"
+                "LinkedSpecialBonus" "special_bonus_kaj_2"
+            }
+            "delay" "3"
+            "damage" "400 550 700 950"
+            "speed_percent" "16 19 22 25"
         }
 
 			"precache"

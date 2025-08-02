@@ -9,41 +9,29 @@
 	"AbilityTextureName"			"guerrilla_warfare"
 	"HasScepterUpgrade"			"1"
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"wait" "2"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "2.5"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"attackspeed" "50"
-			"LinkedSpecialBonus" "special_bonus_teemo_7"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"attackspeed6" "75"
-			"LinkedSpecialBonus" "special_bonus_teemo_7"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"attackspeed12" "100"
-			"LinkedSpecialBonus" "special_bonus_teemo_7"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"attackspeed18" "125"
-			"LinkedSpecialBonus" "special_bonus_teemo_7"
-		}
-	}
+	"AbilityValues"
+        {
+            "wait" "2"
+            "duration" "2.5"
+            "attackspeed"
+            {
+                "value" "50"
+                "LinkedSpecialBonus" "special_bonus_teemo_7"
+            }
+            "attackspeed6"
+            {
+                "value" "75"
+                "LinkedSpecialBonus" "special_bonus_teemo_7"
+            }
+            "attackspeed12"
+            {
+                "value" "100"
+                "LinkedSpecialBonus" "special_bonus_teemo_7"
+            }
+            "attackspeed18"
+            {
+                "value" "125"
+                "LinkedSpecialBonus" "special_bonus_teemo_7"
+            }
+        }
 }

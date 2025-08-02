@@ -23,25 +23,12 @@
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_intellect" "15"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"resistance_dur" "4"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_health" "100"
-		}
-		
-	}
+	"AbilityValues"
+        {
+            "bonus_intellect" "15"
+            "resistance_dur" "4"
+            "bonus_health" "100"
+        }
 	
 	"OnSpellStart"
 	{

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="abf6e7c1-c39a-43a4-a528-514892d4e292" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../../content/dota_addons/poelsemix/materials/Yujiro/Body.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../content/dota_addons/poelsemix/materials/Yujiro/Body_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../content/dota_addons/poelsemix/materials/Yujiro/Hair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../content/dota_addons/poelsemix/materials/Yujiro/Hair_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../content/dota_addons/poelsemix/models/yujiro/yujiro.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../content/dota_addons/poelsemix/models/yujiro/yujiro.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../addoninfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../addoninfo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/custom_loading_screen.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/custom_loading_screen.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/custom_ui_manifest.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/custom_ui_manifest.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/multiteam_hero_select_overlay.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/multiteam_hero_select_overlay.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/multiteam_hero_select_overlay_player.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/multiteam_hero_select_overlay_player.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/multiteam_hero_select_overlay_team.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/multiteam_hero_select_overlay_team.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/multiteam_hero_select_overlay_timer.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/multiteam_hero_select_overlay_timer.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/overthrow_game_info.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/overthrow_game_info.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/overthrow_item_notification.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/overthrow_item_notification.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/overthrow_scoreboard_left.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/overthrow_scoreboard_left.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/overthrow_scoreboard_team_overlay.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/overthrow_scoreboard_team_overlay.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../panorama/layout/custom_game/precache.vxml_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../panorama/layout/custom_game/precache.vxml_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/baseboys_bomb_b.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/baseboys_bomb_b.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/baseboys_choke.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/baseboys_choke.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/baseboys_concert.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/baseboys_concert.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/baseboys_gunpowder.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/baseboys_gunpowder.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/BaseBoys/special_bonus_baseboys_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/brian_dak.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/brian_dak.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/hurtigbrille.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/hurtigbrille.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/mokai.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/mokai.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/red_cecil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/red_cecil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Brian/special_bonus_brian_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/caro_crossfit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/caro_crossfit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/caro_matchpoint.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/caro_matchpoint.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/caro_side_swap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/caro_side_swap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Caroline/special_bonus_caro_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/gametecher_anime_power.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/gametecher_anime_power.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/gametecher_dropout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/gametecher_dropout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/gametecher_finger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/gametecher_finger.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/gametecher_matematik_a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/gametecher_matematik_a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Gametecher/special_bonus_gametecher_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/ha_army.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/ha_army.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/ha_convert.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/ha_convert.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/ha_rune.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/ha_rune.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/ha_thor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/ha_thor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Harald/special_bonus_harald_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/herobrine_diamonds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/herobrine_diamonds.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/herobrine_elderdrake.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/herobrine_elderdrake.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Herobrine/special_bonus_herobrine_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/intruder_decoy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/intruder_decoy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/intruder_flash.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/intruder_flash.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/intruder_remote_charge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/intruder_remote_charge.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/intruder_smoke.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/intruder_smoke.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/intruder_sniper.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/intruder_sniper.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Intruder/special_bonus_intruder_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/kaj_andrea.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/kaj_andrea.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kaj/special_bonus_kaj_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/kazuya_god_fist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/kazuya_god_fist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/kazuya_inferno.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/kazuya_inferno.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/kazuya_rage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/kazuya_rage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/kazuya_reverse_neck_throw.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/kazuya_reverse_neck_throw.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/kazuya_spinning_demon.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/kazuya_spinning_demon.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kazuya/special_bonus_kazuya_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/kim_nat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/kim_nat.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Kim/special_bonus_kim_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/awaken.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/awaken.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Krogh/special_bonus_krogh_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/lars_blame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/lars_blame.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_4..txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_4..txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Lars/special_bonus_lars_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/marvelous_antikommerciel_masseappel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/marvelous_antikommerciel_masseappel.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/marvelous_koldblodet_reptil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/marvelous_koldblodet_reptil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/marvelous_sky.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/marvelous_sky.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Marvelous/special_bonus_marvelous_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/pr0_blockchain.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/pr0_blockchain.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/pr0_deity.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/pr0_deity.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/PR0PH3CHY/special_bonus_prophecy_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/raio_afterimage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/raio_afterimage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/raio_amp_it_up.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/raio_amp_it_up.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/raio_heavenly_decree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/raio_heavenly_decree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/raio_unstable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/raio_unstable.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Raio/special_bonus_raio_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/ryge_skyd_en_due.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/ryge_skyd_en_due.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/Ryge/special_bonus_ryge_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/big_clicks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/big_clicks.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/huge_click.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/huge_click.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/multiclick.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/multiclick.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/powersurge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/powersurge.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/special_bonus_cid_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/cid/upgrade_skills.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/cid/upgrade_skills.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/courier_superspeed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/courier_superspeed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/damian_dabbington_city.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/damian_dabbington_city.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/damian/special_bonus_damian_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/fox/fox_ult.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/fox/fox_ult.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/hog_bash.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/hog_bash.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/marauder_blood_rage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/marauder_blood_rage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/marauder_cyclone.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/marauder_cyclone.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/marauder_leap_slam.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/marauder_leap_slam.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/marauder_reflection.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/marauder_reflection.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/marauder_vaal_cyclone.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/marauder_vaal_cyclone.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/marauder/special_bonus_marauder_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/margrethe_charge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/margrethe_charge.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/margrethe_gud_bevare_danmark.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/margrethe_gud_bevare_danmark.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/margrethe_livgarde.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/margrethe_livgarde.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/margrethe_vi_er_ikke_dus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/margrethe_vi_er_ikke_dus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/margrethe/special_bonus_margrethe_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/mette_mink.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/mette_mink.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/mink_massacre.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/mink_massacre.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/press_meeting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/press_meeting.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/red_rose.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/red_rose.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mette/special_bonus_mette_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/mewtwo_hyper_beam.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/mewtwo_hyper_beam.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/mewtwo/special_bonus_mewtwo_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/musashi_earth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/musashi_earth.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/musashi_fire.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/musashi_fire.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/musashi_void.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/musashi_void.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/musashi_water.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/musashi_water.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_4..txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_4..txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/musashi/special_bonus_musashi_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/race.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/race.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/runover.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/runover.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/nissan/special_bonus_nissan_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/Special_bonus_shadow_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/aerial_assault.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/aerial_assault.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/shadow_gun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/shadow_gun.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shadow/shadow_stealthy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shadow/shadow_stealthy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/shimakaze_dangerous_sea.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/shimakaze_dangerous_sea.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/shimakaze_destroyer_speed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/shimakaze_destroyer_speed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/shimakaze_torpedo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/shimakaze_torpedo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/shimakaze/special_bonus_shimakaze_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/slapper_rammusteinu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/slapper_rammusteinu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/slapper_slap_city.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/slapper_slap_city.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/slapper/special_bonus_slapper_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/special_bonus_stewart_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/stewart_jul_pa_vesterbro.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/stewart_jul_pa_vesterbro.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/stewart/stewart_poelsevogn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/stewart/stewart_poelsevogn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/move_quick.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/move_quick.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/noxious_trap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/noxious_trap.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/teemo/special_bonus_teemo_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/special_bonus_urgot_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/urgot_capacitor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/urgot_capacitor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/urgot/urgot_reverser.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/urgot/urgot_reverser.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/special_bonus_yahya_8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abilities/yahya/yahya_omskaering.txt" beforeDir="false" afterPath="$PROJECT_DIR$/abilities/yahya/yahya_omskaering.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/items/item_golden_horns.txt" beforeDir="false" afterPath="$PROJECT_DIR$/items/item_golden_horns.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/items/recipes/item_recipe_dagon_datadriven.txt" beforeDir="false" afterPath="$PROJECT_DIR$/items/recipes/item_recipe_dagon_datadriven.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/items/recipes/item_recipe_faxe_kondi_sneakers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/items/recipes/item_recipe_faxe_kondi_sneakers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../soundevents/items_soundevent.vsndevts_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../soundevents/items_soundevent.vsndevts_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../soundevents/kim_soundevent.vsndevts_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../soundevents/kim_soundevent.vsndevts_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../soundevents/nissan_soundevent.vsndevts_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../soundevents/nissan_soundevent.vsndevts_c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../soundevents/raio_soundevent.vsndevts_c" beforeDir="false" afterPath="$PROJECT_DIR$/../../soundevents/raio_soundevent.vsndevts_c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="30jqP3OUN01ynQynD7jUrqS1QRb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abf6e7c1-c39a-43a4-a528-514892d4e292" name="Changes" comment="" />
+      <created>1754151301937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754151301937</updated>
+    </task>
+    <servers />
+  </component>
+</project>

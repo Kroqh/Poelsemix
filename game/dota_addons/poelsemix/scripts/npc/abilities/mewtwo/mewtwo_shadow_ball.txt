@@ -36,35 +36,17 @@
 	}
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_speed"		"700"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"		"175 250 325 400"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aoe_radius"			"300" //Seems hardcoded into particle, dont change
-			}
-			"04"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"duration"						"4.0"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"magic_resist_reduction"		"-30 -35 -40 -45"
-				"LinkedSpecialBonus" "special_bonus_mewtwo_3"
-			}
-			
-		}
+		"AbilityValues"
+        {
+            "projectile_speed" "700"
+            "damage" "175 250 325 400"
+            "aoe_radius" "300"
+            "duration" "4.0"
+            "magic_resist_reduction"
+            {
+                "value" "-30 -35 -40 -45"
+                "LinkedSpecialBonus" "special_bonus_mewtwo_3"
+            }
+        }
 		
 	}

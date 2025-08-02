@@ -21,30 +21,15 @@
 			"particle" 			"particles/units/heroes/hero_prophecy/hack.vpcf"
         }
 		
-	"AbilitySpecial"
-		{
-  		    "01"
-		    {
-		        "var_type"          "FIELD_FLOAT"
-		        "hacktimer"             "2.5 3 3.5 4"
-			"LinkedSpecialBonus" "special_bonus_prophecy_1"
-		    }
-		    "02"
-		    {
-		        "var_type"          "FIELD_INTEGER"
-		        "damage_tick"             "70 80 90 100"	
-		    }
-		    "03"
-		    {
-		        "var_type"          "FIELD_INTEGER"
-		        "stat_steal"             "20"	//both int, str and agi, IS AGH EFFECT
-		    }
-		   "04"
-		    {
-		        "var_type"          "FIELD_FLOAT"
-		        "hackticks"             "0.5"
-		    }
-		  
-
-		}																				
+	"AbilityValues"
+        {
+            "hacktimer"
+            {
+                "value" "2.5 3 3.5 4"
+                "LinkedSpecialBonus" "special_bonus_prophecy_1"
+            }
+            "damage_tick" "70 80 90 100"
+            "stat_steal" "20"
+            "hackticks" "0.5"
+        }																				
 	}	

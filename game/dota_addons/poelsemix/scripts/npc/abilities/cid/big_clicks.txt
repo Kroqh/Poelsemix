@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_cid/cid_big_clicks"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "big_clicks_icon"
 	"HasScepterUpgrade"		"1"
 	
@@ -21,36 +21,28 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"80 75 70 65"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "70 80 90 100"
-			"LinkedSpecialBonus" "special_bonus_cid_4"
-		}
-		"02"
-		{
-			"var_type"	"FIELD_FLOAT"
-			"duration"	"5"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"stacks"	"5"
-			"LinkedSpecialBonus" "special_bonus_cid_6"
-		}
-		"04"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"upgraded_damage" "100 115 130 145"
-			"LinkedSpecialBonus" "special_bonus_cid_4"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"upgraded_stacks" "10"
-			"LinkedSpecialBonus" "special_bonus_cid_6"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage"
+            {
+                "value" "70 80 90 100"
+                "LinkedSpecialBonus" "special_bonus_cid_4"
+            }
+            "duration" "5"
+            "stacks"
+            {
+                "value" "5"
+                "LinkedSpecialBonus" "special_bonus_cid_6"
+            }
+            "upgraded_damage"
+            {
+                "value" "100 115 130 145"
+                "LinkedSpecialBonus" "special_bonus_cid_4"
+            }
+            "upgraded_stacks"
+            {
+                "value" "10"
+                "LinkedSpecialBonus" "special_bonus_cid_6"
+            }
+        }
 }

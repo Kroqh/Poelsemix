@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_kim/kim_nat"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 	"AbilityTextureName"			"midtnat"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
@@ -31,25 +31,16 @@
 		
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"duration"				"20.0"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"blind_percentage"				"-25 -30 -35"
-			"LinkedSpecialBonus" "special_bonus_kim_5"	
-		}
-		"03"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "self_speed"      "150 200 250"	
-	    }
-	}
+	"AbilityValues"
+        {
+            "duration" "20.0"
+            "blind_percentage"
+            {
+                "value" "-25 -30 -35"
+                "LinkedSpecialBonus" "special_bonus_kim_5"
+            }
+            "self_speed" "150 200 250"
+        }
 
 	
 }

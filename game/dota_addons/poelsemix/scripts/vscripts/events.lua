@@ -293,33 +293,36 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		if ability:GetLevel() == 0 then ability:SetLevel(1) end
 	end
 
+	if hero:GetUnitName() == "npc_dota_hero_spirit_breaker" then
+		local ability = hero:FindAbilityByName("marauder_cyclone")
+		ability:SetLevel(1)
+	end
+
 		--Timers:CreateTimer({
 		--endTime = 0.1,
 		--callback = function()
-			SpawnCourier(hero)
+			--SpawnCourier(hero)
 		--end
 		--})
 
 
 end
 
-function SpawnCourier(hero)
-	if hero:IsRealHero() and hero.FirstSpawn == nil then
-		hero.FirstSpawn = true
+--
+--function SpawnCourier(hero)
+--	if hero:IsRealHero() and hero.FirstSpawn == nil then
+--		hero.FirstSpawn = true
 		-- hero:AddItemByName("item_courier")
-		COverthrowGameMode:OnHeroInGame(hero)
-		print(hero)
-		local courier = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, nil, nil, hero:GetTeam())
-		courier:SetControllableByPlayer(hero:GetPlayerID(), false)
-		local ability = courier:AddAbility("courier_superspeed")
-		ability:SetLevel(1)
-	end
+--		COverthrowGameMode:OnHeroInGame(hero)
+--		print(hero)
+--		local courier = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, nil, nil, hero:GetTeam())
+--		courier:SetControllableByPlayer(hero:GetPlayerID(), false)
+--		local ability = courier:AddAbility("courier_superspeed")
+--		ability:SetLevel(1)
+--	end
 
-	if hero:GetUnitName() == "npc_dota_hero_spirit_breaker" then
-		local ability = hero:FindAbilityByName("marauder_cyclone")
-		ability:SetLevel(1)
-	end
-end
+
+--end
 
 
 

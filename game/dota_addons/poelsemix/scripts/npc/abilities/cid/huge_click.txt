@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_cid/cid_huge_click"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "huge_click_icon"
 	"MaxLevel"						"5"
 	
@@ -41,25 +41,22 @@
 		"particle"  "particles/econ/items/wisp/wisp_guardian_ti7.vpcf"
 	}
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"chance" "20 22.5 25 27.5 30"
-			"LinkedSpecialBonus" "special_bonus_cid_5"
-		}
-		"02"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"damage_modifier"	"150 175 200 225 250"
-			"LinkedSpecialBonus" "special_bonus_cid_1"
-		}
-		"03"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"damage_modifier_upgraded" "200 225 250 275 300"
-			"LinkedSpecialBonus" "special_bonus_cid_1"
-		}
-	}
+	"AbilityValues"
+        {
+            "chance"
+            {
+                "value" "20 22.5 25 27.5 30"
+                "LinkedSpecialBonus" "special_bonus_cid_5"
+            }
+            "damage_modifier"
+            {
+                "value" "150 175 200 225 250"
+                "LinkedSpecialBonus" "special_bonus_cid_1"
+            }
+            "damage_modifier_upgraded"
+            {
+                "value" "200 225 250 275 300"
+                "LinkedSpecialBonus" "special_bonus_cid_1"
+            }
+        }
 }

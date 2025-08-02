@@ -6,7 +6,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_baseboys/baseboys_choke"
 	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "hej_mathilde"
 
 	"MaxLevel" "4"
@@ -16,19 +16,17 @@
 	"AbilityCastPoint" "0.0"
 	"AbilityCastRange" "0"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"chance" "10 15 20 25"
-			"LinkedSpecialBonus" "special_bonus_baseboys_3"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "0.25"
-			"LinkedSpecialBonus" "special_bonus_baseboys_1"
-		}
-	}
+	"AbilityValues"
+        {
+            "chance"
+            {
+                "value" "10 15 20 25"
+                "LinkedSpecialBonus" "special_bonus_baseboys_3"
+            }
+            "duration"
+            {
+                "value" "0.25"
+                "LinkedSpecialBonus" "special_bonus_baseboys_1"
+            }
+        }
 }

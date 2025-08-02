@@ -3,20 +3,16 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"special_bonus_undefined"
-	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 	"LinkedAbility"
 	{
 			"01"	"margrethe_regal_presence"
 	}
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"value" "0.6" //int scaling
-		}
-	}		
+	"AbilityValues"
+        {
+            "value" "0.6"
+        }		
 	
 }

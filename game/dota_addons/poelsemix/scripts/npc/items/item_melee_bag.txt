@@ -31,14 +31,10 @@
 		"IsTempestDoubleClonable"		"0"
 		"AbilityTextureName"        "melee_bag"
 
-	"AbilitySpecial"
-	{
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"duration"					"3"
-		}	
-	}
+	"AbilityValues"
+        {
+            "duration" "3"
+        }
 
 		"OnSpellStart"
 	{

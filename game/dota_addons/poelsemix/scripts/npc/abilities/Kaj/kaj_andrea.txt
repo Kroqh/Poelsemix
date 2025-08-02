@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_kaj/kaj_andrea"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
-	"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -35,60 +35,23 @@
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"summon_range"					"500 525 550"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"summon_duration"					"10"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"andrea_fire_rate"		"0.3 0.25 0.2"
-			"LinkedSpecialBonus" "special_bonus_kaj_8"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"andrea_damage"					"40 46 52"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"andrea_fire_range"		"500"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"andrea_hp_of_kaj_percent"			"50 55 60"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"andrea_ms"		"425 450 475"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"scepter_nuke_rate"				"4"
-		}
-		"09"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_nuke_damage"				"800"
-		}
-		"10"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"scepter_nuke_range"				"300"
-		}
-	}
+	"AbilityValues"
+        {
+            "summon_range" "500 525 550"
+            "summon_duration" "10"
+            "andrea_fire_rate"
+            {
+                "value" "0.3 0.25 0.2"
+                "LinkedSpecialBonus" "special_bonus_kaj_8"
+            }
+            "andrea_damage" "40 46 52"
+            "andrea_fire_range" "500"
+            "andrea_hp_of_kaj_percent" "50 55 60"
+            "andrea_ms" "425 450 475"
+            "scepter_nuke_rate" "4"
+            "scepter_nuke_damage" "800"
+            "scepter_nuke_range" "300"
+        }
 	
 	
 }

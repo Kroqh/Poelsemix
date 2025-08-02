@@ -12,13 +12,9 @@
 		"AbilityCastRange"			"700"
 
 
-        "AbilitySpecial"
+        "AbilityValues"
         {
-          "01"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "duration"          "4 4.75 5.5 6.25"
-          }
+            "duration" "4 4.75 5.5 6.25"
         }
 
 			"precache"

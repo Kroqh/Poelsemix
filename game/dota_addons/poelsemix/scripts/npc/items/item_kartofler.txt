@@ -21,14 +21,10 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"magic_resist"					"10"
-		}
-	}
+	"AbilityValues"
+        {
+            "magic_resist" "10"
+        }
 	
 	"Modifiers"
 	{

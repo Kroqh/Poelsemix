@@ -6,7 +6,7 @@
 	"ScriptFile"			"heroes/hero_nissan/runover"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityTextureName"		"nissan_runover_icon"
-	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" 					"ABILITY_TYPE_BASIC"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	
@@ -23,34 +23,20 @@
 		"particle"    "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn.vpcf"
 	}
 
-	"AbilitySpecial"
-	{
-	  "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_movespeed" "30 35 40 45"
-			"LinkedSpecialBonus" "special_bonus_nissan_7"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration"	"3 3.5 4 4.5"
-			"LinkedSpecialBonus" "special_bonus_nissan_6"
-		}
-		"03"
-		{
-			"var_type" "FIELD_FLOAT"
-			"stun_duration"	"0.6"
-		}
-  		  "04"
-   		 {
-    			  "var_type" "FIELD_FLOAT"
-    			  "damage" "80 110 140 170"
-    		}
-   			 "05"
-   		 {
-    			  "var_type" "FIELD_INTEGER"
-      				"radius"   "150"
-   		 }
-	}
+	"AbilityValues"
+        {
+            "bonus_movespeed"
+            {
+                "value" "30 35 40 45"
+                "LinkedSpecialBonus" "special_bonus_nissan_7"
+            }
+            "duration"
+            {
+                "value" "3 3.5 4 4.5"
+                "LinkedSpecialBonus" "special_bonus_nissan_6"
+            }
+            "stun_duration" "0.6"
+            "damage" "80 110 140 170"
+            "radius" "150"
+        }
 }

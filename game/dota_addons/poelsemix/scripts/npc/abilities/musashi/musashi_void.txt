@@ -8,7 +8,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"	
+		"AbilityType"					"ABILITY_TYPE_ULTIMATE"	
 		"AbilityTextureName"			"musashi_void"
 		"ScriptFile"			"heroes/hero_musashi/musashi_void"
 		"MaxLevel"						"3"
@@ -30,37 +30,13 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"			"400 500 600"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"start_radius"			"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"end_radius"		"200"				
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"travel_distance"		"400"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"projectile_speed"		"1800"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"charge_duration"		"3"
-			}
-		}
+		"AbilityValues"
+        {
+            "damage" "400 500 600"
+            "start_radius" "100"
+            "end_radius" "200"
+            "travel_distance" "400"
+            "projectile_speed" "1800"
+            "charge_duration" "3"
+        }
 	}

@@ -6,7 +6,7 @@
 	"ScriptFile"			"heroes/hero_gametecher/gametecher_dropout.lua"
     "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityTextureName"     "dropout"
-    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "AbilityType"            "ABILITY_TYPE_BASIC"
 	"HasScepterUpgrade"			"1"
 	
 	//precache
@@ -24,30 +24,17 @@
     "AbilityCooldown"         "50"
     "AbilityChannelTime"	"%channel_time"
 
-    "AbilitySpecial"
-    {
-		 "01"
+    "AbilityValues"
         {
-            "var_type"                    "FIELD_INTEGER"
-            "xp_gain"             "10 16 22 28" //per level
-            "LinkedSpecialBonus" "special_bonus_gametecher_1"
+            "xp_gain"
+            {
+                "value" "10 16 22 28"
+                "LinkedSpecialBonus" "special_bonus_gametecher_1"
+            }
+            "xp_gain_minimum" "125 175 225 275"
+            "penalty_intellect" "-5"
+            "channel_time" "1.25"
         }
-		 "02"
-        {
-            "var_type"                    "FIELD_INTEGER"
-            "xp_gain_minimum"             "125 175 225 275" //to make it better on early levels
-        }
-        "03"
-        {
-            "var_type"                    "FIELD_INTEGER"
-            "penalty_intellect"             "-5"
-        }
-		"03"
-        {
-            "var_type"                    "FIELD_FLOAT"
-            "channel_time"             "1.25"
-        }
-    }
 	
 	
 }

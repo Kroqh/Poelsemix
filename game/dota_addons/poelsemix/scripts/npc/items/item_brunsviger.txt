@@ -14,49 +14,17 @@
 	"ItemQuality"					"artifact"
 	"ItemAliases"					"liandry's"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"int" "38"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"hp" "250"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"mana" "500"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"mana_regen" "5"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"spell_amp" "18"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"base_burn_damage" "25"
-		}
-		"07"
-		{
-			"var_type" "FIELD_FLOAT"
-			"max_hp_dmg_pct" "3" //burn per second
-		}
-		"08"
-		{
-			"var_type" "FIELD_FLOAT"
-			"burn_duration" "4"
-		}
-	}
+	"AbilityValues"
+        {
+            "int" "38"
+            "hp" "250"
+            "mana" "500"
+            "mana_regen" "5"
+            "spell_amp" "18"
+            "base_burn_damage" "25"
+            "max_hp_dmg_pct" "3"
+            "burn_duration" "4"
+        }
 	
 	
 }

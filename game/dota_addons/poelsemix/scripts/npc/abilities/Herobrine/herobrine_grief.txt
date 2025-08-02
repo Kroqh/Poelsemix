@@ -17,43 +17,19 @@
 		"particle"			"particles/units/heroes/hero_techies/techies_blast_off.vpcf"
 		"particle"			"particles/units/heroes/hero_herobrine/herobrine_explosion_mark.vpcf"
 	}
-"AbilitySpecial"
-	{
-
-		"01"
-		{
-			"var_type"  "FIELD_INTEGER"
-			"explosion_damage" "180 220 260 300 340 380 420 460"
-		}
-		
-		
-		"02"
-		{
-			"var_type"  "FIELD_FLOAT"
-			"as_bonus"  "0 5 10 15 20 25 30 35"
-		}
-		"03"
-		{
-			"var_type"  "FIELD_FLOAT"
-			"explosion_delay"  "5"
-		}
-		"04"
-		{
-			"var_type"  "FIELD_FLOAT"
-			"explosion_int_damage_scaling" "1 1.05 1.1 1.15 1.2 1.25 1.3 1.35"
-			"LinkedSpecialBonus" "special_bonus_herobrine_4"
-		}
-		"05"
-		{
-			"var_type"  "FIELD_INTEGER"
-			"explosion_size" "400" //Particle radius is hard coded, so avoid changing this value
-		}
-		"06"
-		{
-			"var_type"  "FIELD_FLOAT"
-			"attack_damage_removal"  "-100" //Reducing outgoing basic attack attack damage by this percentage
-		}			
-	}
+"AbilityValues"
+        {
+            "explosion_damage" "180 220 260 300 340 380 420 460"
+            "as_bonus" "0 5 10 15 20 25 30 35"
+            "explosion_delay" "5"
+            "explosion_int_damage_scaling"
+            {
+                "value" "1 1.05 1.1 1.15 1.2 1.25 1.3 1.35"
+                "LinkedSpecialBonus" "special_bonus_herobrine_4"
+            }
+            "explosion_size" "400"
+            "attack_damage_removal" "-100"
+        }
 
 
 

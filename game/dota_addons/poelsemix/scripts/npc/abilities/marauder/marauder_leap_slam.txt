@@ -10,7 +10,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+	"AbilityType"					"ABILITY_TYPE_BASIC"	
 
 
 	"AbilityCooldown"				"18 17 16 15"
@@ -26,42 +26,14 @@
 		"soundfile" "soundevents/marauder_soundevent.vsndevts"
 	}
 
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"impact_radius"	"200"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"range"	"525 550 575 600"
-		}
-		"03"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"damage"	"130 190 250 310"
-		}
-        "04"
+	"AbilityValues"
         {
-            "var_type"	"FIELD_INTEGER"
-            "fortify_armor"	"10 12 14 16" //visuel effect til armor?
+            "impact_radius" "200"
+            "range" "525 550 575 600"
+            "damage" "130 190 250 310"
+            "fortify_armor" "10 12 14 16"
+            "fortify_duration" "4"
+            "velocity" "950"
+            "stun_duration" "1"
         }
-		"05"
-		{
-			"var_type"	"FIELD_FLOAT"
-			"fortify_duration"	"4"
-		}
-		"06"
-        {
-            "var_type"	"FIELD_INTEGER"
-            "velocity"	"950"
-        }
-		"07"
-        {
-            "var_type"	"FIELD_FLOAT"
-            "stun_duration"	"1"
-        }
-	}
 }

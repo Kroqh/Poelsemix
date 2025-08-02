@@ -12,20 +12,15 @@
 	"AbilityCastRange"				"0"
 	"AbilityCastPoint"				"0.25"
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"velocity" "1000"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"range"	"675 725 775 825"
-			"LinkedSpecialBonus" "special_bonus_shimakaze_1"
-		}
-	}
+	"AbilityValues"
+        {
+            "velocity" "1000"
+            "range"
+            {
+                "value" "675 725 775 825"
+                "LinkedSpecialBonus" "special_bonus_shimakaze_1"
+            }
+        }
 	"Precache"
 	{
 		"particle"  "particles/heroes/shimakaze/shimakaze_run_water.vpcf"

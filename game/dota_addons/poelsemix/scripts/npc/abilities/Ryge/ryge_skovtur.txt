@@ -11,20 +11,15 @@
 	"AbilityManaCost"           "100 95 90 85"
 	"AbilityCastRange"			"650"
 
-	"AbilitySpecial"
-	{
-	    "01"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "hp_regen_sec_perc"             "5 7 9 11"
-		"LinkedSpecialBonus" "special_bonus_ryge_3"
-	    }
-	    "03"
-	    {
-	        "var_type"          "FIELD_FLOAT"
-	        "duration"          "3"
-	    }
-	}
+	"AbilityValues"
+        {
+            "hp_regen_sec_perc"
+            {
+                "value" "5 7 9 11"
+                "LinkedSpecialBonus" "special_bonus_ryge_3"
+            }
+            "duration" "3"
+        }
 
 "precache"
 {

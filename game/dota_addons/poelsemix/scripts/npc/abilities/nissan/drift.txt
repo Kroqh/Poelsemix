@@ -28,48 +28,19 @@
 		}
 
 
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"dash_length"			"900"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"dash_width"			"400"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"hit_radius"			"200"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_duration"			"4.0 4.5 5.0 5.5"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"60 80 100 120"
-				"LinkedSpecialBonus" "special_bonus_nissan_3"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_tick_interval"	"0.5"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"dash_duration"			"2.0"
-			}
-			"8"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"stop_radius"			"300"
-			}
-		}
+		"AbilityValues"
+        {
+            "dash_length" "900"
+            "dash_width" "400"
+            "hit_radius" "200"
+            "burn_duration" "4.0 4.5 5.0 5.5"
+            "damage_per_second"
+            {
+                "value" "60 80 100 120"
+                "LinkedSpecialBonus" "special_bonus_nissan_3"
+            }
+            "burn_tick_interval" "0.5"
+            "dash_duration" "2.0"
+            "stop_radius" "300"
+        }
 	}

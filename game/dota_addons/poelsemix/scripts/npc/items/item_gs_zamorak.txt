@@ -30,24 +30,12 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage"					"95"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"freeze_dur"						"3"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"active_damage"						"500"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "95"
+            "freeze_dur" "3"
+            "active_damage" "500"
+        }
 	
 	"Modifiers"
 	{

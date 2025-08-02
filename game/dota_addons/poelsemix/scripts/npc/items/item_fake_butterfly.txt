@@ -20,29 +20,13 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"agility"					"30"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"as" "40"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"speed" "12"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"regen_health" "15"
-		}
-	}
+	"AbilityValues"
+        {
+            "agility" "30"
+            "as" "40"
+            "speed" "12"
+            "regen_health" "15"
+        }
 	
 	"Modifiers"
 	{

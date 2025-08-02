@@ -22,37 +22,13 @@
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
 
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"int" "18"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"mana_regen" "8"
-		}
-		"03"
-		{
-			"var_type" "FIELD_FLOAT"
-			"int_healing_ratio" "50" //Percent of int
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"attack_speed" "40"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"heaL_range" "900"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"proj_speed" "800"
-		}
-	}
+	"AbilityValues"
+        {
+            "int" "18"
+            "mana_regen" "8"
+            "int_healing_ratio" "50"
+            "attack_speed" "40"
+            "heaL_range" "900"
+            "proj_speed" "800"
+        }
 }

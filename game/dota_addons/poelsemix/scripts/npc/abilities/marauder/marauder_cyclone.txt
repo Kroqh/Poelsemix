@@ -9,7 +9,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+	"AbilityType"					"ABILITY_TYPE_BASIC"	
 
 	"AbilityTextureName"			"marauder_cyclone"
 	"AbilityManaCost"				"0"
@@ -25,43 +25,18 @@
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
 	}
 
-	"AbilitySpecial"
-	{
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"damage_scaling" "55 57.5 60 62.5 65"
-		}
-        "03"
+	"AbilityValues"
         {
-            "var_type" "FIELD_FLOAT"
+            "damage_scaling" "55 57.5 60 62.5 65"
             "attack_rate" "50 47.5 45 42.5 40"
-        }
-		 "04"
-        {
-            "var_type" "FIELD_INTEGER"
             "radius" "280 285 290 295 300"
+            "movement_self_slow"
+            {
+                "value" "-30"
+                "LinkedSpecialBonus" "special_bonus_marauder_7"
+            }
+            "scepter_ice_nova_damage_int_ratio" "2"
+            "scepter_ice_nova_chance" "12.5"
+            "scepter_ice_nova_radius" "125"
         }
-		"07"
-		{
-			"var_type" "FIELD_FLOAT"
-			"movement_self_slow" "-30"
-			"LinkedSpecialBonus" "special_bonus_marauder_7"
-		}
-		"08"
-		{
-			"var_type" "FIELD_FLOAT"
-			"scepter_ice_nova_damage_int_ratio" "2"
-		}
-		"09"
-		{
-			"var_type" "FIELD_FLOAT"
-			"scepter_ice_nova_chance" "12.5"
-		}
-		"10"
-		{
-			"var_type" "FIELD_INTEGER"
-			"scepter_ice_nova_radius" "125" //for visuel effect only, dont know if it actually does something after particle changes
-		}
-	}
 }

@@ -18,29 +18,13 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"int" "25"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"mana" "300"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"mana_regen" "3"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"dmg" "15" //spell amp
-		}
-	}
+	"AbilityValues"
+        {
+            "int" "25"
+            "mana" "300"
+            "mana_regen" "3"
+            "dmg" "15"
+        }
 	
 	"Modifiers"
 	{

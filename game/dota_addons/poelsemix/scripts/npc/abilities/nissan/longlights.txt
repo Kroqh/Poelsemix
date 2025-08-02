@@ -20,39 +20,21 @@
     "particle"        "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_debuff.vpcf"
 	}
 
-	"AbilitySpecial"
-	{
-	  "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "5 7 9 11"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"length" "600"
-			"LinkedSpecialBonus" "special_bonus_nissan_1"
-		}
-    "03"
-    {
-      "var_type" "FIELD_INTEGER"
-      "width" "180"
-    }
-    "04"
-    {
-      "var_type" "FIELD_FLOAT"
-      "damage_pr_tick" "2.0 2.75 3.5 4.25"
-	"LinkedSpecialBonus" "special_bonus_nissan_5"
-    }
-    "05"
-    {
-      "var_type" "FIELD_INTEGER"
-      "miss_chance" "85 90 95 100"
-    }
-	"06"
-		{
-			"var_type" "FIELD_FLOAT"
-			"tick_rate" "0.03"
-		}
-	}
+	"AbilityValues"
+        {
+            "duration" "5 7 9 11"
+            "length"
+            {
+                "value" "600"
+                "LinkedSpecialBonus" "special_bonus_nissan_1"
+            }
+            "width" "180"
+            "damage_pr_tick"
+            {
+                "value" "2.0 2.75 3.5 4.25"
+                "LinkedSpecialBonus" "special_bonus_nissan_5"
+            }
+            "miss_chance" "85 90 95 100"
+            "tick_rate" "0.03"
+        }
 }

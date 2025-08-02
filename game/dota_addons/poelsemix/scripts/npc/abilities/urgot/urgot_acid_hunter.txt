@@ -37,25 +37,18 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"damage"						"150 225 300 375"
-				"LinkedSpecialBonus" "special_bonus_urgot_1"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"proj_speed"						"900"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"range"					"600 700 800 900"
-				"LinkedSpecialBonus" "special_bonus_urgot_4"
-			}
-
-		}
+		"AbilityValues"
+        {
+            "damage"
+            {
+                "value" "150 225 300 375"
+                "LinkedSpecialBonus" "special_bonus_urgot_1"
+            }
+            "proj_speed" "900"
+            "range"
+            {
+                "value" "600 700 800 900"
+                "LinkedSpecialBonus" "special_bonus_urgot_4"
+            }
+        }
 	}

@@ -31,44 +31,16 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage"					"55"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"mark_duration"						"5"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"active_damage"						"500"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"bonus_magic_damage"						"500"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"int"						"20"
-		}
-		"06"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"bonus_self_heal"						"250"
-		}
-		"07"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"dist_to_move"						"700"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "55"
+            "mark_duration" "5"
+            "active_damage" "500"
+            "bonus_magic_damage" "500"
+            "int" "20"
+            "bonus_self_heal" "250"
+            "dist_to_move" "700"
+        }
 
 	"precache"
 	{

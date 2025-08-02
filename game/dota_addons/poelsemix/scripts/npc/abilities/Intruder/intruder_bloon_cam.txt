@@ -19,13 +19,12 @@
 		"soundfile" "soundevents/intruder_soundevent.vsndevts"
 	}
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"duration" "30 33 36 39"
-			"LinkedSpecialBonus" "special_bonus_intruder_6"
-		}
-	}
+	"AbilityValues"
+        {
+            "duration"
+            {
+                "value" "30 33 36 39"
+                "LinkedSpecialBonus" "special_bonus_intruder_6"
+            }
+        }
 }

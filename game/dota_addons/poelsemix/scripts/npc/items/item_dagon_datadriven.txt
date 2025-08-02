@@ -38,34 +38,14 @@
 	"UpgradesItems"					"item_dagon;item_dagon_2;item_dagon_3;item_dagon_4"
 	"UpgradeRecipe"					"item_recipe_dagon"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_intellect"		"13 16 19 22 25"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"3"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"9"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"400 500 600 700 800"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range_tooltip"			"600 650 700 750 800"
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_intellect" "13 16 19 22 25"
+            "bonus_all_stats" "3"
+            "bonus_damage" "9"
+            "damage" "400 500 600 700 800"
+            "range_tooltip" "600 650 700 750 800"
+        }
 	
 	"OnSpellStart"
 	{
@@ -134,34 +114,14 @@
 	"UpgradesItems"					"item_dagon_2;item_dagon_3;item_dagon_4"
 	"UpgradeRecipe"					"item_recipe_dagon"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_intellect"		"13 16 19 22 25"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"3"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"9"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"400 500 600 700 800"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range_tooltip"			"600 650 700 750 800"
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_intellect" "13 16 19 22 25"
+            "bonus_all_stats" "3"
+            "bonus_damage" "9"
+            "damage" "400 500 600 700 800"
+            "range_tooltip" "600 650 700 750 800"
+        }
 	
 	"OnSpellStart"
 	{
@@ -230,34 +190,14 @@
 	"UpgradesItems"					"item_dagon_3;item_dagon_4"
 	"UpgradeRecipe"					"item_recipe_dagon"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_intellect"		"13 16 19 22 25"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"3"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"9"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"400 500 600 700 800"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range_tooltip"			"600 650 700 750 800"
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_intellect" "13 16 19 22 25"
+            "bonus_all_stats" "3"
+            "bonus_damage" "9"
+            "damage" "400 500 600 700 800"
+            "range_tooltip" "600 650 700 750 800"
+        }
 	
 	"OnSpellStart"
 	{
@@ -326,34 +266,14 @@
 	"UpgradesItems"					"item_dagon_4"
 	"UpgradeRecipe"					"item_recipe_dagon"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_intellect"		"13 16 19 22 25"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"3"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"9"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"400 500 600 700 800"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range_tooltip"			"600 650 700 750 800"
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_intellect" "13 16 19 22 25"
+            "bonus_all_stats" "3"
+            "bonus_damage" "9"
+            "damage" "400 500 600 700 800"
+            "range_tooltip" "600 650 700 750 800"
+        }
 	
 	"OnSpellStart"
 	{
@@ -419,34 +339,14 @@
 	"ItemQuality"					"rare"	
 	"ItemAliases"					"dagon 5"
 
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_intellect"		"13 16 19 22 25"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_all_stats"		"3"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"bonus_damage"			"9"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"				"400 500 600 700 800"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range_tooltip"			"600 650 700 750 800"
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_intellect" "13 16 19 22 25"
+            "bonus_all_stats" "3"
+            "bonus_damage" "9"
+            "damage" "400 500 600 700 800"
+            "range_tooltip" "600 650 700 750 800"
+        }
 	
 	"OnSpellStart"
 	{

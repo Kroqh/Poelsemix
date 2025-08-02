@@ -6,27 +6,18 @@
 	"ScriptFile"			"heroes/hero_teemo/teemo_move_quick"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityTextureName"			"move_quick"
-	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" 					"ABILITY_TYPE_BASIC"
 	"AbilityCooldown"				"10"
 	"AbilityManaCost"				"50"
 
-	"AbilitySpecial"
-	{
-	    "01"
-	    {
-	        "var_type"          "FIELD_FLOAT"
-	        "movement_speed"    "15 17.5 20 22.5" //percent
-	    }
-	    "02"
-	    {
-	        "var_type"          "FIELD_FLOAT"
-	        "multiplier"        "1.5"
-		"LinkedSpecialBonus" "special_bonus_teemo_8"
-	    }
-		"03"
-		{
-			"var_type"			"FIELD_FLOAT"
-			"duration"			"3.0 3.5 4 4.5"
-		}
-	}
+	"AbilityValues"
+        {
+            "movement_speed" "15 17.5 20 22.5"
+            "multiplier"
+            {
+                "value" "1.5"
+                "LinkedSpecialBonus" "special_bonus_teemo_8"
+            }
+            "duration" "3.0 3.5 4 4.5"
+        }
 }

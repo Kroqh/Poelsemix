@@ -16,46 +16,26 @@
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"base_max_stacks"	"80"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"ms_per_stack"	"1"
-				"LinkedSpecialBonus" "special_bonus_damian_4"	
-			}
-			"03"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"agi_per_stack"	"1"	
-				"LinkedSpecialBonus" "special_bonus_damian_3"
-			}
-
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"poop_duration"	"6"
-				"LinkedSpecialBonus" "special_bonus_damian_6"	
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"free_stack_interval"					"15"	//1 cap gained every interval
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"stacks_on_poop"					"4" //cap on poop
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"per_attack"					"1" //Faded gain on attack, probably just leave at 1 always
-			}
-		}
+		"AbilityValues"
+        {
+            "base_max_stacks" "80"
+            "ms_per_stack"
+            {
+                "value" "1"
+                "LinkedSpecialBonus" "special_bonus_damian_4"
+            }
+            "agi_per_stack"
+            {
+                "value" "1"
+                "LinkedSpecialBonus" "special_bonus_damian_3"
+            }
+            "poop_duration"
+            {
+                "value" "6"
+                "LinkedSpecialBonus" "special_bonus_damian_6"
+            }
+            "free_stack_interval" "15"
+            "stacks_on_poop" "4"
+            "per_attack" "1"
+        }
     }

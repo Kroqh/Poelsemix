@@ -7,7 +7,7 @@
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 	"AbilityCooldown"               "15"
 	"AbilityManaCost"               "100"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"HasScepterUpgrade"				"1"
 	
 
@@ -16,44 +16,18 @@
         "particle" "particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_ambient_esl_fire.vpcf"
 		 "particle" "particles/heroes/brian/hurtig_brille_fire_trail.vpcf"
         }
-	"AbilitySpecial"
-	{
-	    "01"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "move_up_self"      "20 30 40 50"	
-	    }
-		"02"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "aspeed"      "10 20 30 40" //This is actually agility, not attackspeed lol
-	    }
-		"03"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "duration"      "4 5 6 7"
-		"LinkedSpecialBonus" "special_bonus_brian_1"
-	    }
-		"04"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "scepter_damage_per_fire"      "250"
-	    }
-		"05"
-		{
-	        "var_type"          "FIELD_INTEGER"
-	        "scepter_radius"      "100"
-	    }
-		"06"
-		{
-	        "var_type"          "FIELD_FLOAT"
-	        "scepter_tick_rate"      "0.2"
-	    }
-		"07"
-		{
-	        "var_type"          "FIELD_FLOAT"
-	        "scepter_duration"      "2"
-	    }
-
-	}
+	"AbilityValues"
+        {
+            "move_up_self" "20 30 40 50"
+            "aspeed" "10 20 30 40"
+            "duration"
+            {
+                "value" "4 5 6 7"
+                "LinkedSpecialBonus" "special_bonus_brian_1"
+            }
+            "scepter_damage_per_fire" "250"
+            "scepter_radius" "100"
+            "scepter_tick_rate" "0.2"
+            "scepter_duration" "2"
+        }
 }

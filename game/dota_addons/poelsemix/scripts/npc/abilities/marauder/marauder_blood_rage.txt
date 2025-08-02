@@ -6,7 +6,7 @@
 	"ScriptFile"			"heroes/hero_marauder/marauder_blood_rage"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityTextureName"			"marauder_blood_rage"
-	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"	
+	"AbilityType"					"ABILITY_TYPE_ULTIMATE"	
 
 
 	"AbilityCooldown"				"65 60 55"
@@ -20,24 +20,18 @@
 		"particle"			"particles/econ/items/lifestealer/ls_ti9_immortal/status_effect_ls_ti9_open_wounds.vpcf"
 	}
 
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"percent_increaser"	"20 25 30" //Increases model size, q/w damage scaling and rate and radius, str and ms by this percentage, also affects clones
-			"LinkedSpecialBonus" "special_bonus_marauder_8"
-		}
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"self_damage_percent"	"40"
-		}
-		"03"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration"	"5"
-			"LinkedSpecialBonus" "special_bonus_marauder_1"
-		}
-	}
+	"AbilityValues"
+        {
+            "percent_increaser"
+            {
+                "value" "20 25 30"
+                "LinkedSpecialBonus" "special_bonus_marauder_8"
+            }
+            "self_damage_percent" "40"
+            "duration"
+            {
+                "value" "5"
+                "LinkedSpecialBonus" "special_bonus_marauder_1"
+            }
+        }
 }

@@ -6,20 +6,16 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"special_bonus_undefined"
-	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 	"LinkedAbility"
 	{
 			"01"	"caro_side_swap"
 	}
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"value" "-0.5"
-		}
-	}		
+	"AbilityValues"
+        {
+            "value" "-0.5"
+        }		
 	
 }

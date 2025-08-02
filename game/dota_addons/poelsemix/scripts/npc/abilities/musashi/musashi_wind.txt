@@ -16,30 +16,19 @@
 		"particle"  "particles/units/heroes/hero_windrunner/windrunner_windrun.vpcf"
 		"particle" "particles/econ/items/windrunner/windranger_arcana/windranger_arcana_ambient_mist.vpcf"
 	}
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"velocity" "1600"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"range" "425 450 475 500" //dash range
-			"LinkedSpecialBonus" "special_bonus_musashi_2"
-		}
-                "03"
-                {
-			"var_type" "FIELD_FLOAT"
-                        "duration_movement_speed" "2.5"
-			"LinkedSpecialBonus" "special_bonus_musashi_1"
-		}
-
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"movement_speed_percent" "15 20 25 30"
-		}
-	}
+	"AbilityValues"
+        {
+            "velocity" "1600"
+            "range"
+            {
+                "value" "425 450 475 500"
+                "LinkedSpecialBonus" "special_bonus_musashi_2"
+            }
+            "duration_movement_speed"
+            {
+                "value" "2.5"
+                "LinkedSpecialBonus" "special_bonus_musashi_1"
+            }
+            "movement_speed_percent" "15 20 25 30"
+        }
 }

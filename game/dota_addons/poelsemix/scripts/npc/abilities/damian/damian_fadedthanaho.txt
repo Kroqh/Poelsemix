@@ -15,45 +15,26 @@
 
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"max_stacks"	"5"
-				"LinkedSpecialBonus" "special_bonus_damian_5"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"base_attack_time_buff_per_stack"	"-0.1"	
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage_per_stack"	"20 26 32 38"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"base_chance"	"10 12.5 15 17.5"
-				"LinkedSpecialBonus" "special_bonus_damian_1"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"stack_falloff"	"3"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"faded_chance_multi"	"0.2" //IE. if you have 80 faded stacks, then you have 20% more chance
-				"LinkedSpecialBonus" "special_bonus_damian_2"
-			}
-			"07"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"faded_stacks_gained"	"6" //per trigger
-			}
-		}
+		"AbilityValues"
+        {
+            "max_stacks"
+            {
+                "value" "5"
+                "LinkedSpecialBonus" "special_bonus_damian_5"
+            }
+            "base_attack_time_buff_per_stack" "-0.1"
+            "damage_per_stack" "20 26 32 38"
+            "base_chance"
+            {
+                "value" "10 12.5 15 17.5"
+                "LinkedSpecialBonus" "special_bonus_damian_1"
+            }
+            "stack_falloff" "3"
+            "faded_chance_multi"
+            {
+                "value" "0.2"
+                "LinkedSpecialBonus" "special_bonus_damian_2"
+            }
+            "faded_stacks_gained" "6"
+        }
     }

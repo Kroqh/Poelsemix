@@ -34,26 +34,19 @@
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"illusion_duration"			"3 4 5 6"
-			"LinkedSpecialBonus" "special_bonus_kim_1"	
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"illusion_outgoing_damage"	"75 100 125 150"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"illusion_amount"	"1"
-			"LinkedSpecialBonus" "special_bonus_kim_2"	
-		}
-
-	}
+	"AbilityValues"
+        {
+            "illusion_duration"
+            {
+                "value" "3 4 5 6"
+                "LinkedSpecialBonus" "special_bonus_kim_1"
+            }
+            "illusion_outgoing_damage" "75 100 125 150"
+            "illusion_amount"
+            {
+                "value" "1"
+                "LinkedSpecialBonus" "special_bonus_kim_2"
+            }
+        }
 
 }

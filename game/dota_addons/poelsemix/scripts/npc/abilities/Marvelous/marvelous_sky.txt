@@ -5,7 +5,7 @@
 		"BaseClass"				"ability_lua"
 		"ScriptFile"			"heroes/hero_marvelous/marvelous_sky"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT| DOTA_ABILITY_BEHAVIOR_AOE"
-		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityType" "ABILITY_TYPE_BASIC"
 		"AbilityTextureName" "syg"
 
 
@@ -33,36 +33,22 @@
 		"particle"  "particles/units/heroes/hero_marvelous/pink_sky.vpcf"
 	}
 		
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type" "FIELD_FLOAT"
-				"duration" "6"
-			}
-			"02"
-			{
-				"var_type" "FIELD_INTEGER"
-				"attack_speed_percent" "15 20 25 30"
-				"LinkedSpecialBonus" "special_bonus_marvelous_4"
-			}
-			"03"
-			{
-				"var_type" "FIELD_FLOAT"
-				"movement_speed_perc" "25 30 35 40"
-			}
-			"04"
-			{
-				"var_type" "FIELD_INTEGER"
-				"radius" "375 400 425 450"
-				"LinkedSpecialBonus" "special_bonus_marvelous_1"
-			}
-			"05"
-			{
-				"var_type" "FIELD_INTEGER"
-				"cast_range" "450"
-			}
-		}
+		"AbilityValues"
+        {
+            "duration" "6"
+            "attack_speed_percent"
+            {
+                "value" "15 20 25 30"
+                "LinkedSpecialBonus" "special_bonus_marvelous_4"
+            }
+            "movement_speed_perc" "25 30 35 40"
+            "radius"
+            {
+                "value" "375 400 425 450"
+                "LinkedSpecialBonus" "special_bonus_marvelous_1"
+            }
+            "cast_range" "450"
+        }
 		
 		
 	}

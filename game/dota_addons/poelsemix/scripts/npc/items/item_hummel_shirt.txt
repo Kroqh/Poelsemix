@@ -20,54 +20,18 @@
 	"ItemAliases"					"hummel;shirt;hummel shirt"
 
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"armor" "18"
-		}
-		"09"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage_reflect_percent" "125"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "22"
-		}
-		"04"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "6.0"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"as" "35"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"armor_loss_aura" "-12"
-		}
-		"07"
-		{
-			"var_type" "FIELD_INTEGER"
-			"armor_gain_aura" "10"
-		}
-		"08"
-		{
-			"var_type" "FIELD_INTEGER"
-			"as_aura" "40" 
-		}
-		"09"
-		{
-			"var_type" "FIELD_INTEGER"
-			"radius" "700"
-		}
-	}
+	"AbilityValues"
+        {
+            "armor" "18"
+            "damage_reflect_percent" "125"
+            "damage" "22"
+            "duration" "6.0"
+            "as" "35"
+            "armor_loss_aura" "-12"
+            "armor_gain_aura" "10"
+            "as_aura" "40"
+            "radius" "700"
+        }
 	
 	
 }

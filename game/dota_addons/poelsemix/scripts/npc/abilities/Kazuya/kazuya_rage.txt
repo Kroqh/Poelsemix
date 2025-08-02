@@ -6,7 +6,7 @@
 	"ScriptFile"			"heroes/hero_kazuya/kazuya_rage"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"kazuya_rage"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType"					"ABILITY_TYPE_BASIC"
 	"LevelsBetweenUpgrades" "3"
 		
 
@@ -16,45 +16,22 @@
 	}
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"rage_threshold"			"30" //% of hp
-			"LinkedSpecialBonus" "special_bonus_kazuya_2"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"rage_spell_amp"			"12 16 18 22"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"rage_attack_damage"			"25 35 45 55"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"fury_passively"			"1 1.75 2.5 3.25"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"fury_on_hit"			"3 3.5 4 4.5"
-		}
-		"06"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"rage_fury_multi"			"1.4 1.5 1.6 1.7"
-		}
-		"07"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"fury_cap"			"100"
-			"LinkedSpecialBonus" "special_bonus_kazuya_1"
-		}
-	}
+	"AbilityValues"
+        {
+            "rage_threshold"
+            {
+                "value" "30"
+                "LinkedSpecialBonus" "special_bonus_kazuya_2"
+            }
+            "rage_spell_amp" "12 16 18 22"
+            "rage_attack_damage" "25 35 45 55"
+            "fury_passively" "1 1.75 2.5 3.25"
+            "fury_on_hit" "3 3.5 4 4.5"
+            "rage_fury_multi" "1.4 1.5 1.6 1.7"
+            "fury_cap"
+            {
+                "value" "100"
+                "LinkedSpecialBonus" "special_bonus_kazuya_1"
+            }
+        }
 }

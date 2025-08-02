@@ -12,7 +12,7 @@
 		"AbilityCastPoint"				"0.2"
 		"AbilityCastRange" 				"500"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityType"					"ABILITY_TYPE_BASIC"
 		"MaxLevel"              "6"
 		"RequiredLevel"        "1"
 		"LevelsBetweenUpgrades" "3"
@@ -26,47 +26,22 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-
-			"01"
-			{
-				"var_type" "FIELD_INTEGER"
-				"lifetime" "10 11 12 13 14 15"
-			}
-			"02"
-			{
-				"var_type" "FIELD_INTEGER"
-				"base_dmg" "56 62 68 74 80 86"
-			}
-			"03"
-			{
-				"var_type" "FIELD_FLOAT"
-				"dmg_to_dmg_scaling" "0.55 0.6 0.65 0.7 0.75 0.8"
-			}
-			
-			"04"
-			{
-				"var_type" "FIELD_FLOAT"
-				"hp_to_hp_scaling" "0.45 0.5 0.55 0.6 0.65 0.7"
-			}
-			"05"
-			{
-				"var_type" "FIELD_INTEGER"
-				"ms" "280 285 290 295 300 305"
-			}
-			"06"
-			{
-				"var_type" "FIELD_INTEGER"
-				"max_charges" "2 2 3 3 4 4"
-				"LinkedSpecialBonus" "special_bonus_margrethe_5"
-			}
-			"07"
-			{
-				"var_type" "FIELD_FLOAT"
-				"charge_time" "8.5 8.25 8 7.75 7.5 7.25"
-				"LinkedSpecialBonus" "special_bonus_margrethe_6"
-			}
-			
-		}
+		"AbilityValues"
+        {
+            "lifetime" "10 11 12 13 14 15"
+            "base_dmg" "56 62 68 74 80 86"
+            "dmg_to_dmg_scaling" "0.55 0.6 0.65 0.7 0.75 0.8"
+            "hp_to_hp_scaling" "0.45 0.5 0.55 0.6 0.65 0.7"
+            "ms" "280 285 290 295 300 305"
+            "max_charges"
+            {
+                "value" "2 2 3 3 4 4"
+                "LinkedSpecialBonus" "special_bonus_margrethe_5"
+            }
+            "charge_time"
+            {
+                "value" "8.5 8.25 8 7.75 7.5 7.25"
+                "LinkedSpecialBonus" "special_bonus_margrethe_6"
+            }
+        }
 }

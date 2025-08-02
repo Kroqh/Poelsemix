@@ -17,19 +17,17 @@
 	{	
 		"particle"  "particles/units/heroes/hero_primal_beast/primal_beast_uproar_hands_power_up_energy.vpcf"
 	}
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"stun_duration" "1"
-			"LinkedSpecialBonus" "special_bonus_stewart_2"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"str_to_damage" "2.5 2.75 3 3.25"
-			"LinkedSpecialBonus" "special_bonus_stewart_5"
-		}
-	}
+	"AbilityValues"
+        {
+            "stun_duration"
+            {
+                "value" "1"
+                "LinkedSpecialBonus" "special_bonus_stewart_2"
+            }
+            "str_to_damage"
+            {
+                "value" "2.5 2.75 3 3.25"
+                "LinkedSpecialBonus" "special_bonus_stewart_5"
+            }
+        }
 }

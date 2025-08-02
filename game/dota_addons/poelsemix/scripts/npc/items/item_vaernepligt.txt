@@ -20,19 +20,11 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"chance" "35"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "150"
-		}
-	}
+	"AbilityValues"
+        {
+            "chance" "35"
+            "damage" "150"
+        }
 	
 	"Modifiers"
 	{

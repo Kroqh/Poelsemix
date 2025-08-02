@@ -6,7 +6,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"special_bonus_undefined"
-	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 	"LinkedAbility"
@@ -16,17 +16,9 @@
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"spell_amp_percent" "40"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"attack_speed_percent" "30"
-		}
-	}	
+	"AbilityValues"
+        {
+            "spell_amp_percent" "40"
+            "attack_speed_percent" "30"
+        }	
 }

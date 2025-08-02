@@ -1,7 +1,7 @@
 	"special_bonus_shadow_1"
 	{
 		"BaseClass"						"special_bonus_undefined"
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		
 		"LinkedAbility"
@@ -11,12 +11,8 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type" 	"FIELD_INTEGER"
-				"value" 	"2" //max ammo
-			}
-		}
+		"AbilityValues"
+        {
+            "value" "2"
+        }
 	}

@@ -5,7 +5,7 @@
 	"BaseClass" "ability_lua"
 	"ScriptFile" "heroes/hero_baseboys/baseboys_gunpowder"
 	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING  | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "gunpowder"
 	"HasScepterUpgrade"	 "1"
 	
@@ -34,40 +34,19 @@
 	//--------------------------
 	"AbilityManaCost" "100 95 90 85"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"model_scale" "1.5"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "5 6 7 8"
-			"LinkedSpecialBonus" "special_bonus_baseboys_2"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_main_stat" "30 50 70 90" 
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"aghs_red_armor" "30" 
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"aghs_green_as" "30" 
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"aghs_blue_mr" "20" 
-		}
-	}
+	"AbilityValues"
+        {
+            "model_scale" "1.5"
+            "duration"
+            {
+                "value" "5 6 7 8"
+                "LinkedSpecialBonus" "special_bonus_baseboys_2"
+            }
+            "bonus_main_stat" "30 50 70 90"
+            "aghs_red_armor" "30"
+            "aghs_green_as" "30"
+            "aghs_blue_mr" "20"
+        }
 }
 
 

@@ -10,33 +10,21 @@
         {
 	"particle" "particles/units/heroes/hero_omniknight/omniknight_shard_hammer_of_purity_heal_pluses.vpcf"
         }
-	"AbilitySpecial"
-	{
-	    "01"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "heal_amount"             "40 45 50 55"
-		"LinkedSpecialBonus" "special_bonus_ryge_1"
-	    }
-		"02"
-		{
-			"var_type"          "FIELD_FLOAT"
-	        	"chance"             "17.5 20 22.5 25"
-			"LinkedSpecialBonus" "special_bonus_ryge_5"
-
-		}
-		"03"
-		{
-			"var_type"          "FIELD_FLOAT"
-	        "range_ratio"             "1"
-		}
-		"03"
-		{
-			"var_type"          "FIELD_FLOAT"
-	        "agi_ratio"             "1"
-		}
-
-	}
+	"AbilityValues"
+        {
+            "heal_amount"
+            {
+                "value" "40 45 50 55"
+                "LinkedSpecialBonus" "special_bonus_ryge_1"
+            }
+            "chance"
+            {
+                "value" "17.5 20 22.5 25"
+                "LinkedSpecialBonus" "special_bonus_ryge_5"
+            }
+            "range_ratio" "1"
+            "agi_ratio" "1"
+        }
 
 
 }

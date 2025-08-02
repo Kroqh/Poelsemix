@@ -3,7 +3,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_lua"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType"					"ABILITY_TYPE_BASIC"
 	"ScriptFile"			"heroes/hero_caro/caro_side_swap"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
@@ -32,20 +32,15 @@
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"						"FIELD_FLOAT"
-			"cast_time"					"1.25 1 0.75 0.5"
-			"LinkedSpecialBonus" "special_bonus_caro_2"
-		}
-		"02"
-		{
-			"var_type"						"FIELD_INTEGER"
-			"cast_range"					"800 950 1100 1250"
-		}
-	}
+	"AbilityValues"
+        {
+            "cast_time"
+            {
+                "value" "1.25 1 0.75 0.5"
+                "LinkedSpecialBonus" "special_bonus_caro_2"
+            }
+            "cast_range" "800 950 1100 1250"
+        }
 
 	"OnChannelSucceeded"
 	{

@@ -5,36 +5,29 @@
 	"ScriptFile"			"heroes/hero_mette/mink"
 	"MaxLevel"                  "4"
 	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType"					"ABILITY_TYPE_BASIC"
 
 			"precache"
         {
 	"soundfile" "soundevents/mette_soundevent.vsndevts"
         }
-	"AbilitySpecial"
-	{
-		"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"hp_str_scaling"		"3 3.25 3.5 3.75"
-				"LinkedSpecialBonus" "special_bonus_mette_6"
-			}
-		"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"dmg_agi_scaling"		"0.5 0.65 0.8 0.95"
-				"LinkedSpecialBonus" "special_bonus_mette_5"
-			}
-		"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"base_interval"		"14"
-				"LinkedSpecialBonus" "special_bonus_mette_3"
-			}
-		"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"lifetime"		"20"
-			}
-	}
+	"AbilityValues"
+        {
+            "hp_str_scaling"
+            {
+                "value" "3 3.25 3.5 3.75"
+                "LinkedSpecialBonus" "special_bonus_mette_6"
+            }
+            "dmg_agi_scaling"
+            {
+                "value" "0.5 0.65 0.8 0.95"
+                "LinkedSpecialBonus" "special_bonus_mette_5"
+            }
+            "base_interval"
+            {
+                "value" "14"
+                "LinkedSpecialBonus" "special_bonus_mette_3"
+            }
+            "lifetime" "20"
+        }
 }

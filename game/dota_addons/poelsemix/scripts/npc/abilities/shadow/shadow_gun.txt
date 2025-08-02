@@ -7,7 +7,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityType"					"ABILITY_TYPE_BASIC"
 		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"				"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
@@ -25,35 +25,20 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"proj_speed"					"1000"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"damage"					"125 150 175 200"
-				"LinkedSpecialBonus" "special_bonus_shadow_2"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"range"					"650 700 750 800"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"max_ammo"					"6"
-				"LinkedSpecialBonus" "special_bonus_shadow_1"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"distance_per_ammo"					"800 725 650 575"
-			}
-
-		}
+		"AbilityValues"
+        {
+            "proj_speed" "1000"
+            "damage"
+            {
+                "value" "125 150 175 200"
+                "LinkedSpecialBonus" "special_bonus_shadow_2"
+            }
+            "range" "650 700 750 800"
+            "max_ammo"
+            {
+                "value" "6"
+                "LinkedSpecialBonus" "special_bonus_shadow_1"
+            }
+            "distance_per_ammo" "800 725 650 575"
+        }
 	}

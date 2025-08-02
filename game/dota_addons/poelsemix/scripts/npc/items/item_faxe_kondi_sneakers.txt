@@ -16,32 +16,12 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"cdr" "18"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"movement_speed" "50"
-		}
-		"03"
-		{
-			"var_type" "FIELD_FLOAT"
-			"ms_perc_per_stack" "3"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"max_stacks" "5"
-		}
-		"05"
-		{
-			"var_type" "FIELD_FLOAT"
-			"stack_falloff" "4"
-		}
-	}
+	"AbilityValues"
+        {
+            "cdr" "18"
+            "movement_speed" "50"
+            "ms_perc_per_stack" "3"
+            "max_stacks" "5"
+            "stack_falloff" "4"
+        }
 }

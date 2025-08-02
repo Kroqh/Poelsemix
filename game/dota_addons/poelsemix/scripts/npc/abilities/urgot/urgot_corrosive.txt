@@ -30,46 +30,18 @@
 
 		}
 
-		"AbilitySpecial"
-		{
-
-			"01"
-			{	
-				"var_type"			"FIELD_INTEGER"
-				"proj_speed"		"900 1000 1100 1200"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"radius"			"335" //Hardcoded into particle, avoid changed much
-			}
-			"03"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"duration"			"5.0"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"damage_per_second"	"45 60 75 90"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"tick_interval"		"0.5"
-			}
-			"07"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"cast_range"		"600 700 800 900"
-			}
-			"08"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"armor_reduction_pct"		"20 25 30 35"
-				"LinkedSpecialBonus" "special_bonus_urgot_6"
-			}
-
-
-		}
+		"AbilityValues"
+        {
+            "proj_speed" "900 1000 1100 1200"
+            "radius" "335"
+            "duration" "5.0"
+            "damage_per_second" "45 60 75 90"
+            "tick_interval" "0.5"
+            "cast_range" "600 700 800 900"
+            "armor_reduction_pct"
+            {
+                "value" "20 25 30 35"
+                "LinkedSpecialBonus" "special_bonus_urgot_6"
+            }
+        }
 	}

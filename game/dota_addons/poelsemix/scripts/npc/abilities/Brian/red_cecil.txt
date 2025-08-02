@@ -9,7 +9,7 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	   
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName"			"red_cecil"
 
 	// Precache
@@ -38,43 +38,18 @@
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"width"			"50" //avoid changing
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range"					"175 200 225 250"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"proj_speed"					"750"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"dmg_reduction_pct"		"-20 -25 -30 -35"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"debuff_duration"	"2.5 3 3.5 4"
-			"LinkedSpecialBonus" "special_bonus_brian_8"
-		}
-		"06"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"slow"	"-20 -25 -30 -35"
-		}
-		"07"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"			"250 350 450 550"
-		}
-	}
+	"AbilityValues"
+        {
+            "width" "50"
+            "range" "175 200 225 250"
+            "proj_speed" "750"
+            "dmg_reduction_pct" "-20 -25 -30 -35"
+            "debuff_duration"
+            {
+                "value" "2.5 3 3.5 4"
+                "LinkedSpecialBonus" "special_bonus_brian_8"
+            }
+            "slow" "-20 -25 -30 -35"
+            "damage" "250 350 450 550"
+        }
 }

@@ -18,22 +18,10 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"movement_speed" "60"
-		}
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"cooldown" "3" //aka delay when taking damage
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"max_blink_range" "1250"
-		}
-	}
+	"AbilityValues"
+        {
+            "movement_speed" "60"
+            "cooldown" "3"
+            "max_blink_range" "1250"
+        }
 }

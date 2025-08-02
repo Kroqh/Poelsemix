@@ -11,7 +11,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
 	"AbilityTextureName"			"caro_matchpoint"
-	"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType"				"ABILITY_TYPE_ULTIMATE"
 	"HasScepterUpgrade"			"1"
 
 	// Casting
@@ -30,36 +30,18 @@
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"arrow_width"			"75"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"arrow_speed"			"3000"
-		}
-		"03"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"stun_duration"			"0.5 1.0 1.5"
-		}
-		"04"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"damage"			"600 1100 1600"
-			"LinkedSpecialBonus" "special_bonus_caro_8"
-		}
-		"05"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"range"			"2000 2300 2600"
-		}
-	}
+	"AbilityValues"
+        {
+            "arrow_width" "75"
+            "arrow_speed" "3000"
+            "stun_duration" "0.5 1.0 1.5"
+            "damage"
+            {
+                "value" "600 1100 1600"
+                "LinkedSpecialBonus" "special_bonus_caro_8"
+            }
+            "range" "2000 2300 2600"
+        }
 	
 	// Data driven
 	//-------------------------------------------------------------------------------------------------------------

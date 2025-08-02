@@ -15,39 +15,15 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"armor" "16"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"move_speed" "55"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"regen_health" "4"
-		}
-		"04"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "6.0"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_armor" "16"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"bonus_health" "250"
-		}
-	}
+	"AbilityValues"
+        {
+            "armor" "16"
+            "move_speed" "55"
+            "regen_health" "4"
+            "duration" "6.0"
+            "bonus_armor" "16"
+            "bonus_health" "250"
+        }
 	
 	"OnSpellStart"
 	{

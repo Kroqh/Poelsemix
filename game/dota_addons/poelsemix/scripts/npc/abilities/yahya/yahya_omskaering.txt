@@ -5,7 +5,7 @@
    	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_yahya/yahya_omskaering"
   "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-  "AbilityType"         "DOTA_ABILITY_TYPE_ULTIMATE"
+  "AbilityType"         "ABILITY_TYPE_ULTIMATE"
   "FightRecapLevel"       "2"
   "AbilityTextureName"      "den_er_flot"
   "HasScepterUpgrade" "1"
@@ -29,32 +29,21 @@
 
   // Special  
   //-------------------------------------------------------------------------------------------------------------
-  "AbilitySpecial"
-  {
-    "01"
-    {
-      "var_type"        "FIELD_FLOAT"
-      "duration"        "6"
-    }
-    "02"
-    {
-      "var_type"        "FIELD_FLOAT"
-      "base_attack_time"    "1.2 1 0.8"
-      "LinkedSpecialBonus" "special_bonus_yahya_4"
-    }
-    "03"
-    {
-      "var_type"        "FIELD_FLOAT"
-      "str_to_agi_ratio"      "1 1.25 1.5"
-    }
-    "04"
-    {
-      "var_type"        "FIELD_INTEGER"
-      "keep_str_ratio"      "20"
-      "LinkedSpecialBonus" "special_bonus_yahya_8"
-      
-    }
-  }
+  "AbilityValues"
+        {
+            "duration" "6"
+            "base_attack_time"
+            {
+                "value" "1.2 1 0.8"
+                "LinkedSpecialBonus" "special_bonus_yahya_4"
+            }
+            "str_to_agi_ratio" "1 1.25 1.5"
+            "keep_str_ratio"
+            {
+                "value" "20"
+                "LinkedSpecialBonus" "special_bonus_yahya_8"
+            }
+        }
 
   
 

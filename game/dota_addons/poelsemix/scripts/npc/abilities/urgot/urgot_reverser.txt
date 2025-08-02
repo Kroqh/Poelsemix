@@ -4,7 +4,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"							"ability_lua"
 		"ScriptFile"						"heroes/hero_urgot/urgot_reverser"
-		"AbilityType"						"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"						"ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"					"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"					"DOTA_UNIT_TARGET_HERO"
@@ -36,28 +36,15 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"cast_range"								"700 950 1200"
-				"LinkedSpecialBonus" "special_bonus_urgot_5"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"channel_time"			"1"
-			}
-			"09"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"dmg_reduction"							"30 40 50 60"
-			}
-			"10"
-			{
-				"var_type"							"FIELD_FLOAT"
-				"dmg_red_duration"						"5"
-			}
-		}
+		"AbilityValues"
+        {
+            "cast_range"
+            {
+                "value" "700 950 1200"
+                "LinkedSpecialBonus" "special_bonus_urgot_5"
+            }
+            "channel_time" "1"
+            "dmg_reduction" "30 40 50 60"
+            "dmg_red_duration" "5"
+        }
 	}

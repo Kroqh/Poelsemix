@@ -18,64 +18,20 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "80"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"corruption_armor" "-15"
-		}
-		"03"
-		{
-			"var_type" "FIELD_FLOAT"
-			"corruption_duration" "15.0"
-		}
-		"04"
-		{
-			"var_type" "FIELD_FLOAT"
-			"str" "20"
-		}
-		"05"
-		{
-			"var_type" "FIELD_FLOAT"
-			"agi" "20"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"as" "20"
-		}
-		"07"
-		{
-			"var_type" "FIELD_INTEGER"
-			"move_speed" "16"
-		}
-		"08"
-		{
-			"var_type" "FIELD_INTEGER"
-			"maim_chance" "45"
-		}
-		"09"
-		{
-			"var_type" "FIELD_INTEGER"
-			"maim_slow_movement" "-30"
-		}
-		"10"
-		{
-			"var_type" "FIELD_INTEGER"
-			"maim_slow_attack" "-40"
-		}
-		"11"
-		{
-			"var_type" "FIELD_FLOAT"
-			"maim_duration" "5"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "80"
+            "corruption_armor" "-15"
+            "corruption_duration" "15.0"
+            "str" "20"
+            "agi" "20"
+            "as" "20"
+            "move_speed" "16"
+            "maim_chance" "45"
+            "maim_slow_movement" "-30"
+            "maim_slow_attack" "-40"
+            "maim_duration" "5"
+        }
 	
 	"Modifiers"
 	{

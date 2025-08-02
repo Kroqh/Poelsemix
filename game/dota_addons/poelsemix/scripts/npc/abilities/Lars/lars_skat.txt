@@ -34,30 +34,17 @@
 		"particle"			"particles/heroes/lars/lars_midas.vpcf"
 
 	}
-	        "AbilitySpecial"
+	        "AbilityValues"
         {
-          "01"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "radius"          "250 300 350"
-          }
-	 "02"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "tax_rate"          "3 4 5 6"
-	      "LinkedSpecialBonus" "special_bonus_lars_3"
-          }
-	"03"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "tick_rate"          "1"
-          }
-	"04"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "channel_time"          "5"
-          }
-		}
+            "radius" "250 300 350"
+            "tax_rate"
+            {
+                "value" "3 4 5 6"
+                "LinkedSpecialBonus" "special_bonus_lars_3"
+            }
+            "tick_rate" "1"
+            "channel_time" "5"
+        }
 
 	
 }

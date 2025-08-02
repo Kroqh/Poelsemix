@@ -16,23 +16,14 @@
 
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "3 3.25 3.5 3.75"
-			"LinkedSpecialBonus" "special_bonus_shimakaze_6"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"speed" "600"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"magic_resist" "-35 -40 -45 -50"
-		}
-	}
+	"AbilityValues"
+        {
+            "duration"
+            {
+                "value" "3 3.25 3.5 3.75"
+                "LinkedSpecialBonus" "special_bonus_shimakaze_6"
+            }
+            "speed" "600"
+            "magic_resist" "-35 -40 -45 -50"
+        }
 }

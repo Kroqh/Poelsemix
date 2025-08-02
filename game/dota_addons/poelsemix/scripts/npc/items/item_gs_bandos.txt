@@ -30,34 +30,14 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage"					"55"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"str"						"20"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"armor_reduction"				"-40"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"active_damage"					"500"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"reduction_duration"				"8"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "55"
+            "str" "20"
+            "armor_reduction" "-40"
+            "active_damage" "500"
+            "reduction_duration" "8"
+        }
 	
 	"Modifiers"
 	{

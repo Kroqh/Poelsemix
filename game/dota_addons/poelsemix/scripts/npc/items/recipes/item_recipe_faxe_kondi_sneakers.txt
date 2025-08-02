@@ -9,6 +9,6 @@
 		"ItemResult"				"item_faxe_kondi_sneakers"
 		"ItemRequirements"
 		{
-			"01" "item_faxe_kondi;item_boots_of_speed;item_faxe_kondi"
+			"01" "item_faxe_kondi;item_boots;item_faxe_kondi"
 		}
   	}

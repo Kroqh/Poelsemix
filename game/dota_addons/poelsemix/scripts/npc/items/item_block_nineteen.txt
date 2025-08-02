@@ -13,39 +13,15 @@
 	"ItemQuality"					"epic"
 	"ItemAliases"					"lego gun;glock;nineteen"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"damage" "36"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"agi" "30"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"attack_speed" "25"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"crit_chance" "30"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"crit_damage" "180"
-		}
-		"06"
-		{
-			"var_type" "FIELD_FLOAT"
-			"max_hp_dmg_pct" "1.5"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "36"
+            "agi" "30"
+            "attack_speed" "25"
+            "crit_chance" "30"
+            "crit_damage" "180"
+            "max_hp_dmg_pct" "1.5"
+        }
 	
 	
 }

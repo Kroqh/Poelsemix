@@ -19,7 +19,7 @@
 	       
 	        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_6"
 	       
-	        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+	        "AbilityType"                   "ABILITY_TYPE_ULTIMATE"
 	       
 	        "precache"
 	        {
@@ -30,25 +30,16 @@
 	       
 	        // Special
 	        //-------------------------------------------------------------------------------------------------------------
-	        "AbilitySpecial"
-	        {
-	            "01"
-	            {
-	                "var_type" "FIELD_INTEGER"
-	                "stat_loss" "-20 -40 -60"
-					"LinkedSpecialBonus" "special_bonus_prophecy_8"
-	            }
-	            "02"
-	            {
-	                "var_type" "FIELD_FLOAT"
-	                "duration" "6"
-	            }
-	            "03"
-	            {
-	                "var_type" "FIELD_INTEGER"
-	                "int_gain" "50 80 110"
-	            }
-	        }
+	        "AbilityValues"
+        {
+            "stat_loss"
+            {
+                "value" "-20 -40 -60"
+                "LinkedSpecialBonus" "special_bonus_prophecy_8"
+            }
+            "duration" "6"
+            "int_gain" "50 80 110"
+        }
 	       
 	       
 	    }

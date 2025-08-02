@@ -9,7 +9,7 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
-	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType" 					"ABILITY_TYPE_ULTIMATE"
 
 	"AbilityTextureName"			"stewart_poelsevogn"
 	"AbilityCooldown"				"50 45 40"
@@ -25,33 +25,16 @@
 	}
 
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration_before_explosion" "5"
-		}
-		"02"
-		{	
-			"var_type" "FIELD_INTEGER"
-			"damage" "500 750 1000"
-		}
-        "03"
+	"AbilityValues"
         {
-            "var_type" "FIELD_INTEGER"
-            "explosion_radius" "700" //Not hardcoded into particle, can easily be changed
-			"LinkedSpecialBonus" "special_bonus_stewart_8"
-        }
-		"04"
-        {
-            "var_type" "FIELD_INTEGER"
+            "duration_before_explosion" "5"
+            "damage" "500 750 1000"
+            "explosion_radius"
+            {
+                "value" "700"
+                "LinkedSpecialBonus" "special_bonus_stewart_8"
+            }
             "range" "800"
-        }
-		"05"
-        {
-            "var_type" "FIELD_INTEGER"
             "taunt_range" "800"
         }
-	}
 }

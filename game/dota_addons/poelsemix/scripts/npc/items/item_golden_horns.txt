@@ -9,7 +9,7 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"item_datadriven"
-	"ID"							"1185"  //Valve's version of this item uses the ID "185".
+	"ID"							"4185"  //Valve's version of this item uses the ID "185".
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"Model"							"models/props_gameplay/red_box.vmdl" 
 	"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
@@ -30,90 +30,24 @@
 	"ItemAliases"					"drum;horns;golden;guld hornene;pipe"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 
-	"AbilitySpecial"
-	{
-		
-		"01"
-		{
-			"var_type"								"FIELD_INTEGER"
-			"bonus_int"							"9"
-		}
-		"02"
-		{
-			"var_type"								"FIELD_INTEGER"
-			"bonus_agi"							"9"
-		}
-		"03"
-		{
-			
-			"var_type"								"FIELD_INTEGER"
-			"bonus_str"							"9"
-		}
-		"04"
-		{
-			"var_type"								"FIELD_INTEGER"
-			"aura_bonus_movement_speed"			"25" //passive aura ms
-		}
-		"05"
-		{
-			"var_type"								"FIELD_INTEGER"
-			"absorb_amount"								"500"
-		}
-		"06"
-		{
-			"var_type"								"FIELD_INTEGER"	
-			"endurance_bonus_movement_speed_pct"	"15" //active ms
-		}
-		"07"
-		{
-			"var_type"								"FIELD_FLOAT"
-			"endurance_duration"					"12.0"
-		}
-		"08"
-		{
-			"var_type"								"FIELD_INTEGER"
-			"aura_radius"							"900"
-		}
-		"09"
-		{
-			"var_type"								"FIELD_INTEGER"
-			"endurance_radius"						"900"
-		}
-		
-		"10"
-		{
-			"var_type"								"FIELD_INTEGER"
-			"mresistaura"							"15"//passive aura ms
-		}
-		"11"
-		{
-			"var_type"								"FIELD_INTEGER"
-			"mresist"								"15" //passive ms
-		}
-		"12"
-		{
-			"var_type"								"FIELD_FLOAT"
-			"hpregen"								"9.0"
-		}
-		"13"
-		{
-			"var_type"								"FIELD_FLOAT"
-			"hpregenaura"								"4.0"
-		}
-		"14"
-		{
-			"var_type"								"FIELD_FLOAT"
-			"manaregen"								"2.0"
-		}
-		"15"
-		{
-		"var_type"								"FIELD_INTEGER"
-			"aura_bonus_attack_speed"				"40" //active
-		}
-
-		
-		
-	}
+	"AbilityValues"
+        {
+            "bonus_int" "9"
+            "bonus_agi" "9"
+            "bonus_str" "9"
+            "aura_bonus_movement_speed" "25"
+            "absorb_amount" "500"
+            "endurance_bonus_movement_speed_pct" "15"
+            "endurance_duration" "12.0"
+            "aura_radius" "900"
+            "endurance_radius" "900"
+            "mresistaura" "15"
+            "mresist" "15"
+            "hpregen" "9.0"
+            "hpregenaura" "4.0"
+            "manaregen" "2.0"
+            "aura_bonus_attack_speed" "40"
+        }
 	
 	"OnSpellStart"
 	{

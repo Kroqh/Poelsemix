@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_musashi/musashi_water"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType"					"ABILITY_TYPE_BASIC"
 	"AbilityTextureName"			"musashi_water"
 	
 	"AbilityCooldown"				"0.5 0.4 0.3 0.2"
@@ -17,19 +17,13 @@
 		"particle"  "particles/units/heroes/hero_kunkka/kunkka_spell_tidebringer.vpcf"
 		"particle" "particles/units/heroes/hero_siren/naga_siren_riptide.vpcf"
 	}
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"proc_chance" "25 30 35 40"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"range" "200"
-			"LinkedSpecialBonus" "special_bonus_musashi_3"
-		}
-
-	}
+	"AbilityValues"
+        {
+            "proc_chance" "25 30 35 40"
+            "range"
+            {
+                "value" "200"
+                "LinkedSpecialBonus" "special_bonus_musashi_3"
+            }
+        }
 }

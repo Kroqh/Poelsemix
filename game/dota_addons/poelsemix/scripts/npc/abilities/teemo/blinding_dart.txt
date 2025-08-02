@@ -26,28 +26,15 @@
 		"soundfile" "soundevents/teemo_soundevent.vsndevts"
 	}
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "3.25 3.5 3.75 4"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "100 125 150 175"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"miss_chance" "55 60 65 70"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"int_scaling" "2.2 2.4 2.6 2.8"
-			"LinkedSpecialBonus" "special_bonus_teemo_3"
-		}
-	}
+	"AbilityValues"
+        {
+            "duration" "3.25 3.5 3.75 4"
+            "damage" "100 125 150 175"
+            "miss_chance" "55 60 65 70"
+            "int_scaling"
+            {
+                "value" "2.2 2.4 2.6 2.8"
+                "LinkedSpecialBonus" "special_bonus_teemo_3"
+            }
+        }
 }

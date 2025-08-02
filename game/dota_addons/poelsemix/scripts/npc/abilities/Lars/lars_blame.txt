@@ -5,7 +5,7 @@
         "AbilityTextureName"        "LarsTaunt"
         "MaxLevel"                  "3"
         "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"				"ABILITY_TYPE_ULTIMATE"
         "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
 	"AbilityUnitTargetFlags"     "DOTA_UNIT_TARGET_FLAG_NONE"
@@ -14,36 +14,17 @@
 	"HasScepterUpgrade"		"1"
 
 
-        "AbilitySpecial"
+        "AbilityValues"
         {
-          "01"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "duration"          "5 6 7"
-          }
-	   "02"
-          {
-              "var_type"          "FIELD_INTEGER"
-              "cast_range"          "500 650 800"
-		 "LinkedSpecialBonus" "special_bonus_lars_6"
-          }
-	  "03"
-          {
-              "var_type"          "FIELD_INTEGER"
-              "target_slow"          "30 40 50"
-          }
-	  "04"
-          {
-              "var_type"          "FIELD_INTEGER"
-              "taunt_speed"          "20 30 40"
-          }
-	 
-	 "05"
-          {
-              "var_type"          "FIELD_INTEGER"
-              "scepter_dirt_damage"          "65"
-          }
-	
+            "duration" "5 6 7"
+            "cast_range"
+            {
+                "value" "500 650 800"
+                "LinkedSpecialBonus" "special_bonus_lars_6"
+            }
+            "target_slow" "30 40 50"
+            "taunt_speed" "20 30 40"
+            "scepter_dirt_damage" "65"
         }
 
 			"precache"

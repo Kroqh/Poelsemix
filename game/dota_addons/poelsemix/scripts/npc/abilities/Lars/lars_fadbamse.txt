@@ -14,30 +14,20 @@
 
 
 
-        "AbilitySpecial"
+        "AbilityValues"
         {
-          "01"
-          {
-              "var_type"          "FIELD_FLOAT"
-              "duration"          "5"
-          }
-		"02"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            "bonus_dmg"          "50 75 100 125"
-		"LinkedSpecialBonus" "special_bonus_lars_2"
-		  }
-		"03"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            "bonus_armor"          "20 30 40 50"
-		  }
-		"04"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            "bonus_speed"          "100 150 200 250"
-		"LinkedSpecialBonus" "special_bonus_lars_1"
-		  }
+            "duration" "5"
+            "bonus_dmg"
+            {
+                "value" "50 75 100 125"
+                "LinkedSpecialBonus" "special_bonus_lars_2"
+            }
+            "bonus_armor" "20 30 40 50"
+            "bonus_speed"
+            {
+                "value" "100 150 200 250"
+                "LinkedSpecialBonus" "special_bonus_lars_1"
+            }
         }
 
 			"precache"

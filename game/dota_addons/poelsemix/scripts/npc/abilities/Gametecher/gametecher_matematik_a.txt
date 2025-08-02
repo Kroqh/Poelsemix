@@ -5,7 +5,7 @@
 	"BaseClass"              "ability_lua"
 	"ScriptFile"			"heroes/hero_gametecher/gametecher_matematik_a.lua"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "matematikA"
 	
 	// Casting
@@ -26,31 +26,21 @@
 		"particle" "particles/units/heroes/hero_gametecher/mat_a.vpcf"
     }
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"bonus_int_percent" "15 16 17 18"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"bonus_int_percent_per_dropout" "0.8 1 1.2 1.4"
-			"LinkedSpecialBonus" "special_bonus_gametecher_4"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"speed_loss" "-125"
-			"LinkedSpecialBonus" "special_bonus_gametecher_2"
-		}
-		"04"
-		{
-			"var_type" "FIELD_FLOAT"
-			"bonus_duration" "20" //To cover a full ult
-		}
-	}
+	"AbilityValues"
+        {
+            "bonus_int_percent" "15 16 17 18"
+            "bonus_int_percent_per_dropout"
+            {
+                "value" "0.8 1 1.2 1.4"
+                "LinkedSpecialBonus" "special_bonus_gametecher_4"
+            }
+            "speed_loss"
+            {
+                "value" "-125"
+                "LinkedSpecialBonus" "special_bonus_gametecher_2"
+            }
+            "bonus_duration" "20"
+        }
 	
 	
 }

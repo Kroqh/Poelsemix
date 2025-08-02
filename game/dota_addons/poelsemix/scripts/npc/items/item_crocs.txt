@@ -14,24 +14,12 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"stat_gain" "20"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"movement_speed" "55"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"as" "30"
-		}
-	}
+	"AbilityValues"
+        {
+            "stat_gain" "20"
+            "movement_speed" "55"
+            "as" "30"
+        }
 	
 	"Modifiers"
 	{

@@ -7,58 +7,28 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"shimakaze_sea"
 	"MaxLevel"	"1"
-	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" 					"ABILITY_TYPE_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"HasScepterUpgrade"				"1"
 
-	"AbilitySpecial"
-	{
-	    "01"
-	    {
-	        "var_type"          "FIELD_INTEGER"
-	        "damage"             "20"
-	    }
-	    "02"
-	    {
-	        "var_type"          "FIELD_FLOAT"
-	        "duration"             "2"
-		"LinkedSpecialBonus" "special_bonus_shimakaze_7"
-	    }
-	    "03"
-	    {
-	    	"var_type"	"FIELD_FLOAT"
-	    	"tick_interval"	"0.5"
-	    }
-	    "04"
-	    {
-	    	"var_type"	"FIELD_INTEGER"
-	    	"radius"	"400"
-	    }
-	    "05"
-	    {
-	    	"var_type"	"FIELD_INTEGER"
-	    	"move_slow" "-20"
-		"LinkedSpecialBonus" "special_bonus_shimakaze_8"
-	    }
-	    "06"
-	    {
-	    	"var_type"	"FIELD_FLOAT"
-	    	"duration_slow" "0.7"
-	    }
-	    "07"
-	    {
-	    	"var_type" "FIELD_FLOAT"
-	    	"int_scaling"	"0.3"
-	    }
-	    "08"
-	    {
-	    	"var_type" "FIELD_FLOAT"
-	    	"int_scaling_aghs" "0.6"
-	    }
-	    "09"
-	    {
-	    	"var_type" "FIELD_INTEGER"
-	    	"distance_req" "350"
-	    }
-	}
+	"AbilityValues"
+        {
+            "damage" "20"
+            "duration"
+            {
+                "value" "2"
+                "LinkedSpecialBonus" "special_bonus_shimakaze_7"
+            }
+            "tick_interval" "0.5"
+            "radius" "400"
+            "move_slow"
+            {
+                "value" "-20"
+                "LinkedSpecialBonus" "special_bonus_shimakaze_8"
+            }
+            "duration_slow" "0.7"
+            "int_scaling" "0.3"
+            "int_scaling_aghs" "0.6"
+            "distance_req" "350"
+        }
 }

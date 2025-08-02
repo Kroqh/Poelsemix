@@ -5,7 +5,7 @@
 "BaseClass"				"ability_lua"
 "ScriptFile"				"heroes/hero_ryge/ryge_skyd_en_due.lua"
 "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+"AbilityType"				"ABILITY_TYPE_ULTIMATE"
 "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
@@ -26,53 +26,25 @@
 	"soundfile" "soundevents/ryge_soundevent.vsndevts"
 
 }
-"AbilitySpecial"
-{
-
-	"01"
-	{
-		"var_type"			"FIELD_FLOAT"
-		"channel_time"		"4.5"
-	}
-	"02"
-	{
-		"var_type"			"FIELD_INTEGER"
-		"base_damage"		"1000 1500 2000"
-	}
-
-	"03"
-	{
-		"var_type"					"FIELD_FLOAT"
-		"damage_agi_scaling"				"2 2.5 3"
-		"LinkedSpecialBonus" "special_bonus_ryge_7"
-	}
-	"04"
-	{
-		"var_type"					"FIELD_INTEGER"
-		"base_range"				"700 850 1000"
-	}
-	"05"
-	{
-		"var_type"					"FIELD_FLOAT"
-		"range_agi_scaling"				"1 1.25 1.5"
-		"LinkedSpecialBonus" "special_bonus_ryge_8"
-	}
-	"06"
-	{
-		"var_type"					"FIELD_INTEGER"
-		"projectile_speed"			"2225"
-	}
-	"06"
-	{
-		"var_type"					"FIELD_INTEGER"
-		"scepter_ricochets"			"2"
-	}
-	"07"
-	{
-		"var_type"					"FIELD_INTEGER"
-		"scepter_range"			"400"
-	}
-}
+"AbilityValues"
+        {
+            "channel_time" "4.5"
+            "base_damage" "1000 1500 2000"
+            "damage_agi_scaling"
+            {
+                "value" "2 2.5 3"
+                "LinkedSpecialBonus" "special_bonus_ryge_7"
+            }
+            "base_range" "700 850 1000"
+            "range_agi_scaling"
+            {
+                "value" "1 1.25 1.5"
+                "LinkedSpecialBonus" "special_bonus_ryge_8"
+            }
+            "projectile_speed" "2225"
+            "scepter_ricochets" "2"
+            "scepter_range" "400"
+        }
 
 "precache"
 {

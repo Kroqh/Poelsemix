@@ -9,7 +9,7 @@
 		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
 		"AbilityTextureName"			"damian_dabbington"
-		"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType" "ABILITY_TYPE_ULTIMATE"
 
 		"AbilityCooldown" "55 50 45"
 
@@ -30,38 +30,17 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"arena_size"			"350"		
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cast_range"			"300"		
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"duration"			"8"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_gold_winner"		"125"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damian_faded_stack_cap_for_win"			"7 10 13"
-				"LinkedSpecialBonus" "special_bonus_damian_8"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_percent_from_other_sources"			"20"
-			}
-		}
+		"AbilityValues"
+        {
+            "arena_size" "350"
+            "cast_range" "300"
+            "duration" "8"
+            "bonus_gold_winner" "125"
+            "damian_faded_stack_cap_for_win"
+            {
+                "value" "7 10 13"
+                "LinkedSpecialBonus" "special_bonus_damian_8"
+            }
+            "damage_percent_from_other_sources" "20"
+        }
 	}

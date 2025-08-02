@@ -7,7 +7,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityType"					"ABILITY_TYPE_BASIC"
 
 		"IsGrantedByScepter"            "1"
 		"HasScepterUpgrade"             "1"
@@ -21,12 +21,8 @@
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"5"
-			}
-		}
+		"AbilityValues"
+        {
+            "duration" "5"
+        }
 	}

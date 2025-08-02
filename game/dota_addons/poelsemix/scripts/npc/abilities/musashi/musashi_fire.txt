@@ -7,7 +7,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_NONE" 	//defined inside script since it deals mixed
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+		"AbilityType"					"ABILITY_TYPE_BASIC"	
 		"AbilityTextureName"			"musashi_fire"
 		"ScriptFile"			"heroes/hero_musashi/musashi_fire"
 		"MaxLevel"						"4"
@@ -31,51 +31,23 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"range"				"250"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_per_slash_physical"			"20 25 30 35"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"attack_interval"			"0.1"
-			}
-
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"strikes"				"10"
-				"LinkedSpecialBonus" "special_bonus_musashi_7"	
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_duration"		"3"
-				"LinkedSpecialBonus" "special_bonus_musashi_6"				
-			}
-			
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"60" //avoid touching
-			}
-			"08"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_tick_rate"		"1"				
-			}
-				"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_per_burn_magical"		"8 12 16 20"				
-			}
-		}
+		"AbilityValues"
+        {
+            "range" "250"
+            "damage_per_slash_physical" "20 25 30 35"
+            "attack_interval" "0.1"
+            "strikes"
+            {
+                "value" "10"
+                "LinkedSpecialBonus" "special_bonus_musashi_7"
+            }
+            "burn_duration"
+            {
+                "value" "3"
+                "LinkedSpecialBonus" "special_bonus_musashi_6"
+            }
+            "radius" "60"
+            "burn_tick_rate" "1"
+            "damage_per_burn_magical" "8 12 16 20"
+        }
 	}

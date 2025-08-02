@@ -6,14 +6,10 @@
 	"ScriptFile"			"abilities/courier.lua"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"courier_super_speed"
-	"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" 					"ABILITY_TYPE_BASIC"
 	
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"movespeed" "4000"
-		}
-	}
+	"AbilityValues"
+        {
+            "movespeed" "4000"
+        }
 }

@@ -23,44 +23,19 @@
 	"particle"	"particles/units/heroes/hero_slapper/power_slap_rammusteinu.vpcf"
         }
 	
-	    "AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"150 200 250 300"
-			}
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"str_damage_scaling"					"1.5 1.7 1.9 2.1"
-				"LinkedSpecialBonus" "special_bonus_slapper_3"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"			"125"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"knockup_height"						"150 170 190 210"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"knockup_duration"						"0.5 0.6 0.7 0.8"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"range"						"300 325 350 375"
-			}
-			"06"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"rammusteinu_range_multi"						"2"
-			}
-		}
+	    "AbilityValues"
+        {
+            "damage" "150 200 250 300"
+            "str_damage_scaling"
+            {
+                "value" "1.5 1.7 1.9 2.1"
+                "LinkedSpecialBonus" "special_bonus_slapper_3"
+            }
+            "radius" "125"
+            "knockup_height" "150 170 190 210"
+            "knockup_duration" "0.5 0.6 0.7 0.8"
+            "range" "300 325 350 375"
+            "rammusteinu_range_multi" "2"
+        }
 	
 }

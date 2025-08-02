@@ -22,29 +22,13 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "50"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"move_speed" "60"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"phase_ms" "25"
-		}
-		"04"
-		{
-			"var_type" "FIELD_FLOAT"
-			"phase_duration" "3.0"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "50"
+            "move_speed" "60"
+            "phase_ms" "25"
+            "phase_duration" "3.0"
+        }
 	
 	"OnSpellStart"
 	{

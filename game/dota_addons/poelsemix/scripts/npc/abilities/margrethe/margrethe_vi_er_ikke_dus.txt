@@ -12,7 +12,7 @@
 		"AbilityTextureName"			"margrethe_vi_er_ikke_dus"
 		"FightRecapLevel"				"1"
 		"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_6"
-		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"				"ABILITY_TYPE_ULTIMATE"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -35,71 +35,28 @@
 	}
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"		"55 70 85"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"base_slashes"			"8 10 12"
-				"LinkedSpecialBonus" "special_bonus_margrethe_7"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"int_per_extra_slash"			"40 35 30"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"channel_duration"						"3"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"range"		"800 850 900"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slash_width_start"		"175"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slash_width_end"		"200"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slash_speed"		"800"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"angle_spread_each_side_radian"		"0.75"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"buff_duration"		"6"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"dmg_stack"		"3 4 5"
-				"LinkedSpecialBonus" "special_bonus_margrethe_8"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"as_stack"		"2 3 4"
-			}
-			
-		}
+		"AbilityValues"
+        {
+            "damage" "55 70 85"
+            "base_slashes"
+            {
+                "value" "8 10 12"
+                "LinkedSpecialBonus" "special_bonus_margrethe_7"
+            }
+            "int_per_extra_slash" "40 35 30"
+            "channel_duration" "3"
+            "range" "800 850 900"
+            "slash_width_start" "175"
+            "slash_width_end" "200"
+            "slash_speed" "800"
+            "angle_spread_each_side_radian" "0.75"
+            "buff_duration" "6"
+            "dmg_stack"
+            {
+                "value" "3 4 5"
+                "LinkedSpecialBonus" "special_bonus_margrethe_8"
+            }
+            "as_stack" "2 3 4"
+        }
 		
 	}

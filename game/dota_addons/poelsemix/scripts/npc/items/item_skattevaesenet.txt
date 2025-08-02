@@ -30,34 +30,14 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"attack_speed"					"50"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"health"						"300"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"tax_percent"						"12"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"min_gold"						"50"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"cast_range_bonus"						"50"
-		}
-	}
+	"AbilityValues"
+        {
+            "attack_speed" "50"
+            "health" "300"
+            "tax_percent" "12"
+            "min_gold" "50"
+            "cast_range_bonus" "50"
+        }
 
 	
 	

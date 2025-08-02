@@ -4,7 +4,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"             		"ability_lua"
 	"ScriptFile"					"heroes/hero_herobrine/herobrine_diamonds"
-	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType"					"ABILITY_TYPE_ULTIMATE"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
@@ -35,39 +35,21 @@
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"radius"					"600 650 700"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"duration"					"15"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"stone_duration"			"0.3"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"vision_cone"				"50"		// 85 degree cone //huh?
-		}
-		"07"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage_resist"		"98"
-			"LinkedSpecialBonus" "special_bonus_herobrine_7"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"bonus_gold"		"30 35 40"
-			"LinkedSpecialBonus" "special_bonus_herobrine_2"
-		}
-	}
+	"AbilityValues"
+        {
+            "radius" "600 650 700"
+            "duration" "15"
+            "stone_duration" "0.3"
+            "vision_cone" "50"
+            "damage_resist"
+            {
+                "value" "98"
+                "LinkedSpecialBonus" "special_bonus_herobrine_7"
+            }
+            "bonus_gold"
+            {
+                "value" "30 35 40"
+                "LinkedSpecialBonus" "special_bonus_herobrine_2"
+            }
+        }
 }

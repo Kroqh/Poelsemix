@@ -35,25 +35,16 @@
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"780 860 920 1000"
-			"LinkedSpecialBonus" "special_bonus_herobrine_8"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_INTEGER"
-			"scepter_fear_aoe"			"250"
-		}
-		"02"
-		{
-			"var_type"				"FIELD_FLOAT"
-			"scepter_fear_duration"			"0.4"
-		}
-	}
+	"AbilityValues"
+        {
+            "blink_range"
+            {
+                "value" "780 860 920 1000"
+                "LinkedSpecialBonus" "special_bonus_herobrine_8"
+            }
+            "scepter_fear_aoe" "250"
+            "scepter_fear_duration" "0.4"
+        }
 
 	
 }

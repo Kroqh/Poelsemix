@@ -23,23 +23,10 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"int"					"40"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"mana"						"300"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"spell_amp_ratio"						"7.5"
-		}
-
-	}	
+	"AbilityValues"
+        {
+            "int" "40"
+            "mana" "300"
+            "spell_amp_ratio" "7.5"
+        }	
 }

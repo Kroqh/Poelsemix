@@ -23,24 +23,18 @@
 	}
 
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "3"
-			"LinkedSpecialBonus" "special_bonus_stewart_1"
-		}
-		"02"
-		{	
-			"var_type" "FIELD_INTEGER"
-			"speed" "100 125 150 175"
-			"LinkedSpecialBonus" "special_bonus_stewart_6"
-		}
-        "03"
+	"AbilityValues"
         {
-            "var_type" "FIELD_FLOAT"
+            "duration"
+            {
+                "value" "3"
+                "LinkedSpecialBonus" "special_bonus_stewart_1"
+            }
+            "speed"
+            {
+                "value" "100 125 150 175"
+                "LinkedSpecialBonus" "special_bonus_stewart_6"
+            }
             "str_to_hp_regen" "2 2.5 3 3.5"
         }
-	}
 }

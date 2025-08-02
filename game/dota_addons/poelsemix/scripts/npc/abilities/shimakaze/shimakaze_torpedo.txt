@@ -8,7 +8,7 @@
 	"AbilityTextureName"			"shimakaze_torpedo"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-	"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityType" 					"ABILITY_TYPE_ULTIMATE"
 
 	"AbilityCooldown"				"90 80 70"
 	"AbilityManaCost"				"600 900 1200"
@@ -16,32 +16,12 @@
 
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"velocity" "250"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"stun_duration"	"1.5 2.0 2.5"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "600 650 700"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"radius" "250"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"search_radius" "100"
-		}
-	}
+	"AbilityValues"
+        {
+            "velocity" "250"
+            "stun_duration" "1.5 2.0 2.5"
+            "damage" "600 650 700"
+            "radius" "250"
+            "search_radius" "100"
+        }
 }

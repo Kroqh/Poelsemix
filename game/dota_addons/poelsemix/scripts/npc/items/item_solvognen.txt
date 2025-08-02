@@ -24,52 +24,16 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage"					"60"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"health_regen"						"5"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"evasion"	"20"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"aura_regen_sec"					"10"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"aura_damage_sec"					"70"
-		}
-		"06"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"aura_radius"					"700"
-		}
-		"07"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"aura_tick_rate"					"0.1"
-		}
-		"08"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"aura_missrate"					"15"
-		}
-		"09"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"aura_illusion_reduced_effectiveness"					"-40"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "60"
+            "health_regen" "5"
+            "evasion" "20"
+            "aura_regen_sec" "10"
+            "aura_damage_sec" "70"
+            "aura_radius" "700"
+            "aura_tick_rate" "0.1"
+            "aura_missrate" "15"
+            "aura_illusion_reduced_effectiveness" "-40"
+        }
 }

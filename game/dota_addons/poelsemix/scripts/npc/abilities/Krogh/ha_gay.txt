@@ -13,20 +13,15 @@
 		"AbilityCastPoint"				"0.2"
 		"HasScepterUpgrade"			"1"
 
-		"AbilitySpecial"
-		{
-  			"01"
-		    {
-		        "var_type"          "FIELD_FLOAT"
-		        "duration"             "2.5 2.75 3 3.25"
-			"LinkedSpecialBonus" "special_bonus_krogh_2"
-		    }
-			"02"
-		    {
-		        "var_type"          "FIELD_integer"
-		        "aghs_range"             "250"
-		    }
-		}
+		"AbilityValues"
+        {
+            "duration"
+            {
+                "value" "2.5 2.75 3 3.25"
+                "LinkedSpecialBonus" "special_bonus_krogh_2"
+            }
+            "aghs_range" "250"
+        }
 		"precache"
 		{
 			"particle" "particles/heroes/krogh/ha_gay_chain.vpcf"

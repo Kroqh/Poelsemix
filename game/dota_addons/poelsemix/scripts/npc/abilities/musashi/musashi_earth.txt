@@ -8,7 +8,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+		"AbilityType"					"ABILITY_TYPE_BASIC"	
 		"AbilityTextureName"			"musashi_earth"
 		"ScriptFile"			"heroes/hero_musashi/musashi_earth"
 		"MaxLevel"						"4"
@@ -30,27 +30,11 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"300"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"			"175 225 275 325"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"slow_duration"			"1.5"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow_percent"		"40 45 50 55"				
-			}
-		}
+		"AbilityValues"
+        {
+            "radius" "300"
+            "damage" "175 225 275 325"
+            "slow_duration" "1.5"
+            "slow_percent" "40 45 50 55"
+        }
 	}

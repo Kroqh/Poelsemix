@@ -69,6 +69,12 @@ function Precache( context )
         PrecacheUnitByNameSync( "npc_dota_treasure_courier", context )
         PrecacheModel( "npc_dota_treasure_courier", context )
 
+		PrecacheUnitByNameSync("npc_melee_minion", context )
+        PrecacheModel( "models/minions/pink_melee_minion.vmdl", context )
+
+		PrecacheUnitByNameSync("npc_super_minion", context )
+        PrecacheModel( "models/minions/pink_super_minion.vmdl", context )
+
     --Cache new particles
        	PrecacheResource( "particle", "particles/econ/events/nexon_hero_compendium_2014/teleport_end_nexon_hero_cp_2014.vpcf", context )
        	PrecacheResource( "particle", "particles/leader/leader_overhead.vpcf", context )
@@ -271,6 +277,7 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetBountyRunePickupFilter( Dynamic_Wrap( COverthrowGameMode, "BountyRunePickupFilter" ), self )
 	GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( COverthrowGameMode, "ExecuteOrderFilter" ), self )
 
+	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled( true )
 
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( COverthrowGameMode, 'OnGameRulesStateChange' ), self )
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( COverthrowGameMode, "OnNPCSpawned" ), self )

@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_intruder/intruder_flash"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "intruder_flash_bang"
 
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
@@ -33,28 +33,15 @@
 		"particle" "particles/units/heroes/hero_intruder/sniper_shard_concussive_grenade_model.vpcf"
 	}
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_FLOAT"
-			"duration" "1 1.25 1.5 1.75"
-			"LinkedSpecialBonus" "special_bonus_intruder_1"
-		}
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"proj_speed" "700"
-		}
-		"02"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"radius" "250" //dunno if hardcoded?
-		}
-		"03"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"damage" "250 300 350 400"
-		}
-	}
+	"AbilityValues"
+        {
+            "duration"
+            {
+                "value" "1 1.25 1.5 1.75"
+                "LinkedSpecialBonus" "special_bonus_intruder_1"
+            }
+            "proj_speed" "700"
+            "radius" "250"
+            "damage" "250 300 350 400"
+        }
 }

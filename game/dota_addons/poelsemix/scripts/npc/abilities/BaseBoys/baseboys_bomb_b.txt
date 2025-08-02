@@ -9,7 +9,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "bombe_b"
 	
 	"precache"
@@ -30,39 +30,21 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"120"
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type" "FIELD_FLOAT"			
-			"tick_interval" "0.5"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"			
-			"duration" "3"
-			"LinkedSpecialBonus" "special_bonus_baseboys_3"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "60 90 120 150"
-			"LinkedSpecialBonus" "special_bonus_baseboys_5"
-		}
-		"04"
-		{
-			"var_type" "FIELD_FLOAT"
-			"stun_duration" "1.5"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"radius" "225"
-		}
-		"06"
-		{
-			"var_type" "FIELD_FLOAT"
-			"mini_stun_duration" "0.1 0.15 0.2 0.25"
-		}
-	}
+	"AbilityValues"
+        {
+            "tick_interval" "0.5"
+            "duration"
+            {
+                "value" "3"
+                "LinkedSpecialBonus" "special_bonus_baseboys_3"
+            }
+            "damage"
+            {
+                "value" "60 90 120 150"
+                "LinkedSpecialBonus" "special_bonus_baseboys_5"
+            }
+            "stun_duration" "1.5"
+            "radius" "225"
+            "mini_stun_duration" "0.1 0.15 0.2 0.25"
+        }
 }

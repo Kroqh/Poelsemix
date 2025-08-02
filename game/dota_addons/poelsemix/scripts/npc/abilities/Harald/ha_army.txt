@@ -11,7 +11,7 @@
 		"AbilityManaCost"				"100"
 		"AbilityCastPoint"				"0.5"
 		"AbilityCastRange" 				"600"
-		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityType"				"ABILITY_TYPE_ULTIMATE"
 		"HasScepterUpgrade"		"1"
 		
 
@@ -21,32 +21,21 @@
 	}		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-
-			"01"
-			{
-				"var_type" "FIELD_FLOAT"
-				"duration" "18"
-			}
-			"02"
-			{
-				"var_type" "FIELD_INTEGER"
-				"ha_amount_melee" "3 5 7"
-				"LinkedSpecialBonus" "special_bonus_harald_1"
-			}
-			"03"
-			{
-				"var_type" "FIELD_INTEGER"
-				"ha_amount_range" "3 5 7"
-				"LinkedSpecialBonus" "special_bonus_harald_2"
-			}
-			"04"
-			{
-				"var_type" "FIELD_INTEGER"
-				"ha_amount_mage" "3 5 7"
-			}
-		}
+		"AbilityValues"
+        {
+            "duration" "18"
+            "ha_amount_melee"
+            {
+                "value" "3 5 7"
+                "LinkedSpecialBonus" "special_bonus_harald_1"
+            }
+            "ha_amount_range"
+            {
+                "value" "3 5 7"
+                "LinkedSpecialBonus" "special_bonus_harald_2"
+            }
+            "ha_amount_mage" "3 5 7"
+        }
 		
 
 

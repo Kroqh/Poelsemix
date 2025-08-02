@@ -8,19 +8,13 @@
 	"MaxLevel"						"1"
 	"AbilityTextureName"			"urgotPassive"
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage_reduction" "-15"
-			"LinkedSpecialBonus" "special_bonus_urgot_2"
-		}
-		"02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "2.5"
-		}
-
-	}
+	"AbilityValues"
+        {
+            "damage_reduction"
+            {
+                "value" "-15"
+                "LinkedSpecialBonus" "special_bonus_urgot_2"
+            }
+            "duration" "2.5"
+        }
 }

@@ -14,32 +14,19 @@
 		"particle" "particles/units/heroes/hero_stormspirit/stormspirit_ball_lightning.vpcf"
 		"soundfile"       "soundevents/game_sounds_heroes/game_sounds_stormspirit.vsndevts"
 	}
-	"AbilitySpecial"
+	"AbilityValues"
 	{
-	    "01"
+		"velocity" "2500"
+
+		"range" "600 635 670 705" //dash range
+
+		"afterimage_dmg_percent" "-70"
+
+		"afterimage_taken_percent" "260" //0 is 100% 
+
+		"afterimage_duration"
 		{
-			"var_type" "FIELD_INTEGER"
-			"velocity" "2500"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"range" "600 635 670 705" //dash range
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"afterimage_dmg_percent" "-70"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"afterimage_taken_percent" "260" //0 is 100% 
-		}
-		"05"
-		{
-			"var_type" "FIELD_FLOAT"
-			"afterimage_duration" "3.5 4 4.5 5"
+			"value" "3.5 4 4.5 5"
 			"LinkedSpecialBonus" "special_bonus_raio_1"
 		}
 	}

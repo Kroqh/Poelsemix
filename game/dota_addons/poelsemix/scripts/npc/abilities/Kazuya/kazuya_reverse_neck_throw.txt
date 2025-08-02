@@ -8,7 +8,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+	"AbilityType"					"ABILITY_TYPE_BASIC"	
 	"AbilityTextureName"			"kazuya_neck_throw"
 	
 	"AbilityCooldown"				"0.25"
@@ -22,38 +22,17 @@
 		"particle"  "particles/units/heroes/hero_marci/marci_dispose_aoe_damage.vpcf"
 	}
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"air_duration" "0.3"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "100 150 200 250"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"fury_cost" "28 26 24 22"
-			"LinkedSpecialBonus" "special_bonus_kazuya_4"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"air_height" "150"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"throw_distance_behind" "100"
-		}
-		"06"
-		{
-			"var_type" "FIELD_FLOAT"
-			"strength_scaling" "1 1.15 1.3 1.45"
-		}
-	}
+	"AbilityValues"
+        {
+            "air_duration" "0.3"
+            "damage" "100 150 200 250"
+            "fury_cost"
+            {
+                "value" "28 26 24 22"
+                "LinkedSpecialBonus" "special_bonus_kazuya_4"
+            }
+            "air_height" "150"
+            "throw_distance_behind" "100"
+            "strength_scaling" "1 1.15 1.3 1.45"
+        }
 }

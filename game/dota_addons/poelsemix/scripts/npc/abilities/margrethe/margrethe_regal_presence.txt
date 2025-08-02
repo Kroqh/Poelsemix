@@ -18,28 +18,15 @@
 		"particle"			"particles/econ/items/margrethe/regal_presence.vpcf"
 	}
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"magic_resist_per_stack" "3 3.5 4 4.5"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"as_per_stack" "5 7 9 11"
-		}
-        "03"
+	"AbilityValues"
         {
-            "var_type" "FIELD_INTEGER"
-            "radius" "550 625 700 775"
-			"LinkedSpecialBonus" "special_bonus_margrethe_2"
+            "magic_resist_per_stack" "3 3.5 4 4.5"
+            "as_per_stack" "5 7 9 11"
+            "radius"
+            {
+                "value" "550 625 700 775"
+                "LinkedSpecialBonus" "special_bonus_margrethe_2"
+            }
+            "buff_falloff" "0.3"
         }
-		 "04"
-		{
-			"var_type" "FIELD_FLOAT"
-			"buff_falloff" "0.3"
-		}
-	}
 }

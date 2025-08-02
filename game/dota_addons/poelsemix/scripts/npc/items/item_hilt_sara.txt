@@ -21,19 +21,11 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"health"					"400"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"mana"					"400"
-		}
-	}
+	"AbilityValues"
+        {
+            "health" "400"
+            "mana" "400"
+        }
 	
 	"Modifiers"
 	{

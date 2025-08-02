@@ -30,39 +30,15 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage"					"55"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"health"					"400"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"mana"						"400"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"active_damage"					"500"
-		}
-		"05"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"hp_restore"					"250"
-		}
-		"06"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"mp_restore"					"250"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "55"
+            "health" "400"
+            "mana" "400"
+            "active_damage" "500"
+            "hp_restore" "250"
+            "mp_restore" "250"
+        }
 	
 	"Modifiers"
 	{

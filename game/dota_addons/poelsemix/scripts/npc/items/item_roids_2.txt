@@ -22,19 +22,11 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"str"					"100"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"health_regen_percent_per_second"	"-100"
-		}
-	}
+	"AbilityValues"
+        {
+            "str" "100"
+            "health_regen_percent_per_second" "-100"
+        }
 	
 	"Modifiers"
 	{

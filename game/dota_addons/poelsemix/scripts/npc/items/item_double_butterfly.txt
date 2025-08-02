@@ -22,39 +22,15 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"agility"					"80"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"as" "80"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "65"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"evasion" "40"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"speed" "90"
-		}
-		"06"
-		{
-			"var_type" "FIELD_FLOAT"
-			"duration" "4"
-		}
-	}
+	"AbilityValues"
+        {
+            "agility" "80"
+            "as" "80"
+            "damage" "65"
+            "evasion" "40"
+            "speed" "90"
+            "duration" "4"
+        }
 	
 	"OnSpellStart"
 	{

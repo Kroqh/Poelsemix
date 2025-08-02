@@ -4,7 +4,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"              "ability_lua"
 		"ScriptFile"			"heroes/hero_gametecher/gametecher_finger.lua"
-		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityType"					"ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET "
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -34,24 +34,14 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"200 250 300 350"
-
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"range"					"625 650 675 700"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"int_scaling_damage"					"1 1.2 1.4 1.6"
-				"LinkedSpecialBonus" "special_bonus_gametecher_5"
-			}
-		}
+		"AbilityValues"
+        {
+            "damage" "200 250 300 350"
+            "range" "625 650 675 700"
+            "int_scaling_damage"
+            {
+                "value" "1 1.2 1.4 1.6"
+                "LinkedSpecialBonus" "special_bonus_gametecher_5"
+            }
+        }
 	}

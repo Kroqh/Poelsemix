@@ -10,7 +10,7 @@
 		"BaseClass" "ability_lua"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"ScriptFile"			"heroes/hero_brian/brian_mokai"
-		"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityType" "ABILITY_TYPE_BASIC"
 		"AbilityTextureName" "MOKAI"
 		
 
@@ -26,30 +26,17 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"80 70 60 50"
 
-           	"AbilitySpecial"
-		{
-           		 "01"
-           	 	{
-                		"var_type" "FIELD_FLOAT"
-               			"duration" "4 4.5 5 5.5"
-				"LinkedSpecialBonus" "special_bonus_brian_6"
-            		}
-			"02"
-			{
-				"var_type" "FIELD_INTEGER"
-				"bonus_armor" "40"
-			}
-			"03"
-			{
-				"var_type" "FIELD_INTEGER"
-				"bonus_strength" "30 55 80 105"
-			}
-			"04"
-			{
-				"var_type" "FIELD_INTEGER"
-				"miss_chance" "40 35 30 25"
-			}
-		}
+           	"AbilityValues"
+        {
+            "duration"
+            {
+                "value" "4 4.5 5 5.5"
+                "LinkedSpecialBonus" "special_bonus_brian_6"
+            }
+            "bonus_armor" "40"
+            "bonus_strength" "30 55 80 105"
+            "miss_chance" "40 35 30 25"
+        }
 			
    
 }

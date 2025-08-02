@@ -25,22 +25,10 @@
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"damage"					"10000"
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"cast_range_scepter"		"60000"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"damage_delay"				"0"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "10000"
+            "cast_range_scepter" "60000"
+            "damage_delay" "0"
+        }
 }

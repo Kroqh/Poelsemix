@@ -13,36 +13,17 @@
 	"AbilityCastPoint"				"0.3"
 
 
-        "AbilitySpecial"
+        "AbilityValues"
         {
-         	 "01"
-         	 {
-              		"var_type"          "FIELD_FLOAT"
-              		"duration"          "3"
-			"LinkedSpecialBonus" "special_bonus_kaj_1"
-         	 }
-		 "02"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            		"damage_tick"          "70 100 130 160"
-		  }
-        
-		"03"
-		  {
-			"var_type"          "FIELD_FLOAT"
-           		 "tick_rate"          "1"
-		  }
-        
-		"04"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            		"cast_range"          "600 650 700 750"
-		  }
-		"05"
-		  {
-			"var_type"          "FIELD_INTEGER"
-            		"proj_speed"          "900"
-		  }
+            "duration"
+            {
+                "value" "3"
+                "LinkedSpecialBonus" "special_bonus_kaj_1"
+            }
+            "damage_tick" "70 100 130 160"
+            "tick_rate" "1"
+            "cast_range" "600 650 700 750"
+            "proj_speed" "900"
         }
 
 			"precache"

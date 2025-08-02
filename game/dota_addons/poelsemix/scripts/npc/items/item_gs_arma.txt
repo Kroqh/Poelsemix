@@ -30,24 +30,12 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"damage"					"55"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"agility"					"20"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"active_damage"					"600"
-		}
-	}
+	"AbilityValues"
+        {
+            "damage" "55"
+            "agility" "20"
+            "active_damage" "600"
+        }
 	
 	"Modifiers"
 	{

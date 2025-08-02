@@ -7,7 +7,6 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"item_datadriven"
-	"ID"							"1103"  //Valve's version of this item uses the ID "103".
 	"Model"							"models/props_gameplay/recipe.mdl"
 	"AbilityTextureName"			"item_recipe"
 	
@@ -31,7 +30,6 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"item_datadriven"
-	"ID"							"1197"  //Valve's version of this item uses the ID "197".
 	"Model"							"models/props_gameplay/recipe.mdl"
 	"AbilityTextureName"			"item_recipe"
 	
@@ -55,7 +53,6 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"item_datadriven"
-	"ID"							"1198"  //Valve's version of this item uses the ID "198".
 	"Model"							"models/props_gameplay/recipe.mdl"
 	"AbilityTextureName"			"item_recipe"
 	
@@ -79,7 +76,6 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"item_datadriven"
-	"ID"							"1199"  //Valve's version of this item uses the ID "199".
 	"Model"							"models/props_gameplay/recipe.mdl"
 	"AbilityTextureName"			"item_recipe"
 	
@@ -103,7 +99,6 @@
 	// General
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"						"item_datadriven"
-	"ID"							"1200"  //Valve's version of this item uses the ID "200".
 	"Model"							"models/props_gameplay/recipe.mdl"
 	"AbilityTextureName"			"item_recipe"
 	

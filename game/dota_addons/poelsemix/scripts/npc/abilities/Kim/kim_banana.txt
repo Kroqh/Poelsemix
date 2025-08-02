@@ -33,61 +33,23 @@
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{		
-		"01"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"gold_stolen"			"40 55 70 85"
-			"LinkedSpecialBonus" "special_bonus_kim_6"	
-		}
-		"02"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"target_heal"			"250 255 260 265"
-		}
-		"03"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"projectile_speed"				"500"
-		}
-		"04"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"slip_distance"				"500"
-		}
-		"05"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"aghs_poison_per_tick"			"150"
-		}
-		"06"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"aghs_tick_rate"			"1.0"
-		}
-		"07"
-		{
-			"var_type"					"FIELD_FLOAT"
-			"aghs_tick_duration"			"3"
-		}
-		"08"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"peel_duration"			"30 32 34 36"
-		}
-		"09"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"peel_radius"			"25"
-		}
-		"10"
-		{
-			"var_type"					"FIELD_INTEGER"
-			"slip_velocity"			"700"
-		}			
-
-	}
+	"AbilityValues"
+        {
+            "gold_stolen"
+            {
+                "value" "40 55 70 85"
+                "LinkedSpecialBonus" "special_bonus_kim_6"
+            }
+            "target_heal" "250 255 260 265"
+            "projectile_speed" "500"
+            "slip_distance" "500"
+            "aghs_poison_per_tick" "150"
+            "aghs_tick_rate" "1.0"
+            "aghs_tick_duration" "3"
+            "peel_duration" "30 32 34 36"
+            "peel_radius" "25"
+            "slip_velocity" "700"
+        }
 
 
 }

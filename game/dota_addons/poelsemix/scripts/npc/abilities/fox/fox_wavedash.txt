@@ -48,17 +48,9 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{			
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"tick_interval"			"0.5"
-			}			
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"6.0 7.0 8.0"
-			}
-		}
+		"AbilityValues"
+        {
+            "tick_interval" "0.5"
+            "duration" "6.0 7.0 8.0"
+        }
 	}

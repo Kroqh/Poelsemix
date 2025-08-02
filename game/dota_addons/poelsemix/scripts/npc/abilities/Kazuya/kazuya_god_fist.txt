@@ -8,7 +8,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
-	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+	"AbilityType"					"ABILITY_TYPE_BASIC"	
 
 	"AbilityTextureName"			"kazuya_god_fist"
 	
@@ -25,28 +25,15 @@
 		"soundfile" "soundevents/kazuya_soundevent.vsndevts"
 	}
 
-	"AbilitySpecial"
-	{
-	    "01"
-		{
-			"var_type" "FIELD_FLOAT"
-			"knockup_duration" "0.5"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"damage" "150 225 300 375"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"fury_cost" "26 24 22 20"
-			"LinkedSpecialBonus" "special_bonus_kazuya_4"
-		}
-		"04"
-		{
-			"var_type" "FIELD_FLOAT"
-			"strength_scaling" "1.2 1.4 1.6 1.8"
-		}
-	}
+	"AbilityValues"
+        {
+            "knockup_duration" "0.5"
+            "damage" "150 225 300 375"
+            "fury_cost"
+            {
+                "value" "26 24 22 20"
+                "LinkedSpecialBonus" "special_bonus_kazuya_4"
+            }
+            "strength_scaling" "1.2 1.4 1.6 1.8"
+        }
 }

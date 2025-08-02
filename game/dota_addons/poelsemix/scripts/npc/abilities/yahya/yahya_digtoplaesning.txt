@@ -26,30 +26,17 @@
   
   // Special
   //-------------------------------------------------------------------------------------------------------------
-  "AbilitySpecial"
-  {
-    "01"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "radius"          "325 350 375 400"
-	"LinkedSpecialBonus" "special_bonus_yahya_6"
-    }
-    "02"
-    {
-      "var_type"          "FIELD_FLOAT"
-      "duration"          "5.0"
-    }
-     "03"
-    {
-      "var_type"          "FIELD_FLOAT"
-      "tick_rate"          "0.1"
-    }
-    "04"
-    {
-      "var_type"          "FIELD_FLOAT"
-      "stun_per_interval_ratio"          "1 1.1 1.2 1.3"
-    }
-  }
+  "AbilityValues"
+        {
+            "radius"
+            {
+                "value" "325 350 375 400"
+                "LinkedSpecialBonus" "special_bonus_yahya_6"
+            }
+            "duration" "5.0"
+            "tick_rate" "0.1"
+            "stun_per_interval_ratio" "1 1.1 1.2 1.3"
+        }
 
   // Data driven
   //-------------------------------------------------------------------------------------------------------------

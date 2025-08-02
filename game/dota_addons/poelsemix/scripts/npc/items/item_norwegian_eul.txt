@@ -31,32 +31,12 @@
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"55"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"6"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"	"40"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"cyclone_duration"		"3.5"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"tooltip_drop_damage"	"50"
-			}
-		}
+		"AbilityValues"
+        {
+            "bonus_intellect" "55"
+            "bonus_mana_regen" "6"
+            "bonus_movement_speed" "40"
+            "cyclone_duration" "3.5"
+            "tooltip_drop_damage" "50"
+        }
 	}

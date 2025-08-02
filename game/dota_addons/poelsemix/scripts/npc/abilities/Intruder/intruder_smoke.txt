@@ -5,7 +5,7 @@
 	"BaseClass"				"ability_lua"
 	"ScriptFile"			"heroes/hero_intruder/intruder_smoke"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-	"AbilityType" "DOTA_ABILITY_TYPE_BASIC"
+	"AbilityType" "ABILITY_TYPE_BASIC"
 	"AbilityTextureName" "intruder_smoke"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -31,28 +31,15 @@
 		"particle" "particles/units/heroes/hero_intruder/sniper_shard_concussive_grenade_model.vpcf"
 	}
 	
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_FLOAT"
-			"smoke_dur" "3 3.5 4 4.5"
-			"LinkedSpecialBonus" "special_bonus_intruder_1"
-		}
-		"02"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"proj_speed" "700"
-		}
-		"03"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"smoke_radius" "280" //Currently hard coded into particle, can be changed to dynamic, look at marvelous pink sky for reference
-		}
-		"04"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"smoke_vision" "-95"
-		}
-	}
+	"AbilityValues"
+        {
+            "smoke_dur"
+            {
+                "value" "3 3.5 4 4.5"
+                "LinkedSpecialBonus" "special_bonus_intruder_1"
+            }
+            "proj_speed" "700"
+            "smoke_radius" "280"
+            "smoke_vision" "-95"
+        }
 }

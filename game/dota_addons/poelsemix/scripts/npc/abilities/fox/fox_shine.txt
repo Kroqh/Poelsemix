@@ -29,29 +29,13 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"magic_resistance"		"20 35 50 65"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"active_duration"		"5"				
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"internal_cooldown"		"6"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"spellshield_max_distance"	"2500"
-			}
-		}
+		"AbilityValues"
+        {
+            "magic_resistance" "20 35 50 65"
+            "active_duration" "5"
+            "internal_cooldown" "6"
+            "spellshield_max_distance" "2500"
+        }
 	}
 	//=================================================================================================================
 	"imba_antimage_spell_shield"
@@ -81,27 +65,11 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"magic_resistance"		"20 35 50 65"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"active_duration"		"1.5"				
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"internal_cooldown"		"6"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"spellshield_max_distance"	"2500"
-			}
-		}
+		"AbilityValues"
+        {
+            "magic_resistance" "20 35 50 65"
+            "active_duration" "1.5"
+            "internal_cooldown" "6"
+            "spellshield_max_distance" "2500"
+        }
 	}

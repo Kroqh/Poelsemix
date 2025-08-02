@@ -21,27 +21,11 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"str"					"45"
-		}
-		"02"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"hp"						"300"
-		}
-		"03"
-		{
-			"var_type"							"FIELD_INTEGER"
-			"health_regen_percent_per_second"	"5"
-		}
-		"04"
-		{
-			"var_type"							"FIELD_FLOAT"
-			"cooldown"					"5"
-		}
-	}
+	"AbilityValues"
+        {
+            "str" "45"
+            "hp" "300"
+            "health_regen_percent_per_second" "5"
+            "cooldown" "5"
+        }
 }

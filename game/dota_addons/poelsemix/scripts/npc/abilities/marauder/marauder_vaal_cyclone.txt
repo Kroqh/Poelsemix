@@ -9,7 +9,7 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
-    "AbilityType"					"DOTA_ABILITY_TYPE_BASIC"	
+    "AbilityType"					"ABILITY_TYPE_BASIC"	
 
 	"AbilityTextureName"			"marauder_vaal_cyclone"
 	"AbilityCooldown"				"3"
@@ -20,37 +20,13 @@
 	{
 		"particle"			"particles/heroes/marauder/vaal_cyclone.vpcf"
 	}
-	"AbilitySpecial"
-	{
-	    "02"
-		{
-			"var_type" "FIELD_FLOAT"
-			"damage_scaling" "62.5 65 67.5 70"
-		}
-        "03"
+	"AbilityValues"
         {
-            "var_type" "FIELD_FLOAT"
+            "damage_scaling" "62.5 65 67.5 70"
             "attack_rate" "37.5 35 32.5 30"
-        }
-		 "04"
-        {
-            "var_type" "FIELD_INTEGER"
             "radius" "305 310 315 320"
-        }
-        "07"
-        {
-            "var_type" "FIELD_FLOAT"
             "duration" "3"
-        }
-        "08"
-        {
-            "var_type" "FIELD_INTEGER"
             "stacks_needed" "30"
-        }
-         "08"
-        {
-            "var_type" "FIELD_FLOAT"
             "pull_distance" "1.5"
         }
-	}
 }

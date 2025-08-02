@@ -18,39 +18,15 @@
 
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilitySpecial"
-	{
-		"01"
-		{
-			"var_type"	"FIELD_INTEGER"
-			"health" "575"
-		}
-		"02"
-		{
-			"var_type" "FIELD_INTEGER"
-			"mana" "575"
-		}
-		"03"
-		{
-			"var_type" "FIELD_INTEGER"
-			"int" "35"
-		}
-		"04"
-		{
-			"var_type" "FIELD_INTEGER"
-			"cdr" "25"
-		}
-		"05"
-		{
-			"var_type" "FIELD_INTEGER"
-			"dmg" "15"
-		}
-		"06"
-		{
-			"var_type" "FIELD_INTEGER"
-			"mana_regen" "6"
-		}
-	}
+	"AbilityValues"
+        {
+            "health" "575"
+            "mana" "575"
+            "int" "35"
+            "cdr" "25"
+            "dmg" "15"
+            "mana_regen" "6"
+        }
 	
 	"Modifiers"
 	{
