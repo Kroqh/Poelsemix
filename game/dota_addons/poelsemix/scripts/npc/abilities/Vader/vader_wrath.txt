@@ -1,0 +1,24 @@
+"vader_wrath"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_vader/vader_wrath"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"vader_wrath"
+	"AbilityType"					"ABILITY_TYPE_BASIC"
+		
+
+	"precache"
+	{
+		"particle"			"particles/units/heroes/vader/wrath_aura.vpcf"
+	}
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+        {
+            "wrath_spell_amp" "0.45 0.52 0.59 0.65"
+            "wrath_attack_speed" "0.45 0.52 0.59 0.65"
+        }
+}

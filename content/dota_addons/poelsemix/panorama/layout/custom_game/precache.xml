@@ -77,6 +77,8 @@
 
             <Image src="file://panorama/images/heroes/selection/npc_dota_hero_spirit_breaker.png" hittest="false" />
             <Image src="file://panorama/images/heroes/npc_dota_hero_spirit_breaker.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/selection/npc_dota_hero_doom_bringer.png" hittest="false" />
+            <Image src="file://panorama/images/heroes/npc_dota_hero_doom_bringer.png" hittest="false" />
 
             <Image src="file://materials/particle/pfmagic.tga" hittest="false" />
             <Image src="file://materials/particle/pfmelee.tga" hittest="false" />

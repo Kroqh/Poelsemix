@@ -232,6 +232,15 @@ function COverthrowGameMode:OnNPCSpawned( event )
 
 
 	end
+
+	if npcName == "npc_dota_hero_doom_bringer" then
+		
+		local saber = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/vader/saber.vmdl"})
+		saber:FollowEntity(hero, true)
+		saber:SetParent(hero, "attach_saber")
+
+
+	end
 	
 	-- only hero stuff afterswards, also called on illusions before they are turned into actual illusions (thanks valve), create a timer like at the bottom if it should not happen on illusions
 	if not hero:IsRealHero() then return end

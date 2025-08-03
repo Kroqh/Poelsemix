@@ -75,6 +75,11 @@ function Precache( context )
 		PrecacheUnitByNameSync("npc_super_minion", context )
         PrecacheModel( "models/minions/pink_super_minion.vmdl", context )
 
+		PrecacheUnitByNameSync("npc_banan", context )
+        PrecacheModel( "models/props_gameplay/banana_prop_open.vmdl", context )
+
+		
+
     --Cache new particles
        	PrecacheResource( "particle", "particles/econ/events/nexon_hero_compendium_2014/teleport_end_nexon_hero_cp_2014.vpcf", context )
        	PrecacheResource( "particle", "particles/leader/leader_overhead.vpcf", context )
