@@ -7,21 +7,21 @@
     HeroGuidesSupported = 0
 	IsPlayable = 1
 	maps = 
-	["poelsemix_3v3v3v3", "poelsemix"]
+	["poelsemix_4v4v4v4", "poelsemix"]
 	map_options = 
 	[
 		{
-			MaxPlayers = 12
-            map = "poelsemix_3v3v3v3"
+			MaxPlayers = 16
+            map = "poelsemix_4v4v4v4"
 		},
 		{
 			MaxPlayers = 10
             map = "poelsemix"
 		}
 	]
- 	DefaultMap = "poelsemix_3v3v3v3"
+ 	DefaultMap = "poelsemix_4v4v4v4"
 
 	MinPlayers = 1
-    MaxPlayers = 12
+    MaxPlayers = 16
 	
 }

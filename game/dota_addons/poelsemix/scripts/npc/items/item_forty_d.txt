@@ -1,0 +1,32 @@
+"item_forty_d"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	
+  	"BaseClass"                 "item_lua"
+	"ScriptFile"					"items/item_forty_d.lua"
+  	"AbilityTextureName"        "forty_d"
+  	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"4950"
+  	"ID"						"3063"
+	"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"str;health_pool;cdr"
+	"ItemQuality"					"epic"
+	"ItemAliases"					""
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityValues"
+        {
+            "str" "22"
+            "hp" "320"
+            "cdr" "10"
+	    "magic_resist" "12"
+	    "duration" "1.5"
+	    "max_hp_percent_damage" "8"
+        }
+}

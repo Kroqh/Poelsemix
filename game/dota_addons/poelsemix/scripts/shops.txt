@@ -76,6 +76,7 @@
 		
 		"item"		"item_viking_helmet"
 		"item"		"item_flaeskesteg_sovs_kartofler"
+		"item"		"item_forty_d"
 		"item"       "item_pocket_gametecher"
 		
 		"item"		"item_trump_card"

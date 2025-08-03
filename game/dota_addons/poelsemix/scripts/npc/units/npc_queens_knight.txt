@@ -2,7 +2,6 @@
 	{										
 		// General
 		//----------------------------------------------------------------
-		//"Model"						"models/items/gyrocopter/skyhigh_bomb_missle_alt/skyhigh_bomb_alt.vmdl"	// Model.
 		"Model"	"models/queen/queens_knight.vmdl"
 		"BaseClass"					"npc_dota_creature"
 		"Level"						"1"

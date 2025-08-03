@@ -1,0 +1,14 @@
+"item_recipe_forty_d"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"300"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_forty_d"
+		"ItemRequirements"
+		{
+			"01" "item_ogre_axe;item_ogre_axe;item_faxe_kondi;item_vitality_booster;item_kartofler"
+		}
+  	}

@@ -1,0 +1,8 @@
+poelsemix_4v4v4v4
+{
+	material materials/overviews/poelsemix_4v4v4v4.vmat
+	pos_x -7500
+	pos_y 7500
+	scale 14.648
+}
+

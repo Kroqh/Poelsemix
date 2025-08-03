@@ -50,6 +50,7 @@ function Precache( context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_jakiro/jakiro_macropyre_firehit.vpcf", context )
 	PrecacheResource( "particle", "particles/econ/items/ogre_magi/ogre_2022_cc/ogre_2022_cc_trail_fire.vpcf", context )
 	PrecacheResource( "particle", "particles/econ/items/brunsviger.vpcf", context )
+	PrecacheResource( "particle", "particles/units/items/forty_d.vpcf", context )
 	
 
 	--Cache the gold bags
@@ -77,6 +78,41 @@ function Precache( context )
 
 		PrecacheUnitByNameSync("npc_banan", context )
         PrecacheModel( "models/props_gameplay/banana_prop_open.vmdl", context )
+
+		PrecacheUnitByNameSync("npc_queens_knight", context )
+        PrecacheModel( "models/queen/queens_knight.vmdl", context )
+
+		PrecacheUnitByNameSync("npc_shroom", context )
+        PrecacheModel( "models/items/furion/treant/shroomling_treant/shroomling_treant.vmdl", context )
+
+		PrecacheUnitByNameSync("viking_mage", context )
+        PrecacheModel( "models/heroes/beastmaster/beastmaster.vmdl", context )
+		PrecacheUnitByNameSync("viking_norm", context )
+		PrecacheUnitByNameSync("viking_ranged", context )
+		PrecacheUnitByNameSync("npc_rune", context )
+        PrecacheModel( "models/props_gameplay/runesten.vmdl", context )
+
+		PrecacheUnitByNameSync("npc_torpedo", context )
+        PrecacheModel( "models/items/gyrocopter/skyhigh_bomb_missle_alt/skyhigh_bomb_alt.vmdl", context )
+
+
+		PrecacheUnitByNameSync("unit_recon_ballon", context )
+        PrecacheModel( "models/props_gameplay/rat_balloon.vmdl", context )
+
+		PrecacheUnitByNameSync("unit_hog_rider", context )
+        PrecacheModel( "models/heroes/chen/chen.vmdl", context )
+
+		PrecacheUnitByNameSync("unit_andrea", context )
+        PrecacheModel( "models/courier/skippy_parrot/skippy_parrot_flying.vmdl", context )
+
+		PrecacheUnitByNameSync("npc_remote_charge", context )
+        PrecacheModel( "models/heroes/techies/techies_sign.vmdl", context )
+
+		PrecacheUnitByNameSync("npc_poelsevogn", context )
+        PrecacheModel( "models/items/techies/techies_mad_tex_mount/techies_mad_tex_mount.vmdl", context )
+
+		PrecacheUnitByNameSync("npc_koldblodet_reptil", context )
+        PrecacheModel( "models/items/courier/faceless_rex/faceless_rex.vmdl", context )
 
 		
 
@@ -243,11 +279,11 @@ function COverthrowGameMode:InitGameMode()
 	GameRules:GetGameModeEntity().COverthrowGameMode = self
 
 	-- Adding Many Players
-	if GetMapName() == "poelsemix_3v3v3v3" then
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 3 )
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 3 )
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 3 )
-		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_2, 3 )
+	if GetMapName() == "poelsemix_4v4v4v4" then
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_GOODGUYS, 4 )
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_BADGUYS, 4 )
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_1, 4 )
+		GameRules:SetCustomGameTeamMaxPlayers( DOTA_TEAM_CUSTOM_2, 4 )
 		self.m_GoldRadiusMin = 300
 		self.m_GoldRadiusMax = 1400
 		self.m_GoldDropPercent = 10
