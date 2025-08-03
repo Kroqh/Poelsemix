@@ -307,6 +307,11 @@ function COverthrowGameMode:OnNPCSpawned( event )
 		ability:SetLevel(1)
 	end
 
+	if hero:GetUnitName() == "npc_dota_hero_doom_bringer" then
+		local ability = hero:FindAbilityByName("vader_wrath")
+		ability:SetLevel(1)
+	end
+
 		--Timers:CreateTimer({
 		--endTime = 0.1,
 		--callback = function()

@@ -3,12 +3,12 @@
 	"override_hero"				"npc_dota_hero_doom_bringer"			// Hero to override
 	"model" "models/vader/vader.vmdl"
 	"DisableWearables" "1"
-	"Ability1" "kim_stille"				
+	"Ability1" "vader_throw"				
 	"Ability2" "vader_wrath"
 	"Ability3" "kim_banana"
-	"Ability4" "kim_gasolin"
+	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
-	"Ability6" "kim_nat"
+	"Ability6" "vader_choke"
 	"Ability7" "generic_hidden"
 	
 	"AttributePrimary"				"DOTA_ATTRIBUTE_ALL"

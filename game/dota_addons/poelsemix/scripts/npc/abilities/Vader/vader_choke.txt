@@ -1,0 +1,44 @@
+"vader_choke"
+{
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                 "ability_lua"
+			"ScriptFile"			"heroes/hero_vader/vader_choke"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityType"				"ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilityTextureName" "vader_choke"
+
+        
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"100 92 84"
+		"AbilityManaCost"				"200"
+
+		"AbilityCastPoint"				"0.15"
+
+
+		"precache"
+		{
+		"soundfile" "soundevents/vader_soundevent.vsndevts"
+		"particle" "particles/econ/items/vader/force_choke.vpcf"
+		}
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityValues"
+        {
+            "damage_sec" "125 175 225"
+            "tick_rate" "0.5"
+            "channel_duration" "4"
+	    "range" "425 500 575"
+	    "wrath_on_target_death" "25"
+        }
+ 
+
+
+ }
+

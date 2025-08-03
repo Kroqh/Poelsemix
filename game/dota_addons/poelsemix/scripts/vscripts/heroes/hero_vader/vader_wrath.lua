@@ -28,7 +28,8 @@ function modifier_vader_wrath:DeclareFunctions()
         MODIFIER_EVENT_ON_ATTACK_LANDED,
         MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE ,
         MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
-        MODIFIER_EVENT_ON_DEATH
+        MODIFIER_EVENT_ON_DEATH,
+        MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND
     }
     return decFuncs
 end
@@ -43,7 +44,11 @@ function modifier_vader_wrath:OnAttackLanded(keys)
     if not IsServer() then return end
 	if keys.attacker ~= self.parent then return end
     if not keys.target:IsHero() then return end
-    self:SetStackCount(self:GetStackCount()+1)
+    self:AddStacks(1)
+    
+end
+function modifier_vader_wrath:AddStacks(count)
+    self:SetStackCount(self:GetStackCount()+count)
 end
 
 function modifier_vader_wrath:GetTexture()
@@ -61,3 +66,8 @@ function modifier_vader_wrath:OnStackCountChanged()
     if not IsServer() then return end
     ParticleManager:SetParticleControl(self.aura,1,Vector(self:GetStackCount(),0,0))
 end
+
+function modifier_vader_wrath:GetAttackSound()
+	return "vader_saber_attack"
+end
+

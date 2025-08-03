@@ -7,6 +7,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"vader_wrath"
 	"AbilityType"					"ABILITY_TYPE_BASIC"
+	"MaxLevel"                  "5"
 		
 
 	"precache"
@@ -18,7 +19,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityValues"
         {
-            "wrath_spell_amp" "0.45 0.52 0.59 0.65"
-            "wrath_attack_speed" "0.45 0.52 0.59 0.65"
+            "wrath_spell_amp" "0.38 0.45 0.52 0.59 0.65"
+            "wrath_attack_speed" "0.38 0.45 0.52 0.59 0.65"
         }
 }
