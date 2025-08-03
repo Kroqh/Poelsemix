@@ -6,8 +6,13 @@ function vader_choke:GetChannelTime()
 end
 
 function vader_choke:GetCastRange()
-
 	return self:GetSpecialValueFor("range")
+end
+
+function vader_choke:GetCooldown(level)
+    local cd = self.BaseClass.GetCooldown(self,level)
+    if self:GetCaster():FindAbilityByName("special_bonus_vader_7"):GetLevel() > 0 then cd = cd + self:GetCaster():FindAbilityByName("special_bonus_vader_7"):GetSpecialValueFor("value") end
+    return cd
 end
 
 
@@ -60,10 +65,22 @@ end
 
 function modifier_vader_choke:DeclareFunctions()
 	local decFuncs = {
-        MODIFIER_EVENT_ON_DEATH
+        MODIFIER_EVENT_ON_DEATH,
+		MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE
     }
     return decFuncs
 end
+
+function modifier_vader_choke:GetModifierIncomingDamage_Percentage(event)
+	if IsServer() then
+		if event.target == self:GetParent() then
+			if self:GetCaster():FindAbilityByName("special_bonus_vader_5"):GetLevel() > 0 then 
+			return self:GetCaster():FindAbilityByName("special_bonus_vader_5"):GetSpecialValueFor("value")
+			end
+		end
+	end
+end
+
 
 function modifier_vader_choke:OnDeath(keys)
     if not IsServer() then return end

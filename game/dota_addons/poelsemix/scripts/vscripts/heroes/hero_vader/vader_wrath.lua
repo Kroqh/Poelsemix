@@ -29,10 +29,18 @@ function modifier_vader_wrath:DeclareFunctions()
         MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE ,
         MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
         MODIFIER_EVENT_ON_DEATH,
-        MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND
+        MODIFIER_PROPERTY_TRANSLATE_ATTACK_SOUND,
+        MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT
     }
     return decFuncs
 end
+
+function modifier_vader_wrath:GetModifierMoveSpeedBonus_Constant()
+    if self:GetCaster():FindAbilityByName("special_bonus_vader_8"):GetLevel() > 0 then
+        return self:GetCaster():FindAbilityByName("special_bonus_vader_8"):GetSpecialValueFor("value") * self:GetStackCount()
+    end
+end
+
 function modifier_vader_wrath:OnDeath(keys)
     if not IsServer() then return end
 	if keys.unit ~= self.parent then return end
@@ -44,7 +52,15 @@ function modifier_vader_wrath:OnAttackLanded(keys)
     if not IsServer() then return end
 	if keys.attacker ~= self.parent then return end
     if not keys.target:IsHero() then return end
-    self:AddStacks(1)
+    local stacks = 1
+    if self:GetCaster():FindAbilityByName("special_bonus_vader_4"):GetLevel() > 0 then
+        local chance = self:GetCaster():FindAbilityByName("special_bonus_vader_4"):GetSpecialValueFor("value")
+        local roll = RandomInt(1,100)
+        if roll <= chance then
+		    stacks = stacks + 1
+        end
+    end
+    self:AddStacks(stacks)
     
 end
 function modifier_vader_wrath:AddStacks(count)

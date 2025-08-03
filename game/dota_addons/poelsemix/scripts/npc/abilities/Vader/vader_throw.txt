@@ -22,6 +22,7 @@
 	{
 		"particle"  "particles/units/heroes/vader/lightsaber_throw.vpcf"
 		"particle"  "particles/units/heroes/vader/lightsaber_throw_return.vpcf"
+		"particle"  "particles/units/heroes/hero_vader/saber_glow.vpcf"
 	}
 
 	"AbilityValues"

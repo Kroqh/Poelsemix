@@ -29,7 +29,11 @@
         {
             "range" "450 475 500 525"
 	    "duration" "5"
-            "damage_sec" "75 100 125 150"
+	    "damage_sec"
+            {
+                "value" "75 100 125 150"
+                "LinkedSpecialBonus" "special_bonus_vader_2"
+            }
 	    "tickrate" "0.25"
  	    "scepter_range" "375"
 	    "scepter_dmg_percent" "40"

@@ -32,17 +32,17 @@
 	"MovementSpeed"		"280"
 	"ArmorPhysical"		"4"
 	
-	"Ability10"		"special_bonus_kim_6"
-	"Ability11"		"special_bonus_kim_7"
+	"Ability10"		"special_bonus_vader_1"
+	"Ability11"		"special_bonus_vader_2"
 	
-	"Ability12"		"special_bonus_kim_5"
-	"Ability13"		"special_bonus_kim_1"
+	"Ability12"		"special_bonus_vader_3"
+	"Ability13"		"special_bonus_vader_4"
 	
-	"Ability14"		"special_bonus_kim_4"
-	"Ability15"		"special_bonus_kim_3"
+	"Ability14"		"special_bonus_vader_5"
+	"Ability15"		"special_bonus_vader_6"
 	
-	"Ability16"		"special_bonus_kim_8"
-	"Ability17"		"special_bonus_kim_2"
+	"Ability16"		"special_bonus_vader_7"
+	"Ability17"		"special_bonus_vader_8"
 
 
 	"Facets" {}

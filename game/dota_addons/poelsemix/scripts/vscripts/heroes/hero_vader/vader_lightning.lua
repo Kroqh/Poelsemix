@@ -28,6 +28,8 @@ function modifier_vader_lightning:OnCreated()
 	if not IsServer() then return end
 	self.tick_rate =  self:GetAbility():GetSpecialValueFor("tickrate")
 	self.damage_sec = self:GetAbility():GetSpecialValueFor("damage_sec")
+	if self:GetCaster():FindAbilityByName("special_bonus_vader_2"):GetLevel() > 0 then self.damage_sec = self.damage_sec + self:GetCaster():FindAbilityByName("special_bonus_vader_2"):GetSpecialValueFor("value") end
+
 	self.scepter_dmg = self.damage_sec * (self:GetAbility():GetSpecialValueFor("scepter_dmg_percent") / 100)
 	self.maxrange = self:GetAbility():GetEffectiveCastRange(self:GetCaster():GetAbsOrigin(),self:GetCaster())
 	self.scepter_range = self:GetAbility():GetSpecialValueFor("scepter_range")

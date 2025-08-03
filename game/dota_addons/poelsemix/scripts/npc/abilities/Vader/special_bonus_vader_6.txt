@@ -1,0 +1,18 @@
+"special_bonus_vader_6"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"special_bonus_undefined"
+	"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	"LinkedAbility"
+	{
+			"01"	"vader_throw"
+	}
+	"AbilityValues"
+        {
+            "value" "3"
+        }		
+	
+}
