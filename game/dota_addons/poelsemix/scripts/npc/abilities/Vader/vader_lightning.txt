@@ -1,0 +1,37 @@
+"vader_lightning"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_lua"
+	"ScriptFile"			"heroes/hero_vader/vader_lightning"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+	"AbilityTextureName"			"vader_lightning"
+	
+	"AbilityCooldown"				"22 21 20 19"
+	"AbilityManaCost"				"130 120 110 100"
+	"HasScepterUpgrade"		"1"
+
+"AbilityCastPoint"				"0.1"
+
+	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_3"
+	
+	"Precache"
+	{
+		"particle"  "particles/units/heroes/hero_zuus/zuus_arc_lightning_.vpcf"
+	}
+
+	"AbilityValues"
+        {
+            "range" "450 475 500 525"
+	    "duration" "5"
+            "damage_sec" "75 100 125 150"
+	    "tickrate" "0.25"
+ 	    "scepter_range" "375"
+	    "scepter_dmg_percent" "40"
+        }
+}

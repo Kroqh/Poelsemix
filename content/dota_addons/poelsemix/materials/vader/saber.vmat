@@ -51,10 +51,10 @@ Layer0
 	TextureFresnelWarpSpec "materials/default/default_fresnelwarpspec.tga"
 
 	//---- Lighting ----
-	g_flAmbientScale "3.000"
-	g_flBloomScale "0.200"
+	g_flAmbientScale "1.000"
+	g_flBloomScale "0.100"
 	g_flBloomShift "0.000"
-	g_flOverbrightFactor "1.100"
+	g_flOverbrightFactor "1.000"
 	g_vBloomColor "[1.000000 0.000000 0.000000 1.000000]"
 
 	//---- Normal Map ----
@@ -71,4 +71,45 @@ Layer0
 
 	//---- Translucency ----
 	TextureTranslucency ""
+
+
+	VariableState
+	{
+		"Blend To Full"
+		{
+		}
+		"Cloak"
+		{
+		}
+		"Color"
+		{
+		}
+		"Detail 1"
+		{
+		}
+		"Detail 2"
+		{
+		}
+		"Fresnel"
+		{
+		}
+		"Lighting"
+		{
+			"Ambient" 0
+			"Bloom" 0
+			"Overbright" 0
+		}
+		"Normal Map"
+		{
+		}
+		"Rim"
+		{
+		}
+		"Specular"
+		{
+		}
+		"Translucency"
+		{
+		}
+	}
 }

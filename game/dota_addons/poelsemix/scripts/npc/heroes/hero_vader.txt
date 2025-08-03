@@ -5,7 +5,7 @@
 	"DisableWearables" "1"
 	"Ability1" "vader_throw"				
 	"Ability2" "vader_wrath"
-	"Ability3" "kim_banana"
+	"Ability3" "vader_lightning"
 	"Ability4" "generic_hidden"
 	"Ability5" "generic_hidden"
 	"Ability6" "vader_choke"
