@@ -24,7 +24,7 @@ function COverthrowGameMode:OnGameRulesStateChange()
 		end
 		if GetMapName() == "poelsemix" then
 			self.TEAM_KILLS_TO_WIN = 35
-		elseif GetMapName() == "poelsemix_3v3v3v3" then
+		elseif GetMapName() == "poelsemix_4v4v4v4" then
 			self.TEAM_KILLS_TO_WIN = 50
 		else
 			self.TEAM_KILLS_TO_WIN = 35
@@ -41,7 +41,7 @@ function COverthrowGameMode:OnGameRulesStateChange()
 		self.countdownEnabled = true
 		CustomGameEventManager:Send_ServerToAllClients( "show_timer", {} )
 		DoEntFire( "center_experience_ring_particles", "Start", "0", 0, self, self  )
-		if GetMapName() == "poelsemix_3v3v3v3" then
+		if GetMapName() == "poelsemix_4v4v4v4" then
 			self:DoMapObjectivesSetUp()
 		end
 	end

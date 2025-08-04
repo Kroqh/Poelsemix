@@ -81,7 +81,7 @@
 		"item"       "item_pocket_gametecher"
 		
 		"item"		"item_trump_card"
-		
+		"item"		"item_calculator"
 		"item"		"item_hygge"
 		"item"		"item_brunsviger"
 

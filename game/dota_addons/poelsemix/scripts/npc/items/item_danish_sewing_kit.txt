@@ -19,8 +19,8 @@
 	
 	"AbilityValues"
         {
-            "agi" "30"
-            "attack_speed" "75"
+            "agi" "25"
+            "attack_speed" "80"
             "damage_percent" "50"
             "targets" "2"
             "range_melee" "225"

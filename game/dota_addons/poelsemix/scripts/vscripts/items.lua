@@ -207,6 +207,8 @@ function COverthrowGameMode:ThinkSpecialItemDrop()
 end
 
 function COverthrowGameMode:PlanNextSpawn()
+
+	if GetMapName() == "poelsemix_4v4v4v4" then return end
 	local missingSpawnPoint =
 	{
 		origin = "0 0 384",

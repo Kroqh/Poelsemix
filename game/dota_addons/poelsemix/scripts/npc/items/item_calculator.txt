@@ -1,0 +1,31 @@
+"item_calculator"
+{
+	"BaseClass"             		"item_lua"
+	"AbilityTextureName"			"calculator"
+	"ScriptFile"					"items/item_calculator.lua"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  	"ItemCost"					"5200"
+  	"ID"						"3065"
+	
+	// Stats		
+	//-------------------------------------------------------------------------------------------------------------
+		
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"				"mana;health;mana_regen;int;health_regen"
+		"ItemQuality"				"epic"
+		"ItemAliases" 				"TI-30XB"
+		"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+
+	"AbilityValues"
+        {
+            "int" "25"
+            "mana_regen" "10"
+	    "mana" "600"
+            "mana_to_health_ratio" "15"
+            "mana_regen_to_health_regen_ratio" "100"
+        }
+}

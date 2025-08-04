@@ -1,0 +1,14 @@
+"item_recipe_calculator"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"600"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_calculator"
+		"ItemRequirements"
+		{
+			"01" "item_staff_of_wizardry;item_staff_of_wizardry;item_tiara_of_selemene;item_energy_booster"
+		}
+  	}
