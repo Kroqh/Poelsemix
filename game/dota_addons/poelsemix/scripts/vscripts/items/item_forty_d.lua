@@ -26,7 +26,10 @@ end
 function modifier_item_forty_d:OnAbilityExecuted(event)
     if event.unit ~= self:GetParent() then return end
 	if event.ability:IsToggle() then return end
-	self:GetParent():AddNewModifier(self:GetParent(), self:GetAbility(), "modifier_item_forty_d_attack", {duration = self:GetAbility():GetSpecialValueFor("duration")})
+	if self:GetAbility():IsCooldownReady() then
+		self:GetParent():AddNewModifier(self:GetParent(), self:GetAbility(), "modifier_item_forty_d_attack", {duration = self:GetAbility():GetSpecialValueFor("duration")})
+		self:GetAbility():StartCooldown(self:GetAbility():GetSpecialValueFor("cooldown"))
+	end
 end
 
 function modifier_item_forty_d:GetModifierBonusStats_Strength()

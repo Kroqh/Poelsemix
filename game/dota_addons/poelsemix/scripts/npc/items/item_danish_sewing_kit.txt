@@ -1,0 +1,32 @@
+"item_danish_sewing_kit"
+{
+	"BaseClass"             		"item_lua"
+	"AbilityTextureName"			"danish_sewing_kit"
+	"ScriptFile"					"items/item_danish_sewing_kit.lua"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+  	"ItemCost"					"4500"
+  	"ID"						"3064"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemShopTags"					"attack_speed;agi"
+	"ItemQuality"					"epic"
+	"ItemAliases"					"cookie;tin"
+	
+	"AbilityValues"
+        {
+            "agi" "30"
+            "attack_speed" "75"
+            "damage_percent" "50"
+            "targets" "2"
+            "range_melee" "225"
+	    "range_ranged" "425"
+	    "needle_speed" "1000"
+        }
+	
+	
+}

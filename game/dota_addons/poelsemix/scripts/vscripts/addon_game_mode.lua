@@ -51,6 +51,7 @@ function Precache( context )
 	PrecacheResource( "particle", "particles/econ/items/ogre_magi/ogre_2022_cc/ogre_2022_cc_trail_fire.vpcf", context )
 	PrecacheResource( "particle", "particles/econ/items/brunsviger.vpcf", context )
 	PrecacheResource( "particle", "particles/units/items/forty_d.vpcf", context )
+	PrecacheResource( "particle", "particles/units/items/sewing_kit.vpcf", context )
 	
 
 	--Cache the gold bags

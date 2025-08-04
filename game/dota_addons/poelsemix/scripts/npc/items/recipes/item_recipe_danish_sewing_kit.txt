@@ -1,0 +1,14 @@
+"item_recipe_danish_sewing_kit"
+  	{
+  		"BaseClass"                 "item_datadriven"
+  		"AbilityTextureName"        "recipe"
+  		"Model"						"models/props_gameplay/recipe.mdl"
+  		"ItemCost"					"500"
+		"ItemShopTags"				""
+		"ItemRecipe"				"1"
+		"ItemResult"				"item_danish_sewing_kit"
+		"ItemRequirements"
+		{
+			"01" "item_blade_of_alacrity;item_blade_of_alacrity;item_hyperstone"
+		}
+  	}

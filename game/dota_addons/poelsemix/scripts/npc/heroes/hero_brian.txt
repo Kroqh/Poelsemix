@@ -14,19 +14,19 @@
 	
 	"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 	"AttributeBaseStrength"			"25"									
-	"AttributeStrengthGain"			"3.7"													
+	"AttributeStrengthGain"			"3.3"													
 	"AttributeBaseAgility"		"17"
 	"AttributeAgilityGain"		"1.7"
 	"AttributeBaseIntelligence"		"15"									
 	"AttributeIntelligenceGain"		"1.6"	
 
-	"StatusHealth"                "500"
+	"StatusHealth"                "475"
 
 	"AttackDamageMin"			"53"
 	"AttackDamageMax"			"53"
 
 	"MovementSpeed"               "275"
-	"ArmorPhysical"		"8" 
+	"ArmorPhysical"		"6" 
 	
 	
 	"Ability10"		"special_bonus_brian_5"

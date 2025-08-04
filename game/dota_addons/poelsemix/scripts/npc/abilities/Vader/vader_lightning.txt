@@ -13,7 +13,7 @@
 	"AbilityTextureName"			"vader_lightning"
 	
 	"AbilityCooldown"				"22 21 20 19"
-	"AbilityManaCost"				"130 120 110 100"
+	"AbilityManaCost "				"130 120 110 100"
 	"HasScepterUpgrade"		"1"
 
 "AbilityCastPoint"				"0.1"

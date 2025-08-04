@@ -70,6 +70,7 @@
 		"item"		"item_sange_yasha_lator"
 		"item"		"item_hjemmevaernet"
 		"item"		"item_twisted_bow"
+		"item"		"item_danish_sewing_kit"
 		"item"		"item_block_nineteen"
 		"item"		"item_solvognen"
 		"item"		"item_abaddon_lichcap"
