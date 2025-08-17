@@ -12,7 +12,7 @@
 
 	"AbilityValues"
         {
-            "damage_tick" "10 20 30 40"
+            "damage_tick" "15 20 25 30"
             "duration" "4"
             "tick_rate" "1"
             "int_scaling_onhit"

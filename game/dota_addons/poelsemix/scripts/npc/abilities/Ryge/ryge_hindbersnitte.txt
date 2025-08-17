@@ -19,7 +19,7 @@
             }
             "chance"
             {
-                "value" "17.5 20 22.5 25"
+                "value" "20 22.5 25 27.5"
                 "LinkedSpecialBonus" "special_bonus_ryge_5"
             }
             "range_ratio" "1"

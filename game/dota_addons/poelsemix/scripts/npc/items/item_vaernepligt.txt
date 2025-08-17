@@ -6,7 +6,7 @@
   	"BaseClass"                 "item_datadriven"
   	"AbilityTextureName"        "vaernepligt"
   	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"1800"
+  	"ItemCost"					"1750"
   	"ID"						"2012"
 	
 	// Stats		
@@ -24,6 +24,7 @@
         {
             "chance" "35"
             "damage" "150"
+	    "as" "25"
         }
 	
 	"Modifiers"
@@ -33,6 +34,11 @@
 			"Passive"			"1"
 			"IsHidden"			"1"
 			"Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
+			}
 			
 			"OnAttack"
 			{

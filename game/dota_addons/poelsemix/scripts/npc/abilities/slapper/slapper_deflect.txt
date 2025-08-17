@@ -18,16 +18,16 @@
         {
             "max_charges"
             {
-                "value" "2 3 4 5"
+                "value" "3 4 5 6"
                 "LinkedSpecialBonus" "special_bonus_slapper_2"
             }
             "interval"
             {
-                "value" "4 3.5 3 2.5"
+                "value" "3.5 3 2.5 2"
                 "LinkedSpecialBonus" "special_bonus_slapper_8"
             }
             "proj_speed" "1500"
-            "damage" "45 50 55 60"
+            "damage" "52 60 68 76"
             "int_damage" "0.9 1 1.1 1.2"
         }
 }

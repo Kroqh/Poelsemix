@@ -39,7 +39,7 @@
 		"AbilityValues"
         {
             "projectile_speed" "700"
-            "damage" "175 250 325 400"
+            "damage" "250 325 400 475"
             "aoe_radius" "300"
             "duration" "4.0"
             "magic_resist_reduction"

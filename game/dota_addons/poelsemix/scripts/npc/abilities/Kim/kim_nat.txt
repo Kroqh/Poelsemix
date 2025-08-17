@@ -15,7 +15,7 @@
 	// Stats
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastPoint"				"0.3"
-	"AbilityCooldown"				"60 55 50"
+	"AbilityCooldown"				"80 75 70"
 	"AbilityManaCost"				"0"
 	"MaxLevel" "3"
 

@@ -20,11 +20,11 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityValues"
         {
-            "damage" "80"
+            "damage" "65"
             "corruption_armor" "-15"
             "corruption_duration" "15.0"
-            "str" "20"
-            "agi" "20"
+            "str" "18"
+            "agi" "18"
             "as" "20"
             "move_speed" "16"
             "maim_chance" "45"

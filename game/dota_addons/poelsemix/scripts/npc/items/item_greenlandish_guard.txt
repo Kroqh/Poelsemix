@@ -27,10 +27,10 @@
 	
 	"AbilityValues"
         {
-            "bonus_intellect" "55"
+            "bonus_intellect" "48"
             "bonus_agi" "10"
             "bonus_str" "10"
-            "bonus_health" "650"
+            "bonus_health" "600"
             "bonus_regen" "6"
             "bonus_armor" "18"
             "blast_final_radius" "900"

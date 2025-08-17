@@ -17,7 +17,7 @@
 	"AbilityValues"
         {
             "int" "38"
-            "hp" "250"
+            "hp" "200"
             "mana" "500"
             "mana_regen" "5"
             "spell_amp" "18"

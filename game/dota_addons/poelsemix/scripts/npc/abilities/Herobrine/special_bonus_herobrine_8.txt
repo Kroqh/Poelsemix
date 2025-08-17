@@ -13,7 +13,7 @@
 
 	"AbilityValues"
         {
-            "value" "400"
+            "value" "300"
         }	
 	
 }

@@ -41,8 +41,8 @@
 	"MovementSpeed"		"295"
 	"ArmorPhysical"		"7"
 
-	"AttackDamageMin"			"69"
-	"AttackDamageMax"			"71"
+	"AttackDamageMin"			"70"
+	"AttackDamageMax"			"70"
 
 
 	"Facets" {}

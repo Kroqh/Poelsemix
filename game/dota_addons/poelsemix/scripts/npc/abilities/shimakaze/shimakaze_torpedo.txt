@@ -11,7 +11,7 @@
 	"AbilityType" 					"ABILITY_TYPE_ULTIMATE"
 
 	"AbilityCooldown"				"90 80 70"
-	"AbilityManaCost"				"600 900 1200"
+	"AbilityManaCost"				"250"
 	"AbilityCastPoint"				"0.6"
 
 	"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1"
@@ -20,7 +20,7 @@
         {
             "velocity" "250"
             "stun_duration" "1.5 2.0 2.5"
-            "damage" "600 650 700"
+            "damage" "600 700 800"
             "radius" "250"
             "search_radius" "100"
         }

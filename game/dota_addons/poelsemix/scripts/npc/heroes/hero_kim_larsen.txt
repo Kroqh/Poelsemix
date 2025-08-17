@@ -22,7 +22,7 @@
 	"AttributeBaseIntelligence"		"21"									// Base intelligence
 	"AttributeIntelligenceGain"		"1.7"									// Intelligence bonus per level.
 
-	"StatusHealthRegen"		"3.8"
+	"StatusHealthRegen"		"2.6"
 
 	"AttackDamageMin"			"42"
 	"AttackDamageMax"			"42"

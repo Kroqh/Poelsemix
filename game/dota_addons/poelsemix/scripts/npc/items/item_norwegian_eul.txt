@@ -37,6 +37,6 @@
             "bonus_mana_regen" "6"
             "bonus_movement_speed" "40"
             "cyclone_duration" "3.5"
-            "tooltip_drop_damage" "50"
+            "tooltip_drop_damage" "100"
         }
 	}

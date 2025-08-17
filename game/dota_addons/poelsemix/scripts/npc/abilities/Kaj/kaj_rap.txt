@@ -25,7 +25,7 @@
                 "LinkedSpecialBonus" "special_bonus_kaj_2"
             }
             "delay" "3"
-            "damage" "400 550 700 950"
+            "damage" "400 525 650 775"
             "speed_percent" "16 19 22 25"
         }
 

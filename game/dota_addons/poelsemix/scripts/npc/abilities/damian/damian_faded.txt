@@ -35,7 +35,7 @@
                 "LinkedSpecialBonus" "special_bonus_damian_6"
             }
             "free_stack_interval" "15"
-            "stacks_on_poop" "4"
+            "stacks_on_poop" "5"
             "per_attack" "1"
         }
     }

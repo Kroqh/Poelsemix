@@ -26,7 +26,7 @@
             "damage_per_stack" "20 26 32 38"
             "base_chance"
             {
-                "value" "10 12.5 15 17.5"
+                "value" "15"
                 "LinkedSpecialBonus" "special_bonus_damian_1"
             }
             "stack_falloff" "3"

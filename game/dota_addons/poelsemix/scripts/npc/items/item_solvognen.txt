@@ -11,7 +11,7 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitTargetFlags"			"DOTA_UNIT_TARGET_FLAG_NONE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-  	"ItemCost"					"7400"
+  	"ItemCost"					"7300"
   	"ID"						"2005"
 	"ItemDeclarations"			"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
@@ -27,10 +27,10 @@
 	"AbilityValues"
         {
             "damage" "60"
-            "health_regen" "5"
+            "health_regen" "15"
             "evasion" "20"
             "aura_regen_sec" "10"
-            "aura_damage_sec" "70"
+            "aura_damage_sec" "75"
             "aura_radius" "700"
             "aura_tick_rate" "0.1"
             "aura_missrate" "15"

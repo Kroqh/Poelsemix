@@ -25,7 +25,7 @@
             "mana_regen" "10"
             "dmg" "30"
             "cdr" "30"
-            "health" "650"
+            "health" "600"
         }
 	
 	"Modifiers"

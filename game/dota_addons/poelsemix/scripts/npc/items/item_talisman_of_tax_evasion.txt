@@ -6,7 +6,7 @@
   	"BaseClass"                 "item_datadriven"
   	"AbilityTextureName"        "amulet_of_tax_evasion"
   	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  	"ItemCost"					"1800"
+  	"ItemCost"					"1500"
   	"ID"						"3051"
 	
 	// Stats		

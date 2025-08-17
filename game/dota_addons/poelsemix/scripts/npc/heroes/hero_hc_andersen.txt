@@ -1,9 +1,6 @@
-"hero_raio"
+"hero_hc_andersen"
 {
-	"override_hero"				"npc_dota_hero_zuus"			// Hero to override
-	"model" "models/raio/raio.vmdl"
-	"ModelScale"	"0.7"
-	"DisableWearables"				"1"
+	"override_hero"				"npc_dota_hero_grimstroke"			// Hero to override
 	"Ability1" "raio_amp_it_up"				
 	"Ability2" "raio_unstable"
 	"Ability3" "raio_afterimage"
@@ -13,33 +10,35 @@
 	"Ability7" "generic_hidden"
 
 
-	"ProjectileSpeed"		"1600"
+	"ProjectileSpeed"		"1000"
+
 	"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
-	"AttributeBaseStrength"		"28"
-	"AttributeStrengthGain"		"1.7"
-	"AttributeBaseAgility"		"18"
-	"AttributeAgilityGain"		"2.6"
-	"AttributeBaseIntelligence"	"24"
-	"AttributeIntelligenceGain"	"2.9"
+	"AttributeBaseStrength"		"16"
+	"AttributeStrengthGain"		"1.4"
+	"AttributeBaseAgility"		"17"
+	"AttributeAgilityGain"		"1.8"
+	"AttributeBaseIntelligence"	"28"
+	"AttributeIntelligenceGain"	"3.9"
 
 	"MovementSpeed"		"280"
 	"ArmorPhysical"		"3"
 	
-	"AttackRate"				"1.7"
-	"AttackDamageMin"			"46"
-	"AttackDamageMax"			"46"
-	"StatusHealth"                "40"
-	"StatusMana"				"120"
+	"AttackRate"				"1.8"
+	"AttackDamageMin"			"44"
+	"AttackDamageMax"			"44"
+	"StatusHealth"                "65"
+	"StatusMana"				"140"
 
-	"AttackRange"			"475"
+	"AttackRange"			"525"
 
 	"MovementTurnRate"		"0.6"
 
 	"BaseAttackSpeed"      "100"
 
-	"StatusHealthRegen"		"0.15"
-	"StatusManaRegen"    "0.5"
+	"StatusHealthRegen"		"0.2"
+	"StatusManaRegen"    "0.6"
 
+	//Lav nye talents
 	
 	"Ability10"		"special_bonus_raio_1"
 	"Ability11"		"special_bonus_raio_2"

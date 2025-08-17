@@ -41,13 +41,13 @@
         {
             "damage"
             {
-                "value" "150 225 300 375"
+                "value" "175 225 275 325"
                 "LinkedSpecialBonus" "special_bonus_urgot_1"
             }
             "proj_speed" "900"
             "range"
             {
-                "value" "600 700 800 900"
+                "value" "600 675 750 825"
                 "LinkedSpecialBonus" "special_bonus_urgot_4"
             }
         }

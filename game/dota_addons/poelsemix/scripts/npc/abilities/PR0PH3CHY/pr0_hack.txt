@@ -8,7 +8,7 @@
 		"AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
-		"AbilityCooldown"               "18 17 16 15"
+		"AbilityCooldown"               "16 15 14 13"
 		"AbilityManaCost"               "120 115 110 105"
 		"AbilityCastRange" "700"
 		"AbilityCastPoint"              "0.2"
@@ -28,7 +28,7 @@
                 "value" "2.5 3 3.5 4"
                 "LinkedSpecialBonus" "special_bonus_prophecy_1"
             }
-            "damage_tick" "70 80 90 100"
+            "damage_tick" "75 90 105 120"
             "stat_steal" "20"
             "hackticks" "0.5"
         }																				

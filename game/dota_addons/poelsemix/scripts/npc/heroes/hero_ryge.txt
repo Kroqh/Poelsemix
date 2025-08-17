@@ -30,7 +30,7 @@
 	"ArmorPhysical"		"1" 
 
 	"AttackAcquisitionRange"	"600"
-	"AttackRange"			"525"
+	"AttackRange"			"500"
 
 	"AttackDamageMin"			"47"
 	"AttackDamageMax"			"47"

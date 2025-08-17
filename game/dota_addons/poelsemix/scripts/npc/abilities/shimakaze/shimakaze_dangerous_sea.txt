@@ -13,7 +13,7 @@
 
 	"AbilityValues"
         {
-            "damage" "20"
+            "damage" "30"
             "duration"
             {
                 "value" "2"
@@ -27,8 +27,8 @@
                 "LinkedSpecialBonus" "special_bonus_shimakaze_8"
             }
             "duration_slow" "0.7"
-            "int_scaling" "0.3"
-            "int_scaling_aghs" "0.6"
+            "int_scaling" "0.25"
+            "int_scaling_aghs" "0.5"
             "distance_req" "350"
         }
 }

@@ -24,7 +24,7 @@
         {
             "rate"
             {
-                "value" "2 1.85 1.7 1.65"
+                "value" "2.2 2.05 1.90 1.75"
                 "LinkedSpecialBonus" "special_bonus_raio_3"
             }
             "base_damage" "60 70 80 90"
